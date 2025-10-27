@@ -1,0 +1,50 @@
+Begin Map
+   Begin Level
+      Begin Actor Class=/Game/BluePrints/Common/Triggers/BP_FallTrigger.BP_FallTrigger_C Name=BP_FallTrigger_2 Archetype=/Game/BluePrints/Common/Triggers/BP_FallTrigger.BP_FallTrigger_C'/Game/BluePrints/Common/Triggers/BP_FallTrigger.Default__BP_FallTrigger_C'
+         Begin Object Class=/Script/Engine.ArrowComponent Name="Arrow" Archetype=ArrowComponent'/Game/BluePrints/Common/Triggers/BP_FallTrigger.BP_FallTrigger_C:Arrow_GEN_VARIABLE'
+         End Object
+         Begin Object Class=/Script/Engine.BoxComponent Name="CollisionComp" Archetype=BoxComponent'/Game/BluePrints/Common/Triggers/BP_FallTrigger.Default__BP_FallTrigger_C:CollisionComp'
+         End Object
+         Begin Object Class=/Script/Engine.StaticMeshComponent Name="Cube" Archetype=StaticMeshComponent'/Game/BluePrints/Common/Triggers/BP_FallTrigger.BP_FallTrigger_C:Cube_GEN_VARIABLE'
+         End Object
+         Begin Object Class=/Script/Engine.ChildActorComponent Name="DefaultTransform" Archetype=ChildActorComponent'/Game/BluePrints/Common/Triggers/BP_FallTrigger.BP_FallTrigger_C:DefaultTransform_GEN_VARIABLE'
+         End Object
+         Begin Object Class=/Script/Engine.BillboardComponent Name="Sprite" Archetype=BillboardComponent'/Game/BluePrints/Common/Triggers/BP_FallTrigger.Default__BP_FallTrigger_C:Sprite'
+         End Object
+         Begin Object Name="Arrow"
+            AttachParent="DefaultTransform"
+            UCSSerializationIndex=0
+            bNetAddressable=True
+            CreationMethod=SimpleConstructionScript
+         End Object
+         Begin Object Name="CollisionComp"
+            BodyInstance=(bInterpolateWhenSubStepping=False)
+         End Object
+         Begin Object Name="Cube"
+            BodyInstance=(MaxAngularVelocity=3599.999756)
+            AttachParent="CollisionComp"
+            UCSSerializationIndex=0
+            bNetAddressable=True
+            CreationMethod=SimpleConstructionScript
+         End Object
+         Begin Object Name="DefaultTransform"
+            AttachParent="CollisionComp"
+            RelativeLocation=(X=-0.30,Y=5.20,Z=950.00)
+            UCSSerializationIndex=0
+            bNetAddressable=True
+            CreationMethod=SimpleConstructionScript
+         End Object
+         Begin Object Name="Sprite"
+         End Object
+         Arrow="Arrow"
+         Cube="Cube"
+         DefaultTransform="DefaultTransform"
+         CollisionComponent="CollisionComp"
+         RootComponent="CollisionComp"
+         ActorLabel="BP_FallTrigger"
+      End Actor
+   End Level
+Begin Surface
+End Surface
+End Map
+

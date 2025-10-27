@@ -1,0 +1,96 @@
+local ModCommon = {}
+ModCommon.ArmoryMod = "ArmoryMod"
+ModCommon.AbyssMod = "AbyssMod"
+ModCommon.DragUIName = "ArmoryModItemDrag"
+ModCommon.LinkUIName = "ArmoryModItemLink"
+ModCommon.PolarityEditUI = "ArmoryModPolarity"
+ModCommon.ModIntensifyMain = "ArmoryModIntensify"
+ModCommon.ModLevelUp = "ArmoryCommonLvUp"
+ModCommon.ModEnhance = "ArmoryModBreakLvUp"
+ModCommon.ModImport = "ArmoryModImport"
+ModCommon.CalcVolumeDiffCase = {
+  Exchange = 1,
+  Change = 2,
+  TakeOff = 3
+}
+ModCommon.EventId = {
+  OnChangeModSuit = "OnChangeModSuit",
+  OnFoundModRepeat = "OnFoundModRepeat",
+  OnExchangeMod = "OnExchangeMod",
+  OnChangeMod = "OnChangeMod",
+  OnTakeOffMod = "OnTakeOffMod",
+  OnTakeOffSuitMod = "OnTakeOffSuitMod",
+  OnPolarityEditDone = "OnPolarityEditDone",
+  OnModLevelUp = "OnModLevelUp",
+  OnModCardLevelUp = "OnModCardLevelUp",
+  OnSelectStuffChanged = "OnSelectStuffChanged",
+  OnAutoEquipTimeOut = "OnAutoEquipTimeOut",
+  OnAutoEquipFinished = "OnAutoEquipFinished",
+  OnAutoEquipAbort = "OnAutoEquipAbort",
+  OnImportTimeOut = "OnImportTimeOut",
+  OnImportFinished = "OnImportFinished",
+  OnImportAbort = "OnImportAbort",
+  OnStartPolarityMode = "OnStartPolarityMode",
+  OnStopPolarityMode = "OnStopPolarityMode",
+  OnPolarityModSelectedChanged = "OnPolarityModSelectedChanged",
+  OnPendingEditSlotPolarity = "OnPendingEditSlotPolarity",
+  OnRevertEditSlotPolarity = "OnRevertEditSlotPolarity",
+  OnPolarityEditFailed = "OnPolarityEditFailed",
+  OnSuitNameEdited = "OnSuitNameEdited",
+  OnModMainUIClose = "OnModMainUIClose",
+  OnForceCalcSlotsCost = "OnForceCalcSlotsCost",
+  OnModSuitCopyFaild = "OnModSuitCopyFaild"
+}
+ModCommon.LevelUp = "LevelUp"
+ModCommon.Enhance = "Enhance"
+ModCommon.SlotState = {
+  Lock = 1,
+  UnLock = 2,
+  Used = 4,
+  PolarityEdit = 8
+}
+ModCommon.SlotPolarityState = {
+  Match = 1,
+  NoMatch = 2,
+  SlotNoPolarity = 3,
+  ModNoPolarity = 4,
+  BothNoPolarity = 0
+}
+ModCommon.MainUICase = {
+  Normal = 1,
+  Preview = 2,
+  CopyMode = 3
+}
+ModCommon.MaxSuitCount = 3
+ModCommon.MaxSlotCount = 9
+ModCommon.ModSiftId = 666
+ModCommon.TakeOffSuitModDialog = 100166
+ModCommon.AutoEquipTakeOffDialog = 100066
+ModCommon.EditPolarityTakeOffDialog = 100050
+ModCommon.EditPolarityResetDialog = 100167
+ModCommon.EditSuitNameDialog = 100168
+ModCommon.LevelUpWarningDialog = 100126
+ModCommon.ModCardlevelDialog = 100118
+ModCommon.ModCardlevelDialog2 = 100119
+ModCommon.ModImportDialog = 100182
+ModCommon.ModCopySuitCodeDialog = 100232
+ModCommon.AttrSortIndexes = {
+  Char = 1,
+  Melee = 2,
+  Ranged = 3,
+  UWeapon = 4
+}
+ModCommon.SlotIdToMenuPlacement = {
+  [1] = EMenuPlacement.MenuPlacement_BelowRightAnchor,
+  [3] = EMenuPlacement.MenuPlacement_BelowRightAnchor,
+  [2] = EMenuPlacement.MenuPlacement_BelowAnchor,
+  [4] = EMenuPlacement.MenuPlacement_BelowAnchor,
+  [5] = EMenuPlacement.MenuPlacement_AboveRightAnchor,
+  [7] = EMenuPlacement.MenuPlacement_AboveRightAnchor,
+  [6] = EMenuPlacement.MenuPlacement_AboveAnchor,
+  [8] = EMenuPlacement.MenuPlacement_AboveAnchor,
+  [9] = EMenuPlacement.MenuPlacement_CenteredAboveAnchor
+}
+ModCommon.DebugMode = false
+_G.ModCommon = ModCommon
+return ModCommon

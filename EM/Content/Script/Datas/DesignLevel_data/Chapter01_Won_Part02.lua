@@ -1,0 +1,52 @@
+return {
+  StaticCreator = {
+    ["1630040"] = {
+      CreatorId = 1630040,
+      UnitType = "Monster",
+      UnitId = 8504001
+    },
+    ["1630041"] = {
+      CreatorId = 1630041,
+      UnitType = "Monster",
+      UnitId = 8504002
+    },
+    ["1630032"] = {
+      CreatorId = 1630032,
+      UnitType = "Mechanism",
+      UnitId = 11001
+    },
+    ["1280002"] = {
+      CreatorId = 1280002,
+      UnitType = "Mechanism",
+      UnitId = 38
+    },
+    ["1280001"] = {
+      CreatorId = 1280001,
+      UnitType = "Mechanism",
+      UnitId = 38
+    },
+    ["20000816"] = {
+      CreatorId = 20000816,
+      UnitType = "Mechanism",
+      UnitId = 10606
+    },
+    ["1630055"] = {
+      CreatorId = 1630055,
+      UnitType = "Npc",
+      UnitId = 200052
+    },
+    ["1630056"] = {
+      CreatorId = 1630056,
+      UnitType = "Npc",
+      UnitId = 200006
+    },
+    ["1762994"] = {
+      CreatorId = 1762994,
+      UnitType = "Npc",
+      UnitId = 2000591
+    }
+  },
+  ManualItem = {},
+  Explore = {},
+  RandomRule = {}
+}

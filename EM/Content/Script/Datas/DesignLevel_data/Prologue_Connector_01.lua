@@ -1,0 +1,9 @@
+return {
+  StaticCreator = {},
+  ManualItem = {},
+  Explore = {},
+  RandomRule = {
+    ["105"] = {RandomRuleId = 105},
+    ["103"] = {RandomRuleId = 103}
+  }
+}

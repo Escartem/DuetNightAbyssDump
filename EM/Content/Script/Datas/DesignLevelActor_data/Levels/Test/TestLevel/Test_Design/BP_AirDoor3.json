@@ -1,0 +1,112 @@
+Begin Map
+   Begin Level
+      Begin Actor Class=/Game/BluePrints/Item/AirWall/BP_AirDoor.BP_AirDoor_C Name=BP_AirDoor3 Archetype=/Game/BluePrints/Item/AirWall/BP_AirDoor.BP_AirDoor_C'/Game/BluePrints/Item/AirWall/BP_AirDoor.Default__BP_AirDoor_C'
+         Begin Object Class=/Script/Engine.StaticMeshComponent Name="AirWallCubeStaticMesh" Archetype=StaticMeshComponent'/Game/BluePrints/Item/AirWall/BP_AirDoor.BP_AirDoor_C:AirWallCubeStaticMesh_GEN_VARIABLE'
+         End Object
+         Begin Object Class=/Script/Engine.StaticMeshComponent Name="ApproachEffect" Archetype=StaticMeshComponent'/Game/BluePrints/Item/AirWall/BP_AirDoor.BP_AirDoor_C:ApproachEffect_GEN_VARIABLE'
+            Begin Object Class=/Script/Engine.MaterialInstanceDynamic Name="MaterialInstanceDynamic"
+            End Object
+         End Object
+         Begin Object Class=/Game/BluePrints/Char/BP_FXComponent.BP_FXComponent_C Name="BP_FXComponent" Archetype=BP_FXComponent_C'/Game/BluePrints/Item/AirWall/BP_AirDoor.Default__BP_AirDoor_C:BP_FXComponent'
+         End Object
+         Begin Object Class=/Script/Engine.StaticMeshComponent Name="Collision" Archetype=StaticMeshComponent'/Game/BluePrints/Item/AirWall/BP_AirDoor.BP_AirDoor_C:Collision_GEN_VARIABLE'
+         End Object
+         Begin Object Class=/Game/BluePrints/Item/BP_CombatClientEffectComponent.BP_CombatClientEffectComponent_C Name="CombatClientEffectComponent" Archetype=BP_CombatClientEffectComponent_C'/Game/BluePrints/Item/AirWall/BP_AirDoor.Default__BP_AirDoor_C:CombatClientEffectComponent'
+         End Object
+         Begin Object Class=/Game/BluePrints/Item/BP_CombatStateChangeComponent.BP_CombatStateChangeComponent_C Name="CombatStateChangeComponent" Archetype=BP_CombatStateChangeComponent_C'/Game/BluePrints/Item/AirWall/BP_AirDoor.Default__BP_AirDoor_C:CombatStateChangeComponent'
+         End Object
+         Begin Object Class=/Script/Engine.StaticMeshComponent Name="Cube1" Archetype=StaticMeshComponent'/Game/BluePrints/Item/AirWall/BP_AirDoor.BP_AirDoor_C:Cube1_GEN_VARIABLE'
+         End Object
+         Begin Object Class=/Script/Engine.StaticMeshComponent Name="ResidentEffect" Archetype=StaticMeshComponent'/Game/BluePrints/Item/AirWall/BP_AirDoor.BP_AirDoor_C:ResidentEffect_GEN_VARIABLE'
+            Begin Object Class=/Script/Engine.MaterialInstanceDynamic Name="MaterialInstanceDynamic"
+            End Object
+         End Object
+         Begin Object Class=/Script/Engine.SceneComponent Name="Scene" Archetype=SceneComponent'/Game/BluePrints/Item/AirWall/BP_AirDoorBase.BP_AirDoorBase_C:Scene_GEN_VARIABLE'
+         End Object
+         Begin Object Name="AirWallCubeStaticMesh"
+            StaticMeshImportVersion=1
+            BodyInstance=(MaxAngularVelocity=3599.999756)
+            AttachParent="ApproachEffect"
+            UCSSerializationIndex=0
+            bNetAddressable=True
+            CreationMethod=SimpleConstructionScript
+         End Object
+         Begin Object Name="ApproachEffect"
+            Begin Object Name="MaterialInstanceDynamic"
+               Parent=MaterialInstanceConstant'"/Game/Asset/Scene/common/4Mtl/M_AirWall_Plane.M_AirWall_Plane"'
+               CachedReferencedTextures(0)=Texture2D'"/Game/Asset/Scene/common/3Texture/T_Com_Noise01.T_Com_Noise01"'
+               CachedReferencedTextures(1)=Texture2D'"/Game/Asset/Scene/common/3Texture/T_Airwall01.T_Airwall01"'
+               CachedReferencedTextures(2)=Texture2D'"/Engine/EngineMaterials/Good64x64TilingNoiseHighFreq.Good64x64TilingNoiseHighFreq"'
+               CachedReferencedTextures(3)=Texture2D'"/Game/Asset/Effect/Texture/Turbulence/t_turbulence_Taki_003.t_turbulence_Taki_003"'
+            End Object
+            StaticMeshImportVersion=1
+            OverrideMaterials(0)=MaterialInstanceDynamic'"MaterialInstanceDynamic"'
+            BodyInstance=(MaxAngularVelocity=3599.999756)
+            AttachParent="Scene"
+            UCSSerializationIndex=0
+            bNetAddressable=True
+            CreationMethod=SimpleConstructionScript
+            UCSModifiedProperties(0)=(MemberParent=Class'"/Script/Engine.MeshComponent"',MemberName="OverrideMaterials")
+         End Object
+         Begin Object Name="BP_FXComponent"
+         End Object
+         Begin Object Name="Collision"
+            BodyInstance=(MaxAngularVelocity=3599.999756)
+            AttachParent="Scene"
+            RelativeScale3D=(X=4.00,Y=4.00,Z=4.00)
+            UCSSerializationIndex=0
+            bNetAddressable=True
+            CreationMethod=SimpleConstructionScript
+            UCSModifiedProperties(0)=(MemberParent=Class'"/Script/Engine.SceneComponent"',MemberName="RelativeScale3D")
+         End Object
+         Begin Object Name="CombatClientEffectComponent"
+         End Object
+         Begin Object Name="CombatStateChangeComponent"
+         End Object
+         Begin Object Name="Cube1"
+            StaticMeshImportVersion=1
+            BodyInstance=(MaxAngularVelocity=3599.999756)
+            AttachParent="ApproachEffect"
+            UCSSerializationIndex=0
+            bNetAddressable=True
+            CreationMethod=SimpleConstructionScript
+         End Object
+         Begin Object Name="ResidentEffect"
+            Begin Object Name="MaterialInstanceDynamic"
+               Parent=Material'"/Game/Asset/Effect/MaterialBase/Special/M_AirWall.M_AirWall"'
+               CachedReferencedTextures(0)=Texture2D'"/Game/Asset/Effect/Texture/Turbulence/t_turbulence_yb_002.t_turbulence_yb_002"'
+            End Object
+            StaticMeshImportVersion=1
+            OverrideMaterials(0)=MaterialInstanceDynamic'"MaterialInstanceDynamic"'
+            BodyInstance=(MaxAngularVelocity=3599.999756)
+            AttachParent="ApproachEffect"
+            UCSSerializationIndex=0
+            bNetAddressable=True
+            CreationMethod=SimpleConstructionScript
+            UCSModifiedProperties(0)=(MemberParent=Class'"/Script/Engine.MeshComponent"',MemberName="OverrideMaterials")
+         End Object
+         Begin Object Name="Scene"
+            RelativeLocation=(X=-3401.00,Y=-1145.00,Z=-105.00)
+            RelativeScale3D=(X=3.00,Y=3.00,Z=3.00)
+            UCSSerializationIndex=0
+            bNetAddressable=True
+            CreationMethod=SimpleConstructionScript
+            UCSModifiedProperties(0)=(MemberParent=Class'"/Script/Engine.SceneComponent"',MemberName="RelativeLocation")
+            UCSModifiedProperties(1)=(MemberParent=Class'"/Script/Engine.SceneComponent"',MemberName="RelativeScale3D")
+         End Object
+         AirWallCubeStaticMesh="AirWallCubeStaticMesh"
+         Cube1="Cube1"
+         Collision="Collision"
+         ResidentEffect="ResidentEffect"
+         ApproachEffect="ApproachEffect"
+         Scene="Scene"
+         DMMI=MaterialInstanceDynamic'"ApproachEffect.MaterialInstanceDynamic"'
+         ConstantDMMI=MaterialInstanceDynamic'"ResidentEffect.MaterialInstanceDynamic"'
+         RootComponent="Scene"
+         ActorLabel="BP_AirDoor3"
+      End Actor
+   End Level
+Begin Surface
+End Surface
+End Map
+

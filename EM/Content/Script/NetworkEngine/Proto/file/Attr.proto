@@ -1,0 +1,1910 @@
+syntax = "proto3";
+
+message FloatList {
+	repeated float values = 1;
+}
+
+message Int2BoolDict {
+	map<int64, bool> key_values = 1;
+}
+
+message Int2FloatDict {
+	map<int64, float> key_values = 1;
+}
+
+message Int2IntDict {
+	map<int64, int64> key_values = 1;
+}
+
+message Int2IntListDict {
+	map<int64, IntList> key_values = 1;
+}
+
+message Int2IntSetDict {
+	map<int64, IntSet> key_values = 1;
+}
+
+message Int2ObjIdDict {
+	map<int64, bytes> key_values = 1;
+}
+
+message Int2StrSetDict {
+	map<int64, StrSet> key_values = 1;
+}
+
+message IntList {
+	repeated int64 values = 1;
+}
+
+message IntSet {
+	map<int64, int64> key_values = 1;
+}
+
+message ObjectId2Int {
+	map<string, int64> key_values = 1;
+}
+
+message ObjectIdList {
+	repeated bytes values = 1;
+}
+
+message Str2BoolDict {
+	map<string, bool> key_values = 1;
+}
+
+message Str2FloatDict {
+	map<string, float> key_values = 1;
+}
+
+message Str2IntDict {
+	map<string, int64> key_values = 1;
+}
+
+message Str2IntListDict {
+	map<string, IntList> key_values = 1;
+}
+
+message Str2IntSetDict {
+	map<string, IntSet> key_values = 1;
+}
+
+message Str2StrDict {
+	map<string, string> key_values = 1;
+}
+
+message Str2StrListDict {
+	map<string, StrList> key_values = 1;
+}
+
+message Str2StrSetDict {
+	map<string, StrSet> key_values = 1;
+}
+
+message StrList {
+	repeated string values = 1;
+}
+
+message StrSet {
+	map<string, int64> key_values = 1;
+}
+
+
+message Abyss {
+	int64 AbyssId = 1;
+	AbyssLevelList AbyssLevelList = 2;
+	IntList AbyssProgress = 3;
+	int64 AlreadyJumpLevelTimes = 4;
+	AbyssTeamList FastestTeamList = 5;
+	bool LockState = 6;
+	IntList MaxAbyssProgress = 7;
+	Int2IntListDict RewardGotList = 8;
+}
+
+message AbyssDict {
+	map<int64, Abyss> key_values = 1;
+}
+
+message AbyssLevel {
+	AbyssTeamList AbyssCacheTeamList = 1;
+	IntList AbyssDungeonEnterCount = 2;
+	int64 AbyssLevelId = 3;
+	IntList AbyssLevelProgress = 4;
+	AbyssTeamList AbyssLockedTeamList = 5;
+	int64 FastestPassTime = 6;
+	bool IsTeamLocked = 7;
+	int64 MaxAbyssLevelProgress = 8;
+	IntList MaxLockedTeamProgress = 9;
+	IntList PassTime = 10;
+	string PlayerInfo1 = 11;
+	string PlayerInfo2 = 12;
+}
+
+message AbyssLevelList {
+	repeated AbyssLevel values = 1;
+}
+
+message AbyssTeam {
+	bytes Char = 1;
+	bytes MeleeWeapon = 2;
+	int64 Pet = 3;
+	bytes Phantom1 = 4;
+	bytes Phantom2 = 5;
+	bytes PhantomWeapon1 = 6;
+	bytes PhantomWeapon2 = 7;
+	bytes RangedWeapon = 8;
+	Str2IntDict UnitIdList = 9;
+}
+
+message AbyssTeamList {
+	repeated AbyssTeam values = 1;
+}
+
+message Achv {
+	int64 AchvId = 1;
+	int64 CurrentValue = 2;
+	Int2IntDict FinishedTargets = 3;
+	bool IsBonus = 4;
+	int64 ProgressIndex = 5;
+	int64 Time = 6;
+	StrList UniqueRecords = 7;
+}
+
+message AchvDict {
+	map<int64, Achv> key_values = 1;
+}
+
+message AchvTarget {
+	int64 Count = 1;
+	int64 CurrentValue = 2;
+	int64 TargetId = 3;
+}
+
+message AchvTargetDict {
+	map<int64, AchvTarget> key_values = 1;
+}
+
+message ActionMessage {
+	Vector3 BulletForward = 1;
+	int64 BulletJumpDash = 2;
+	Vector3 BulletJumpForward = 3;
+	Rotation BulletJumpRotation = 4;
+	int64 CanOverrideXYSpeed = 5;
+	int64 ChargeFirstTime = 6;
+	string ClassName = 7;
+	Vector3 ClimbTowards = 8;
+	int64 CrouchByStuck = 9;
+	Vector3 CtrlForward = 10;
+	Vector3 CtrlRight = 11;
+	Vector3 DeltaTrans = 12;
+	Vector3 DownwardLocation = 13;
+	int64 ExecuteTimes = 14;
+	Vector3 HorizontalImapct = 15;
+	int64 JumpState = 16;
+	Vector3 JumpVelocity = 17;
+	int64 KeepKeyDown = 18;
+	Vector3 MaxClimbHeightCanReach = 19;
+	Vector3 MoveInputCache = 20;
+	int64 ResetJumpCount = 21;
+	Vector3 TargetDirection = 22;
+	Vector3 TargetLocation = 23;
+	int64 TimeStamp = 24;
+	int64 Turned = 25;
+	string Type = 26;
+	int64 UsingActionNew = 27;
+	int64 WallJumpDirInd = 28;
+	Vector3 WallJumpDirection = 29;
+}
+
+message Appearance {
+	IntList Accessory = 1;
+	string AppearanceName = 2;
+	bool IsCornerVisible = 3;
+	int64 SkinId = 4;
+	int64 TargetId = 5;
+	int64 TargetType = 6;
+}
+
+message AppearanceList {
+	repeated Appearance values = 1;
+}
+
+message Archive {
+	int64 ArchiveId = 1;
+	Int2IntListDict ArchiveInfo = 2;
+	Int2IntDict ArchiveList = 3;
+	Int2IntDict ArchiveRewardGot = 4;
+}
+
+message ArchiveDict {
+	map<int64, Archive> key_values = 1;
+}
+
+message AutoUpgrade {
+	int64 Level = 1;
+	IntSet Rarity = 2;
+}
+
+message AutoUpgradeDict {
+	map<string, AutoUpgrade> key_values = 1;
+}
+
+message AvatarInfo {
+	string Account = 1;
+	int64 ChannelId = 2;
+	int64 CurrentRegionId = 3;
+	bytes Eid = 4;
+	int64 HeadFrameId = 5;
+	int64 HeadIconId = 6;
+	int64 Hostnum = 7;
+	bool IsInDungeon = 8;
+	bool IsInSpecialQuest = 9;
+	bool IsOnline = 10;
+	float LastLoginTime = 11;
+	float LastLogoutTime = 12;
+	int64 Level = 13;
+	string Nickname = 14;
+	string Signature = 15;
+	int64 TitleAfter = 16;
+	int64 TitleBefore = 17;
+	int64 TitleFrame = 18;
+	int64 Uid = 19;
+}
+
+message AvatarInfoDict {
+	map<int64, AvatarInfo> key_values = 1;
+}
+
+message BGM {
+	string BgmParam = 1;
+	int64 BgmParamValue = 2;
+	string BgmPath = 3;
+	IntList BgmSubRegionId = 4;
+}
+
+message BGMDict {
+	map<int64, BGM> key_values = 1;
+}
+
+message BanIdDict {
+	map<string, BanInfo> key_values = 1;
+}
+
+message BanInfo {
+	int64 BanTime = 1;
+	string Reason = 2;
+	int64 Uid = 3;
+}
+
+message BanStrDict {
+	map<string, BanInfo> key_values = 1;
+}
+
+message Buff {
+	int64 BuffId = 1;
+	int64 Duration = 2;
+	bool IsPlayerLevelBuff = 3;
+	int64 Level = 4;
+	int64 StartTime = 5;
+}
+
+message BuffDict {
+	map<int64, Buff> key_values = 1;
+}
+
+message Char {
+	AppearanceList AppearanceSuits = 1;
+	int64 CharId = 2;
+	int64 CurrentAppearanceIndex = 3;
+	int64 EnhanceLevel = 4;
+	int64 Exp = 5;
+	IntList ExtralModVolumes = 6;
+	int64 GradeLevel = 7;
+	int64 Level = 8;
+	IntList ModSlotPolarity = 9;
+	IntList ModSlotStatus = 10;
+	int64 ModSuitIndex = 11;
+	ObjectIdList ModSuit_1 = 12;
+	ObjectIdList ModSuit_2 = 13;
+	ObjectIdList ModSuit_3 = 14;
+	StrList ModSuitsName = 15;
+	bytes ProminentWeapon = 16;
+	SkillTree SkillTree = 17;
+	SkillList Skills = 18;
+	ObjectIdList UWeaponEids = 19;
+	bytes Uuid = 20;
+}
+
+message CharAccessorySuits {
+	repeated IntList values = 1;
+}
+
+message CharDict {
+	map<string, Char> key_values = 1;
+}
+
+message CharTrial {
+	int64 TrialId = 1;
+	int64 bFinished = 2;
+	int64 bGetReward = 3;
+}
+
+message CharTrialDict {
+	map<int64, CharTrial> key_values = 1;
+}
+
+message Chat {
+	Message LastMessage = 1;
+	float LastTime = 2;
+	Messages Messages = 3;
+	AvatarInfo PlayerInfo = 4;
+	int64 Uid = 5;
+	int64 UnreadCount = 6;
+}
+
+message ChatDict {
+	map<int64, Chat> key_values = 1;
+}
+
+message CommonChar {
+	int64 CharId = 1;
+	int64 Count = 2;
+	int64 DailySignBoardNpcTalkCount = 3;
+	SkinDict OwnedSkins = 4;
+	IntList SignBoardNpcAlreadyTalkList = 5;
+}
+
+message CommonCharDict {
+	map<int64, CommonChar> key_values = 1;
+}
+
+message CommonQuestDict {
+	map<int64, TargetCounterDict> key_values = 1;
+}
+
+message Community {
+	Int2IntDict CommunityFollowList = 1;
+	int64 SignInDay = 2;
+}
+
+message Coordinate {
+	FloatList Location = 1;
+	FloatList Rotation = 2;
+	int64 StartIndex = 3;
+	int64 SubRegionId = 4;
+}
+
+message DailyLogin {
+	int64 DailyLoginCount = 1;
+	int64 EventID = 2;
+	int64 LastDailyLoginTime = 3;
+	Int2IntDict RewardsRecord = 4;
+}
+
+message DailyLoginDict {
+	map<int64, DailyLogin> key_values = 1;
+}
+
+message DailyTask {
+	int64 DailyGoalTaskId = 1;
+	int64 State = 2;
+}
+
+message DailyTaskDict {
+	map<int64, DailyTask> key_values = 1;
+}
+
+message DeathCounter {
+	int64 Count = 1;
+	string MonsterType = 2;
+	int64 ServerBuild = 3;
+	string SourceTag = 4;
+	int64 TargetCount = 5;
+}
+
+message DeathCounterDict {
+	map<string, DeathCounter> key_values = 1;
+}
+
+message DisableWeapon {
+	string ForbidTag = 1;
+	bool bForbid = 2;
+	bool bHideWhenForbid = 3;
+}
+
+message DisableWeaponDict {
+	map<string, DisableWeapon> key_values = 1;
+}
+
+message Dispatch {
+	int64 CompleteTime = 1;
+	int64 CoolingTime = 2;
+	ObjectIdList DispatchCharsList = 3;
+	int64 DispatchId = 4;
+	bool IsAutoCompete = 5;
+	int64 ListIndex = 6;
+	int64 RegisterTime = 7;
+	int64 StartTime = 8;
+	int64 State = 9;
+}
+
+message DispatchDict {
+	map<int64, Dispatch> key_values = 1;
+}
+
+message DispatchGameListDict {
+	repeated DispatchListProp values = 1;
+}
+
+message DispatchListProp {
+	int64 CoolingTime = 1;
+	int64 DispatchId = 2;
+	int64 ListIndex = 3;
+	int64 State = 4;
+}
+
+message DoubleModDrop {
+	int64 DropTimes = 1;
+	int64 EliteRushTimes = 2;
+	int64 EventId = 3;
+}
+
+message DoubleModDropDict {
+	map<int64, DoubleModDrop> key_values = 1;
+}
+
+message Draft {
+	int64 Count = 1;
+	int64 DraftCompleteNum = 2;
+	int64 DraftDoingNum = 3;
+	int64 DraftId = 4;
+	int64 StartTime = 5;
+	int64 State = 6;
+}
+
+message Draft2MataDict {
+	map<int64, DraftMataAttr> key_values = 1;
+}
+
+message DraftDict {
+	map<int64, Draft> key_values = 1;
+}
+
+message DraftMataAttr {
+	ObjectId2Int Meta = 1;
+}
+
+message Dungeon {
+	int64 DungeonId = 1;
+	int64 DungeonProgress = 2;
+	bytes DungeonSid = 3;
+	int64 EnterCount = 4;
+	bool IsPass = 5;
+	int64 MaxStar = 6;
+	int64 PassCount = 7;
+	string PersistenceData = 8;
+	int64 Squad = 9;
+	int64 State = 10;
+}
+
+message DungeonDict {
+	map<int64, Dungeon> key_values = 1;
+}
+
+message DungeonEventButcher {
+}
+
+message DungeonEventPet {
+	int64 PetId = 1;
+}
+
+message DungeonEventTreasure {
+}
+
+message DungeonRandomEvent {
+	DungeonEventButcher Butcher = 1;
+	int64 CurrentEventId = 2;
+	Int2FloatDict EventProbability = 3;
+	int64 LastEventId = 4;
+	bool LastWin = 5;
+	DungeonEventPet Pet = 6;
+	DungeonEventTreasure Treasure = 7;
+	Int2IntDict WeeklyHappenCount = 8;
+}
+
+message DynamicQuest {
+	int64 AlreadyCompleteTimes = 1;
+	int64 DynamicQuestId = 2;
+	int64 LastEndTime = 3;
+	int64 StartTime = 4;
+	int64 State = 5;
+}
+
+message DynamicQuestDict {
+	map<int64, DynamicQuest> key_values = 1;
+}
+
+message Explore {
+	ExploreBaseAttr ExploreData = 1;
+	int64 ExploreState = 2;
+	bool IsBonus = 3;
+	int64 RarelyId = 4;
+	int64 RegionId = 5;
+}
+
+message ExploreBaseAttr {
+	bool bGroupInLimit = 1;
+}
+
+message ExploreDict {
+	map<int64, Explore> key_values = 1;
+}
+
+message FeeRefund {
+	int64 Id = 1;
+	int64 MonthlyCard = 2;
+	int64 Phoxene = 3;
+}
+
+message FeeRefundDict {
+	map<int64, FeeRefund> key_values = 1;
+}
+
+message FeiNa {
+	int64 CurrentProgress = 1;
+	int64 FeiNaId = 2;
+	int64 MaxProgress = 3;
+	Int2IntDict RewardsGot = 4;
+}
+
+message FeiNaDict {
+	map<int64, FeiNa> key_values = 1;
+}
+
+message FishSize {
+	int64 FishId = 1;
+	Int2IntDict FishSize2Count = 2;
+	Int2BoolDict FishSize2Lock = 3;
+}
+
+message FishSizeDict {
+	map<int64, FishSize> key_values = 1;
+}
+
+message FishingSpot {
+	int64 FishingSpotId = 1;
+	int64 GotFishCount = 2;
+	int64 LastRefreshTime = 3;
+	int64 RemainFishCount = 4;
+}
+
+message FishingSpotDict {
+	map<int64, FishingSpot> key_values = 1;
+}
+
+message Friend {
+	bytes Eid = 1;
+	AvatarInfo Info = 2;
+	string Remark = 3;
+	bool Star = 4;
+	int64 Uid = 5;
+}
+
+message FriendDict {
+	map<int64, Friend> key_values = 1;
+}
+
+message FriendRequest {
+	AvatarInfo Info = 1;
+	string Remark = 2;
+	int64 Time = 3;
+	int64 Uid = 4;
+}
+
+message FriendRequestDict {
+	map<int64, FriendRequest> key_values = 1;
+}
+
+message Gacha {
+	int64 Already5StarCount = 1;
+	int64 DrawCounts = 2;
+	int64 GachaId = 3;
+	int64 IsSendGachaResource = 4;
+	int64 SelfSelect = 5;
+	int64 Usable = 6;
+}
+
+message GachaDict {
+	map<int64, Gacha> key_values = 1;
+}
+
+message GachaRecord {
+	int64 Count = 1;
+	int64 GachaId = 2;
+	string GachaType = 3;
+	int64 ItemId = 4;
+	int64 ItemType = 5;
+	int64 Star = 6;
+	int64 Time = 7;
+}
+
+message GachaRecordQueue {
+	map<int64, GachaRecord> key_values = 1;
+}
+
+message GameModeSuit {
+	Int2BoolDict DropRule = 1;
+}
+
+message GroupWeightRate {
+	IntSet GroupIds = 1;
+	float WeightRate = 2;
+}
+
+message GroupWeightRateDict {
+	map<string, GroupWeightRate> key_values = 1;
+}
+
+message GuaranteedDict {
+	map<string, Str2IntDict> key_values = 1;
+}
+
+message GuideBook {
+	int64 GuideNoteId = 1;
+	int64 IsGettingReward = 2;
+	int64 Reward = 3;
+	int64 Sort = 4;
+}
+
+message GuideBookDict {
+	map<int64, GuideBook> key_values = 1;
+}
+
+message HardBoss {
+	int64 HardBossRewardTimesLeft = 1;
+	Int2IntDict PassCount = 2;
+}
+
+message HideActionMessage {
+	bool ActorVisible = 1;
+	string Type = 2;
+}
+
+message Impression {
+	int64 Benefit = 1;
+	int64 Chaos = 2;
+	ImpressionAttrDict CurrentStoryNode = 3;
+	int64 Empathy = 4;
+	int64 Morality = 5;
+	int64 RegionId = 6;
+	Str2IntDict StoryLineComplete = 7;
+	ImpressionAttrDict StoryNodeComplete = 8;
+	int64 Wisdom = 9;
+}
+
+message ImpressionAttr {
+	string ImprCheckOptionEnum = 1;
+	string ImprPlusOptionEnum = 2;
+	bool IsAddSuccess = 3;
+	bool IsCheckSuccess = 4;
+	string NodeId = 5;
+	string Options = 6;
+	int64 Rand1 = 7;
+	int64 Rand2 = 8;
+}
+
+message ImpressionAttrDict {
+	map<string, ImpressionAttr> key_values = 1;
+}
+
+message ImpressionDict {
+	map<int64, Impression> key_values = 1;
+}
+
+message ImpressionShopItem {
+	int64 AlreadyPurchaseTimes = 1;
+	int64 ImpressionShopId = 2;
+	bool ImpressionShopState = 3;
+}
+
+message ImpressionShopItemDict {
+	map<int64, ImpressionShopItem> key_values = 1;
+}
+
+message IndependentServerBuild {
+	map<string, RougeServerBuild> key_values = 1;
+}
+
+message Item {
+	int64 ItemID = 1;
+	int64 ItemNum = 2;
+	string ItemType = 3;
+}
+
+message ItemList {
+	repeated Item values = 1;
+}
+
+message LastRegionData {
+	bool IsSojourns = 1;
+	int64 RegionId = 2;
+	FloatList SelfLocation = 3;
+	FloatList SelfRotation = 4;
+}
+
+message LevelBaseDataAttrDict {
+	map<string, RegionBaseDataAttrDict> key_values = 1;
+}
+
+message LevelSequenceState {
+	int64 PlayState = 1;
+	int64 RecorderId = 2;
+	int64 RegionId = 3;
+	int64 SequenceState = 4;
+}
+
+message LevelSequenceStateDict {
+	map<int64, LevelSequenceState> key_values = 1;
+}
+
+message LimitedResource {
+	int64 CreateTime = 1;
+	bool IsSendOneMail = 2;
+	bool IsSendTwoMail = 3;
+	int64 LimitedResourceId = 4;
+	int64 LimitedTimeId = 5;
+}
+
+message LimitedResourceDict {
+	map<int64, LimitedResource> key_values = 1;
+}
+
+message Mail {
+	string CtxId = 1;
+	Str2StrDict FormatText = 2;
+	ItemList ItemList = 3;
+	Str2StrDict MailContent = 4;
+	int64 MailDate = 5;
+	int64 MailId = 6;
+	int64 MailReaded = 7;
+	int64 MailSender = 8;
+	Str2StrDict MailTitle = 9;
+	int64 RewardGot = 10;
+	int64 UniqueId = 11;
+}
+
+message MailDict {
+	map<int64, Mail> key_values = 1;
+}
+
+message MarkPoint {
+	int64 Count = 1;
+	MarkPointInfoDict MarkPointData = 2;
+	int64 RegionId = 3;
+}
+
+message MarkPointDict {
+	map<int64, MarkPoint> key_values = 1;
+}
+
+message MarkPointInfo {
+	int64 FloorId = 1;
+	string Name = 2;
+	float PositionX = 3;
+	float PositionY = 4;
+	int64 Type = 5;
+}
+
+message MarkPointInfoDict {
+	map<string, MarkPointInfo> key_values = 1;
+}
+
+message Message {
+	int64 ChannelType = 1;
+	string Content = 2;
+	bytes Receiver = 3;
+	int64 ReceiverUid = 4;
+	AvatarInfo Sender = 5;
+	float Time = 6;
+	int64 Type = 7;
+}
+
+message Messages {
+	repeated Message values = 1;
+}
+
+message MidTermTask {
+	int64 FinishCount = 1;
+	int64 MidTermTaskId = 2;
+}
+
+message MidTermTaskDict {
+	map<int64, MidTermTask> key_values = 1;
+}
+
+message Mod {
+	ObjectIdList CharUuids = 1;
+	int64 Count = 2;
+	int64 CurrentModCardLevel = 3;
+	bool IsOriginal = 4;
+	int64 Level = 5;
+	int64 LockState = 6;
+	int64 ModId = 7;
+	bytes Uuid = 8;
+	ObjectIdList WeaponUuids = 9;
+}
+
+message ModBookQuest {
+	int64 FinishTime = 1;
+	Int2IntDict FinishedTargets = 2;
+	int64 Progress = 3;
+	bool RewardsGot = 4;
+	int64 Status = 5;
+	int64 UniqueID = 6;
+	Str2IntDict UniqueRecords = 7;
+}
+
+message ModBookQuestDict {
+	map<int64, ModBookQuest> key_values = 1;
+}
+
+message ModDict {
+	map<string, Mod> key_values = 1;
+}
+
+message ModSlot {
+}
+
+message ModSlots {
+	map<int64, ModSlot> key_values = 1;
+}
+
+message ModSuits {
+	repeated ModSlots values = 1;
+}
+
+message MonthlyCard {
+	IntList BuyTime = 1;
+	int64 CardId = 2;
+}
+
+message MonthlyCardDailyReward {
+	int64 CardId = 1;
+	int64 DailyRewardId = 2;
+	int64 GotTimes = 3;
+}
+
+message MonthlyCardDailyRewardList {
+	repeated MonthlyCardDailyReward values = 1;
+}
+
+message MonthlyCardDict {
+	map<int64, MonthlyCard> key_values = 1;
+}
+
+message MoveMessage {
+	Vector3 Acceleration = 1;
+	int64 CurResourceId = 2;
+	Vector3 Location = 3;
+	int64 MovementMode = 4;
+	Rotation Rotation = 5;
+	int64 TimeStamp = 6;
+	string Type = 7;
+	Vector3 Velocity = 8;
+}
+
+message OnlineClientMessage {
+	ActionMessage Action = 1;
+	HideActionMessage Hide = 2;
+	MoveMessage Move = 3;
+	bytes Sender = 4;
+	StopActionMessage StopAction = 5;
+	SwitchShowWeapon SwitchShowWeapon = 6;
+	string Type = 7;
+}
+
+message OnlineClientMessageList {
+	repeated OnlineClientMessage values = 1;
+}
+
+message Paotai {
+	int64 MaxScore = 1;
+	int64 PaotaiId = 2;
+	Int2IntDict RewardsGot = 3;
+}
+
+message PaotaiDict {
+	map<int64, Paotai> key_values = 1;
+}
+
+message PaotaiEventDict {
+	map<int64, PaotaiDict> key_values = 1;
+}
+
+message Party {
+	int64 Level = 1;
+	int64 MaxLevel = 2;
+	int64 PartyId = 3;
+	PartyTopicList PartyTopics = 4;
+}
+
+message PartyDict {
+	map<int64, Party> key_values = 1;
+}
+
+message PartyTopic {
+	int64 PartyTopicId = 1;
+	int64 State = 2;
+}
+
+message PartyTopicList {
+	repeated PartyTopic values = 1;
+}
+
+message PersonalInfo {
+	PersonalInfoUnitList CharDisplay = 1;
+	int64 Visible = 2;
+	PersonalInfoUnitList WeaponDisplay = 3;
+}
+
+message PersonalInfoUnit {
+	int64 AppearancePlan = 1;
+	bytes Id = 2;
+	int64 ModPlan = 3;
+}
+
+message PersonalInfoUnitList {
+	repeated PersonalInfoUnit values = 1;
+}
+
+message Pet {
+	int64 BreakNum = 1;
+	IntList Entry = 2;
+	int64 Exp = 3;
+	bool IsLock = 4;
+	int64 Level = 5;
+	string Name = 6;
+	int64 PetId = 7;
+	int64 UniqueId = 8;
+}
+
+message PetDict {
+	map<int64, Pet> key_values = 1;
+}
+
+message PetRegionAttr {
+	int64 InteractiveFailTime = 1;
+	int64 PetId = 2;
+	int64 PetState = 3;
+	int64 SubRegionId = 4;
+	string WorldRegionEid = 5;
+}
+
+message PetRegionAttrDict {
+	map<string, PetRegionAttr> key_values = 1;
+}
+
+message PlayerCharacterSuit {
+	BGMDict BGM = 1;
+	StrList BGMParams = 2;
+	Str2BoolDict ContinuedGuide = 3;
+	Str2BoolDict DisableSkill = 4;
+	DisableWeaponDict DisableWeapon = 5;
+	Str2BoolDict HideUIInScreen = 6;
+	Str2BoolDict MonsterFirstSeenGuide = 7;
+	Str2BoolDict NpcHideShowTag = 8;
+	int64 SwitchRole = 9;
+	Str2BoolDict SwitchStoryMode = 10;
+}
+
+message QuestChain {
+	bool CanShow = 1;
+	IntList CompleteQuestId = 2;
+	int64 DoingQuestId = 3;
+	int64 QuestChainId = 4;
+	Coordinate QuestCoordinate = 5;
+	QuestPickDict QuestPicks = 6;
+	QuestDataDict QuestSaveDatas = 7;
+	int64 State = 8;
+}
+
+message QuestChains {
+	map<int64, QuestChain> key_values = 1;
+}
+
+message QuestData {
+	int64 CurrentProgress = 1;
+	int64 TargetId = 2;
+	int64 TargetProgress = 3;
+}
+
+message QuestDataDict {
+	map<int64, QuestData> key_values = 1;
+}
+
+message QuestPickAttr {
+	int64 CurrentPickCount = 1;
+	int64 QuestPickId = 2;
+}
+
+message QuestPickDict {
+	map<int64, QuestPickAttr> key_values = 1;
+}
+
+message QuestTracking {
+	int64 QuestChainId = 1;
+}
+
+message RankDetailInfo {
+	string Account = 1;
+	SimpleChar Char = 2;
+	int64 Damage = 3;
+	bytes Eid = 4;
+	SimpleWeapon MeleeWeapon = 5;
+	SimpleWeapon RangedWeapon = 6;
+	float RankValue = 7;
+	int64 Time = 8;
+}
+
+message RankDetailInfos {
+	map<string, RankDetailInfo> key_values = 1;
+}
+
+message RankList {
+	RankDetailInfos RankDetailInfo = 1;
+	int64 RankId = 2;
+	RankListContainer RankListInfo = 3;
+	int64 RankSize = 4;
+}
+
+message RankListContainer {
+	repeated RankListItem values = 1;
+}
+
+message RankListItem {
+	float CostTime = 1;
+	int64 Damage = 2;
+	bytes Eid = 3;
+	int64 Round = 4;
+	int64 Score = 5;
+	int64 Time = 6;
+}
+
+message RankLists {
+	map<int64, RankList> key_values = 1;
+}
+
+message RecentMatchedFriend {
+	bytes Eid = 1;
+	AvatarInfo Info = 2;
+	int64 MatchTime = 3;
+	int64 Uid = 4;
+}
+
+message RecentMatchedFriendDict {
+	map<int64, RecentMatchedFriend> key_values = 1;
+}
+
+message RegionBaseChangeAttr {
+	bool CanOpen = 1;
+	bool IsActive = 2;
+	bool OpenState = 3;
+	int64 StateId = 4;
+	float TN = 5;
+}
+
+message RegionBaseDataAttr {
+	Str2FloatDict BornLocation = 1;
+	int64 CreatorId = 2;
+	bool IsBonus = 3;
+	bool IsDead = 4;
+	bool IsUnlimited = 5;
+	string LevelName = 6;
+	int64 ManualItemId = 7;
+	int64 QuestChainId = 8;
+	int64 QuestId = 9;
+	int64 RandomCreatorId = 10;
+	int64 RandomIdxInRule = 11;
+	int64 RandomRuleId = 12;
+	int64 RandomTableId = 13;
+	int64 RarelyId = 14;
+	int64 RegionDataType = 15;
+	Str2FloatDict Rotation = 16;
+	RegionBaseChangeAttr State = 17;
+	int64 SubRegionId = 18;
+	int64 UnitId = 19;
+	string UnitType = 20;
+	string WorldRegionEid = 21;
+}
+
+message RegionBaseDataAttrDict {
+	map<string, RegionBaseDataAttr> key_values = 1;
+}
+
+message RegionOnlineItemAttr {
+	int64 OnlineItemCount = 1;
+	bytes OwnerAvatarEid = 2;
+	RegionOnlineItemBaseDict RegionOnlineItemBaseDict = 3;
+	int64 RegionOnlineItemId = 4;
+}
+
+message RegionOnlineItemBase {
+	int64 ChangeStateTime = 1;
+	bytes OwnerAvatarEid = 2;
+	int64 RegionMechanismId = 3;
+	int64 RegionOnlineItemId = 4;
+	int64 RegionOnlineItemStartCD = 5;
+	int64 State = 6;
+	int64 UniqueId = 7;
+	bytes UseEid = 8;
+}
+
+message RegionOnlineItemBaseDict {
+	map<int64, RegionOnlineItemBase> key_values = 1;
+}
+
+message RegionOnlineItemDict {
+	map<int64, RegionOnlineItemAttr> key_values = 1;
+}
+
+message Resource {
+	int64 Count = 1;
+	int64 ResourceId = 2;
+	int64 Status = 3;
+	bytes WeaponUuid = 4;
+}
+
+message ResourceDict {
+	map<int64, Resource> key_values = 1;
+}
+
+message RewardParams {
+	int64 BonusRate = 1;
+	Str2IntDict BonusRateTag = 2;
+	int64 ExpRate = 3;
+	Str2IntDict ExpRateTag = 4;
+	Int2IntDict OnceReward = 5;
+	RewardSequenceAttr RewardSequences = 6;
+}
+
+message RewardSequence {
+	int64 RandomCount = 1;
+	int64 RewardId = 2;
+	int64 RewardIndex = 3;
+	IntList Rewards = 4;
+}
+
+message RewardSequenceAttr {
+	int64 Seed = 1;
+	SequenceDict SequenceDict = 2;
+}
+
+message Rotation {
+	float Pitch = 1;
+	float Roll = 2;
+	float Yaw = 3;
+}
+
+message RougeAwardDict {
+	map<int64, RougeAwardInfo> key_values = 1;
+}
+
+message RougeAwardInfo {
+	int64 Level = 1;
+	bool bActive = 2;
+	bool bEffected = 3;
+}
+
+message RougeLike {
+	GroupWeightRateDict BlessingGroupWeightRate = 1;
+	RougeAwardDict Blessings = 2;
+	DeathCounterDict DeathCounter = 3;
+	int64 DifficultyId = 4;
+	string DungeonInfo = 5;
+	bytes DungeonSid = 6;
+	Str2FloatDict EndPointsExtraRate = 7;
+	int64 EventId = 8;
+	IntList ExtraBlessingList = 9;
+	IntList ExtraTreasureList = 10;
+	string GameInfo = 11;
+	AutoUpgradeDict MRTAutoUpgrade = 12;
+	Str2IntDict MaxRefreshTime = 13;
+	Str2IntDict ModifiedChoiceNumber = 14;
+	StrList ModifiedChoiceNumberStack = 15;
+	Str2IntListDict OverrideBlessingMRTLimitRarity = 16;
+	StrList OverrideBlessingMRTLimitRarityTagStack = 17;
+	Str2IntDict OverrideRefreshCost = 18;
+	Str2IntDict OverrideRefreshTimes = 19;
+	Str2IntListDict OverrideTreasureMRTLimitRarity = 20;
+	StrList OverrideTreasureMRTLimitRarityTagStack = 21;
+	IntList PassRooms = 22;
+	StrList PlayerSliceInfo = 23;
+	int64 RandomBlessingId = 24;
+	IntList RandomBlessings = 25;
+	IntList RandomRooms = 26;
+	int64 RandomTreasureId = 27;
+	IntList RandomTreasures = 28;
+	Str2IntDict RecoverCost = 29;
+	StrList RecoverTagQueue = 30;
+	Str2IntDict RecoverTimes = 31;
+	Str2FloatDict RefreshRate = 32;
+	int64 RefreshTime = 33;
+	int64 RoomId = 34;
+	int64 RoomIndex = 35;
+	Str2IntDict Score = 36;
+	int64 SeasonId = 37;
+	RougeServerBuildManager ServerBuildManager = 38;
+	RougeLikeShopDict Shop = 39;
+	Str2FloatDict ShopDiscount = 40;
+	Int2IntDict StoryHistory = 41;
+	int64 StoryId = 42;
+	int64 TMRewardIndex = 43;
+	Str2FloatDict TokenExtraRate = 44;
+	GroupWeightRateDict TreasureGroupWeightRate = 45;
+	RougeAwardDict Treasures = 46;
+	int64 bCanTriggerStory = 47;
+	StrSet bDisableGetToken = 48;
+	StrSet bRandomChoice = 49;
+	int64 bStoryTriggered = 50;
+}
+
+message RougeLikeDict {
+	map<int64, RougeLike> key_values = 1;
+}
+
+message RougeLikeInfo {
+	Int2IntDict Contract = 1;
+	int64 InProgress = 2;
+	int64 LastPassRoom = 3;
+	int64 LastSeasonId = 4;
+	Int2IntSetDict Manual = 5;
+	Int2IntSetDict ManualRewardGot = 6;
+	Int2IntDict PassCount = 7;
+	int64 ProgressingDifficultyId = 8;
+	int64 ProgressingSeasonId = 9;
+	RougeLikeDict RougeLikeSeasons = 10;
+	Int2IntDict Talent = 11;
+	int64 TalentTotalPoint = 12;
+	Int2IntDict WeeklyRewardGot = 13;
+	int64 WeeklyRewardId = 14;
+	int64 WeeklyTotalScore = 15;
+}
+
+message RougeLikeShop {
+	Int2IntDict ShopBlessing = 1;
+	Int2IntDict ShopItem = 2;
+	Int2IntDict ShopTreasure = 3;
+}
+
+message RougeLikeShopDict {
+	map<int64, RougeLikeShop> key_values = 1;
+}
+
+message RougeServerBuild {
+	int64 Id = 1;
+	int64 RoomCount = 2;
+	IntSet RoomType = 3;
+	bool bTriggered = 4;
+}
+
+message RougeServerBuildInfo {
+	int64 CurrentIndex = 1;
+	IndependentServerBuild IndependentServerBuild = 2;
+	RougeServerBuildTotalList RougeServerBuild = 3;
+}
+
+message RougeServerBuildList {
+	repeated RougeServerBuild values = 1;
+}
+
+message RougeServerBuildManager {
+	map<string, RougeServerBuildInfo> key_values = 1;
+}
+
+message RougeServerBuildTotalList {
+	repeated RougeServerBuildList values = 1;
+}
+
+message SequenceDict {
+	map<int64, RewardSequence> key_values = 1;
+}
+
+message ShopItem {
+	int64 AlreadyPurchaseTimes = 1;
+	bool EnhanceRedDotCleaned = 2;
+	int64 ItemId = 3;
+	int64 LastRefreshTime = 4;
+	int64 RemainPurchaseTimes = 5;
+}
+
+message ShopItemDict {
+	map<int64, ShopItem> key_values = 1;
+}
+
+message SimpleChar {
+	int64 CharId = 1;
+	int64 EnhanceLevel = 2;
+	int64 GradeLevel = 3;
+	int64 Level = 4;
+	SimpleModSlots ModSlots = 5;
+	SkillList Skills = 6;
+	int64 SkinId = 7;
+}
+
+message SimpleMod {
+	int64 Level = 1;
+	int64 ModId = 2;
+}
+
+message SimpleModSlot {
+	int64 Level = 1;
+	int64 ModId = 2;
+	int64 Polarity = 3;
+	int64 SlotId = 4;
+	int64 Status = 5;
+}
+
+message SimpleModSlots {
+	map<int64, SimpleModSlot> key_values = 1;
+}
+
+message SimpleWeapon {
+	int64 EnhanceLevel = 1;
+	int64 GradeLevel = 2;
+	int64 Level = 3;
+	SimpleModSlots ModSlots = 4;
+	SkillList Skills = 5;
+	int64 WeaponId = 6;
+}
+
+message Skill {
+	int64 ExtraLevel = 1;
+	int64 Level = 2;
+	int64 LockState = 3;
+	int64 SkillId = 4;
+}
+
+message SkillList {
+	repeated Skill values = 1;
+}
+
+message SkillTree {
+	repeated SkillTreeNodes values = 1;
+}
+
+message SkillTreeNode {
+	int64 LockState = 1;
+	int64 SkillOrAttr = 2;
+	int64 TargetId = 3;
+}
+
+message SkillTreeNodes {
+	repeated SkillTreeNode values = 1;
+}
+
+message Skin {
+	Int2IntListDict Colors = 1;
+	int64 CurrentPlanIndex = 2;
+	bool IsShowPartMesh = 3;
+	int64 SkinId = 4;
+	int64 SkinType = 5;
+	IntList SpecialColor = 6;
+}
+
+message SkinDict {
+	map<int64, Skin> key_values = 1;
+}
+
+message SkinGacha {
+	int64 Already5StarCount = 1;
+	IntSet CumulativeRewardGot = 2;
+	int64 DrawCounts = 3;
+	int64 GachaId = 4;
+	int64 SelfSelect = 5;
+	int64 Usable = 6;
+}
+
+message SkinGachaDict {
+	map<int64, SkinGacha> key_values = 1;
+}
+
+message SpecialQuestData {
+	int64 SpecialQuestId = 1;
+	int64 SpecialQuestState = 2;
+	int64 StartTime = 3;
+}
+
+message SpecialQuestDataDict {
+	map<int64, SpecialQuestData> key_values = 1;
+}
+
+message Squad {
+	bytes Char = 1;
+	bytes MeleeWeapon = 2;
+	int64 MeleeWeaponModSuit = 3;
+	int64 ModSuit = 4;
+	string Name = 5;
+	int64 Pet = 6;
+	bytes Phantom1 = 7;
+	bytes Phantom2 = 8;
+	bytes PhantomWeapon1 = 9;
+	bytes PhantomWeapon2 = 10;
+	bytes RangedWeapon = 11;
+	int64 RangedWeaponModSuit = 12;
+	int64 WheelIndex = 13;
+}
+
+message SquadList {
+	repeated Squad values = 1;
+}
+
+message StopActionMessage {
+	string ClassName = 1;
+	int64 TimeStamp = 2;
+	string Type = 3;
+}
+
+message Str2RotationDict {
+	map<string, Rotation> key_values = 1;
+}
+
+message Str2Vector3Dict {
+	map<string, Vector3> key_values = 1;
+}
+
+message SubRegionBaseDataAttrDict {
+	map<string, LevelBaseDataAttrDict> key_values = 1;
+}
+
+message Suits {
+	GameModeSuit GameModeSuit = 1;
+	PlayerCharacterSuit PlayerCharacterSuit = 2;
+}
+
+message SwitchShowWeapon {
+	string ShowWeapon = 1;
+	string Type = 2;
+}
+
+message SystemGuide {
+	int64 State = 1;
+	int64 SystemGuideId = 2;
+}
+
+message SystemGuideDict {
+	map<int64, SystemGuide> key_values = 1;
+}
+
+message TargetCounter {
+	int64 CompletionValue = 1;
+	int64 FinishTime = 2;
+	string NoRepeatField = 3;
+	int64 Progress = 4;
+	bool RewardsGot = 5;
+	int64 Target = 6;
+	Int2IntDict TargetIds = 7;
+	Str2IntDict TargetRecords = 8;
+	int64 UniqueID = 9;
+}
+
+message TargetCounterDict {
+	map<int64, TargetCounter> key_values = 1;
+}
+
+message Temple {
+	Int2IntDict FinishStars = 1;
+	Int2IntDict ProgressRewardsGot = 2;
+	int64 TempleEventId = 3;
+}
+
+message TempleDict {
+	map<int64, Temple> key_values = 1;
+}
+
+message Theater {
+	Int2IntDict DonatePrizeMailsGet = 1;
+	int64 EventId = 2;
+	int64 RewardTimes = 3;
+	TargetCounterDict Tasks = 4;
+}
+
+message TheaterDict {
+	map<int64, Theater> key_values = 1;
+}
+
+message Transform {
+	Vector3 Location = 1;
+	Rotation Rotation = 2;
+}
+
+message UWeapon {
+	AppearanceList AppearanceSuits = 1;
+	int64 AssisterId = 2;
+	int64 ConsumeWeaponEnhanceLevel = 3;
+	int64 ConsumeWeaponLevel = 4;
+	int64 CurrentAppearanceIndex = 5;
+	int64 EnhanceLevel = 6;
+	int64 Exp = 7;
+	int64 GradeLevel = 8;
+	int64 InheritSkillExtraLevel = 9;
+	int64 InheritSkillLevel = 10;
+	int64 Level = 11;
+	IntList ModSlotPolarity = 12;
+	IntList ModSlotStatus = 13;
+	int64 ModSuitIndex = 14;
+	ObjectIdList ModSuit_1 = 15;
+	ObjectIdList ModSuit_2 = 16;
+	ObjectIdList ModSuit_3 = 17;
+	StrList ModSuitsName = 18;
+	int64 Status = 19;
+	SkinDict UsedSkins = 20;
+	bytes Uuid = 21;
+	int64 WeaponId = 22;
+}
+
+message UWeaponDict {
+	map<string, UWeapon> key_values = 1;
+}
+
+message Vector3 {
+	float X = 1;
+	float Y = 2;
+	float Z = 3;
+}
+
+message Walnut {
+	Int2IntDict ConsumeRecord = 1;
+	RewardSequenceAttr RewardSequences = 2;
+	Int2IntDict WalnutBag = 4;
+	int64 WalnutId = 5;
+	int64 WalnutLastRefreshTime = 6;
+	int64 bCanSelectWalnut = 8;
+}
+
+message Weapon {
+	AppearanceList AppearanceSuits = 1;
+	int64 AssisterId = 2;
+	int64 ConsumeWeaponEnhanceLevel = 3;
+	int64 ConsumeWeaponLevel = 4;
+	int64 CurrentAppearanceIndex = 5;
+	int64 EnhanceLevel = 6;
+	int64 Exp = 7;
+	int64 GradeLevel = 8;
+	int64 Level = 9;
+	IntList ModSlotPolarity = 10;
+	IntList ModSlotStatus = 11;
+	int64 ModSuitIndex = 12;
+	ObjectIdList ModSuit_1 = 13;
+	ObjectIdList ModSuit_2 = 14;
+	ObjectIdList ModSuit_3 = 15;
+	StrList ModSuitsName = 16;
+	int64 Status = 17;
+	SkinDict UsedSkins = 18;
+	bytes Uuid = 19;
+	int64 WeaponId = 20;
+}
+
+message WeaponDict {
+	map<string, Weapon> key_values = 1;
+}
+
+message Wheel {
+	map<int64, WheelSlot> key_values = 1;
+}
+
+message WheelSlot {
+	int64 ResourceCount = 1;
+	int64 ResourceId = 2;
+	int64 SlotId = 3;
+	int64 Status = 4;
+}
+
+message Wheels {
+	repeated Wheel values = 1;
+}
+
+message WikiEntry {
+	Int2IntDict ReadTexts = 1;
+	Int2IntDict UnlockTexts = 2;
+	int64 WikiEntryId = 3;
+}
+
+message WikiEntryDict {
+	map<int64, WikiEntry> key_values = 1;
+}
+
+message Wuyousheng {
+	Int2IntDict ProgressRewardsGot = 1;
+	int64 TotalStars = 2;
+	int64 WuyoushengEventId = 3;
+}
+
+message WuyoushengDict {
+	map<int64, Wuyousheng> key_values = 1;
+}
+
+message ZhiLiuEntrust {
+	bool CombatEntrustCompleted = 1;
+	int64 Key = 2;
+	bool SubmitEntrustCompleted = 3;
+}
+
+message ZhiLiuEntrustDict {
+	map<int64, ZhiLiuEntrust> key_values = 1;
+}
+
+message Avatar {
+	AbyssDict Abysses = 1;
+	string Account = 2;
+	string AccountId = 3;
+	AchvTargetDict AchvTargets = 4;
+	AchvDict Achvs = 5;
+	Str2StrDict ActionMapping = 6;
+	int64 ActionPoint = 7;
+	int64 ActionPointLastRecoverTime = 8;
+	Int2IntDict ActionPointRewardGot = 9;
+	Int2IntDict ActivityEndRemindMailRecord = 10;
+	Int2IntDict ActivityPermanenRemindMailRecord = 11;
+	Int2IntSetDict ActivityPlayerLvRewardsGot = 12;
+	Str2IntDict ActivityRewardGotRecord = 13;
+	ArchiveDict Archives = 14;
+	Int2IntDict BGMs = 15;
+	string BanReason = 16;
+	int64 BanTime = 17;
+	bool BattlePassAutoGetTaskReward = 18;
+	int64 BattlePassExp = 19;
+	int64 BattlePassLastVersion = 20;
+	bool BattlePassLastVersionHasUnclaimedPet = 21;
+	int64 BattlePassLevel = 22;
+	bool BattlePassPetCanClaim = 23;
+	bool BattlePassPetClaimed = 24;
+	Int2IntDict BattlePassPetClaimedRecord = 25;
+	Int2BoolDict BattlePassRank1LevelRewardsGot = 26;
+	Int2BoolDict BattlePassRank2LevelRewardsGot = 27;
+	Int2IntDict BattlePassRemindMailRecord = 28;
+	TargetCounterDict BattlePassTaskDaily = 29;
+	TargetCounterDict BattlePassTaskVersion = 30;
+	TargetCounterDict BattlePassTaskWeekly = 31;
+	bool BattlePassUnlockRank2 = 32;
+	bool BattlePassUnlockRank3 = 33;
+	int64 BattlePassVersion = 34;
+	int64 BattlePassWeeklyExp = 35;
+	IntList Birthday = 36;
+	Int2IntDict BirthdayMailRecord = 37;
+	AvatarInfoDict Blacklist = 38;
+	BuffDict Buffs = 39;
+	Int2IntDict CDKUsageRecord = 40;
+	string CatName = 41;
+	string Channel = 42;
+	int64 ChannelId = 43;
+	string ChannelUid = 44;
+	IntList CharAccessorys = 45;
+	CharTrialDict CharTrial = 46;
+	CharDict Chars = 47;
+	Int2BoolDict ChatChannelClose = 48;
+	Int2IntDict ChatChannelMute = 49;
+	ChatDict Chats = 50;
+	Str2IntDict ChzzkRewardsGot = 51;
+	Int2IntDict ClaimActivityConditionRewardRecord = 52;
+	Str2IntDict CollectRewardExpRecord = 53;
+	CommonCharDict CommonChars = 54;
+	SubRegionBaseDataAttrDict CommonDailyRegionDatas = 55;
+	CommonQuestDict CommonQuestActivity = 56;
+	SubRegionBaseDataAttrDict CommonQuestRegionDatas = 57;
+	SubRegionBaseDataAttrDict CommonRegionDatas = 58;
+	SubRegionBaseDataAttrDict CommonTriduumRegionDatas = 59;
+	SubRegionBaseDataAttrDict CommonWeeklyRegionDatas = 60;
+	Community Community = 61;
+	Int2IntDict CompletedActivity = 62;
+	Int2IntDict CompletedDialogues = 63;
+	Int2IntDict ConditionMailHasGot = 64;
+	int64 ConsecutiveLoginDays = 65;
+	float CreateTime = 66;
+	int64 CurrentAbyssSeasonId = 67;
+	bytes CurrentChar = 68;
+	DispatchGameListDict CurrentDispatchList = 69;
+	int64 CurrentPartyChar = 70;
+	int64 CurrentPet = 71;
+	int64 CurrentRegionId = 72;
+	int64 CurrentTaskProgress = 73;
+	int64 DailyInitLevel = 74;
+	DailyLoginDict DailyLogin = 75;
+	Int2BoolDict DailyTalks = 76;
+	TargetCounterDict DailyTaskAchvs = 77;
+	Int2IntDict DailyTaskProgress = 78;
+	DailyTaskDict DailyTasks = 79;
+	Str2IntDict DataStatistics = 80;
+	Int2IntDict DetectiveGameUnlockedAnswers = 81;
+	Int2IntDict DetectiveGameUnlockedAnswersRecord = 82;
+	Int2IntDict DetectiveGameUnlockedQuestions = 83;
+	Int2IntDict DetectiveGameUnlockedResults = 84;
+	DispatchDict Dispatches = 85;
+	DoubleModDropDict DoubleModDrop = 86;
+	bool DoubleModDropFirst = 87;
+	Draft2MataDict Draft2Matas = 88;
+	DraftDict Drafts = 89;
+	DungeonRandomEvent DungeonRandomEvent = 90;
+	Str2IntDict DungeonSquad = 91;
+	DungeonDict Dungeons = 92;
+	int64 DynamicQuestGlobalCD = 93;
+	int64 DynamicQuestPetToBeCapturedUniqueId = 94;
+	DynamicQuestDict DynamicQuests = 95;
+	bytes Eid = 96;
+	IntList Emoticons = 97;
+	int64 Exp = 98;
+	ExploreDict Explores = 99;
+	FeeRefundDict FeeRefund = 100;
+	FeiNaDict FeiNaDungeonData = 101;
+	Str2IntDict FirstMechanismTags = 102;
+	IntList FirstMonsters = 103;
+	IntList FirstStrongMonsters = 104;
+	TargetCounterDict FishAchvs = 105;
+	FishSizeDict FishSizes = 106;
+	Int2IntListDict Fishes = 107;
+	FishingSpotDict FishingSpots = 108;
+	string ForbidChatReason = 109;
+	int64 ForbidChatTime = 110;
+	FriendRequestDict FriendRequestReceiveBox = 111;
+	FriendRequestDict FriendRequestSendBox = 112;
+	FriendDict Friends = 113;
+	int64 GachaDrawCounts = 114;
+	GachaDict GachaPool = 115;
+	Str2IntDict GachaRecordParams = 116;
+	GachaRecordQueue GachaRecordQueue = 117;
+	GuaranteedDict GuaranteedDict = 118;
+	GuideBookDict GuideBook = 119;
+	Int2IntDict H5RewardMailRecord = 120;
+	HardBoss HardBoss = 121;
+	int64 HeadFrameId = 122;
+	IntList HeadFrameList = 123;
+	int64 HeadIconId = 124;
+	IntList HeadIconList = 125;
+	Int2IntDict HoldDrafts = 126;
+	Int2BoolDict HoldModRewards = 127;
+	Int2IntDict HoldMods = 128;
+	int64 HomeBaseBGM = 129;
+	int64 Hostnum = 130;
+	int64 ImgChannelId = 131;
+	Int2IntDict ImpressionDialogues = 132;
+	ImpressionShopItemDict ImpressionShops = 133;
+	Int2IntDict ImpressionTalkTriggers = 134;
+	ImpressionDict Impressions = 135;
+	bool IsBanned = 136;
+	bool IsRefreshRobberMonster = 137;
+	float LastLoginTime = 138;
+	float LastLogoutTime = 139;
+	int64 LastMonthlyCardDailyRewardTime = 140;
+	LastRegionData LastRegionData = 141;
+	int64 LastSaLogTime = 142;
+	int64 Level = 143;
+	IntSet LevelRewardsGot = 144;
+	LevelSequenceStateDict LevelSequenceStateRecorder = 145;
+	LimitedResourceDict LimitedResources = 146;
+	MailDict MailInbox = 147;
+	int64 MailUniqueID = 148;
+	MarkPointDict MarkPoints = 149;
+	bytes MeleeWeapon = 150;
+	Int2IntDict MidTermAchvProgressRewarded = 151;
+	int64 MidTermAchvScores = 152;
+	int64 MidTermScores = 153;
+	Int2IntDict MidTermScoresRewards = 154;
+	TargetCounterDict MidTermTasks = 155;
+	MidTermTaskDict MidTermTasksRecord = 156;
+	Int2BoolDict ModBookQuestPhaseRewardsGot = 157;
+	ModBookQuestDict ModBookQuests = 158;
+	TargetCounterDict ModGuideQuests = 159;
+	ModDict Mods = 160;
+	int64 MonthlyCardDailyRewardCount = 161;
+	MonthlyCardDailyRewardList MonthlyCardDailyRewards = 162;
+	int64 MonthlyCardExpireRemindTime = 163;
+	int64 MonthlyCardExpireTime = 164;
+	MonthlyCardDict MonthlyCards = 165;
+	int64 NextDailyRefreshTime = 166;
+	int64 NextHourlyRefreshTime = 167;
+	int64 NextMonthlyRefreshTime = 168;
+	int64 NextWeeklyRefreshTime = 169;
+	string Nickname = 170;
+	int64 NicknameChangeTime = 171;
+	Str2IntDict OfficalSentRewards = 172;
+	Int2IntDict OfflineActivity = 173;
+	float OfflineOperatorTime = 174;
+	Str2StrDict OperationMailNotes = 175;
+	Int2ObjIdDict OriginalMods = 176;
+	Int2IntListDict OtherCharSkins = 177;
+	Int2IntDict OwnedWeaponSkins = 178;
+	Int2IntDict PaotaiBuffs = 179;
+	PaotaiEventDict PaotaiGame = 180;
+	PartyDict PartyNpcs = 181;
+	PersonalInfo PersonalInfo = 182;
+	Int2IntDict PetEntryLockSetting = 183;
+	float PetGuaranteeRate = 184;
+	PetRegionAttrDict PetRegionAttrs = 185;
+	bool PetShowPremiumTransform = 186;
+	int64 PetUniqueID = 187;
+	Int2IntDict PetUnlockedEntrys = 188;
+	PetDict Pets = 189;
+	Int2IntDict PlayerExpRecord = 190;
+	int64 PurchaseActionPointCount = 191;
+	QuestChains QuestChains = 192;
+	SubRegionBaseDataAttrDict QuestRegionDatas = 193;
+	QuestTracking QuestTrack = 194;
+	Int2IntDict QuestionnaireRecord = 195;
+	StrList QuickMessages = 196;
+	bytes RangedWeapon = 197;
+	SubRegionBaseDataAttrDict RarelyRegionDatas = 198;
+	RecentMatchedFriendDict RecentMatchList = 199;
+	AvatarInfoDict RecommendFriendList = 200;
+	int64 RegTime = 201;
+	Int2IntDict Region2TryPetCount = 202;
+	Int2IntDict RegionDataRefreshTime = 203;
+	Int2IntDict RegionSpecialMonsterCounter = 204;
+	Int2IntDict RegionSpecialMonsterTimer = 205;
+	ModDict RemoveMods = 206;
+	WeaponDict RemoveWeapons = 207;
+	int64 ResourceCoinNumDaily = 208;
+	ResourceDict Resources = 209;
+	RewardParams RewardParams = 210;
+	RougeLikeInfo RougeLike = 211;
+	Str2StrDict SdkDeviceId = 212;
+	string SdkLoginRegionCode = 213;
+	string SdkRegisterRegionCode = 214;
+	string SdkUserId = 215;
+	int64 Sex = 216;
+	ShopItemDict ShopItems = 217;
+	IntList SignBoardNpc = 218;
+	string Signature = 219;
+	SkinGachaDict SkinGachaPool = 220;
+	SpecialQuestDataDict SpecialQuestData = 221;
+	SquadList Squad = 222;
+	MailDict StarMails = 223;
+	int64 StartIndex = 224;
+	TargetCounterDict StarterQuests = 225;
+	Str2IntDict StoredCollectReward = 226;
+	Str2IntDict StoryVariable = 227;
+	Suits Suits = 228;
+	SystemGuideDict SystemGuides = 229;
+	Str2IntDict SystemStates = 230;
+	Str2IntDict TalkTags = 231;
+	int64 TeamOrientation = 232;
+	TempleDict Temple = 233;
+	bool TestRegionDataCheck = 234;
+	TheaterDict TheaterActivity = 235;
+	int64 TitleAfter = 236;
+	int64 TitleBefore = 237;
+	int64 TitleFrame = 238;
+	Int2IntDict TitleFrames = 239;
+	Int2IntDict Titles = 240;
+	int64 TodayLimitDynamicQuestTimes = 241;
+	int64 TodayPartyReward = 242;
+	int64 TotalActionPointCost = 243;
+	int64 TotalExp = 244;
+	int64 TotalLoginDays = 245;
+	int64 TotalOnlineTime = 246;
+	int64 TotalRechargeCount = 247;
+	float TotalRechargeMoney = 248;
+	int64 TotalSignBoardNpcDailyTalkCount = 249;
+	int64 TrackingQuestChainId = 250;
+	int64 TryMaxPetRegionId = 251;
+	Str2IntDict TwitchRewardsGot = 252;
+	UWeaponDict UWeapons = 253;
+	int64 Uid = 254;
+	Walnut Walnuts = 255;
+	Str2IntDict WeChatSentRewards = 256;
+	IntList WeaponAccessorys = 257;
+	WeaponDict Weapons = 258;
+	int64 WeeklyDungeonRewardLeft = 259;
+	string WeitaName = 260;
+	int64 WeitaSex = 261;
+	int64 WheelIndex = 262;
+	Wheels Wheels = 263;
+	StrList WheelsName = 264;
+	WikiEntryDict WikiEntries = 265;
+	Int2IntDict WikiGotRewards = 266;
+	WuyoushengDict WuyoushengActivity = 267;
+	ZhiLiuEntrustDict ZhiLiuEntrustDict = 268;
+	bool ZhiLiuEntrustGrandRewardGot = 269;
+	bytes _id = 270;
+	bool bAutoPhantomForDefaultSquad = 271;
+	bool bDungeonDoubleCost = 272;
+	bool bGotFeeRefund = 273;
+}
+

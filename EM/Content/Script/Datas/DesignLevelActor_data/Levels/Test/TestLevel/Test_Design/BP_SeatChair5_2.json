@@ -1,0 +1,80 @@
+Begin Map
+   Begin Level
+      Begin Actor Class=/Game/BluePrints/Item/Mechanism/Seat/BP_Seat_Single_F.BP_Seat_Single_F_C Name=BP_SeatChair5_2 Archetype=/Game/BluePrints/Item/Mechanism/Seat/BP_Seat_Single_F.BP_Seat_Single_F_C'/Game/BluePrints/Item/Mechanism/Seat/BP_Seat_Single_F.Default__BP_Seat_Single_F_C'
+         Begin Object Class=/Script/Engine.ArrowComponent Name="Arrow" Archetype=ArrowComponent'/Game/BluePrints/Item/Mechanism/Seat/BP_Seat_Single_F.BP_Seat_Single_F_C:Arrow_GEN_VARIABLE'
+         End Object
+         Begin Object Class=/Script/Engine.BoxComponent Name="Box1" Archetype=BoxComponent'/Game/BluePrints/Item/Mechanism/Seat/BP_Seat_Single_F.BP_Seat_Single_F_C:Box1_GEN_VARIABLE'
+         End Object
+         Begin Object Class=/Game/BluePrints/Char/BP_FXComponent.BP_FXComponent_C Name="BP_FXComponent" Archetype=BP_FXComponent_C'/Game/BluePrints/Item/Mechanism/Seat/BP_Seat_Single_F.Default__BP_Seat_Single_F_C:BP_FXComponent'
+         End Object
+         Begin Object Class=/Game/BluePrints/Item/Mechanism/Seat/BP_SeatEnterComponent.BP_SeatEnterComponent_C Name="BP_SeatEnterComponent" Archetype=BP_SeatEnterComponent_C'/Game/BluePrints/Item/Mechanism/Seat/BP_Seat_Single_F.BP_Seat_Single_F_C:BP_SeatEnterComponent_GEN_VARIABLE'
+         End Object
+         Begin Object Class=/Game/BluePrints/Item/Mechanism/Seat/BP_SeatPointComponent.BP_SeatPointComponent_C Name="BP_SeatPointComponent" Archetype=BP_SeatPointComponent_C'/Game/BluePrints/Item/Mechanism/Seat/BP_Seat_Single_F.BP_Seat_Single_F_C:BP_SeatPointComponent_GEN_VARIABLE'
+         End Object
+         Begin Object Class=/Game/BluePrints/Item/BP_CombatClientEffectComponent.BP_CombatClientEffectComponent_C Name="CombatClientEffectComponent" Archetype=BP_CombatClientEffectComponent_C'/Game/BluePrints/Item/Mechanism/Seat/BP_Seat_Single_F.Default__BP_Seat_Single_F_C:CombatClientEffectComponent'
+         End Object
+         Begin Object Class=/Game/BluePrints/Item/BP_CombatStateChangeComponent.BP_CombatStateChangeComponent_C Name="CombatStateChangeComponent" Archetype=BP_CombatStateChangeComponent_C'/Game/BluePrints/Item/Mechanism/Seat/BP_Seat_Single_F.Default__BP_Seat_Single_F_C:CombatStateChangeComponent'
+         End Object
+         Begin Object Class=/Game/BluePrints/Item/Chest/BP_ChestInteractiveComponent.BP_ChestInteractiveComponent_C Name="DefaultInteractiveComponent" Archetype=BP_ChestInteractiveComponent_C'/Game/BluePrints/Item/Mechanism/Seat/BP_SeatBase.BP_SeatBase_C:DefaultInteractiveComponent_GEN_VARIABLE'
+         End Object
+         Begin Object Class=/Script/Engine.StaticMeshComponent Name="StaticMesh" Archetype=StaticMeshComponent'/Game/BluePrints/Item/Mechanism/Seat/BP_Seat_Single_F.BP_Seat_Single_F_C:StaticMesh_GEN_VARIABLE'
+         End Object
+         Begin Object Name="Arrow"
+            AttachParent="DefaultInteractiveComponent"
+            UCSSerializationIndex=0
+            bNetAddressable=True
+            CreationMethod=SimpleConstructionScript
+         End Object
+         Begin Object Name="Box1"
+            BodyInstance=(MaxAngularVelocity=3599.999756)
+            AttachParent="DefaultInteractiveComponent"
+            UCSSerializationIndex=0
+            bNetAddressable=True
+            CreationMethod=SimpleConstructionScript
+         End Object
+         Begin Object Name="BP_FXComponent"
+         End Object
+         Begin Object Name="BP_SeatEnterComponent"
+            AttachParent="BP_SeatPointComponent"
+            UCSSerializationIndex=0
+            bNetAddressable=True
+            CreationMethod=SimpleConstructionScript
+         End Object
+         Begin Object Name="BP_SeatPointComponent"
+            BodyInstance=(MaxAngularVelocity=3599.999756)
+            AttachParent="Box1"
+            UCSSerializationIndex=0
+            bNetAddressable=True
+            CreationMethod=SimpleConstructionScript
+         End Object
+         Begin Object Name="CombatClientEffectComponent"
+         End Object
+         Begin Object Name="CombatStateChangeComponent"
+         End Object
+         Begin Object Name="DefaultInteractiveComponent"
+            RelativeLocation=(X=-6429.00,Y=-3426.00,Z=-327.00)
+            UCSSerializationIndex=0
+            bNetAddressable=True
+            CreationMethod=SimpleConstructionScript
+            UCSModifiedProperties(0)=(MemberParent=Class'"/Script/Engine.SceneComponent"',MemberName="RelativeLocation")
+         End Object
+         Begin Object Name="StaticMesh"
+            AttachParent="DefaultInteractiveComponent"
+            UCSSerializationIndex=0
+            bNetAddressable=True
+            CreationMethod=SimpleConstructionScript
+         End Object
+         StaticMesh="StaticMesh"
+         Arrow="Arrow"
+         Box1="Box1"
+         DefaultInteractiveComponent="DefaultInteractiveComponent"
+         BP_SeatEnterComponent="BP_SeatEnterComponent"
+         BP_SeatPointComponent="BP_SeatPointComponent"
+         RootComponent="DefaultInteractiveComponent"
+         ActorLabel="BP_SeatChair5"
+      End Actor
+   End Level
+Begin Surface
+End Surface
+End Map
+

@@ -1,0 +1,78 @@
+Begin Map
+   Begin Level
+      Begin Actor Class=/Game/BluePrints/Map/BP_EMNavLinkProxy.BP_EMNavLinkProxy_C Name=BP_EMNavLinkProxy_C_29 Archetype=/Game/BluePrints/Map/BP_EMNavLinkProxy.BP_EMNavLinkProxy_C'/Game/BluePrints/Map/BP_EMNavLinkProxy.Default__BP_EMNavLinkProxy_C'
+         Begin Object Class=/Script/NavigationSystem.NavLinkRenderingComponent Name="EdRenderComp" Archetype=NavLinkRenderingComponent'/Game/BluePrints/Map/BP_EMNavLinkProxy.Default__BP_EMNavLinkProxy_C:EdRenderComp'
+         End Object
+         Begin Object Class=/Script/EM.EMNavModifierComponent Name="EMNavModifier" Archetype=EMNavModifierComponent'/Game/BluePrints/Map/BP_EMNavLinkProxy.BP_EMNavLinkProxy_C:EMNavModifier_GEN_VARIABLE'
+         End Object
+         Begin Object Class=/Script/EM.EMNavLinkSplineComponent Name="MovementSpline" Archetype=EMNavLinkSplineComponent'/Game/BluePrints/Map/BP_EMNavLinkProxy.Default__BP_EMNavLinkProxy_C:MovementSpline'
+         End Object
+         Begin Object Class=/Script/Engine.SceneComponent Name="PositionComponent" Archetype=SceneComponent'/Game/BluePrints/Map/BP_EMNavLinkProxy.Default__BP_EMNavLinkProxy_C:PositionComponent'
+         End Object
+         Begin Object Class=/Script/EM.EMNavLinkCustomComponent Name="SmartLinkComp" Archetype=EMNavLinkCustomComponent'/Game/BluePrints/Map/BP_EMNavLinkProxy.Default__BP_EMNavLinkProxy_C:SmartLinkComp'
+         End Object
+         Begin Object Class=/Script/Engine.TimelineComponent Name="SplineSampleTimeLine"
+         End Object
+         Begin Object Class=/Script/Engine.BillboardComponent Name="Sprite" Archetype=BillboardComponent'/Game/BluePrints/Map/BP_EMNavLinkProxy.Default__BP_EMNavLinkProxy_C:Sprite'
+         End Object
+         Begin Object Class=/Script/Engine.TimelineComponent Name="Timeline_0"
+         End Object
+         Begin Object Class=/Script/Engine.TimelineComponent Name="Timeline_1"
+         End Object
+         Begin Object Name="EdRenderComp"
+            AttachParent="PositionComponent"
+            Mobility=Movable
+         End Object
+         Begin Object Name="EMNavModifier"
+            PartCollisionComponents(0)=()
+            UCSSerializationIndex=0
+            bNetAddressable=True
+            CreationMethod=SimpleConstructionScript
+         End Object
+         Begin Object Name="MovementSpline"
+            SplineCurves=(Position=(Points=((ArriveTangent=(X=0.000000,Y=200.000000,Z=320.000000),LeaveTangent=(X=0.000000,Y=200.000000,Z=320.000000),InterpMode=CIM_CurveAuto),(InVal=1.000000,OutVal=(X=0.000000,Y=200.000000,Z=320.000000),ArriveTangent=(X=-177.298996,Y=0.000000,Z=-70.666672),LeaveTangent=(X=-177.298996,Y=0.000000,Z=-70.666672),InterpMode=CIM_CurveAuto),(InVal=2.000000,OutVal=(X=-354.597992,Y=0.000000,Z=-141.333344),ArriveTangent=(X=-354.597992,Y=-200.000000,Z=-461.333344),LeaveTangent=(X=-354.597992,Y=-200.000000,Z=-461.333344),InterpMode=CIM_CurveAuto))),Rotation=(Points=((OutVal=(X=0.484768,Y=-0.000000,Z=0.000000,W=0.874642),ArriveTangent=(X=0.683316,Y=0.097761,Z=0.000000,W=0.723548),LeaveTangent=(X=0.683316,Y=0.097761,Z=0.000000,W=0.723548),InterpMode=CIM_CurveAuto),(InVal=1.000000,OutVal=(X=0.000000,Y=-0.188503,Z=0.000000,W=0.982073),ArriveTangent=(X=-0.264224,Y=-0.168399,Z=0.000000,W=0.389651),LeaveTangent=(X=-0.264224,Y=-0.168399,Z=0.000000,W=0.389651),InterpMode=CIM_CurveAuto),(InVal=2.000000,OutVal=(X=0.570478,Y=0.048506,Z=-0.000000,W=0.819879),ArriveTangent=(X=0.780214,Y=0.165799,Z=0.000000,W=0.603139),LeaveTangent=(X=0.780214,Y=0.165799,Z=0.000000,W=0.603139),InterpMode=CIM_CurveAuto))),ReparamTable=(Points=((),(InVal=31.283442,OutVal=0.100000),(InVal=67.266205,OutVal=0.200000),(InVal=105.965317,OutVal=0.300000),(InVal=145.346283,OutVal=0.400000),(InVal=183.364578,OutVal=0.500000),(InVal=217.996780,OutVal=0.600000),(InVal=247.294312,OutVal=0.700000),(InVal=269.549988,OutVal=0.800000),(InVal=284.114441,OutVal=0.900000),(InVal=296.205994,OutVal=1.000000),(InVal=315.734070,OutVal=1.100000),(InVal=345.938446,OutVal=1.200000),(InVal=385.565674,OutVal=1.300000),(InVal=432.749390,OutVal=1.400000),(InVal=485.475555,OutVal=1.500000),(InVal=541.679138,OutVal=1.600000),(InVal=599.275085,OutVal=1.700000),(InVal=656.172119,OutVal=1.800000),(InVal=710.282104,OutVal=1.900000),(InVal=759.531433,OutVal=2.000000))))
+            AttachParent="PositionComponent"
+         End Object
+         Begin Object Name="PositionComponent"
+            RelativeLocation=(X=-2990.00,Y=3684.00,Z=-258.00)
+         End Object
+         Begin Object Name="SmartLinkComp"
+            NavLinkUserId=0
+            LinkRelativeStart=(X=0.000000,Y=0.000000,Z=0.000000)
+            LinkRelativeEnd=(X=-265.948486,Y=0.000000,Z=-106.000000)
+         End Object
+         Begin Object Name="SplineSampleTimeLine"
+            TheTimeline=(LengthMode=TL_TimelineLength,Length=1.000000,InterpFloats=((FloatCurve=CurveFloat'"/Game/BluePrints/Map/BP_EMNavLinkProxy.BP_EMNavLinkProxy_C:CurveFloat_1"',TrackName="SplineSampleRatio",FloatPropertyName="SplineSampleTimeLine_SplineSampleRatio_25D894054CD768589DDE8198F1EF6C29")),TimelinePostUpdateFunc=BP_EMNavLinkProxy_C_29.SplineSampleTimeLine__UpdateFunc,TimelineFinishedFunc=BP_EMNavLinkProxy_C_29.SplineSampleTimeLine__FinishedFunc,PropertySetObject=BP_EMNavLinkProxy_C'"BP_EMNavLinkProxy_C_29"',DirectionPropertyName="SplineSampleTimeLine__Direction_25D894054CD768589DDE8198F1EF6C29")
+            bNetAddressable=True
+            CreationMethod=UserConstructionScript
+         End Object
+         Begin Object Name="Sprite"
+            AttachParent="PositionComponent"
+         End Object
+         Begin Object Name="Timeline_0"
+            TheTimeline=(LengthMode=TL_TimelineLength,Length=1.000000,InterpFloats=((FloatCurve=CurveFloat'"/Game/BluePrints/Map/BP_EMNavLinkProxy.BP_EMNavLinkProxy_C:CurveFloat_1_2"',TrackName="SplineSampleRatio",FloatPropertyName="Timeline_0_SplineSampleRatio_05F1257F46DC9D22DE16DE9FEA7FDF1D")),TimelinePostUpdateFunc=BP_EMNavLinkProxy_C_29.Timeline_0__UpdateFunc,TimelineFinishedFunc=BP_EMNavLinkProxy_C_29.Timeline_0__FinishedFunc,PropertySetObject=BP_EMNavLinkProxy_C'"BP_EMNavLinkProxy_C_29"',DirectionPropertyName="Timeline_0__Direction_05F1257F46DC9D22DE16DE9FEA7FDF1D")
+            bNetAddressable=True
+            CreationMethod=UserConstructionScript
+         End Object
+         Begin Object Name="Timeline_1"
+            TheTimeline=(LengthMode=TL_TimelineLength,Length=1.000000,InterpFloats=((FloatCurve=CurveFloat'"/Game/BluePrints/Map/BP_EMNavLinkProxy.BP_EMNavLinkProxy_C:CurveFloat_1_2_3"',TrackName="SplineSampleRatio",FloatPropertyName="Timeline_1_SplineSampleRatio_5E992EB249D4A64EE98CE4AE536D282E")),TimelinePostUpdateFunc=BP_EMNavLinkProxy_C_29.Timeline_1__UpdateFunc,TimelineFinishedFunc=BP_EMNavLinkProxy_C_29.Timeline_1__FinishedFunc,PropertySetObject=BP_EMNavLinkProxy_C'"BP_EMNavLinkProxy_C_29"',DirectionPropertyName="Timeline_1__Direction_5E992EB249D4A64EE98CE4AE536D282E")
+            bNetAddressable=True
+            CreationMethod=UserConstructionScript
+         End Object
+         EMNavModifier="EMNavModifier"
+         Timeline_1=TimelineComponent'"Timeline_1"'
+         Timeline_0=TimelineComponent'"Timeline_0"'
+         SplineSampleTimeLine=TimelineComponent'"SplineSampleTimeLine"'
+         Spline="MovementSpline"
+         EditorUniqueLinkId=15
+         PointLinks(0)=(Left=(X=0.000000,Y=0.000000,Z=0.000000),Right=(X=-265.948486,Y=0.000000,Z=-106.000000),LeftProjectHeight=0.000000,SnapRadius=120.000000,bSnapToCheapestArea=True,AreaClass=Class'"/Script/NavigationSystem.NavArea_Default"')
+         SmartLinkComp="SmartLinkComp"
+         EdRenderComp="EdRenderComp"
+         RootComponent="PositionComponent"
+         ActorLabel="BP_EMNavLinkProxy29"
+      End Actor
+   End Level
+Begin Surface
+End Surface
+End Map
+

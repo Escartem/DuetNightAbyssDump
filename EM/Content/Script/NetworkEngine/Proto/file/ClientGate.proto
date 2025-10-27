@@ -1,0 +1,75 @@
+syntax = "proto3";
+
+
+message CommonInfo {
+	int32 ClientAck = 1;
+	int32 ServerAck = 2;
+	int32 ServerTime = 3;
+}
+
+// C->S SessionSeedRequest
+message SessionSeedRequest {
+	CommonInfo Common = 1;
+}
+
+// S->C SessionSeedReply
+message SessionSeedReply{
+	string Seed = 1;
+	string EnSeed = 2;
+	string EnServerKey = 3;
+	CommonInfo Common = 4;
+}
+
+// C->S SessionSeedCheck
+message SessionSeedCheck {
+	string EnClientKey = 1;
+	string EnSeed2 = 2;
+	CommonInfo Common = 3;
+}
+
+// S->C SessionSeedCheckOk
+message SessionSeedCheckOk {
+	CommonInfo Common = 1;
+}
+
+// C->S ConnectServer
+message ConnectServer {
+	int32 ConnectionType = 1;
+	int32 DeviceId = 2;
+	string LastCookie = 3;
+	CommonInfo Common = 4;
+}
+
+// S->C ConnectReply
+message ConnectReply {
+	int32 ReplyType = 1;
+	string ConnectionCookie = 2;
+	CommonInfo Common = 3;
+}
+
+// S->C CreateEntity
+message CreateEntity {
+	string EntityName = 1;
+	bytes EntityId = 2;
+	bytes EntityData = 3;
+	CommonInfo Common = 4;
+}
+
+// S->C DestroyEntity
+message DestroyEntity {
+	bytes EntityId = 1;
+	CommonInfo Common = 2;
+}
+
+// S->C C->S EntityMessage
+message EntityMessage {
+	bytes EntityId = 1;
+	string Method = 2;
+	bytes Params = 3;
+	CommonInfo Common = 4;
+}
+
+// S->C C->S HeartBeat
+message HeartBeat {
+	CommonInfo Common = 1;
+}

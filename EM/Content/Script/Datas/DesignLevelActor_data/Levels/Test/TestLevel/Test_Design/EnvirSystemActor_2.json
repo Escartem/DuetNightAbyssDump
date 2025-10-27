@@ -1,0 +1,233 @@
+Begin Map
+   Begin Level
+      Begin Actor Class=/Game/Asset/Scene/common/EnvirSystem/EnvirSystemActor.EnvirSystemActor_C Name=EnvirSystemActor_2 Archetype=/Game/Asset/Scene/common/EnvirSystem/EnvirSystemActor.EnvirSystemActor_C'/Game/Asset/Scene/common/EnvirSystem/EnvirSystemActor.Default__EnvirSystemActor_C'
+         Begin Object Class=/Script/Engine.ArrowComponent Name="Arrow" Archetype=ArrowComponent'/Game/Asset/Scene/common/EnvirSystem/EnvirSystemActor.EnvirSystemActor_C:Arrow_GEN_VARIABLE'
+         End Object
+         Begin Object Class=/Script/Engine.StaticMeshComponent Name="Cube" Archetype=StaticMeshComponent'/Game/Asset/Scene/common/EnvirSystem/EnvirSystemActor.EnvirSystemActor_C:Cube_GEN_VARIABLE'
+         End Object
+         Begin Object Class=/Script/Engine.MaterialInstanceDynamic Name="MaterialInstanceDynamic"
+         End Object
+         Begin Object Class=/Script/Engine.DirectionalLightComponent Name="NODE_AddDirectionalLightComponent-13" Archetype=DirectionalLightComponent'/Game/Asset/Scene/common/EnvirSystem/EnvirSystemActor.EnvirSystemActor_C:NODE_AddDirectionalLightComponent-13'
+         End Object
+         Begin Object Class=/Script/Engine.DirectionalLightComponent Name="NODE_AddDirectionalLightComponent-5" Archetype=DirectionalLightComponent'/Game/Asset/Scene/common/EnvirSystem/EnvirSystemActor.EnvirSystemActor_C:NODE_AddDirectionalLightComponent-5'
+         End Object
+         Begin Object Class=/Script/Engine.DirectionalLightComponent Name="NODE_AddDirectionalLightComponent-6" Archetype=DirectionalLightComponent'/Game/Asset/Scene/common/EnvirSystem/EnvirSystemActor.EnvirSystemActor_C:NODE_AddDirectionalLightComponent-6'
+         End Object
+         Begin Object Class=/Script/Engine.ExponentialHeightFogComponent Name="NODE_AddExponentialHeightFogComponent-2" Archetype=ExponentialHeightFogComponent'/Game/Asset/Scene/common/EnvirSystem/EnvirSystemActor.EnvirSystemActor_C:NODE_AddExponentialHeightFogComponent-2'
+         End Object
+         Begin Object Class=/Script/Engine.SkyLightComponent Name="NODE_AddSkyLightComponent-3" Archetype=SkyLightComponent'/Game/Asset/Scene/common/EnvirSystem/EnvirSystemActor.EnvirSystemActor_C:NODE_AddSkyLightComponent-3'
+         End Object
+         Begin Object Class=/Script/Engine.SimpleRuntimeTextureComponent Name="SimpleRVT" Archetype=SimpleRuntimeTextureComponent'/Game/Asset/Scene/common/EnvirSystem/EnvirSystemActor.EnvirSystemActor_C:SimpleRVT_GEN_VARIABLE'
+         End Object
+         Begin Object Class=/Script/Engine.StaticMeshComponent Name="Sky_Sphere" Archetype=StaticMeshComponent'/Game/Asset/Scene/common/EnvirSystem/EnvirSystemActor.EnvirSystemActor_C:Sky_Sphere_GEN_VARIABLE'
+            Begin Object Class=/Script/Engine.MaterialInstanceDynamic Name="EnvSky"
+            End Object
+         End Object
+         Begin Object Class=/Script/Engine.StaticMeshComponent Name="SM_Cloud" Archetype=StaticMeshComponent'/Game/Asset/Scene/common/EnvirSystem/EnvirSystemActor.EnvirSystemActor_C:SM_Cloud_GEN_VARIABLE'
+            Begin Object Class=/Script/Engine.MaterialInstanceDynamic Name="EnvSky"
+            End Object
+         End Object
+         Begin Object Class=/Script/Engine.StaticWindMotorComponent Name="全局环境风" Archetype=StaticWindMotorComponent'/Game/Asset/Scene/common/EnvirSystem/EnvirSystemActor.EnvirSystemActor_C:全局环境风_GEN_VARIABLE'
+         End Object
+         Begin Object Class=/Script/Engine.DynamicWindFieldComponent Name="风场接收器" Archetype=DynamicWindFieldComponent'/Game/Asset/Scene/common/EnvirSystem/EnvirSystemActor.EnvirSystemActor_C:风场接收器_GEN_VARIABLE'
+         End Object
+         Begin Object Name="Arrow"
+            RelativeLocation=(X=-3986.00,Y=-2015.00,Z=321.00)
+            RelativeRotation=(Pitch=-129.60,Yaw=46.80,Roll=0.00)
+            UCSSerializationIndex=0
+            bNetAddressable=True
+            CreationMethod=SimpleConstructionScript
+            UCSModifiedProperties(0)=(MemberParent=Class'"/Script/Engine.SceneComponent"',MemberName="RelativeLocation")
+            UCSModifiedProperties(1)=(MemberParent=Class'"/Script/Engine.SceneComponent"',MemberName="RelativeRotation")
+         End Object
+         Begin Object Name="Cube"
+            BodyInstance=(MaxAngularVelocity=3599.999756)
+            AttachParent="Arrow"
+            RelativeScale3D=(X=300.00,Y=300.00,Z=100.00)
+            bVisible=False
+            UCSSerializationIndex=0
+            bNetAddressable=True
+            CreationMethod=SimpleConstructionScript
+            UCSModifiedProperties(0)=(MemberParent=Class'"/Script/Engine.SceneComponent"',MemberName="RelativeScale3D")
+            UCSModifiedProperties(1)=(MemberParent=Class'"/Script/Engine.SceneComponent"',MemberName="bVisible")
+         End Object
+         Begin Object Name="MaterialInstanceDynamic"
+            Parent=MaterialInstanceConstant'"/Game/Asset/Scene/common/EnvirSystem/Materials/MI_CloudShadow.MI_CloudShadow"'
+            ScalarParameterValues(0)=(ParameterInfo=(Name="CloudRange"))
+            VectorParameterValues(0)=(ParameterInfo=(Name="平铺/偏移"),ParameterValue=(R=0.020000,G=0.020000,B=0.000000,A=0.000000))
+            VectorParameterValues(1)=(ParameterInfo=(Name="CloudSpeed"),ParameterValue=(R=-0.008000,G=-0.008000,B=0.000000,A=0.000000))
+            CachedReferencedTextures(0)=Texture2D'"/Game/Asset/Scene/common/3Texture/BaseTex/T_LinearWhite.T_LinearWhite"'
+         End Object
+         Begin Object Name="NODE_AddDirectionalLightComponent-13"
+            AttachParent="Arrow"
+            RelativeRotation=(Pitch=-0.00,Yaw=180.00,Roll=180.00)
+            bVisible=False
+            UCSSerializationIndex=0
+            CreationMethod=UserConstructionScript
+         End Object
+         Begin Object Name="NODE_AddDirectionalLightComponent-5"
+            ShadowColorCharacter=(R=1.000000,G=1.000000,B=1.000000,A=0.000000)
+            RimLightIntensityCharacter=0.500000
+            RimLightColorCharacter=(R=3.000000,G=3.000000,B=3.000000,A=1.000000)
+            RimLightWidthCharacter=2.000000
+            RimLightPowerCharacter=0.400000
+            RimLightDepthBiasCharacter=8.000000
+            Intensity=3.140000
+            AttachParent="Arrow"
+            UCSSerializationIndex=0
+            CreationMethod=UserConstructionScript
+         End Object
+         Begin Object Name="NODE_AddDirectionalLightComponent-6"
+            bUsedAsAtmosphereSunLight=True
+            bOpenRimShadow=True
+            RimShadowColor=(R=2.000000,G=0.864917,B=0.106801,A=1.000000)
+            RimShadowSceneWidth=0.300000
+            RimShadowSoft=0.200000
+            RimShadowOffset=0.300000
+            ShadowSlopeBiasFar=0.500000
+            LightFunctionMaterial=MaterialInstanceDynamic'"MaterialInstanceDynamic"'
+            bEnableLightShaftBloom=False
+            Intensity=2.000000
+            AttachParent="Arrow"
+            UCSSerializationIndex=0
+            CreationMethod=UserConstructionScript
+         End Object
+         Begin Object Name="NODE_AddExponentialHeightFogComponent-2"
+            FogHeightFalloff=0.500000
+            FogInscatteringColor=(R=0.389323,G=0.418556,B=0.473958,A=1.000000)
+            DirectionalInscatteringColor=(R=0.000000,G=0.000000,B=0.000000,A=1.000000)
+            AttachParent="Arrow"
+            UCSSerializationIndex=0
+            CreationMethod=UserConstructionScript
+         End Object
+         Begin Object Name="NODE_AddSkyLightComponent-3"
+            Cubemap=TextureCube'"/Game/Asset/Scene/common/Cube/Cube1.Cube1"'
+            CharacterSkyLightIntensity=1.000000
+            CharacterSkyLightSaturation=0.800000
+            CharacterIndirectLightIntensity=1.000000
+            CharacterIndirectLightSaturation=1.200000
+            AttachParent="Arrow"
+            Mobility=Movable
+            UCSSerializationIndex=0
+            CreationMethod=UserConstructionScript
+         End Object
+         Begin Object Name="SimpleRVT"
+            AttachParent="Arrow"
+            UCSSerializationIndex=0
+            bNetAddressable=True
+            CreationMethod=SimpleConstructionScript
+         End Object
+         Begin Object Name="Sky_Sphere"
+            Begin Object Name="EnvSky"
+               Parent=MaterialInstanceConstant'"/Game/Asset/Scene/common/EnvirSystem/Materials/MI_Env_Sunny.MI_Env_Sunny"'
+               ScalarParameterValues(0)=(ParameterInfo=(Name="云层分开染色"))
+               ScalarParameterValues(1)=(ParameterInfo=(Name="Cloud01Tint"),ParameterValue=8.000000)
+               ScalarParameterValues(2)=(ParameterInfo=(Name="Cloud02Tint"),ParameterValue=8.000000)
+               ScalarParameterValues(3)=(ParameterInfo=(Name="UseThunder"))
+               ScalarParameterValues(4)=(ParameterInfo=(Name="GalaxyDis"))
+               ScalarParameterValues(5)=(ParameterInfo=(Name="Horizon falloff"),ParameterValue=1.000000)
+               ScalarParameterValues(6)=(ParameterInfo=(Name="高光强度"))
+               ScalarParameterValues(7)=(ParameterInfo=(Name="切换为近景云UV"))
+               ScalarParameterValues(8)=(ParameterInfo=(Name="GalaxyOffset"),ParameterValue=1.000000)
+               ScalarParameterValues(9)=(ParameterInfo=(Name="CloudTime"))
+               ScalarParameterValues(10)=(ParameterInfo=(Name="Cloud speed"))
+               ScalarParameterValues(11)=(ParameterInfo=(Name="CloudOP"),ParameterValue=1.000000)
+               ScalarParameterValues(12)=(ParameterInfo=(Name="Sun height"))
+               ScalarParameterValues(13)=(ParameterInfo=(Name="PlanetScale"),ParameterValue=0.559993)
+               ScalarParameterValues(14)=(ParameterInfo=(Name="Stars brightness"),ParameterValue=0.100000)
+               VectorParameterValues(0)=(ParameterInfo=(Name="Light direction"),ParameterValue=(R=-0.436347,G=-0.464662,B=-0.770513,A=1.000000))
+               VectorParameterValues(1)=(ParameterInfo=(Name="Sun color"),ParameterValue=(R=0.000000,G=0.591451,B=1.000000,A=1.000000))
+               VectorParameterValues(2)=(ParameterInfo=(Name="Horizon color"),ParameterValue=(R=0.000000,G=0.000000,B=0.000000,A=1.000000))
+               VectorParameterValues(3)=(ParameterInfo=(Name="Zenith color"),ParameterValue=(R=0.026042,G=0.026042,B=0.026042,A=1.000000))
+               VectorParameterValues(4)=(ParameterInfo=(Name="Overall color"))
+               VectorParameterValues(5)=(ParameterInfo=(Name="PlanetColor"),ParameterValue=(R=1.000000,G=1.000000,B=1.000000,A=1.000000))
+               TextureParameterValues(0)=(ParameterInfo=(Name="PlanetTex"),ParameterValue=Texture2D'"/Engine/EngineResources/Black.Black"')
+               TextureParameterValues(1)=(ParameterInfo=(Name="CloudMap_1"),ParameterValue=Texture2D'"/Engine/EngineResources/Black.Black"')
+               TextureParameterValues(2)=(ParameterInfo=(Name="CloudMap_2"),ParameterValue=Texture2D'"/Engine/EngineResources/Black.Black"')
+               CachedReferencedTextures(0)=Texture2D'"/Game/Asset/Scene/common/3Texture/BaseTex/T_BaseLinearBlack.T_BaseLinearBlack"'
+               CachedReferencedTextures(1)=Texture2D'"/Game/Asset/Scene/common/EnvirSystem/Texture/T_Env_Stars.T_Env_Stars"'
+               CachedReferencedTextures(2)=Texture2D'"/Game/Asset/Scene/common/EnvirSystem/Texture/T_GlowPos.T_GlowPos"'
+               CachedReferencedTextures(3)=CurveLinearColorAtlas'"/Game/Asset/Scene/common/EnvirSystem/Texture/T_Envtint_CV.T_Envtint_CV"'
+               CachedReferencedTextures(4)=Texture2D'"/Game/Asset/Scene/common/EnvirSystem/Texture/T_Env_GalaxyMask.T_Env_GalaxyMask"'
+               CachedReferencedTextures(5)=Texture2D'"/Game/Asset/Scene/common/EnvirSystem/Texture/T_Env_Clouds.T_Env_Clouds"'
+               CachedReferencedTextures(6)=Texture2D'"/Game/Asset/Scene/common/EnvirSystem/Texture/T_Env_GalaxyNoise.T_Env_GalaxyNoise"'
+               CachedReferencedTextures(7)=Texture2D'"/Engine/Functions/Engine_MaterialFunctions02/ExampleContent/Textures/flipbook.flipbook"'
+               CachedReferencedTextures(8)=Texture2D'"/Game/Asset/Scene/common/3Texture/BaseTex/T_BaseBlack.T_BaseBlack"'
+            End Object
+            StaticMeshImportVersion=1
+            OverrideMaterials(0)=MaterialInstanceDynamic'"EnvSky"'
+            AttachParent="Arrow"
+            RelativeLocation=(X=-2428.24,Y=-1526.31,Z=3438.82)
+            RelativeRotation=(Pitch=31.83,Yaw=-120.90,Roll=-138.61)
+            RelativeScale3D=(X=1.00,Y=1.00,Z=1.00)
+            UCSSerializationIndex=0
+            bNetAddressable=True
+            CreationMethod=SimpleConstructionScript
+            UCSModifiedProperties(0)=(MemberParent=Class'"/Script/Engine.MeshComponent"',MemberName="OverrideMaterials")
+            UCSModifiedProperties(1)=(MemberParent=Class'"/Script/Engine.SceneComponent"',MemberName="RelativeLocation")
+            UCSModifiedProperties(2)=(MemberParent=Class'"/Script/Engine.SceneComponent"',MemberName="RelativeRotation")
+            UCSModifiedProperties(3)=(MemberParent=Class'"/Script/Engine.SceneComponent"',MemberName="RelativeScale3D")
+         End Object
+         Begin Object Name="SM_Cloud"
+            Begin Object Name="EnvSky"
+               Parent=MaterialInstanceConstant'"/Game/Asset/Scene/common/EnvirSystem/Materials/MI_Cloud.MI_Cloud"'
+               ScalarParameterValues(0)=(ParameterInfo=(Name="Cloud01Tint"),ParameterValue=8.000000)
+               TextureParameterValues(0)=(ParameterInfo=(Name="EFCloudMap"),ParameterValue=Texture2D'"/Engine/EngineResources/Black.Black"')
+               CachedReferencedTextures(0)=CurveLinearColorAtlas'"/Game/Asset/Scene/common/EnvirSystem/Texture/T_Envtint_CV.T_Envtint_CV"'
+               CachedReferencedTextures(1)=Texture2D'"/Game/Asset/Scene/common/3Texture/BaseTex/T_BaseLinearBlack.T_BaseLinearBlack"'
+            End Object
+            OverrideMaterials(0)=MaterialInstanceDynamic'"EnvSky"'
+            BodyInstance=(MaxAngularVelocity=3599.999756)
+            AttachParent="Arrow"
+            RelativeRotation=(Pitch=31.83,Yaw=-120.90,Roll=-138.61)
+            UCSSerializationIndex=0
+            bNetAddressable=True
+            CreationMethod=SimpleConstructionScript
+            UCSModifiedProperties(0)=(MemberParent=Class'"/Script/Engine.MeshComponent"',MemberName="OverrideMaterials")
+            UCSModifiedProperties(1)=(MemberParent=Class'"/Script/Engine.SceneComponent"',MemberName="RelativeRotation")
+         End Object
+         Begin Object Name="全局环境风"
+            StaticWindMotorInfo=(AmbientWindDirection=(X=1.000000,Y=0.000000,Z=0.000000),AmbientWindMag=5.000000,AmbientGustFactor=1.500000)
+            AttachParent="Arrow"
+            UCSSerializationIndex=0
+            bNetAddressable=True
+            CreationMethod=SimpleConstructionScript
+            UCSModifiedProperties(0)=(MemberParent=Class'"/Script/Engine.StaticWindMotorComponent"',MemberName="StaticWindMotorInfo")
+         End Object
+         Begin Object Name="风场接收器"
+            AttachParent="Arrow"
+            UCSSerializationIndex=0
+            bNetAddressable=True
+            CreationMethod=SimpleConstructionScript
+         End Object
+         SM_Cloud="SM_Cloud"
+         SimpleRVT="SimpleRVT"
+         风场接收器="风场接收器"
+         全局环境风="全局环境风"
+         Sky_Sphere="Sky_Sphere"
+         Cube="Cube"
+         Arrow="Arrow"
+         雾高度衰减=0.500000
+         雾内散射颜色=(R=0.389323,G=0.418556,B=0.473958,A=1.000000)
+         强度__场景=2.000000
+         BoxTransform=(Scale3D=(X=300.000000,Y=300.000000,Z=100.000000))
+         MID_SkyMaterial=MaterialInstanceDynamic'"Sky_Sphere.EnvSky"'
+         行星大小=0.559993
+         大气颜色/A地平线偏移度=(R=0.026042,G=0.026042,B=0.026042,A=1.000000)
+         地平线颜色/A银河偏移=(R=0.000000,G=0.000000,B=0.000000,A=1.000000)
+         天光="NODE_AddSkyLightComponent-3"
+         角色直接光="NODE_AddDirectionalLightComponent-5"
+         太阳="NODE_AddDirectionalLightComponent-6"
+         指数高度雾="NODE_AddExponentialHeightFogComponent-2"
+         ColoudMap01=Texture2D'"/Engine/EngineResources/Black.Black"'
+         ColoudMap02=Texture2D'"/Engine/EngineResources/Black.Black"'
+         装饰云核心材质=MaterialInstanceDynamic'"SM_Cloud.EnvSky"'
+         月亮="NODE_AddDirectionalLightComponent-13"
+         RootComponent="Arrow"
+         ActorLabel="EnvirSystemActor"
+      End Actor
+   End Level
+Begin Surface
+End Surface
+End Map
+
