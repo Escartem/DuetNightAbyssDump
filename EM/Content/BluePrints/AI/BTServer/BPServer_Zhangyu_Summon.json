@@ -1,0 +1,191 @@
+[
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_BPServer_Zhangyu_Summon",
+    "Outer": "BPServer_Zhangyu_Summon_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_MakeStruct_BlackboardKeySelector",
+        "Flags": "RF_Public",
+        "ElementSize": 48,
+        "Struct": {
+          "ObjectName": "ScriptStruct'BlackboardKeySelector'",
+          "ObjectPath": "/Script/AIModule"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_Event_OwnerController",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'AIController'",
+          "ObjectPath": "/Script/AIModule"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_Event_ControlledPawn",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Pawn'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "K2Node_Event_DeltaSeconds",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_DynamicCast_AsBP_Zhangyu_Summoned",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'BP_Zhangyu_Summoned_C'",
+          "ObjectPath": "EM/Content/AssetDesign/Char/Player/Zhangyu/BP_Zhangyu_Summoned.5"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_DynamicCast_bSuccess",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction | FUNC_HasDefaults"
+  },
+  {
+    "Type": "Function",
+    "Name": "ReceiveTickAI",
+    "Outer": "BPServer_Zhangyu_Summon_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "SuperStruct": {
+      "ObjectName": "Function'BTService_BlueprintBase:ReceiveTickAI'",
+      "ObjectPath": "/Script/AIModule"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "OwnerController",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "PropertyClass": {
+          "ObjectName": "Class'AIController'",
+          "ObjectPath": "/Script/AIModule"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "ControlledPawn",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "PropertyClass": {
+          "ObjectName": "Class'Pawn'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "DeltaSeconds",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Protected | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BPServer_Zhangyu_Summon_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "UberGraphFunction": {
+        "ObjectName": "Function'BPServer_Zhangyu_Summon_C:ExecuteUbergraph_BPServer_Zhangyu_Summon'",
+        "ObjectPath": "EM/Content/BluePrints/AI/BTServer/BPServer_Zhangyu_Summon.0"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'BTService_BlueprintBase'",
+      "ObjectPath": "/Script/AIModule"
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'BPServer_Zhangyu_Summon_C:ReceiveTickAI'",
+        "ObjectPath": "EM/Content/BluePrints/AI/BTServer/BPServer_Zhangyu_Summon.1"
+      },
+      {
+        "ObjectName": "Function'BPServer_Zhangyu_Summon_C:ExecuteUbergraph_BPServer_Zhangyu_Summon'",
+        "ObjectPath": "EM/Content/BluePrints/AI/BTServer/BPServer_Zhangyu_Summon.0"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient",
+        "Struct": {
+          "ObjectName": "ScriptStruct'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_BPServer_Zhangyu_Summon": {
+        "ObjectName": "Function'BPServer_Zhangyu_Summon_C:ExecuteUbergraph_BPServer_Zhangyu_Summon'",
+        "ObjectPath": "EM/Content/BluePrints/AI/BTServer/BPServer_Zhangyu_Summon.0"
+      },
+      "ReceiveTickAI": {
+        "ObjectName": "Function'BPServer_Zhangyu_Summon_C:ReceiveTickAI'",
+        "ObjectPath": "EM/Content/BluePrints/AI/BTServer/BPServer_Zhangyu_Summon.1"
+      }
+    },
+    "ClassFlags": "CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Game",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BPServer_Zhangyu_Summon_C'Default__BPServer_Zhangyu_Summon_C'",
+      "ObjectPath": "EM/Content/BluePrints/AI/BTServer/BPServer_Zhangyu_Summon.3"
+    }
+  },
+  {
+    "Type": "BPServer_Zhangyu_Summon_C",
+    "Name": "Default__BPServer_Zhangyu_Summon_C",
+    "Class": "BlueprintGeneratedClass'EM/Content/BluePrints/AI/BTServer/BPServer_Zhangyu_Summon.BPServer_Zhangyu_Summon_C'",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "UberGraphFrame": {},
+      "Interval": 0.02,
+      "RandomDeviation": 0.0
+    }
+  }
+]

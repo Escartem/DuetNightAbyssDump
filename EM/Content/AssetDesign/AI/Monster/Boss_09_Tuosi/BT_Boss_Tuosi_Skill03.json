@@ -1,0 +1,128 @@
+[
+  {
+    "Type": "BehaviorTree",
+    "Name": "BT_Boss_Tuosi_Skill03",
+    "Class": "UScriptClass'BehaviorTree'",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "RootNode": {
+        "ObjectName": "BTComposite_Rate'BT_Boss_Tuosi_Skill03:BTComposite_Rate_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_09_Tuosi/BT_Boss_Tuosi_Skill03.1"
+      },
+      "BlackboardAsset": {
+        "ObjectName": "BlackboardData'BB_Boss_Tuosi'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_09_Tuosi/BB_Boss_Tuosi.0"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Rate",
+    "Name": "BTComposite_Rate_0",
+    "Outer": "BT_Boss_Tuosi_Skill03",
+    "Class": "UScriptClass'BTComposite_Rate'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Rates": [
+        1,
+        1,
+        1
+      ],
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_RunBehavior'BT_Boss_Tuosi_Skill03:BTTask_RunBehavior_1'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_09_Tuosi/BT_Boss_Tuosi_Skill03.3"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_RunBehavior'BT_Boss_Tuosi_Skill03:BTTask_RunBehavior_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_09_Tuosi/BT_Boss_Tuosi_Skill03.2"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_RunBehavior'BT_Boss_Tuosi_Skill03:BTTask_RunBehavior_3'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_09_Tuosi/BT_Boss_Tuosi_Skill03.4"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Tuosi_Skill03'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_09_Tuosi/BT_Boss_Tuosi_Skill03.0"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_RunBehavior",
+    "Name": "BTTask_RunBehavior_0",
+    "Outer": "BT_Boss_Tuosi_Skill03",
+    "Class": "UScriptClass'BTTask_RunBehavior'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "BehaviorAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Tuosi_Skill03B'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_09_Tuosi/BT_Boss_Tuosi_Skill03B.0"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Tuosi_Skill03'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_09_Tuosi/BT_Boss_Tuosi_Skill03.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Rate'BT_Boss_Tuosi_Skill03:BTComposite_Rate_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_09_Tuosi/BT_Boss_Tuosi_Skill03.1"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_RunBehavior",
+    "Name": "BTTask_RunBehavior_1",
+    "Outer": "BT_Boss_Tuosi_Skill03",
+    "Class": "UScriptClass'BTTask_RunBehavior'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "BehaviorAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Tuosi_Skill03F'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_09_Tuosi/BT_Boss_Tuosi_Skill03F.0"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Tuosi_Skill03'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_09_Tuosi/BT_Boss_Tuosi_Skill03.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Rate'BT_Boss_Tuosi_Skill03:BTComposite_Rate_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_09_Tuosi/BT_Boss_Tuosi_Skill03.1"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_RunBehavior",
+    "Name": "BTTask_RunBehavior_3",
+    "Outer": "BT_Boss_Tuosi_Skill03",
+    "Class": "UScriptClass'BTTask_RunBehavior'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "BehaviorAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Tuosi_Skill03LR'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_09_Tuosi/BT_Boss_Tuosi_Skill03LR.0"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Tuosi_Skill03'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_09_Tuosi/BT_Boss_Tuosi_Skill03.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Rate'BT_Boss_Tuosi_Skill03:BTComposite_Rate_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_09_Tuosi/BT_Boss_Tuosi_Skill03.1"
+      }
+    }
+  }
+]

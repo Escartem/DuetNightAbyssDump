@@ -1,0 +1,997 @@
+[
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_BP_ConeLightBase",
+    "Outer": "BP_ConeLightBase_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "K2Node_Event_DeltaSeconds",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Array_Length_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Array_Add_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Greater_IntInt_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_FindLookAtRotation_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "Struct": {
+          "ObjectName": "ScriptStruct'Rotator'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_K2_SetWorldRotation_SweepHitResult",
+        "Flags": "RF_Public",
+        "ElementSize": 144,
+        "PropertyFlags": "ContainsInstancedReference",
+        "Struct": {
+          "ObjectName": "ScriptStruct'HitResult'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_FindLookAtRotation_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "Struct": {
+          "ObjectName": "ScriptStruct'Rotator'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_K2_SetWorldRotation_SweepHitResult_1",
+        "Flags": "RF_Public",
+        "ElementSize": 144,
+        "PropertyFlags": "ContainsInstancedReference",
+        "Struct": {
+          "ObjectName": "ScriptStruct'HitResult'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_FindLookAtRotation_ReturnValue_2",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "Struct": {
+          "ObjectName": "ScriptStruct'Rotator'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_K2_SetWorldRotation_SweepHitResult_2",
+        "Flags": "RF_Public",
+        "ElementSize": 144,
+        "PropertyFlags": "ContainsInstancedReference",
+        "Struct": {
+          "ObjectName": "ScriptStruct'HitResult'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "K2Node_Event_NowStateId",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_SwitchInteger_CmpSuccess",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_Event_Player",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'PlayerCharacter'",
+          "ObjectPath": "/Script/EM"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction | FUNC_HasDefaults"
+  },
+  {
+    "Type": "Function",
+    "Name": "ReceiveBeginPlay",
+    "Outer": "BP_ConeLightBase_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "SuperStruct": {
+      "ObjectName": "Function'Actor:ReceiveBeginPlay'",
+      "ObjectPath": "/Script/Engine"
+    },
+    "FunctionFlags": "FUNC_Event | FUNC_Protected | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnTrackPlayer",
+    "Outer": "BP_ConeLightBase_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "SuperStruct": {
+      "ObjectName": "Function'ConeLightBase:OnTrackPlayer'",
+      "ObjectPath": "/Script/EM"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "Player",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "PropertyClass": {
+          "ObjectName": "Class'PlayerCharacter'",
+          "ObjectPath": "/Script/EM"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnNotTrackPlayer",
+    "Outer": "BP_ConeLightBase_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "SuperStruct": {
+      "ObjectName": "Function'ConeLightBase:OnNotTrackPlayer'",
+      "ObjectPath": "/Script/EM"
+    },
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnEnterState",
+    "Outer": "BP_ConeLightBase_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "SuperStruct": {
+      "ObjectName": "Function'CombatItemBase:OnEnterState'",
+      "ObjectPath": "/Script/EM"
+    },
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "NowStateId",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "SetInitPointRotation",
+    "Outer": "BP_ConeLightBase_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "SetCurPointRotation",
+    "Outer": "BP_ConeLightBase_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "ReceiveTick",
+    "Outer": "BP_ConeLightBase_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "SuperStruct": {
+      "ObjectName": "Function'Actor:ReceiveTick'",
+      "ObjectPath": "/Script/Engine"
+    },
+    "ChildProperties": [
+      {
+        "Type": "FloatProperty",
+        "Name": "DeltaSeconds",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "UserConstructionScript",
+    "Outer": "BP_ConeLightBase_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "SuperStruct": {
+      "ObjectName": "Function'Actor:UserConstructionScript'",
+      "ObjectPath": "/Script/Engine"
+    },
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "GetModuleName",
+    "Outer": "BP_ConeLightBase_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "ChildProperties": [
+      {
+        "Type": "StrProperty",
+        "Name": "ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "Parm | OutParm | ReturnParm"
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_HasOutParms | FUNC_BlueprintCallable | FUNC_BlueprintEvent | FUNC_Const"
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BP_ConeLightBase_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BP_ConeLightBase_C:SimpleConstructionScript_0'",
+        "ObjectPath": "EM/Content/BluePrints/Item/ExploreGroup/ExploreMechanism/BP_ConeLightBase.22"
+      },
+      "UberGraphFunction": {
+        "ObjectName": "Function'BP_ConeLightBase_C:ExecuteUbergraph_BP_ConeLightBase'",
+        "ObjectPath": "EM/Content/BluePrints/Item/ExploreGroup/ExploreMechanism/BP_ConeLightBase.0"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'ConeLightBase'",
+      "ObjectPath": "/Script/EM"
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'BP_ConeLightBase_C:GetModuleName'",
+        "ObjectPath": "EM/Content/BluePrints/Item/ExploreGroup/ExploreMechanism/BP_ConeLightBase.9"
+      },
+      {
+        "ObjectName": "Function'BP_ConeLightBase_C:UserConstructionScript'",
+        "ObjectPath": "EM/Content/BluePrints/Item/ExploreGroup/ExploreMechanism/BP_ConeLightBase.8"
+      },
+      {
+        "ObjectName": "Function'BP_ConeLightBase_C:ReceiveTick'",
+        "ObjectPath": "EM/Content/BluePrints/Item/ExploreGroup/ExploreMechanism/BP_ConeLightBase.7"
+      },
+      {
+        "ObjectName": "Function'BP_ConeLightBase_C:SetCurPointRotation'",
+        "ObjectPath": "EM/Content/BluePrints/Item/ExploreGroup/ExploreMechanism/BP_ConeLightBase.6"
+      },
+      {
+        "ObjectName": "Function'BP_ConeLightBase_C:SetInitPointRotation'",
+        "ObjectPath": "EM/Content/BluePrints/Item/ExploreGroup/ExploreMechanism/BP_ConeLightBase.5"
+      },
+      {
+        "ObjectName": "Function'BP_ConeLightBase_C:OnEnterState'",
+        "ObjectPath": "EM/Content/BluePrints/Item/ExploreGroup/ExploreMechanism/BP_ConeLightBase.4"
+      },
+      {
+        "ObjectName": "Function'BP_ConeLightBase_C:OnNotTrackPlayer'",
+        "ObjectPath": "EM/Content/BluePrints/Item/ExploreGroup/ExploreMechanism/BP_ConeLightBase.3"
+      },
+      {
+        "ObjectName": "Function'BP_ConeLightBase_C:OnTrackPlayer'",
+        "ObjectPath": "EM/Content/BluePrints/Item/ExploreGroup/ExploreMechanism/BP_ConeLightBase.2"
+      },
+      {
+        "ObjectName": "Function'BP_ConeLightBase_C:ReceiveBeginPlay'",
+        "ObjectPath": "EM/Content/BluePrints/Item/ExploreGroup/ExploreMechanism/BP_ConeLightBase.1"
+      },
+      {
+        "ObjectName": "Function'BP_ConeLightBase_C:ExecuteUbergraph_BP_ConeLightBase'",
+        "ObjectPath": "EM/Content/BluePrints/Item/ExploreGroup/ExploreMechanism/BP_ConeLightBase.0"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient",
+        "Struct": {
+          "ObjectName": "ScriptStruct'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "NS_Common_Light01",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'NiagaraComponent'",
+          "ObjectPath": "/Script/Niagara"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "SpotLight",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'SpotLightComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "EndPointsHistroy",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "Inner": {
+          "Type": "StructProperty",
+          "Name": "EndPointsHistroy",
+          "Flags": "RF_Public",
+          "ElementSize": 12,
+          "Struct": {
+            "ObjectName": "ScriptStruct'Vector'",
+            "ObjectPath": "/Script/CoreUObject"
+          }
+        }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "DelayFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "Edit | BlueprintVisible"
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "FirstDelay",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "FirstEndPoint",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 12,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "Struct": {
+          "ObjectName": "ScriptStruct'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "Scale",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 12,
+        "PropertyFlags": "Edit | BlueprintVisible",
+        "Struct": {
+          "ObjectName": "ScriptStruct'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "FXParam",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Edit | BlueprintVisible",
+        "Struct": {
+          "ObjectName": "ScriptStruct'LinearColor'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "SpotLightIntensity",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "Edit | BlueprintVisible"
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "New Inner Cone Angle",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance"
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "New Outer Cone Angle",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance"
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "LightParam",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Edit | BlueprintVisible",
+        "Struct": {
+          "ObjectName": "ScriptStruct'LinearColor'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_BP_ConeLightBase": {
+        "ObjectName": "Function'BP_ConeLightBase_C:ExecuteUbergraph_BP_ConeLightBase'",
+        "ObjectPath": "EM/Content/BluePrints/Item/ExploreGroup/ExploreMechanism/BP_ConeLightBase.0"
+      },
+      "ReceiveBeginPlay": {
+        "ObjectName": "Function'BP_ConeLightBase_C:ReceiveBeginPlay'",
+        "ObjectPath": "EM/Content/BluePrints/Item/ExploreGroup/ExploreMechanism/BP_ConeLightBase.1"
+      },
+      "OnTrackPlayer": {
+        "ObjectName": "Function'BP_ConeLightBase_C:OnTrackPlayer'",
+        "ObjectPath": "EM/Content/BluePrints/Item/ExploreGroup/ExploreMechanism/BP_ConeLightBase.2"
+      },
+      "OnNotTrackPlayer": {
+        "ObjectName": "Function'BP_ConeLightBase_C:OnNotTrackPlayer'",
+        "ObjectPath": "EM/Content/BluePrints/Item/ExploreGroup/ExploreMechanism/BP_ConeLightBase.3"
+      },
+      "OnEnterState": {
+        "ObjectName": "Function'BP_ConeLightBase_C:OnEnterState'",
+        "ObjectPath": "EM/Content/BluePrints/Item/ExploreGroup/ExploreMechanism/BP_ConeLightBase.4"
+      },
+      "SetInitPointRotation": {
+        "ObjectName": "Function'BP_ConeLightBase_C:SetInitPointRotation'",
+        "ObjectPath": "EM/Content/BluePrints/Item/ExploreGroup/ExploreMechanism/BP_ConeLightBase.5"
+      },
+      "SetCurPointRotation": {
+        "ObjectName": "Function'BP_ConeLightBase_C:SetCurPointRotation'",
+        "ObjectPath": "EM/Content/BluePrints/Item/ExploreGroup/ExploreMechanism/BP_ConeLightBase.6"
+      },
+      "ReceiveTick": {
+        "ObjectName": "Function'BP_ConeLightBase_C:ReceiveTick'",
+        "ObjectPath": "EM/Content/BluePrints/Item/ExploreGroup/ExploreMechanism/BP_ConeLightBase.7"
+      },
+      "UserConstructionScript": {
+        "ObjectName": "Function'BP_ConeLightBase_C:UserConstructionScript'",
+        "ObjectPath": "EM/Content/BluePrints/Item/ExploreGroup/ExploreMechanism/BP_ConeLightBase.8"
+      },
+      "GetModuleName": {
+        "ObjectName": "Function'BP_ConeLightBase_C:GetModuleName'",
+        "ObjectPath": "EM/Content/BluePrints/Item/ExploreGroup/ExploreMechanism/BP_ConeLightBase.9"
+      }
+    },
+    "ClassFlags": "CLASS_Config | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "Interfaces": [
+      {
+        "Class": {
+          "ObjectName": "Class'UnLuaInterface'",
+          "ObjectPath": "/Script/UnLua"
+        },
+        "PointerOffset": 0,
+        "bImplementedByK2": true
+      }
+    ],
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BP_ConeLightBase_C'Default__BP_ConeLightBase_C'",
+      "ObjectPath": "EM/Content/BluePrints/Item/ExploreGroup/ExploreMechanism/BP_ConeLightBase.11"
+    }
+  },
+  {
+    "Type": "BP_ConeLightBase_C",
+    "Name": "Default__BP_ConeLightBase_C",
+    "Class": "BlueprintGeneratedClass'EM/Content/BluePrints/Item/ExploreGroup/ExploreMechanism/BP_ConeLightBase.BP_ConeLightBase_C'",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "UberGraphFrame": {},
+      "DelayFrame": 10,
+      "FirstDelay": true,
+      "FirstEndPoint": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Scale": {
+        "X": 3.5,
+        "Y": 3.5,
+        "Z": 12.0
+      },
+      "FXParam": {
+        "R": 0.5,
+        "G": 0.447059,
+        "B": 0.396078,
+        "A": 255.0,
+        "Hex": "BCB3A9"
+      },
+      "SpotLightIntensity": 7000000.0,
+      "New Inner Cone Angle": 3.0,
+      "New Outer Cone Angle": 4.0,
+      "LightParam": {
+        "R": 0.5,
+        "G": 0.435053,
+        "B": 0.282431,
+        "A": 255.0,
+        "Hex": "BCB091"
+      },
+      "DefaultSceneRoot": {
+        "ObjectName": "SceneComponent'Default__BP_ConeLightBase_C:DefaultSceneRoot'",
+        "ObjectPath": "EM/Content/BluePrints/Item/ExploreGroup/ExploreMechanism/BP_ConeLightBase.17"
+      },
+      "SplineComponent": {
+        "ObjectName": "SplineComponent'Default__BP_ConeLightBase_C:SplineComponent'",
+        "ObjectPath": "EM/Content/BluePrints/Item/ExploreGroup/ExploreMechanism/BP_ConeLightBase.23"
+      },
+      "StaticMeshComponent": {
+        "ObjectName": "StaticMeshComponent'Default__BP_ConeLightBase_C:Mesh'",
+        "ObjectPath": "EM/Content/BluePrints/Item/ExploreGroup/ExploreMechanism/BP_ConeLightBase.25"
+      },
+      "SceneComponent": {
+        "ObjectName": "SceneComponent'Default__BP_ConeLightBase_C:Point'",
+        "ObjectPath": "EM/Content/BluePrints/Item/ExploreGroup/ExploreMechanism/BP_ConeLightBase.18"
+      },
+      "CombatStateChangeComponent": {
+        "ObjectName": "BP_CombatStateChangeComponent_C'Default__BP_ConeLightBase_C:CombatStateChangeComponent'",
+        "ObjectPath": "EM/Content/BluePrints/Item/ExploreGroup/ExploreMechanism/BP_ConeLightBase.13"
+      },
+      "CombatClientEffectComponent": {
+        "ObjectName": "BP_CombatClientEffectComponent_C'Default__BP_ConeLightBase_C:CombatClientEffectComponent'",
+        "ObjectPath": "EM/Content/BluePrints/Item/ExploreGroup/ExploreMechanism/BP_ConeLightBase.12"
+      },
+      "FXComponent": {
+        "ObjectName": "BP_FXComponent_C'Default__BP_ConeLightBase_C:BP_FXComponent'",
+        "ObjectPath": "EM/Content/BluePrints/Item/ExploreGroup/ExploreMechanism/BP_ConeLightBase.14"
+      },
+      "BpBorn": true,
+      "UnitType": "Mechanism",
+      "bAddTickLod": false,
+      "RootComponent": {
+        "ObjectName": "SceneComponent'Default__BP_ConeLightBase_C:DefaultSceneRoot'",
+        "ObjectPath": "EM/Content/BluePrints/Item/ExploreGroup/ExploreMechanism/BP_ConeLightBase.17"
+      }
+    }
+  },
+  {
+    "Type": "BP_CombatClientEffectComponent_C",
+    "Name": "CombatClientEffectComponent",
+    "Outer": "Default__BP_ConeLightBase_C",
+    "Class": "BlueprintGeneratedClass'EM/Content/BluePrints/Item/BP_CombatClientEffectComponent.BP_CombatClientEffectComponent_C'",
+    "Flags": "RF_Public | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "BP_CombatStateChangeComponent_C",
+    "Name": "CombatStateChangeComponent",
+    "Outer": "Default__BP_ConeLightBase_C",
+    "Class": "BlueprintGeneratedClass'EM/Content/BluePrints/Item/BP_CombatStateChangeComponent.BP_CombatStateChangeComponent_C'",
+    "Flags": "RF_Public | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "BP_FXComponent_C",
+    "Name": "BP_FXComponent",
+    "Outer": "Default__BP_ConeLightBase_C",
+    "Class": "BlueprintGeneratedClass'EM/Content/BluePrints/Char/BP_FXComponent.BP_FXComponent_C'",
+    "Flags": "RF_Public | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "NiagaraComponent",
+    "Name": "NS_Common_Light01_GEN_VARIABLE",
+    "Outer": "BP_ConeLightBase_C",
+    "Class": "UScriptClass'NiagaraComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Asset": {
+        "ObjectName": "NiagaraSystem'NS_Common_Light01'",
+        "ObjectPath": "EM/Content/Asset/Effect/Niagara/Scene/Common/NS_Common_Light01.6"
+      },
+      "OverrideParameters": {
+        "UserParameterRedirects": [
+          {
+            "Key": {
+              "VarData": "",
+              "Name": "Color",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'LinearColor'",
+                  "ObjectPath": "/Script/CoreUObject"
+                },
+                "UnderlyingType": 2
+              }
+            },
+            "Value": {
+              "VarData": "",
+              "Name": "User.Color",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'LinearColor'",
+                  "ObjectPath": "/Script/CoreUObject"
+                },
+                "UnderlyingType": 2
+              }
+            }
+          },
+          {
+            "Key": {
+              "VarData": "",
+              "Name": "DeadTime",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'NiagaraBool'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2
+              }
+            },
+            "Value": {
+              "VarData": "",
+              "Name": "User.DeadTime",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'NiagaraBool'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2
+              }
+            }
+          },
+          {
+            "Key": {
+              "VarData": "",
+              "Name": "IgnoreGamePause",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2
+              }
+            },
+            "Value": {
+              "VarData": "",
+              "Name": "User.IgnoreGamePause",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2
+              }
+            }
+          }
+        ],
+        "SortedParameterOffsets": [
+          {
+            "Offset": 0,
+            "Name": "User.Color",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "ScriptStruct'LinearColor'",
+                "ObjectPath": "/Script/CoreUObject"
+              },
+              "UnderlyingType": 2
+            }
+          },
+          {
+            "Offset": 16,
+            "Name": "User.DeadTime",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "ScriptStruct'NiagaraBool'",
+                "ObjectPath": "/Script/Niagara"
+              },
+              "UnderlyingType": 2
+            }
+          },
+          {
+            "Offset": 20,
+            "Name": "User.IgnoreGamePause",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "ScriptStruct'NiagaraFloat'",
+                "ObjectPath": "/Script/Niagara"
+              },
+              "UnderlyingType": 2
+            }
+          }
+        ],
+        "ParameterData": [
+          0,
+          0,
+          128,
+          63,
+          0,
+          0,
+          128,
+          63,
+          0,
+          0,
+          128,
+          63,
+          0,
+          0,
+          128,
+          63,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "RelativeRotation": {
+        "Pitch": 90.0,
+        "Yaw": 0.0,
+        "Roll": 0.0
+      },
+      "RelativeScale3D": {
+        "X": 3.5,
+        "Y": 3.5,
+        "Z": 12.0
+      },
+      "bHiddenInGame": true
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot1_GEN_VARIABLE",
+    "Outer": "BP_ConeLightBase_C",
+    "Class": "UScriptClass'SceneComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot",
+    "Outer": "Default__BP_ConeLightBase_C",
+    "Class": "UScriptClass'SceneComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "Point",
+    "Outer": "Default__BP_ConeLightBase_C",
+    "Class": "UScriptClass'SceneComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "SceneComponent'Default__BP_ConeLightBase_C:DefaultSceneRoot'",
+        "ObjectPath": "EM/Content/BluePrints/Item/ExploreGroup/ExploreMechanism/BP_ConeLightBase.17"
+      }
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BP_ConeLightBase_C:DefaultSceneRoot1_GEN_VARIABLE'",
+        "ObjectPath": "EM/Content/BluePrints/Item/ExploreGroup/ExploreMechanism/BP_ConeLightBase.16"
+      },
+      "VariableGuid": "D7E1D020-4709D49A-89A8A98B-25B082C1",
+      "InternalVariableName": "DefaultSceneRoot1"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_1",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SpotLightComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SpotLightComponent'BP_ConeLightBase_C:SpotLight_GEN_VARIABLE'",
+        "ObjectPath": "EM/Content/BluePrints/Item/ExploreGroup/ExploreMechanism/BP_ConeLightBase.24"
+      },
+      "ParentComponentOrVariableName": "Point",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "63269775-4471F23A-FA0A5E85-3323E943",
+      "InternalVariableName": "SpotLight"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_2",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'NiagaraComponent'",
+        "ObjectPath": "/Script/Niagara"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "NiagaraComponent'BP_ConeLightBase_C:NS_Common_Light01_GEN_VARIABLE'",
+        "ObjectPath": "EM/Content/BluePrints/Item/ExploreGroup/ExploreMechanism/BP_ConeLightBase.15"
+      },
+      "ParentComponentOrVariableName": "Point",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "5F5F2AA8-41177DF9-091F9CA9-38118358",
+      "InternalVariableName": "NS_Common_Light01"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Outer": "BP_ConeLightBase_C",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_ConeLightBase_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "EM/Content/BluePrints/Item/ExploreGroup/ExploreMechanism/BP_ConeLightBase.20"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_ConeLightBase_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "EM/Content/BluePrints/Item/ExploreGroup/ExploreMechanism/BP_ConeLightBase.21"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_ConeLightBase_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "EM/Content/BluePrints/Item/ExploreGroup/ExploreMechanism/BP_ConeLightBase.20"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_ConeLightBase_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "EM/Content/BluePrints/Item/ExploreGroup/ExploreMechanism/BP_ConeLightBase.21"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BP_ConeLightBase_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "EM/Content/BluePrints/Item/ExploreGroup/ExploreMechanism/BP_ConeLightBase.19"
+      }
+    }
+  },
+  {
+    "Type": "SplineComponent",
+    "Name": "SplineComponent",
+    "Outer": "Default__BP_ConeLightBase_C",
+    "Class": "UScriptClass'SplineComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "SceneComponent'Default__BP_ConeLightBase_C:DefaultSceneRoot'",
+        "ObjectPath": "EM/Content/BluePrints/Item/ExploreGroup/ExploreMechanism/BP_ConeLightBase.17"
+      }
+    }
+  },
+  {
+    "Type": "SpotLightComponent",
+    "Name": "SpotLight_GEN_VARIABLE",
+    "Outer": "BP_ConeLightBase_C",
+    "Class": "UScriptClass'SpotLightComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "InnerConeAngle": 3.0,
+      "OuterConeAngle": 5.0,
+      "AttenuationRadius": 8000.0,
+      "Intensity": 7000000.0,
+      "LightColor": {
+        "B": 202,
+        "G": 228,
+        "R": 255,
+        "A": 255,
+        "Hex": "FFE4CA"
+      }
+    },
+    "RelativeRotation": {
+      "Pitch": -90.0,
+      "Yaw": 0.0,
+      "Roll": 0.0
+    },
+    "RelativeLocation": {
+      "X": 0.0,
+      "Y": 0.0,
+      "Z": 0.0
+    },
+    "IntensityNits": 112000000.0,
+    "bUseInverseSquaredFalloff": true
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "Mesh",
+    "Outer": "Default__BP_ConeLightBase_C",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'Sphere'",
+        "ObjectPath": "Engine/Content/BasicShapes/Sphere.2"
+      },
+      "BodyInstance": {
+        "ObjectType": "ECC_WorldStatic",
+        "CollisionEnabled": "ECollisionEnabled::NoCollision",
+        "CollisionProfileName": "NoCollision",
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "Visibility",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Camera",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "TraceExceptChar",
+              "Response": "ECR_Ignore"
+            }
+          ]
+        }
+      },
+      "AttachParent": {
+        "ObjectName": "SceneComponent'Default__BP_ConeLightBase_C:DefaultSceneRoot'",
+        "ObjectPath": "EM/Content/BluePrints/Item/ExploreGroup/ExploreMechanism/BP_ConeLightBase.17"
+      }
+    }
+  }
+]

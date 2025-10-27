@@ -1,0 +1,1189 @@
+[
+  {
+    "Type": "BehaviorTree",
+    "Name": "BT_9Wanju_Sur",
+    "Class": "UScriptClass'BehaviorTree'",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "RootNode": {
+        "ObjectName": "BTComposite_Sequence'BT_9Wanju_Sur:BTComposite_Sequence_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/SQ_Wanju/Level_Survival/BT_9Wanju_Sur.7"
+      },
+      "BlackboardAsset": {
+        "ObjectName": "BlackboardData'BB_9Wanju'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/SQ_Wanju/BB_9Wanju.0"
+      }
+    }
+  },
+  {
+    "Type": "BPServer_SQ_Wanju_C",
+    "Name": "BPServer_SQ_Wanju_C_0",
+    "Outer": "BT_9Wanju_Sur",
+    "Class": "BlueprintGeneratedClass'EM/Content/BluePrints/AI/BTServer/BPServer_SQ_Wanju.BPServer_SQ_Wanju_C'",
+    "Template": {
+      "ObjectName": "BPServer_SQ_Wanju_C'Default__BPServer_SQ_Wanju_C'",
+      "ObjectPath": "EM/Content/BluePrints/AI/BTServer/BPServer_SQ_Wanju.3"
+    },
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "bShowPropertyDetails": false,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_9Wanju_Sur'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/SQ_Wanju/Level_Survival/BT_9Wanju_Sur.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_9Wanju_Sur:BTComposite_Selector_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/SQ_Wanju/Level_Survival/BT_9Wanju_Sur.3"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Rate",
+    "Name": "BTComposite_Rate_0",
+    "Outer": "BT_9Wanju_Sur",
+    "Class": "UScriptClass'BTComposite_Rate'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Rates": [
+        1,
+        1
+      ],
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_UseSkill'BT_9Wanju_Sur:BTTask_UseSkill_3'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/SQ_Wanju/Level_Survival/BT_9Wanju_Sur.40"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_UseSkill'BT_9Wanju_Sur:BTTask_UseSkill_4'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/SQ_Wanju/Level_Survival/BT_9Wanju_Sur.41"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_9Wanju_Sur'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/SQ_Wanju/Level_Survival/BT_9Wanju_Sur.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_9Wanju_Sur:BTComposite_Selector_2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/SQ_Wanju/Level_Survival/BT_9Wanju_Sur.4"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_1",
+    "Outer": "BT_9Wanju_Sur",
+    "Class": "UScriptClass'BTComposite_Selector'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_9Wanju_Sur:BTComposite_Sequence_4'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/SQ_Wanju/Level_Survival/BT_9Wanju_Sur.11"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_9Wanju_Sur:BTDecorator_Blackboard_1'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/SQ_Wanju/Level_Survival/BT_9Wanju_Sur.13"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_9Wanju_Sur:BTComposite_Sequence_2'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/SQ_Wanju/Level_Survival/BT_9Wanju_Sur.9"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_9Wanju_Sur:BTDecorator_Blackboard_7'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/SQ_Wanju/Level_Survival/BT_9Wanju_Sur.20"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_9Wanju_Sur:BTComposite_Sequence_14'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/SQ_Wanju/Level_Survival/BT_9Wanju_Sur.8"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_9Wanju_Sur:BTDecorator_Blackboard_4'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/SQ_Wanju/Level_Survival/BT_9Wanju_Sur.17"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_9Wanju_Sur:BTComposite_Sequence_3'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/SQ_Wanju/Level_Survival/BT_9Wanju_Sur.10"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_9Wanju_Sur:BTDecorator_Blackboard_0'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/SQ_Wanju/Level_Survival/BT_9Wanju_Sur.12"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_9Wanju_Sur:BTComposite_Sequence_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/SQ_Wanju/Level_Survival/BT_9Wanju_Sur.6"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_9Wanju_Sur:BTDecorator_Blackboard_2'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/SQ_Wanju/Level_Survival/BT_9Wanju_Sur.15"
+            },
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_9Wanju_Sur:BTDecorator_Blackboard_14'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/SQ_Wanju/Level_Survival/BT_9Wanju_Sur.14"
+            },
+            {
+              "ObjectName": "BTDecorator_Cooldown'BT_9Wanju_Sur:BTDecorator_Cooldown_0'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/SQ_Wanju/Level_Survival/BT_9Wanju_Sur.23"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector'BT_9Wanju_Sur:BTComposite_Selector_2'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/SQ_Wanju/Level_Survival/BT_9Wanju_Sur.4"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_9Wanju_Sur:BTDecorator_Blackboard_3'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/SQ_Wanju/Level_Survival/BT_9Wanju_Sur.16"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector'BT_9Wanju_Sur:BTComposite_Selector_3'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/SQ_Wanju/Level_Survival/BT_9Wanju_Sur.5"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_9Wanju_Sur:BTDecorator_Blackboard_8'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/SQ_Wanju/Level_Survival/BT_9Wanju_Sur.21"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait'BT_9Wanju_Sur:BTTask_Wait_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/SQ_Wanju/Level_Survival/BT_9Wanju_Sur.42"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "Services": [
+        {
+          "ObjectName": "BPServer_SQ_Wanju_C'BT_9Wanju_Sur:BPServer_SQ_Wanju_C_0'",
+          "ObjectPath": "EM/Content/AssetDesign/AI/Monster/SQ_Wanju/Level_Survival/BT_9Wanju_Sur.1"
+        }
+      ],
+      "NodeName": "IsInRange?",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_9Wanju_Sur'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/SQ_Wanju/Level_Survival/BT_9Wanju_Sur.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_9Wanju_Sur:BTComposite_Sequence_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/SQ_Wanju/Level_Survival/BT_9Wanju_Sur.7"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_2",
+    "Outer": "BT_9Wanju_Sur",
+    "Class": "UScriptClass'BTComposite_Selector'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_UseSkill'BT_9Wanju_Sur:BTTask_UseSkill_2'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/SQ_Wanju/Level_Survival/BT_9Wanju_Sur.39"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_CheckBuff'BT_9Wanju_Sur:BTDecorator_CheckBuff_1'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/SQ_Wanju/Level_Survival/BT_9Wanju_Sur.22"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Rate'BT_9Wanju_Sur:BTComposite_Rate_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/SQ_Wanju/Level_Survival/BT_9Wanju_Sur.2"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_9Wanju_Sur'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/SQ_Wanju/Level_Survival/BT_9Wanju_Sur.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_9Wanju_Sur:BTComposite_Selector_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/SQ_Wanju/Level_Survival/BT_9Wanju_Sur.3"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_3",
+    "Outer": "BT_9Wanju_Sur",
+    "Class": "UScriptClass'BTComposite_Selector'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_NewMoveTo'BT_9Wanju_Sur:BTTask_NewMoveTo_3'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/SQ_Wanju/Level_Survival/BT_9Wanju_Sur.31"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_9Wanju_Sur:BTDecorator_Blackboard_6'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/SQ_Wanju/Level_Survival/BT_9Wanju_Sur.19"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_NewMoveTo'BT_9Wanju_Sur:BTTask_NewMoveTo_4'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/SQ_Wanju/Level_Survival/BT_9Wanju_Sur.32"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_9Wanju_Sur:BTDecorator_Blackboard_5'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/SQ_Wanju/Level_Survival/BT_9Wanju_Sur.18"
+            }
+          ],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_9Wanju_Sur'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/SQ_Wanju/Level_Survival/BT_9Wanju_Sur.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_9Wanju_Sur:BTComposite_Selector_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/SQ_Wanju/Level_Survival/BT_9Wanju_Sur.3"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_0",
+    "Outer": "BT_9Wanju_Sur",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_NewMoveTo'BT_9Wanju_Sur:BTTask_NewMoveTo_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/SQ_Wanju/Level_Survival/BT_9Wanju_Sur.29"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_UseSkill'BT_9Wanju_Sur:BTTask_UseSkill_1'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/SQ_Wanju/Level_Survival/BT_9Wanju_Sur.38"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_9Wanju_Sur'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/SQ_Wanju/Level_Survival/BT_9Wanju_Sur.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_9Wanju_Sur:BTComposite_Selector_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/SQ_Wanju/Level_Survival/BT_9Wanju_Sur.3"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_1",
+    "Outer": "BT_9Wanju_Sur",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_RunBehavior'BT_9Wanju_Sur:BTTask_RunBehavior_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/SQ_Wanju/Level_Survival/BT_9Wanju_Sur.34"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector'BT_9Wanju_Sur:BTComposite_Selector_1'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/SQ_Wanju/Level_Survival/BT_9Wanju_Sur.3"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "Services": [
+        {
+          "ObjectName": "BTService_BBValueDis'BT_9Wanju_Sur:BTService_BBValueDis_0'",
+          "ObjectPath": "EM/Content/AssetDesign/AI/Monster/SQ_Wanju/Level_Survival/BT_9Wanju_Sur.26"
+        }
+      ],
+      "NodeName": "BattleInit",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_9Wanju_Sur'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/SQ_Wanju/Level_Survival/BT_9Wanju_Sur.0"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_14",
+    "Outer": "BT_9Wanju_Sur",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_ClearHatredList'BT_9Wanju_Sur:BTTask_ClearHatredList_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/SQ_Wanju/Level_Survival/BT_9Wanju_Sur.28"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_AlertStateChange'BT_9Wanju_Sur:BTTask_AlertStateChange_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/SQ_Wanju/Level_Survival/BT_9Wanju_Sur.27"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "NodeName": "EscapeFromBattle",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_9Wanju_Sur'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/SQ_Wanju/Level_Survival/BT_9Wanju_Sur.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_9Wanju_Sur:BTComposite_Selector_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/SQ_Wanju/Level_Survival/BT_9Wanju_Sur.3"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_2",
+    "Outer": "BT_9Wanju_Sur",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_RunBehavior'BT_9Wanju_Sur:BTTask_RunBehavior_2'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/SQ_Wanju/Level_Survival/BT_9Wanju_Sur.36"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_9Wanju_Sur'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/SQ_Wanju/Level_Survival/BT_9Wanju_Sur.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_9Wanju_Sur:BTComposite_Selector_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/SQ_Wanju/Level_Survival/BT_9Wanju_Sur.3"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_3",
+    "Outer": "BT_9Wanju_Sur",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_NewMoveTo'BT_9Wanju_Sur:BTTask_NewMoveTo_1'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/SQ_Wanju/Level_Survival/BT_9Wanju_Sur.30"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_UseSkill'BT_9Wanju_Sur:BTTask_UseSkill_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/SQ_Wanju/Level_Survival/BT_9Wanju_Sur.37"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_NewMoveTo'BT_9Wanju_Sur:BTTask_NewMoveTo_5'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/SQ_Wanju/Level_Survival/BT_9Wanju_Sur.33"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_TimeLimit'BT_9Wanju_Sur:BTDecorator_TimeLimit_0'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/SQ_Wanju/Level_Survival/BT_9Wanju_Sur.25"
+            },
+            {
+              "ObjectName": "BTDecorator_ForceSuccess'BT_9Wanju_Sur:BTDecorator_ForceSuccess_0'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/SQ_Wanju/Level_Survival/BT_9Wanju_Sur.24"
+            }
+          ],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_9Wanju_Sur'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/SQ_Wanju/Level_Survival/BT_9Wanju_Sur.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_9Wanju_Sur:BTComposite_Selector_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/SQ_Wanju/Level_Survival/BT_9Wanju_Sur.3"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_4",
+    "Outer": "BT_9Wanju_Sur",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_RunBehavior'BT_9Wanju_Sur:BTTask_RunBehavior_1'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/SQ_Wanju/Level_Survival/BT_9Wanju_Sur.35"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_9Wanju_Sur'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/SQ_Wanju/Level_Survival/BT_9Wanju_Sur.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_9Wanju_Sur:BTComposite_Selector_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/SQ_Wanju/Level_Survival/BT_9Wanju_Sur.3"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_0",
+    "Outer": "BT_9Wanju_Sur",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "IntValue": 2,
+      "FloatValue": 1500.0,
+      "CachedDescription": "Sum01Num 小于 2",
+      "OperationType": 2,
+      "BlackboardKey": {
+        "SelectedKeyName": "Sum01Num"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_9Wanju_Sur'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/SQ_Wanju/Level_Survival/BT_9Wanju_Sur.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_9Wanju_Sur:BTComposite_Selector_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/SQ_Wanju/Level_Survival/BT_9Wanju_Sur.3"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_1",
+    "Outer": "BT_9Wanju_Sur",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "CachedDescription": "TargetPlayerInvisible is 已设置",
+      "BlackboardKey": {
+        "SelectedKeyName": "TargetPlayerInvisible"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::Self",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_9Wanju_Sur'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/SQ_Wanju/Level_Survival/BT_9Wanju_Sur.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_9Wanju_Sur:BTComposite_Selector_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/SQ_Wanju/Level_Survival/BT_9Wanju_Sur.3"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_14",
+    "Outer": "BT_9Wanju_Sur",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "FloatValue": 3000.0,
+      "CachedDescription": "Sum01MinDisValue 小于或等于 3000.000000",
+      "OperationType": 3,
+      "BlackboardKey": {
+        "SelectedKeyName": "Sum01MinDisValue"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_9Wanju_Sur'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/SQ_Wanju/Level_Survival/BT_9Wanju_Sur.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_9Wanju_Sur:BTComposite_Selector_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/SQ_Wanju/Level_Survival/BT_9Wanju_Sur.3"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_2",
+    "Outer": "BT_9Wanju_Sur",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "IntValue": 1,
+      "FloatValue": 1500.0,
+      "CachedDescription": "Sum01Num 大于或等于 1",
+      "OperationType": 5,
+      "BlackboardKey": {
+        "SelectedKeyName": "Sum01Num"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_9Wanju_Sur'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/SQ_Wanju/Level_Survival/BT_9Wanju_Sur.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_9Wanju_Sur:BTComposite_Selector_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/SQ_Wanju/Level_Survival/BT_9Wanju_Sur.3"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_3",
+    "Outer": "BT_9Wanju_Sur",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "FloatValue": 200.0,
+      "CachedDescription": "TickTargetDis 小于或等于 200.000000",
+      "OperationType": 3,
+      "BlackboardKey": {
+        "SelectedKeyName": "TickTargetDis"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_9Wanju_Sur'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/SQ_Wanju/Level_Survival/BT_9Wanju_Sur.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_9Wanju_Sur:BTComposite_Selector_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/SQ_Wanju/Level_Survival/BT_9Wanju_Sur.3"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_4",
+    "Outer": "BT_9Wanju_Sur",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "FloatValue": 30000.0,
+      "CachedDescription": "TickTargetDis 大于或等于 30000.000000",
+      "OperationType": 5,
+      "BlackboardKey": {
+        "SelectedKeyName": "TickTargetDis"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_9Wanju_Sur'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/SQ_Wanju/Level_Survival/BT_9Wanju_Sur.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_9Wanju_Sur:BTComposite_Selector_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/SQ_Wanju/Level_Survival/BT_9Wanju_Sur.3"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_5",
+    "Outer": "BT_9Wanju_Sur",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "FloatValue": 3000.0,
+      "CachedDescription": "Sum01MinDisValue 大于 3000.000000",
+      "OperationType": 4,
+      "BlackboardKey": {
+        "SelectedKeyName": "Sum01MinDisValue"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::Self",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_9Wanju_Sur'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/SQ_Wanju/Level_Survival/BT_9Wanju_Sur.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_9Wanju_Sur:BTComposite_Selector_3'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/SQ_Wanju/Level_Survival/BT_9Wanju_Sur.5"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_6",
+    "Outer": "BT_9Wanju_Sur",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "FloatValue": 3000.0,
+      "CachedDescription": "Sum01MinDisValue 小于或等于 3000.000000",
+      "OperationType": 3,
+      "BlackboardKey": {
+        "SelectedKeyName": "Sum01MinDisValue"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::Self",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_9Wanju_Sur'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/SQ_Wanju/Level_Survival/BT_9Wanju_Sur.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_9Wanju_Sur:BTComposite_Selector_3'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/SQ_Wanju/Level_Survival/BT_9Wanju_Sur.5"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_7",
+    "Outer": "BT_9Wanju_Sur",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "CachedDescription": "TargetPlayerDead is 已设置",
+      "BlackboardKey": {
+        "SelectedKeyName": "TargetPlayerDead"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::Self",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_9Wanju_Sur'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/SQ_Wanju/Level_Survival/BT_9Wanju_Sur.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_9Wanju_Sur:BTComposite_Selector_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/SQ_Wanju/Level_Survival/BT_9Wanju_Sur.3"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_8",
+    "Outer": "BT_9Wanju_Sur",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "IntValue": 1,
+      "FloatValue": 1500.0,
+      "CachedDescription": "Sum01Num 大于或等于 1",
+      "OperationType": 5,
+      "BlackboardKey": {
+        "SelectedKeyName": "Sum01Num"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_9Wanju_Sur'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/SQ_Wanju/Level_Survival/BT_9Wanju_Sur.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_9Wanju_Sur:BTComposite_Selector_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/SQ_Wanju/Level_Survival/BT_9Wanju_Sur.3"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_CheckBuff",
+    "Name": "BTDecorator_CheckBuff_1",
+    "Outer": "BT_9Wanju_Sur",
+    "Class": "UScriptClass'BTDecorator_CheckBuff'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "BuffId": 900303,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_9Wanju_Sur'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/SQ_Wanju/Level_Survival/BT_9Wanju_Sur.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_9Wanju_Sur:BTComposite_Selector_2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/SQ_Wanju/Level_Survival/BT_9Wanju_Sur.4"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Cooldown",
+    "Name": "BTDecorator_Cooldown_0",
+    "Outer": "BT_9Wanju_Sur",
+    "Class": "UScriptClass'BTDecorator_Cooldown'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "CoolDownTime": 15.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_9Wanju_Sur'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/SQ_Wanju/Level_Survival/BT_9Wanju_Sur.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_9Wanju_Sur:BTComposite_Selector_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/SQ_Wanju/Level_Survival/BT_9Wanju_Sur.3"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_ForceSuccess",
+    "Name": "BTDecorator_ForceSuccess_0",
+    "Outer": "BT_9Wanju_Sur",
+    "Class": "UScriptClass'BTDecorator_ForceSuccess'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_9Wanju_Sur'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/SQ_Wanju/Level_Survival/BT_9Wanju_Sur.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_9Wanju_Sur:BTComposite_Sequence_3'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/SQ_Wanju/Level_Survival/BT_9Wanju_Sur.10"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_TimeLimit",
+    "Name": "BTDecorator_TimeLimit_0",
+    "Outer": "BT_9Wanju_Sur",
+    "Class": "UScriptClass'BTDecorator_TimeLimit'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TimeLimit": 2.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_9Wanju_Sur'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/SQ_Wanju/Level_Survival/BT_9Wanju_Sur.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_9Wanju_Sur:BTComposite_Sequence_3'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/SQ_Wanju/Level_Survival/BT_9Wanju_Sur.10"
+      }
+    }
+  },
+  {
+    "Type": "BTService_BBValueDis",
+    "Name": "BTService_BBValueDis_0",
+    "Outer": "BT_9Wanju_Sur",
+    "Class": "UScriptClass'BTService_BBValueDis'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "BBName": "Target",
+      "Interval": 0.02,
+      "RandomDeviation": 0.0,
+      "bCallTickOnSearchStart": true,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_9Wanju_Sur'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/SQ_Wanju/Level_Survival/BT_9Wanju_Sur.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_9Wanju_Sur:BTComposite_Sequence_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/SQ_Wanju/Level_Survival/BT_9Wanju_Sur.7"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_AlertStateChange",
+    "Name": "BTTask_AlertStateChange_0",
+    "Outer": "BT_9Wanju_Sur",
+    "Class": "UScriptClass'BTTask_AlertStateChange'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TargetState": "EMonsterBattleState::EEndBattleState",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_9Wanju_Sur'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/SQ_Wanju/Level_Survival/BT_9Wanju_Sur.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_9Wanju_Sur:BTComposite_Sequence_14'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/SQ_Wanju/Level_Survival/BT_9Wanju_Sur.8"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_ClearHatredList",
+    "Name": "BTTask_ClearHatredList_0",
+    "Outer": "BT_9Wanju_Sur",
+    "Class": "UScriptClass'BTTask_ClearHatredList'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_9Wanju_Sur'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/SQ_Wanju/Level_Survival/BT_9Wanju_Sur.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_9Wanju_Sur:BTComposite_Sequence_14'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/SQ_Wanju/Level_Survival/BT_9Wanju_Sur.8"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_NewMoveTo",
+    "Name": "BTTask_NewMoveTo_0",
+    "Outer": "BT_9Wanju_Sur",
+    "Class": "UScriptClass'BTTask_NewMoveTo'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "bOrientRotationToMovement": true,
+      "MoveTypeState": "EMoveTypeState::MTS_Run",
+      "AcceptableRadius": 600.0,
+      "bReachTestIncludesAgentRadius": false,
+      "bReachTestIncludesGoalRadius": false,
+      "bStopOnOverlapNeedsUpdate": false,
+      "BlackboardKey": {
+        "SelectedKeyName": "Sum01MinDisLoc"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_9Wanju_Sur'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/SQ_Wanju/Level_Survival/BT_9Wanju_Sur.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_9Wanju_Sur:BTComposite_Sequence_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/SQ_Wanju/Level_Survival/BT_9Wanju_Sur.6"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_NewMoveTo",
+    "Name": "BTTask_NewMoveTo_1",
+    "Outer": "BT_9Wanju_Sur",
+    "Class": "UScriptClass'BTTask_NewMoveTo'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "bOrientRotationToMovement": true,
+      "MoveTypeState": "EMoveTypeState::MTS_Run",
+      "AcceptableRadius": 600.0,
+      "bStopOnOverlapNeedsUpdate": false,
+      "BlackboardKey": {
+        "SelectedKeyName": "Target"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_9Wanju_Sur'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/SQ_Wanju/Level_Survival/BT_9Wanju_Sur.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_9Wanju_Sur:BTComposite_Sequence_3'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/SQ_Wanju/Level_Survival/BT_9Wanju_Sur.10"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_NewMoveTo",
+    "Name": "BTTask_NewMoveTo_3",
+    "Outer": "BT_9Wanju_Sur",
+    "Class": "UScriptClass'BTTask_NewMoveTo'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "bOrientRotationToMovement": true,
+      "MoveTypeState": "EMoveTypeState::MTS_Run",
+      "AcceptableRadius": 10.0,
+      "bStopOnOverlapNeedsUpdate": false,
+      "BlackboardKey": {
+        "SelectedKeyName": "Target"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_9Wanju_Sur'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/SQ_Wanju/Level_Survival/BT_9Wanju_Sur.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_9Wanju_Sur:BTComposite_Selector_3'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/SQ_Wanju/Level_Survival/BT_9Wanju_Sur.5"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_NewMoveTo",
+    "Name": "BTTask_NewMoveTo_4",
+    "Outer": "BT_9Wanju_Sur",
+    "Class": "UScriptClass'BTTask_NewMoveTo'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "bOrientRotationToMovement": true,
+      "MoveTypeState": "EMoveTypeState::MTS_Run",
+      "AcceptableRadius": 300.0,
+      "bStopOnOverlapNeedsUpdate": false,
+      "BlackboardKey": {
+        "SelectedKeyName": "Sum01MinDisLoc"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_9Wanju_Sur'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/SQ_Wanju/Level_Survival/BT_9Wanju_Sur.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_9Wanju_Sur:BTComposite_Selector_3'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/SQ_Wanju/Level_Survival/BT_9Wanju_Sur.5"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_NewMoveTo",
+    "Name": "BTTask_NewMoveTo_5",
+    "Outer": "BT_9Wanju_Sur",
+    "Class": "UScriptClass'BTTask_NewMoveTo'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "bOrientRotationToMovement": true,
+      "MoveTypeState": "EMoveTypeState::MTS_Run",
+      "AcceptableRadius": 20.0,
+      "bStopOnOverlapNeedsUpdate": false,
+      "BlackboardKey": {
+        "SelectedKeyName": "Target"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_9Wanju_Sur'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/SQ_Wanju/Level_Survival/BT_9Wanju_Sur.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_9Wanju_Sur:BTComposite_Sequence_3'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/SQ_Wanju/Level_Survival/BT_9Wanju_Sur.10"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_RunBehavior",
+    "Name": "BTTask_RunBehavior_0",
+    "Outer": "BT_9Wanju_Sur",
+    "Class": "UScriptClass'BTTask_RunBehavior'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "BehaviorAsset": {
+        "ObjectName": "BehaviorTree'BT_Common_GetHatred'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Parent/Parent_Common/BT_Common_GetHatred.0"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_9Wanju_Sur'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/SQ_Wanju/Level_Survival/BT_9Wanju_Sur.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_9Wanju_Sur:BTComposite_Sequence_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/SQ_Wanju/Level_Survival/BT_9Wanju_Sur.7"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_RunBehavior",
+    "Name": "BTTask_RunBehavior_1",
+    "Outer": "BT_9Wanju_Sur",
+    "Class": "UScriptClass'BTTask_RunBehavior'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "BehaviorAsset": {
+        "ObjectName": "BehaviorTree'BT_Common_TargetPlayerInvisible'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Parent/Parent_Common/BT_Common_TargetPlayerInvisible.0"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_9Wanju_Sur'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/SQ_Wanju/Level_Survival/BT_9Wanju_Sur.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_9Wanju_Sur:BTComposite_Sequence_4'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/SQ_Wanju/Level_Survival/BT_9Wanju_Sur.11"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_RunBehavior",
+    "Name": "BTTask_RunBehavior_2",
+    "Outer": "BT_9Wanju_Sur",
+    "Class": "UScriptClass'BTTask_RunBehavior'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "BehaviorAsset": {
+        "ObjectName": "BehaviorTree'BT_Common_TargetPlayerDead'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Parent/Parent_Common/BT_Common_TargetPlayerDead.0"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_9Wanju_Sur'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/SQ_Wanju/Level_Survival/BT_9Wanju_Sur.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_9Wanju_Sur:BTComposite_Sequence_2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/SQ_Wanju/Level_Survival/BT_9Wanju_Sur.9"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_UseSkill",
+    "Name": "BTTask_UseSkill_0",
+    "Outer": "BT_9Wanju_Sur",
+    "Class": "UScriptClass'BTTask_UseSkill'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SkillId": 3,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_9Wanju_Sur'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/SQ_Wanju/Level_Survival/BT_9Wanju_Sur.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_9Wanju_Sur:BTComposite_Sequence_3'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/SQ_Wanju/Level_Survival/BT_9Wanju_Sur.10"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_UseSkill",
+    "Name": "BTTask_UseSkill_1",
+    "Outer": "BT_9Wanju_Sur",
+    "Class": "UScriptClass'BTTask_UseSkill'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SkillId": 4,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_9Wanju_Sur'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/SQ_Wanju/Level_Survival/BT_9Wanju_Sur.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_9Wanju_Sur:BTComposite_Sequence_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/SQ_Wanju/Level_Survival/BT_9Wanju_Sur.6"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_UseSkill",
+    "Name": "BTTask_UseSkill_2",
+    "Outer": "BT_9Wanju_Sur",
+    "Class": "UScriptClass'BTTask_UseSkill'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SkillId": 5,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_9Wanju_Sur'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/SQ_Wanju/Level_Survival/BT_9Wanju_Sur.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_9Wanju_Sur:BTComposite_Selector_2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/SQ_Wanju/Level_Survival/BT_9Wanju_Sur.4"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_UseSkill",
+    "Name": "BTTask_UseSkill_3",
+    "Outer": "BT_9Wanju_Sur",
+    "Class": "UScriptClass'BTTask_UseSkill'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_9Wanju_Sur'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/SQ_Wanju/Level_Survival/BT_9Wanju_Sur.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Rate'BT_9Wanju_Sur:BTComposite_Rate_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/SQ_Wanju/Level_Survival/BT_9Wanju_Sur.2"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_UseSkill",
+    "Name": "BTTask_UseSkill_4",
+    "Outer": "BT_9Wanju_Sur",
+    "Class": "UScriptClass'BTTask_UseSkill'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SkillId": 2,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_9Wanju_Sur'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/SQ_Wanju/Level_Survival/BT_9Wanju_Sur.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Rate'BT_9Wanju_Sur:BTComposite_Rate_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/SQ_Wanju/Level_Survival/BT_9Wanju_Sur.2"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_0",
+    "Outer": "BT_9Wanju_Sur",
+    "Class": "UScriptClass'BTTask_Wait'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "WaitTime": 0.1,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_9Wanju_Sur'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/SQ_Wanju/Level_Survival/BT_9Wanju_Sur.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_9Wanju_Sur:BTComposite_Selector_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/SQ_Wanju/Level_Survival/BT_9Wanju_Sur.3"
+      }
+    }
+  }
+]

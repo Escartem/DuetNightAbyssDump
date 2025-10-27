@@ -1,0 +1,317 @@
+[
+  {
+    "Type": "BehaviorTree",
+    "Name": "BT_Boss_Aida_Skill02",
+    "Class": "UScriptClass'BehaviorTree'",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "RootNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Aida_Skill02:BTComposite_Selector_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_20_Aida/BT_Boss_Aida_Skill02.1"
+      },
+      "BlackboardAsset": {
+        "ObjectName": "BlackboardData'BB_Boss_Aida'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_20_Aida/BB_Boss_Aida.0"
+      },
+      "RootDecorators": [
+        {
+          "ObjectName": "BTDecorator_ForceSuccess'BT_Boss_Aida_Skill02:BTDecorator_ForceSuccess_1'",
+          "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_20_Aida/BT_Boss_Aida_Skill02.4"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_1",
+    "Outer": "BT_Boss_Aida_Skill02",
+    "Class": "UScriptClass'BTComposite_Selector'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_Boss_Aida_Skill02:BTComposite_Sequence_3'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_20_Aida/BT_Boss_Aida_Skill02.2"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_IsAtLocation'BT_Boss_Aida_Skill02:BTDecorator_IsAtLocation_0'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_20_Aida/BT_Boss_Aida_Skill02.5"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_Boss_Aida_Skill02:BTComposite_Sequence_4'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_20_Aida/BT_Boss_Aida_Skill02.3"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_IsAtLocation'BT_Boss_Aida_Skill02:BTDecorator_IsAtLocation_1'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_20_Aida/BT_Boss_Aida_Skill02.6"
+            }
+          ],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Aida_Skill02'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_20_Aida/BT_Boss_Aida_Skill02.0"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_3",
+    "Outer": "BT_Boss_Aida_Skill02",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_UseSkill'BT_Boss_Aida_Skill02:BTTask_UseSkill_10'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_20_Aida/BT_Boss_Aida_Skill02.10"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_RunBehavior'BT_Boss_Aida_Skill02:BTTask_RunBehavior_6'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_20_Aida/BT_Boss_Aida_Skill02.7"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Aida_Skill02'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_20_Aida/BT_Boss_Aida_Skill02.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Aida_Skill02:BTComposite_Selector_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_20_Aida/BT_Boss_Aida_Skill02.1"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_4",
+    "Outer": "BT_Boss_Aida_Skill02",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_UseSkill'BT_Boss_Aida_Skill02:BTTask_UseSkill_8'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_20_Aida/BT_Boss_Aida_Skill02.11"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_UseSkill'BT_Boss_Aida_Skill02:BTTask_UseSkill_1'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_20_Aida/BT_Boss_Aida_Skill02.9"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_RunBehavior'BT_Boss_Aida_Skill02:BTTask_RunBehavior_7'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_20_Aida/BT_Boss_Aida_Skill02.8"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Aida_Skill02'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_20_Aida/BT_Boss_Aida_Skill02.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Aida_Skill02:BTComposite_Selector_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_20_Aida/BT_Boss_Aida_Skill02.1"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_ForceSuccess",
+    "Name": "BTDecorator_ForceSuccess_1",
+    "Outer": "BT_Boss_Aida_Skill02",
+    "Class": "UScriptClass'BTDecorator_ForceSuccess'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Aida_Skill02'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_20_Aida/BT_Boss_Aida_Skill02.0"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_IsAtLocation",
+    "Name": "BTDecorator_IsAtLocation_0",
+    "Outer": "BT_Boss_Aida_Skill02",
+    "Class": "UScriptClass'BTDecorator_IsAtLocation'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "AcceptableRadius": 20.0,
+      "ParametrizedAcceptableRadius": {
+        "DefaultValue": 5.0
+      },
+      "GeometricDistanceType": "FAIDistanceType::Distance2D",
+      "bUseNavAgentGoalLocation": false,
+      "bPathFindingBasedTest": false,
+      "BlackboardKey": {
+        "SelectedKeyName": "P2Loc"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Aida_Skill02'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_20_Aida/BT_Boss_Aida_Skill02.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Aida_Skill02:BTComposite_Selector_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_20_Aida/BT_Boss_Aida_Skill02.1"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_IsAtLocation",
+    "Name": "BTDecorator_IsAtLocation_1",
+    "Outer": "BT_Boss_Aida_Skill02",
+    "Class": "UScriptClass'BTDecorator_IsAtLocation'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "AcceptableRadius": 20.0,
+      "ParametrizedAcceptableRadius": {
+        "DefaultValue": 5.0
+      },
+      "GeometricDistanceType": "FAIDistanceType::Distance2D",
+      "bUseNavAgentGoalLocation": false,
+      "bPathFindingBasedTest": false,
+      "BlackboardKey": {
+        "SelectedKeyName": "P2Loc"
+      },
+      "bInverseCondition": true,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Aida_Skill02'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_20_Aida/BT_Boss_Aida_Skill02.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Aida_Skill02:BTComposite_Selector_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_20_Aida/BT_Boss_Aida_Skill02.1"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_RunBehavior",
+    "Name": "BTTask_RunBehavior_6",
+    "Outer": "BT_Boss_Aida_Skill02",
+    "Class": "UScriptClass'BTTask_RunBehavior'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "BehaviorAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Aida_StareMoveTo'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_20_Aida/BT_Boss_Aida_StareMoveTo.0"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Aida_Skill02'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_20_Aida/BT_Boss_Aida_Skill02.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Aida_Skill02:BTComposite_Sequence_3'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_20_Aida/BT_Boss_Aida_Skill02.2"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_RunBehavior",
+    "Name": "BTTask_RunBehavior_7",
+    "Outer": "BT_Boss_Aida_Skill02",
+    "Class": "UScriptClass'BTTask_RunBehavior'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "BehaviorAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Aida_StareMoveTo'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_20_Aida/BT_Boss_Aida_StareMoveTo.0"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Aida_Skill02'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_20_Aida/BT_Boss_Aida_Skill02.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Aida_Skill02:BTComposite_Sequence_4'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_20_Aida/BT_Boss_Aida_Skill02.3"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_UseSkill",
+    "Name": "BTTask_UseSkill_1",
+    "Outer": "BT_Boss_Aida_Skill02",
+    "Class": "UScriptClass'BTTask_UseSkill'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SkillId": 2,
+      "NodeName": "UseSkill2",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Aida_Skill02'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_20_Aida/BT_Boss_Aida_Skill02.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Aida_Skill02:BTComposite_Sequence_4'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_20_Aida/BT_Boss_Aida_Skill02.3"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_UseSkill",
+    "Name": "BTTask_UseSkill_10",
+    "Outer": "BT_Boss_Aida_Skill02",
+    "Class": "UScriptClass'BTTask_UseSkill'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SkillId": 2,
+      "NodeName": "UseSkill2",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Aida_Skill02'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_20_Aida/BT_Boss_Aida_Skill02.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Aida_Skill02:BTComposite_Sequence_3'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_20_Aida/BT_Boss_Aida_Skill02.2"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_UseSkill",
+    "Name": "BTTask_UseSkill_8",
+    "Outer": "BT_Boss_Aida_Skill02",
+    "Class": "UScriptClass'BTTask_UseSkill'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SkillId": 12,
+      "NodeName": "UseSkill12",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Aida_Skill02'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_20_Aida/BT_Boss_Aida_Skill02.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Aida_Skill02:BTComposite_Sequence_4'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_20_Aida/BT_Boss_Aida_Skill02.3"
+      }
+    }
+  }
+]

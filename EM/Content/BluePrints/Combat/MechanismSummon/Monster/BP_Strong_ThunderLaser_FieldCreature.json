@@ -1,0 +1,5453 @@
+[
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_BP_Strong_ThunderLaser_FieldCreature",
+    "Outer": "BP_Strong_ThunderLaser_FieldCreature_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "___float_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "___struct_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 144,
+        "PropertyFlags": "ContainsInstancedReference",
+        "Struct": {
+          "ObjectName": "ScriptStruct'HitResult'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "___object_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'LaserPort'",
+          "ObjectPath": "/Script/EM"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_BreakHitResult_bBlockingHit",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_BreakHitResult_bInitialOverlap",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_BreakHitResult_Time",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_BreakHitResult_Distance",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_BreakHitResult_Location",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "Struct": {
+          "ObjectName": "ScriptStruct'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_BreakHitResult_ImpactPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "Struct": {
+          "ObjectName": "ScriptStruct'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_BreakHitResult_Normal",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "Struct": {
+          "ObjectName": "ScriptStruct'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_BreakHitResult_ImpactNormal",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "Struct": {
+          "ObjectName": "ScriptStruct'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_BreakHitResult_PhysMat",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'PhysicalMaterial'",
+          "ObjectPath": "/Script/PhysicsCore"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_BreakHitResult_HitActor",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Actor'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_BreakHitResult_HitComponent",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'PrimitiveComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "CallFunc_BreakHitResult_HitBoneName",
+        "Flags": "RF_Public",
+        "ElementSize": 12
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_BreakHitResult_HitItem",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_BreakHitResult_ElementIndex",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_BreakHitResult_FaceIndex",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_BreakHitResult_TraceStart",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "Struct": {
+          "ObjectName": "ScriptStruct'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_BreakHitResult_TraceEnd",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "Struct": {
+          "ObjectName": "ScriptStruct'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_CustomEvent_LaserPort_19",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'LaserPort'",
+          "ObjectPath": "/Script/EM"
+        }
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate",
+        "Flags": "RF_Public",
+        "ElementSize": 20,
+        "SignatureFunction": {
+          "ObjectName": "DelegateFunction'OnLaserCreated__DelegateSignature'",
+          "ObjectPath": "/Script/EM"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_CustomEvent_LaserPort_18",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'LaserPort'",
+          "ObjectPath": "/Script/EM"
+        }
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate_1",
+        "Flags": "RF_Public",
+        "ElementSize": 20,
+        "SignatureFunction": {
+          "ObjectName": "DelegateFunction'OnLaserFinished__DelegateSignature'",
+          "ObjectPath": "/Script/EM"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_CustomEvent_LaserPort_17",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'LaserPort'",
+          "ObjectPath": "/Script/EM"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_CustomEvent_HitResult_9",
+        "Flags": "RF_Public",
+        "ElementSize": 144,
+        "PropertyFlags": "ContainsInstancedReference",
+        "Struct": {
+          "ObjectName": "ScriptStruct'HitResult'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "K2Node_CustomEvent_LaserPassedTime_9",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate_2",
+        "Flags": "RF_Public",
+        "ElementSize": 20,
+        "SignatureFunction": {
+          "ObjectName": "DelegateFunction'OnLaserHitScene__DelegateSignature'",
+          "ObjectPath": "/Script/EM"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_CustomEvent_LaserPort_16",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'LaserPort'",
+          "ObjectPath": "/Script/EM"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_CustomEvent_HitResult_8",
+        "Flags": "RF_Public",
+        "ElementSize": 144,
+        "PropertyFlags": "ContainsInstancedReference",
+        "Struct": {
+          "ObjectName": "ScriptStruct'HitResult'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "K2Node_CustomEvent_LaserPassedTime_8",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate_3",
+        "Flags": "RF_Public",
+        "ElementSize": 20,
+        "SignatureFunction": {
+          "ObjectName": "DelegateFunction'OnLaserHitTarget__DelegateSignature'",
+          "ObjectPath": "/Script/EM"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "___float_Variable_1",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "___struct_Variable_1",
+        "Flags": "RF_Public",
+        "ElementSize": 144,
+        "PropertyFlags": "ContainsInstancedReference",
+        "Struct": {
+          "ObjectName": "ScriptStruct'HitResult'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_BreakHitResult_bBlockingHit_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_BreakHitResult_bInitialOverlap_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_BreakHitResult_Time_1",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_BreakHitResult_Distance_1",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_BreakHitResult_Location_1",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "Struct": {
+          "ObjectName": "ScriptStruct'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_BreakHitResult_ImpactPoint_1",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "Struct": {
+          "ObjectName": "ScriptStruct'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_BreakHitResult_Normal_1",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "Struct": {
+          "ObjectName": "ScriptStruct'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_BreakHitResult_ImpactNormal_1",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "Struct": {
+          "ObjectName": "ScriptStruct'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_BreakHitResult_PhysMat_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'PhysicalMaterial'",
+          "ObjectPath": "/Script/PhysicsCore"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_BreakHitResult_HitActor_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Actor'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_BreakHitResult_HitComponent_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'PrimitiveComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "CallFunc_BreakHitResult_HitBoneName_1",
+        "Flags": "RF_Public",
+        "ElementSize": 12
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_BreakHitResult_HitItem_1",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_BreakHitResult_ElementIndex_1",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_BreakHitResult_FaceIndex_1",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_BreakHitResult_TraceStart_1",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "Struct": {
+          "ObjectName": "ScriptStruct'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_BreakHitResult_TraceEnd_1",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "Struct": {
+          "ObjectName": "ScriptStruct'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "___object_Variable_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'LaserPort'",
+          "ObjectPath": "/Script/EM"
+        }
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate_4",
+        "Flags": "RF_Public",
+        "ElementSize": 20,
+        "SignatureFunction": {
+          "ObjectName": "DelegateFunction'OnLaserCreated__DelegateSignature'",
+          "ObjectPath": "/Script/EM"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_CustomEvent_LaserPort_15",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'LaserPort'",
+          "ObjectPath": "/Script/EM"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_CustomEvent_LaserPort_14",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'LaserPort'",
+          "ObjectPath": "/Script/EM"
+        }
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate_5",
+        "Flags": "RF_Public",
+        "ElementSize": 20,
+        "SignatureFunction": {
+          "ObjectName": "DelegateFunction'OnLaserFinished__DelegateSignature'",
+          "ObjectPath": "/Script/EM"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_CustomEvent_LaserPort_13",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'LaserPort'",
+          "ObjectPath": "/Script/EM"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_CustomEvent_HitResult_7",
+        "Flags": "RF_Public",
+        "ElementSize": 144,
+        "PropertyFlags": "ContainsInstancedReference",
+        "Struct": {
+          "ObjectName": "ScriptStruct'HitResult'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "K2Node_CustomEvent_LaserPassedTime_7",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate_6",
+        "Flags": "RF_Public",
+        "ElementSize": 20,
+        "SignatureFunction": {
+          "ObjectName": "DelegateFunction'OnLaserHitScene__DelegateSignature'",
+          "ObjectPath": "/Script/EM"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_CustomEvent_LaserPort_12",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'LaserPort'",
+          "ObjectPath": "/Script/EM"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_CustomEvent_HitResult_6",
+        "Flags": "RF_Public",
+        "ElementSize": 144,
+        "PropertyFlags": "ContainsInstancedReference",
+        "Struct": {
+          "ObjectName": "ScriptStruct'HitResult'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "K2Node_CustomEvent_LaserPassedTime_6",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate_7",
+        "Flags": "RF_Public",
+        "ElementSize": 20,
+        "SignatureFunction": {
+          "ObjectName": "DelegateFunction'OnLaserHitTarget__DelegateSignature'",
+          "ObjectPath": "/Script/EM"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "___float_Variable_2",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "___struct_Variable_2",
+        "Flags": "RF_Public",
+        "ElementSize": 144,
+        "PropertyFlags": "ContainsInstancedReference",
+        "Struct": {
+          "ObjectName": "ScriptStruct'HitResult'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_BreakHitResult_bBlockingHit_2",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_BreakHitResult_bInitialOverlap_2",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_BreakHitResult_Time_2",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_BreakHitResult_Distance_2",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_BreakHitResult_Location_2",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "Struct": {
+          "ObjectName": "ScriptStruct'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_BreakHitResult_ImpactPoint_2",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "Struct": {
+          "ObjectName": "ScriptStruct'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_BreakHitResult_Normal_2",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "Struct": {
+          "ObjectName": "ScriptStruct'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_BreakHitResult_ImpactNormal_2",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "Struct": {
+          "ObjectName": "ScriptStruct'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_BreakHitResult_PhysMat_2",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'PhysicalMaterial'",
+          "ObjectPath": "/Script/PhysicsCore"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_BreakHitResult_HitActor_2",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Actor'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_BreakHitResult_HitComponent_2",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'PrimitiveComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "CallFunc_BreakHitResult_HitBoneName_2",
+        "Flags": "RF_Public",
+        "ElementSize": 12
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_BreakHitResult_HitItem_2",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_BreakHitResult_ElementIndex_2",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_BreakHitResult_FaceIndex_2",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_BreakHitResult_TraceStart_2",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "Struct": {
+          "ObjectName": "ScriptStruct'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_BreakHitResult_TraceEnd_2",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "Struct": {
+          "ObjectName": "ScriptStruct'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "___object_Variable_2",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'LaserPort'",
+          "ObjectPath": "/Script/EM"
+        }
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate_8",
+        "Flags": "RF_Public",
+        "ElementSize": 20,
+        "SignatureFunction": {
+          "ObjectName": "DelegateFunction'OnLaserCreated__DelegateSignature'",
+          "ObjectPath": "/Script/EM"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_CustomEvent_LaserPort_11",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'LaserPort'",
+          "ObjectPath": "/Script/EM"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_CustomEvent_LaserPort_10",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'LaserPort'",
+          "ObjectPath": "/Script/EM"
+        }
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate_9",
+        "Flags": "RF_Public",
+        "ElementSize": 20,
+        "SignatureFunction": {
+          "ObjectName": "DelegateFunction'OnLaserFinished__DelegateSignature'",
+          "ObjectPath": "/Script/EM"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_CustomEvent_LaserPort_9",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'LaserPort'",
+          "ObjectPath": "/Script/EM"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_CustomEvent_HitResult_5",
+        "Flags": "RF_Public",
+        "ElementSize": 144,
+        "PropertyFlags": "ContainsInstancedReference",
+        "Struct": {
+          "ObjectName": "ScriptStruct'HitResult'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "K2Node_CustomEvent_LaserPassedTime_5",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate_10",
+        "Flags": "RF_Public",
+        "ElementSize": 20,
+        "SignatureFunction": {
+          "ObjectName": "DelegateFunction'OnLaserHitScene__DelegateSignature'",
+          "ObjectPath": "/Script/EM"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_CustomEvent_LaserPort_8",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'LaserPort'",
+          "ObjectPath": "/Script/EM"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_CustomEvent_HitResult_4",
+        "Flags": "RF_Public",
+        "ElementSize": 144,
+        "PropertyFlags": "ContainsInstancedReference",
+        "Struct": {
+          "ObjectName": "ScriptStruct'HitResult'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "K2Node_CustomEvent_LaserPassedTime_4",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate_11",
+        "Flags": "RF_Public",
+        "ElementSize": 20,
+        "SignatureFunction": {
+          "ObjectName": "DelegateFunction'OnLaserHitTarget__DelegateSignature'",
+          "ObjectPath": "/Script/EM"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "___float_Variable_3",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "___struct_Variable_3",
+        "Flags": "RF_Public",
+        "ElementSize": 144,
+        "PropertyFlags": "ContainsInstancedReference",
+        "Struct": {
+          "ObjectName": "ScriptStruct'HitResult'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_BreakHitResult_bBlockingHit_3",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_BreakHitResult_bInitialOverlap_3",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_BreakHitResult_Time_3",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_BreakHitResult_Distance_3",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_BreakHitResult_Location_3",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "Struct": {
+          "ObjectName": "ScriptStruct'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_BreakHitResult_ImpactPoint_3",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "Struct": {
+          "ObjectName": "ScriptStruct'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_BreakHitResult_Normal_3",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "Struct": {
+          "ObjectName": "ScriptStruct'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_BreakHitResult_ImpactNormal_3",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "Struct": {
+          "ObjectName": "ScriptStruct'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_BreakHitResult_PhysMat_3",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'PhysicalMaterial'",
+          "ObjectPath": "/Script/PhysicsCore"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_BreakHitResult_HitActor_3",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Actor'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_BreakHitResult_HitComponent_3",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'PrimitiveComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "CallFunc_BreakHitResult_HitBoneName_3",
+        "Flags": "RF_Public",
+        "ElementSize": 12
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_BreakHitResult_HitItem_3",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_BreakHitResult_ElementIndex_3",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_BreakHitResult_FaceIndex_3",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_BreakHitResult_TraceStart_3",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "Struct": {
+          "ObjectName": "ScriptStruct'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_BreakHitResult_TraceEnd_3",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "Struct": {
+          "ObjectName": "ScriptStruct'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "___object_Variable_3",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'LaserPort'",
+          "ObjectPath": "/Script/EM"
+        }
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate_12",
+        "Flags": "RF_Public",
+        "ElementSize": 20,
+        "SignatureFunction": {
+          "ObjectName": "DelegateFunction'OnLaserCreated__DelegateSignature'",
+          "ObjectPath": "/Script/EM"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_CustomEvent_LaserPort_7",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'LaserPort'",
+          "ObjectPath": "/Script/EM"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_CustomEvent_LaserPort_6",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'LaserPort'",
+          "ObjectPath": "/Script/EM"
+        }
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate_13",
+        "Flags": "RF_Public",
+        "ElementSize": 20,
+        "SignatureFunction": {
+          "ObjectName": "DelegateFunction'OnLaserFinished__DelegateSignature'",
+          "ObjectPath": "/Script/EM"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_CustomEvent_LaserPort_5",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'LaserPort'",
+          "ObjectPath": "/Script/EM"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_CustomEvent_HitResult_3",
+        "Flags": "RF_Public",
+        "ElementSize": 144,
+        "PropertyFlags": "ContainsInstancedReference",
+        "Struct": {
+          "ObjectName": "ScriptStruct'HitResult'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "K2Node_CustomEvent_LaserPassedTime_3",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate_14",
+        "Flags": "RF_Public",
+        "ElementSize": 20,
+        "SignatureFunction": {
+          "ObjectName": "DelegateFunction'OnLaserHitScene__DelegateSignature'",
+          "ObjectPath": "/Script/EM"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_CustomEvent_LaserPort_4",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'LaserPort'",
+          "ObjectPath": "/Script/EM"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_CustomEvent_HitResult_2",
+        "Flags": "RF_Public",
+        "ElementSize": 144,
+        "PropertyFlags": "ContainsInstancedReference",
+        "Struct": {
+          "ObjectName": "ScriptStruct'HitResult'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "K2Node_CustomEvent_LaserPassedTime_2",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate_15",
+        "Flags": "RF_Public",
+        "ElementSize": 20,
+        "SignatureFunction": {
+          "ObjectName": "DelegateFunction'OnLaserHitTarget__DelegateSignature'",
+          "ObjectPath": "/Script/EM"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "___float_Variable_4",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "___struct_Variable_4",
+        "Flags": "RF_Public",
+        "ElementSize": 144,
+        "PropertyFlags": "ContainsInstancedReference",
+        "Struct": {
+          "ObjectName": "ScriptStruct'HitResult'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_BreakHitResult_bBlockingHit_4",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_BreakHitResult_bInitialOverlap_4",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_BreakHitResult_Time_4",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_BreakHitResult_Distance_4",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_BreakHitResult_Location_4",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "Struct": {
+          "ObjectName": "ScriptStruct'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_BreakHitResult_ImpactPoint_4",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "Struct": {
+          "ObjectName": "ScriptStruct'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_BreakHitResult_Normal_4",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "Struct": {
+          "ObjectName": "ScriptStruct'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_BreakHitResult_ImpactNormal_4",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "Struct": {
+          "ObjectName": "ScriptStruct'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_BreakHitResult_PhysMat_4",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'PhysicalMaterial'",
+          "ObjectPath": "/Script/PhysicsCore"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_BreakHitResult_HitActor_4",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Actor'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_BreakHitResult_HitComponent_4",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'PrimitiveComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "CallFunc_BreakHitResult_HitBoneName_4",
+        "Flags": "RF_Public",
+        "ElementSize": 12
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_BreakHitResult_HitItem_4",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_BreakHitResult_ElementIndex_4",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_BreakHitResult_FaceIndex_4",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_BreakHitResult_TraceStart_4",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "Struct": {
+          "ObjectName": "ScriptStruct'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_BreakHitResult_TraceEnd_4",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "Struct": {
+          "ObjectName": "ScriptStruct'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "___object_Variable_4",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'LaserPort'",
+          "ObjectPath": "/Script/EM"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_MakeRotator_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "Struct": {
+          "ObjectName": "ScriptStruct'Rotator'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_CustomEvent_LaserPort_3",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'LaserPort'",
+          "ObjectPath": "/Script/EM"
+        }
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate_16",
+        "Flags": "RF_Public",
+        "ElementSize": 20,
+        "SignatureFunction": {
+          "ObjectName": "DelegateFunction'OnLaserCreated__DelegateSignature'",
+          "ObjectPath": "/Script/EM"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_CustomEvent_LaserPort_2",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'LaserPort'",
+          "ObjectPath": "/Script/EM"
+        }
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate_17",
+        "Flags": "RF_Public",
+        "ElementSize": 20,
+        "SignatureFunction": {
+          "ObjectName": "DelegateFunction'OnLaserFinished__DelegateSignature'",
+          "ObjectPath": "/Script/EM"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_CustomEvent_LaserPort_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'LaserPort'",
+          "ObjectPath": "/Script/EM"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_CustomEvent_HitResult_1",
+        "Flags": "RF_Public",
+        "ElementSize": 144,
+        "PropertyFlags": "ContainsInstancedReference",
+        "Struct": {
+          "ObjectName": "ScriptStruct'HitResult'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "K2Node_CustomEvent_LaserPassedTime_1",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate_18",
+        "Flags": "RF_Public",
+        "ElementSize": 20,
+        "SignatureFunction": {
+          "ObjectName": "DelegateFunction'OnLaserHitScene__DelegateSignature'",
+          "ObjectPath": "/Script/EM"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_CustomEvent_LaserPort",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'LaserPort'",
+          "ObjectPath": "/Script/EM"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_CustomEvent_HitResult",
+        "Flags": "RF_Public",
+        "ElementSize": 144,
+        "PropertyFlags": "ContainsInstancedReference",
+        "Struct": {
+          "ObjectName": "ScriptStruct'HitResult'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "K2Node_CustomEvent_LaserPassedTime",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate_19",
+        "Flags": "RF_Public",
+        "ElementSize": 20,
+        "SignatureFunction": {
+          "ObjectName": "DelegateFunction'OnLaserHitTarget__DelegateSignature'",
+          "ObjectPath": "/Script/EM"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "___float_Variable_5",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "___struct_Variable_5",
+        "Flags": "RF_Public",
+        "ElementSize": 144,
+        "PropertyFlags": "ContainsInstancedReference",
+        "Struct": {
+          "ObjectName": "ScriptStruct'HitResult'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_BreakHitResult_bBlockingHit_5",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_BreakHitResult_bInitialOverlap_5",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_BreakHitResult_Time_5",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_BreakHitResult_Distance_5",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_BreakHitResult_Location_5",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "Struct": {
+          "ObjectName": "ScriptStruct'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_BreakHitResult_ImpactPoint_5",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "Struct": {
+          "ObjectName": "ScriptStruct'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_BreakHitResult_Normal_5",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "Struct": {
+          "ObjectName": "ScriptStruct'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_BreakHitResult_ImpactNormal_5",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "Struct": {
+          "ObjectName": "ScriptStruct'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_BreakHitResult_PhysMat_5",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'PhysicalMaterial'",
+          "ObjectPath": "/Script/PhysicsCore"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_BreakHitResult_HitActor_5",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Actor'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_BreakHitResult_HitComponent_5",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'PrimitiveComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "CallFunc_BreakHitResult_HitBoneName_5",
+        "Flags": "RF_Public",
+        "ElementSize": 12
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_BreakHitResult_HitItem_5",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_BreakHitResult_ElementIndex_5",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_BreakHitResult_FaceIndex_5",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_BreakHitResult_TraceStart_5",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "Struct": {
+          "ObjectName": "ScriptStruct'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_BreakHitResult_TraceEnd_5",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "Struct": {
+          "ObjectName": "ScriptStruct'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "___object_Variable_5",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'LaserPort'",
+          "ObjectPath": "/Script/EM"
+        }
+      },
+      {
+        "Type": "MapProperty",
+        "Name": "K2Node_MakeMap_Map",
+        "Flags": "RF_Public",
+        "ElementSize": 80,
+        "PropertyFlags": "ConstParm",
+        "KeyProp": {
+          "Type": "StrProperty",
+          "Name": "K2Node_MakeMap_Map",
+          "Flags": "RF_Public",
+          "ElementSize": 16
+        },
+        "ValueProp": {
+          "Type": "FloatProperty",
+          "Name": "K2Node_MakeMap_Map_Value",
+          "Flags": "RF_Public",
+          "ElementSize": 4
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_CustomEvent_LaserPort_20",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'LaserPort'",
+          "ObjectPath": "/Script/EM"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_CustomEvent_HitResult_10",
+        "Flags": "RF_Public",
+        "ElementSize": 144,
+        "PropertyFlags": "ContainsInstancedReference",
+        "Struct": {
+          "ObjectName": "ScriptStruct'HitResult'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "K2Node_CustomEvent_LaserPassedTime_10",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "K2Node_MakeArray_Array",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "ConstParm | ReferenceParm",
+        "Inner": {
+          "Type": "IntProperty",
+          "Name": "K2Node_MakeArray_Array",
+          "Flags": "RF_Public",
+          "ElementSize": 4
+        }
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "K2Node_MakeArray_Array_1",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "ConstParm | ReferenceParm",
+        "Inner": {
+          "Type": "IntProperty",
+          "Name": "K2Node_MakeArray_Array_1",
+          "Flags": "RF_Public",
+          "ElementSize": 4
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetClientAudioManager_AudioManager",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'BP_AudioManager_C'",
+          "ObjectPath": "EM/Content/BluePrints/Managers/BP_AudioManager.10"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetClientAudioManager_AudioManager_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'BP_AudioManager_C'",
+          "ObjectPath": "EM/Content/BluePrints/Managers/BP_AudioManager.10"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "InterfaceProperty",
+        "Name": "CallFunc_GetCreator_Target_CastInput",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "ConstParm | UObjectWrapper",
+        "InterfaceClass": {
+          "ObjectName": "Class'EffectSourceInterface'",
+          "ObjectPath": "/Script/EM"
+        }
+      },
+      {
+        "Type": "InterfaceProperty",
+        "Name": "CallFunc_GetCreator_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "UObjectWrapper",
+        "InterfaceClass": {
+          "ObjectName": "Class'EffectSourceInterface'",
+          "ObjectPath": "/Script/EM"
+        }
+      },
+      {
+        "Type": "MapProperty",
+        "Name": "K2Node_MakeMap_Map_1",
+        "Flags": "RF_Public",
+        "ElementSize": 80,
+        "PropertyFlags": "ConstParm",
+        "KeyProp": {
+          "Type": "StrProperty",
+          "Name": "K2Node_MakeMap_Map_1",
+          "Flags": "RF_Public",
+          "ElementSize": 16
+        },
+        "ValueProp": {
+          "Type": "FloatProperty",
+          "Name": "K2Node_MakeMap_Map_Value",
+          "Flags": "RF_Public",
+          "ElementSize": 4
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_Conv_InterfaceToObject_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Object'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "InterfaceProperty",
+        "Name": "CallFunc_GetCreator_Target_CastInput_1",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "ConstParm | UObjectWrapper",
+        "InterfaceClass": {
+          "ObjectName": "Class'EffectSourceInterface'",
+          "ObjectPath": "/Script/EM"
+        }
+      },
+      {
+        "Type": "InterfaceProperty",
+        "Name": "CallFunc_GetCreator_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "UObjectWrapper",
+        "InterfaceClass": {
+          "ObjectName": "Class'EffectSourceInterface'",
+          "ObjectPath": "/Script/EM"
+        }
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate_20",
+        "Flags": "RF_Public",
+        "ElementSize": 20,
+        "SignatureFunction": {
+          "ObjectName": "DelegateFunction'OnLaserHitTarget__DelegateSignature'",
+          "ObjectPath": "/Script/EM"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_Conv_InterfaceToObject_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Object'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "K2Node_MakeArray_Array_2",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "ConstParm | ReferenceParm",
+        "Inner": {
+          "Type": "IntProperty",
+          "Name": "K2Node_MakeArray_Array_2",
+          "Flags": "RF_Public",
+          "ElementSize": 4
+        }
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "K2Node_MakeArray_Array_3",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "ConstParm | ReferenceParm",
+        "Inner": {
+          "Type": "IntProperty",
+          "Name": "K2Node_MakeArray_Array_3",
+          "Flags": "RF_Public",
+          "ElementSize": 4
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetClientAudioManager_AudioManager_2",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'BP_AudioManager_C'",
+          "ObjectPath": "EM/Content/BluePrints/Managers/BP_AudioManager.10"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetClientAudioManager_AudioManager_3",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'BP_AudioManager_C'",
+          "ObjectPath": "EM/Content/BluePrints/Managers/BP_AudioManager.10"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "InterfaceProperty",
+        "Name": "CallFunc_GetCreator_Target_CastInput_2",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "ConstParm | UObjectWrapper",
+        "InterfaceClass": {
+          "ObjectName": "Class'EffectSourceInterface'",
+          "ObjectPath": "/Script/EM"
+        }
+      },
+      {
+        "Type": "InterfaceProperty",
+        "Name": "CallFunc_GetCreator_ReturnValue_2",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "UObjectWrapper",
+        "InterfaceClass": {
+          "ObjectName": "Class'EffectSourceInterface'",
+          "ObjectPath": "/Script/EM"
+        }
+      },
+      {
+        "Type": "MapProperty",
+        "Name": "K2Node_MakeMap_Map_2",
+        "Flags": "RF_Public",
+        "ElementSize": 80,
+        "PropertyFlags": "ConstParm",
+        "KeyProp": {
+          "Type": "StrProperty",
+          "Name": "K2Node_MakeMap_Map_2",
+          "Flags": "RF_Public",
+          "ElementSize": 16
+        },
+        "ValueProp": {
+          "Type": "FloatProperty",
+          "Name": "K2Node_MakeMap_Map_Value",
+          "Flags": "RF_Public",
+          "ElementSize": 4
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_Conv_InterfaceToObject_ReturnValue_2",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Object'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetClientAudioManager_AudioManager_4",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'BP_AudioManager_C'",
+          "ObjectPath": "EM/Content/BluePrints/Managers/BP_AudioManager.10"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_CustomEvent_LaserPort_21",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'LaserPort'",
+          "ObjectPath": "/Script/EM"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_CustomEvent_HitResult_11",
+        "Flags": "RF_Public",
+        "ElementSize": 144,
+        "PropertyFlags": "ContainsInstancedReference",
+        "Struct": {
+          "ObjectName": "ScriptStruct'HitResult'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "K2Node_CustomEvent_LaserPassedTime_11",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "K2Node_MakeArray_Array_4",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "ConstParm | ReferenceParm",
+        "Inner": {
+          "Type": "IntProperty",
+          "Name": "K2Node_MakeArray_Array_4",
+          "Flags": "RF_Public",
+          "ElementSize": 4
+        }
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "K2Node_MakeArray_Array_5",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "ConstParm | ReferenceParm",
+        "Inner": {
+          "Type": "IntProperty",
+          "Name": "K2Node_MakeArray_Array_5",
+          "Flags": "RF_Public",
+          "ElementSize": 4
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetClientAudioManager_AudioManager_5",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'BP_AudioManager_C'",
+          "ObjectPath": "EM/Content/BluePrints/Managers/BP_AudioManager.10"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetClientAudioManager_AudioManager_6",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'BP_AudioManager_C'",
+          "ObjectPath": "EM/Content/BluePrints/Managers/BP_AudioManager.10"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue_2",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "InterfaceProperty",
+        "Name": "CallFunc_GetCreator_Target_CastInput_3",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "ConstParm | UObjectWrapper",
+        "InterfaceClass": {
+          "ObjectName": "Class'EffectSourceInterface'",
+          "ObjectPath": "/Script/EM"
+        }
+      },
+      {
+        "Type": "InterfaceProperty",
+        "Name": "CallFunc_GetCreator_ReturnValue_3",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "UObjectWrapper",
+        "InterfaceClass": {
+          "ObjectName": "Class'EffectSourceInterface'",
+          "ObjectPath": "/Script/EM"
+        }
+      },
+      {
+        "Type": "MapProperty",
+        "Name": "K2Node_MakeMap_Map_3",
+        "Flags": "RF_Public",
+        "ElementSize": 80,
+        "PropertyFlags": "ConstParm",
+        "KeyProp": {
+          "Type": "StrProperty",
+          "Name": "K2Node_MakeMap_Map_3",
+          "Flags": "RF_Public",
+          "ElementSize": 16
+        },
+        "ValueProp": {
+          "Type": "FloatProperty",
+          "Name": "K2Node_MakeMap_Map_Value",
+          "Flags": "RF_Public",
+          "ElementSize": 4
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_Conv_InterfaceToObject_ReturnValue_3",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Object'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate_21",
+        "Flags": "RF_Public",
+        "ElementSize": 20,
+        "SignatureFunction": {
+          "ObjectName": "DelegateFunction'OnLaserHitScene__DelegateSignature'",
+          "ObjectPath": "/Script/EM"
+        }
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "K2Node_MakeArray_Array_6",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "ConstParm | ReferenceParm",
+        "Inner": {
+          "Type": "IntProperty",
+          "Name": "K2Node_MakeArray_Array_6",
+          "Flags": "RF_Public",
+          "ElementSize": 4
+        }
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "K2Node_MakeArray_Array_7",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "ConstParm | ReferenceParm",
+        "Inner": {
+          "Type": "IntProperty",
+          "Name": "K2Node_MakeArray_Array_7",
+          "Flags": "RF_Public",
+          "ElementSize": 4
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetClientAudioManager_AudioManager_7",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'BP_AudioManager_C'",
+          "ObjectPath": "EM/Content/BluePrints/Managers/BP_AudioManager.10"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetClientAudioManager_AudioManager_8",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'BP_AudioManager_C'",
+          "ObjectPath": "EM/Content/BluePrints/Managers/BP_AudioManager.10"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue_3",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "InterfaceProperty",
+        "Name": "CallFunc_GetCreator_Target_CastInput_4",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "ConstParm | UObjectWrapper",
+        "InterfaceClass": {
+          "ObjectName": "Class'EffectSourceInterface'",
+          "ObjectPath": "/Script/EM"
+        }
+      },
+      {
+        "Type": "InterfaceProperty",
+        "Name": "CallFunc_GetCreator_ReturnValue_4",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "UObjectWrapper",
+        "InterfaceClass": {
+          "ObjectName": "Class'EffectSourceInterface'",
+          "ObjectPath": "/Script/EM"
+        }
+      },
+      {
+        "Type": "MapProperty",
+        "Name": "K2Node_MakeMap_Map_4",
+        "Flags": "RF_Public",
+        "ElementSize": 80,
+        "PropertyFlags": "ConstParm",
+        "KeyProp": {
+          "Type": "StrProperty",
+          "Name": "K2Node_MakeMap_Map_4",
+          "Flags": "RF_Public",
+          "ElementSize": 16
+        },
+        "ValueProp": {
+          "Type": "FloatProperty",
+          "Name": "K2Node_MakeMap_Map_Value",
+          "Flags": "RF_Public",
+          "ElementSize": 4
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_Conv_InterfaceToObject_ReturnValue_4",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Object'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_CustomEvent_LaserPort_22",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'LaserPort'",
+          "ObjectPath": "/Script/EM"
+        }
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "K2Node_MakeArray_Array_8",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "ConstParm | ReferenceParm",
+        "Inner": {
+          "Type": "IntProperty",
+          "Name": "K2Node_MakeArray_Array_8",
+          "Flags": "RF_Public",
+          "ElementSize": 4
+        }
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "K2Node_MakeArray_Array_9",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "ConstParm | ReferenceParm",
+        "Inner": {
+          "Type": "IntProperty",
+          "Name": "K2Node_MakeArray_Array_9",
+          "Flags": "RF_Public",
+          "ElementSize": 4
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetClientAudioManager_AudioManager_9",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'BP_AudioManager_C'",
+          "ObjectPath": "EM/Content/BluePrints/Managers/BP_AudioManager.10"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetClientAudioManager_AudioManager_10",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'BP_AudioManager_C'",
+          "ObjectPath": "EM/Content/BluePrints/Managers/BP_AudioManager.10"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue_4",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "InterfaceProperty",
+        "Name": "CallFunc_GetCreator_Target_CastInput_5",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "ConstParm | UObjectWrapper",
+        "InterfaceClass": {
+          "ObjectName": "Class'EffectSourceInterface'",
+          "ObjectPath": "/Script/EM"
+        }
+      },
+      {
+        "Type": "InterfaceProperty",
+        "Name": "CallFunc_GetCreator_ReturnValue_5",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "UObjectWrapper",
+        "InterfaceClass": {
+          "ObjectName": "Class'EffectSourceInterface'",
+          "ObjectPath": "/Script/EM"
+        }
+      },
+      {
+        "Type": "MapProperty",
+        "Name": "K2Node_MakeMap_Map_5",
+        "Flags": "RF_Public",
+        "ElementSize": 80,
+        "PropertyFlags": "ConstParm",
+        "KeyProp": {
+          "Type": "StrProperty",
+          "Name": "K2Node_MakeMap_Map_5",
+          "Flags": "RF_Public",
+          "ElementSize": 16
+        },
+        "ValueProp": {
+          "Type": "FloatProperty",
+          "Name": "K2Node_MakeMap_Map_Value",
+          "Flags": "RF_Public",
+          "ElementSize": 4
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_Conv_InterfaceToObject_ReturnValue_5",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Object'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetClientAudioManager_AudioManager_11",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'BP_AudioManager_C'",
+          "ObjectPath": "EM/Content/BluePrints/Managers/BP_AudioManager.10"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue_5",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate_22",
+        "Flags": "RF_Public",
+        "ElementSize": 20,
+        "SignatureFunction": {
+          "ObjectName": "DelegateFunction'OnLaserFinished__DelegateSignature'",
+          "ObjectPath": "/Script/EM"
+        }
+      },
+      {
+        "Type": "InterfaceProperty",
+        "Name": "CallFunc_GetCreator_Target_CastInput_6",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "ConstParm | UObjectWrapper",
+        "InterfaceClass": {
+          "ObjectName": "Class'EffectSourceInterface'",
+          "ObjectPath": "/Script/EM"
+        }
+      },
+      {
+        "Type": "InterfaceProperty",
+        "Name": "CallFunc_GetCreator_ReturnValue_6",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "UObjectWrapper",
+        "InterfaceClass": {
+          "ObjectName": "Class'EffectSourceInterface'",
+          "ObjectPath": "/Script/EM"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "K2Node_Event_DeltaSeconds",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_DynamicCast_AsBP_Monster_Character",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'BP_MonsterCharacter_C'",
+          "ObjectPath": "EM/Content/BluePrints/Char/BP_Monsters/BP_MonsterCharacter.42"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_DynamicCast_bSuccess",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_Multiply_FloatFloat_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_Add_FloatFloat_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_MakeStruct_LaserInfo",
+        "Flags": "RF_Public",
+        "ElementSize": 64,
+        "Struct": {
+          "ObjectName": "ScriptStruct'LaserInfo'",
+          "ObjectPath": "/Script/EM"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_MakeStruct_LaserInfo_1",
+        "Flags": "RF_Public",
+        "ElementSize": 64,
+        "Struct": {
+          "ObjectName": "ScriptStruct'LaserInfo'",
+          "ObjectPath": "/Script/EM"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_MakeStruct_LaserInfo_2",
+        "Flags": "RF_Public",
+        "ElementSize": 64,
+        "Struct": {
+          "ObjectName": "ScriptStruct'LaserInfo'",
+          "ObjectPath": "/Script/EM"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_MakeStruct_LaserInfo_3",
+        "Flags": "RF_Public",
+        "ElementSize": 64,
+        "Struct": {
+          "ObjectName": "ScriptStruct'LaserInfo'",
+          "ObjectPath": "/Script/EM"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_MakeStruct_LaserInfo_4",
+        "Flags": "RF_Public",
+        "ElementSize": 64,
+        "Struct": {
+          "ObjectName": "ScriptStruct'LaserInfo'",
+          "ObjectPath": "/Script/EM"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_MakeStruct_LaserInfo_5",
+        "Flags": "RF_Public",
+        "ElementSize": 64,
+        "Struct": {
+          "ObjectName": "ScriptStruct'LaserInfo'",
+          "ObjectPath": "/Script/EM"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_CustomEvent_LaserPort_23",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'LaserPort'",
+          "ObjectPath": "/Script/EM"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_CreateLaser_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'CreateLaserAsyncNode'",
+          "ObjectPath": "/Script/EM"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue_6",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_CreateLaser_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'CreateLaserAsyncNode'",
+          "ObjectPath": "/Script/EM"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_CreateLaser_ReturnValue_2",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'CreateLaserAsyncNode'",
+          "ObjectPath": "/Script/EM"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue_7",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue_8",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_K2_SetWorldLocation_SweepHitResult",
+        "Flags": "RF_Public",
+        "ElementSize": 144,
+        "PropertyFlags": "ContainsInstancedReference",
+        "Struct": {
+          "ObjectName": "ScriptStruct'HitResult'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "InterfaceProperty",
+        "Name": "CallFunc_ExecuteSkillEffects_Source_CastInput",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "ConstParm | UObjectWrapper",
+        "InterfaceClass": {
+          "ObjectName": "Class'EffectSourceInterface'",
+          "ObjectPath": "/Script/EM"
+        }
+      },
+      {
+        "Type": "InterfaceProperty",
+        "Name": "CallFunc_ExecuteSkillEffects_Source_CastInput_1",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "ConstParm | UObjectWrapper",
+        "InterfaceClass": {
+          "ObjectName": "Class'EffectSourceInterface'",
+          "ObjectPath": "/Script/EM"
+        }
+      },
+      {
+        "Type": "InterfaceProperty",
+        "Name": "CallFunc_ExecuteSkillEffects_Source_CastInput_2",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "ConstParm | UObjectWrapper",
+        "InterfaceClass": {
+          "ObjectName": "Class'EffectSourceInterface'",
+          "ObjectPath": "/Script/EM"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_K2_SetWorldLocation_SweepHitResult_1",
+        "Flags": "RF_Public",
+        "ElementSize": 144,
+        "PropertyFlags": "ContainsInstancedReference",
+        "Struct": {
+          "ObjectName": "ScriptStruct'HitResult'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "InterfaceProperty",
+        "Name": "CallFunc_ExecuteSkillEffects_Source_CastInput_3",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "ConstParm | UObjectWrapper",
+        "InterfaceClass": {
+          "ObjectName": "Class'EffectSourceInterface'",
+          "ObjectPath": "/Script/EM"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_K2_SetWorldLocation_SweepHitResult_2",
+        "Flags": "RF_Public",
+        "ElementSize": 144,
+        "PropertyFlags": "ContainsInstancedReference",
+        "Struct": {
+          "ObjectName": "ScriptStruct'HitResult'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "K2Node_MakeArray_Array_10",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "ConstParm | ReferenceParm",
+        "Inner": {
+          "Type": "IntProperty",
+          "Name": "K2Node_MakeArray_Array_10",
+          "Flags": "RF_Public",
+          "ElementSize": 4
+        }
+      },
+      {
+        "Type": "InterfaceProperty",
+        "Name": "CallFunc_ExecuteSkillEffects_Source_CastInput_4",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "ConstParm | UObjectWrapper",
+        "InterfaceClass": {
+          "ObjectName": "Class'EffectSourceInterface'",
+          "ObjectPath": "/Script/EM"
+        }
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "K2Node_MakeArray_Array_11",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "ConstParm | ReferenceParm",
+        "Inner": {
+          "Type": "IntProperty",
+          "Name": "K2Node_MakeArray_Array_11",
+          "Flags": "RF_Public",
+          "ElementSize": 4
+        }
+      },
+      {
+        "Type": "InterfaceProperty",
+        "Name": "CallFunc_ExecuteSkillEffects_Source_CastInput_5",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "ConstParm | UObjectWrapper",
+        "InterfaceClass": {
+          "ObjectName": "Class'EffectSourceInterface'",
+          "ObjectPath": "/Script/EM"
+        }
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate_23",
+        "Flags": "RF_Public",
+        "ElementSize": 20,
+        "SignatureFunction": {
+          "ObjectName": "DelegateFunction'OnLaserCreated__DelegateSignature'",
+          "ObjectPath": "/Script/EM"
+        }
+      },
+      {
+        "Type": "InterfaceProperty",
+        "Name": "CallFunc_ExecuteSkillEffects_Source_CastInput_6",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "ConstParm | UObjectWrapper",
+        "InterfaceClass": {
+          "ObjectName": "Class'EffectSourceInterface'",
+          "ObjectPath": "/Script/EM"
+        }
+      },
+      {
+        "Type": "InterfaceProperty",
+        "Name": "CallFunc_ExecuteSkillEffects_Source_CastInput_7",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "ConstParm | UObjectWrapper",
+        "InterfaceClass": {
+          "ObjectName": "Class'EffectSourceInterface'",
+          "ObjectPath": "/Script/EM"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_K2_SetWorldLocation_SweepHitResult_3",
+        "Flags": "RF_Public",
+        "ElementSize": 144,
+        "PropertyFlags": "ContainsInstancedReference",
+        "Struct": {
+          "ObjectName": "ScriptStruct'HitResult'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "InterfaceProperty",
+        "Name": "CallFunc_ExecuteSkillEffects_Source_CastInput_8",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "ConstParm | UObjectWrapper",
+        "InterfaceClass": {
+          "ObjectName": "Class'EffectSourceInterface'",
+          "ObjectPath": "/Script/EM"
+        }
+      },
+      {
+        "Type": "InterfaceProperty",
+        "Name": "CallFunc_ExecuteSkillEffects_Source_CastInput_9",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "ConstParm | UObjectWrapper",
+        "InterfaceClass": {
+          "ObjectName": "Class'EffectSourceInterface'",
+          "ObjectPath": "/Script/EM"
+        }
+      },
+      {
+        "Type": "InterfaceProperty",
+        "Name": "CallFunc_ExecuteSkillEffects_Source_CastInput_10",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "ConstParm | UObjectWrapper",
+        "InterfaceClass": {
+          "ObjectName": "Class'EffectSourceInterface'",
+          "ObjectPath": "/Script/EM"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_K2_SetWorldLocation_SweepHitResult_4",
+        "Flags": "RF_Public",
+        "ElementSize": 144,
+        "PropertyFlags": "ContainsInstancedReference",
+        "Struct": {
+          "ObjectName": "ScriptStruct'HitResult'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "InterfaceProperty",
+        "Name": "CallFunc_ExecuteSkillEffects_Source_CastInput_11",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "ConstParm | UObjectWrapper",
+        "InterfaceClass": {
+          "ObjectName": "Class'EffectSourceInterface'",
+          "ObjectPath": "/Script/EM"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_K2_SetWorldLocation_SweepHitResult_5",
+        "Flags": "RF_Public",
+        "ElementSize": 144,
+        "PropertyFlags": "ContainsInstancedReference",
+        "Struct": {
+          "ObjectName": "ScriptStruct'HitResult'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_CreateLaser_ReturnValue_3",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'CreateLaserAsyncNode'",
+          "ObjectPath": "/Script/EM"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_CreateLaser_ReturnValue_4",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'CreateLaserAsyncNode'",
+          "ObjectPath": "/Script/EM"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue_9",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue_10",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_CreateLaser_ReturnValue_5",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'CreateLaserAsyncNode'",
+          "ObjectPath": "/Script/EM"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue_11",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_K2_SetWorldRotation_SweepHitResult",
+        "Flags": "RF_Public",
+        "ElementSize": 144,
+        "PropertyFlags": "ContainsInstancedReference",
+        "Struct": {
+          "ObjectName": "ScriptStruct'HitResult'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetClientAudioManager_AudioManager_12",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'BP_AudioManager_C'",
+          "ObjectPath": "EM/Content/BluePrints/Managers/BP_AudioManager.10"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue_12",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "InterfaceProperty",
+        "Name": "CallFunc_GetCreator_Target_CastInput_7",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "ConstParm | UObjectWrapper",
+        "InterfaceClass": {
+          "ObjectName": "Class'EffectSourceInterface'",
+          "ObjectPath": "/Script/EM"
+        }
+      },
+      {
+        "Type": "InterfaceProperty",
+        "Name": "CallFunc_GetCreator_ReturnValue_7",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "UObjectWrapper",
+        "InterfaceClass": {
+          "ObjectName": "Class'EffectSourceInterface'",
+          "ObjectPath": "/Script/EM"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_Conv_InterfaceToObject_ReturnValue_6",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Object'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetClientAudioManager_AudioManager_13",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'BP_AudioManager_C'",
+          "ObjectPath": "EM/Content/BluePrints/Managers/BP_AudioManager.10"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue_13",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "InterfaceProperty",
+        "Name": "CallFunc_GetCreator_Target_CastInput_8",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "ConstParm | UObjectWrapper",
+        "InterfaceClass": {
+          "ObjectName": "Class'EffectSourceInterface'",
+          "ObjectPath": "/Script/EM"
+        }
+      },
+      {
+        "Type": "InterfaceProperty",
+        "Name": "CallFunc_GetCreator_ReturnValue_8",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "UObjectWrapper",
+        "InterfaceClass": {
+          "ObjectName": "Class'EffectSourceInterface'",
+          "ObjectPath": "/Script/EM"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_Conv_InterfaceToObject_ReturnValue_7",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Object'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "MapProperty",
+        "Name": "K2Node_MakeMap_Map_6",
+        "Flags": "RF_Public",
+        "ElementSize": 80,
+        "PropertyFlags": "ConstParm",
+        "KeyProp": {
+          "Type": "StrProperty",
+          "Name": "K2Node_MakeMap_Map_6",
+          "Flags": "RF_Public",
+          "ElementSize": 16
+        },
+        "ValueProp": {
+          "Type": "FloatProperty",
+          "Name": "K2Node_MakeMap_Map_Value",
+          "Flags": "RF_Public",
+          "ElementSize": 4
+        }
+      },
+      {
+        "Type": "ByteProperty",
+        "Name": "K2Node_Event_EndPlayReason",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "Enum": {
+          "ObjectName": "Enum'EEndPlayReason'",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction | FUNC_HasDefaults"
+  },
+  {
+    "Type": "Function",
+    "Name": "ReceiveEndPlay",
+    "Outer": "BP_Strong_ThunderLaser_FieldCreature_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "SuperStruct": {
+      "ObjectName": "Function'Actor:ReceiveEndPlay'",
+      "ObjectPath": "/Script/Engine"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ByteProperty",
+        "Name": "EndPlayReason",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "Enum": {
+          "ObjectName": "Enum'EEndPlayReason'",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Protected | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "ReceiveTick",
+    "Outer": "BP_Strong_ThunderLaser_FieldCreature_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "SuperStruct": {
+      "ObjectName": "Function'Actor:ReceiveTick'",
+      "ObjectPath": "/Script/Engine"
+    },
+    "ChildProperties": [
+      {
+        "Type": "FloatProperty",
+        "Name": "DeltaSeconds",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "ReceiveBeginPlay",
+    "Outer": "BP_Strong_ThunderLaser_FieldCreature_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "SuperStruct": {
+      "ObjectName": "Function'Actor:ReceiveBeginPlay'",
+      "ObjectPath": "/Script/Engine"
+    },
+    "FunctionFlags": "FUNC_Event | FUNC_Protected | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnHitTarget_3501CE57416007653CCD6DBFC4AE679B",
+    "Outer": "BP_Strong_ThunderLaser_FieldCreature_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "LaserPort",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "PropertyClass": {
+          "ObjectName": "Class'LaserPort'",
+          "ObjectPath": "/Script/EM"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "HitResult",
+        "Flags": "RF_Public",
+        "ElementSize": 144,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm | ContainsInstancedReference",
+        "Struct": {
+          "ObjectName": "ScriptStruct'HitResult'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "LaserPassedTime",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnHitScene_3501CE57416007653CCD6DBFC4AE679B",
+    "Outer": "BP_Strong_ThunderLaser_FieldCreature_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "LaserPort",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "PropertyClass": {
+          "ObjectName": "Class'LaserPort'",
+          "ObjectPath": "/Script/EM"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "HitResult",
+        "Flags": "RF_Public",
+        "ElementSize": 144,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm | ContainsInstancedReference",
+        "Struct": {
+          "ObjectName": "ScriptStruct'HitResult'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "LaserPassedTime",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnFinished_3501CE57416007653CCD6DBFC4AE679B",
+    "Outer": "BP_Strong_ThunderLaser_FieldCreature_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "LaserPort",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "PropertyClass": {
+          "ObjectName": "Class'LaserPort'",
+          "ObjectPath": "/Script/EM"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnLaserCreated_3501CE57416007653CCD6DBFC4AE679B",
+    "Outer": "BP_Strong_ThunderLaser_FieldCreature_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "LaserPort",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "PropertyClass": {
+          "ObjectName": "Class'LaserPort'",
+          "ObjectPath": "/Script/EM"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnHitTarget_3501CE57416007653CCD6DBF6C998833",
+    "Outer": "BP_Strong_ThunderLaser_FieldCreature_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "LaserPort",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "PropertyClass": {
+          "ObjectName": "Class'LaserPort'",
+          "ObjectPath": "/Script/EM"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "HitResult",
+        "Flags": "RF_Public",
+        "ElementSize": 144,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm | ContainsInstancedReference",
+        "Struct": {
+          "ObjectName": "ScriptStruct'HitResult'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "LaserPassedTime",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnHitScene_3501CE57416007653CCD6DBF6C998833",
+    "Outer": "BP_Strong_ThunderLaser_FieldCreature_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "LaserPort",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "PropertyClass": {
+          "ObjectName": "Class'LaserPort'",
+          "ObjectPath": "/Script/EM"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "HitResult",
+        "Flags": "RF_Public",
+        "ElementSize": 144,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm | ContainsInstancedReference",
+        "Struct": {
+          "ObjectName": "ScriptStruct'HitResult'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "LaserPassedTime",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnFinished_3501CE57416007653CCD6DBF6C998833",
+    "Outer": "BP_Strong_ThunderLaser_FieldCreature_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "LaserPort",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "PropertyClass": {
+          "ObjectName": "Class'LaserPort'",
+          "ObjectPath": "/Script/EM"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnLaserCreated_3501CE57416007653CCD6DBF6C998833",
+    "Outer": "BP_Strong_ThunderLaser_FieldCreature_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "LaserPort",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "PropertyClass": {
+          "ObjectName": "Class'LaserPort'",
+          "ObjectPath": "/Script/EM"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnHitTarget_3501CE57416007653CCD6DBFE8F42281",
+    "Outer": "BP_Strong_ThunderLaser_FieldCreature_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "LaserPort",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "PropertyClass": {
+          "ObjectName": "Class'LaserPort'",
+          "ObjectPath": "/Script/EM"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "HitResult",
+        "Flags": "RF_Public",
+        "ElementSize": 144,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm | ContainsInstancedReference",
+        "Struct": {
+          "ObjectName": "ScriptStruct'HitResult'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "LaserPassedTime",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnHitScene_3501CE57416007653CCD6DBFE8F42281",
+    "Outer": "BP_Strong_ThunderLaser_FieldCreature_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "LaserPort",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "PropertyClass": {
+          "ObjectName": "Class'LaserPort'",
+          "ObjectPath": "/Script/EM"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "HitResult",
+        "Flags": "RF_Public",
+        "ElementSize": 144,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm | ContainsInstancedReference",
+        "Struct": {
+          "ObjectName": "ScriptStruct'HitResult'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "LaserPassedTime",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnFinished_3501CE57416007653CCD6DBFE8F42281",
+    "Outer": "BP_Strong_ThunderLaser_FieldCreature_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "LaserPort",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "PropertyClass": {
+          "ObjectName": "Class'LaserPort'",
+          "ObjectPath": "/Script/EM"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnLaserCreated_3501CE57416007653CCD6DBFE8F42281",
+    "Outer": "BP_Strong_ThunderLaser_FieldCreature_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "LaserPort",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "PropertyClass": {
+          "ObjectName": "Class'LaserPort'",
+          "ObjectPath": "/Script/EM"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnHitTarget_3501CE57416007653CCD6DBF83AC7AE2",
+    "Outer": "BP_Strong_ThunderLaser_FieldCreature_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "LaserPort",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "PropertyClass": {
+          "ObjectName": "Class'LaserPort'",
+          "ObjectPath": "/Script/EM"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "HitResult",
+        "Flags": "RF_Public",
+        "ElementSize": 144,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm | ContainsInstancedReference",
+        "Struct": {
+          "ObjectName": "ScriptStruct'HitResult'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "LaserPassedTime",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnHitScene_3501CE57416007653CCD6DBF83AC7AE2",
+    "Outer": "BP_Strong_ThunderLaser_FieldCreature_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "LaserPort",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "PropertyClass": {
+          "ObjectName": "Class'LaserPort'",
+          "ObjectPath": "/Script/EM"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "HitResult",
+        "Flags": "RF_Public",
+        "ElementSize": 144,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm | ContainsInstancedReference",
+        "Struct": {
+          "ObjectName": "ScriptStruct'HitResult'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "LaserPassedTime",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnFinished_3501CE57416007653CCD6DBF83AC7AE2",
+    "Outer": "BP_Strong_ThunderLaser_FieldCreature_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "LaserPort",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "PropertyClass": {
+          "ObjectName": "Class'LaserPort'",
+          "ObjectPath": "/Script/EM"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnLaserCreated_3501CE57416007653CCD6DBF83AC7AE2",
+    "Outer": "BP_Strong_ThunderLaser_FieldCreature_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "LaserPort",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "PropertyClass": {
+          "ObjectName": "Class'LaserPort'",
+          "ObjectPath": "/Script/EM"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnHitTarget_3501CE57416007653CCD6DBFD024A041",
+    "Outer": "BP_Strong_ThunderLaser_FieldCreature_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "LaserPort",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "PropertyClass": {
+          "ObjectName": "Class'LaserPort'",
+          "ObjectPath": "/Script/EM"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "HitResult",
+        "Flags": "RF_Public",
+        "ElementSize": 144,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm | ContainsInstancedReference",
+        "Struct": {
+          "ObjectName": "ScriptStruct'HitResult'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "LaserPassedTime",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnHitScene_3501CE57416007653CCD6DBFD024A041",
+    "Outer": "BP_Strong_ThunderLaser_FieldCreature_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "LaserPort",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "PropertyClass": {
+          "ObjectName": "Class'LaserPort'",
+          "ObjectPath": "/Script/EM"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "HitResult",
+        "Flags": "RF_Public",
+        "ElementSize": 144,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm | ContainsInstancedReference",
+        "Struct": {
+          "ObjectName": "ScriptStruct'HitResult'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "LaserPassedTime",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnFinished_3501CE57416007653CCD6DBFD024A041",
+    "Outer": "BP_Strong_ThunderLaser_FieldCreature_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "LaserPort",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "PropertyClass": {
+          "ObjectName": "Class'LaserPort'",
+          "ObjectPath": "/Script/EM"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnLaserCreated_3501CE57416007653CCD6DBFD024A041",
+    "Outer": "BP_Strong_ThunderLaser_FieldCreature_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "LaserPort",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "PropertyClass": {
+          "ObjectName": "Class'LaserPort'",
+          "ObjectPath": "/Script/EM"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnHitTarget_3501CE57416007653CCD6DBF9F8BA7BD",
+    "Outer": "BP_Strong_ThunderLaser_FieldCreature_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "LaserPort",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "PropertyClass": {
+          "ObjectName": "Class'LaserPort'",
+          "ObjectPath": "/Script/EM"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "HitResult",
+        "Flags": "RF_Public",
+        "ElementSize": 144,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm | ContainsInstancedReference",
+        "Struct": {
+          "ObjectName": "ScriptStruct'HitResult'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "LaserPassedTime",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnHitScene_3501CE57416007653CCD6DBF9F8BA7BD",
+    "Outer": "BP_Strong_ThunderLaser_FieldCreature_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "LaserPort",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "PropertyClass": {
+          "ObjectName": "Class'LaserPort'",
+          "ObjectPath": "/Script/EM"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "HitResult",
+        "Flags": "RF_Public",
+        "ElementSize": 144,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm | ContainsInstancedReference",
+        "Struct": {
+          "ObjectName": "ScriptStruct'HitResult'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "LaserPassedTime",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnFinished_3501CE57416007653CCD6DBF9F8BA7BD",
+    "Outer": "BP_Strong_ThunderLaser_FieldCreature_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "LaserPort",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "PropertyClass": {
+          "ObjectName": "Class'LaserPort'",
+          "ObjectPath": "/Script/EM"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnLaserCreated_3501CE57416007653CCD6DBF9F8BA7BD",
+    "Outer": "BP_Strong_ThunderLaser_FieldCreature_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "LaserPort",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "PropertyClass": {
+          "ObjectName": "Class'LaserPort'",
+          "ObjectPath": "/Script/EM"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BP_Strong_ThunderLaser_FieldCreature_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Super": {
+      "ObjectName": "BlueprintGeneratedClass'BP_MechanismSummon_C'",
+      "ObjectPath": "EM/Content/BluePrints/Combat/MechanismSummon/BP_MechanismSummon.1"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BP_Strong_ThunderLaser_FieldCreature_C:SimpleConstructionScript_0'",
+        "ObjectPath": "EM/Content/BluePrints/Combat/MechanismSummon/Monster/BP_Strong_ThunderLaser_FieldCreature.84"
+      },
+      "UberGraphFunction": {
+        "ObjectName": "Function'BP_Strong_ThunderLaser_FieldCreature_C:ExecuteUbergraph_BP_Strong_ThunderLaser_FieldCreature'",
+        "ObjectPath": "EM/Content/BluePrints/Combat/MechanismSummon/Monster/BP_Strong_ThunderLaser_FieldCreature.0"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "BlueprintGeneratedClass'BP_MechanismSummon_C'",
+      "ObjectPath": "EM/Content/BluePrints/Combat/MechanismSummon/BP_MechanismSummon.1"
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'BP_Strong_ThunderLaser_FieldCreature_C:OnLaserCreated_3501CE57416007653CCD6DBF9F8BA7BD'",
+        "ObjectPath": "EM/Content/BluePrints/Combat/MechanismSummon/Monster/BP_Strong_ThunderLaser_FieldCreature.27"
+      },
+      {
+        "ObjectName": "Function'BP_Strong_ThunderLaser_FieldCreature_C:OnFinished_3501CE57416007653CCD6DBF9F8BA7BD'",
+        "ObjectPath": "EM/Content/BluePrints/Combat/MechanismSummon/Monster/BP_Strong_ThunderLaser_FieldCreature.26"
+      },
+      {
+        "ObjectName": "Function'BP_Strong_ThunderLaser_FieldCreature_C:OnHitScene_3501CE57416007653CCD6DBF9F8BA7BD'",
+        "ObjectPath": "EM/Content/BluePrints/Combat/MechanismSummon/Monster/BP_Strong_ThunderLaser_FieldCreature.25"
+      },
+      {
+        "ObjectName": "Function'BP_Strong_ThunderLaser_FieldCreature_C:OnHitTarget_3501CE57416007653CCD6DBF9F8BA7BD'",
+        "ObjectPath": "EM/Content/BluePrints/Combat/MechanismSummon/Monster/BP_Strong_ThunderLaser_FieldCreature.24"
+      },
+      {
+        "ObjectName": "Function'BP_Strong_ThunderLaser_FieldCreature_C:OnLaserCreated_3501CE57416007653CCD6DBFD024A041'",
+        "ObjectPath": "EM/Content/BluePrints/Combat/MechanismSummon/Monster/BP_Strong_ThunderLaser_FieldCreature.23"
+      },
+      {
+        "ObjectName": "Function'BP_Strong_ThunderLaser_FieldCreature_C:OnFinished_3501CE57416007653CCD6DBFD024A041'",
+        "ObjectPath": "EM/Content/BluePrints/Combat/MechanismSummon/Monster/BP_Strong_ThunderLaser_FieldCreature.22"
+      },
+      {
+        "ObjectName": "Function'BP_Strong_ThunderLaser_FieldCreature_C:OnHitScene_3501CE57416007653CCD6DBFD024A041'",
+        "ObjectPath": "EM/Content/BluePrints/Combat/MechanismSummon/Monster/BP_Strong_ThunderLaser_FieldCreature.21"
+      },
+      {
+        "ObjectName": "Function'BP_Strong_ThunderLaser_FieldCreature_C:OnHitTarget_3501CE57416007653CCD6DBFD024A041'",
+        "ObjectPath": "EM/Content/BluePrints/Combat/MechanismSummon/Monster/BP_Strong_ThunderLaser_FieldCreature.20"
+      },
+      {
+        "ObjectName": "Function'BP_Strong_ThunderLaser_FieldCreature_C:OnLaserCreated_3501CE57416007653CCD6DBF83AC7AE2'",
+        "ObjectPath": "EM/Content/BluePrints/Combat/MechanismSummon/Monster/BP_Strong_ThunderLaser_FieldCreature.19"
+      },
+      {
+        "ObjectName": "Function'BP_Strong_ThunderLaser_FieldCreature_C:OnFinished_3501CE57416007653CCD6DBF83AC7AE2'",
+        "ObjectPath": "EM/Content/BluePrints/Combat/MechanismSummon/Monster/BP_Strong_ThunderLaser_FieldCreature.18"
+      },
+      {
+        "ObjectName": "Function'BP_Strong_ThunderLaser_FieldCreature_C:OnHitScene_3501CE57416007653CCD6DBF83AC7AE2'",
+        "ObjectPath": "EM/Content/BluePrints/Combat/MechanismSummon/Monster/BP_Strong_ThunderLaser_FieldCreature.17"
+      },
+      {
+        "ObjectName": "Function'BP_Strong_ThunderLaser_FieldCreature_C:OnHitTarget_3501CE57416007653CCD6DBF83AC7AE2'",
+        "ObjectPath": "EM/Content/BluePrints/Combat/MechanismSummon/Monster/BP_Strong_ThunderLaser_FieldCreature.16"
+      },
+      {
+        "ObjectName": "Function'BP_Strong_ThunderLaser_FieldCreature_C:OnLaserCreated_3501CE57416007653CCD6DBFE8F42281'",
+        "ObjectPath": "EM/Content/BluePrints/Combat/MechanismSummon/Monster/BP_Strong_ThunderLaser_FieldCreature.15"
+      },
+      {
+        "ObjectName": "Function'BP_Strong_ThunderLaser_FieldCreature_C:OnFinished_3501CE57416007653CCD6DBFE8F42281'",
+        "ObjectPath": "EM/Content/BluePrints/Combat/MechanismSummon/Monster/BP_Strong_ThunderLaser_FieldCreature.14"
+      },
+      {
+        "ObjectName": "Function'BP_Strong_ThunderLaser_FieldCreature_C:OnHitScene_3501CE57416007653CCD6DBFE8F42281'",
+        "ObjectPath": "EM/Content/BluePrints/Combat/MechanismSummon/Monster/BP_Strong_ThunderLaser_FieldCreature.13"
+      },
+      {
+        "ObjectName": "Function'BP_Strong_ThunderLaser_FieldCreature_C:OnHitTarget_3501CE57416007653CCD6DBFE8F42281'",
+        "ObjectPath": "EM/Content/BluePrints/Combat/MechanismSummon/Monster/BP_Strong_ThunderLaser_FieldCreature.12"
+      },
+      {
+        "ObjectName": "Function'BP_Strong_ThunderLaser_FieldCreature_C:OnLaserCreated_3501CE57416007653CCD6DBF6C998833'",
+        "ObjectPath": "EM/Content/BluePrints/Combat/MechanismSummon/Monster/BP_Strong_ThunderLaser_FieldCreature.11"
+      },
+      {
+        "ObjectName": "Function'BP_Strong_ThunderLaser_FieldCreature_C:OnFinished_3501CE57416007653CCD6DBF6C998833'",
+        "ObjectPath": "EM/Content/BluePrints/Combat/MechanismSummon/Monster/BP_Strong_ThunderLaser_FieldCreature.10"
+      },
+      {
+        "ObjectName": "Function'BP_Strong_ThunderLaser_FieldCreature_C:OnHitScene_3501CE57416007653CCD6DBF6C998833'",
+        "ObjectPath": "EM/Content/BluePrints/Combat/MechanismSummon/Monster/BP_Strong_ThunderLaser_FieldCreature.9"
+      },
+      {
+        "ObjectName": "Function'BP_Strong_ThunderLaser_FieldCreature_C:OnHitTarget_3501CE57416007653CCD6DBF6C998833'",
+        "ObjectPath": "EM/Content/BluePrints/Combat/MechanismSummon/Monster/BP_Strong_ThunderLaser_FieldCreature.8"
+      },
+      {
+        "ObjectName": "Function'BP_Strong_ThunderLaser_FieldCreature_C:OnLaserCreated_3501CE57416007653CCD6DBFC4AE679B'",
+        "ObjectPath": "EM/Content/BluePrints/Combat/MechanismSummon/Monster/BP_Strong_ThunderLaser_FieldCreature.7"
+      },
+      {
+        "ObjectName": "Function'BP_Strong_ThunderLaser_FieldCreature_C:OnFinished_3501CE57416007653CCD6DBFC4AE679B'",
+        "ObjectPath": "EM/Content/BluePrints/Combat/MechanismSummon/Monster/BP_Strong_ThunderLaser_FieldCreature.6"
+      },
+      {
+        "ObjectName": "Function'BP_Strong_ThunderLaser_FieldCreature_C:OnHitScene_3501CE57416007653CCD6DBFC4AE679B'",
+        "ObjectPath": "EM/Content/BluePrints/Combat/MechanismSummon/Monster/BP_Strong_ThunderLaser_FieldCreature.5"
+      },
+      {
+        "ObjectName": "Function'BP_Strong_ThunderLaser_FieldCreature_C:OnHitTarget_3501CE57416007653CCD6DBFC4AE679B'",
+        "ObjectPath": "EM/Content/BluePrints/Combat/MechanismSummon/Monster/BP_Strong_ThunderLaser_FieldCreature.4"
+      },
+      {
+        "ObjectName": "Function'BP_Strong_ThunderLaser_FieldCreature_C:ReceiveBeginPlay'",
+        "ObjectPath": "EM/Content/BluePrints/Combat/MechanismSummon/Monster/BP_Strong_ThunderLaser_FieldCreature.3"
+      },
+      {
+        "ObjectName": "Function'BP_Strong_ThunderLaser_FieldCreature_C:ReceiveTick'",
+        "ObjectPath": "EM/Content/BluePrints/Combat/MechanismSummon/Monster/BP_Strong_ThunderLaser_FieldCreature.2"
+      },
+      {
+        "ObjectName": "Function'BP_Strong_ThunderLaser_FieldCreature_C:ReceiveEndPlay'",
+        "ObjectPath": "EM/Content/BluePrints/Combat/MechanismSummon/Monster/BP_Strong_ThunderLaser_FieldCreature.1"
+      },
+      {
+        "ObjectName": "Function'BP_Strong_ThunderLaser_FieldCreature_C:ExecuteUbergraph_BP_Strong_ThunderLaser_FieldCreature'",
+        "ObjectPath": "EM/Content/BluePrints/Combat/MechanismSummon/Monster/BP_Strong_ThunderLaser_FieldCreature.0"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient",
+        "Struct": {
+          "ObjectName": "ScriptStruct'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Niagara5",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'NiagaraComponent'",
+          "ObjectPath": "/Script/Niagara"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "WarningNiagara5",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'NiagaraComponent'",
+          "ObjectPath": "/Script/Niagara"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "LaserHit5",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'SceneComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "LaserComponent5",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'SceneComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Niagara4",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'NiagaraComponent'",
+          "ObjectPath": "/Script/Niagara"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "WarningNiagara4",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'NiagaraComponent'",
+          "ObjectPath": "/Script/Niagara"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "LaserHit4",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'SceneComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "LaserComponent4",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'SceneComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Niagara3",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'NiagaraComponent'",
+          "ObjectPath": "/Script/Niagara"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "WarningNiagara3",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'NiagaraComponent'",
+          "ObjectPath": "/Script/Niagara"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "LaserHit3",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'SceneComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "LaserComponent3",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'SceneComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "WarningNiagara2",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'NiagaraComponent'",
+          "ObjectPath": "/Script/Niagara"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "WarningNiagara1",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'NiagaraComponent'",
+          "ObjectPath": "/Script/Niagara"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "LaserComponent2",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'SceneComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "LaserComponent1",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'SceneComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "WarningNiagara",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'NiagaraComponent'",
+          "ObjectPath": "/Script/Niagara"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "LaserHit2",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'SceneComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "LaserHit1",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'SceneComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Niagara2",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'NiagaraComponent'",
+          "ObjectPath": "/Script/Niagara"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Niagara1",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'NiagaraComponent'",
+          "ObjectPath": "/Script/Niagara"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "LaserHit",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'SceneComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Niagara",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'NiagaraComponent'",
+          "ObjectPath": "/Script/Niagara"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "LaserComponent",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'SceneComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "WarningDelay",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "Edit | BlueprintVisible"
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "RotateSpeed",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "Edit | BlueprintVisible"
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "SkillEffectId",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "Edit | BlueprintVisible"
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "SkillEffectId2",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "Edit | BlueprintVisible"
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "BPMonsterCharacter",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnTemplate | DisableEditOnInstance",
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'BP_MonsterCharacter_C'",
+          "ObjectPath": "EM/Content/BluePrints/Char/BP_Monsters/BP_MonsterCharacter.42"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "Angle",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance"
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_BP_Strong_ThunderLaser_FieldCreature": {
+        "ObjectName": "Function'BP_Strong_ThunderLaser_FieldCreature_C:ExecuteUbergraph_BP_Strong_ThunderLaser_FieldCreature'",
+        "ObjectPath": "EM/Content/BluePrints/Combat/MechanismSummon/Monster/BP_Strong_ThunderLaser_FieldCreature.0"
+      },
+      "ReceiveEndPlay": {
+        "ObjectName": "Function'BP_Strong_ThunderLaser_FieldCreature_C:ReceiveEndPlay'",
+        "ObjectPath": "EM/Content/BluePrints/Combat/MechanismSummon/Monster/BP_Strong_ThunderLaser_FieldCreature.1"
+      },
+      "ReceiveTick": {
+        "ObjectName": "Function'BP_Strong_ThunderLaser_FieldCreature_C:ReceiveTick'",
+        "ObjectPath": "EM/Content/BluePrints/Combat/MechanismSummon/Monster/BP_Strong_ThunderLaser_FieldCreature.2"
+      },
+      "ReceiveBeginPlay": {
+        "ObjectName": "Function'BP_Strong_ThunderLaser_FieldCreature_C:ReceiveBeginPlay'",
+        "ObjectPath": "EM/Content/BluePrints/Combat/MechanismSummon/Monster/BP_Strong_ThunderLaser_FieldCreature.3"
+      },
+      "OnHitTarget_3501CE57416007653CCD6DBFC4AE679B": {
+        "ObjectName": "Function'BP_Strong_ThunderLaser_FieldCreature_C:OnHitTarget_3501CE57416007653CCD6DBFC4AE679B'",
+        "ObjectPath": "EM/Content/BluePrints/Combat/MechanismSummon/Monster/BP_Strong_ThunderLaser_FieldCreature.4"
+      },
+      "OnHitScene_3501CE57416007653CCD6DBFC4AE679B": {
+        "ObjectName": "Function'BP_Strong_ThunderLaser_FieldCreature_C:OnHitScene_3501CE57416007653CCD6DBFC4AE679B'",
+        "ObjectPath": "EM/Content/BluePrints/Combat/MechanismSummon/Monster/BP_Strong_ThunderLaser_FieldCreature.5"
+      },
+      "OnFinished_3501CE57416007653CCD6DBFC4AE679B": {
+        "ObjectName": "Function'BP_Strong_ThunderLaser_FieldCreature_C:OnFinished_3501CE57416007653CCD6DBFC4AE679B'",
+        "ObjectPath": "EM/Content/BluePrints/Combat/MechanismSummon/Monster/BP_Strong_ThunderLaser_FieldCreature.6"
+      },
+      "OnLaserCreated_3501CE57416007653CCD6DBFC4AE679B": {
+        "ObjectName": "Function'BP_Strong_ThunderLaser_FieldCreature_C:OnLaserCreated_3501CE57416007653CCD6DBFC4AE679B'",
+        "ObjectPath": "EM/Content/BluePrints/Combat/MechanismSummon/Monster/BP_Strong_ThunderLaser_FieldCreature.7"
+      },
+      "OnHitTarget_3501CE57416007653CCD6DBF6C998833": {
+        "ObjectName": "Function'BP_Strong_ThunderLaser_FieldCreature_C:OnHitTarget_3501CE57416007653CCD6DBF6C998833'",
+        "ObjectPath": "EM/Content/BluePrints/Combat/MechanismSummon/Monster/BP_Strong_ThunderLaser_FieldCreature.8"
+      },
+      "OnHitScene_3501CE57416007653CCD6DBF6C998833": {
+        "ObjectName": "Function'BP_Strong_ThunderLaser_FieldCreature_C:OnHitScene_3501CE57416007653CCD6DBF6C998833'",
+        "ObjectPath": "EM/Content/BluePrints/Combat/MechanismSummon/Monster/BP_Strong_ThunderLaser_FieldCreature.9"
+      },
+      "OnFinished_3501CE57416007653CCD6DBF6C998833": {
+        "ObjectName": "Function'BP_Strong_ThunderLaser_FieldCreature_C:OnFinished_3501CE57416007653CCD6DBF6C998833'",
+        "ObjectPath": "EM/Content/BluePrints/Combat/MechanismSummon/Monster/BP_Strong_ThunderLaser_FieldCreature.10"
+      },
+      "OnLaserCreated_3501CE57416007653CCD6DBF6C998833": {
+        "ObjectName": "Function'BP_Strong_ThunderLaser_FieldCreature_C:OnLaserCreated_3501CE57416007653CCD6DBF6C998833'",
+        "ObjectPath": "EM/Content/BluePrints/Combat/MechanismSummon/Monster/BP_Strong_ThunderLaser_FieldCreature.11"
+      },
+      "OnHitTarget_3501CE57416007653CCD6DBFE8F42281": {
+        "ObjectName": "Function'BP_Strong_ThunderLaser_FieldCreature_C:OnHitTarget_3501CE57416007653CCD6DBFE8F42281'",
+        "ObjectPath": "EM/Content/BluePrints/Combat/MechanismSummon/Monster/BP_Strong_ThunderLaser_FieldCreature.12"
+      },
+      "OnHitScene_3501CE57416007653CCD6DBFE8F42281": {
+        "ObjectName": "Function'BP_Strong_ThunderLaser_FieldCreature_C:OnHitScene_3501CE57416007653CCD6DBFE8F42281'",
+        "ObjectPath": "EM/Content/BluePrints/Combat/MechanismSummon/Monster/BP_Strong_ThunderLaser_FieldCreature.13"
+      },
+      "OnFinished_3501CE57416007653CCD6DBFE8F42281": {
+        "ObjectName": "Function'BP_Strong_ThunderLaser_FieldCreature_C:OnFinished_3501CE57416007653CCD6DBFE8F42281'",
+        "ObjectPath": "EM/Content/BluePrints/Combat/MechanismSummon/Monster/BP_Strong_ThunderLaser_FieldCreature.14"
+      },
+      "OnLaserCreated_3501CE57416007653CCD6DBFE8F42281": {
+        "ObjectName": "Function'BP_Strong_ThunderLaser_FieldCreature_C:OnLaserCreated_3501CE57416007653CCD6DBFE8F42281'",
+        "ObjectPath": "EM/Content/BluePrints/Combat/MechanismSummon/Monster/BP_Strong_ThunderLaser_FieldCreature.15"
+      },
+      "OnHitTarget_3501CE57416007653CCD6DBF83AC7AE2": {
+        "ObjectName": "Function'BP_Strong_ThunderLaser_FieldCreature_C:OnHitTarget_3501CE57416007653CCD6DBF83AC7AE2'",
+        "ObjectPath": "EM/Content/BluePrints/Combat/MechanismSummon/Monster/BP_Strong_ThunderLaser_FieldCreature.16"
+      },
+      "OnHitScene_3501CE57416007653CCD6DBF83AC7AE2": {
+        "ObjectName": "Function'BP_Strong_ThunderLaser_FieldCreature_C:OnHitScene_3501CE57416007653CCD6DBF83AC7AE2'",
+        "ObjectPath": "EM/Content/BluePrints/Combat/MechanismSummon/Monster/BP_Strong_ThunderLaser_FieldCreature.17"
+      },
+      "OnFinished_3501CE57416007653CCD6DBF83AC7AE2": {
+        "ObjectName": "Function'BP_Strong_ThunderLaser_FieldCreature_C:OnFinished_3501CE57416007653CCD6DBF83AC7AE2'",
+        "ObjectPath": "EM/Content/BluePrints/Combat/MechanismSummon/Monster/BP_Strong_ThunderLaser_FieldCreature.18"
+      },
+      "OnLaserCreated_3501CE57416007653CCD6DBF83AC7AE2": {
+        "ObjectName": "Function'BP_Strong_ThunderLaser_FieldCreature_C:OnLaserCreated_3501CE57416007653CCD6DBF83AC7AE2'",
+        "ObjectPath": "EM/Content/BluePrints/Combat/MechanismSummon/Monster/BP_Strong_ThunderLaser_FieldCreature.19"
+      },
+      "OnHitTarget_3501CE57416007653CCD6DBFD024A041": {
+        "ObjectName": "Function'BP_Strong_ThunderLaser_FieldCreature_C:OnHitTarget_3501CE57416007653CCD6DBFD024A041'",
+        "ObjectPath": "EM/Content/BluePrints/Combat/MechanismSummon/Monster/BP_Strong_ThunderLaser_FieldCreature.20"
+      },
+      "OnHitScene_3501CE57416007653CCD6DBFD024A041": {
+        "ObjectName": "Function'BP_Strong_ThunderLaser_FieldCreature_C:OnHitScene_3501CE57416007653CCD6DBFD024A041'",
+        "ObjectPath": "EM/Content/BluePrints/Combat/MechanismSummon/Monster/BP_Strong_ThunderLaser_FieldCreature.21"
+      },
+      "OnFinished_3501CE57416007653CCD6DBFD024A041": {
+        "ObjectName": "Function'BP_Strong_ThunderLaser_FieldCreature_C:OnFinished_3501CE57416007653CCD6DBFD024A041'",
+        "ObjectPath": "EM/Content/BluePrints/Combat/MechanismSummon/Monster/BP_Strong_ThunderLaser_FieldCreature.22"
+      },
+      "OnLaserCreated_3501CE57416007653CCD6DBFD024A041": {
+        "ObjectName": "Function'BP_Strong_ThunderLaser_FieldCreature_C:OnLaserCreated_3501CE57416007653CCD6DBFD024A041'",
+        "ObjectPath": "EM/Content/BluePrints/Combat/MechanismSummon/Monster/BP_Strong_ThunderLaser_FieldCreature.23"
+      },
+      "OnHitTarget_3501CE57416007653CCD6DBF9F8BA7BD": {
+        "ObjectName": "Function'BP_Strong_ThunderLaser_FieldCreature_C:OnHitTarget_3501CE57416007653CCD6DBF9F8BA7BD'",
+        "ObjectPath": "EM/Content/BluePrints/Combat/MechanismSummon/Monster/BP_Strong_ThunderLaser_FieldCreature.24"
+      },
+      "OnHitScene_3501CE57416007653CCD6DBF9F8BA7BD": {
+        "ObjectName": "Function'BP_Strong_ThunderLaser_FieldCreature_C:OnHitScene_3501CE57416007653CCD6DBF9F8BA7BD'",
+        "ObjectPath": "EM/Content/BluePrints/Combat/MechanismSummon/Monster/BP_Strong_ThunderLaser_FieldCreature.25"
+      },
+      "OnFinished_3501CE57416007653CCD6DBF9F8BA7BD": {
+        "ObjectName": "Function'BP_Strong_ThunderLaser_FieldCreature_C:OnFinished_3501CE57416007653CCD6DBF9F8BA7BD'",
+        "ObjectPath": "EM/Content/BluePrints/Combat/MechanismSummon/Monster/BP_Strong_ThunderLaser_FieldCreature.26"
+      },
+      "OnLaserCreated_3501CE57416007653CCD6DBF9F8BA7BD": {
+        "ObjectName": "Function'BP_Strong_ThunderLaser_FieldCreature_C:OnLaserCreated_3501CE57416007653CCD6DBF9F8BA7BD'",
+        "ObjectPath": "EM/Content/BluePrints/Combat/MechanismSummon/Monster/BP_Strong_ThunderLaser_FieldCreature.27"
+      }
+    },
+    "ClassFlags": "CLASS_Config | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BP_Strong_ThunderLaser_FieldCreature_C'Default__BP_Strong_ThunderLaser_FieldCreature_C'",
+      "ObjectPath": "EM/Content/BluePrints/Combat/MechanismSummon/Monster/BP_Strong_ThunderLaser_FieldCreature.29"
+    }
+  },
+  {
+    "Type": "BP_Strong_ThunderLaser_FieldCreature_C",
+    "Name": "Default__BP_Strong_ThunderLaser_FieldCreature_C",
+    "Class": "BlueprintGeneratedClass'EM/Content/BluePrints/Combat/MechanismSummon/Monster/BP_Strong_ThunderLaser_FieldCreature.BP_Strong_ThunderLaser_FieldCreature_C'",
+    "Template": {
+      "ObjectName": "BP_MechanismSummon_C'Default__BP_MechanismSummon_C'",
+      "ObjectPath": "EM/Content/BluePrints/Combat/MechanismSummon/BP_MechanismSummon.2"
+    },
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "UberGraphFrame": {},
+      "WarningDelay": 1.5,
+      "RotateSpeed": 300.0,
+      "SkillEffectId": 600001202,
+      "SkillEffectId2": 600001203,
+      "Mesh": {
+        "ObjectName": "SkeletalMeshComponent'Default__BP_Strong_ThunderLaser_FieldCreature_C:Mesh'",
+        "ObjectPath": "EM/Content/BluePrints/Combat/MechanismSummon/Monster/BP_Strong_ThunderLaser_FieldCreature.85"
+      },
+      "BuffManager": {
+        "ObjectName": "BP_BuffManager_C'Default__BP_Strong_ThunderLaser_FieldCreature_C:BP_BuffManager'",
+        "ObjectPath": "EM/Content/BluePrints/Combat/MechanismSummon/Monster/BP_Strong_ThunderLaser_FieldCreature.30"
+      },
+      "JumpWordComponent": {
+        "ObjectName": "BP_JumpWordComponent_C'Default__BP_Strong_ThunderLaser_FieldCreature_C:BP_JumpWordComponent'",
+        "ObjectPath": "EM/Content/BluePrints/Combat/MechanismSummon/Monster/BP_Strong_ThunderLaser_FieldCreature.32"
+      },
+      "FXComponent": {
+        "ObjectName": "BP_FXComponent_C'Default__BP_Strong_ThunderLaser_FieldCreature_C:BP_FXComponent'",
+        "ObjectPath": "EM/Content/BluePrints/Combat/MechanismSummon/Monster/BP_Strong_ThunderLaser_FieldCreature.31"
+      },
+      "BattleEvent": {
+        "ObjectName": "DamageEventComponent'Default__BP_Strong_ThunderLaser_FieldCreature_C:BattleEvent'",
+        "ObjectPath": "EM/Content/BluePrints/Combat/MechanismSummon/Monster/BP_Strong_ThunderLaser_FieldCreature.33"
+      }
+    }
+  },
+  {
+    "Type": "BP_BuffManager_C",
+    "Name": "BP_BuffManager",
+    "Outer": "Default__BP_Strong_ThunderLaser_FieldCreature_C",
+    "Class": "BlueprintGeneratedClass'EM/Content/BluePrints/Combat/Buff/BP_BuffManager.BP_BuffManager_C'",
+    "Template": {
+      "ObjectName": "BP_BuffManager_C'Default__BP_MechanismSummon_C:BP_BuffManager'",
+      "ObjectPath": "EM/Content/BluePrints/Combat/MechanismSummon/BP_MechanismSummon.3"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "BP_FXComponent_C",
+    "Name": "BP_FXComponent",
+    "Outer": "Default__BP_Strong_ThunderLaser_FieldCreature_C",
+    "Class": "BlueprintGeneratedClass'EM/Content/BluePrints/Char/BP_FXComponent.BP_FXComponent_C'",
+    "Template": {
+      "ObjectName": "BP_FXComponent_C'Default__BP_MechanismSummon_C:BP_FXComponent'",
+      "ObjectPath": "EM/Content/BluePrints/Combat/MechanismSummon/BP_MechanismSummon.4"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "BP_JumpWordComponent_C",
+    "Name": "BP_JumpWordComponent",
+    "Outer": "Default__BP_Strong_ThunderLaser_FieldCreature_C",
+    "Class": "BlueprintGeneratedClass'EM/Content/BluePrints/Char/BP_JumpWordComponent.BP_JumpWordComponent_C'",
+    "Template": {
+      "ObjectName": "BP_JumpWordComponent_C'Default__BP_MechanismSummon_C:BP_JumpWordComponent'",
+      "ObjectPath": "EM/Content/BluePrints/Combat/MechanismSummon/BP_MechanismSummon.5"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "DamageEventComponent",
+    "Name": "BattleEvent",
+    "Outer": "Default__BP_Strong_ThunderLaser_FieldCreature_C",
+    "Class": "UScriptClass'DamageEventComponent'",
+    "Template": {
+      "ObjectName": "DamageEventComponent'Default__BP_MechanismSummon_C:BattleEvent'",
+      "ObjectPath": "EM/Content/BluePrints/Combat/MechanismSummon/BP_MechanismSummon.6"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "NiagaraComponent",
+    "Name": "Niagara1_GEN_VARIABLE",
+    "Outer": "BP_Strong_ThunderLaser_FieldCreature_C",
+    "Class": "UScriptClass'NiagaraComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "OverrideParameters": {}
+    }
+  },
+  {
+    "Type": "NiagaraComponent",
+    "Name": "Niagara2_GEN_VARIABLE",
+    "Outer": "BP_Strong_ThunderLaser_FieldCreature_C",
+    "Class": "UScriptClass'NiagaraComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "OverrideParameters": {}
+    }
+  },
+  {
+    "Type": "NiagaraComponent",
+    "Name": "Niagara3_GEN_VARIABLE",
+    "Outer": "BP_Strong_ThunderLaser_FieldCreature_C",
+    "Class": "UScriptClass'NiagaraComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "OverrideParameters": {}
+    }
+  },
+  {
+    "Type": "NiagaraComponent",
+    "Name": "Niagara4_GEN_VARIABLE",
+    "Outer": "BP_Strong_ThunderLaser_FieldCreature_C",
+    "Class": "UScriptClass'NiagaraComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "OverrideParameters": {}
+    }
+  },
+  {
+    "Type": "NiagaraComponent",
+    "Name": "Niagara5_GEN_VARIABLE",
+    "Outer": "BP_Strong_ThunderLaser_FieldCreature_C",
+    "Class": "UScriptClass'NiagaraComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "OverrideParameters": {}
+    }
+  },
+  {
+    "Type": "NiagaraComponent",
+    "Name": "Niagara_GEN_VARIABLE",
+    "Outer": "BP_Strong_ThunderLaser_FieldCreature_C",
+    "Class": "UScriptClass'NiagaraComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "OverrideParameters": {}
+    }
+  },
+  {
+    "Type": "NiagaraComponent",
+    "Name": "WarningNiagara1_GEN_VARIABLE",
+    "Outer": "BP_Strong_ThunderLaser_FieldCreature_C",
+    "Class": "UScriptClass'NiagaraComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "OverrideParameters": {}
+    }
+  },
+  {
+    "Type": "NiagaraComponent",
+    "Name": "WarningNiagara2_GEN_VARIABLE",
+    "Outer": "BP_Strong_ThunderLaser_FieldCreature_C",
+    "Class": "UScriptClass'NiagaraComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "OverrideParameters": {}
+    }
+  },
+  {
+    "Type": "NiagaraComponent",
+    "Name": "WarningNiagara3_GEN_VARIABLE",
+    "Outer": "BP_Strong_ThunderLaser_FieldCreature_C",
+    "Class": "UScriptClass'NiagaraComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "OverrideParameters": {}
+    }
+  },
+  {
+    "Type": "NiagaraComponent",
+    "Name": "WarningNiagara4_GEN_VARIABLE",
+    "Outer": "BP_Strong_ThunderLaser_FieldCreature_C",
+    "Class": "UScriptClass'NiagaraComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "OverrideParameters": {}
+    }
+  },
+  {
+    "Type": "NiagaraComponent",
+    "Name": "WarningNiagara5_GEN_VARIABLE",
+    "Outer": "BP_Strong_ThunderLaser_FieldCreature_C",
+    "Class": "UScriptClass'NiagaraComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "OverrideParameters": {}
+    }
+  },
+  {
+    "Type": "NiagaraComponent",
+    "Name": "WarningNiagara_GEN_VARIABLE",
+    "Outer": "BP_Strong_ThunderLaser_FieldCreature_C",
+    "Class": "UScriptClass'NiagaraComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "OverrideParameters": {}
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Outer": "BP_Strong_ThunderLaser_FieldCreature_C",
+    "Class": "UScriptClass'SceneComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "LaserComponent1_GEN_VARIABLE",
+    "Outer": "BP_Strong_ThunderLaser_FieldCreature_C",
+    "Class": "UScriptClass'SceneComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 150.0
+      }
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "LaserComponent2_GEN_VARIABLE",
+    "Outer": "BP_Strong_ThunderLaser_FieldCreature_C",
+    "Class": "UScriptClass'SceneComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 250.0
+      }
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "LaserComponent3_GEN_VARIABLE",
+    "Outer": "BP_Strong_ThunderLaser_FieldCreature_C",
+    "Class": "UScriptClass'SceneComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 350.0
+      },
+      "bAutoActivate": true
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "LaserComponent4_GEN_VARIABLE",
+    "Outer": "BP_Strong_ThunderLaser_FieldCreature_C",
+    "Class": "UScriptClass'SceneComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 450.0
+      }
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "LaserComponent5_GEN_VARIABLE",
+    "Outer": "BP_Strong_ThunderLaser_FieldCreature_C",
+    "Class": "UScriptClass'SceneComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 550.0
+      }
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "LaserComponent_GEN_VARIABLE",
+    "Outer": "BP_Strong_ThunderLaser_FieldCreature_C",
+    "Class": "UScriptClass'SceneComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 50.0
+      }
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "LaserHit1_GEN_VARIABLE",
+    "Outer": "BP_Strong_ThunderLaser_FieldCreature_C",
+    "Class": "UScriptClass'SceneComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "LaserHit2_GEN_VARIABLE",
+    "Outer": "BP_Strong_ThunderLaser_FieldCreature_C",
+    "Class": "UScriptClass'SceneComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "LaserHit3_GEN_VARIABLE",
+    "Outer": "BP_Strong_ThunderLaser_FieldCreature_C",
+    "Class": "UScriptClass'SceneComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "LaserHit4_GEN_VARIABLE",
+    "Outer": "BP_Strong_ThunderLaser_FieldCreature_C",
+    "Class": "UScriptClass'SceneComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "LaserHit5_GEN_VARIABLE",
+    "Outer": "BP_Strong_ThunderLaser_FieldCreature_C",
+    "Class": "UScriptClass'SceneComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "LaserHit_GEN_VARIABLE",
+    "Outer": "BP_Strong_ThunderLaser_FieldCreature_C",
+    "Class": "UScriptClass'SceneComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BP_Strong_ThunderLaser_FieldCreature_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "EM/Content/BluePrints/Combat/MechanismSummon/Monster/BP_Strong_ThunderLaser_FieldCreature.46"
+      },
+      "VariableGuid": "AA61B397-410B0521-DF9A9A85-69847DE6",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_1",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'NiagaraComponent'",
+        "ObjectPath": "/Script/Niagara"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "NiagaraComponent'BP_Strong_ThunderLaser_FieldCreature_C:Niagara_GEN_VARIABLE'",
+        "ObjectPath": "EM/Content/BluePrints/Combat/MechanismSummon/Monster/BP_Strong_ThunderLaser_FieldCreature.39"
+      },
+      "VariableGuid": "CC240BB9-4123B652-2A89E0B3-E2120A00",
+      "InternalVariableName": "Niagara"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_10",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BP_Strong_ThunderLaser_FieldCreature_C:LaserHit2_GEN_VARIABLE'",
+        "ObjectPath": "EM/Content/BluePrints/Combat/MechanismSummon/Monster/BP_Strong_ThunderLaser_FieldCreature.54"
+      },
+      "VariableGuid": "B9362A73-49E451CD-34CE2187-AAB41312",
+      "InternalVariableName": "LaserHit2"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_12",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'NiagaraComponent'",
+        "ObjectPath": "/Script/Niagara"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "NiagaraComponent'BP_Strong_ThunderLaser_FieldCreature_C:WarningNiagara1_GEN_VARIABLE'",
+        "ObjectPath": "EM/Content/BluePrints/Combat/MechanismSummon/Monster/BP_Strong_ThunderLaser_FieldCreature.40"
+      },
+      "VariableGuid": "38F4AEA3-4FEBB852-CBEAFF8A-D737DEC5",
+      "InternalVariableName": "WarningNiagara1"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_13",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'NiagaraComponent'",
+        "ObjectPath": "/Script/Niagara"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "NiagaraComponent'BP_Strong_ThunderLaser_FieldCreature_C:WarningNiagara2_GEN_VARIABLE'",
+        "ObjectPath": "EM/Content/BluePrints/Combat/MechanismSummon/Monster/BP_Strong_ThunderLaser_FieldCreature.41"
+      },
+      "VariableGuid": "4FEB85BB-49E2AFAE-C2EFE48F-973F4674",
+      "InternalVariableName": "WarningNiagara2"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_14",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BP_Strong_ThunderLaser_FieldCreature_C:LaserComponent3_GEN_VARIABLE'",
+        "ObjectPath": "EM/Content/BluePrints/Combat/MechanismSummon/Monster/BP_Strong_ThunderLaser_FieldCreature.49"
+      },
+      "ParentComponentOrVariableName": "Mesh",
+      "bIsParentComponentNative": true,
+      "ChildNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_Strong_ThunderLaser_FieldCreature_C:SimpleConstructionScript_0.SCS_Node_15'",
+          "ObjectPath": "EM/Content/BluePrints/Combat/MechanismSummon/Monster/BP_Strong_ThunderLaser_FieldCreature.65"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_Strong_ThunderLaser_FieldCreature_C:SimpleConstructionScript_0.SCS_Node_16'",
+          "ObjectPath": "EM/Content/BluePrints/Combat/MechanismSummon/Monster/BP_Strong_ThunderLaser_FieldCreature.66"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_Strong_ThunderLaser_FieldCreature_C:SimpleConstructionScript_0.SCS_Node_17'",
+          "ObjectPath": "EM/Content/BluePrints/Combat/MechanismSummon/Monster/BP_Strong_ThunderLaser_FieldCreature.67"
+        }
+      ],
+      "VariableGuid": "50E6E0E6-4BFB5336-555FD38E-F3AC6E6F",
+      "InternalVariableName": "LaserComponent3"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_15",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BP_Strong_ThunderLaser_FieldCreature_C:LaserHit3_GEN_VARIABLE'",
+        "ObjectPath": "EM/Content/BluePrints/Combat/MechanismSummon/Monster/BP_Strong_ThunderLaser_FieldCreature.55"
+      },
+      "VariableGuid": "B45204FD-45928463-D80D979C-41878A0C",
+      "InternalVariableName": "LaserHit3"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_16",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'NiagaraComponent'",
+        "ObjectPath": "/Script/Niagara"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "NiagaraComponent'BP_Strong_ThunderLaser_FieldCreature_C:WarningNiagara3_GEN_VARIABLE'",
+        "ObjectPath": "EM/Content/BluePrints/Combat/MechanismSummon/Monster/BP_Strong_ThunderLaser_FieldCreature.42"
+      },
+      "VariableGuid": "A60095A0-457A1124-785D599B-70FF17C3",
+      "InternalVariableName": "WarningNiagara3"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_17",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'NiagaraComponent'",
+        "ObjectPath": "/Script/Niagara"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "NiagaraComponent'BP_Strong_ThunderLaser_FieldCreature_C:Niagara3_GEN_VARIABLE'",
+        "ObjectPath": "EM/Content/BluePrints/Combat/MechanismSummon/Monster/BP_Strong_ThunderLaser_FieldCreature.36"
+      },
+      "VariableGuid": "A8BC8BA8-4488E0A6-D17F1AA0-787719DA",
+      "InternalVariableName": "Niagara3"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_18",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BP_Strong_ThunderLaser_FieldCreature_C:LaserComponent4_GEN_VARIABLE'",
+        "ObjectPath": "EM/Content/BluePrints/Combat/MechanismSummon/Monster/BP_Strong_ThunderLaser_FieldCreature.50"
+      },
+      "ParentComponentOrVariableName": "Mesh",
+      "bIsParentComponentNative": true,
+      "ChildNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_Strong_ThunderLaser_FieldCreature_C:SimpleConstructionScript_0.SCS_Node_19'",
+          "ObjectPath": "EM/Content/BluePrints/Combat/MechanismSummon/Monster/BP_Strong_ThunderLaser_FieldCreature.69"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_Strong_ThunderLaser_FieldCreature_C:SimpleConstructionScript_0.SCS_Node_20'",
+          "ObjectPath": "EM/Content/BluePrints/Combat/MechanismSummon/Monster/BP_Strong_ThunderLaser_FieldCreature.71"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_Strong_ThunderLaser_FieldCreature_C:SimpleConstructionScript_0.SCS_Node_21'",
+          "ObjectPath": "EM/Content/BluePrints/Combat/MechanismSummon/Monster/BP_Strong_ThunderLaser_FieldCreature.72"
+        }
+      ],
+      "VariableGuid": "9FF39392-47901723-39771B84-5E211584",
+      "InternalVariableName": "LaserComponent4"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_19",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BP_Strong_ThunderLaser_FieldCreature_C:LaserHit4_GEN_VARIABLE'",
+        "ObjectPath": "EM/Content/BluePrints/Combat/MechanismSummon/Monster/BP_Strong_ThunderLaser_FieldCreature.56"
+      },
+      "VariableGuid": "FF283021-4F281C65-20912B8A-E3930974",
+      "InternalVariableName": "LaserHit4"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_2",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BP_Strong_ThunderLaser_FieldCreature_C:LaserHit_GEN_VARIABLE'",
+        "ObjectPath": "EM/Content/BluePrints/Combat/MechanismSummon/Monster/BP_Strong_ThunderLaser_FieldCreature.58"
+      },
+      "VariableGuid": "B0E5979B-403BAC82-24937BA7-89B6938D",
+      "InternalVariableName": "LaserHit"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_20",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'NiagaraComponent'",
+        "ObjectPath": "/Script/Niagara"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "NiagaraComponent'BP_Strong_ThunderLaser_FieldCreature_C:WarningNiagara4_GEN_VARIABLE'",
+        "ObjectPath": "EM/Content/BluePrints/Combat/MechanismSummon/Monster/BP_Strong_ThunderLaser_FieldCreature.43"
+      },
+      "VariableGuid": "301E85E2-46768E2F-5BB3E1AE-5A46A72E",
+      "InternalVariableName": "WarningNiagara4"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_21",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'NiagaraComponent'",
+        "ObjectPath": "/Script/Niagara"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "NiagaraComponent'BP_Strong_ThunderLaser_FieldCreature_C:Niagara4_GEN_VARIABLE'",
+        "ObjectPath": "EM/Content/BluePrints/Combat/MechanismSummon/Monster/BP_Strong_ThunderLaser_FieldCreature.37"
+      },
+      "VariableGuid": "81CDDB3C-408C4977-31037CA8-BAA7EB28",
+      "InternalVariableName": "Niagara4"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_22",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BP_Strong_ThunderLaser_FieldCreature_C:LaserComponent5_GEN_VARIABLE'",
+        "ObjectPath": "EM/Content/BluePrints/Combat/MechanismSummon/Monster/BP_Strong_ThunderLaser_FieldCreature.51"
+      },
+      "ParentComponentOrVariableName": "Mesh",
+      "bIsParentComponentNative": true,
+      "ChildNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_Strong_ThunderLaser_FieldCreature_C:SimpleConstructionScript_0.SCS_Node_23'",
+          "ObjectPath": "EM/Content/BluePrints/Combat/MechanismSummon/Monster/BP_Strong_ThunderLaser_FieldCreature.74"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_Strong_ThunderLaser_FieldCreature_C:SimpleConstructionScript_0.SCS_Node_24'",
+          "ObjectPath": "EM/Content/BluePrints/Combat/MechanismSummon/Monster/BP_Strong_ThunderLaser_FieldCreature.75"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_Strong_ThunderLaser_FieldCreature_C:SimpleConstructionScript_0.SCS_Node_25'",
+          "ObjectPath": "EM/Content/BluePrints/Combat/MechanismSummon/Monster/BP_Strong_ThunderLaser_FieldCreature.76"
+        }
+      ],
+      "VariableGuid": "AB1F141A-4FBB5CC0-27D949B0-84F4A98D",
+      "InternalVariableName": "LaserComponent5"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_23",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BP_Strong_ThunderLaser_FieldCreature_C:LaserHit5_GEN_VARIABLE'",
+        "ObjectPath": "EM/Content/BluePrints/Combat/MechanismSummon/Monster/BP_Strong_ThunderLaser_FieldCreature.57"
+      },
+      "VariableGuid": "2DF76BE8-4104E17B-1D63FBAB-31042882",
+      "InternalVariableName": "LaserHit5"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_24",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'NiagaraComponent'",
+        "ObjectPath": "/Script/Niagara"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "NiagaraComponent'BP_Strong_ThunderLaser_FieldCreature_C:WarningNiagara5_GEN_VARIABLE'",
+        "ObjectPath": "EM/Content/BluePrints/Combat/MechanismSummon/Monster/BP_Strong_ThunderLaser_FieldCreature.44"
+      },
+      "VariableGuid": "09405D62-41BFE53D-D7103090-B91EE075",
+      "InternalVariableName": "WarningNiagara5"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_25",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'NiagaraComponent'",
+        "ObjectPath": "/Script/Niagara"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "NiagaraComponent'BP_Strong_ThunderLaser_FieldCreature_C:Niagara5_GEN_VARIABLE'",
+        "ObjectPath": "EM/Content/BluePrints/Combat/MechanismSummon/Monster/BP_Strong_ThunderLaser_FieldCreature.38"
+      },
+      "VariableGuid": "6A4A3190-4BBB185C-E8848D93-A5996539",
+      "InternalVariableName": "Niagara5"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_3",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BP_Strong_ThunderLaser_FieldCreature_C:LaserComponent_GEN_VARIABLE'",
+        "ObjectPath": "EM/Content/BluePrints/Combat/MechanismSummon/Monster/BP_Strong_ThunderLaser_FieldCreature.52"
+      },
+      "ParentComponentOrVariableName": "Mesh",
+      "bIsParentComponentNative": true,
+      "ChildNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_Strong_ThunderLaser_FieldCreature_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "EM/Content/BluePrints/Combat/MechanismSummon/Monster/BP_Strong_ThunderLaser_FieldCreature.60"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_Strong_ThunderLaser_FieldCreature_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "EM/Content/BluePrints/Combat/MechanismSummon/Monster/BP_Strong_ThunderLaser_FieldCreature.70"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_Strong_ThunderLaser_FieldCreature_C:SimpleConstructionScript_0.SCS_Node_4'",
+          "ObjectPath": "EM/Content/BluePrints/Combat/MechanismSummon/Monster/BP_Strong_ThunderLaser_FieldCreature.78"
+        }
+      ],
+      "VariableGuid": "A9F255A7-4D652556-812BB0A7-8B17F0F3",
+      "InternalVariableName": "LaserComponent"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_4",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'NiagaraComponent'",
+        "ObjectPath": "/Script/Niagara"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "NiagaraComponent'BP_Strong_ThunderLaser_FieldCreature_C:WarningNiagara_GEN_VARIABLE'",
+        "ObjectPath": "EM/Content/BluePrints/Combat/MechanismSummon/Monster/BP_Strong_ThunderLaser_FieldCreature.45"
+      },
+      "VariableGuid": "F69CFFD4-4927F76A-F125059C-3177174D",
+      "InternalVariableName": "WarningNiagara"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_5",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BP_Strong_ThunderLaser_FieldCreature_C:LaserComponent1_GEN_VARIABLE'",
+        "ObjectPath": "EM/Content/BluePrints/Combat/MechanismSummon/Monster/BP_Strong_ThunderLaser_FieldCreature.47"
+      },
+      "ParentComponentOrVariableName": "Mesh",
+      "bIsParentComponentNative": true,
+      "ChildNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_Strong_ThunderLaser_FieldCreature_C:SimpleConstructionScript_0.SCS_Node_7'",
+          "ObjectPath": "EM/Content/BluePrints/Combat/MechanismSummon/Monster/BP_Strong_ThunderLaser_FieldCreature.81"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_Strong_ThunderLaser_FieldCreature_C:SimpleConstructionScript_0.SCS_Node_9'",
+          "ObjectPath": "EM/Content/BluePrints/Combat/MechanismSummon/Monster/BP_Strong_ThunderLaser_FieldCreature.83"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_Strong_ThunderLaser_FieldCreature_C:SimpleConstructionScript_0.SCS_Node_12'",
+          "ObjectPath": "EM/Content/BluePrints/Combat/MechanismSummon/Monster/BP_Strong_ThunderLaser_FieldCreature.62"
+        }
+      ],
+      "VariableGuid": "9C168D77-4995684B-878B87AB-6CAC9BF4",
+      "InternalVariableName": "LaserComponent1"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_6",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BP_Strong_ThunderLaser_FieldCreature_C:LaserComponent2_GEN_VARIABLE'",
+        "ObjectPath": "EM/Content/BluePrints/Combat/MechanismSummon/Monster/BP_Strong_ThunderLaser_FieldCreature.48"
+      },
+      "ParentComponentOrVariableName": "Mesh",
+      "bIsParentComponentNative": true,
+      "ChildNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_Strong_ThunderLaser_FieldCreature_C:SimpleConstructionScript_0.SCS_Node_8'",
+          "ObjectPath": "EM/Content/BluePrints/Combat/MechanismSummon/Monster/BP_Strong_ThunderLaser_FieldCreature.82"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_Strong_ThunderLaser_FieldCreature_C:SimpleConstructionScript_0.SCS_Node_10'",
+          "ObjectPath": "EM/Content/BluePrints/Combat/MechanismSummon/Monster/BP_Strong_ThunderLaser_FieldCreature.61"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_Strong_ThunderLaser_FieldCreature_C:SimpleConstructionScript_0.SCS_Node_13'",
+          "ObjectPath": "EM/Content/BluePrints/Combat/MechanismSummon/Monster/BP_Strong_ThunderLaser_FieldCreature.63"
+        }
+      ],
+      "VariableGuid": "F3131AC1-4C0C53FE-EDFEC58B-D1472880",
+      "InternalVariableName": "LaserComponent2"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_7",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'NiagaraComponent'",
+        "ObjectPath": "/Script/Niagara"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "NiagaraComponent'BP_Strong_ThunderLaser_FieldCreature_C:Niagara1_GEN_VARIABLE'",
+        "ObjectPath": "EM/Content/BluePrints/Combat/MechanismSummon/Monster/BP_Strong_ThunderLaser_FieldCreature.34"
+      },
+      "VariableGuid": "8FD34874-4002657D-B9B6C9B7-60D9CBFF",
+      "InternalVariableName": "Niagara1"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_8",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'NiagaraComponent'",
+        "ObjectPath": "/Script/Niagara"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "NiagaraComponent'BP_Strong_ThunderLaser_FieldCreature_C:Niagara2_GEN_VARIABLE'",
+        "ObjectPath": "EM/Content/BluePrints/Combat/MechanismSummon/Monster/BP_Strong_ThunderLaser_FieldCreature.35"
+      },
+      "VariableGuid": "CB4EC8E2-493D7FAE-BCCFB2A3-7A22822F",
+      "InternalVariableName": "Niagara2"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_9",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BP_Strong_ThunderLaser_FieldCreature_C:LaserHit1_GEN_VARIABLE'",
+        "ObjectPath": "EM/Content/BluePrints/Combat/MechanismSummon/Monster/BP_Strong_ThunderLaser_FieldCreature.53"
+      },
+      "VariableGuid": "C519709E-4CAB4DD2-D5A22DAF-7BAF2E18",
+      "InternalVariableName": "LaserHit1"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Outer": "BP_Strong_ThunderLaser_FieldCreature_C",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_Strong_ThunderLaser_FieldCreature_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectPath": "EM/Content/BluePrints/Combat/MechanismSummon/Monster/BP_Strong_ThunderLaser_FieldCreature.77"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_Strong_ThunderLaser_FieldCreature_C:SimpleConstructionScript_0.SCS_Node_5'",
+          "ObjectPath": "EM/Content/BluePrints/Combat/MechanismSummon/Monster/BP_Strong_ThunderLaser_FieldCreature.79"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_Strong_ThunderLaser_FieldCreature_C:SimpleConstructionScript_0.SCS_Node_6'",
+          "ObjectPath": "EM/Content/BluePrints/Combat/MechanismSummon/Monster/BP_Strong_ThunderLaser_FieldCreature.80"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_Strong_ThunderLaser_FieldCreature_C:SimpleConstructionScript_0.SCS_Node_14'",
+          "ObjectPath": "EM/Content/BluePrints/Combat/MechanismSummon/Monster/BP_Strong_ThunderLaser_FieldCreature.64"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_Strong_ThunderLaser_FieldCreature_C:SimpleConstructionScript_0.SCS_Node_18'",
+          "ObjectPath": "EM/Content/BluePrints/Combat/MechanismSummon/Monster/BP_Strong_ThunderLaser_FieldCreature.68"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_Strong_ThunderLaser_FieldCreature_C:SimpleConstructionScript_0.SCS_Node_22'",
+          "ObjectPath": "EM/Content/BluePrints/Combat/MechanismSummon/Monster/BP_Strong_ThunderLaser_FieldCreature.73"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_Strong_ThunderLaser_FieldCreature_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectPath": "EM/Content/BluePrints/Combat/MechanismSummon/Monster/BP_Strong_ThunderLaser_FieldCreature.77"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_Strong_ThunderLaser_FieldCreature_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "EM/Content/BluePrints/Combat/MechanismSummon/Monster/BP_Strong_ThunderLaser_FieldCreature.60"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_Strong_ThunderLaser_FieldCreature_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "EM/Content/BluePrints/Combat/MechanismSummon/Monster/BP_Strong_ThunderLaser_FieldCreature.70"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_Strong_ThunderLaser_FieldCreature_C:SimpleConstructionScript_0.SCS_Node_7'",
+          "ObjectPath": "EM/Content/BluePrints/Combat/MechanismSummon/Monster/BP_Strong_ThunderLaser_FieldCreature.81"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_Strong_ThunderLaser_FieldCreature_C:SimpleConstructionScript_0.SCS_Node_8'",
+          "ObjectPath": "EM/Content/BluePrints/Combat/MechanismSummon/Monster/BP_Strong_ThunderLaser_FieldCreature.82"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_Strong_ThunderLaser_FieldCreature_C:SimpleConstructionScript_0.SCS_Node_9'",
+          "ObjectPath": "EM/Content/BluePrints/Combat/MechanismSummon/Monster/BP_Strong_ThunderLaser_FieldCreature.83"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_Strong_ThunderLaser_FieldCreature_C:SimpleConstructionScript_0.SCS_Node_10'",
+          "ObjectPath": "EM/Content/BluePrints/Combat/MechanismSummon/Monster/BP_Strong_ThunderLaser_FieldCreature.61"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_Strong_ThunderLaser_FieldCreature_C:SimpleConstructionScript_0.SCS_Node_4'",
+          "ObjectPath": "EM/Content/BluePrints/Combat/MechanismSummon/Monster/BP_Strong_ThunderLaser_FieldCreature.78"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_Strong_ThunderLaser_FieldCreature_C:SimpleConstructionScript_0.SCS_Node_5'",
+          "ObjectPath": "EM/Content/BluePrints/Combat/MechanismSummon/Monster/BP_Strong_ThunderLaser_FieldCreature.79"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_Strong_ThunderLaser_FieldCreature_C:SimpleConstructionScript_0.SCS_Node_6'",
+          "ObjectPath": "EM/Content/BluePrints/Combat/MechanismSummon/Monster/BP_Strong_ThunderLaser_FieldCreature.80"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_Strong_ThunderLaser_FieldCreature_C:SimpleConstructionScript_0.SCS_Node_12'",
+          "ObjectPath": "EM/Content/BluePrints/Combat/MechanismSummon/Monster/BP_Strong_ThunderLaser_FieldCreature.62"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_Strong_ThunderLaser_FieldCreature_C:SimpleConstructionScript_0.SCS_Node_13'",
+          "ObjectPath": "EM/Content/BluePrints/Combat/MechanismSummon/Monster/BP_Strong_ThunderLaser_FieldCreature.63"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_Strong_ThunderLaser_FieldCreature_C:SimpleConstructionScript_0.SCS_Node_14'",
+          "ObjectPath": "EM/Content/BluePrints/Combat/MechanismSummon/Monster/BP_Strong_ThunderLaser_FieldCreature.64"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_Strong_ThunderLaser_FieldCreature_C:SimpleConstructionScript_0.SCS_Node_15'",
+          "ObjectPath": "EM/Content/BluePrints/Combat/MechanismSummon/Monster/BP_Strong_ThunderLaser_FieldCreature.65"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_Strong_ThunderLaser_FieldCreature_C:SimpleConstructionScript_0.SCS_Node_16'",
+          "ObjectPath": "EM/Content/BluePrints/Combat/MechanismSummon/Monster/BP_Strong_ThunderLaser_FieldCreature.66"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_Strong_ThunderLaser_FieldCreature_C:SimpleConstructionScript_0.SCS_Node_17'",
+          "ObjectPath": "EM/Content/BluePrints/Combat/MechanismSummon/Monster/BP_Strong_ThunderLaser_FieldCreature.67"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_Strong_ThunderLaser_FieldCreature_C:SimpleConstructionScript_0.SCS_Node_18'",
+          "ObjectPath": "EM/Content/BluePrints/Combat/MechanismSummon/Monster/BP_Strong_ThunderLaser_FieldCreature.68"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_Strong_ThunderLaser_FieldCreature_C:SimpleConstructionScript_0.SCS_Node_19'",
+          "ObjectPath": "EM/Content/BluePrints/Combat/MechanismSummon/Monster/BP_Strong_ThunderLaser_FieldCreature.69"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_Strong_ThunderLaser_FieldCreature_C:SimpleConstructionScript_0.SCS_Node_20'",
+          "ObjectPath": "EM/Content/BluePrints/Combat/MechanismSummon/Monster/BP_Strong_ThunderLaser_FieldCreature.71"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_Strong_ThunderLaser_FieldCreature_C:SimpleConstructionScript_0.SCS_Node_21'",
+          "ObjectPath": "EM/Content/BluePrints/Combat/MechanismSummon/Monster/BP_Strong_ThunderLaser_FieldCreature.72"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_Strong_ThunderLaser_FieldCreature_C:SimpleConstructionScript_0.SCS_Node_22'",
+          "ObjectPath": "EM/Content/BluePrints/Combat/MechanismSummon/Monster/BP_Strong_ThunderLaser_FieldCreature.73"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_Strong_ThunderLaser_FieldCreature_C:SimpleConstructionScript_0.SCS_Node_23'",
+          "ObjectPath": "EM/Content/BluePrints/Combat/MechanismSummon/Monster/BP_Strong_ThunderLaser_FieldCreature.74"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_Strong_ThunderLaser_FieldCreature_C:SimpleConstructionScript_0.SCS_Node_24'",
+          "ObjectPath": "EM/Content/BluePrints/Combat/MechanismSummon/Monster/BP_Strong_ThunderLaser_FieldCreature.75"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_Strong_ThunderLaser_FieldCreature_C:SimpleConstructionScript_0.SCS_Node_25'",
+          "ObjectPath": "EM/Content/BluePrints/Combat/MechanismSummon/Monster/BP_Strong_ThunderLaser_FieldCreature.76"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BP_Strong_ThunderLaser_FieldCreature_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "EM/Content/BluePrints/Combat/MechanismSummon/Monster/BP_Strong_ThunderLaser_FieldCreature.59"
+      }
+    }
+  },
+  {
+    "Type": "SkeletalMeshComponent",
+    "Name": "Mesh",
+    "Outer": "Default__BP_Strong_ThunderLaser_FieldCreature_C",
+    "Class": "UScriptClass'SkeletalMeshComponent'",
+    "Template": {
+      "ObjectName": "SkeletalMeshComponent'Default__BP_MechanismSummon_C:Mesh'",
+      "ObjectPath": "EM/Content/BluePrints/Combat/MechanismSummon/BP_MechanismSummon.10"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
+  }
+]

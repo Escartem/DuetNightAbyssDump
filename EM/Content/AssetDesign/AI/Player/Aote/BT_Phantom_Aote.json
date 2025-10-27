@@ -1,0 +1,806 @@
+[
+  {
+    "Type": "BehaviorTree",
+    "Name": "BT_Phantom_Aote",
+    "Class": "UScriptClass'BehaviorTree'",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "RootNode": {
+        "ObjectName": "BTComposite_Selector'BT_Phantom_Aote:BTComposite_Selector_4'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Aote/BT_Phantom_Aote.3"
+      },
+      "BlackboardAsset": {
+        "ObjectName": "BlackboardData'BB_Shadow'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Parent/BB_Shadow.0"
+      }
+    }
+  },
+  {
+    "Type": "BT_CheckSp_C",
+    "Name": "BT_CheckSp_C_0",
+    "Outer": "BT_Phantom_Aote",
+    "Class": "BlueprintGeneratedClass'EM/Content/AssetDesign/AI/Player/Parent/BT_CheckSp.BT_CheckSp_C'",
+    "Template": {
+      "ObjectName": "BT_CheckSp_C'Default__BT_CheckSp_C'",
+      "ObjectPath": "EM/Content/AssetDesign/AI/Player/Parent/BT_CheckSp.3"
+    },
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Target": {
+        "SelectedKeyName": "SelfActor"
+      },
+      "SkillID": 510202,
+      "Multiplier": 1.0,
+      "bShowPropertyDetails": false,
+      "RandomDeviation": 0.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Aote'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Aote/BT_Phantom_Aote.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Phantom_Aote:BTComposite_Selector_6'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Aote/BT_Phantom_Aote.4"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_11",
+    "Outer": "BT_Phantom_Aote",
+    "Class": "UScriptClass'BTComposite_Selector'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_ClearHatredList'BT_Phantom_Aote:BTTask_ClearHatredList_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Aote/BT_Phantom_Aote.21"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_CoolDownPlayer'BT_Phantom_Aote:BTDecorator_CoolDownPlayer_7'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Player/Aote/BT_Phantom_Aote.17"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_UseSkill_Player'BT_Phantom_Aote:BTTask_UseSkill_Player_1'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Aote/BT_Phantom_Aote.28"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_CoolDownPlayer'BT_Phantom_Aote:BTDecorator_CoolDownPlayer_2'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Player/Aote/BT_Phantom_Aote.16"
+            },
+            {
+              "ObjectName": "BTDecorator_CheckSpCost'BT_Phantom_Aote:BTDecorator_CheckSpCost_1'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Player/Aote/BT_Phantom_Aote.12"
+            },
+            {
+              "ObjectName": "BTDecorator_CheckBuffType_C'BT_Phantom_Aote:BTDecorator_CheckBuffType_C_0'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Player/Aote/BT_Phantom_Aote.8"
+            },
+            {
+              "ObjectName": "BTDecorator_CheckBuffType_C'BT_Phantom_Aote:BTDecorator_CheckBuffType_C_1'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Player/Aote/BT_Phantom_Aote.9"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_UseSkill_Player'BT_Phantom_Aote:BTTask_UseSkill_Player_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Aote/BT_Phantom_Aote.27"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_CheckSpCost'BT_Phantom_Aote:BTDecorator_CheckSpCost_2'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Player/Aote/BT_Phantom_Aote.13"
+            },
+            {
+              "ObjectName": "BTDecorator_CheckBuffType_C'BT_Phantom_Aote:BTDecorator_CheckBuffType_C_2'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Player/Aote/BT_Phantom_Aote.10"
+            },
+            {
+              "ObjectName": "BTDecorator_CheckBuffType_C'BT_Phantom_Aote:BTDecorator_CheckBuffType_C_3'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Player/Aote/BT_Phantom_Aote.11"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_RunBehavior'BT_Phantom_Aote:BTTask_RunBehavior_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Aote/BT_Phantom_Aote.22"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_CheckWeaponType'BT_Phantom_Aote:BTDecorator_CheckWeaponType_1'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Player/Aote/BT_Phantom_Aote.14"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_RunBehavior'BT_Phantom_Aote:BTTask_RunBehavior_1'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Aote/BT_Phantom_Aote.23"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_CheckWeaponType'BT_Phantom_Aote:BTDecorator_CheckWeaponType_5'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Player/Aote/BT_Phantom_Aote.15"
+            }
+          ],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Aote'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Aote/BT_Phantom_Aote.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Phantom_Aote:BTComposite_Selector_6'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Aote/BT_Phantom_Aote.4"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_4",
+    "Outer": "BT_Phantom_Aote",
+    "Class": "UScriptClass'BTComposite_Selector'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector'BT_Phantom_Aote:BTComposite_Selector_6'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Aote/BT_Phantom_Aote.4"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Phantom_Aote:BTDecorator_Blackboard_2'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Player/Aote/BT_Phantom_Aote.7"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait'BT_Phantom_Aote:BTTask_Wait_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Aote/BT_Phantom_Aote.29"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Phantom_Aote:BTDecorator_Blackboard_13'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Player/Aote/BT_Phantom_Aote.5"
+            }
+          ],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Aote'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Aote/BT_Phantom_Aote.0"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_6",
+    "Outer": "BT_Phantom_Aote",
+    "Class": "UScriptClass'BTComposite_Selector'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_RunBehavior'BT_Phantom_Aote:BTTask_RunBehavior_4'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Aote/BT_Phantom_Aote.26"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_RunBehavior'BT_Phantom_Aote:BTTask_RunBehavior_3'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Aote/BT_Phantom_Aote.25"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector'BT_Phantom_Aote:BTComposite_Selector_11'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Aote/BT_Phantom_Aote.2"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Phantom_Aote:BTDecorator_Blackboard_18'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Player/Aote/BT_Phantom_Aote.6"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_RunBehavior'BT_Phantom_Aote:BTTask_RunBehavior_2'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Aote/BT_Phantom_Aote.24"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "Services": [
+        {
+          "ObjectName": "BTService_EnemyVision'BT_Phantom_Aote:BTService_EnemyVision_0'",
+          "ObjectPath": "EM/Content/AssetDesign/AI/Player/Aote/BT_Phantom_Aote.20"
+        },
+        {
+          "ObjectName": "BTService_ClearBTTarget_Player'BT_Phantom_Aote:BTService_ClearBTTarget_Player_0'",
+          "ObjectPath": "EM/Content/AssetDesign/AI/Player/Aote/BT_Phantom_Aote.19"
+        },
+        {
+          "ObjectName": "BTService_BBValueDis'BT_Phantom_Aote:BTService_BBValueDis_0'",
+          "ObjectPath": "EM/Content/AssetDesign/AI/Player/Aote/BT_Phantom_Aote.18"
+        },
+        {
+          "ObjectName": "BT_CheckSp_C'BT_Phantom_Aote:BT_CheckSp_C_0'",
+          "ObjectPath": "EM/Content/AssetDesign/AI/Player/Aote/BT_Phantom_Aote.1"
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Aote'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Aote/BT_Phantom_Aote.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Phantom_Aote:BTComposite_Selector_4'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Aote/BT_Phantom_Aote.3"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_13",
+    "Outer": "BT_Phantom_Aote",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "IntValue": 1,
+      "CachedDescription": "ActionMode 等于 Hitted",
+      "BlackboardKey": {
+        "SelectedKeyName": "ActionMode"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::Self",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Aote'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Aote/BT_Phantom_Aote.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Phantom_Aote:BTComposite_Selector_4'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Aote/BT_Phantom_Aote.3"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_18",
+    "Outer": "BT_Phantom_Aote",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "CachedDescription": "Target is 已设置",
+      "BlackboardKey": {
+        "SelectedKeyName": "Target"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Aote'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Aote/BT_Phantom_Aote.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Phantom_Aote:BTComposite_Selector_6'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Aote/BT_Phantom_Aote.4"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_2",
+    "Outer": "BT_Phantom_Aote",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "CachedDescription": "ActionMode 等于 Active",
+      "BlackboardKey": {
+        "SelectedKeyName": "ActionMode"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::Self",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Aote'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Aote/BT_Phantom_Aote.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Phantom_Aote:BTComposite_Selector_4'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Aote/BT_Phantom_Aote.3"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_CheckBuffType_C",
+    "Name": "BTDecorator_CheckBuffType_C_0",
+    "Outer": "BT_Phantom_Aote",
+    "Class": "BlueprintGeneratedClass'EM/Content/BluePrints/AI/BTDecorator/BTDecorator_CheckBuffType.BTDecorator_CheckBuffType_C'",
+    "Template": {
+      "ObjectName": "BTDecorator_CheckBuffType_C'Default__BTDecorator_CheckBuffType_C'",
+      "ObjectPath": "EM/Content/BluePrints/AI/BTDecorator/BTDecorator_CheckBuffType.2"
+    },
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "BuffType": 510211,
+      "Target": {
+        "SelectedKeyName": "SelfActor"
+      },
+      "bShowPropertyDetails": false,
+      "bInverseCondition": true,
+      "NodeName": "NoBuffType",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Aote'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Aote/BT_Phantom_Aote.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Phantom_Aote:BTComposite_Selector_11'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Aote/BT_Phantom_Aote.2"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_CheckBuffType_C",
+    "Name": "BTDecorator_CheckBuffType_C_1",
+    "Outer": "BT_Phantom_Aote",
+    "Class": "BlueprintGeneratedClass'EM/Content/BluePrints/AI/BTDecorator/BTDecorator_CheckBuffType.BTDecorator_CheckBuffType_C'",
+    "Template": {
+      "ObjectName": "BTDecorator_CheckBuffType_C'Default__BTDecorator_CheckBuffType_C'",
+      "ObjectPath": "EM/Content/BluePrints/AI/BTDecorator/BTDecorator_CheckBuffType.2"
+    },
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "BuffType": 510221,
+      "Target": {
+        "SelectedKeyName": "SelfActor"
+      },
+      "bShowPropertyDetails": false,
+      "bInverseCondition": true,
+      "NodeName": "NoBuffType",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Aote'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Aote/BT_Phantom_Aote.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Phantom_Aote:BTComposite_Selector_11'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Aote/BT_Phantom_Aote.2"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_CheckBuffType_C",
+    "Name": "BTDecorator_CheckBuffType_C_2",
+    "Outer": "BT_Phantom_Aote",
+    "Class": "BlueprintGeneratedClass'EM/Content/BluePrints/AI/BTDecorator/BTDecorator_CheckBuffType.BTDecorator_CheckBuffType_C'",
+    "Template": {
+      "ObjectName": "BTDecorator_CheckBuffType_C'Default__BTDecorator_CheckBuffType_C'",
+      "ObjectPath": "EM/Content/BluePrints/AI/BTDecorator/BTDecorator_CheckBuffType.2"
+    },
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "BuffType": 510211,
+      "Target": {
+        "SelectedKeyName": "SelfActor"
+      },
+      "bShowPropertyDetails": false,
+      "bInverseCondition": true,
+      "NodeName": "NoBuffType",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Aote'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Aote/BT_Phantom_Aote.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Phantom_Aote:BTComposite_Selector_11'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Aote/BT_Phantom_Aote.2"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_CheckBuffType_C",
+    "Name": "BTDecorator_CheckBuffType_C_3",
+    "Outer": "BT_Phantom_Aote",
+    "Class": "BlueprintGeneratedClass'EM/Content/BluePrints/AI/BTDecorator/BTDecorator_CheckBuffType.BTDecorator_CheckBuffType_C'",
+    "Template": {
+      "ObjectName": "BTDecorator_CheckBuffType_C'Default__BTDecorator_CheckBuffType_C'",
+      "ObjectPath": "EM/Content/BluePrints/AI/BTDecorator/BTDecorator_CheckBuffType.2"
+    },
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "BuffType": 510221,
+      "Target": {
+        "SelectedKeyName": "SelfActor"
+      },
+      "bShowPropertyDetails": false,
+      "bInverseCondition": true,
+      "NodeName": "NoBuffType",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Aote'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Aote/BT_Phantom_Aote.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Phantom_Aote:BTComposite_Selector_11'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Aote/BT_Phantom_Aote.2"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_CheckSpCost",
+    "Name": "BTDecorator_CheckSpCost_1",
+    "Outer": "BT_Phantom_Aote",
+    "Class": "UScriptClass'BTDecorator_CheckSpCost'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SkillId": 510202,
+      "CostMultiplier": 1.2,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Aote'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Aote/BT_Phantom_Aote.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Phantom_Aote:BTComposite_Selector_11'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Aote/BT_Phantom_Aote.2"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_CheckSpCost",
+    "Name": "BTDecorator_CheckSpCost_2",
+    "Outer": "BT_Phantom_Aote",
+    "Class": "UScriptClass'BTDecorator_CheckSpCost'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SkillId": 510202,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Aote'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Aote/BT_Phantom_Aote.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Phantom_Aote:BTComposite_Selector_11'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Aote/BT_Phantom_Aote.2"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_CheckWeaponType",
+    "Name": "BTDecorator_CheckWeaponType_1",
+    "Outer": "BT_Phantom_Aote",
+    "Class": "UScriptClass'BTDecorator_CheckWeaponType'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "WeaponType": "Melee",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Aote'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Aote/BT_Phantom_Aote.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Phantom_Aote:BTComposite_Selector_11'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Aote/BT_Phantom_Aote.2"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_CheckWeaponType",
+    "Name": "BTDecorator_CheckWeaponType_5",
+    "Outer": "BT_Phantom_Aote",
+    "Class": "UScriptClass'BTDecorator_CheckWeaponType'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "WeaponType": "Ranged",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Aote'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Aote/BT_Phantom_Aote.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Phantom_Aote:BTComposite_Selector_11'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Aote/BT_Phantom_Aote.2"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_CoolDownPlayer",
+    "Name": "BTDecorator_CoolDownPlayer_2",
+    "Outer": "BT_Phantom_Aote",
+    "Class": "UScriptClass'BTDecorator_CoolDownPlayer'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "CoolDownTime": 6.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Aote'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Aote/BT_Phantom_Aote.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Phantom_Aote:BTComposite_Selector_11'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Aote/BT_Phantom_Aote.2"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_CoolDownPlayer",
+    "Name": "BTDecorator_CoolDownPlayer_7",
+    "Outer": "BT_Phantom_Aote",
+    "Class": "UScriptClass'BTDecorator_CoolDownPlayer'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "CoolDownTime": 10.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Aote'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Aote/BT_Phantom_Aote.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Phantom_Aote:BTComposite_Selector_11'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Aote/BT_Phantom_Aote.2"
+      }
+    }
+  },
+  {
+    "Type": "BTService_BBValueDis",
+    "Name": "BTService_BBValueDis_0",
+    "Outer": "BT_Phantom_Aote",
+    "Class": "UScriptClass'BTService_BBValueDis'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "BBName": "Target",
+      "Interval": 0.1,
+      "RandomDeviation": 0.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Aote'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Aote/BT_Phantom_Aote.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Phantom_Aote:BTComposite_Selector_6'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Aote/BT_Phantom_Aote.4"
+      }
+    }
+  },
+  {
+    "Type": "BTService_ClearBTTarget_Player",
+    "Name": "BTService_ClearBTTarget_Player_0",
+    "Outer": "BT_Phantom_Aote",
+    "Class": "UScriptClass'BTService_ClearBTTarget_Player'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Interval": 0.1,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Aote'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Aote/BT_Phantom_Aote.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Phantom_Aote:BTComposite_Selector_6'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Aote/BT_Phantom_Aote.4"
+      }
+    }
+  },
+  {
+    "Type": "BTService_EnemyVision",
+    "Name": "BTService_EnemyVision_0",
+    "Outer": "BT_Phantom_Aote",
+    "Class": "UScriptClass'BTService_EnemyVision'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "FVisionDistance": 2000.0,
+      "FVisionAngle": 180.0,
+      "Interval": 0.2,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Aote'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Aote/BT_Phantom_Aote.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Phantom_Aote:BTComposite_Selector_6'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Aote/BT_Phantom_Aote.4"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_ClearHatredList",
+    "Name": "BTTask_ClearHatredList_0",
+    "Outer": "BT_Phantom_Aote",
+    "Class": "UScriptClass'BTTask_ClearHatredList'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Aote'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Aote/BT_Phantom_Aote.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Phantom_Aote:BTComposite_Selector_11'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Aote/BT_Phantom_Aote.2"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_RunBehavior",
+    "Name": "BTTask_RunBehavior_0",
+    "Outer": "BT_Phantom_Aote",
+    "Class": "UScriptClass'BTTask_RunBehavior'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "BehaviorAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Melee_Common'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Parent/BT_Phantom_Melee_Common.0"
+      },
+      "NodeName": "MeleeAttack",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Aote'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Aote/BT_Phantom_Aote.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Phantom_Aote:BTComposite_Selector_11'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Aote/BT_Phantom_Aote.2"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_RunBehavior",
+    "Name": "BTTask_RunBehavior_1",
+    "Outer": "BT_Phantom_Aote",
+    "Class": "UScriptClass'BTTask_RunBehavior'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "BehaviorAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Ranged_Common'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Parent/BT_Phantom_Ranged_Common.0"
+      },
+      "NodeName": "RangedAttack",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Aote'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Aote/BT_Phantom_Aote.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Phantom_Aote:BTComposite_Selector_11'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Aote/BT_Phantom_Aote.2"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_RunBehavior",
+    "Name": "BTTask_RunBehavior_2",
+    "Outer": "BT_Phantom_Aote",
+    "Class": "UScriptClass'BTTask_RunBehavior'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "BehaviorAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_DetectEnemy'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Parent/BT_Phantom_DetectEnemy.0"
+      },
+      "NodeName": "DetectEnemy",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Aote'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Aote/BT_Phantom_Aote.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Phantom_Aote:BTComposite_Selector_6'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Aote/BT_Phantom_Aote.4"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_RunBehavior",
+    "Name": "BTTask_RunBehavior_3",
+    "Outer": "BT_Phantom_Aote",
+    "Class": "UScriptClass'BTTask_RunBehavior'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "BehaviorAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_MoveToOwner'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Parent/BT_Phantom_MoveToOwner.0"
+      },
+      "NodeName": "MoveToOwner",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Aote'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Aote/BT_Phantom_Aote.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Phantom_Aote:BTComposite_Selector_6'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Aote/BT_Phantom_Aote.4"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_RunBehavior",
+    "Name": "BTTask_RunBehavior_4",
+    "Outer": "BT_Phantom_Aote",
+    "Class": "UScriptClass'BTTask_RunBehavior'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "BehaviorAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Dodge'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Parent/BT_Phantom_Dodge.0"
+      },
+      "NodeName": "Dodge",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Aote'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Aote/BT_Phantom_Aote.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Phantom_Aote:BTComposite_Selector_6'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Aote/BT_Phantom_Aote.4"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_UseSkill_Player",
+    "Name": "BTTask_UseSkill_Player_0",
+    "Outer": "BT_Phantom_Aote",
+    "Class": "UScriptClass'BTTask_UseSkill_Player'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SkillType": "EUseSkill_SkillType::Skill2",
+      "AutoInput": false,
+      "NodeName": "Skill2",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Aote'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Aote/BT_Phantom_Aote.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Phantom_Aote:BTComposite_Selector_11'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Aote/BT_Phantom_Aote.2"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_UseSkill_Player",
+    "Name": "BTTask_UseSkill_Player_1",
+    "Outer": "BT_Phantom_Aote",
+    "Class": "UScriptClass'BTTask_UseSkill_Player'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SkillType": "EUseSkill_SkillType::Skill1",
+      "AutoInput": false,
+      "NodeName": "Skill1",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Aote'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Aote/BT_Phantom_Aote.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Phantom_Aote:BTComposite_Selector_11'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Aote/BT_Phantom_Aote.2"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_0",
+    "Outer": "BT_Phantom_Aote",
+    "Class": "UScriptClass'BTTask_Wait'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "WaitTime": 3.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Aote'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Aote/BT_Phantom_Aote.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Phantom_Aote:BTComposite_Selector_4'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Aote/BT_Phantom_Aote.3"
+      }
+    }
+  }
+]

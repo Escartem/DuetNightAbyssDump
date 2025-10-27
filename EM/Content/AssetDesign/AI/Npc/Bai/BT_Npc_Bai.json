@@ -1,0 +1,1356 @@
+[
+  {
+    "Type": "BehaviorTree",
+    "Name": "BT_Npc_Bai",
+    "Class": "UScriptClass'BehaviorTree'",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "RootNode": {
+        "ObjectName": "BTComposite_Selector'BT_Npc_Bai:BTComposite_Selector_4'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Bai/BT_Npc_Bai.2"
+      },
+      "BlackboardAsset": {
+        "ObjectName": "BlackboardData'BB_Npc_Bai'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Bai/BB_Npc_Bai.0"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_1",
+    "Outer": "BT_Npc_Bai",
+    "Class": "UScriptClass'BTComposite_Selector'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_NewMoveTo'BT_Npc_Bai:BTTask_NewMoveTo_1'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Bai/BT_Npc_Bai.37"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_IfKeepRunning_C'BT_Npc_Bai:BTDecorator_IfKeepRunning_C_1'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Bai/BT_Npc_Bai.22"
+            }
+          ],
+          "DecoratorOps": []
+        }
+      ],
+      "Services": [
+        {
+          "ObjectName": "BTService_BBValueDis'BT_Npc_Bai:BTService_BBValueDis_1'",
+          "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Bai/BT_Npc_Bai.29"
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_Bai'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Bai/BT_Npc_Bai.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Npc_Bai:BTComposite_Sequence_11'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Bai/BT_Npc_Bai.7"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_4",
+    "Outer": "BT_Npc_Bai",
+    "Class": "UScriptClass'BTComposite_Selector'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_Npc_Bai:BTComposite_Sequence_9'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Bai/BT_Npc_Bai.12"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Npc_Bai:BTDecorator_Blackboard_0'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Bai/BT_Npc_Bai.13"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_Npc_Bai:BTComposite_Sequence_6'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Bai/BT_Npc_Bai.10"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Npc_Bai:BTDecorator_Blackboard_15'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Bai/BT_Npc_Bai.16"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_Npc_Bai:BTComposite_Sequence_10'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Bai/BT_Npc_Bai.6"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Npc_Bai:BTDecorator_Blackboard_14'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Bai/BT_Npc_Bai.15"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_Npc_Bai:BTComposite_Sequence_1'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Bai/BT_Npc_Bai.5"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Npc_Bai:BTDecorator_Blackboard_13'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Bai/BT_Npc_Bai.14"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_Npc_Bai:BTComposite_Sequence_4'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Bai/BT_Npc_Bai.9"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Npc_Bai:BTDecorator_Blackboard_2'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Bai/BT_Npc_Bai.17"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait'BT_Npc_Bai:BTTask_Wait_1'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Bai/BT_Npc_Bai.46"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_Bai'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Bai/BT_Npc_Bai.0"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_6",
+    "Outer": "BT_Npc_Bai",
+    "Class": "UScriptClass'BTComposite_Selector'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_GetPatrolLoc'BT_Npc_Bai:BTTask_GetPatrolLoc_2'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Bai/BT_Npc_Bai.34"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Npc_Bai:BTDecorator_Blackboard_3'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Bai/BT_Npc_Bai.18"
+            },
+            {
+              "ObjectName": "BTDecorator_IsAtLocation'BT_Npc_Bai:BTDecorator_IsAtLocation_3'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Bai/BT_Npc_Bai.23"
+            }
+          ],
+          "DecoratorOps": [
+            {
+              "Operation": "EBTDecoratorLogic::Or",
+              "Number": 2
+            },
+            {
+              "Operation": "EBTDecoratorLogic::Test",
+              "Number": 0
+            },
+            {
+              "Operation": "EBTDecoratorLogic::Test",
+              "Number": 1
+            }
+          ]
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_Npc_Bai:BTComposite_Sequence_11'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Bai/BT_Npc_Bai.7"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Npc_Bai:BTDecorator_Blackboard_5'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Bai/BT_Npc_Bai.20"
+            },
+            {
+              "ObjectName": "BTDecorator_IsAtLocation'BT_Npc_Bai:BTDecorator_IsAtLocation_5'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Bai/BT_Npc_Bai.24"
+            }
+          ],
+          "DecoratorOps": [
+            {
+              "Operation": "EBTDecoratorLogic::And",
+              "Number": 2
+            },
+            {
+              "Operation": "EBTDecoratorLogic::Test",
+              "Number": 0
+            },
+            {
+              "Operation": "EBTDecoratorLogic::Not",
+              "Number": 1
+            },
+            {
+              "Operation": "EBTDecoratorLogic::Test",
+              "Number": 1
+            }
+          ]
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_Npc_Bai:BTComposite_Sequence_12'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Bai/BT_Npc_Bai.8"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Npc_Bai:BTDecorator_Blackboard_7'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Bai/BT_Npc_Bai.21"
+            },
+            {
+              "ObjectName": "BTDecorator_IsAtLocation'BT_Npc_Bai:BTDecorator_IsAtLocation_7'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Bai/BT_Npc_Bai.25"
+            }
+          ],
+          "DecoratorOps": [
+            {
+              "Operation": "EBTDecoratorLogic::And",
+              "Number": 2
+            },
+            {
+              "Operation": "EBTDecoratorLogic::Test",
+              "Number": 0
+            },
+            {
+              "Operation": "EBTDecoratorLogic::Test",
+              "Number": 1
+            }
+          ]
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_Bai'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Bai/BT_Npc_Bai.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Npc_Bai:BTComposite_Sequence_9'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Bai/BT_Npc_Bai.12"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_0",
+    "Outer": "BT_Npc_Bai",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_GetPatrolLoc'BT_Npc_Bai:BTTask_GetPatrolLoc_3'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Bai/BT_Npc_Bai.35"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_NewMoveTo'BT_Npc_Bai:BTTask_NewMoveTo_4'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Bai/BT_Npc_Bai.40"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_Bai'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Bai/BT_Npc_Bai.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Npc_Bai:BTComposite_Sequence_10'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Bai/BT_Npc_Bai.6"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_1",
+    "Outer": "BT_Npc_Bai",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_NpcGetTarget'BT_Npc_Bai:BTTask_NpcGetTarget_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Bai/BT_Npc_Bai.41"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_NewMoveTo'BT_Npc_Bai:BTTask_NewMoveTo_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Bai/BT_Npc_Bai.36"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_Bai'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Bai/BT_Npc_Bai.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Npc_Bai:BTComposite_Selector_4'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Bai/BT_Npc_Bai.2"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_10",
+    "Outer": "BT_Npc_Bai",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_PlayNPCPatrolAnim'BT_Npc_Bai:BTTask_PlayNPCPatrolAnim_2'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Bai/BT_Npc_Bai.45"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait'BT_Npc_Bai:BTTask_Wait_2'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Bai/BT_Npc_Bai.47"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_Npc_Bai:BTComposite_Sequence_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Bai/BT_Npc_Bai.4"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Loop'BT_Npc_Bai:BTDecorator_Loop_1'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Bai/BT_Npc_Bai.27"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_ClearKey'BT_Npc_Bai:BTTask_ClearKey_2'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Bai/BT_Npc_Bai.31"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_Bai'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Bai/BT_Npc_Bai.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Npc_Bai:BTComposite_Selector_4'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Bai/BT_Npc_Bai.2"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_11",
+    "Outer": "BT_Npc_Bai",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector'BT_Npc_Bai:BTComposite_Selector_1'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Bai/BT_Npc_Bai.1"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_Bai'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Bai/BT_Npc_Bai.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Npc_Bai:BTComposite_Selector_6'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Bai/BT_Npc_Bai.3"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_12",
+    "Outer": "BT_Npc_Bai",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_ClearKey'BT_Npc_Bai:BTTask_ClearKey_4'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Bai/BT_Npc_Bai.32"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_RunEnd_C'BT_Npc_Bai:BTDecorator_RunEnd_C_1'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Bai/BT_Npc_Bai.28"
+            }
+          ],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_Bai'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Bai/BT_Npc_Bai.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Npc_Bai:BTComposite_Selector_6'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Bai/BT_Npc_Bai.3"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_4",
+    "Outer": "BT_Npc_Bai",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_NpcGetTarget'BT_Npc_Bai:BTTask_NpcGetTarget_2'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Bai/BT_Npc_Bai.43"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_NewMoveTo'BT_Npc_Bai:BTTask_NewMoveTo_3'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Bai/BT_Npc_Bai.39"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Npc_Bai:BTDecorator_Blackboard_4'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Bai/BT_Npc_Bai.19"
+            }
+          ],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_Bai'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Bai/BT_Npc_Bai.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Npc_Bai:BTComposite_Selector_4'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Bai/BT_Npc_Bai.2"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_6",
+    "Outer": "BT_Npc_Bai",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_Npc_Bai:BTComposite_Sequence_8'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Bai/BT_Npc_Bai.11"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Loop'BT_Npc_Bai:BTDecorator_Loop_0'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Bai/BT_Npc_Bai.26"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_PlayNPCPatrolAnim'BT_Npc_Bai:BTTask_PlayNPCPatrolAnim_1'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Bai/BT_Npc_Bai.44"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_ClearKey'BT_Npc_Bai:BTTask_ClearKey_1'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Bai/BT_Npc_Bai.30"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_Bai'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Bai/BT_Npc_Bai.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Npc_Bai:BTComposite_Selector_4'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Bai/BT_Npc_Bai.2"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_8",
+    "Outer": "BT_Npc_Bai",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_GetPatrolLoc'BT_Npc_Bai:BTTask_GetPatrolLoc_1'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Bai/BT_Npc_Bai.33"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_NewMoveTo'BT_Npc_Bai:BTTask_NewMoveTo_2'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Bai/BT_Npc_Bai.38"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_Bai'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Bai/BT_Npc_Bai.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Npc_Bai:BTComposite_Sequence_6'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Bai/BT_Npc_Bai.10"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_9",
+    "Outer": "BT_Npc_Bai",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_NpcGetTarget'BT_Npc_Bai:BTTask_NpcGetTarget_1'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Bai/BT_Npc_Bai.42"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector'BT_Npc_Bai:BTComposite_Selector_6'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Bai/BT_Npc_Bai.3"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_Bai'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Bai/BT_Npc_Bai.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Npc_Bai:BTComposite_Selector_4'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Bai/BT_Npc_Bai.2"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_0",
+    "Outer": "BT_Npc_Bai",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "StringValue": "BaiGo",
+      "CachedDescription": "QuestEvent 为相等 [BaiGo]",
+      "BlackboardKey": {
+        "SelectedKeyName": "QuestEvent"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_Bai'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Bai/BT_Npc_Bai.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Npc_Bai:BTComposite_Selector_4'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Bai/BT_Npc_Bai.2"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_13",
+    "Outer": "BT_Npc_Bai",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "StringValue": "BaiFindHaer",
+      "CachedDescription": "QuestEvent 为相等 [BaiFindHaer]",
+      "NotifyObserver": "EBTBlackboardRestart::ValueChange",
+      "BlackboardKey": {
+        "SelectedKeyName": "QuestEvent"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_Bai'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Bai/BT_Npc_Bai.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Npc_Bai:BTComposite_Selector_4'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Bai/BT_Npc_Bai.2"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_14",
+    "Outer": "BT_Npc_Bai",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "StringValue": "BaiThinkAndGo",
+      "CachedDescription": "QuestEvent 为相等 [BaiThinkAndGo]",
+      "BlackboardKey": {
+        "SelectedKeyName": "QuestEvent"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_Bai'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Bai/BT_Npc_Bai.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Npc_Bai:BTComposite_Selector_4'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Bai/BT_Npc_Bai.2"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_15",
+    "Outer": "BT_Npc_Bai",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "StringValue": "BaiGoAndThink",
+      "CachedDescription": "QuestEvent 为相等 [BaiGoAndThink]",
+      "BlackboardKey": {
+        "SelectedKeyName": "QuestEvent"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_Bai'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Bai/BT_Npc_Bai.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Npc_Bai:BTComposite_Selector_4'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Bai/BT_Npc_Bai.2"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_2",
+    "Outer": "BT_Npc_Bai",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "StringValue": "BaiFollow",
+      "CachedDescription": "QuestEvent 为相等 [BaiFollow]",
+      "NotifyObserver": "EBTBlackboardRestart::ValueChange",
+      "BlackboardKey": {
+        "SelectedKeyName": "QuestEvent"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_Bai'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Bai/BT_Npc_Bai.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Npc_Bai:BTComposite_Selector_4'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Bai/BT_Npc_Bai.2"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_3",
+    "Outer": "BT_Npc_Bai",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "CachedDescription": "PatrolLoc is 未设置",
+      "OperationType": 1,
+      "BlackboardKey": {
+        "SelectedKeyName": "PatrolLoc"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_Bai'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Bai/BT_Npc_Bai.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Npc_Bai:BTComposite_Selector_6'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Bai/BT_Npc_Bai.3"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_4",
+    "Outer": "BT_Npc_Bai",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "FloatValue": 400.0,
+      "CachedDescription": "TickTargetDis 大于 400.000000",
+      "OperationType": 4,
+      "BlackboardKey": {
+        "SelectedKeyName": "TickTargetDis"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::Self",
+      "NodeName": "Far from Player",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_Bai'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Bai/BT_Npc_Bai.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Npc_Bai:BTComposite_Sequence_4'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Bai/BT_Npc_Bai.9"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_5",
+    "Outer": "BT_Npc_Bai",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "CachedDescription": "PatrolLoc is 已设置",
+      "BlackboardKey": {
+        "SelectedKeyName": "PatrolLoc"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_Bai'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Bai/BT_Npc_Bai.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Npc_Bai:BTComposite_Selector_6'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Bai/BT_Npc_Bai.3"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_7",
+    "Outer": "BT_Npc_Bai",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "CachedDescription": "PatrolLoc is 已设置",
+      "BlackboardKey": {
+        "SelectedKeyName": "PatrolLoc"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_Bai'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Bai/BT_Npc_Bai.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Npc_Bai:BTComposite_Selector_6'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Bai/BT_Npc_Bai.3"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_IfKeepRunning_C",
+    "Name": "BTDecorator_IfKeepRunning_C_1",
+    "Outer": "BT_Npc_Bai",
+    "Class": "BlueprintGeneratedClass'EM/Content/AssetDesign/AI/Npc/Bai/BTDecorator_IfKeepRunning.BTDecorator_IfKeepRunning_C'",
+    "Template": {
+      "ObjectName": "BTDecorator_IfKeepRunning_C'Default__BTDecorator_IfKeepRunning_C'",
+      "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Bai/BTDecorator_IfKeepRunning.2"
+    },
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_Bai'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Bai/BT_Npc_Bai.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Npc_Bai:BTComposite_Selector_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Bai/BT_Npc_Bai.1"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_IsAtLocation",
+    "Name": "BTDecorator_IsAtLocation_3",
+    "Outer": "BT_Npc_Bai",
+    "Class": "UScriptClass'BTDecorator_IsAtLocation'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "AcceptableRadius": 70.0,
+      "BlackboardKey": {
+        "SelectedKeyName": "PatrolLoc"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_Bai'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Bai/BT_Npc_Bai.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Npc_Bai:BTComposite_Selector_6'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Bai/BT_Npc_Bai.3"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_IsAtLocation",
+    "Name": "BTDecorator_IsAtLocation_5",
+    "Outer": "BT_Npc_Bai",
+    "Class": "UScriptClass'BTDecorator_IsAtLocation'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "AcceptableRadius": 70.0,
+      "BlackboardKey": {
+        "SelectedKeyName": "PatrolLoc"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_Bai'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Bai/BT_Npc_Bai.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Npc_Bai:BTComposite_Selector_6'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Bai/BT_Npc_Bai.3"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_IsAtLocation",
+    "Name": "BTDecorator_IsAtLocation_7",
+    "Outer": "BT_Npc_Bai",
+    "Class": "UScriptClass'BTDecorator_IsAtLocation'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "AcceptableRadius": 70.0,
+      "BlackboardKey": {
+        "SelectedKeyName": "PatrolLoc"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_Bai'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Bai/BT_Npc_Bai.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Npc_Bai:BTComposite_Selector_6'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Bai/BT_Npc_Bai.3"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Loop",
+    "Name": "BTDecorator_Loop_0",
+    "Outer": "BT_Npc_Bai",
+    "Class": "UScriptClass'BTDecorator_Loop'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "NumLoops": 2,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_Bai'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Bai/BT_Npc_Bai.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Npc_Bai:BTComposite_Sequence_6'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Bai/BT_Npc_Bai.10"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Loop",
+    "Name": "BTDecorator_Loop_1",
+    "Outer": "BT_Npc_Bai",
+    "Class": "UScriptClass'BTDecorator_Loop'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "NumLoops": 2,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_Bai'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Bai/BT_Npc_Bai.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Npc_Bai:BTComposite_Sequence_10'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Bai/BT_Npc_Bai.6"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_RunEnd_C",
+    "Name": "BTDecorator_RunEnd_C_1",
+    "Outer": "BT_Npc_Bai",
+    "Class": "BlueprintGeneratedClass'EM/Content/AssetDesign/AI/Npc/Bai/BTDecorator_RunEnd.BTDecorator_RunEnd_C'",
+    "Template": {
+      "ObjectName": "BTDecorator_RunEnd_C'Default__BTDecorator_RunEnd_C'",
+      "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Bai/BTDecorator_RunEnd.2"
+    },
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_Bai'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Bai/BT_Npc_Bai.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Npc_Bai:BTComposite_Sequence_12'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Bai/BT_Npc_Bai.8"
+      }
+    }
+  },
+  {
+    "Type": "BTService_BBValueDis",
+    "Name": "BTService_BBValueDis_1",
+    "Outer": "BT_Npc_Bai",
+    "Class": "UScriptClass'BTService_BBValueDis'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "BBName": "Target",
+      "Interval": 0.2,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_Bai'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Bai/BT_Npc_Bai.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Npc_Bai:BTComposite_Selector_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Bai/BT_Npc_Bai.1"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_ClearKey",
+    "Name": "BTTask_ClearKey_1",
+    "Outer": "BT_Npc_Bai",
+    "Class": "UScriptClass'BTTask_ClearKey'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "BlackboardKey": {
+        "SelectedKeyName": "QuestEvent"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_Bai'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Bai/BT_Npc_Bai.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Npc_Bai:BTComposite_Sequence_6'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Bai/BT_Npc_Bai.10"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_ClearKey",
+    "Name": "BTTask_ClearKey_2",
+    "Outer": "BT_Npc_Bai",
+    "Class": "UScriptClass'BTTask_ClearKey'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "BlackboardKey": {
+        "SelectedKeyName": "QuestEvent"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_Bai'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Bai/BT_Npc_Bai.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Npc_Bai:BTComposite_Sequence_10'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Bai/BT_Npc_Bai.6"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_ClearKey",
+    "Name": "BTTask_ClearKey_4",
+    "Outer": "BT_Npc_Bai",
+    "Class": "UScriptClass'BTTask_ClearKey'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "BlackboadKeyName": "QuestEvent",
+      "BlackboardKey": {
+        "SelectedKeyName": "QuestEvent"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_Bai'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Bai/BT_Npc_Bai.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Npc_Bai:BTComposite_Sequence_12'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Bai/BT_Npc_Bai.8"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_GetPatrolLoc",
+    "Name": "BTTask_GetPatrolLoc_1",
+    "Outer": "BT_Npc_Bai",
+    "Class": "UScriptClass'BTTask_GetPatrolLoc'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_Bai'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Bai/BT_Npc_Bai.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Npc_Bai:BTComposite_Sequence_8'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Bai/BT_Npc_Bai.11"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_GetPatrolLoc",
+    "Name": "BTTask_GetPatrolLoc_2",
+    "Outer": "BT_Npc_Bai",
+    "Class": "UScriptClass'BTTask_GetPatrolLoc'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_Bai'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Bai/BT_Npc_Bai.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Npc_Bai:BTComposite_Selector_6'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Bai/BT_Npc_Bai.3"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_GetPatrolLoc",
+    "Name": "BTTask_GetPatrolLoc_3",
+    "Outer": "BT_Npc_Bai",
+    "Class": "UScriptClass'BTTask_GetPatrolLoc'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_Bai'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Bai/BT_Npc_Bai.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Npc_Bai:BTComposite_Sequence_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Bai/BT_Npc_Bai.4"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_NewMoveTo",
+    "Name": "BTTask_NewMoveTo_0",
+    "Outer": "BT_Npc_Bai",
+    "Class": "UScriptClass'BTTask_NewMoveTo'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "bUseControllerRotationYaw": true,
+      "MoveTypeState": "EMoveTypeState::MTS_Run",
+      "MaxSpeed": 250.0,
+      "MaxAcceleration": 5000.0,
+      "AcceptableRadius": 600.0,
+      "bStopOnOverlapNeedsUpdate": false,
+      "BlackboardKey": {
+        "SelectedKeyName": "Target"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_Bai'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Bai/BT_Npc_Bai.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Npc_Bai:BTComposite_Sequence_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Bai/BT_Npc_Bai.5"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_NewMoveTo",
+    "Name": "BTTask_NewMoveTo_1",
+    "Outer": "BT_Npc_Bai",
+    "Class": "UScriptClass'BTTask_NewMoveTo'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "bOrientRotationToMovement": true,
+      "MoveTypeState": "EMoveTypeState::MTS_Run",
+      "MaxSpeed": 500.0,
+      "MaxAcceleration": 10000.0,
+      "AcceptableRadius": 20.0,
+      "bStopOnOverlapNeedsUpdate": false,
+      "BlackboardKey": {
+        "SelectedKeyName": "PatrolLoc"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_Bai'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Bai/BT_Npc_Bai.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Npc_Bai:BTComposite_Selector_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Bai/BT_Npc_Bai.1"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_NewMoveTo",
+    "Name": "BTTask_NewMoveTo_2",
+    "Outer": "BT_Npc_Bai",
+    "Class": "UScriptClass'BTTask_NewMoveTo'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "bOrientRotationToMovement": true,
+      "MaxSpeed": 500.0,
+      "MaxAcceleration": 10000.0,
+      "AcceptableRadius": 20.0,
+      "bStopOnOverlapNeedsUpdate": false,
+      "BlackboardKey": {
+        "SelectedKeyName": "PatrolLoc"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_Bai'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Bai/BT_Npc_Bai.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Npc_Bai:BTComposite_Sequence_8'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Bai/BT_Npc_Bai.11"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_NewMoveTo",
+    "Name": "BTTask_NewMoveTo_3",
+    "Outer": "BT_Npc_Bai",
+    "Class": "UScriptClass'BTTask_NewMoveTo'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "bUseControllerRotationYaw": true,
+      "MoveTypeState": "EMoveTypeState::MTS_Run",
+      "MaxSpeed": 220.0,
+      "MaxAcceleration": 500.0,
+      "AcceptableRadius": 200.0,
+      "bStopOnOverlapNeedsUpdate": false,
+      "BlackboardKey": {
+        "SelectedKeyName": "Target"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_Bai'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Bai/BT_Npc_Bai.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Npc_Bai:BTComposite_Sequence_4'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Bai/BT_Npc_Bai.9"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_NewMoveTo",
+    "Name": "BTTask_NewMoveTo_4",
+    "Outer": "BT_Npc_Bai",
+    "Class": "UScriptClass'BTTask_NewMoveTo'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "bOrientRotationToMovement": true,
+      "MaxSpeed": 500.0,
+      "MaxAcceleration": 10000.0,
+      "AcceptableRadius": 20.0,
+      "bStopOnOverlapNeedsUpdate": false,
+      "BlackboardKey": {
+        "SelectedKeyName": "PatrolLoc"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_Bai'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Bai/BT_Npc_Bai.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Npc_Bai:BTComposite_Sequence_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Bai/BT_Npc_Bai.4"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_NpcGetTarget",
+    "Name": "BTTask_NpcGetTarget_0",
+    "Outer": "BT_Npc_Bai",
+    "Class": "UScriptClass'BTTask_NpcGetTarget'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "NpcId": 2000531,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_Bai'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Bai/BT_Npc_Bai.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Npc_Bai:BTComposite_Sequence_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Bai/BT_Npc_Bai.5"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_NpcGetTarget",
+    "Name": "BTTask_NpcGetTarget_1",
+    "Outer": "BT_Npc_Bai",
+    "Class": "UScriptClass'BTTask_NpcGetTarget'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_Bai'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Bai/BT_Npc_Bai.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Npc_Bai:BTComposite_Sequence_9'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Bai/BT_Npc_Bai.12"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_NpcGetTarget",
+    "Name": "BTTask_NpcGetTarget_2",
+    "Outer": "BT_Npc_Bai",
+    "Class": "UScriptClass'BTTask_NpcGetTarget'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_Bai'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Bai/BT_Npc_Bai.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Npc_Bai:BTComposite_Sequence_4'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Bai/BT_Npc_Bai.9"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_PlayNPCPatrolAnim",
+    "Name": "BTTask_PlayNPCPatrolAnim_1",
+    "Outer": "BT_Npc_Bai",
+    "Class": "UScriptClass'BTTask_PlayNPCPatrolAnim'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Mode": "EPlayAnimMode::OverridePatrolMontageID",
+      "MontageID": "Think_Start",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_Bai'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Bai/BT_Npc_Bai.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Npc_Bai:BTComposite_Sequence_6'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Bai/BT_Npc_Bai.10"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_PlayNPCPatrolAnim",
+    "Name": "BTTask_PlayNPCPatrolAnim_2",
+    "Outer": "BT_Npc_Bai",
+    "Class": "UScriptClass'BTTask_PlayNPCPatrolAnim'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Mode": "EPlayAnimMode::OverridePatrolMontageID",
+      "MontageID": "Think_End",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_Bai'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Bai/BT_Npc_Bai.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Npc_Bai:BTComposite_Sequence_10'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Bai/BT_Npc_Bai.6"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_1",
+    "Outer": "BT_Npc_Bai",
+    "Class": "UScriptClass'BTTask_Wait'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "WaitTime": 2.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_Bai'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Bai/BT_Npc_Bai.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Npc_Bai:BTComposite_Selector_4'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Bai/BT_Npc_Bai.2"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_2",
+    "Outer": "BT_Npc_Bai",
+    "Class": "UScriptClass'BTTask_Wait'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "WaitTime": 1.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_Bai'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Bai/BT_Npc_Bai.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Npc_Bai:BTComposite_Sequence_10'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Bai/BT_Npc_Bai.6"
+      }
+    }
+  }
+]

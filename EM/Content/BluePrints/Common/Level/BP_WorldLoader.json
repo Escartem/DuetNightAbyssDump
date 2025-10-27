@@ -1,0 +1,329 @@
+[
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_BP_WorldLoader",
+    "Outer": "BP_WorldLoader_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "K2Node_Event_DeltaSeconds",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction"
+  },
+  {
+    "Type": "Function",
+    "Name": "ReceiveTick",
+    "Outer": "BP_WorldLoader_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "SuperStruct": {
+      "ObjectName": "Function'Actor:ReceiveTick'",
+      "ObjectPath": "/Script/Engine"
+    },
+    "ChildProperties": [
+      {
+        "Type": "FloatProperty",
+        "Name": "DeltaSeconds",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "ReceiveBeginPlay",
+    "Outer": "BP_WorldLoader_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "SuperStruct": {
+      "ObjectName": "Function'Actor:ReceiveBeginPlay'",
+      "ObjectPath": "/Script/Engine"
+    },
+    "FunctionFlags": "FUNC_Event | FUNC_Protected | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "GetLevelPathfindingComponent",
+    "Outer": "BP_WorldLoader_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "SuperStruct": {
+      "ObjectName": "Function'EMLevelLoader:GetLevelPathfindingComponent'",
+      "ObjectPath": "/Script/EM"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "Parm | OutParm | ReturnParm | InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'LevelPathfindingComponent'",
+          "ObjectPath": "/Script/EM"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsWorldCompositionEnabled_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_HasOutParms | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "GetModuleName",
+    "Outer": "BP_WorldLoader_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "ChildProperties": [
+      {
+        "Type": "StrProperty",
+        "Name": "ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "Parm | OutParm | ReturnParm"
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_HasOutParms | FUNC_BlueprintCallable | FUNC_BlueprintEvent | FUNC_Const"
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BP_WorldLoader_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BP_WorldLoader_C:SimpleConstructionScript_0'",
+        "ObjectPath": "EM/Content/BluePrints/Common/Level/BP_WorldLoader.11"
+      },
+      "UberGraphFunction": {
+        "ObjectName": "Function'BP_WorldLoader_C:ExecuteUbergraph_BP_WorldLoader'",
+        "ObjectPath": "EM/Content/BluePrints/Common/Level/BP_WorldLoader.0"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'WorldLoader'",
+      "ObjectPath": "/Script/EM"
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'BP_WorldLoader_C:GetModuleName'",
+        "ObjectPath": "EM/Content/BluePrints/Common/Level/BP_WorldLoader.4"
+      },
+      {
+        "ObjectName": "Function'BP_WorldLoader_C:GetLevelPathfindingComponent'",
+        "ObjectPath": "EM/Content/BluePrints/Common/Level/BP_WorldLoader.3"
+      },
+      {
+        "ObjectName": "Function'BP_WorldLoader_C:ReceiveBeginPlay'",
+        "ObjectPath": "EM/Content/BluePrints/Common/Level/BP_WorldLoader.2"
+      },
+      {
+        "ObjectName": "Function'BP_WorldLoader_C:ReceiveTick'",
+        "ObjectPath": "EM/Content/BluePrints/Common/Level/BP_WorldLoader.1"
+      },
+      {
+        "ObjectName": "Function'BP_WorldLoader_C:ExecuteUbergraph_BP_WorldLoader'",
+        "ObjectPath": "EM/Content/BluePrints/Common/Level/BP_WorldLoader.0"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient",
+        "Struct": {
+          "ObjectName": "ScriptStruct'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "LevelPathfinding",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'LevelPathfindingComponent'",
+          "ObjectPath": "/Script/EM"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "DefaultSceneRoot",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'SceneComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_BP_WorldLoader": {
+        "ObjectName": "Function'BP_WorldLoader_C:ExecuteUbergraph_BP_WorldLoader'",
+        "ObjectPath": "EM/Content/BluePrints/Common/Level/BP_WorldLoader.0"
+      },
+      "ReceiveTick": {
+        "ObjectName": "Function'BP_WorldLoader_C:ReceiveTick'",
+        "ObjectPath": "EM/Content/BluePrints/Common/Level/BP_WorldLoader.1"
+      },
+      "ReceiveBeginPlay": {
+        "ObjectName": "Function'BP_WorldLoader_C:ReceiveBeginPlay'",
+        "ObjectPath": "EM/Content/BluePrints/Common/Level/BP_WorldLoader.2"
+      },
+      "GetLevelPathfindingComponent": {
+        "ObjectName": "Function'BP_WorldLoader_C:GetLevelPathfindingComponent'",
+        "ObjectPath": "EM/Content/BluePrints/Common/Level/BP_WorldLoader.3"
+      },
+      "GetModuleName": {
+        "ObjectName": "Function'BP_WorldLoader_C:GetModuleName'",
+        "ObjectPath": "EM/Content/BluePrints/Common/Level/BP_WorldLoader.4"
+      }
+    },
+    "ClassFlags": "CLASS_Config | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "Interfaces": [
+      {
+        "Class": {
+          "ObjectName": "Class'UnLuaInterface'",
+          "ObjectPath": "/Script/UnLua"
+        },
+        "PointerOffset": 0,
+        "bImplementedByK2": true
+      }
+    ],
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BP_WorldLoader_C'Default__BP_WorldLoader_C'",
+      "ObjectPath": "EM/Content/BluePrints/Common/Level/BP_WorldLoader.6"
+    }
+  },
+  {
+    "Type": "BP_WorldLoader_C",
+    "Name": "Default__BP_WorldLoader_C",
+    "Class": "BlueprintGeneratedClass'EM/Content/BluePrints/Common/Level/BP_WorldLoader.BP_WorldLoader_C'",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "UberGraphFrame": {},
+      "PrimaryActorTick": {
+        "bCanEverTick": true
+      }
+    }
+  },
+  {
+    "Type": "LevelPathfindingComponent",
+    "Name": "LevelPathfinding_GEN_VARIABLE",
+    "Outer": "BP_WorldLoader_C",
+    "Class": "UScriptClass'LevelPathfindingComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Outer": "BP_WorldLoader_C",
+    "Class": "UScriptClass'SceneComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BP_WorldLoader_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "EM/Content/BluePrints/Common/Level/BP_WorldLoader.8"
+      },
+      "VariableGuid": "42DA8CC4-4384D628-CA31AC80-A590E37F",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_1",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'LevelPathfindingComponent'",
+        "ObjectPath": "/Script/EM"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "LevelPathfindingComponent'BP_WorldLoader_C:LevelPathfinding_GEN_VARIABLE'",
+        "ObjectPath": "EM/Content/BluePrints/Common/Level/BP_WorldLoader.7"
+      },
+      "VariableGuid": "952AA9CC-4C65D2B7-A789D7B0-FB92E3F1",
+      "InternalVariableName": "LevelPathfinding"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Outer": "BP_WorldLoader_C",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_WorldLoader_C:SimpleConstructionScript_0.SCS_Node_0'",
+          "ObjectPath": "EM/Content/BluePrints/Common/Level/BP_WorldLoader.9"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_WorldLoader_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "EM/Content/BluePrints/Common/Level/BP_WorldLoader.10"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_WorldLoader_C:SimpleConstructionScript_0.SCS_Node_0'",
+          "ObjectPath": "EM/Content/BluePrints/Common/Level/BP_WorldLoader.9"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_WorldLoader_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "EM/Content/BluePrints/Common/Level/BP_WorldLoader.10"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BP_WorldLoader_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "EM/Content/BluePrints/Common/Level/BP_WorldLoader.9"
+      }
+    }
+  }
+]

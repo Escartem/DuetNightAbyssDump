@@ -1,0 +1,147 @@
+[
+  {
+    "Type": "Function",
+    "Name": "GetBPSoundPointCompParam",
+    "Outer": "BP_Sound_3d_Component_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "SuperStruct": {
+      "ObjectName": "Function'SoundPointComponent:GetBPSoundPointCompParam'",
+      "ObjectPath": "/Script/EM"
+    },
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "PropertyFlags": "Parm | OutParm | ReturnParm",
+        "Struct": {
+          "ObjectName": "ScriptStruct'SoundPointCompParam'",
+          "ObjectPath": "/Script/EM"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_MakeStruct_SoundPointCompParam",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "ScriptStruct'SoundPointCompParam'",
+          "ObjectPath": "/Script/EM"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_HasOutParms | FUNC_HasDefaults | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BP_Sound_3d_Component_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "SuperStruct": {
+      "ObjectName": "Class'SoundPointComponent'",
+      "ObjectPath": "/Script/EM"
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'BP_Sound_3d_Component_C:GetBPSoundPointCompParam'",
+        "ObjectPath": "EM/Content/BluePrints/Managers/AudioManagerComponent/BP_Sound_3d_Component.0"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "event",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | ExposeOnSpawn",
+        "PropertyClass": {
+          "ObjectName": "Class'FMODEvent'",
+          "ObjectPath": "/Script/FMODStudio"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "overrideDistance",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "PropertyFlags": "Edit | BlueprintVisible | ExposeOnSpawn",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "distance",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Edit | BlueprintVisible | ExposeOnSpawn",
+        "Struct": {
+          "ObjectName": "ScriptStruct'FloatRange'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "loudRatio",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "Edit | BlueprintVisible"
+      }
+    ],
+    "FuncMap": {
+      "GetBPSoundPointCompParam": {
+        "ObjectName": "Function'BP_Sound_3d_Component_C:GetBPSoundPointCompParam'",
+        "ObjectPath": "EM/Content/BluePrints/Managers/AudioManagerComponent/BP_Sound_3d_Component.0"
+      }
+    },
+    "ClassFlags": "CLASS_Config | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_DefaultToInstanced | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BP_Sound_3d_Component_C'Default__BP_Sound_3d_Component_C'",
+      "ObjectPath": "EM/Content/BluePrints/Managers/AudioManagerComponent/BP_Sound_3d_Component.2"
+    }
+  },
+  {
+    "Type": "BP_Sound_3d_Component_C",
+    "Name": "Default__BP_Sound_3d_Component_C",
+    "Class": "BlueprintGeneratedClass'EM/Content/BluePrints/Managers/AudioManagerComponent/BP_Sound_3d_Component.BP_Sound_3d_Component_C'",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "distance": {
+        "LowerBound": {
+          "Type": "ERangeBoundTypes::Exclusive",
+          "Value": 0.0
+        },
+        "UpperBound": {
+          "Type": "ERangeBoundTypes::Exclusive",
+          "Value": 0.0
+        }
+      },
+      "loudRatio": 1.0,
+      "ConditionComp": {
+        "ObjectName": "AuPlayConditionComponent'Default__BP_Sound_3d_Component_C:ConditionComp'",
+        "ObjectPath": "EM/Content/BluePrints/Managers/AudioManagerComponent/BP_Sound_3d_Component.3"
+      },
+      "PrimaryComponentTick": {
+        "TickInterval": 1000.0
+      }
+    }
+  },
+  {
+    "Type": "AuPlayConditionComponent",
+    "Name": "ConditionComp",
+    "Outer": "Default__BP_Sound_3d_Component_C",
+    "Class": "UScriptClass'AuPlayConditionComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
+  }
+]

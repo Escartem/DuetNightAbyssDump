@@ -1,0 +1,146 @@
+[
+  {
+    "Type": "BehaviorTree",
+    "Name": "BT_8Shenfu_Attack",
+    "Class": "UScriptClass'BehaviorTree'",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "RootNode": {
+        "ObjectName": "BTComposite_Rate'BT_8Shenfu_Attack:BTComposite_Rate_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jh_Shenfu/BT_8Shenfu_Attack.1"
+      },
+      "BlackboardAsset": {
+        "ObjectName": "BlackboardData'BB_Mon_Parent_Ranged'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Parent/BB_Mon_Parent_Ranged.0"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Rate",
+    "Name": "BTComposite_Rate_0",
+    "Outer": "BT_8Shenfu_Attack",
+    "Class": "UScriptClass'BTComposite_Rate'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Rates": [
+        1,
+        1
+      ],
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_8Shenfu_Attack:BTComposite_Sequence_1'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jh_Shenfu/BT_8Shenfu_Attack.2"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_8Shenfu_Attack:BTComposite_Sequence_2'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jh_Shenfu/BT_8Shenfu_Attack.3"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_8Shenfu_Attack'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jh_Shenfu/BT_8Shenfu_Attack.0"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_1",
+    "Outer": "BT_8Shenfu_Attack",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_UseSkill'BT_8Shenfu_Attack:BTTask_UseSkill_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jh_Shenfu/BT_8Shenfu_Attack.4"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_8Shenfu_Attack'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jh_Shenfu/BT_8Shenfu_Attack.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Rate'BT_8Shenfu_Attack:BTComposite_Rate_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jh_Shenfu/BT_8Shenfu_Attack.1"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_2",
+    "Outer": "BT_8Shenfu_Attack",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_UseSkill'BT_8Shenfu_Attack:BTTask_UseSkill_1'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jh_Shenfu/BT_8Shenfu_Attack.5"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_8Shenfu_Attack'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jh_Shenfu/BT_8Shenfu_Attack.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Rate'BT_8Shenfu_Attack:BTComposite_Rate_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jh_Shenfu/BT_8Shenfu_Attack.1"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_UseSkill",
+    "Name": "BTTask_UseSkill_0",
+    "Outer": "BT_8Shenfu_Attack",
+    "Class": "UScriptClass'BTTask_UseSkill'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_8Shenfu_Attack'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jh_Shenfu/BT_8Shenfu_Attack.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_8Shenfu_Attack:BTComposite_Sequence_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jh_Shenfu/BT_8Shenfu_Attack.2"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_UseSkill",
+    "Name": "BTTask_UseSkill_1",
+    "Outer": "BT_8Shenfu_Attack",
+    "Class": "UScriptClass'BTTask_UseSkill'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SkillId": 2,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_8Shenfu_Attack'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jh_Shenfu/BT_8Shenfu_Attack.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_8Shenfu_Attack:BTComposite_Sequence_2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jh_Shenfu/BT_8Shenfu_Attack.3"
+      }
+    }
+  }
+]

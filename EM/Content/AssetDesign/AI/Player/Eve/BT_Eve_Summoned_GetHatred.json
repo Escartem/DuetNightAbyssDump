@@ -1,0 +1,279 @@
+[
+  {
+    "Type": "BehaviorTree",
+    "Name": "BT_Eve_Summoned_GetHatred",
+    "Class": "UScriptClass'BehaviorTree'",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "RootNode": {
+        "ObjectName": "BTComposite_Selector'BT_Eve_Summoned_GetHatred:BTComposite_Selector_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_GetHatred.1"
+      },
+      "BlackboardAsset": {
+        "ObjectName": "BlackboardData'BB_Mon_Parent_Ranged'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Parent/BB_Mon_Parent_Ranged.0"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_0",
+    "Outer": "BT_Eve_Summoned_GetHatred",
+    "Class": "UScriptClass'BTComposite_Selector'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_Eve_Summoned_GetHatred:BTComposite_Sequence_6'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_GetHatred.3"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_Eve_Summoned_GetHatred:BTComposite_Sequence_1'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_GetHatred.2"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait'BT_Eve_Summoned_GetHatred:BTTask_Wait_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_GetHatred.10"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Eve_Summoned_GetHatred'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_GetHatred.0"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_1",
+    "Outer": "BT_Eve_Summoned_GetHatred",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_FilterTargetsByDis'BT_Eve_Summoned_GetHatred:BTTask_FilterTargetsByDis_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_GetHatred.4"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_FilterTargetsByLiving'BT_Eve_Summoned_GetHatred:BTTask_FilterTargetsByLiving_1'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_GetHatred.7"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_LastFilterTargets'BT_Eve_Summoned_GetHatred:BTTask_LastFilterTargets_2'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_GetHatred.8"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Eve_Summoned_GetHatred'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_GetHatred.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Eve_Summoned_GetHatred:BTComposite_Selector_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_GetHatred.1"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_6",
+    "Outer": "BT_Eve_Summoned_GetHatred",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_FilterTargetsByDis'BT_Eve_Summoned_GetHatred:BTTask_FilterTargetsByDis_1'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_GetHatred.5"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_FilterTargetsByLiving'BT_Eve_Summoned_GetHatred:BTTask_FilterTargetsByLiving_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_GetHatred.6"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_LastFilterTargets'BT_Eve_Summoned_GetHatred:BTTask_LastFilterTargets_3'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_GetHatred.9"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Eve_Summoned_GetHatred'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_GetHatred.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Eve_Summoned_GetHatred:BTComposite_Selector_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_GetHatred.1"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_FilterTargetsByDis",
+    "Name": "BTTask_FilterTargetsByDis_0",
+    "Outer": "BT_Eve_Summoned_GetHatred",
+    "Class": "UScriptClass'BTTask_FilterTargetsByDis'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "MaxDis": 2000.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Eve_Summoned_GetHatred'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_GetHatred.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Eve_Summoned_GetHatred:BTComposite_Sequence_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_GetHatred.2"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_FilterTargetsByDis",
+    "Name": "BTTask_FilterTargetsByDis_1",
+    "Outer": "BT_Eve_Summoned_GetHatred",
+    "Class": "UScriptClass'BTTask_FilterTargetsByDis'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "MaxDis": 1000.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Eve_Summoned_GetHatred'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_GetHatred.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Eve_Summoned_GetHatred:BTComposite_Sequence_6'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_GetHatred.3"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_FilterTargetsByLiving",
+    "Name": "BTTask_FilterTargetsByLiving_0",
+    "Outer": "BT_Eve_Summoned_GetHatred",
+    "Class": "UScriptClass'BTTask_FilterTargetsByLiving'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TypeOfFilterList": "ETypeOfFilterList::AfterFilter",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Eve_Summoned_GetHatred'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_GetHatred.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Eve_Summoned_GetHatred:BTComposite_Sequence_6'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_GetHatred.3"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_FilterTargetsByLiving",
+    "Name": "BTTask_FilterTargetsByLiving_1",
+    "Outer": "BT_Eve_Summoned_GetHatred",
+    "Class": "UScriptClass'BTTask_FilterTargetsByLiving'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TypeOfFilterList": "ETypeOfFilterList::AfterFilter",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Eve_Summoned_GetHatred'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_GetHatred.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Eve_Summoned_GetHatred:BTComposite_Sequence_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_GetHatred.2"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_LastFilterTargets",
+    "Name": "BTTask_LastFilterTargets_2",
+    "Outer": "BT_Eve_Summoned_GetHatred",
+    "Class": "UScriptClass'BTTask_LastFilterTargets'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TypeOfFilter": "ELastTargetFilterType::TargetFilterMaxHatredValue",
+      "TypeOfFilterList": "ETypeOfFilterList::AfterFilter",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Eve_Summoned_GetHatred'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_GetHatred.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Eve_Summoned_GetHatred:BTComposite_Sequence_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_GetHatred.2"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_LastFilterTargets",
+    "Name": "BTTask_LastFilterTargets_3",
+    "Outer": "BT_Eve_Summoned_GetHatred",
+    "Class": "UScriptClass'BTTask_LastFilterTargets'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TypeOfFilterList": "ETypeOfFilterList::AfterFilter",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Eve_Summoned_GetHatred'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_GetHatred.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Eve_Summoned_GetHatred:BTComposite_Sequence_6'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_GetHatred.3"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_0",
+    "Outer": "BT_Eve_Summoned_GetHatred",
+    "Class": "UScriptClass'BTTask_Wait'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "WaitTime": 0.1,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Eve_Summoned_GetHatred'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_GetHatred.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Eve_Summoned_GetHatred:BTComposite_Selector_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_GetHatred.1"
+      }
+    }
+  }
+]

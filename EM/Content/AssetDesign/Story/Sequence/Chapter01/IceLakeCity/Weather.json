@@ -1,0 +1,413 @@
+[
+  {
+    "Type": "LevelSequence",
+    "Name": "Weather",
+    "Class": "UScriptClass'LevelSequence'",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "MovieScene": {
+        "ObjectName": "MovieScene'Weather:MovieScene_0'",
+        "ObjectPath": "EM/Content/AssetDesign/Story/Sequence/Chapter01/IceLakeCity/Weather.1"
+      },
+      "CompiledData": {
+        "ObjectName": "MovieSceneCompiledData'Weather:CompiledData'",
+        "ObjectPath": "EM/Content/AssetDesign/Story/Sequence/Chapter01/IceLakeCity/Weather.8"
+      },
+      "Signature": "7BD5B52B-4F7E4CFF-C1351BA1-A2882C40"
+    }
+  },
+  {
+    "Type": "MovieScene",
+    "Name": "MovieScene_0",
+    "Outer": "Weather",
+    "Class": "UScriptClass'MovieScene'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Spawnables": [
+        {
+          "SpawnTransform": {
+            "Rotation": {
+              "X": 0.0,
+              "Y": 0.0,
+              "Z": 0.0,
+              "W": 1.0,
+              "IsNormalized": true,
+              "Size": 1.0,
+              "SizeSquared": 1.0
+            },
+            "Translation": {
+              "X": 0.0,
+              "Y": 0.0,
+              "Z": 0.0
+            },
+            "Scale3D": {
+              "X": 1.0,
+              "Y": 1.0,
+              "Z": 1.0
+            }
+          },
+          "Tags": [],
+          "bContinuouslyRespawn": false,
+          "bNetAddressableName": false,
+          "bEvaluateTracksWhenNotSpawned": false,
+          "Guid": "B5F362A2-4D9CA6DF-B31316A7-4249BA8C",
+          "Name": "Sequence Weather Actor C",
+          "ObjectTemplate": {
+            "ObjectName": "SequenceWeatherActor_C'Weather:MovieScene_0.SequenceWeatherActor_C_0'",
+            "ObjectPath": "EM/Content/AssetDesign/Story/Sequence/Chapter01/IceLakeCity/Weather.11"
+          },
+          "ChildPossessables": [],
+          "Ownership": "ESpawnOwnership::InnerSequence",
+          "LevelName": "None"
+        }
+      ],
+      "ObjectBindings": [
+        {
+          "ObjectGuid": "B5F362A2-4D9CA6DF-B31316A7-4249BA8C",
+          "BindingName": "Sequence Weather Actor C",
+          "Tracks": [
+            {
+              "ObjectName": "MovieSceneSpawnTrack'Weather:MovieScene_0.MovieSceneSpawnTrack_0'",
+              "ObjectPath": "EM/Content/AssetDesign/Story/Sequence/Chapter01/IceLakeCity/Weather.10"
+            },
+            {
+              "ObjectName": "MovieSceneByteTrack'Weather:MovieScene_0.MovieSceneByteTrack_1'",
+              "ObjectPath": "EM/Content/AssetDesign/Story/Sequence/Chapter01/IceLakeCity/Weather.7"
+            }
+          ]
+        }
+      ],
+      "PlaybackRange": {
+        "Value": {
+          "LowerBound": {
+            "Type": 1,
+            "Value": {
+              "Value": 0
+            }
+          },
+          "UpperBound": {
+            "Type": 0,
+            "Value": {
+              "Value": 24000
+            }
+          }
+        }
+      },
+      "TickResolution": {
+        "Numerator": 24000
+      },
+      "DisplayRate": {
+        "Numerator": 30
+      },
+      "Signature": "9773D8C4-4EE7B60D-AD68DA9F-127B2692"
+    }
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseInFunction",
+    "Outer": "MovieSceneByteSection_0",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseOutFunction",
+    "Outer": "MovieSceneByteSection_0",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseInFunction",
+    "Outer": "MovieSceneSpawnSection_0",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "MovieSceneBuiltInEasingFunction",
+    "Name": "EaseOutFunction",
+    "Outer": "MovieSceneSpawnSection_0",
+    "Class": "UScriptClass'MovieSceneBuiltInEasingFunction'",
+    "Flags": "RF_Public | RF_Transactional | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "MovieSceneByteSection",
+    "Name": "MovieSceneByteSection_0",
+    "Outer": "MovieSceneByteTrack_1",
+    "Class": "UScriptClass'MovieSceneByteSection'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ByteCurve": {
+        "DefaultValue": 3,
+        "bHasDefaultValue": true,
+        "Enum": {
+          "ObjectName": "Enum'EWeatherType'",
+          "ObjectPath": "/Script/EM"
+        }
+      },
+      "Easing": {
+        "EaseIn": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'Weather:MovieScene_0.MovieSceneByteTrack_1.MovieSceneByteSection_0.EaseInFunction'",
+          "ObjectPath": "EM/Content/AssetDesign/Story/Sequence/Chapter01/IceLakeCity/Weather.2"
+        },
+        "EaseOut": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'Weather:MovieScene_0.MovieSceneByteTrack_1.MovieSceneByteSection_0.EaseOutFunction'",
+          "ObjectPath": "EM/Content/AssetDesign/Story/Sequence/Chapter01/IceLakeCity/Weather.3"
+        }
+      },
+      "SectionRange": {
+        "Value": {
+          "LowerBound": {
+            "Type": 2,
+            "Value": {
+              "Value": 0
+            }
+          },
+          "UpperBound": {
+            "Type": 2,
+            "Value": {
+              "Value": 0
+            }
+          }
+        }
+      },
+      "Signature": "EAEC1BC1-4238E069-9DB584AF-4DF87CB2"
+    }
+  },
+  {
+    "Type": "MovieSceneByteTrack",
+    "Name": "MovieSceneByteTrack_1",
+    "Outer": "MovieScene_0",
+    "Class": "UScriptClass'MovieSceneByteTrack'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Enum": {
+        "ObjectName": "Enum'EWeatherType'",
+        "ObjectPath": "/Script/EM"
+      },
+      "PropertyBinding": {
+        "PropertyName": "Weather",
+        "PropertyPath": "Weather",
+        "bCanUseClassLookup": true
+      },
+      "Sections": [
+        {
+          "ObjectName": "MovieSceneByteSection'Weather:MovieScene_0.MovieSceneByteTrack_1.MovieSceneByteSection_0'",
+          "ObjectPath": "EM/Content/AssetDesign/Story/Sequence/Chapter01/IceLakeCity/Weather.6"
+        }
+      ],
+      "EvaluationFieldGuid": "6A42582F-438E5FFD-5E176CAA-DCC99006",
+      "EvaluationField": {
+        "Entries": [
+          {
+            "Section": {
+              "ObjectName": "MovieSceneByteSection'Weather:MovieScene_0.MovieSceneByteTrack_1.MovieSceneByteSection_0'",
+              "ObjectPath": "EM/Content/AssetDesign/Story/Sequence/Chapter01/IceLakeCity/Weather.6"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Open",
+                "Value": {
+                  "Value": 0
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Open",
+                "Value": {
+                  "Value": 0
+                }
+              }
+            },
+            "ForcedTime": {
+              "Value": -2147483648
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          }
+        ]
+      },
+      "Signature": "6A42582F-438E5FFD-5E176CAA-DCC99006"
+    }
+  },
+  {
+    "Type": "MovieSceneCompiledData",
+    "Name": "CompiledData",
+    "Outer": "Weather",
+    "Class": "UScriptClass'MovieSceneCompiledData'",
+    "Flags": "RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "EntityComponentField": {
+        "PersistentEntityTree": {
+          "SerializedData": {
+            "Data": {
+              "Entries": [
+                {
+                  "StartIndex": 0,
+                  "Size": 2,
+                  "Capacity": 2
+                }
+              ],
+              "Items": [
+                {
+                  "EntityIndex": 0,
+                  "MetaDataIndex": -1
+                },
+                {
+                  "EntityIndex": 1,
+                  "MetaDataIndex": -1
+                }
+              ]
+            },
+            "RootNode": {
+              "Range": {
+                "LowerBound": {
+                  "Type": 2,
+                  "Value": {
+                    "Value": 0
+                  }
+                },
+                "UpperBound": {
+                  "Type": 2,
+                  "Value": {
+                    "Value": 0
+                  }
+                }
+              },
+              "Parent": {
+                "ChildrenHandle": {
+                  "EntryIndex": -1
+                },
+                "Index": -1
+              },
+              "ChildrenID": {
+                "EntryIndex": -1
+              },
+              "DataID": {
+                "EntryIndex": 0
+              }
+            },
+            "ChildNodes": {
+              "Entries": [],
+              "Items": []
+            }
+          }
+        },
+        "Entities": [
+          {
+            "Key": {
+              "EntityOwner": {
+                "ObjectName": "MovieSceneSpawnSection'Weather:MovieScene_0.MovieSceneSpawnTrack_0.MovieSceneSpawnSection_0'",
+                "ObjectPath": "EM/Content/AssetDesign/Story/Sequence/Chapter01/IceLakeCity/Weather.9"
+              },
+              "EntityID": 0
+            },
+            "SharedMetaDataIndex": 0
+          },
+          {
+            "Key": {
+              "EntityOwner": {
+                "ObjectName": "MovieSceneByteSection'Weather:MovieScene_0.MovieSceneByteTrack_1.MovieSceneByteSection_0'",
+                "ObjectPath": "EM/Content/AssetDesign/Story/Sequence/Chapter01/IceLakeCity/Weather.6"
+              },
+              "EntityID": 0
+            },
+            "SharedMetaDataIndex": 1
+          }
+        ],
+        "SharedMetaData": [
+          {
+            "ObjectBindingID": "B5F362A2-4D9CA6DF-B31316A7-4249BA8C"
+          },
+          {
+            "ObjectBindingID": "B5F362A2-4D9CA6DF-B31316A7-4249BA8C"
+          }
+        ]
+      },
+      "CompiledSignature": "7BD5B52B-4F7E4CFF-C1351BA1-A2882C40",
+      "CompilerVersion": "7D4B9809-2FAC4A6B-964ECF72-D8279EF8",
+      "AccumulatedMask": {
+        "bEntityComponentField": true
+      },
+      "AllocatedMask": {
+        "bEntityComponentField": true
+      }
+    }
+  },
+  {
+    "Type": "MovieSceneSpawnSection",
+    "Name": "MovieSceneSpawnSection_0",
+    "Outer": "MovieSceneSpawnTrack_0",
+    "Class": "UScriptClass'MovieSceneSpawnSection'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Easing": {
+        "EaseIn": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'Weather:MovieScene_0.MovieSceneSpawnTrack_0.MovieSceneSpawnSection_0.EaseInFunction'",
+          "ObjectPath": "EM/Content/AssetDesign/Story/Sequence/Chapter01/IceLakeCity/Weather.4"
+        },
+        "EaseOut": {
+          "ObjectName": "MovieSceneBuiltInEasingFunction'Weather:MovieScene_0.MovieSceneSpawnTrack_0.MovieSceneSpawnSection_0.EaseOutFunction'",
+          "ObjectPath": "EM/Content/AssetDesign/Story/Sequence/Chapter01/IceLakeCity/Weather.5"
+        }
+      },
+      "Signature": "0FBC5423-49BE7A7B-EDB2B3BC-77A1A7AC"
+    }
+  },
+  {
+    "Type": "MovieSceneSpawnTrack",
+    "Name": "MovieSceneSpawnTrack_0",
+    "Outer": "MovieScene_0",
+    "Class": "UScriptClass'MovieSceneSpawnTrack'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Sections": [
+        {
+          "ObjectName": "MovieSceneSpawnSection'Weather:MovieScene_0.MovieSceneSpawnTrack_0.MovieSceneSpawnSection_0'",
+          "ObjectPath": "EM/Content/AssetDesign/Story/Sequence/Chapter01/IceLakeCity/Weather.9"
+        }
+      ],
+      "EvaluationFieldGuid": "06214BC9-4EBBFE04-D1595390-6A2C650D",
+      "EvaluationField": {
+        "Entries": [
+          {
+            "Section": {
+              "ObjectName": "MovieSceneSpawnSection'Weather:MovieScene_0.MovieSceneSpawnTrack_0.MovieSceneSpawnSection_0'",
+              "ObjectPath": "EM/Content/AssetDesign/Story/Sequence/Chapter01/IceLakeCity/Weather.9"
+            },
+            "Range": {
+              "LowerBound": {
+                "Type": "ERangeBoundTypes::Open",
+                "Value": {
+                  "Value": 0
+                }
+              },
+              "UpperBound": {
+                "Type": "ERangeBoundTypes::Open",
+                "Value": {
+                  "Value": 0
+                }
+              }
+            },
+            "ForcedTime": {
+              "Value": -2147483648
+            },
+            "Flags": "ESectionEvaluationFlags::None",
+            "LegacySortOrder": 0
+          }
+        ]
+      },
+      "Signature": "06214BC9-4EBBFE04-D1595390-6A2C650D"
+    }
+  },
+  {
+    "Type": "SequenceWeatherActor_C",
+    "Name": "SequenceWeatherActor_C_0",
+    "Outer": "MovieScene_0",
+    "Class": "BlueprintGeneratedClass'EM/Content/Asset/Scene/common/EnvirSystem/SequenceWeatherActor.SequenceWeatherActor_C'",
+    "Template": {
+      "ObjectName": "SequenceWeatherActor_C'Default__SequenceWeatherActor_C'",
+      "ObjectPath": "EM/Content/Asset/Scene/common/EnvirSystem/SequenceWeatherActor.8"
+    },
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted"
+  }
+]

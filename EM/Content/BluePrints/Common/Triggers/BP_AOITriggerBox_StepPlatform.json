@@ -1,0 +1,224 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BP_AOITriggerBox_StepPlatform_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Super": {
+      "ObjectName": "BlueprintGeneratedClass'BP_AOITriggerBox_C'",
+      "ObjectPath": "EM/Content/BluePrints/Common/Triggers/BP_AOITriggerBox.1"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BP_AOITriggerBox_StepPlatform_C:SimpleConstructionScript_0'",
+        "ObjectPath": "EM/Content/BluePrints/Common/Triggers/BP_AOITriggerBox_StepPlatform.7"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "BlueprintGeneratedClass'BP_AOITriggerBox_C'",
+      "ObjectPath": "EM/Content/BluePrints/Common/Triggers/BP_AOITriggerBox.1"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "BP_FXComponent",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'BP_FXComponent_C'",
+          "ObjectPath": "EM/Content/BluePrints/Char/BP_FXComponent.4"
+        }
+      },
+      {
+        "Type": "StrProperty",
+        "Name": "NiagPath_Halo",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance"
+      }
+    ],
+    "ClassFlags": "CLASS_Config | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BP_AOITriggerBox_StepPlatform_C'Default__BP_AOITriggerBox_StepPlatform_C'",
+      "ObjectPath": "EM/Content/BluePrints/Common/Triggers/BP_AOITriggerBox_StepPlatform.1"
+    }
+  },
+  {
+    "Type": "BP_AOITriggerBox_StepPlatform_C",
+    "Name": "Default__BP_AOITriggerBox_StepPlatform_C",
+    "Class": "BlueprintGeneratedClass'EM/Content/BluePrints/Common/Triggers/BP_AOITriggerBox_StepPlatform.BP_AOITriggerBox_StepPlatform_C'",
+    "Template": {
+      "ObjectName": "BP_AOITriggerBox_C'Default__BP_AOITriggerBox_C'",
+      "ObjectPath": "EM/Content/BluePrints/Common/Triggers/BP_AOITriggerBox.2"
+    },
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "NiagPath_Halo": "/Game/Asset/Effect/Niagara/Scene/Common/NS_Med_Working_01",
+      "TriggerActorType": "Mechanism",
+      "CollisionType": "WorldStatic",
+      "CollisionComponent": {
+        "ObjectName": "BoxComponent'Default__BP_AOITriggerBox_StepPlatform_C:CollisionComp'",
+        "ObjectPath": "EM/Content/BluePrints/Common/Triggers/BP_AOITriggerBox_StepPlatform.2"
+      },
+      "RootComponent": {
+        "ObjectName": "BoxComponent'Default__BP_AOITriggerBox_StepPlatform_C:CollisionComp'",
+        "ObjectPath": "EM/Content/BluePrints/Common/Triggers/BP_AOITriggerBox_StepPlatform.2"
+      }
+    }
+  },
+  {
+    "Type": "BoxComponent",
+    "Name": "CollisionComp",
+    "Outer": "Default__BP_AOITriggerBox_StepPlatform_C",
+    "Class": "UScriptClass'BoxComponent'",
+    "Template": {
+      "ObjectName": "BoxComponent'Default__BP_AOITriggerBox_C:CollisionComp'",
+      "ObjectPath": "EM/Content/BluePrints/Common/Triggers/BP_AOITriggerBox.3"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "BodyInstance": {
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "WorldStatic",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "WorldDynamic",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Pawn",
+              "Response": "ECR_Overlap"
+            },
+            {
+              "Channel": "Visibility",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Camera",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "PhysicsBody",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Vehicle",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Destructible",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Item",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "TraceExceptChar",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "MonsterPawn",
+              "Response": "ECR_Overlap"
+            },
+            {
+              "Channel": "BreakableItem",
+              "Response": "ECR_Ignore"
+            }
+          ]
+        }
+      }
+    }
+  },
+  {
+    "Type": "BP_FXComponent_C",
+    "Name": "BP_FXComponent_GEN_VARIABLE",
+    "Outer": "BP_AOITriggerBox_StepPlatform_C",
+    "Class": "BlueprintGeneratedClass'EM/Content/BluePrints/Char/BP_FXComponent.BP_FXComponent_C'",
+    "Template": {
+      "ObjectName": "BP_FXComponent_C'Default__BP_FXComponent_C'",
+      "ObjectPath": "EM/Content/BluePrints/Char/BP_FXComponent.5"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Outer": "BP_AOITriggerBox_StepPlatform_C",
+    "Class": "UScriptClass'SceneComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BP_AOITriggerBox_StepPlatform_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "EM/Content/BluePrints/Common/Triggers/BP_AOITriggerBox_StepPlatform.4"
+      },
+      "VariableGuid": "E01AEDFB-45192425-B5D9E38F-97376201",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_1",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "BlueprintGeneratedClass'BP_FXComponent_C'",
+        "ObjectPath": "EM/Content/BluePrints/Char/BP_FXComponent.4"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "BP_FXComponent_C'BP_AOITriggerBox_StepPlatform_C:BP_FXComponent_GEN_VARIABLE'",
+        "ObjectPath": "EM/Content/BluePrints/Common/Triggers/BP_AOITriggerBox_StepPlatform.3"
+      },
+      "VariableGuid": "5E9CAF20-4C618DED-CDB7EB9B-0E4534A6",
+      "InternalVariableName": "BP_FXComponent"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Outer": "BP_AOITriggerBox_StepPlatform_C",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_AOITriggerBox_StepPlatform_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "EM/Content/BluePrints/Common/Triggers/BP_AOITriggerBox_StepPlatform.6"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_AOITriggerBox_StepPlatform_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "EM/Content/BluePrints/Common/Triggers/BP_AOITriggerBox_StepPlatform.6"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BP_AOITriggerBox_StepPlatform_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "EM/Content/BluePrints/Common/Triggers/BP_AOITriggerBox_StepPlatform.5"
+      }
+    }
+  }
+]

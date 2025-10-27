@@ -1,0 +1,486 @@
+[
+  {
+    "Type": "BehaviorTree",
+    "Name": "BT_9Jiujiu_Reg",
+    "Class": "UScriptClass'BehaviorTree'",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "RootNode": {
+        "ObjectName": "BTComposite_Sequence'BT_9Jiujiu_Reg:BTComposite_Sequence_27'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Animal_Jiujiu/Region/BT_9Jiujiu_Reg.5"
+      },
+      "BlackboardAsset": {
+        "ObjectName": "BlackboardData'BB_Mon_Parent'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Parent/BB_Mon_Parent.0"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_1",
+    "Outer": "BT_9Jiujiu_Reg",
+    "Class": "UScriptClass'BTComposite_Selector'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_9Jiujiu_Reg:BTComposite_Sequence_2'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Animal_Jiujiu/Region/BT_9Jiujiu_Reg.4"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "Services": [
+        {
+          "ObjectName": "BTService_GetSurroundCharNum'BT_9Jiujiu_Reg:BTService_GetSurroundCharNum_1'",
+          "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Animal_Jiujiu/Region/BT_9Jiujiu_Reg.12"
+        }
+      ],
+      "NodeName": "JudgeSurroundMon",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_9Jiujiu_Reg'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Animal_Jiujiu/Region/BT_9Jiujiu_Reg.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_9Jiujiu_Reg:BTComposite_Selector_2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Animal_Jiujiu/Region/BT_9Jiujiu_Reg.2"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_2",
+    "Outer": "BT_9Jiujiu_Reg",
+    "Class": "UScriptClass'BTComposite_Selector'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_9Jiujiu_Reg:BTComposite_Sequence_1'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Animal_Jiujiu/Region/BT_9Jiujiu_Reg.3"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_9Jiujiu_Reg:BTDecorator_Blackboard_5'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Animal_Jiujiu/Region/BT_9Jiujiu_Reg.10"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_9Jiujiu_Reg:BTComposite_Sequence_3'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Animal_Jiujiu/Region/BT_9Jiujiu_Reg.6"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_9Jiujiu_Reg:BTDecorator_Blackboard_3'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Animal_Jiujiu/Region/BT_9Jiujiu_Reg.8"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector'BT_9Jiujiu_Reg:BTComposite_Selector_1'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Animal_Jiujiu/Region/BT_9Jiujiu_Reg.1"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_9Jiujiu_Reg:BTDecorator_Blackboard_12'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Animal_Jiujiu/Region/BT_9Jiujiu_Reg.7"
+            },
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_9Jiujiu_Reg:BTDecorator_Blackboard_4'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Animal_Jiujiu/Region/BT_9Jiujiu_Reg.9"
+            }
+          ],
+          "DecoratorOps": []
+        }
+      ],
+      "NodeName": "IsInRange?",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_9Jiujiu_Reg'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Animal_Jiujiu/Region/BT_9Jiujiu_Reg.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_9Jiujiu_Reg:BTComposite_Sequence_27'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Animal_Jiujiu/Region/BT_9Jiujiu_Reg.5"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_1",
+    "Outer": "BT_9Jiujiu_Reg",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_NewMoveTo'BT_9Jiujiu_Reg:BTTask_NewMoveTo_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Animal_Jiujiu/Region/BT_9Jiujiu_Reg.13"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_9Jiujiu_Reg'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Animal_Jiujiu/Region/BT_9Jiujiu_Reg.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_9Jiujiu_Reg:BTComposite_Selector_2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Animal_Jiujiu/Region/BT_9Jiujiu_Reg.2"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_2",
+    "Outer": "BT_9Jiujiu_Reg",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_UseSkill'BT_9Jiujiu_Reg:BTTask_UseSkill_2'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Animal_Jiujiu/Region/BT_9Jiujiu_Reg.16"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait'BT_9Jiujiu_Reg:BTTask_Wait_1'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Animal_Jiujiu/Region/BT_9Jiujiu_Reg.17"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_9Jiujiu_Reg'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Animal_Jiujiu/Region/BT_9Jiujiu_Reg.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_9Jiujiu_Reg:BTComposite_Selector_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Animal_Jiujiu/Region/BT_9Jiujiu_Reg.1"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_27",
+    "Outer": "BT_9Jiujiu_Reg",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_RunBehavior'BT_9Jiujiu_Reg:BTTask_RunBehavior_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Animal_Jiujiu/Region/BT_9Jiujiu_Reg.15"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector'BT_9Jiujiu_Reg:BTComposite_Selector_2'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Animal_Jiujiu/Region/BT_9Jiujiu_Reg.2"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "Services": [
+        {
+          "ObjectName": "BTService_BBValueDis'BT_9Jiujiu_Reg:BTService_BBValueDis_1'",
+          "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Animal_Jiujiu/Region/BT_9Jiujiu_Reg.11"
+        }
+      ],
+      "NodeName": "BattleInit",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_9Jiujiu_Reg'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Animal_Jiujiu/Region/BT_9Jiujiu_Reg.0"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_3",
+    "Outer": "BT_9Jiujiu_Reg",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_NewMoveTo'BT_9Jiujiu_Reg:BTTask_NewMoveTo_1'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Animal_Jiujiu/Region/BT_9Jiujiu_Reg.14"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_9Jiujiu_Reg'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Animal_Jiujiu/Region/BT_9Jiujiu_Reg.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_9Jiujiu_Reg:BTComposite_Selector_2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Animal_Jiujiu/Region/BT_9Jiujiu_Reg.2"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_12",
+    "Outer": "BT_9Jiujiu_Reg",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "CachedDescription": "Target is 已设置",
+      "NotifyObserver": "EBTBlackboardRestart::ValueChange",
+      "BlackboardKey": {
+        "SelectedKeyName": "Target"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_9Jiujiu_Reg'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Animal_Jiujiu/Region/BT_9Jiujiu_Reg.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_9Jiujiu_Reg:BTComposite_Selector_2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Animal_Jiujiu/Region/BT_9Jiujiu_Reg.2"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_3",
+    "Outer": "BT_9Jiujiu_Reg",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "CachedDescription": "TargetPlayerDead is 已设置",
+      "BlackboardKey": {
+        "SelectedKeyName": "TargetPlayerDead"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::Self",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_9Jiujiu_Reg'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Animal_Jiujiu/Region/BT_9Jiujiu_Reg.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_9Jiujiu_Reg:BTComposite_Selector_2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Animal_Jiujiu/Region/BT_9Jiujiu_Reg.2"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_4",
+    "Outer": "BT_9Jiujiu_Reg",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "FloatValue": 800.0,
+      "CachedDescription": "TickTargetDis 小于或等于 800.000000",
+      "OperationType": 3,
+      "BlackboardKey": {
+        "SelectedKeyName": "TickTargetDis"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_9Jiujiu_Reg'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Animal_Jiujiu/Region/BT_9Jiujiu_Reg.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_9Jiujiu_Reg:BTComposite_Selector_2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Animal_Jiujiu/Region/BT_9Jiujiu_Reg.2"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_5",
+    "Outer": "BT_9Jiujiu_Reg",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "CachedDescription": "TargetPlayerInvisible is 已设置",
+      "BlackboardKey": {
+        "SelectedKeyName": "TargetPlayerInvisible"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::Self",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_9Jiujiu_Reg'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Animal_Jiujiu/Region/BT_9Jiujiu_Reg.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_9Jiujiu_Reg:BTComposite_Selector_2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Animal_Jiujiu/Region/BT_9Jiujiu_Reg.2"
+      }
+    }
+  },
+  {
+    "Type": "BTService_BBValueDis",
+    "Name": "BTService_BBValueDis_1",
+    "Outer": "BT_9Jiujiu_Reg",
+    "Class": "UScriptClass'BTService_BBValueDis'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "BBName": "Target",
+      "Interval": 0.02,
+      "RandomDeviation": 0.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_9Jiujiu_Reg'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Animal_Jiujiu/Region/BT_9Jiujiu_Reg.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_9Jiujiu_Reg:BTComposite_Sequence_27'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Animal_Jiujiu/Region/BT_9Jiujiu_Reg.5"
+      }
+    }
+  },
+  {
+    "Type": "BTService_GetSurroundCharNum",
+    "Name": "BTService_GetSurroundCharNum_1",
+    "Outer": "BT_9Jiujiu_Reg",
+    "Class": "UScriptClass'BTService_GetSurroundCharNum'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TargetFilterCamp": "ETargetFilterCamp::FilterFriend",
+      "Radius": 300.0,
+      "BBName": "TargetSurroundCharNum",
+      "Interval": 0.1,
+      "RandomDeviation": 0.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_9Jiujiu_Reg'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Animal_Jiujiu/Region/BT_9Jiujiu_Reg.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_9Jiujiu_Reg:BTComposite_Selector_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Animal_Jiujiu/Region/BT_9Jiujiu_Reg.1"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_NewMoveTo",
+    "Name": "BTTask_NewMoveTo_0",
+    "Outer": "BT_9Jiujiu_Reg",
+    "Class": "UScriptClass'BTTask_NewMoveTo'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "bOrientRotationToMovement": true,
+      "MoveTypeState": "EMoveTypeState::MTS_Run",
+      "bStopOnOverlapNeedsUpdate": false,
+      "BlackboardKey": {
+        "SelectedKeyName": "BornLoc"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_9Jiujiu_Reg'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Animal_Jiujiu/Region/BT_9Jiujiu_Reg.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_9Jiujiu_Reg:BTComposite_Sequence_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Animal_Jiujiu/Region/BT_9Jiujiu_Reg.3"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_NewMoveTo",
+    "Name": "BTTask_NewMoveTo_1",
+    "Outer": "BT_9Jiujiu_Reg",
+    "Class": "UScriptClass'BTTask_NewMoveTo'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "bOrientRotationToMovement": true,
+      "MoveTypeState": "EMoveTypeState::MTS_Run",
+      "bStopOnOverlapNeedsUpdate": false,
+      "BlackboardKey": {
+        "SelectedKeyName": "BornLoc"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_9Jiujiu_Reg'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Animal_Jiujiu/Region/BT_9Jiujiu_Reg.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_9Jiujiu_Reg:BTComposite_Sequence_3'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Animal_Jiujiu/Region/BT_9Jiujiu_Reg.6"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_RunBehavior",
+    "Name": "BTTask_RunBehavior_0",
+    "Outer": "BT_9Jiujiu_Reg",
+    "Class": "UScriptClass'BTTask_RunBehavior'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "BehaviorAsset": {
+        "ObjectName": "BehaviorTree'BT_Common_GetHatred'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Parent/Parent_Common/BT_Common_GetHatred.0"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_9Jiujiu_Reg'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Animal_Jiujiu/Region/BT_9Jiujiu_Reg.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_9Jiujiu_Reg:BTComposite_Sequence_27'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Animal_Jiujiu/Region/BT_9Jiujiu_Reg.5"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_UseSkill",
+    "Name": "BTTask_UseSkill_2",
+    "Outer": "BT_9Jiujiu_Reg",
+    "Class": "UScriptClass'BTTask_UseSkill'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ContinueTime": 4.1,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_9Jiujiu_Reg'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Animal_Jiujiu/Region/BT_9Jiujiu_Reg.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_9Jiujiu_Reg:BTComposite_Sequence_2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Animal_Jiujiu/Region/BT_9Jiujiu_Reg.4"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_1",
+    "Outer": "BT_9Jiujiu_Reg",
+    "Class": "UScriptClass'BTTask_Wait'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "WaitTime": 0.3,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_9Jiujiu_Reg'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Animal_Jiujiu/Region/BT_9Jiujiu_Reg.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_9Jiujiu_Reg:BTComposite_Sequence_2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Animal_Jiujiu/Region/BT_9Jiujiu_Reg.4"
+      }
+    }
+  }
+]

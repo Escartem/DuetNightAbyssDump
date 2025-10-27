@@ -1,0 +1,137 @@
+[
+  {
+    "Type": "BehaviorTree",
+    "Name": "BT_Saiqi_Summoned",
+    "Class": "UScriptClass'BehaviorTree'",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "RootNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Saiqi_Summoned:BTComposite_Sequence_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Saiqi/BT_Saiqi_Summoned.1"
+      },
+      "BlackboardAsset": {
+        "ObjectName": "BlackboardData'BB_Shuimu_Summoned'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Shuimu/BB_Shuimu_Summoned.0"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_0",
+    "Outer": "BT_Saiqi_Summoned",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_UseSkill'BT_Saiqi_Summoned:BTTask_UseSkill_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Saiqi/BT_Saiqi_Summoned.3"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Loop'BT_Saiqi_Summoned:BTDecorator_Loop_2'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Player/Saiqi/BT_Saiqi_Summoned.2"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait'BT_Saiqi_Summoned:BTTask_Wait_1'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Saiqi/BT_Saiqi_Summoned.5"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_UseSkill'BT_Saiqi_Summoned:BTTask_UseSkill_1'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Saiqi/BT_Saiqi_Summoned.4"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Saiqi_Summoned'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Saiqi/BT_Saiqi_Summoned.0"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Loop",
+    "Name": "BTDecorator_Loop_2",
+    "Outer": "BT_Saiqi_Summoned",
+    "Class": "UScriptClass'BTDecorator_Loop'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "NumLoops": 2,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Saiqi_Summoned'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Saiqi/BT_Saiqi_Summoned.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Saiqi_Summoned:BTComposite_Sequence_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Saiqi/BT_Saiqi_Summoned.1"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_UseSkill",
+    "Name": "BTTask_UseSkill_0",
+    "Outer": "BT_Saiqi_Summoned",
+    "Class": "UScriptClass'BTTask_UseSkill'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ContinueTime": 3.4,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Saiqi_Summoned'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Saiqi/BT_Saiqi_Summoned.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Saiqi_Summoned:BTComposite_Sequence_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Saiqi/BT_Saiqi_Summoned.1"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_UseSkill",
+    "Name": "BTTask_UseSkill_1",
+    "Outer": "BT_Saiqi_Summoned",
+    "Class": "UScriptClass'BTTask_UseSkill'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SkillId": 2,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Saiqi_Summoned'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Saiqi/BT_Saiqi_Summoned.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Saiqi_Summoned:BTComposite_Sequence_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Saiqi/BT_Saiqi_Summoned.1"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_1",
+    "Outer": "BT_Saiqi_Summoned",
+    "Class": "UScriptClass'BTTask_Wait'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "WaitTime": 0.2,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Saiqi_Summoned'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Saiqi/BT_Saiqi_Summoned.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Saiqi_Summoned:BTComposite_Sequence_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Saiqi/BT_Saiqi_Summoned.1"
+      }
+    }
+  }
+]

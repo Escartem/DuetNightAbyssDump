@@ -1,0 +1,225 @@
+[
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_BTTask_UseSaveLoc",
+    "Outer": "BTTask_UseSaveLoc_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_Event_OwnerController",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'AIController'",
+          "ObjectPath": "/Script/AIModule"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_Event_ControlledPawn",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Pawn'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_DynamicCast_AsCharacter_Base",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'CharacterBase'",
+          "ObjectPath": "/Script/EM"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_DynamicCast_bSuccess",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "InterfaceProperty",
+        "Name": "CallFunc_GetSaveLoc_Source_CastInput",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "ConstParm | UObjectWrapper",
+        "InterfaceClass": {
+          "ObjectName": "Class'DataSetInterface'",
+          "ObjectPath": "/Script/EM"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_GetSaveLoc_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "Struct": {
+          "ObjectName": "ScriptStruct'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_K2_SetActorLocation_SweepHitResult",
+        "Flags": "RF_Public",
+        "ElementSize": 144,
+        "PropertyFlags": "ContainsInstancedReference",
+        "Struct": {
+          "ObjectName": "ScriptStruct'HitResult'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_K2_SetActorLocation_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction | FUNC_HasDefaults"
+  },
+  {
+    "Type": "Function",
+    "Name": "ReceiveExecuteAI",
+    "Outer": "BTTask_UseSaveLoc_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "SuperStruct": {
+      "ObjectName": "Function'BTTask_BlueprintBase:ReceiveExecuteAI'",
+      "ObjectPath": "/Script/AIModule"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "OwnerController",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "PropertyClass": {
+          "ObjectName": "Class'AIController'",
+          "ObjectPath": "/Script/AIModule"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "ControlledPawn",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "PropertyClass": {
+          "ObjectName": "Class'Pawn'",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Protected | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BTTask_UseSaveLoc_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Super": {
+      "ObjectName": "BlueprintGeneratedClass'BTTask_PhantomTestBase_C'",
+      "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/PhantomTest/BTTask_PhantomTestBase.0"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "UberGraphFunction": {
+        "ObjectName": "Function'BTTask_UseSaveLoc_C:ExecuteUbergraph_BTTask_UseSaveLoc'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/PhantomTest/BTTask_UseSaveLoc.0"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "BlueprintGeneratedClass'BTTask_PhantomTestBase_C'",
+      "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/PhantomTest/BTTask_PhantomTestBase.0"
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'BTTask_UseSaveLoc_C:ReceiveExecuteAI'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/PhantomTest/BTTask_UseSaveLoc.1"
+      },
+      {
+        "ObjectName": "Function'BTTask_UseSaveLoc_C:ExecuteUbergraph_BTTask_UseSaveLoc'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/PhantomTest/BTTask_UseSaveLoc.0"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient",
+        "Struct": {
+          "ObjectName": "ScriptStruct'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StrProperty",
+        "Name": "SaveLocTag",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Edit | BlueprintVisible"
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_BTTask_UseSaveLoc": {
+        "ObjectName": "Function'BTTask_UseSaveLoc_C:ExecuteUbergraph_BTTask_UseSaveLoc'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/PhantomTest/BTTask_UseSaveLoc.0"
+      },
+      "ReceiveExecuteAI": {
+        "ObjectName": "Function'BTTask_UseSaveLoc_C:ReceiveExecuteAI'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/PhantomTest/BTTask_UseSaveLoc.1"
+      }
+    },
+    "ClassFlags": "CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Game",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BTTask_UseSaveLoc_C'Default__BTTask_UseSaveLoc_C'",
+      "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/PhantomTest/BTTask_UseSaveLoc.3"
+    }
+  },
+  {
+    "Type": "BTTask_UseSaveLoc_C",
+    "Name": "Default__BTTask_UseSaveLoc_C",
+    "Class": "BlueprintGeneratedClass'EM/Content/AssetDesign/AI/Z_Misc_Test/PhantomTest/BTTask_UseSaveLoc.BTTask_UseSaveLoc_C'",
+    "Template": {
+      "ObjectName": "BTTask_PhantomTestBase_C'Default__BTTask_PhantomTestBase_C'",
+      "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/PhantomTest/BTTask_PhantomTestBase.1"
+    },
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "UberGraphFrame": {}
+    }
+  }
+]

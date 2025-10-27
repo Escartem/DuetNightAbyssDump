@@ -1,0 +1,165 @@
+[
+  {
+    "Type": "BehaviorTree",
+    "Name": "BT_BossOnline_Attack",
+    "Class": "UScriptClass'BehaviorTree'",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "RootNode": {
+        "ObjectName": "BTComposite_Sequence'BT_BossOnline_Attack:BTComposite_Sequence_2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/BossOnline_Test/BT_BossOnline_Attack.1"
+      },
+      "BlackboardAsset": {
+        "ObjectName": "BlackboardData'BB_BossOnline_Test'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/BossOnline_Test/BB_BossOnline_Test.0"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_2",
+    "Outer": "BT_BossOnline_Attack",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_NewMoveTo'BT_BossOnline_Attack:BTTask_NewMoveTo_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/BossOnline_Test/BT_BossOnline_Attack.4"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_ForceSuccess'BT_BossOnline_Attack:BTDecorator_ForceSuccess_0'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/BossOnline_Test/BT_BossOnline_Attack.2"
+            },
+            {
+              "ObjectName": "BTDecorator_TimeLimit'BT_BossOnline_Attack:BTDecorator_TimeLimit_0'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/BossOnline_Test/BT_BossOnline_Attack.3"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_UseSkill'BT_BossOnline_Attack:BTTask_UseSkill_5'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/BossOnline_Test/BT_BossOnline_Attack.5"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait'BT_BossOnline_Attack:BTTask_Wait_15'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/BossOnline_Test/BT_BossOnline_Attack.6"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_BossOnline_Attack'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/BossOnline_Test/BT_BossOnline_Attack.0"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_ForceSuccess",
+    "Name": "BTDecorator_ForceSuccess_0",
+    "Outer": "BT_BossOnline_Attack",
+    "Class": "UScriptClass'BTDecorator_ForceSuccess'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_BossOnline_Attack'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/BossOnline_Test/BT_BossOnline_Attack.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_BossOnline_Attack:BTComposite_Sequence_2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/BossOnline_Test/BT_BossOnline_Attack.1"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_TimeLimit",
+    "Name": "BTDecorator_TimeLimit_0",
+    "Outer": "BT_BossOnline_Attack",
+    "Class": "UScriptClass'BTDecorator_TimeLimit'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TimeLimit": 3.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_BossOnline_Attack'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/BossOnline_Test/BT_BossOnline_Attack.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_BossOnline_Attack:BTComposite_Sequence_2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/BossOnline_Test/BT_BossOnline_Attack.1"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_NewMoveTo",
+    "Name": "BTTask_NewMoveTo_0",
+    "Outer": "BT_BossOnline_Attack",
+    "Class": "UScriptClass'BTTask_NewMoveTo'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "bOrientRotationToMovement": true,
+      "MoveTypeState": "EMoveTypeState::MTS_Run",
+      "AcceptableRadius": 500.0,
+      "bStopOnOverlapNeedsUpdate": false,
+      "BlackboardKey": {
+        "SelectedKeyName": "Target"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_BossOnline_Attack'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/BossOnline_Test/BT_BossOnline_Attack.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_BossOnline_Attack:BTComposite_Sequence_2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/BossOnline_Test/BT_BossOnline_Attack.1"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_UseSkill",
+    "Name": "BTTask_UseSkill_5",
+    "Outer": "BT_BossOnline_Attack",
+    "Class": "UScriptClass'BTTask_UseSkill'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SkillId": 16,
+      "NodeName": "UseSkill16普攻",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_BossOnline_Attack'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/BossOnline_Test/BT_BossOnline_Attack.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_BossOnline_Attack:BTComposite_Sequence_2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/BossOnline_Test/BT_BossOnline_Attack.1"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_15",
+    "Outer": "BT_BossOnline_Attack",
+    "Class": "UScriptClass'BTTask_Wait'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "WaitTime": 1.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_BossOnline_Attack'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/BossOnline_Test/BT_BossOnline_Attack.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_BossOnline_Attack:BTComposite_Sequence_2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/BossOnline_Test/BT_BossOnline_Attack.1"
+      }
+    }
+  }
+]

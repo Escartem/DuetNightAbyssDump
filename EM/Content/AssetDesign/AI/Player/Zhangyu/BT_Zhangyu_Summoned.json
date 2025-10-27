@@ -1,0 +1,599 @@
+[
+  {
+    "Type": "BehaviorTree",
+    "Name": "BT_Zhangyu_Summoned",
+    "Class": "UScriptClass'BehaviorTree'",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "RootNode": {
+        "ObjectName": "BTComposite_Selector'BT_Zhangyu_Summoned:BTComposite_Selector_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Zhangyu/BT_Zhangyu_Summoned.2"
+      },
+      "BlackboardAsset": {
+        "ObjectName": "BlackboardData'BB_Zhangyu_Summoned'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Zhangyu/BB_Zhangyu_Summoned.0"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Rate",
+    "Name": "BTComposite_Rate_0",
+    "Outer": "BT_Zhangyu_Summoned",
+    "Class": "UScriptClass'BTComposite_Rate'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Rates": [
+        1,
+        1
+      ],
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_UseSkill'BT_Zhangyu_Summoned:BTTask_UseSkill_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Zhangyu/BT_Zhangyu_Summoned.18"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_UseSkill'BT_Zhangyu_Summoned:BTTask_UseSkill_1'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Zhangyu/BT_Zhangyu_Summoned.19"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Zhangyu_Summoned'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Zhangyu/BT_Zhangyu_Summoned.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Zhangyu_Summoned:BTComposite_Sequence_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Zhangyu/BT_Zhangyu_Summoned.5"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_0",
+    "Outer": "BT_Zhangyu_Summoned",
+    "Class": "UScriptClass'BTComposite_Selector'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector'BT_Zhangyu_Summoned:BTComposite_Selector_2'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Zhangyu/BT_Zhangyu_Summoned.4"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Zhangyu_Summoned:BTDecorator_Blackboard_1'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Player/Zhangyu/BT_Zhangyu_Summoned.7"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait'BT_Zhangyu_Summoned:BTTask_Wait_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Zhangyu/BT_Zhangyu_Summoned.21"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Zhangyu_Summoned:BTDecorator_Blackboard_2'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Player/Zhangyu/BT_Zhangyu_Summoned.8"
+            }
+          ],
+          "DecoratorOps": []
+        }
+      ],
+      "Services": [
+        {
+          "ObjectName": "BTService_BBValueDis'BT_Zhangyu_Summoned:BTService_BBValueDis_0'",
+          "ObjectPath": "EM/Content/AssetDesign/AI/Player/Zhangyu/BT_Zhangyu_Summoned.12"
+        },
+        {
+          "ObjectName": "BTService_EnemyVision'BT_Zhangyu_Summoned:BTService_EnemyVision_0'",
+          "ObjectPath": "EM/Content/AssetDesign/AI/Player/Zhangyu/BT_Zhangyu_Summoned.13"
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Zhangyu_Summoned'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Zhangyu/BT_Zhangyu_Summoned.0"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_1",
+    "Outer": "BT_Zhangyu_Summoned",
+    "Class": "UScriptClass'BTComposite_Selector'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_LastFilterTargets'BT_Zhangyu_Summoned:BTTask_LastFilterTargets_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Zhangyu/BT_Zhangyu_Summoned.16"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Zhangyu_Summoned:BTDecorator_Blackboard_0'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Player/Zhangyu/BT_Zhangyu_Summoned.6"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_GetTarget'BT_Zhangyu_Summoned:BTTask_GetTarget_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Zhangyu/BT_Zhangyu_Summoned.15"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Zhangyu_Summoned'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Zhangyu/BT_Zhangyu_Summoned.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Zhangyu_Summoned:BTComposite_Sequence_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Zhangyu/BT_Zhangyu_Summoned.5"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_2",
+    "Outer": "BT_Zhangyu_Summoned",
+    "Class": "UScriptClass'BTComposite_Selector'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_UseSkill'BT_Zhangyu_Summoned:BTTask_UseSkill_2'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Zhangyu/BT_Zhangyu_Summoned.20"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_CheckBuff'BT_Zhangyu_Summoned:BTDecorator_CheckBuff_0'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Player/Zhangyu/BT_Zhangyu_Summoned.10"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_Zhangyu_Summoned:BTComposite_Sequence_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Zhangyu/BT_Zhangyu_Summoned.5"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Zhangyu_Summoned'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Zhangyu/BT_Zhangyu_Summoned.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Zhangyu_Summoned:BTComposite_Selector_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Zhangyu/BT_Zhangyu_Summoned.2"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_0",
+    "Outer": "BT_Zhangyu_Summoned",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_FilterTargetsByDis'BT_Zhangyu_Summoned:BTTask_FilterTargetsByDis_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Zhangyu/BT_Zhangyu_Summoned.14"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector'BT_Zhangyu_Summoned:BTComposite_Selector_1'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Zhangyu/BT_Zhangyu_Summoned.3"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_SetPartAsTarget'BT_Zhangyu_Summoned:BTTask_SetPartAsTarget_1'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Zhangyu/BT_Zhangyu_Summoned.17"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_ForceSuccess'BT_Zhangyu_Summoned:BTDecorator_ForceSuccess_2'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Player/Zhangyu/BT_Zhangyu_Summoned.11"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait'BT_Zhangyu_Summoned:BTTask_Wait_3'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Zhangyu/BT_Zhangyu_Summoned.22"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Rate'BT_Zhangyu_Summoned:BTComposite_Rate_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Zhangyu/BT_Zhangyu_Summoned.1"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Zhangyu_Summoned:BTDecorator_Blackboard_4'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Player/Zhangyu/BT_Zhangyu_Summoned.9"
+            }
+          ],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Zhangyu_Summoned'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Zhangyu/BT_Zhangyu_Summoned.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Zhangyu_Summoned:BTComposite_Selector_2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Zhangyu/BT_Zhangyu_Summoned.4"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_0",
+    "Outer": "BT_Zhangyu_Summoned",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "CachedDescription": "Target is 未设置",
+      "OperationType": 1,
+      "BlackboardKey": {
+        "SelectedKeyName": "Target"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Zhangyu_Summoned'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Zhangyu/BT_Zhangyu_Summoned.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Zhangyu_Summoned:BTComposite_Selector_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Zhangyu/BT_Zhangyu_Summoned.3"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_1",
+    "Outer": "BT_Zhangyu_Summoned",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "CachedDescription": "ActionMode 等于 Active",
+      "BlackboardKey": {
+        "SelectedKeyName": "ActionMode"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::Self",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Zhangyu_Summoned'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Zhangyu/BT_Zhangyu_Summoned.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Zhangyu_Summoned:BTComposite_Selector_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Zhangyu/BT_Zhangyu_Summoned.2"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_2",
+    "Outer": "BT_Zhangyu_Summoned",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "IntValue": 1,
+      "CachedDescription": "ActionMode 等于 Hitted",
+      "BlackboardKey": {
+        "SelectedKeyName": "ActionMode"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::Self",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Zhangyu_Summoned'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Zhangyu/BT_Zhangyu_Summoned.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Zhangyu_Summoned:BTComposite_Selector_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Zhangyu/BT_Zhangyu_Summoned.2"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_4",
+    "Outer": "BT_Zhangyu_Summoned",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "FloatValue": 200.0,
+      "CachedDescription": "TargetCapsuleDisZ 小于 200.000000",
+      "OperationType": 2,
+      "BlackboardKey": {
+        "SelectedKeyName": "TargetCapsuleDisZ"
+      },
+      "NodeName": "Z<200",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Zhangyu_Summoned'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Zhangyu/BT_Zhangyu_Summoned.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Zhangyu_Summoned:BTComposite_Sequence_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Zhangyu/BT_Zhangyu_Summoned.5"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_CheckBuff",
+    "Name": "BTDecorator_CheckBuff_0",
+    "Outer": "BT_Zhangyu_Summoned",
+    "Class": "UScriptClass'BTDecorator_CheckBuff'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "BuffId": 230110,
+      "FlowAbortMode": "EBTFlowAbortMode::LowerPriority",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Zhangyu_Summoned'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Zhangyu/BT_Zhangyu_Summoned.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Zhangyu_Summoned:BTComposite_Selector_2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Zhangyu/BT_Zhangyu_Summoned.4"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_ForceSuccess",
+    "Name": "BTDecorator_ForceSuccess_2",
+    "Outer": "BT_Zhangyu_Summoned",
+    "Class": "UScriptClass'BTDecorator_ForceSuccess'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Zhangyu_Summoned'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Zhangyu/BT_Zhangyu_Summoned.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Zhangyu_Summoned:BTComposite_Sequence_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Zhangyu/BT_Zhangyu_Summoned.5"
+      }
+    }
+  },
+  {
+    "Type": "BTService_BBValueDis",
+    "Name": "BTService_BBValueDis_0",
+    "Outer": "BT_Zhangyu_Summoned",
+    "Class": "UScriptClass'BTService_BBValueDis'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "BBName": "Target",
+      "Interval": 0.2,
+      "RandomDeviation": 0.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Zhangyu_Summoned'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Zhangyu/BT_Zhangyu_Summoned.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Zhangyu_Summoned:BTComposite_Selector_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Zhangyu/BT_Zhangyu_Summoned.2"
+      }
+    }
+  },
+  {
+    "Type": "BTService_EnemyVision",
+    "Name": "BTService_EnemyVision_0",
+    "Outer": "BT_Zhangyu_Summoned",
+    "Class": "UScriptClass'BTService_EnemyVision'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "FVisionDistance": 2000.0,
+      "FVisionAngle": 360.0,
+      "Interval": 0.1,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Zhangyu_Summoned'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Zhangyu/BT_Zhangyu_Summoned.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Zhangyu_Summoned:BTComposite_Selector_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Zhangyu/BT_Zhangyu_Summoned.2"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_FilterTargetsByDis",
+    "Name": "BTTask_FilterTargetsByDis_0",
+    "Outer": "BT_Zhangyu_Summoned",
+    "Class": "UScriptClass'BTTask_FilterTargetsByDis'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "MaxDisKey": {
+        "SelectedKeyName": "MaxAttackRange"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Zhangyu_Summoned'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Zhangyu/BT_Zhangyu_Summoned.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Zhangyu_Summoned:BTComposite_Sequence_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Zhangyu/BT_Zhangyu_Summoned.5"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_GetTarget",
+    "Name": "BTTask_GetTarget_0",
+    "Outer": "BT_Zhangyu_Summoned",
+    "Class": "UScriptClass'BTTask_GetTarget'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Zhangyu_Summoned'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Zhangyu/BT_Zhangyu_Summoned.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Zhangyu_Summoned:BTComposite_Selector_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Zhangyu/BT_Zhangyu_Summoned.3"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_LastFilterTargets",
+    "Name": "BTTask_LastFilterTargets_0",
+    "Outer": "BT_Zhangyu_Summoned",
+    "Class": "UScriptClass'BTTask_LastFilterTargets'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TypeOfFilterList": "ETypeOfFilterList::AfterFilter",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Zhangyu_Summoned'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Zhangyu/BT_Zhangyu_Summoned.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Zhangyu_Summoned:BTComposite_Selector_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Zhangyu/BT_Zhangyu_Summoned.3"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_SetPartAsTarget",
+    "Name": "BTTask_SetPartAsTarget_1",
+    "Outer": "BT_Zhangyu_Summoned",
+    "Class": "UScriptClass'BTTask_SetPartAsTarget'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Zhangyu_Summoned'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Zhangyu/BT_Zhangyu_Summoned.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Zhangyu_Summoned:BTComposite_Sequence_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Zhangyu/BT_Zhangyu_Summoned.5"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_UseSkill",
+    "Name": "BTTask_UseSkill_0",
+    "Outer": "BT_Zhangyu_Summoned",
+    "Class": "UScriptClass'BTTask_UseSkill'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ContinueTime": 4.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Zhangyu_Summoned'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Zhangyu/BT_Zhangyu_Summoned.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Rate'BT_Zhangyu_Summoned:BTComposite_Rate_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Zhangyu/BT_Zhangyu_Summoned.1"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_UseSkill",
+    "Name": "BTTask_UseSkill_1",
+    "Outer": "BT_Zhangyu_Summoned",
+    "Class": "UScriptClass'BTTask_UseSkill'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SkillId": 2,
+      "ContinueTime": 4.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Zhangyu_Summoned'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Zhangyu/BT_Zhangyu_Summoned.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Rate'BT_Zhangyu_Summoned:BTComposite_Rate_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Zhangyu/BT_Zhangyu_Summoned.1"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_UseSkill",
+    "Name": "BTTask_UseSkill_2",
+    "Outer": "BT_Zhangyu_Summoned",
+    "Class": "UScriptClass'BTTask_UseSkill'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Zhangyu_Summoned'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Zhangyu/BT_Zhangyu_Summoned.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Zhangyu_Summoned:BTComposite_Selector_2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Zhangyu/BT_Zhangyu_Summoned.4"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_0",
+    "Outer": "BT_Zhangyu_Summoned",
+    "Class": "UScriptClass'BTTask_Wait'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Zhangyu_Summoned'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Zhangyu/BT_Zhangyu_Summoned.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Zhangyu_Summoned:BTComposite_Selector_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Zhangyu/BT_Zhangyu_Summoned.2"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_3",
+    "Outer": "BT_Zhangyu_Summoned",
+    "Class": "UScriptClass'BTTask_Wait'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "WaitTime": 2.8,
+      "RandomDeviation": 0.8,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Zhangyu_Summoned'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Zhangyu/BT_Zhangyu_Summoned.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Zhangyu_Summoned:BTComposite_Sequence_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Zhangyu/BT_Zhangyu_Summoned.5"
+      }
+    }
+  }
+]

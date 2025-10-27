@@ -1,0 +1,851 @@
+[
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_BP_JingGou_Empty",
+    "Outer": "BP_JingGou_Empty_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "K2Node_Event_Tag",
+        "Flags": "RF_Public",
+        "ElementSize": 12
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "K2Node_Event_SkillId",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "K2Node_Event_InSourceEid",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_EqualEqual_NameName_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_ComponentBoundEvent_Character",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'CharacterBase'",
+          "ObjectPath": "/Script/EM"
+        }
+      },
+      {
+        "Type": "InterfaceProperty",
+        "Name": "K2Node_ComponentBoundEvent_Source",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "ConstParm | UObjectWrapper",
+        "InterfaceClass": {
+          "ObjectName": "Class'EffectSourceInterface'",
+          "ObjectPath": "/Script/EM"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_ComponentBoundEvent_Skill",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'SkillObject'",
+          "ObjectPath": "/Script/EM"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "K2Node_ComponentBoundEvent_BeforeTN",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "ConstParm"
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "K2Node_ComponentBoundEvent_CurrentTN",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "ConstParm"
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "K2Node_ComponentBoundEvent_RealCutValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "ConstParm"
+      },
+      {
+        "Type": "InterfaceProperty",
+        "Name": "CallFunc_GetRootSource_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "UObjectWrapper",
+        "InterfaceClass": {
+          "ObjectName": "Class'EffectSourceInterface'",
+          "ObjectPath": "/Script/EM"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_CastToCharacterBase_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'CharacterBase'",
+          "ObjectPath": "/Script/EM"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_BooleanAND_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "___float_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_Add_FloatFloat_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "StrProperty",
+        "Name": "CallFunc_Conv_FloatToString_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 16
+      },
+      {
+        "Type": "StrProperty",
+        "Name": "CallFunc_Concat_StrStr_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 16
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_GreaterEqual_FloatFloat_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnBreakCountDownTag",
+    "Outer": "BP_JingGou_Empty_C",
+    "Class": "UScriptClass'Function'",
+    "Super": {
+      "ObjectName": "Function'BP_DongGuoBreakableBase_C:OnBreakCountDownTag'",
+      "ObjectPath": "EM/Content/BluePrints/Item/ExploreGroup/ExploreMechanism/DongGuo/BP_DongGuoBreakableBase.3"
+    },
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "SuperStruct": {
+      "ObjectName": "Function'BP_DongGuoBreakableBase_C:OnBreakCountDownTag'",
+      "ObjectPath": "EM/Content/BluePrints/Item/ExploreGroup/ExploreMechanism/DongGuo/BP_DongGuoBreakableBase.3"
+    },
+    "ChildProperties": [
+      {
+        "Type": "NameProperty",
+        "Name": "Tag",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "SkillId",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "InSourceEid",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "BndEvt__BP_CombatPropBase_TestDongguo_BattleEvent_K2Node_ComponentBoundEvent_1_AfterBeCutToughness__DelegateSignature",
+    "Outer": "BP_JingGou_Empty_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "Character",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "PropertyClass": {
+          "ObjectName": "Class'CharacterBase'",
+          "ObjectPath": "/Script/EM"
+        }
+      },
+      {
+        "Type": "InterfaceProperty",
+        "Name": "Source",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "ConstParm | BlueprintVisible | BlueprintReadOnly | Parm | OutParm | ReferenceParm | UObjectWrapper",
+        "InterfaceClass": {
+          "ObjectName": "Class'EffectSourceInterface'",
+          "ObjectPath": "/Script/EM"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Skill",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "PropertyClass": {
+          "ObjectName": "Class'SkillObject'",
+          "ObjectPath": "/Script/EM"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "BeforeTN",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "ConstParm | BlueprintVisible | BlueprintReadOnly | Parm | OutParm | ReferenceParm"
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CurrentTN",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "ConstParm | BlueprintVisible | BlueprintReadOnly | Parm | OutParm | ReferenceParm"
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "RealCutValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "ConstParm | BlueprintVisible | BlueprintReadOnly | Parm | OutParm | ReferenceParm"
+      }
+    ],
+    "FunctionFlags": "FUNC_HasOutParms | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "ReceiveBeginPlay",
+    "Outer": "BP_JingGou_Empty_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "SuperStruct": {
+      "ObjectName": "Function'Actor:ReceiveBeginPlay'",
+      "ObjectPath": "/Script/Engine"
+    },
+    "FunctionFlags": "FUNC_Event | FUNC_Protected | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BP_JingGou_Empty_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Super": {
+      "ObjectName": "BlueprintGeneratedClass'BP_DongGuoBreakableBase_C'",
+      "ObjectPath": "EM/Content/BluePrints/Item/ExploreGroup/ExploreMechanism/DongGuo/BP_DongGuoBreakableBase.10"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "DynamicBindingObjects": [
+        {
+          "ObjectName": "ComponentDelegateBinding'BP_JingGou_Empty_C:ComponentDelegateBinding_0'",
+          "ObjectPath": "EM/Content/AssetDesign/Item/East/BP_JingGou_Empty.12"
+        }
+      ],
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BP_JingGou_Empty_C:SimpleConstructionScript_0'",
+        "ObjectPath": "EM/Content/AssetDesign/Item/East/BP_JingGou_Empty.19"
+      },
+      "InheritableComponentHandler": {
+        "ObjectName": "InheritableComponentHandler'BP_JingGou_Empty_C:InheritableComponentHandler'",
+        "ObjectPath": "EM/Content/AssetDesign/Item/East/BP_JingGou_Empty.13"
+      },
+      "UberGraphFunction": {
+        "ObjectName": "Function'BP_JingGou_Empty_C:ExecuteUbergraph_BP_JingGou_Empty'",
+        "ObjectPath": "EM/Content/AssetDesign/Item/East/BP_JingGou_Empty.0"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "BlueprintGeneratedClass'BP_DongGuoBreakableBase_C'",
+      "ObjectPath": "EM/Content/BluePrints/Item/ExploreGroup/ExploreMechanism/DongGuo/BP_DongGuoBreakableBase.10"
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'BP_JingGou_Empty_C:ReceiveBeginPlay'",
+        "ObjectPath": "EM/Content/AssetDesign/Item/East/BP_JingGou_Empty.3"
+      },
+      {
+        "ObjectName": "Function'BP_JingGou_Empty_C:BndEvt__BP_CombatPropBase_TestDongguo_BattleEvent_K2Node_ComponentBoundEvent_1_AfterBeCutToughness__DelegateSignature'",
+        "ObjectPath": "EM/Content/AssetDesign/Item/East/BP_JingGou_Empty.2"
+      },
+      {
+        "ObjectName": "Function'BP_JingGou_Empty_C:OnBreakCountDownTag'",
+        "ObjectPath": "EM/Content/AssetDesign/Item/East/BP_JingGou_Empty.1"
+      },
+      {
+        "ObjectName": "Function'BP_JingGou_Empty_C:ExecuteUbergraph_BP_JingGou_Empty'",
+        "ObjectPath": "EM/Content/AssetDesign/Item/East/BP_JingGou_Empty.0"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient",
+        "Struct": {
+          "ObjectName": "ScriptStruct'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Sphere",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'StaticMeshComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Capsule",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'CapsuleComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CanBeAbsorbed",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "PropertyFlags": "Edit | BlueprintVisible",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "Energy",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance"
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "MaxEnergy",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance"
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Source",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnTemplate | DisableEditOnInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'CharacterBase'",
+          "ObjectPath": "/Script/EM"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "State",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_BP_JingGou_Empty": {
+        "ObjectName": "Function'BP_JingGou_Empty_C:ExecuteUbergraph_BP_JingGou_Empty'",
+        "ObjectPath": "EM/Content/AssetDesign/Item/East/BP_JingGou_Empty.0"
+      },
+      "OnBreakCountDownTag": {
+        "ObjectName": "Function'BP_JingGou_Empty_C:OnBreakCountDownTag'",
+        "ObjectPath": "EM/Content/AssetDesign/Item/East/BP_JingGou_Empty.1"
+      },
+      "BndEvt__BP_CombatPropBase_TestDongguo_BattleEvent_K2Node_ComponentBoundEvent_1_AfterBeCutToughness__DelegateSignature": {
+        "ObjectName": "Function'BP_JingGou_Empty_C:BndEvt__BP_CombatPropBase_TestDongguo_BattleEvent_K2Node_ComponentBoundEvent_1_AfterBeCutToughness__DelegateSignature'",
+        "ObjectPath": "EM/Content/AssetDesign/Item/East/BP_JingGou_Empty.2"
+      },
+      "ReceiveBeginPlay": {
+        "ObjectName": "Function'BP_JingGou_Empty_C:ReceiveBeginPlay'",
+        "ObjectPath": "EM/Content/AssetDesign/Item/East/BP_JingGou_Empty.3"
+      }
+    },
+    "ClassFlags": "CLASS_Config | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BP_JingGou_Empty_C'Default__BP_JingGou_Empty_C'",
+      "ObjectPath": "EM/Content/AssetDesign/Item/East/BP_JingGou_Empty.5"
+    }
+  },
+  {
+    "Type": "BP_JingGou_Empty_C",
+    "Name": "Default__BP_JingGou_Empty_C",
+    "Class": "BlueprintGeneratedClass'EM/Content/AssetDesign/Item/East/BP_JingGou_Empty.BP_JingGou_Empty_C'",
+    "Template": {
+      "ObjectName": "BP_DongGuoBreakableBase_C'Default__BP_DongGuoBreakableBase_C'",
+      "ObjectPath": "EM/Content/BluePrints/Item/ExploreGroup/ExploreMechanism/DongGuo/BP_DongGuoBreakableBase.11"
+    },
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "UberGraphFrame": {},
+      "CanBeAbsorbed": true,
+      "MaxEnergy": 100.0,
+      "State": true,
+      "Mesh": {
+        "ObjectName": "StaticMeshComponent'Default__BP_JingGou_Empty_C:StaticMeshComponent'",
+        "ObjectPath": "EM/Content/AssetDesign/Item/East/BP_JingGou_Empty.21"
+      },
+      "SceneComponent": {
+        "ObjectName": "SceneComponent'Default__BP_JingGou_Empty_C:SceneComponent'",
+        "ObjectPath": "EM/Content/AssetDesign/Item/East/BP_JingGou_Empty.15"
+      },
+      "BattleEvent": {
+        "ObjectName": "BP_BattleEventComponent_C'Default__BP_JingGou_Empty_C:BP_BattleEventComponent'",
+        "ObjectPath": "EM/Content/AssetDesign/Item/East/BP_JingGou_Empty.6"
+      },
+      "JumpWordComponent": {
+        "ObjectName": "BP_JumpWordComponent_C'Default__BP_JingGou_Empty_C:BP_JumpWordComponent'",
+        "ObjectPath": "EM/Content/AssetDesign/Item/East/BP_JingGou_Empty.10"
+      },
+      "CombatStateChangeComponent": {
+        "ObjectName": "BP_CombatStateChangeComponent_C'Default__BP_JingGou_Empty_C:CombatStateChangeComponent'",
+        "ObjectPath": "EM/Content/AssetDesign/Item/East/BP_JingGou_Empty.8"
+      },
+      "CombatClientEffectComponent": {
+        "ObjectName": "BP_CombatClientEffectComponent_C'Default__BP_JingGou_Empty_C:CombatClientEffectComponent'",
+        "ObjectPath": "EM/Content/AssetDesign/Item/East/BP_JingGou_Empty.7"
+      },
+      "FXComponent": {
+        "ObjectName": "BP_FXComponent_C'Default__BP_JingGou_Empty_C:BP_FXComponent'",
+        "ObjectPath": "EM/Content/AssetDesign/Item/East/BP_JingGou_Empty.9"
+      },
+      "RootComponent": {
+        "ObjectName": "SceneComponent'Default__BP_JingGou_Empty_C:SceneComponent'",
+        "ObjectPath": "EM/Content/AssetDesign/Item/East/BP_JingGou_Empty.15"
+      }
+    }
+  },
+  {
+    "Type": "BP_BattleEventComponent_C",
+    "Name": "BP_BattleEventComponent",
+    "Outer": "Default__BP_JingGou_Empty_C",
+    "Class": "BlueprintGeneratedClass'EM/Content/BluePrints/Combat/BP_BattleEventComponent.BP_BattleEventComponent_C'",
+    "Template": {
+      "ObjectName": "BP_BattleEventComponent_C'Default__BP_DongGuoBreakableBase_C:BP_BattleEventComponent'",
+      "ObjectPath": "EM/Content/BluePrints/Item/ExploreGroup/ExploreMechanism/DongGuo/BP_DongGuoBreakableBase.12"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "BP_CombatClientEffectComponent_C",
+    "Name": "CombatClientEffectComponent",
+    "Outer": "Default__BP_JingGou_Empty_C",
+    "Class": "BlueprintGeneratedClass'EM/Content/BluePrints/Item/BP_CombatClientEffectComponent.BP_CombatClientEffectComponent_C'",
+    "Template": {
+      "ObjectName": "BP_CombatClientEffectComponent_C'Default__BP_DongGuoBreakableBase_C:CombatClientEffectComponent'",
+      "ObjectPath": "EM/Content/BluePrints/Item/ExploreGroup/ExploreMechanism/DongGuo/BP_DongGuoBreakableBase.13"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "BP_CombatStateChangeComponent_C",
+    "Name": "CombatStateChangeComponent",
+    "Outer": "Default__BP_JingGou_Empty_C",
+    "Class": "BlueprintGeneratedClass'EM/Content/BluePrints/Item/BP_CombatStateChangeComponent.BP_CombatStateChangeComponent_C'",
+    "Template": {
+      "ObjectName": "BP_CombatStateChangeComponent_C'Default__BP_DongGuoBreakableBase_C:CombatStateChangeComponent'",
+      "ObjectPath": "EM/Content/BluePrints/Item/ExploreGroup/ExploreMechanism/DongGuo/BP_DongGuoBreakableBase.14"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "BP_FXComponent_C",
+    "Name": "BP_FXComponent",
+    "Outer": "Default__BP_JingGou_Empty_C",
+    "Class": "BlueprintGeneratedClass'EM/Content/BluePrints/Char/BP_FXComponent.BP_FXComponent_C'",
+    "Template": {
+      "ObjectName": "BP_FXComponent_C'Default__BP_DongGuoBreakableBase_C:BP_FXComponent'",
+      "ObjectPath": "EM/Content/BluePrints/Item/ExploreGroup/ExploreMechanism/DongGuo/BP_DongGuoBreakableBase.15"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "BP_JumpWordComponent_C",
+    "Name": "BP_JumpWordComponent",
+    "Outer": "Default__BP_JingGou_Empty_C",
+    "Class": "BlueprintGeneratedClass'EM/Content/BluePrints/Char/BP_JumpWordComponent.BP_JumpWordComponent_C'",
+    "Template": {
+      "ObjectName": "BP_JumpWordComponent_C'Default__BP_DongGuoBreakableBase_C:BP_JumpWordComponent'",
+      "ObjectPath": "EM/Content/BluePrints/Item/ExploreGroup/ExploreMechanism/DongGuo/BP_DongGuoBreakableBase.16"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "CapsuleComponent",
+    "Name": "Capsule_GEN_VARIABLE",
+    "Outer": "BP_JingGou_Empty_C",
+    "Class": "UScriptClass'CapsuleComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "CapsuleHalfHeight": 90.0,
+      "CapsuleRadius": 40.0,
+      "AreaClass": {
+        "ObjectName": "Class'NavArea_Obstacle'",
+        "ObjectPath": "/Script/NavigationSystem"
+      },
+      "BodyInstance": {
+        "ObjectType": "ECC_GameTraceChannel8",
+        "CollisionProfileName": "MonsterHitedCapsule",
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "WorldStatic",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "WorldDynamic",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Pawn",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Visibility",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Camera",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "PhysicsBody",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Vehicle",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Destructible",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Item",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "TraceExceptChar",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "TraceOverlap",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "MonsterPawn",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "BreakableItem",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "TraceScene",
+              "Response": "ECR_Overlap"
+            },
+            {
+              "Channel": "TraceCreatureHit",
+              "Response": "ECR_Overlap"
+            },
+            {
+              "Channel": "TraceSkillCreatureBlock",
+              "Response": "ECR_Block"
+            },
+            {
+              "Channel": "TraceThroughWall",
+              "Response": "ECR_Overlap"
+            },
+            {
+              "Channel": "SkillCreature",
+              "Response": "ECR_Overlap"
+            }
+          ]
+        }
+      },
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 90.0
+      }
+    }
+  },
+  {
+    "Type": "ComponentDelegateBinding",
+    "Name": "ComponentDelegateBinding_0",
+    "Outer": "BP_JingGou_Empty_C",
+    "Class": "UScriptClass'ComponentDelegateBinding'",
+    "Flags": "RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentDelegateBindings": [
+        {
+          "ComponentPropertyName": "BattleEvent",
+          "DelegatePropertyName": "AfterBeCutToughness",
+          "FunctionNameToBind": "BndEvt__BP_CombatPropBase_TestDongguo_BattleEvent_K2Node_ComponentBoundEvent_1_AfterBeCutToughness__DelegateSignature"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "InheritableComponentHandler",
+    "Name": "InheritableComponentHandler",
+    "Outer": "BP_JingGou_Empty_C",
+    "Class": "UScriptClass'InheritableComponentHandler'",
+    "Flags": "RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Outer": "BP_JingGou_Empty_C",
+    "Class": "UScriptClass'SceneComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "SceneComponent",
+    "Outer": "Default__BP_JingGou_Empty_C",
+    "Class": "UScriptClass'SceneComponent'",
+    "Template": {
+      "ObjectName": "SceneComponent'Default__BP_DongGuoBreakableBase_C:SceneComponent'",
+      "ObjectPath": "EM/Content/BluePrints/Item/ExploreGroup/ExploreMechanism/DongGuo/BP_DongGuoBreakableBase.19"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BP_JingGou_Empty_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "EM/Content/AssetDesign/Item/East/BP_JingGou_Empty.14"
+      },
+      "VariableGuid": "7F38CAC6-4C57D1E6-824031B3-943CDE97",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_2",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'CapsuleComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "CapsuleComponent'BP_JingGou_Empty_C:Capsule_GEN_VARIABLE'",
+        "ObjectPath": "EM/Content/AssetDesign/Item/East/BP_JingGou_Empty.11"
+      },
+      "ParentComponentOrVariableName": "SceneComponent",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "9961F814-4BF04852-B8ED60B7-3805BDA6",
+      "InternalVariableName": "Capsule"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_4",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'StaticMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "StaticMeshComponent'BP_JingGou_Empty_C:Sphere_GEN_VARIABLE'",
+        "ObjectPath": "EM/Content/AssetDesign/Item/East/BP_JingGou_Empty.20"
+      },
+      "ParentComponentOrVariableName": "SceneComponent",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "FCD8998B-46DBCA51-B5BA56BC-68AAA48D",
+      "InternalVariableName": "Sphere"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Outer": "BP_JingGou_Empty_C",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_JingGou_Empty_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "EM/Content/AssetDesign/Item/East/BP_JingGou_Empty.17"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_JingGou_Empty_C:SimpleConstructionScript_0.SCS_Node_4'",
+          "ObjectPath": "EM/Content/AssetDesign/Item/East/BP_JingGou_Empty.18"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_JingGou_Empty_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "EM/Content/AssetDesign/Item/East/BP_JingGou_Empty.17"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_JingGou_Empty_C:SimpleConstructionScript_0.SCS_Node_4'",
+          "ObjectPath": "EM/Content/AssetDesign/Item/East/BP_JingGou_Empty.18"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BP_JingGou_Empty_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "EM/Content/AssetDesign/Item/East/BP_JingGou_Empty.16"
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "Sphere_GEN_VARIABLE",
+    "Outer": "BP_JingGou_Empty_C",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'Sphere'",
+        "ObjectPath": "Engine/Content/BasicShapes/Sphere.2"
+      },
+      "OverrideMaterials": [
+        {
+          "ObjectName": "Material'BasicShapeMaterial'",
+          "ObjectPath": "Engine/Content/BasicShapes/BasicShapeMaterial.0"
+        }
+      ],
+      "BodyInstance": {
+        "ObjectType": "ECC_PhysicsBody",
+        "CollisionProfileName": "PhysicsActor",
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "TraceExceptChar",
+              "Response": "ECR_Ignore"
+            }
+          ]
+        },
+        "bSimulatePhysics": true
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "StaticMeshComponent",
+    "Outer": "Default__BP_JingGou_Empty_C",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Template": {
+      "ObjectName": "StaticMeshComponent'Default__BP_DongGuoBreakableBase_C:StaticMeshComponent'",
+      "ObjectPath": "EM/Content/BluePrints/Item/ExploreGroup/ExploreMechanism/DongGuo/BP_DongGuoBreakableBase.22"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "SceneComponent'Default__BP_JingGou_Empty_C:SceneComponent'",
+        "ObjectPath": "EM/Content/AssetDesign/Item/East/BP_JingGou_Empty.15"
+      }
+    }
+  }
+]

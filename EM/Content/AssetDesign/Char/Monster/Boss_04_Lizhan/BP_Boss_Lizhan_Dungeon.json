@@ -1,0 +1,841 @@
+[
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_BP_Boss_Lizhan_Dungeon",
+    "Outer": "BP_Boss_Lizhan_Dungeon_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "___object_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "ConstParm | ReferenceParm",
+        "Inner": {
+          "Type": "ObjectProperty",
+          "Name": "___object_Variable",
+          "Flags": "RF_Public",
+          "ElementSize": 8,
+          "PropertyClass": {
+            "ObjectName": "Class'Actor'",
+            "ObjectPath": "/Script/Engine"
+          }
+        }
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate",
+        "Flags": "RF_Public",
+        "ElementSize": 20,
+        "SignatureFunction": {
+          "ObjectName": "DelegateFunction'TimerDynamicDelegate__DelegateSignature'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_K2_SetTimerDelegate_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "Struct": {
+          "ObjectName": "ScriptStruct'TimerHandle'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetBBTarget_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Actor'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_K2_GetActorLocation_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "Struct": {
+          "ObjectName": "ScriptStruct'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_BreakVector_X",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_BreakVector_Y",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_BreakVector_Z",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_MakeVector_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "Struct": {
+          "ObjectName": "ScriptStruct'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_Subtract_FloatFloat_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_MakeVector_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "Struct": {
+          "ObjectName": "ScriptStruct'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_LineTraceSingle_OutHit",
+        "Flags": "RF_Public",
+        "ElementSize": 144,
+        "PropertyFlags": "ContainsInstancedReference",
+        "Struct": {
+          "ObjectName": "ScriptStruct'HitResult'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_LineTraceSingle_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction | FUNC_HasDefaults"
+  },
+  {
+    "Type": "Function",
+    "Name": "TargetNearGround",
+    "Outer": "BP_Boss_Lizhan_Dungeon_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "ReceiveBeginPlay",
+    "Outer": "BP_Boss_Lizhan_Dungeon_C",
+    "Class": "UScriptClass'Function'",
+    "Super": {
+      "ObjectName": "Function'BP_Boss_Lizhan_C:ReceiveBeginPlay'",
+      "ObjectPath": "EM/Content/AssetDesign/Char/Monster/Boss_04_Lizhan/BP_Boss_Lizhan.4"
+    },
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "SuperStruct": {
+      "ObjectName": "Function'BP_Boss_Lizhan_C:ReceiveBeginPlay'",
+      "ObjectPath": "EM/Content/AssetDesign/Char/Monster/Boss_04_Lizhan/BP_Boss_Lizhan.4"
+    },
+    "FunctionFlags": "FUNC_Event | FUNC_Protected | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BP_Boss_Lizhan_Dungeon_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Super": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Boss_Lizhan_C'",
+      "ObjectPath": "EM/Content/AssetDesign/Char/Monster/Boss_04_Lizhan/BP_Boss_Lizhan.7"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BP_Boss_Lizhan_Dungeon_C:SimpleConstructionScript_0'",
+        "ObjectPath": "EM/Content/AssetDesign/Char/Monster/Boss_04_Lizhan/BP_Boss_Lizhan_Dungeon.37"
+      },
+      "InheritableComponentHandler": {
+        "ObjectName": "InheritableComponentHandler'BP_Boss_Lizhan_Dungeon_C:InheritableComponentHandler'",
+        "ObjectPath": "EM/Content/AssetDesign/Char/Monster/Boss_04_Lizhan/BP_Boss_Lizhan_Dungeon.21"
+      },
+      "UberGraphFunction": {
+        "ObjectName": "Function'BP_Boss_Lizhan_Dungeon_C:ExecuteUbergraph_BP_Boss_Lizhan_Dungeon'",
+        "ObjectPath": "EM/Content/AssetDesign/Char/Monster/Boss_04_Lizhan/BP_Boss_Lizhan_Dungeon.0"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Boss_Lizhan_C'",
+      "ObjectPath": "EM/Content/AssetDesign/Char/Monster/Boss_04_Lizhan/BP_Boss_Lizhan.7"
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'BP_Boss_Lizhan_Dungeon_C:ReceiveBeginPlay'",
+        "ObjectPath": "EM/Content/AssetDesign/Char/Monster/Boss_04_Lizhan/BP_Boss_Lizhan_Dungeon.2"
+      },
+      {
+        "ObjectName": "Function'BP_Boss_Lizhan_Dungeon_C:TargetNearGround'",
+        "ObjectPath": "EM/Content/AssetDesign/Char/Monster/Boss_04_Lizhan/BP_Boss_Lizhan_Dungeon.1"
+      },
+      {
+        "ObjectName": "Function'BP_Boss_Lizhan_Dungeon_C:ExecuteUbergraph_BP_Boss_Lizhan_Dungeon'",
+        "ObjectPath": "EM/Content/AssetDesign/Char/Monster/Boss_04_Lizhan/BP_Boss_Lizhan_Dungeon.0"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient",
+        "Struct": {
+          "ObjectName": "ScriptStruct'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "NearGround",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_BP_Boss_Lizhan_Dungeon": {
+        "ObjectName": "Function'BP_Boss_Lizhan_Dungeon_C:ExecuteUbergraph_BP_Boss_Lizhan_Dungeon'",
+        "ObjectPath": "EM/Content/AssetDesign/Char/Monster/Boss_04_Lizhan/BP_Boss_Lizhan_Dungeon.0"
+      },
+      "TargetNearGround": {
+        "ObjectName": "Function'BP_Boss_Lizhan_Dungeon_C:TargetNearGround'",
+        "ObjectPath": "EM/Content/AssetDesign/Char/Monster/Boss_04_Lizhan/BP_Boss_Lizhan_Dungeon.1"
+      },
+      "ReceiveBeginPlay": {
+        "ObjectName": "Function'BP_Boss_Lizhan_Dungeon_C:ReceiveBeginPlay'",
+        "ObjectPath": "EM/Content/AssetDesign/Char/Monster/Boss_04_Lizhan/BP_Boss_Lizhan_Dungeon.2"
+      }
+    },
+    "ClassFlags": "CLASS_Config | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Game",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BP_Boss_Lizhan_Dungeon_C'Default__BP_Boss_Lizhan_Dungeon_C'",
+      "ObjectPath": "EM/Content/AssetDesign/Char/Monster/Boss_04_Lizhan/BP_Boss_Lizhan_Dungeon.4"
+    }
+  },
+  {
+    "Type": "BP_Boss_Lizhan_Dungeon_C",
+    "Name": "Default__BP_Boss_Lizhan_Dungeon_C",
+    "Class": "BlueprintGeneratedClass'EM/Content/AssetDesign/Char/Monster/Boss_04_Lizhan/BP_Boss_Lizhan_Dungeon.BP_Boss_Lizhan_Dungeon_C'",
+    "Template": {
+      "ObjectName": "BP_Boss_Lizhan_C'Default__BP_Boss_Lizhan_C'",
+      "ObjectPath": "EM/Content/AssetDesign/Char/Monster/Boss_04_Lizhan/BP_Boss_Lizhan.8"
+    },
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "UberGraphFrame": {},
+      "NavLinkJumpComponent": {
+        "ObjectName": "NavLinkJumpComponent'Default__BP_Boss_Lizhan_Dungeon_C:NavLinkJumpComponent'",
+        "ObjectPath": "EM/Content/AssetDesign/Char/Monster/Boss_04_Lizhan/BP_Boss_Lizhan_Dungeon.34"
+      },
+      "MonDecisionStateComponent": {
+        "ObjectName": "MonDecisionStateComponent'Default__BP_Boss_Lizhan_Dungeon_C:MonDecisionStateComponent'",
+        "ObjectPath": "EM/Content/AssetDesign/Char/Monster/Boss_04_Lizhan/BP_Boss_Lizhan_Dungeon.24"
+      },
+      "AirWallPenetrateComponent": {
+        "ObjectName": "AirWallPenetrateComponent'Default__BP_Boss_Lizhan_Dungeon_C:AirWallPenetrateComponent'",
+        "ObjectPath": "EM/Content/AssetDesign/Char/Monster/Boss_04_Lizhan/BP_Boss_Lizhan_Dungeon.6"
+      },
+      "MonAlertComponent": {
+        "ObjectName": "MonAlertComponent'Default__BP_Boss_Lizhan_Dungeon_C:MonAlertComponent'",
+        "ObjectPath": "EM/Content/AssetDesign/Char/Monster/Boss_04_Lizhan/BP_Boss_Lizhan_Dungeon.22"
+      },
+      "MonEliteComponent": {
+        "ObjectName": "MonEliteComponent'Default__BP_Boss_Lizhan_Dungeon_C:MonEliteComponent'",
+        "ObjectPath": "EM/Content/AssetDesign/Char/Monster/Boss_04_Lizhan/BP_Boss_Lizhan_Dungeon.25"
+      },
+      "MonUpdateBBComponent": {
+        "ObjectName": "MonUpdateBBComponent'Default__BP_Boss_Lizhan_Dungeon_C:MonUpdateBBComponent'",
+        "ObjectPath": "EM/Content/AssetDesign/Char/Monster/Boss_04_Lizhan/BP_Boss_Lizhan_Dungeon.31"
+      },
+      "MonExtraVitaminComponent": {
+        "ObjectName": "MonExtraVitaminComponent'Default__BP_Boss_Lizhan_Dungeon_C:MonExtraVitaminComponent'",
+        "ObjectPath": "EM/Content/AssetDesign/Char/Monster/Boss_04_Lizhan/BP_Boss_Lizhan_Dungeon.26"
+      },
+      "BeAttackTimeline": {
+        "ObjectName": "TimelineComponent'Default__BP_Boss_Lizhan_Dungeon_C:BeAttackTimeline'",
+        "ObjectPath": "EM/Content/AssetDesign/Char/Monster/Boss_04_Lizhan/BP_Boss_Lizhan_Dungeon.38"
+      },
+      "EQSTestingComponent": {
+        "ObjectName": "EQSTestingComponent'Default__BP_Boss_Lizhan_Dungeon_C:EQSTestingComponent'",
+        "ObjectPath": "EM/Content/AssetDesign/Char/Monster/Boss_04_Lizhan/BP_Boss_Lizhan_Dungeon.20"
+      },
+      "MonOptimizationComponent": {
+        "ObjectName": "MonOptimizationComponent'Default__BP_Boss_Lizhan_Dungeon_C:MonOptimizationComponent'",
+        "ObjectPath": "EM/Content/AssetDesign/Char/Monster/Boss_04_Lizhan/BP_Boss_Lizhan_Dungeon.28"
+      },
+      "MonMoveComponent": {
+        "ObjectName": "MonMoveLogicComponent'Default__BP_Boss_Lizhan_Dungeon_C:MonMoveLogicComponent'",
+        "ObjectPath": "EM/Content/AssetDesign/Char/Monster/Boss_04_Lizhan/BP_Boss_Lizhan_Dungeon.27"
+      },
+      "SignificanceComponent": {
+        "ObjectName": "AISignificanceComponent'Default__BP_Boss_Lizhan_Dungeon_C:SignificanceComponent'",
+        "ObjectPath": "EM/Content/AssetDesign/Char/Monster/Boss_04_Lizhan/BP_Boss_Lizhan_Dungeon.7"
+      },
+      "BudgetAllocComponent": {
+        "ObjectName": "AIBudgetAllocateComponent'Default__BP_Boss_Lizhan_Dungeon_C:BudgetAllocComponent'",
+        "ObjectPath": "EM/Content/AssetDesign/Char/Monster/Boss_04_Lizhan/BP_Boss_Lizhan_Dungeon.5"
+      },
+      "CharRenderBoxComponent": {
+        "ObjectName": "CharRenderBoxComponent'Default__BP_Boss_Lizhan_Dungeon_C:CharRenderBoxComponent'",
+        "ObjectPath": "EM/Content/AssetDesign/Char/Monster/Boss_04_Lizhan/BP_Boss_Lizhan_Dungeon.17"
+      },
+      "MonRotateProcessComponent": {
+        "ObjectName": "MonRotateProcessComponent'Default__BP_Boss_Lizhan_Dungeon_C:MonRotateProcessComponent'",
+        "ObjectPath": "EM/Content/AssetDesign/Char/Monster/Boss_04_Lizhan/BP_Boss_Lizhan_Dungeon.29"
+      },
+      "JumpWordComponent": {
+        "ObjectName": "BP_JumpWordComponent_C'Default__BP_Boss_Lizhan_Dungeon_C:BP_JumpWordComponent'",
+        "ObjectPath": "EM/Content/AssetDesign/Char/Monster/Boss_04_Lizhan/BP_Boss_Lizhan_Dungeon.13"
+      },
+      "CharacterFashion": {
+        "ObjectName": "BP_CharacterFashion_C'Default__BP_Boss_Lizhan_Dungeon_C:BP_CharacterFashion'",
+        "ObjectPath": "EM/Content/AssetDesign/Char/Monster/Boss_04_Lizhan/BP_Boss_Lizhan_Dungeon.10"
+      },
+      "BattleEvent": {
+        "ObjectName": "BP_BattleEventComponent_C'Default__BP_Boss_Lizhan_Dungeon_C:BP_BattleEventComponent'",
+        "ObjectPath": "EM/Content/AssetDesign/Char/Monster/Boss_04_Lizhan/BP_Boss_Lizhan_Dungeon.8"
+      },
+      "BuffManager": {
+        "ObjectName": "BP_BuffManager_C'Default__BP_Boss_Lizhan_Dungeon_C:BP_BuffManager'",
+        "ObjectPath": "EM/Content/AssetDesign/Char/Monster/Boss_04_Lizhan/BP_Boss_Lizhan_Dungeon.9"
+      },
+      "FXComponent": {
+        "ObjectName": "BP_FXComponent_C'Default__BP_Boss_Lizhan_Dungeon_C:BP_FXComponent'",
+        "ObjectPath": "EM/Content/AssetDesign/Char/Monster/Boss_04_Lizhan/BP_Boss_Lizhan_Dungeon.11"
+      },
+      "HollowSphereComponent": {
+        "ObjectName": "BP_HollowSphereComponent_C'Default__BP_Boss_Lizhan_Dungeon_C:BP_HollowSphereComponent'",
+        "ObjectPath": "EM/Content/AssetDesign/Char/Monster/Boss_04_Lizhan/BP_Boss_Lizhan_Dungeon.12"
+      },
+      "SkillsComponent": {
+        "ObjectName": "BP_SkillsComponent_C'Default__BP_Boss_Lizhan_Dungeon_C:BP_SkillsComponent'",
+        "ObjectPath": "EM/Content/AssetDesign/Char/Monster/Boss_04_Lizhan/BP_Boss_Lizhan_Dungeon.14"
+      },
+      "CharFSMComp": {
+        "ObjectName": "CharacterFSM'Default__BP_Boss_Lizhan_Dungeon_C:CharFSMComp'",
+        "ObjectPath": "EM/Content/AssetDesign/Char/Monster/Boss_04_Lizhan/BP_Boss_Lizhan_Dungeon.16"
+      },
+      "AutoSyncProp": {
+        "ObjectName": "CharacterAutoSyncProp'Default__BP_Boss_Lizhan_Dungeon_C:AutoSyncProp'",
+        "ObjectPath": "EM/Content/AssetDesign/Char/Monster/Boss_04_Lizhan/BP_Boss_Lizhan_Dungeon.15"
+      },
+      "MotionWarpingComponent": {
+        "ObjectName": "MotionWarpingComponent'Default__BP_Boss_Lizhan_Dungeon_C:MotionWarpingComponent'",
+        "ObjectPath": "EM/Content/AssetDesign/Char/Monster/Boss_04_Lizhan/BP_Boss_Lizhan_Dungeon.32"
+      },
+      "EMComponents": [
+        {
+          "Key": "CharFSMComp",
+          "Value": {
+            "ObjectName": "CharacterFSM'Default__BP_Boss_Lizhan_Dungeon_C:CharFSMComp'",
+            "ObjectPath": "EM/Content/AssetDesign/Char/Monster/Boss_04_Lizhan/BP_Boss_Lizhan_Dungeon.16"
+          }
+        }
+      ],
+      "MoveRequestComponent": {
+        "ObjectName": "MoveRequestComponent'Default__BP_Boss_Lizhan_Dungeon_C:MoveRequestComponent'",
+        "ObjectPath": "EM/Content/AssetDesign/Char/Monster/Boss_04_Lizhan/BP_Boss_Lizhan_Dungeon.33"
+      },
+      "Mesh": {
+        "ObjectName": "MonSkeletalMeshComponent'Default__BP_Boss_Lizhan_Dungeon_C:CharacterMesh0'",
+        "ObjectPath": "EM/Content/AssetDesign/Char/Monster/Boss_04_Lizhan/BP_Boss_Lizhan_Dungeon.30"
+      },
+      "CharacterMovement": {
+        "ObjectName": "MonCharMoveComp'Default__BP_Boss_Lizhan_Dungeon_C:CharMoveComp'",
+        "ObjectPath": "EM/Content/AssetDesign/Char/Monster/Boss_04_Lizhan/BP_Boss_Lizhan_Dungeon.23"
+      },
+      "CapsuleComponent": {
+        "ObjectName": "EMCapsuleComponent'Default__BP_Boss_Lizhan_Dungeon_C:CollisionCylinder'",
+        "ObjectPath": "EM/Content/AssetDesign/Char/Monster/Boss_04_Lizhan/BP_Boss_Lizhan_Dungeon.19"
+      },
+      "RootComponent": {
+        "ObjectName": "EMCapsuleComponent'Default__BP_Boss_Lizhan_Dungeon_C:CollisionCylinder'",
+        "ObjectPath": "EM/Content/AssetDesign/Char/Monster/Boss_04_Lizhan/BP_Boss_Lizhan_Dungeon.19"
+      }
+    }
+  },
+  {
+    "Type": "AIBudgetAllocateComponent",
+    "Name": "BudgetAllocComponent",
+    "Outer": "Default__BP_Boss_Lizhan_Dungeon_C",
+    "Class": "UScriptClass'AIBudgetAllocateComponent'",
+    "Template": {
+      "ObjectName": "AIBudgetAllocateComponent'Default__BP_Boss_Lizhan_C:BudgetAllocComponent'",
+      "ObjectPath": "EM/Content/AssetDesign/Char/Monster/Boss_04_Lizhan/BP_Boss_Lizhan.9"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "AirWallPenetrateComponent",
+    "Name": "AirWallPenetrateComponent",
+    "Outer": "Default__BP_Boss_Lizhan_Dungeon_C",
+    "Class": "UScriptClass'AirWallPenetrateComponent'",
+    "Template": {
+      "ObjectName": "AirWallPenetrateComponent'Default__BP_Boss_Lizhan_C:AirWallPenetrateComponent'",
+      "ObjectPath": "EM/Content/AssetDesign/Char/Monster/Boss_04_Lizhan/BP_Boss_Lizhan.10"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "AISignificanceComponent",
+    "Name": "SignificanceComponent",
+    "Outer": "Default__BP_Boss_Lizhan_Dungeon_C",
+    "Class": "UScriptClass'AISignificanceComponent'",
+    "Template": {
+      "ObjectName": "AISignificanceComponent'Default__BP_Boss_Lizhan_C:SignificanceComponent'",
+      "ObjectPath": "EM/Content/AssetDesign/Char/Monster/Boss_04_Lizhan/BP_Boss_Lizhan.11"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "BP_BattleEventComponent_C",
+    "Name": "BP_BattleEventComponent",
+    "Outer": "Default__BP_Boss_Lizhan_Dungeon_C",
+    "Class": "BlueprintGeneratedClass'EM/Content/BluePrints/Combat/BP_BattleEventComponent.BP_BattleEventComponent_C'",
+    "Template": {
+      "ObjectName": "BP_BattleEventComponent_C'Default__BP_Boss_Lizhan_C:BP_BattleEventComponent'",
+      "ObjectPath": "EM/Content/AssetDesign/Char/Monster/Boss_04_Lizhan/BP_Boss_Lizhan.12"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "BP_BuffManager_C",
+    "Name": "BP_BuffManager",
+    "Outer": "Default__BP_Boss_Lizhan_Dungeon_C",
+    "Class": "BlueprintGeneratedClass'EM/Content/BluePrints/Combat/Buff/BP_BuffManager.BP_BuffManager_C'",
+    "Template": {
+      "ObjectName": "BP_BuffManager_C'Default__BP_Boss_Lizhan_C:BP_BuffManager'",
+      "ObjectPath": "EM/Content/AssetDesign/Char/Monster/Boss_04_Lizhan/BP_Boss_Lizhan.13"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "BP_CharacterFashion_C",
+    "Name": "BP_CharacterFashion",
+    "Outer": "Default__BP_Boss_Lizhan_Dungeon_C",
+    "Class": "BlueprintGeneratedClass'EM/Content/BluePrints/Char/BP_CharacterFashion.BP_CharacterFashion_C'",
+    "Template": {
+      "ObjectName": "BP_CharacterFashion_C'Default__BP_Boss_Lizhan_C:BP_CharacterFashion'",
+      "ObjectPath": "EM/Content/AssetDesign/Char/Monster/Boss_04_Lizhan/BP_Boss_Lizhan.14"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "BP_FXComponent_C",
+    "Name": "BP_FXComponent",
+    "Outer": "Default__BP_Boss_Lizhan_Dungeon_C",
+    "Class": "BlueprintGeneratedClass'EM/Content/BluePrints/Char/BP_FXComponent.BP_FXComponent_C'",
+    "Template": {
+      "ObjectName": "BP_FXComponent_C'Default__BP_Boss_Lizhan_C:BP_FXComponent'",
+      "ObjectPath": "EM/Content/AssetDesign/Char/Monster/Boss_04_Lizhan/BP_Boss_Lizhan.15"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "BP_HollowSphereComponent_C",
+    "Name": "BP_HollowSphereComponent",
+    "Outer": "Default__BP_Boss_Lizhan_Dungeon_C",
+    "Class": "BlueprintGeneratedClass'EM/Content/BluePrints/Combat/BP_HollowSphereComponent.BP_HollowSphereComponent_C'",
+    "Template": {
+      "ObjectName": "BP_HollowSphereComponent_C'Default__BP_Boss_Lizhan_C:BP_HollowSphereComponent'",
+      "ObjectPath": "EM/Content/AssetDesign/Char/Monster/Boss_04_Lizhan/BP_Boss_Lizhan.16"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "OnComponentBeginOverlap": {
+        "InvocationList": [
+          {
+            "Object": {
+              "ObjectName": "BP_HollowSphereComponent_C'Default__BP_Boss_Lizhan_Dungeon_C:BP_HollowSphereComponent'",
+              "ObjectPath": "EM/Content/AssetDesign/Char/Monster/Boss_04_Lizhan/BP_Boss_Lizhan_Dungeon.12"
+            },
+            "FunctionName": "OnBeginOverlap"
+          }
+        ]
+      },
+      "OnComponentEndOverlap": {
+        "InvocationList": [
+          {
+            "Object": {
+              "ObjectName": "BP_HollowSphereComponent_C'Default__BP_Boss_Lizhan_Dungeon_C:BP_HollowSphereComponent'",
+              "ObjectPath": "EM/Content/AssetDesign/Char/Monster/Boss_04_Lizhan/BP_Boss_Lizhan_Dungeon.12"
+            },
+            "FunctionName": "OnEndOverlap"
+          }
+        ]
+      },
+      "AttachParent": {
+        "ObjectName": "EMCapsuleComponent'Default__BP_Boss_Lizhan_Dungeon_C:CollisionCylinder'",
+        "ObjectPath": "EM/Content/AssetDesign/Char/Monster/Boss_04_Lizhan/BP_Boss_Lizhan_Dungeon.19"
+      }
+    }
+  },
+  {
+    "Type": "BP_JumpWordComponent_C",
+    "Name": "BP_JumpWordComponent",
+    "Outer": "Default__BP_Boss_Lizhan_Dungeon_C",
+    "Class": "BlueprintGeneratedClass'EM/Content/BluePrints/Char/BP_JumpWordComponent.BP_JumpWordComponent_C'",
+    "Template": {
+      "ObjectName": "BP_JumpWordComponent_C'Default__BP_Boss_Lizhan_C:BP_JumpWordComponent'",
+      "ObjectPath": "EM/Content/AssetDesign/Char/Monster/Boss_04_Lizhan/BP_Boss_Lizhan.17"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "BP_SkillsComponent_C",
+    "Name": "BP_SkillsComponent",
+    "Outer": "Default__BP_Boss_Lizhan_Dungeon_C",
+    "Class": "BlueprintGeneratedClass'EM/Content/BluePrints/Combat/Skill/BP_SkillsComponent.BP_SkillsComponent_C'",
+    "Template": {
+      "ObjectName": "BP_SkillsComponent_C'Default__BP_Boss_Lizhan_C:BP_SkillsComponent'",
+      "ObjectPath": "EM/Content/AssetDesign/Char/Monster/Boss_04_Lizhan/BP_Boss_Lizhan.18"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "CharacterAutoSyncProp",
+    "Name": "AutoSyncProp",
+    "Outer": "Default__BP_Boss_Lizhan_Dungeon_C",
+    "Class": "UScriptClass'CharacterAutoSyncProp'",
+    "Template": {
+      "ObjectName": "CharacterAutoSyncProp'Default__BP_Boss_Lizhan_C:AutoSyncProp'",
+      "ObjectPath": "EM/Content/AssetDesign/Char/Monster/Boss_04_Lizhan/BP_Boss_Lizhan.20"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "CharacterFSM",
+    "Name": "CharFSMComp",
+    "Outer": "Default__BP_Boss_Lizhan_Dungeon_C",
+    "Class": "UScriptClass'CharacterFSM'",
+    "Template": {
+      "ObjectName": "CharacterFSM'Default__BP_Boss_Lizhan_C:CharFSMComp'",
+      "ObjectPath": "EM/Content/AssetDesign/Char/Monster/Boss_04_Lizhan/BP_Boss_Lizhan.21"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "CharRenderBoxComponent",
+    "Name": "CharRenderBoxComponent",
+    "Outer": "Default__BP_Boss_Lizhan_Dungeon_C",
+    "Class": "UScriptClass'CharRenderBoxComponent'",
+    "Template": {
+      "ObjectName": "CharRenderBoxComponent'Default__BP_Boss_Lizhan_C:CharRenderBoxComponent'",
+      "ObjectPath": "EM/Content/AssetDesign/Char/Monster/Boss_04_Lizhan/BP_Boss_Lizhan.22"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "EMCapsuleComponent'Default__BP_Boss_Lizhan_Dungeon_C:CollisionCylinder'",
+        "ObjectPath": "EM/Content/AssetDesign/Char/Monster/Boss_04_Lizhan/BP_Boss_Lizhan_Dungeon.19"
+      }
+    }
+  },
+  {
+    "Type": "DestructableBodyMgr",
+    "Name": "DestructableBodyMgr",
+    "Outer": "Default__BP_Boss_Lizhan_Dungeon_C",
+    "Class": "UScriptClass'DestructableBodyMgr'",
+    "Template": {
+      "ObjectName": "DestructableBodyMgr'Default__BP_Boss_Lizhan_C:DestructableBodyMgr'",
+      "ObjectPath": "EM/Content/AssetDesign/Char/Monster/Boss_04_Lizhan/BP_Boss_Lizhan.24"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "EMCapsuleComponent",
+    "Name": "CollisionCylinder",
+    "Outer": "Default__BP_Boss_Lizhan_Dungeon_C",
+    "Class": "UScriptClass'EMCapsuleComponent'",
+    "Template": {
+      "ObjectName": "EMCapsuleComponent'Default__BP_Boss_Lizhan_C:CollisionCylinder'",
+      "ObjectPath": "EM/Content/AssetDesign/Char/Monster/Boss_04_Lizhan/BP_Boss_Lizhan.25"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "EQSTestingComponent",
+    "Name": "EQSTestingComponent",
+    "Outer": "Default__BP_Boss_Lizhan_Dungeon_C",
+    "Class": "UScriptClass'EQSTestingComponent'",
+    "Template": {
+      "ObjectName": "EQSTestingComponent'Default__BP_Boss_Lizhan_C:EQSTestingComponent'",
+      "ObjectPath": "EM/Content/AssetDesign/Char/Monster/Boss_04_Lizhan/BP_Boss_Lizhan.26"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "InheritableComponentHandler",
+    "Name": "InheritableComponentHandler",
+    "Outer": "BP_Boss_Lizhan_Dungeon_C",
+    "Class": "UScriptClass'InheritableComponentHandler'",
+    "Flags": "RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "MonAlertComponent",
+    "Name": "MonAlertComponent",
+    "Outer": "Default__BP_Boss_Lizhan_Dungeon_C",
+    "Class": "UScriptClass'MonAlertComponent'",
+    "Template": {
+      "ObjectName": "MonAlertComponent'Default__BP_Boss_Lizhan_C:MonAlertComponent'",
+      "ObjectPath": "EM/Content/AssetDesign/Char/Monster/Boss_04_Lizhan/BP_Boss_Lizhan.28"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "MonCharMoveComp",
+    "Name": "CharMoveComp",
+    "Outer": "Default__BP_Boss_Lizhan_Dungeon_C",
+    "Class": "UScriptClass'MonCharMoveComp'",
+    "Template": {
+      "ObjectName": "MonCharMoveComp'Default__BP_Boss_Lizhan_C:CharMoveComp'",
+      "ObjectPath": "EM/Content/AssetDesign/Char/Monster/Boss_04_Lizhan/BP_Boss_Lizhan.29"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "MonDecisionStateComponent",
+    "Name": "MonDecisionStateComponent",
+    "Outer": "Default__BP_Boss_Lizhan_Dungeon_C",
+    "Class": "UScriptClass'MonDecisionStateComponent'",
+    "Template": {
+      "ObjectName": "MonDecisionStateComponent'Default__BP_Boss_Lizhan_C:MonDecisionStateComponent'",
+      "ObjectPath": "EM/Content/AssetDesign/Char/Monster/Boss_04_Lizhan/BP_Boss_Lizhan.30"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "MonEliteComponent",
+    "Name": "MonEliteComponent",
+    "Outer": "Default__BP_Boss_Lizhan_Dungeon_C",
+    "Class": "UScriptClass'MonEliteComponent'",
+    "Template": {
+      "ObjectName": "MonEliteComponent'Default__BP_Boss_Lizhan_C:MonEliteComponent'",
+      "ObjectPath": "EM/Content/AssetDesign/Char/Monster/Boss_04_Lizhan/BP_Boss_Lizhan.31"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "MonExtraVitaminComponent",
+    "Name": "MonExtraVitaminComponent",
+    "Outer": "Default__BP_Boss_Lizhan_Dungeon_C",
+    "Class": "UScriptClass'MonExtraVitaminComponent'",
+    "Template": {
+      "ObjectName": "MonExtraVitaminComponent'Default__BP_Boss_Lizhan_C:MonExtraVitaminComponent'",
+      "ObjectPath": "EM/Content/AssetDesign/Char/Monster/Boss_04_Lizhan/BP_Boss_Lizhan.32"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "MonMoveLogicComponent",
+    "Name": "MonMoveLogicComponent",
+    "Outer": "Default__BP_Boss_Lizhan_Dungeon_C",
+    "Class": "UScriptClass'MonMoveLogicComponent'",
+    "Template": {
+      "ObjectName": "MonMoveLogicComponent'Default__BP_Boss_Lizhan_C:MonMoveLogicComponent'",
+      "ObjectPath": "EM/Content/AssetDesign/Char/Monster/Boss_04_Lizhan/BP_Boss_Lizhan.33"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "MonOptimizationComponent",
+    "Name": "MonOptimizationComponent",
+    "Outer": "Default__BP_Boss_Lizhan_Dungeon_C",
+    "Class": "UScriptClass'MonOptimizationComponent'",
+    "Template": {
+      "ObjectName": "MonOptimizationComponent'Default__BP_Boss_Lizhan_C:MonOptimizationComponent'",
+      "ObjectPath": "EM/Content/AssetDesign/Char/Monster/Boss_04_Lizhan/BP_Boss_Lizhan.34"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "MonRotateProcessComponent",
+    "Name": "MonRotateProcessComponent",
+    "Outer": "Default__BP_Boss_Lizhan_Dungeon_C",
+    "Class": "UScriptClass'MonRotateProcessComponent'",
+    "Template": {
+      "ObjectName": "MonRotateProcessComponent'Default__BP_Boss_Lizhan_C:MonRotateProcessComponent'",
+      "ObjectPath": "EM/Content/AssetDesign/Char/Monster/Boss_04_Lizhan/BP_Boss_Lizhan.35"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "MonSkeletalMeshComponent",
+    "Name": "CharacterMesh0",
+    "Outer": "Default__BP_Boss_Lizhan_Dungeon_C",
+    "Class": "UScriptClass'MonSkeletalMeshComponent'",
+    "Template": {
+      "ObjectName": "MonSkeletalMeshComponent'Default__BP_Boss_Lizhan_C:CharacterMesh0'",
+      "ObjectPath": "EM/Content/AssetDesign/Char/Monster/Boss_04_Lizhan/BP_Boss_Lizhan.36"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "OnAnimInitialized": {
+        "InvocationList": [
+          {
+            "Object": {
+              "ObjectName": "BP_Boss_Lizhan_Dungeon_C'Default__BP_Boss_Lizhan_Dungeon_C'",
+              "ObjectPath": "EM/Content/AssetDesign/Char/Monster/Boss_04_Lizhan/BP_Boss_Lizhan_Dungeon.4"
+            },
+            "FunctionName": "OnAnimInitialized"
+          }
+        ]
+      },
+      "AttachParent": {
+        "ObjectName": "EMCapsuleComponent'Default__BP_Boss_Lizhan_Dungeon_C:CollisionCylinder'",
+        "ObjectPath": "EM/Content/AssetDesign/Char/Monster/Boss_04_Lizhan/BP_Boss_Lizhan_Dungeon.19"
+      }
+    }
+  },
+  {
+    "Type": "MonUpdateBBComponent",
+    "Name": "MonUpdateBBComponent",
+    "Outer": "Default__BP_Boss_Lizhan_Dungeon_C",
+    "Class": "UScriptClass'MonUpdateBBComponent'",
+    "Template": {
+      "ObjectName": "MonUpdateBBComponent'Default__BP_Boss_Lizhan_C:MonUpdateBBComponent'",
+      "ObjectPath": "EM/Content/AssetDesign/Char/Monster/Boss_04_Lizhan/BP_Boss_Lizhan.37"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "MotionWarpingComponent",
+    "Name": "MotionWarpingComponent",
+    "Outer": "Default__BP_Boss_Lizhan_Dungeon_C",
+    "Class": "UScriptClass'MotionWarpingComponent'",
+    "Template": {
+      "ObjectName": "MotionWarpingComponent'Default__BP_Boss_Lizhan_C:MotionWarpingComponent'",
+      "ObjectPath": "EM/Content/AssetDesign/Char/Monster/Boss_04_Lizhan/BP_Boss_Lizhan.38"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "MoveRequestComponent",
+    "Name": "MoveRequestComponent",
+    "Outer": "Default__BP_Boss_Lizhan_Dungeon_C",
+    "Class": "UScriptClass'MoveRequestComponent'",
+    "Template": {
+      "ObjectName": "MoveRequestComponent'Default__BP_Boss_Lizhan_C:MoveRequestComponent'",
+      "ObjectPath": "EM/Content/AssetDesign/Char/Monster/Boss_04_Lizhan/BP_Boss_Lizhan.39"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "NavLinkJumpComponent",
+    "Name": "NavLinkJumpComponent",
+    "Outer": "Default__BP_Boss_Lizhan_Dungeon_C",
+    "Class": "UScriptClass'NavLinkJumpComponent'",
+    "Template": {
+      "ObjectName": "NavLinkJumpComponent'Default__BP_Boss_Lizhan_C:NavLinkJumpComponent'",
+      "ObjectPath": "EM/Content/AssetDesign/Char/Monster/Boss_04_Lizhan/BP_Boss_Lizhan.40"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Outer": "BP_Boss_Lizhan_Dungeon_C",
+    "Class": "UScriptClass'SceneComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BP_Boss_Lizhan_Dungeon_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "EM/Content/AssetDesign/Char/Monster/Boss_04_Lizhan/BP_Boss_Lizhan_Dungeon.35"
+      },
+      "VariableGuid": "C55657A4-4742EF41-236FC3A2-BAEF65FF",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Outer": "BP_Boss_Lizhan_Dungeon_C",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BP_Boss_Lizhan_Dungeon_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "EM/Content/AssetDesign/Char/Monster/Boss_04_Lizhan/BP_Boss_Lizhan_Dungeon.36"
+      }
+    }
+  },
+  {
+    "Type": "TimelineComponent",
+    "Name": "BeAttackTimeline",
+    "Outer": "Default__BP_Boss_Lizhan_Dungeon_C",
+    "Class": "UScriptClass'TimelineComponent'",
+    "Template": {
+      "ObjectName": "TimelineComponent'Default__BP_Boss_Lizhan_C:BeAttackTimeline'",
+      "ObjectPath": "EM/Content/AssetDesign/Char/Monster/Boss_04_Lizhan/BP_Boss_Lizhan.44"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
+  }
+]

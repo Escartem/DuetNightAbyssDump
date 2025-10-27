@@ -1,0 +1,117 @@
+[
+  {
+    "Type": "BehaviorTree",
+    "Name": "BT_9Wuyou_BlinkDis",
+    "Class": "UScriptClass'BehaviorTree'",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "RootNode": {
+        "ObjectName": "BTComposite_Sequence'BT_9Wuyou_BlinkDis:BTComposite_Sequence_5'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/NE_Wuyou/BT_9Wuyou_BlinkDis.1"
+      },
+      "BlackboardAsset": {
+        "ObjectName": "BlackboardData'BB_9Wuyou'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/NE_Wuyou/BB_9Wuyou.0"
+      },
+      "RootDecorators": [
+        {
+          "ObjectName": "BTDecorator_Blackboard'BT_9Wuyou_BlinkDis:BTDecorator_Blackboard_7'",
+          "ObjectPath": "EM/Content/AssetDesign/AI/Monster/NE_Wuyou/BT_9Wuyou_BlinkDis.2"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_5",
+    "Outer": "BT_9Wuyou_BlinkDis",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_StareAt'BT_9Wuyou_BlinkDis:BTTask_StareAt_2'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/NE_Wuyou/BT_9Wuyou_BlinkDis.4"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_BlinkMoveTo'BT_9Wuyou_BlinkDis:BTTask_BlinkMoveTo_4'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/NE_Wuyou/BT_9Wuyou_BlinkDis.3"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_9Wuyou_BlinkDis'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/NE_Wuyou/BT_9Wuyou_BlinkDis.0"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_7",
+    "Outer": "BT_9Wuyou_BlinkDis",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "FloatValue": 3000.0,
+      "CachedDescription": "PlayerDis 大于 3000.000000",
+      "OperationType": 4,
+      "BlackboardKey": {
+        "SelectedKeyName": "PlayerDis"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_9Wuyou_BlinkDis'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/NE_Wuyou/BT_9Wuyou_BlinkDis.0"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_BlinkMoveTo",
+    "Name": "BTTask_BlinkMoveTo_4",
+    "Outer": "BT_9Wuyou_BlinkDis",
+    "Class": "UScriptClass'BTTask_BlinkMoveTo'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "FadeOutTime": 1.0,
+      "BlackboardKey": {
+        "SelectedKeyName": "Player"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_9Wuyou_BlinkDis'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/NE_Wuyou/BT_9Wuyou_BlinkDis.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_9Wuyou_BlinkDis:BTComposite_Sequence_5'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/NE_Wuyou/BT_9Wuyou_BlinkDis.1"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_StareAt",
+    "Name": "BTTask_StareAt_2",
+    "Outer": "BT_9Wuyou_BlinkDis",
+    "Class": "UScriptClass'BTTask_StareAt'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TurnIPSpeedAmount": 90.0,
+      "BBName": "Player",
+      "ContinueTime": 1.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_9Wuyou_BlinkDis'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/NE_Wuyou/BT_9Wuyou_BlinkDis.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_9Wuyou_BlinkDis:BTComposite_Sequence_5'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/NE_Wuyou/BT_9Wuyou_BlinkDis.1"
+      }
+    }
+  }
+]

@@ -1,0 +1,1130 @@
+[
+  {
+    "Type": "BehaviorTree",
+    "Name": "BT_Phantom_Ranged_Common",
+    "Class": "UScriptClass'BehaviorTree'",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "RootNode": {
+        "ObjectName": "BTComposite_Selector'BT_Phantom_Ranged_Common:BTComposite_Selector_3'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Parent/BT_Phantom_Ranged_Common.4"
+      },
+      "BlackboardAsset": {
+        "ObjectName": "BlackboardData'BB_Shadow'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Parent/BB_Shadow.0"
+      },
+      "RootDecorators": [
+        {
+          "ObjectName": "BTDecorator_CheckCombatCondition'BT_Phantom_Ranged_Common:BTDecorator_CheckCombatCondition_1'",
+          "ObjectPath": "EM/Content/AssetDesign/AI/Player/Parent/BT_Phantom_Ranged_Common.18"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "BT_AddBuff_C",
+    "Name": "BT_AddBuff_C_0",
+    "Outer": "BT_Phantom_Ranged_Common",
+    "Class": "BlueprintGeneratedClass'EM/Content/AssetDesign/AI/Player/Parent/BT_AddBuff.BT_AddBuff_C'",
+    "Template": {
+      "ObjectName": "BT_AddBuff_C'Default__BT_AddBuff_C'",
+      "ObjectPath": "EM/Content/AssetDesign/AI/Player/Parent/BT_AddBuff.3"
+    },
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Target": {
+        "SelectedKeyName": "SelfActor"
+      },
+      "BuffID": 901,
+      "LastTime": 2.0,
+      "ConditionId": 38,
+      "bShowPropertyDetails": false,
+      "RandomDeviation": 0.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Ranged_Common'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Parent/BT_Phantom_Ranged_Common.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Phantom_Ranged_Common:BTComposite_Selector_3'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Parent/BT_Phantom_Ranged_Common.4"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_0",
+    "Outer": "BT_Phantom_Ranged_Common",
+    "Class": "UScriptClass'BTComposite_Selector'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_Phantom_Ranged_Common:BTComposite_Sequence_3'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Parent/BT_Phantom_Ranged_Common.5"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_CoolDownPlayer'BT_Phantom_Ranged_Common:BTDecorator_CoolDownPlayer_2'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Player/Parent/BT_Phantom_Ranged_Common.23"
+            },
+            {
+              "ObjectName": "BTDecorator_TargetIsChar_C'BT_Phantom_Ranged_Common:BTDecorator_TargetIsChar_C_5'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Player/Parent/BT_Phantom_Ranged_Common.26"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector'BT_Phantom_Ranged_Common:BTComposite_Selector_10'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Parent/BT_Phantom_Ranged_Common.3"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Phantom_Ranged_Common:BTDecorator_Blackboard_7'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Player/Parent/BT_Phantom_Ranged_Common.12"
+            },
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Phantom_Ranged_Common:BTDecorator_Blackboard_1'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Player/Parent/BT_Phantom_Ranged_Common.11"
+            },
+            {
+              "ObjectName": "BTDecorator_CanHitTarget'BT_Phantom_Ranged_Common:BTDecorator_CanHitTarget_0'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Player/Parent/BT_Phantom_Ranged_Common.13"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_RunBehavior'BT_Phantom_Ranged_Common:BTTask_RunBehavior_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Parent/BT_Phantom_Ranged_Common.35"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Phantom_Ranged_Common:BTDecorator_Blackboard_0'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Player/Parent/BT_Phantom_Ranged_Common.10"
+            }
+          ],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Ranged_Common'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Parent/BT_Phantom_Ranged_Common.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Phantom_Ranged_Common:BTComposite_Selector_3'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Parent/BT_Phantom_Ranged_Common.4"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_10",
+    "Outer": "BT_Phantom_Ranged_Common",
+    "Class": "UScriptClass'BTComposite_Selector'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_SimpleParallel'BT_Phantom_Ranged_Common:BTComposite_SimpleParallel_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Parent/BT_Phantom_Ranged_Common.7"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_SimpleParallel'BT_Phantom_Ranged_Common:BTComposite_SimpleParallel_1'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Parent/BT_Phantom_Ranged_Common.8"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Ranged_Common'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Parent/BT_Phantom_Ranged_Common.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Phantom_Ranged_Common:BTComposite_Selector_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Parent/BT_Phantom_Ranged_Common.2"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_3",
+    "Outer": "BT_Phantom_Ranged_Common",
+    "Class": "UScriptClass'BTComposite_Selector'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector'BT_Phantom_Ranged_Common:BTComposite_Selector_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Parent/BT_Phantom_Ranged_Common.2"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_CharAttrCondition'BT_Phantom_Ranged_Common:BTDecorator_CharAttrCondition_3'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Player/Parent/BT_Phantom_Ranged_Common.14"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_SimpleParallel'BT_Phantom_Ranged_Common:BTComposite_SimpleParallel_2'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Parent/BT_Phantom_Ranged_Common.9"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_CharAttrCondition'BT_Phantom_Ranged_Common:BTDecorator_CharAttrCondition_5'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Player/Parent/BT_Phantom_Ranged_Common.16"
+            },
+            {
+              "ObjectName": "BTDecorator_CharAttrCondition'BT_Phantom_Ranged_Common:BTDecorator_CharAttrCondition_6'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Player/Parent/BT_Phantom_Ranged_Common.17"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_Phantom_Ranged_Common:BTComposite_Sequence_4'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Parent/BT_Phantom_Ranged_Common.6"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_CoolDownPlayer'BT_Phantom_Ranged_Common:BTDecorator_CoolDownPlayer_1'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Player/Parent/BT_Phantom_Ranged_Common.22"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_PhantomMoveTo'BT_Phantom_Ranged_Common:BTTask_PhantomMoveTo_3'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Parent/BT_Phantom_Ranged_Common.34"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "Services": [
+        {
+          "ObjectName": "BT_AddBuff_C'BT_Phantom_Ranged_Common:BT_AddBuff_C_0'",
+          "ObjectPath": "EM/Content/AssetDesign/AI/Player/Parent/BT_Phantom_Ranged_Common.1"
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Ranged_Common'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Parent/BT_Phantom_Ranged_Common.0"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_3",
+    "Outer": "BT_Phantom_Ranged_Common",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_FilterTargetsByOwnerDis'BT_Phantom_Ranged_Common:BTTask_FilterTargetsByOwnerDis_3'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Parent/BT_Phantom_Ranged_Common.28"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_LastFilterTargetsByNum_P'BT_Phantom_Ranged_Common:BTTask_LastFilterTargetsByNum_P_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Parent/BT_Phantom_Ranged_Common.29"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_SetPartAsTarget'BT_Phantom_Ranged_Common:BTTask_SetPartAsTarget_1'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Parent/BT_Phantom_Ranged_Common.37"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_ForceSuccess'BT_Phantom_Ranged_Common:BTDecorator_ForceSuccess_1'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Player/Parent/BT_Phantom_Ranged_Common.25"
+            }
+          ],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Ranged_Common'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Parent/BT_Phantom_Ranged_Common.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Phantom_Ranged_Common:BTComposite_Selector_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Parent/BT_Phantom_Ranged_Common.2"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_4",
+    "Outer": "BT_Phantom_Ranged_Common",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_FilterTargetsByOwnerDis'BT_Phantom_Ranged_Common:BTTask_FilterTargetsByOwnerDis_2'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Parent/BT_Phantom_Ranged_Common.27"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_LastFilterTargetsByNum_P'BT_Phantom_Ranged_Common:BTTask_LastFilterTargetsByNum_P_1'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Parent/BT_Phantom_Ranged_Common.30"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_SetPartAsTarget'BT_Phantom_Ranged_Common:BTTask_SetPartAsTarget_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Parent/BT_Phantom_Ranged_Common.36"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_ForceSuccess'BT_Phantom_Ranged_Common:BTDecorator_ForceSuccess_0'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Player/Parent/BT_Phantom_Ranged_Common.24"
+            }
+          ],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Ranged_Common'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Parent/BT_Phantom_Ranged_Common.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Phantom_Ranged_Common:BTComposite_Selector_3'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Parent/BT_Phantom_Ranged_Common.4"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_SimpleParallel",
+    "Name": "BTComposite_SimpleParallel_0",
+    "Outer": "BT_Phantom_Ranged_Common",
+    "Class": "UScriptClass'BTComposite_SimpleParallel'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_UseSkill_Player'BT_Phantom_Ranged_Common:BTTask_UseSkill_Player_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Parent/BT_Phantom_Ranged_Common.38"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_PhantomMoveTo'BT_Phantom_Ranged_Common:BTTask_PhantomMoveTo_1'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Parent/BT_Phantom_Ranged_Common.32"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_CheckCombatCondition'BT_Phantom_Ranged_Common:BTDecorator_CheckCombatCondition_4'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Player/Parent/BT_Phantom_Ranged_Common.21"
+            }
+          ],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Ranged_Common'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Parent/BT_Phantom_Ranged_Common.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Phantom_Ranged_Common:BTComposite_Selector_10'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Parent/BT_Phantom_Ranged_Common.3"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_SimpleParallel",
+    "Name": "BTComposite_SimpleParallel_1",
+    "Outer": "BT_Phantom_Ranged_Common",
+    "Class": "UScriptClass'BTComposite_SimpleParallel'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_UseSkill_Player'BT_Phantom_Ranged_Common:BTTask_UseSkill_Player_11'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Parent/BT_Phantom_Ranged_Common.39"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_CharAttrCondition'BT_Phantom_Ranged_Common:BTDecorator_CharAttrCondition_4'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Player/Parent/BT_Phantom_Ranged_Common.15"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_PhantomMoveTo'BT_Phantom_Ranged_Common:BTTask_PhantomMoveTo_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Parent/BT_Phantom_Ranged_Common.31"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_CheckCombatCondition'BT_Phantom_Ranged_Common:BTDecorator_CheckCombatCondition_3'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Player/Parent/BT_Phantom_Ranged_Common.20"
+            }
+          ],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Ranged_Common'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Parent/BT_Phantom_Ranged_Common.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Phantom_Ranged_Common:BTComposite_Selector_10'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Parent/BT_Phantom_Ranged_Common.3"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_SimpleParallel",
+    "Name": "BTComposite_SimpleParallel_2",
+    "Outer": "BT_Phantom_Ranged_Common",
+    "Class": "UScriptClass'BTComposite_SimpleParallel'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_UseSkill_Player'BT_Phantom_Ranged_Common:BTTask_UseSkill_Player_12'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Parent/BT_Phantom_Ranged_Common.40"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_PhantomMoveTo'BT_Phantom_Ranged_Common:BTTask_PhantomMoveTo_2'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Parent/BT_Phantom_Ranged_Common.33"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_CheckCombatCondition'BT_Phantom_Ranged_Common:BTDecorator_CheckCombatCondition_2'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Player/Parent/BT_Phantom_Ranged_Common.19"
+            }
+          ],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Ranged_Common'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Parent/BT_Phantom_Ranged_Common.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Phantom_Ranged_Common:BTComposite_Selector_3'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Parent/BT_Phantom_Ranged_Common.4"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_0",
+    "Outer": "BT_Phantom_Ranged_Common",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "CachedDescription": "Target is 已设置",
+      "BlackboardKey": {
+        "SelectedKeyName": "Target"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Ranged_Common'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Parent/BT_Phantom_Ranged_Common.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Phantom_Ranged_Common:BTComposite_Selector_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Parent/BT_Phantom_Ranged_Common.2"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_1",
+    "Outer": "BT_Phantom_Ranged_Common",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "CachedDescription": "Target is 已设置",
+      "NotifyObserver": "EBTBlackboardRestart::ValueChange",
+      "BlackboardKey": {
+        "SelectedKeyName": "Target"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::Self",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Ranged_Common'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Parent/BT_Phantom_Ranged_Common.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Phantom_Ranged_Common:BTComposite_Selector_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Parent/BT_Phantom_Ranged_Common.2"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_7",
+    "Outer": "BT_Phantom_Ranged_Common",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "FloatValue": 2000.0,
+      "CachedDescription": "TargetCapsuleDis 小于 2000.000000",
+      "OperationType": 2,
+      "BlackboardKey": {
+        "SelectedKeyName": "TargetCapsuleDis"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::Self",
+      "NodeName": "Distance<2000",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Ranged_Common'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Parent/BT_Phantom_Ranged_Common.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Phantom_Ranged_Common:BTComposite_Selector_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Parent/BT_Phantom_Ranged_Common.2"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_CanHitTarget",
+    "Name": "BTDecorator_CanHitTarget_0",
+    "Outer": "BT_Phantom_Ranged_Common",
+    "Class": "UScriptClass'BTDecorator_CanHitTarget'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "CacheCalculateResult": true,
+      "CacheTime": 0.5,
+      "FlowAbortMode": "EBTFlowAbortMode::Self",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Ranged_Common'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Parent/BT_Phantom_Ranged_Common.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Phantom_Ranged_Common:BTComposite_Selector_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Parent/BT_Phantom_Ranged_Common.2"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_CharAttrCondition",
+    "Name": "BTDecorator_CharAttrCondition_3",
+    "Outer": "BT_Phantom_Ranged_Common",
+    "Class": "UScriptClass'BTDecorator_CharAttrCondition'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TargetType": "EConditionTargetType::RangedWeapon",
+      "MinValue": 0.0,
+      "AttrName": "EAttrName::MagazineBulletNum",
+      "NodeName": "CheckBulletNum",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Ranged_Common'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Parent/BT_Phantom_Ranged_Common.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Phantom_Ranged_Common:BTComposite_Selector_3'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Parent/BT_Phantom_Ranged_Common.4"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_CharAttrCondition",
+    "Name": "BTDecorator_CharAttrCondition_4",
+    "Outer": "BT_Phantom_Ranged_Common",
+    "Class": "UScriptClass'BTDecorator_CharAttrCondition'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TargetType": "EConditionTargetType::RangedWeapon",
+      "MinValue": 0.0,
+      "AttrName": "EAttrName::MagazineBulletNum",
+      "NodeName": "CheckBulletNum",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Ranged_Common'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Parent/BT_Phantom_Ranged_Common.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_SimpleParallel'BT_Phantom_Ranged_Common:BTComposite_SimpleParallel_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Parent/BT_Phantom_Ranged_Common.8"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_CharAttrCondition",
+    "Name": "BTDecorator_CharAttrCondition_5",
+    "Outer": "BT_Phantom_Ranged_Common",
+    "Class": "UScriptClass'BTDecorator_CharAttrCondition'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TargetType": "EConditionTargetType::RangedWeapon",
+      "MaxValue": 1.0,
+      "AttrName": "EAttrName::MagazineBulletNum",
+      "NodeName": "CheckBulletNum",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Ranged_Common'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Parent/BT_Phantom_Ranged_Common.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Phantom_Ranged_Common:BTComposite_Selector_3'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Parent/BT_Phantom_Ranged_Common.4"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_CharAttrCondition",
+    "Name": "BTDecorator_CharAttrCondition_6",
+    "Outer": "BT_Phantom_Ranged_Common",
+    "Class": "UScriptClass'BTDecorator_CharAttrCondition'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TargetType": "EConditionTargetType::RangedWeapon",
+      "MinValue": 0.0,
+      "AttrName": "EAttrName::BulletNum",
+      "NodeName": "CheckBulletNum",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Ranged_Common'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Parent/BT_Phantom_Ranged_Common.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Phantom_Ranged_Common:BTComposite_Selector_3'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Parent/BT_Phantom_Ranged_Common.4"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_CheckCombatCondition",
+    "Name": "BTDecorator_CheckCombatCondition_1",
+    "Outer": "BT_Phantom_Ranged_Common",
+    "Class": "UScriptClass'BTDecorator_CheckCombatCondition'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "CombatConditionId": 21,
+      "CacheCalculateResult": true,
+      "CacheTime": 0.5,
+      "NodeName": "IsOnLand",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Ranged_Common'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Parent/BT_Phantom_Ranged_Common.0"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_CheckCombatCondition",
+    "Name": "BTDecorator_CheckCombatCondition_2",
+    "Outer": "BT_Phantom_Ranged_Common",
+    "Class": "UScriptClass'BTDecorator_CheckCombatCondition'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "CombatConditionId": 903,
+      "CacheCalculateResult": true,
+      "CacheTime": 0.5,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Ranged_Common'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Parent/BT_Phantom_Ranged_Common.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_SimpleParallel'BT_Phantom_Ranged_Common:BTComposite_SimpleParallel_2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Parent/BT_Phantom_Ranged_Common.9"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_CheckCombatCondition",
+    "Name": "BTDecorator_CheckCombatCondition_3",
+    "Outer": "BT_Phantom_Ranged_Common",
+    "Class": "UScriptClass'BTDecorator_CheckCombatCondition'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "CombatConditionId": 903,
+      "CacheCalculateResult": true,
+      "CacheTime": 0.5,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Ranged_Common'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Parent/BT_Phantom_Ranged_Common.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_SimpleParallel'BT_Phantom_Ranged_Common:BTComposite_SimpleParallel_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Parent/BT_Phantom_Ranged_Common.8"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_CheckCombatCondition",
+    "Name": "BTDecorator_CheckCombatCondition_4",
+    "Outer": "BT_Phantom_Ranged_Common",
+    "Class": "UScriptClass'BTDecorator_CheckCombatCondition'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "CombatConditionId": 903,
+      "CacheCalculateResult": true,
+      "CacheTime": 0.5,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Ranged_Common'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Parent/BT_Phantom_Ranged_Common.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_SimpleParallel'BT_Phantom_Ranged_Common:BTComposite_SimpleParallel_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Parent/BT_Phantom_Ranged_Common.7"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_CoolDownPlayer",
+    "Name": "BTDecorator_CoolDownPlayer_1",
+    "Outer": "BT_Phantom_Ranged_Common",
+    "Class": "UScriptClass'BTDecorator_CoolDownPlayer'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Ranged_Common'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Parent/BT_Phantom_Ranged_Common.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Phantom_Ranged_Common:BTComposite_Selector_3'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Parent/BT_Phantom_Ranged_Common.4"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_CoolDownPlayer",
+    "Name": "BTDecorator_CoolDownPlayer_2",
+    "Outer": "BT_Phantom_Ranged_Common",
+    "Class": "UScriptClass'BTDecorator_CoolDownPlayer'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "CoolDownTime": 10.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Ranged_Common'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Parent/BT_Phantom_Ranged_Common.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Phantom_Ranged_Common:BTComposite_Selector_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Parent/BT_Phantom_Ranged_Common.2"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_ForceSuccess",
+    "Name": "BTDecorator_ForceSuccess_0",
+    "Outer": "BT_Phantom_Ranged_Common",
+    "Class": "UScriptClass'BTDecorator_ForceSuccess'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Ranged_Common'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Parent/BT_Phantom_Ranged_Common.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Phantom_Ranged_Common:BTComposite_Sequence_4'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Parent/BT_Phantom_Ranged_Common.6"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_ForceSuccess",
+    "Name": "BTDecorator_ForceSuccess_1",
+    "Outer": "BT_Phantom_Ranged_Common",
+    "Class": "UScriptClass'BTDecorator_ForceSuccess'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Ranged_Common'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Parent/BT_Phantom_Ranged_Common.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Phantom_Ranged_Common:BTComposite_Sequence_3'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Parent/BT_Phantom_Ranged_Common.5"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_TargetIsChar_C",
+    "Name": "BTDecorator_TargetIsChar_C_5",
+    "Outer": "BT_Phantom_Ranged_Common",
+    "Class": "BlueprintGeneratedClass'EM/Content/BluePrints/AI/BTDecorator/BTDecorator_TargetIsChar.BTDecorator_TargetIsChar_C'",
+    "Template": {
+      "ObjectName": "BTDecorator_TargetIsChar_C'Default__BTDecorator_TargetIsChar_C'",
+      "ObjectPath": "EM/Content/BluePrints/AI/BTDecorator/BTDecorator_TargetIsChar.2"
+    },
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Target": {
+        "SelectedKeyName": "Target"
+      },
+      "bShowPropertyDetails": false,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Ranged_Common'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Parent/BT_Phantom_Ranged_Common.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Phantom_Ranged_Common:BTComposite_Selector_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Parent/BT_Phantom_Ranged_Common.2"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_FilterTargetsByOwnerDis",
+    "Name": "BTTask_FilterTargetsByOwnerDis_2",
+    "Outer": "BT_Phantom_Ranged_Common",
+    "Class": "UScriptClass'BTTask_FilterTargetsByOwnerDis'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "MaxDis": 2000.0,
+      "NodeName": "FilterTargetsByOwner",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Ranged_Common'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Parent/BT_Phantom_Ranged_Common.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Phantom_Ranged_Common:BTComposite_Sequence_4'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Parent/BT_Phantom_Ranged_Common.6"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_FilterTargetsByOwnerDis",
+    "Name": "BTTask_FilterTargetsByOwnerDis_3",
+    "Outer": "BT_Phantom_Ranged_Common",
+    "Class": "UScriptClass'BTTask_FilterTargetsByOwnerDis'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "MaxDis": 2500.0,
+      "NodeName": "FilterTargetsByOwner",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Ranged_Common'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Parent/BT_Phantom_Ranged_Common.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Phantom_Ranged_Common:BTComposite_Sequence_3'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Parent/BT_Phantom_Ranged_Common.5"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_LastFilterTargetsByNum_P",
+    "Name": "BTTask_LastFilterTargetsByNum_P_0",
+    "Outer": "BT_Phantom_Ranged_Common",
+    "Class": "UScriptClass'BTTask_LastFilterTargetsByNum_P'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Radius": 600.0,
+      "TypeOfFilterList": "ETypeOfFilterList::AfterFilter",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Ranged_Common'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Parent/BT_Phantom_Ranged_Common.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Phantom_Ranged_Common:BTComposite_Sequence_3'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Parent/BT_Phantom_Ranged_Common.5"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_LastFilterTargetsByNum_P",
+    "Name": "BTTask_LastFilterTargetsByNum_P_1",
+    "Outer": "BT_Phantom_Ranged_Common",
+    "Class": "UScriptClass'BTTask_LastFilterTargetsByNum_P'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Radius": 100.0,
+      "TypeOfFilterList": "ETypeOfFilterList::AfterFilter",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Ranged_Common'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Parent/BT_Phantom_Ranged_Common.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Phantom_Ranged_Common:BTComposite_Sequence_4'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Parent/BT_Phantom_Ranged_Common.6"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_PhantomMoveTo",
+    "Name": "BTTask_PhantomMoveTo_0",
+    "Outer": "BT_Phantom_Ranged_Common",
+    "Class": "UScriptClass'BTTask_PhantomMoveTo'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "AroundActorType": "EGetAroundActorType::Nearest",
+      "UpdateInterval": 0.2,
+      "AroundActorDis": 450.0,
+      "bOrientRotationToMovement": true,
+      "MoveTypeState": "EMoveTypeState::MTS_Run",
+      "bSetCharacterTagToIdle": false,
+      "MaxMoveTime": 6.0,
+      "AcceptableRadius": 100.0,
+      "bStopOnOverlapNeedsUpdate": false,
+      "BlackboardKey": {
+        "SelectedKeyName": "PhantomOwner"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Ranged_Common'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Parent/BT_Phantom_Ranged_Common.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_SimpleParallel'BT_Phantom_Ranged_Common:BTComposite_SimpleParallel_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Parent/BT_Phantom_Ranged_Common.8"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_PhantomMoveTo",
+    "Name": "BTTask_PhantomMoveTo_1",
+    "Outer": "BT_Phantom_Ranged_Common",
+    "Class": "UScriptClass'BTTask_PhantomMoveTo'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "AroundActorType": "EGetAroundActorType::Nearest",
+      "UpdateInterval": 0.2,
+      "AroundActorDis": 450.0,
+      "bOrientRotationToMovement": true,
+      "MoveTypeState": "EMoveTypeState::MTS_Run",
+      "bSetCharacterTagToIdle": false,
+      "MaxMoveTime": 6.0,
+      "AcceptableRadius": 100.0,
+      "bStopOnOverlapNeedsUpdate": false,
+      "BlackboardKey": {
+        "SelectedKeyName": "PhantomOwner"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Ranged_Common'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Parent/BT_Phantom_Ranged_Common.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_SimpleParallel'BT_Phantom_Ranged_Common:BTComposite_SimpleParallel_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Parent/BT_Phantom_Ranged_Common.7"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_PhantomMoveTo",
+    "Name": "BTTask_PhantomMoveTo_2",
+    "Outer": "BT_Phantom_Ranged_Common",
+    "Class": "UScriptClass'BTTask_PhantomMoveTo'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "AroundActorType": "EGetAroundActorType::Nearest",
+      "UpdateInterval": 0.2,
+      "AroundActorDis": 450.0,
+      "bOrientRotationToMovement": true,
+      "MoveTypeState": "EMoveTypeState::MTS_Run",
+      "bSetCharacterTagToIdle": false,
+      "MaxMoveTime": 6.0,
+      "AcceptableRadius": 100.0,
+      "bStopOnOverlapNeedsUpdate": false,
+      "BlackboardKey": {
+        "SelectedKeyName": "PhantomOwner"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Ranged_Common'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Parent/BT_Phantom_Ranged_Common.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_SimpleParallel'BT_Phantom_Ranged_Common:BTComposite_SimpleParallel_2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Parent/BT_Phantom_Ranged_Common.9"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_PhantomMoveTo",
+    "Name": "BTTask_PhantomMoveTo_3",
+    "Outer": "BT_Phantom_Ranged_Common",
+    "Class": "UScriptClass'BTTask_PhantomMoveTo'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "AroundActorType": "EGetAroundActorType::Nearest",
+      "UpdateInterval": 0.2,
+      "LimitByOwner": true,
+      "AroundActorDis": 300.0,
+      "bAllowBulletJump": true,
+      "BulletJumpDistance": 1200.0,
+      "BulletJumpConditionId": 904,
+      "bOrientRotationToMovement": true,
+      "MoveTypeState": "EMoveTypeState::MTS_Run",
+      "ForceTeleportDistance": 2800.0,
+      "bAllowTeleport": true,
+      "MaxMoveTime": 1.0,
+      "AcceptableRadius": 100.0,
+      "bStopOnOverlapNeedsUpdate": false,
+      "BlackboardKey": {
+        "SelectedKeyName": "PhantomOwner"
+      },
+      "bIgnoreRestartSelf": true,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Ranged_Common'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Parent/BT_Phantom_Ranged_Common.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Phantom_Ranged_Common:BTComposite_Selector_3'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Parent/BT_Phantom_Ranged_Common.4"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_RunBehavior",
+    "Name": "BTTask_RunBehavior_0",
+    "Outer": "BT_Phantom_Ranged_Common",
+    "Class": "UScriptClass'BTTask_RunBehavior'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "BehaviorAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_RangedEQS'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Parent/BT_Phantom_RangedEQS.0"
+      },
+      "NodeName": "MoveToEqs",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Ranged_Common'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Parent/BT_Phantom_Ranged_Common.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Phantom_Ranged_Common:BTComposite_Selector_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Parent/BT_Phantom_Ranged_Common.2"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_SetPartAsTarget",
+    "Name": "BTTask_SetPartAsTarget_0",
+    "Outer": "BT_Phantom_Ranged_Common",
+    "Class": "UScriptClass'BTTask_SetPartAsTarget'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Ranged_Common'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Parent/BT_Phantom_Ranged_Common.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Phantom_Ranged_Common:BTComposite_Sequence_4'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Parent/BT_Phantom_Ranged_Common.6"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_SetPartAsTarget",
+    "Name": "BTTask_SetPartAsTarget_1",
+    "Outer": "BT_Phantom_Ranged_Common",
+    "Class": "UScriptClass'BTTask_SetPartAsTarget'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Ranged_Common'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Parent/BT_Phantom_Ranged_Common.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Phantom_Ranged_Common:BTComposite_Sequence_3'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Parent/BT_Phantom_Ranged_Common.5"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_UseSkill_Player",
+    "Name": "BTTask_UseSkill_Player_0",
+    "Outer": "BT_Phantom_Ranged_Common",
+    "Class": "UScriptClass'BTTask_UseSkill_Player'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SkillType": "EUseSkill_SkillType::HeavyShooting",
+      "AutoInput": false,
+      "NodeName": "HeavyShooting",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Ranged_Common'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Parent/BT_Phantom_Ranged_Common.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_SimpleParallel'BT_Phantom_Ranged_Common:BTComposite_SimpleParallel_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Parent/BT_Phantom_Ranged_Common.7"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_UseSkill_Player",
+    "Name": "BTTask_UseSkill_Player_11",
+    "Outer": "BT_Phantom_Ranged_Common",
+    "Class": "UScriptClass'BTTask_UseSkill_Player'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SkillType": "EUseSkill_SkillType::Shooting",
+      "NodeName": "Shooting",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Ranged_Common'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Parent/BT_Phantom_Ranged_Common.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_SimpleParallel'BT_Phantom_Ranged_Common:BTComposite_SimpleParallel_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Parent/BT_Phantom_Ranged_Common.8"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_UseSkill_Player",
+    "Name": "BTTask_UseSkill_Player_12",
+    "Outer": "BT_Phantom_Ranged_Common",
+    "Class": "UScriptClass'BTTask_UseSkill_Player'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SkillType": "EUseSkill_SkillType::Reload",
+      "bUseControllerRotationYaw": false,
+      "AutoInput": false,
+      "NodeName": "Reload",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Ranged_Common'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Parent/BT_Phantom_Ranged_Common.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_SimpleParallel'BT_Phantom_Ranged_Common:BTComposite_SimpleParallel_2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Parent/BT_Phantom_Ranged_Common.9"
+      }
+    }
+  }
+]

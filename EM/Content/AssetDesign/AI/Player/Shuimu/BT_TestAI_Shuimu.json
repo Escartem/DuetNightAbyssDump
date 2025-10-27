@@ -1,0 +1,676 @@
+[
+  {
+    "Type": "BehaviorTree",
+    "Name": "BT_TestAI_Shuimu",
+    "Class": "UScriptClass'BehaviorTree'",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "RootNode": {
+        "ObjectName": "BTComposite_Selector'BT_TestAI_Shuimu:BTComposite_Selector_4'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Shuimu/BT_TestAI_Shuimu.2"
+      },
+      "BlackboardAsset": {
+        "ObjectName": "BlackboardData'BB_Shadow'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Parent/BB_Shadow.0"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_1",
+    "Outer": "BT_TestAI_Shuimu",
+    "Class": "UScriptClass'BTComposite_Selector'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_UseSkill_Player'BT_TestAI_Shuimu:BTTask_UseSkill_Player_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Shuimu/BT_TestAI_Shuimu.23"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_CheckCombatCondition'BT_TestAI_Shuimu:BTDecorator_CheckCombatCondition_3'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Player/Shuimu/BT_TestAI_Shuimu.13"
+            },
+            {
+              "ObjectName": "BTDecorator_CheckSpCost'BT_TestAI_Shuimu:BTDecorator_CheckSpCost_0'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Player/Shuimu/BT_TestAI_Shuimu.14"
+            },
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_TestAI_Shuimu:BTDecorator_Blackboard_7'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Player/Shuimu/BT_TestAI_Shuimu.10"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_TestAI_Shuimu:BTComposite_Sequence_1'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Shuimu/BT_TestAI_Shuimu.4"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_TestAI_Shuimu:BTDecorator_Blackboard_3'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Player/Shuimu/BT_TestAI_Shuimu.7"
+            },
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_TestAI_Shuimu:BTDecorator_Blackboard_5'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Player/Shuimu/BT_TestAI_Shuimu.9"
+            },
+            {
+              "ObjectName": "BTDecorator_CheckCombatCondition'BT_TestAI_Shuimu:BTDecorator_CheckCombatCondition_1'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Player/Shuimu/BT_TestAI_Shuimu.12"
+            },
+            {
+              "ObjectName": "BTDecorator_CheckSpCost'BT_TestAI_Shuimu:BTDecorator_CheckSpCost_1'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Player/Shuimu/BT_TestAI_Shuimu.15"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_RunBehavior'BT_TestAI_Shuimu:BTTask_RunBehavior_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Shuimu/BT_TestAI_Shuimu.20"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_TestAI_Shuimu:BTDecorator_Blackboard_19'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Player/Shuimu/BT_TestAI_Shuimu.6"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_RunBehavior'BT_TestAI_Shuimu:BTTask_RunBehavior_1'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Shuimu/BT_TestAI_Shuimu.21"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_TestAI_Shuimu'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Shuimu/BT_TestAI_Shuimu.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_TestAI_Shuimu:BTComposite_Selector_6'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Shuimu/BT_TestAI_Shuimu.3"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_4",
+    "Outer": "BT_TestAI_Shuimu",
+    "Class": "UScriptClass'BTComposite_Selector'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector'BT_TestAI_Shuimu:BTComposite_Selector_6'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Shuimu/BT_TestAI_Shuimu.3"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_TestAI_Shuimu:BTDecorator_Blackboard_4'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Player/Shuimu/BT_TestAI_Shuimu.8"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait'BT_TestAI_Shuimu:BTTask_Wait_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Shuimu/BT_TestAI_Shuimu.25"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_TestAI_Shuimu:BTDecorator_Blackboard_9'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Player/Shuimu/BT_TestAI_Shuimu.11"
+            }
+          ],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_TestAI_Shuimu'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Shuimu/BT_TestAI_Shuimu.0"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_6",
+    "Outer": "BT_TestAI_Shuimu",
+    "Class": "UScriptClass'BTComposite_Selector'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector'BT_TestAI_Shuimu:BTComposite_Selector_1'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Shuimu/BT_TestAI_Shuimu.1"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_TestAI_Shuimu:BTDecorator_Blackboard_1'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Player/Shuimu/BT_TestAI_Shuimu.5"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_RunBehavior'BT_TestAI_Shuimu:BTTask_RunBehavior_2'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Shuimu/BT_TestAI_Shuimu.22"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "Services": [
+        {
+          "ObjectName": "BTService_EnemyVision'BT_TestAI_Shuimu:BTService_EnemyVision_0'",
+          "ObjectPath": "EM/Content/AssetDesign/AI/Player/Shuimu/BT_TestAI_Shuimu.18"
+        },
+        {
+          "ObjectName": "BTService_ClearBTTarget_Player'BT_TestAI_Shuimu:BTService_ClearBTTarget_Player_0'",
+          "ObjectPath": "EM/Content/AssetDesign/AI/Player/Shuimu/BT_TestAI_Shuimu.17"
+        },
+        {
+          "ObjectName": "BTService_BBValueDis'BT_TestAI_Shuimu:BTService_BBValueDis_0'",
+          "ObjectPath": "EM/Content/AssetDesign/AI/Player/Shuimu/BT_TestAI_Shuimu.16"
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_TestAI_Shuimu'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Shuimu/BT_TestAI_Shuimu.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_TestAI_Shuimu:BTComposite_Selector_4'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Shuimu/BT_TestAI_Shuimu.2"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_1",
+    "Outer": "BT_TestAI_Shuimu",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_CanHitTarget'BT_TestAI_Shuimu:BTTask_CanHitTarget_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Shuimu/BT_TestAI_Shuimu.19"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_UseSkill_Player'BT_TestAI_Shuimu:BTTask_UseSkill_Player_5'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Shuimu/BT_TestAI_Shuimu.24"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_TestAI_Shuimu'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Shuimu/BT_TestAI_Shuimu.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_TestAI_Shuimu:BTComposite_Selector_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Shuimu/BT_TestAI_Shuimu.1"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_1",
+    "Outer": "BT_TestAI_Shuimu",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "CachedDescription": "Target is Is Set",
+      "BlackboardKey": {
+        "SelectedKeyName": "Target"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_TestAI_Shuimu'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Shuimu/BT_TestAI_Shuimu.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_TestAI_Shuimu:BTComposite_Selector_6'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Shuimu/BT_TestAI_Shuimu.3"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_19",
+    "Outer": "BT_TestAI_Shuimu",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "FloatValue": 1000.0,
+      "CachedDescription": "TargetCapsuleDis Is Less Than 1000.000000",
+      "OperationType": 2,
+      "BlackboardKey": {
+        "SelectedKeyName": "TargetCapsuleDis"
+      },
+      "NodeName": "Distance<1000",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_TestAI_Shuimu'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Shuimu/BT_TestAI_Shuimu.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_TestAI_Shuimu:BTComposite_Selector_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Shuimu/BT_TestAI_Shuimu.1"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_3",
+    "Outer": "BT_TestAI_Shuimu",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "FloatValue": 800.0,
+      "CachedDescription": "TargetCapsuleDis Is Less Than 800.000000",
+      "OperationType": 2,
+      "BlackboardKey": {
+        "SelectedKeyName": "TargetCapsuleDis"
+      },
+      "NodeName": "Distance<800",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_TestAI_Shuimu'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Shuimu/BT_TestAI_Shuimu.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_TestAI_Shuimu:BTComposite_Selector_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Shuimu/BT_TestAI_Shuimu.1"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_4",
+    "Outer": "BT_TestAI_Shuimu",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "CachedDescription": "ActionMode Is Equal To Active",
+      "BlackboardKey": {
+        "SelectedKeyName": "ActionMode"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::Self",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_TestAI_Shuimu'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Shuimu/BT_TestAI_Shuimu.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_TestAI_Shuimu:BTComposite_Selector_4'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Shuimu/BT_TestAI_Shuimu.2"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_5",
+    "Outer": "BT_TestAI_Shuimu",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "FloatValue": 200.0,
+      "CachedDescription": "TargetCapsuleDisZ Is Less Than 200.000000",
+      "OperationType": 2,
+      "BlackboardKey": {
+        "SelectedKeyName": "TargetCapsuleDisZ"
+      },
+      "NodeName": "CheckZ<200",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_TestAI_Shuimu'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Shuimu/BT_TestAI_Shuimu.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_TestAI_Shuimu:BTComposite_Selector_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Shuimu/BT_TestAI_Shuimu.1"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_7",
+    "Outer": "BT_TestAI_Shuimu",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "FloatValue": 200.0,
+      "CachedDescription": "TargetCapsuleDisZ Is Less Than 200.000000",
+      "OperationType": 2,
+      "BlackboardKey": {
+        "SelectedKeyName": "TargetCapsuleDisZ"
+      },
+      "NodeName": "CheckZ<200",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_TestAI_Shuimu'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Shuimu/BT_TestAI_Shuimu.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_TestAI_Shuimu:BTComposite_Selector_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Shuimu/BT_TestAI_Shuimu.1"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_9",
+    "Outer": "BT_TestAI_Shuimu",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "IntValue": 1,
+      "CachedDescription": "ActionMode Is Equal To Hitted",
+      "BlackboardKey": {
+        "SelectedKeyName": "ActionMode"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::Self",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_TestAI_Shuimu'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Shuimu/BT_TestAI_Shuimu.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_TestAI_Shuimu:BTComposite_Selector_4'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Shuimu/BT_TestAI_Shuimu.2"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_CheckCombatCondition",
+    "Name": "BTDecorator_CheckCombatCondition_1",
+    "Outer": "BT_TestAI_Shuimu",
+    "Class": "UScriptClass'BTDecorator_CheckCombatCondition'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "CombatConditionId": 210101,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_TestAI_Shuimu'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Shuimu/BT_TestAI_Shuimu.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_TestAI_Shuimu:BTComposite_Selector_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Shuimu/BT_TestAI_Shuimu.1"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_CheckCombatCondition",
+    "Name": "BTDecorator_CheckCombatCondition_3",
+    "Outer": "BT_TestAI_Shuimu",
+    "Class": "UScriptClass'BTDecorator_CheckCombatCondition'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "CombatConditionId": 210101,
+      "bInverseCondition": true,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_TestAI_Shuimu'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Shuimu/BT_TestAI_Shuimu.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_TestAI_Shuimu:BTComposite_Selector_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Shuimu/BT_TestAI_Shuimu.1"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_CheckSpCost",
+    "Name": "BTDecorator_CheckSpCost_0",
+    "Outer": "BT_TestAI_Shuimu",
+    "Class": "UScriptClass'BTDecorator_CheckSpCost'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SkillId": 210102,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_TestAI_Shuimu'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Shuimu/BT_TestAI_Shuimu.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_TestAI_Shuimu:BTComposite_Selector_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Shuimu/BT_TestAI_Shuimu.1"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_CheckSpCost",
+    "Name": "BTDecorator_CheckSpCost_1",
+    "Outer": "BT_TestAI_Shuimu",
+    "Class": "UScriptClass'BTDecorator_CheckSpCost'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SkillId": 210101,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_TestAI_Shuimu'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Shuimu/BT_TestAI_Shuimu.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_TestAI_Shuimu:BTComposite_Selector_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Shuimu/BT_TestAI_Shuimu.1"
+      }
+    }
+  },
+  {
+    "Type": "BTService_BBValueDis",
+    "Name": "BTService_BBValueDis_0",
+    "Outer": "BT_TestAI_Shuimu",
+    "Class": "UScriptClass'BTService_BBValueDis'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "BBName": "Target",
+      "Interval": 0.1,
+      "RandomDeviation": 0.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_TestAI_Shuimu'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Shuimu/BT_TestAI_Shuimu.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_TestAI_Shuimu:BTComposite_Selector_6'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Shuimu/BT_TestAI_Shuimu.3"
+      }
+    }
+  },
+  {
+    "Type": "BTService_ClearBTTarget_Player",
+    "Name": "BTService_ClearBTTarget_Player_0",
+    "Outer": "BT_TestAI_Shuimu",
+    "Class": "UScriptClass'BTService_ClearBTTarget_Player'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Interval": 0.1,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_TestAI_Shuimu'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Shuimu/BT_TestAI_Shuimu.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_TestAI_Shuimu:BTComposite_Selector_6'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Shuimu/BT_TestAI_Shuimu.3"
+      }
+    }
+  },
+  {
+    "Type": "BTService_EnemyVision",
+    "Name": "BTService_EnemyVision_0",
+    "Outer": "BT_TestAI_Shuimu",
+    "Class": "UScriptClass'BTService_EnemyVision'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "FVisionDistance": 2000.0,
+      "FVisionAngle": 180.0,
+      "Interval": 0.2,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_TestAI_Shuimu'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Shuimu/BT_TestAI_Shuimu.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_TestAI_Shuimu:BTComposite_Selector_6'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Shuimu/BT_TestAI_Shuimu.3"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_CanHitTarget",
+    "Name": "BTTask_CanHitTarget_0",
+    "Outer": "BT_TestAI_Shuimu",
+    "Class": "UScriptClass'BTTask_CanHitTarget'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_TestAI_Shuimu'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Shuimu/BT_TestAI_Shuimu.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_TestAI_Shuimu:BTComposite_Sequence_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Shuimu/BT_TestAI_Shuimu.4"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_RunBehavior",
+    "Name": "BTTask_RunBehavior_0",
+    "Outer": "BT_TestAI_Shuimu",
+    "Class": "UScriptClass'BTTask_RunBehavior'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "BehaviorAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Melee_Common'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Parent/BT_Phantom_Melee_Common.0"
+      },
+      "NodeName": "MeleeAttack",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_TestAI_Shuimu'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Shuimu/BT_TestAI_Shuimu.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_TestAI_Shuimu:BTComposite_Selector_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Shuimu/BT_TestAI_Shuimu.1"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_RunBehavior",
+    "Name": "BTTask_RunBehavior_1",
+    "Outer": "BT_TestAI_Shuimu",
+    "Class": "UScriptClass'BTTask_RunBehavior'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "BehaviorAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Ranged_Common'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Parent/BT_Phantom_Ranged_Common.0"
+      },
+      "NodeName": "RangedAttack",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_TestAI_Shuimu'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Shuimu/BT_TestAI_Shuimu.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_TestAI_Shuimu:BTComposite_Selector_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Shuimu/BT_TestAI_Shuimu.1"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_RunBehavior",
+    "Name": "BTTask_RunBehavior_2",
+    "Outer": "BT_TestAI_Shuimu",
+    "Class": "UScriptClass'BTTask_RunBehavior'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "BehaviorAsset": {
+        "ObjectName": "BehaviorTree'BT_TestAI_DetectEnemy'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Parent/BT_TestAI_DetectEnemy.0"
+      },
+      "NodeName": "DetectEnemy",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_TestAI_Shuimu'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Shuimu/BT_TestAI_Shuimu.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_TestAI_Shuimu:BTComposite_Selector_6'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Shuimu/BT_TestAI_Shuimu.3"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_UseSkill_Player",
+    "Name": "BTTask_UseSkill_Player_0",
+    "Outer": "BT_TestAI_Shuimu",
+    "Class": "UScriptClass'BTTask_UseSkill_Player'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SkillType": "EUseSkill_SkillType::Skill2",
+      "NodeName": "Skill02",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_TestAI_Shuimu'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Shuimu/BT_TestAI_Shuimu.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_TestAI_Shuimu:BTComposite_Selector_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Shuimu/BT_TestAI_Shuimu.1"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_UseSkill_Player",
+    "Name": "BTTask_UseSkill_Player_5",
+    "Outer": "BT_TestAI_Shuimu",
+    "Class": "UScriptClass'BTTask_UseSkill_Player'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SkillType": "EUseSkill_SkillType::Skill1",
+      "NodeName": "Skill01",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_TestAI_Shuimu'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Shuimu/BT_TestAI_Shuimu.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_TestAI_Shuimu:BTComposite_Sequence_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Shuimu/BT_TestAI_Shuimu.4"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_0",
+    "Outer": "BT_TestAI_Shuimu",
+    "Class": "UScriptClass'BTTask_Wait'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "WaitTime": 3.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_TestAI_Shuimu'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Shuimu/BT_TestAI_Shuimu.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_TestAI_Shuimu:BTComposite_Selector_4'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Shuimu/BT_TestAI_Shuimu.2"
+      }
+    }
+  }
+]

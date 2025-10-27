@@ -1,0 +1,412 @@
+[
+  {
+    "Type": "BehaviorTree",
+    "Name": "BT_Common_Animal_InAlertState",
+    "Class": "UScriptClass'BehaviorTree'",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "RootNode": {
+        "ObjectName": "BTComposite_Selector'BT_Common_Animal_InAlertState:BTComposite_Selector_4'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Parent/Parent_Common/BT_Common_Animal_InAlertState.1"
+      },
+      "BlackboardAsset": {
+        "ObjectName": "BlackboardData'BB_Mon_Parent'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Parent/BB_Mon_Parent.0"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_4",
+    "Outer": "BT_Common_Animal_InAlertState",
+    "Class": "UScriptClass'BTComposite_Selector'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector'BT_Common_Animal_InAlertState:BTComposite_Selector_9'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Parent/Parent_Common/BT_Common_Animal_InAlertState.3"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Common_Animal_InAlertState:BTDecorator_Blackboard_0'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Parent/Parent_Common/BT_Common_Animal_InAlertState.5"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector'BT_Common_Animal_InAlertState:BTComposite_Selector_5'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Parent/Parent_Common/BT_Common_Animal_InAlertState.2"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Common_Animal_InAlertState:BTDecorator_Blackboard_8'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Parent/Parent_Common/BT_Common_Animal_InAlertState.7"
+            }
+          ],
+          "DecoratorOps": []
+        }
+      ],
+      "Services": [
+        {
+          "ObjectName": "BTService_AlertTargetPlayerInvisible'BT_Common_Animal_InAlertState:BTService_AlertTargetPlayerInvisible_0'",
+          "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Parent/Parent_Common/BT_Common_Animal_InAlertState.8"
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Common_Animal_InAlertState'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Parent/Parent_Common/BT_Common_Animal_InAlertState.0"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_5",
+    "Outer": "BT_Common_Animal_InAlertState",
+    "Class": "UScriptClass'BTComposite_Selector'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait'BT_Common_Animal_InAlertState:BTTask_Wait_2'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Parent/Parent_Common/BT_Common_Animal_InAlertState.12"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Common_Animal_InAlertState'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Parent/Parent_Common/BT_Common_Animal_InAlertState.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Common_Animal_InAlertState:BTComposite_Selector_4'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Parent/Parent_Common/BT_Common_Animal_InAlertState.1"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_9",
+    "Outer": "BT_Common_Animal_InAlertState",
+    "Class": "UScriptClass'BTComposite_Selector'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_GetAlertTarget'BT_Common_Animal_InAlertState:BTTask_GetAlertTarget_3'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Parent/Parent_Common/BT_Common_Animal_InAlertState.10"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Common_Animal_InAlertState:BTDecorator_Blackboard_6'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Parent/Parent_Common/BT_Common_Animal_InAlertState.6"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_Common_Animal_InAlertState:BTComposite_Sequence_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Parent/Parent_Common/BT_Common_Animal_InAlertState.4"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Common_Animal_InAlertState'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Parent/Parent_Common/BT_Common_Animal_InAlertState.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Common_Animal_InAlertState:BTComposite_Selector_4'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Parent/Parent_Common/BT_Common_Animal_InAlertState.1"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_0",
+    "Outer": "BT_Common_Animal_InAlertState",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_EMRunEQSQuery'BT_Common_Animal_InAlertState:BTTask_EMRunEQSQuery_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Parent/Parent_Common/BT_Common_Animal_InAlertState.9"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_NewMoveTo'BT_Common_Animal_InAlertState:BTTask_NewMoveTo_10'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Parent/Parent_Common/BT_Common_Animal_InAlertState.11"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Common_Animal_InAlertState'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Parent/Parent_Common/BT_Common_Animal_InAlertState.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Common_Animal_InAlertState:BTComposite_Selector_9'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Parent/Parent_Common/BT_Common_Animal_InAlertState.3"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_0",
+    "Outer": "BT_Common_Animal_InAlertState",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "CachedDescription": "AlertTargetPlayerInvisible is 未设置",
+      "OperationType": 1,
+      "BlackboardKey": {
+        "SelectedKeyName": "AlertTargetPlayerInvisible"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::Self",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Common_Animal_InAlertState'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Parent/Parent_Common/BT_Common_Animal_InAlertState.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Common_Animal_InAlertState:BTComposite_Selector_4'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Parent/Parent_Common/BT_Common_Animal_InAlertState.1"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_6",
+    "Outer": "BT_Common_Animal_InAlertState",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "CachedDescription": "AlertTarget is 未设置",
+      "OperationType": 1,
+      "BlackboardKey": {
+        "SelectedKeyName": "AlertTarget"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::Self",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Common_Animal_InAlertState'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Parent/Parent_Common/BT_Common_Animal_InAlertState.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Common_Animal_InAlertState:BTComposite_Selector_9'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Parent/Parent_Common/BT_Common_Animal_InAlertState.3"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_8",
+    "Outer": "BT_Common_Animal_InAlertState",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "CachedDescription": "AlertTargetPlayerInvisible is 已设置",
+      "BlackboardKey": {
+        "SelectedKeyName": "AlertTargetPlayerInvisible"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::Self",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Common_Animal_InAlertState'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Parent/Parent_Common/BT_Common_Animal_InAlertState.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Common_Animal_InAlertState:BTComposite_Selector_4'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Parent/Parent_Common/BT_Common_Animal_InAlertState.1"
+      }
+    }
+  },
+  {
+    "Type": "BTService_AlertTargetPlayerInvisible",
+    "Name": "BTService_AlertTargetPlayerInvisible_0",
+    "Outer": "BT_Common_Animal_InAlertState",
+    "Class": "UScriptClass'BTService_AlertTargetPlayerInvisible'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "RandomDeviation": 0.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Common_Animal_InAlertState'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Parent/Parent_Common/BT_Common_Animal_InAlertState.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Common_Animal_InAlertState:BTComposite_Selector_4'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Parent/Parent_Common/BT_Common_Animal_InAlertState.1"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_EMRunEQSQuery",
+    "Name": "BTTask_EMRunEQSQuery_0",
+    "Outer": "BT_Common_Animal_InAlertState",
+    "Class": "UScriptClass'BTTask_EMRunEQSQuery'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "EQSRequest": {
+        "QueryTemplate": {
+          "ObjectName": "EnvQuery'EQS_SelfDonutInVision'",
+          "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Z_EnvQuery/EQS_SelfDonutInVision.7"
+        },
+        "QueryConfig": [
+          {
+            "ParamName": "EMDonut.InnerRadius",
+            "ParamType": "EAIParamType::Float",
+            "Value": 0.0,
+            "BBKey": {
+              "SelectedKeyName": "None",
+              "bNoneIsAllowedValue": true
+            }
+          },
+          {
+            "ParamName": "EMDonut.OuterRadius",
+            "ParamType": "EAIParamType::Float",
+            "Value": 150.0,
+            "BBKey": {
+              "SelectedKeyName": "None",
+              "bNoneIsAllowedValue": true
+            }
+          },
+          {
+            "ParamName": "EMDonut.NumberOfRings",
+            "ParamType": "EAIParamType::Int",
+            "Value": 8.0,
+            "BBKey": {
+              "SelectedKeyName": "None",
+              "bNoneIsAllowedValue": true
+            }
+          },
+          {
+            "ParamName": "EMDonut.PointsPerRing",
+            "ParamType": "EAIParamType::Int",
+            "Value": 10.0,
+            "BBKey": {
+              "SelectedKeyName": "None",
+              "bNoneIsAllowedValue": true
+            }
+          },
+          {
+            "ParamName": "EMDonut.ArcAngle",
+            "ParamType": "EAIParamType::Float",
+            "Value": 360.0,
+            "BBKey": {
+              "SelectedKeyName": "None",
+              "bNoneIsAllowedValue": true
+            }
+          },
+          {
+            "ParamName": "EMDistance.ScoringFactor_BTTargetDis",
+            "ParamType": "EAIParamType::Float",
+            "Value": 5.0,
+            "BBKey": {
+              "SelectedKeyName": "None",
+              "bNoneIsAllowedValue": true
+            }
+          },
+          {
+            "ParamName": "EMDistance.ScoringFactor_SelfDis",
+            "ParamType": "EAIParamType::Float",
+            "Value": 1.0,
+            "BBKey": {
+              "SelectedKeyName": "None",
+              "bNoneIsAllowedValue": true
+            }
+          }
+        ],
+        "RunMode": "EEnvQueryRunMode::RandomBest5Pct"
+      },
+      "BlackboardKey": {
+        "SelectedKeyName": "EQSQueryLoc"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Common_Animal_InAlertState'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Parent/Parent_Common/BT_Common_Animal_InAlertState.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Common_Animal_InAlertState:BTComposite_Sequence_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Parent/Parent_Common/BT_Common_Animal_InAlertState.4"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_GetAlertTarget",
+    "Name": "BTTask_GetAlertTarget_3",
+    "Outer": "BT_Common_Animal_InAlertState",
+    "Class": "UScriptClass'BTTask_GetAlertTarget'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Common_Animal_InAlertState'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Parent/Parent_Common/BT_Common_Animal_InAlertState.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Common_Animal_InAlertState:BTComposite_Selector_9'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Parent/Parent_Common/BT_Common_Animal_InAlertState.3"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_NewMoveTo",
+    "Name": "BTTask_NewMoveTo_10",
+    "Outer": "BT_Common_Animal_InAlertState",
+    "Class": "UScriptClass'BTTask_NewMoveTo'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "bOrientRotationToMovement": true,
+      "AcceptableRadius": 50.0,
+      "bReachTestIncludesAgentRadius": false,
+      "bReachTestIncludesGoalRadius": false,
+      "bStopOnOverlapNeedsUpdate": false,
+      "BlackboardKey": {
+        "SelectedKeyName": "EQSQueryLoc"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Common_Animal_InAlertState'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Parent/Parent_Common/BT_Common_Animal_InAlertState.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Common_Animal_InAlertState:BTComposite_Sequence_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Parent/Parent_Common/BT_Common_Animal_InAlertState.4"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_2",
+    "Outer": "BT_Common_Animal_InAlertState",
+    "Class": "UScriptClass'BTTask_Wait'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "WaitTime": 0.1,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Common_Animal_InAlertState'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Parent/Parent_Common/BT_Common_Animal_InAlertState.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Common_Animal_InAlertState:BTComposite_Selector_5'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Parent/Parent_Common/BT_Common_Animal_InAlertState.2"
+      }
+    }
+  }
+]

@@ -1,0 +1,956 @@
+[
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_BP_TrapArea",
+    "Outer": "BP_TrapArea_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_SpawnSystemAttached_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'NiagaraComponent'",
+          "ObjectPath": "/Script/Niagara"
+        }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Array_Add_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_Array_Get_Item",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'NiagaraComponent'",
+          "ObjectPath": "/Script/Niagara"
+        }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "K2Node_Event_NowStateId",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Array_IsValidIndex_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "StrProperty",
+        "Name": "CallFunc_Conv_IntToString_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 16
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_SwitchString_CmpSuccess",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetClientAudioManager_AudioManager",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'BP_AudioManager_C'",
+          "ObjectPath": "EM/Content/BluePrints/Managers/BP_AudioManager.10"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Array_IsValidIndex_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetClientAudioManager_AudioManager_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'BP_AudioManager_C'",
+          "ObjectPath": "EM/Content/BluePrints/Managers/BP_AudioManager.10"
+        }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "K2Node_Event_SourceEid",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnBreakCountDown",
+    "Outer": "BP_TrapArea_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "SuperStruct": {
+      "ObjectName": "Function'EffectSourceInterface:OnBreakCountDown'",
+      "ObjectPath": "/Script/EM"
+    },
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "SourceEid",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnHitedEffect",
+    "Outer": "BP_TrapArea_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnEnterState",
+    "Outer": "BP_TrapArea_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "SuperStruct": {
+      "ObjectName": "Function'CombatItemBase:OnEnterState'",
+      "ObjectPath": "/Script/EM"
+    },
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "NowStateId",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "GetModuleName",
+    "Outer": "BP_TrapArea_C",
+    "Class": "UScriptClass'Function'",
+    "Super": {
+      "ObjectName": "Function'BP_FieldCreatureBase_C:GetModuleName'",
+      "ObjectPath": "EM/Content/BluePrints/Item/AirWall/BP_FieldCreatureBase.0"
+    },
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "SuperStruct": {
+      "ObjectName": "Function'BP_FieldCreatureBase_C:GetModuleName'",
+      "ObjectPath": "EM/Content/BluePrints/Item/AirWall/BP_FieldCreatureBase.0"
+    },
+    "ChildProperties": [
+      {
+        "Type": "StrProperty",
+        "Name": "ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "Parm | OutParm | ReturnParm"
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_HasOutParms | FUNC_BlueprintCallable | FUNC_BlueprintEvent | FUNC_Const"
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BP_TrapArea_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Super": {
+      "ObjectName": "BlueprintGeneratedClass'BP_FieldCreatureBase_C'",
+      "ObjectPath": "EM/Content/BluePrints/Item/AirWall/BP_FieldCreatureBase.1"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BP_TrapArea_C:SimpleConstructionScript_0'",
+        "ObjectPath": "EM/Content/BluePrints/Item/AirWall/BP_TrapArea.23"
+      },
+      "InheritableComponentHandler": {
+        "ObjectName": "InheritableComponentHandler'BP_TrapArea_C:InheritableComponentHandler'",
+        "ObjectPath": "EM/Content/BluePrints/Item/AirWall/BP_TrapArea.14"
+      },
+      "UberGraphFunction": {
+        "ObjectName": "Function'BP_TrapArea_C:ExecuteUbergraph_BP_TrapArea'",
+        "ObjectPath": "EM/Content/BluePrints/Item/AirWall/BP_TrapArea.0"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "BlueprintGeneratedClass'BP_FieldCreatureBase_C'",
+      "ObjectPath": "EM/Content/BluePrints/Item/AirWall/BP_FieldCreatureBase.1"
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'BP_TrapArea_C:GetModuleName'",
+        "ObjectPath": "EM/Content/BluePrints/Item/AirWall/BP_TrapArea.4"
+      },
+      {
+        "ObjectName": "Function'BP_TrapArea_C:OnEnterState'",
+        "ObjectPath": "EM/Content/BluePrints/Item/AirWall/BP_TrapArea.3"
+      },
+      {
+        "ObjectName": "Function'BP_TrapArea_C:OnHitedEffect'",
+        "ObjectPath": "EM/Content/BluePrints/Item/AirWall/BP_TrapArea.2"
+      },
+      {
+        "ObjectName": "Function'BP_TrapArea_C:OnBreakCountDown'",
+        "ObjectPath": "EM/Content/BluePrints/Item/AirWall/BP_TrapArea.1"
+      },
+      {
+        "ObjectName": "Function'BP_TrapArea_C:ExecuteUbergraph_BP_TrapArea'",
+        "ObjectPath": "EM/Content/BluePrints/Item/AirWall/BP_TrapArea.0"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient",
+        "Struct": {
+          "ObjectName": "ScriptStruct'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Niagara",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'NiagaraComponent'",
+          "ObjectPath": "/Script/Niagara"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "TrapArea",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'BoxComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "HitedCollision",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'BoxComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Mesh_0",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'StaticMeshComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "LoopNiagara",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance | ContainsInstancedReference",
+        "Inner": {
+          "Type": "ObjectProperty",
+          "Name": "LoopNiagara",
+          "Flags": "RF_Public",
+          "ElementSize": 8,
+          "PropertyFlags": "InstancedReference",
+          "PropertyClass": {
+            "ObjectName": "Class'NiagaraComponent'",
+            "ObjectPath": "/Script/Niagara"
+          }
+        }
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_BP_TrapArea": {
+        "ObjectName": "Function'BP_TrapArea_C:ExecuteUbergraph_BP_TrapArea'",
+        "ObjectPath": "EM/Content/BluePrints/Item/AirWall/BP_TrapArea.0"
+      },
+      "OnBreakCountDown": {
+        "ObjectName": "Function'BP_TrapArea_C:OnBreakCountDown'",
+        "ObjectPath": "EM/Content/BluePrints/Item/AirWall/BP_TrapArea.1"
+      },
+      "OnHitedEffect": {
+        "ObjectName": "Function'BP_TrapArea_C:OnHitedEffect'",
+        "ObjectPath": "EM/Content/BluePrints/Item/AirWall/BP_TrapArea.2"
+      },
+      "OnEnterState": {
+        "ObjectName": "Function'BP_TrapArea_C:OnEnterState'",
+        "ObjectPath": "EM/Content/BluePrints/Item/AirWall/BP_TrapArea.3"
+      },
+      "GetModuleName": {
+        "ObjectName": "Function'BP_TrapArea_C:GetModuleName'",
+        "ObjectPath": "EM/Content/BluePrints/Item/AirWall/BP_TrapArea.4"
+      }
+    },
+    "ClassFlags": "CLASS_Config | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BP_TrapArea_C'Default__BP_TrapArea_C'",
+      "ObjectPath": "EM/Content/BluePrints/Item/AirWall/BP_TrapArea.6"
+    }
+  },
+  {
+    "Type": "BP_TrapArea_C",
+    "Name": "Default__BP_TrapArea_C",
+    "Class": "BlueprintGeneratedClass'EM/Content/BluePrints/Item/AirWall/BP_TrapArea.BP_TrapArea_C'",
+    "Template": {
+      "ObjectName": "BP_FieldCreatureBase_C'Default__BP_FieldCreatureBase_C'",
+      "ObjectPath": "EM/Content/BluePrints/Item/AirWall/BP_FieldCreatureBase.2"
+    },
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "UberGraphFrame": {},
+      "Mesh": {
+        "ObjectName": "StaticMeshComponent'Default__BP_TrapArea_C:StaticMeshComponent'",
+        "ObjectPath": "EM/Content/BluePrints/Item/AirWall/BP_TrapArea.25"
+      },
+      "SceneComponent": {
+        "ObjectName": "SceneComponent'Default__BP_TrapArea_C:SceneComponent'",
+        "ObjectPath": "EM/Content/BluePrints/Item/AirWall/BP_TrapArea.17"
+      },
+      "BattleEvent": {
+        "ObjectName": "BP_BattleEventComponent_C'Default__BP_TrapArea_C:BP_BattleEventComponent'",
+        "ObjectPath": "EM/Content/BluePrints/Item/AirWall/BP_TrapArea.9"
+      },
+      "JumpWordComponent": {
+        "ObjectName": "BP_JumpWordComponent_C'Default__BP_TrapArea_C:BP_JumpWordComponent'",
+        "ObjectPath": "EM/Content/BluePrints/Item/AirWall/BP_TrapArea.13"
+      },
+      "CombatStateChangeComponent": {
+        "ObjectName": "BP_CombatStateChangeComponent_C'Default__BP_TrapArea_C:CombatStateChangeComponent'",
+        "ObjectPath": "EM/Content/BluePrints/Item/AirWall/BP_TrapArea.11"
+      },
+      "CombatClientEffectComponent": {
+        "ObjectName": "BP_CombatClientEffectComponent_C'Default__BP_TrapArea_C:CombatClientEffectComponent'",
+        "ObjectPath": "EM/Content/BluePrints/Item/AirWall/BP_TrapArea.10"
+      },
+      "FXComponent": {
+        "ObjectName": "BP_FXComponent_C'Default__BP_TrapArea_C:BP_FXComponent'",
+        "ObjectPath": "EM/Content/BluePrints/Item/AirWall/BP_TrapArea.12"
+      },
+      "RootComponent": {
+        "ObjectName": "SceneComponent'Default__BP_TrapArea_C:SceneComponent'",
+        "ObjectPath": "EM/Content/BluePrints/Item/AirWall/BP_TrapArea.17"
+      }
+    }
+  },
+  {
+    "Type": "BoxComponent",
+    "Name": "HitedCollision_GEN_VARIABLE",
+    "Outer": "BP_TrapArea_C",
+    "Class": "UScriptClass'BoxComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "BoxExtent": {
+        "X": 150.0,
+        "Y": 150.0,
+        "Z": 20.0
+      },
+      "AreaClass": {
+        "ObjectName": "Class'NavArea_Obstacle'",
+        "ObjectPath": "/Script/NavigationSystem"
+      },
+      "CanCharacterStepUpOn": "ECB_No",
+      "BodyInstance": {
+        "ObjectType": "ECC_GameTraceChannel8",
+        "CollisionProfileName": "MonsterHitedCapsule",
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "WorldStatic",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "WorldDynamic",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Pawn",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Visibility",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Camera",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "PhysicsBody",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Vehicle",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Destructible",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Item",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "TraceExceptChar",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "TraceOverlap",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "MonsterPawn",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "BreakableItem",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "TraceScene",
+              "Response": "ECR_Overlap"
+            },
+            {
+              "Channel": "TraceCreatureHit",
+              "Response": "ECR_Overlap"
+            },
+            {
+              "Channel": "TraceSkillCreatureBlock",
+              "Response": "ECR_Block"
+            },
+            {
+              "Channel": "TraceThroughWall",
+              "Response": "ECR_Overlap"
+            },
+            {
+              "Channel": "SkillCreature",
+              "Response": "ECR_Overlap"
+            }
+          ]
+        }
+      },
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 30.0
+      }
+    }
+  },
+  {
+    "Type": "BoxComponent",
+    "Name": "TrapArea_GEN_VARIABLE",
+    "Outer": "BP_TrapArea_C",
+    "Class": "UScriptClass'BoxComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "BoxExtent": {
+        "X": 180.0,
+        "Y": 180.0,
+        "Z": 300.0
+      },
+      "AreaClass": {
+        "ObjectName": "Class'NavArea_Obstacle'",
+        "ObjectPath": "/Script/NavigationSystem"
+      },
+      "CanCharacterStepUpOn": "ECB_No",
+      "BodyInstance": {
+        "ObjectType": "ECC_WorldStatic",
+        "CollisionProfileName": "OnlyOverlapCharacter",
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "WorldStatic",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "WorldDynamic",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Pawn",
+              "Response": "ECR_Overlap"
+            },
+            {
+              "Channel": "Visibility",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Camera",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "PhysicsBody",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Vehicle",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Destructible",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Item",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "TraceExceptChar",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "TraceOverlap",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "MonsterPawn",
+              "Response": "ECR_Overlap"
+            },
+            {
+              "Channel": "BreakableItem",
+              "Response": "ECR_Ignore"
+            }
+          ]
+        }
+      },
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 335.0
+      }
+    }
+  },
+  {
+    "Type": "BP_BattleEventComponent_C",
+    "Name": "BP_BattleEventComponent",
+    "Outer": "Default__BP_TrapArea_C",
+    "Class": "BlueprintGeneratedClass'EM/Content/BluePrints/Combat/BP_BattleEventComponent.BP_BattleEventComponent_C'",
+    "Template": {
+      "ObjectName": "BP_BattleEventComponent_C'Default__BP_FieldCreatureBase_C:BP_BattleEventComponent'",
+      "ObjectPath": "EM/Content/BluePrints/Item/AirWall/BP_FieldCreatureBase.3"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "BP_CombatClientEffectComponent_C",
+    "Name": "CombatClientEffectComponent",
+    "Outer": "Default__BP_TrapArea_C",
+    "Class": "BlueprintGeneratedClass'EM/Content/BluePrints/Item/BP_CombatClientEffectComponent.BP_CombatClientEffectComponent_C'",
+    "Template": {
+      "ObjectName": "BP_CombatClientEffectComponent_C'Default__BP_FieldCreatureBase_C:CombatClientEffectComponent'",
+      "ObjectPath": "EM/Content/BluePrints/Item/AirWall/BP_FieldCreatureBase.4"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "IsChangeColor": true
+    }
+  },
+  {
+    "Type": "BP_CombatStateChangeComponent_C",
+    "Name": "CombatStateChangeComponent",
+    "Outer": "Default__BP_TrapArea_C",
+    "Class": "BlueprintGeneratedClass'EM/Content/BluePrints/Item/BP_CombatStateChangeComponent.BP_CombatStateChangeComponent_C'",
+    "Template": {
+      "ObjectName": "BP_CombatStateChangeComponent_C'Default__BP_FieldCreatureBase_C:CombatStateChangeComponent'",
+      "ObjectPath": "EM/Content/BluePrints/Item/AirWall/BP_FieldCreatureBase.5"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "BP_FXComponent_C",
+    "Name": "BP_FXComponent",
+    "Outer": "Default__BP_TrapArea_C",
+    "Class": "BlueprintGeneratedClass'EM/Content/BluePrints/Char/BP_FXComponent.BP_FXComponent_C'",
+    "Template": {
+      "ObjectName": "BP_FXComponent_C'Default__BP_FieldCreatureBase_C:BP_FXComponent'",
+      "ObjectPath": "EM/Content/BluePrints/Item/AirWall/BP_FieldCreatureBase.6"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "BP_JumpWordComponent_C",
+    "Name": "BP_JumpWordComponent",
+    "Outer": "Default__BP_TrapArea_C",
+    "Class": "BlueprintGeneratedClass'EM/Content/BluePrints/Char/BP_JumpWordComponent.BP_JumpWordComponent_C'",
+    "Template": {
+      "ObjectName": "BP_JumpWordComponent_C'Default__BP_FieldCreatureBase_C:BP_JumpWordComponent'",
+      "ObjectPath": "EM/Content/BluePrints/Item/AirWall/BP_FieldCreatureBase.7"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "InheritableComponentHandler",
+    "Name": "InheritableComponentHandler",
+    "Outer": "BP_TrapArea_C",
+    "Class": "UScriptClass'InheritableComponentHandler'",
+    "Flags": "RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "NiagaraComponent",
+    "Name": "Niagara_GEN_VARIABLE",
+    "Outer": "BP_TrapArea_C",
+    "Class": "UScriptClass'NiagaraComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Asset": {
+        "ObjectName": "NiagaraSystem'NS_FieldCreature_Fire_Start'",
+        "ObjectPath": "EM/Content/Asset/Effect/Niagara/Item/NS_FieldCreature_Fire_Start.28"
+      },
+      "OverrideParameters": {
+        "UserParameterRedirects": [
+          {
+            "Key": {
+              "VarData": "",
+              "Name": "IgnoreGamePause",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2
+              }
+            },
+            "Value": {
+              "VarData": "",
+              "Name": "User.IgnoreGamePause",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2
+              }
+            }
+          }
+        ],
+        "SortedParameterOffsets": [
+          {
+            "Offset": 0,
+            "Name": "User.IgnoreGamePause",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "ScriptStruct'NiagaraFloat'",
+                "ObjectPath": "/Script/Niagara"
+              },
+              "UnderlyingType": 2
+            }
+          }
+        ],
+        "ParameterData": [
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "RelativeScale3D": {
+        "X": 1.5,
+        "Y": 1.5,
+        "Z": 1.0
+      },
+      "bAutoActivate": false
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Outer": "BP_TrapArea_C",
+    "Class": "UScriptClass'SceneComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "SceneComponent",
+    "Outer": "Default__BP_TrapArea_C",
+    "Class": "UScriptClass'SceneComponent'",
+    "Template": {
+      "ObjectName": "SceneComponent'Default__BP_FieldCreatureBase_C:SceneComponent'",
+      "ObjectPath": "EM/Content/BluePrints/Item/AirWall/BP_FieldCreatureBase.9"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BP_TrapArea_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "EM/Content/BluePrints/Item/AirWall/BP_TrapArea.16"
+      },
+      "VariableGuid": "7222B8E8-4C3A26FC-C85C1A95-5EB88EBB",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_1",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'StaticMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "StaticMeshComponent'BP_TrapArea_C:Mesh_0_GEN_VARIABLE'",
+        "ObjectPath": "EM/Content/BluePrints/Item/AirWall/BP_TrapArea.24"
+      },
+      "ParentComponentOrVariableName": "SceneComponent",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "DAE52DC4-49CCC6FE-B8A965A5-0C8DDA51",
+      "InternalVariableName": "Mesh_0"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_2",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'NiagaraComponent'",
+        "ObjectPath": "/Script/Niagara"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "NiagaraComponent'BP_TrapArea_C:Niagara_GEN_VARIABLE'",
+        "ObjectPath": "EM/Content/BluePrints/Item/AirWall/BP_TrapArea.15"
+      },
+      "ParentComponentOrVariableName": "SceneComponent",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "4E0FB86C-46A19CF4-2FA7C2B6-676C25D3",
+      "InternalVariableName": "Niagara"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_3",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'BoxComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "BoxComponent'BP_TrapArea_C:TrapArea_GEN_VARIABLE'",
+        "ObjectPath": "EM/Content/BluePrints/Item/AirWall/BP_TrapArea.8"
+      },
+      "ParentComponentOrVariableName": "SceneComponent",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "DEFE131F-4C719A24-FB52F4AB-14226007",
+      "InternalVariableName": "TrapArea"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_4",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'BoxComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "BoxComponent'BP_TrapArea_C:HitedCollision_GEN_VARIABLE'",
+        "ObjectPath": "EM/Content/BluePrints/Item/AirWall/BP_TrapArea.7"
+      },
+      "ParentComponentOrVariableName": "SceneComponent",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "FDE19E2B-40D55A88-480AFFAC-55F76AFF",
+      "InternalVariableName": "HitedCollision"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Outer": "BP_TrapArea_C",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_TrapArea_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "EM/Content/BluePrints/Item/AirWall/BP_TrapArea.19"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_TrapArea_C:SimpleConstructionScript_0.SCS_Node_4'",
+          "ObjectPath": "EM/Content/BluePrints/Item/AirWall/BP_TrapArea.22"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_TrapArea_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectPath": "EM/Content/BluePrints/Item/AirWall/BP_TrapArea.21"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_TrapArea_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "EM/Content/BluePrints/Item/AirWall/BP_TrapArea.20"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_TrapArea_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "EM/Content/BluePrints/Item/AirWall/BP_TrapArea.19"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_TrapArea_C:SimpleConstructionScript_0.SCS_Node_4'",
+          "ObjectPath": "EM/Content/BluePrints/Item/AirWall/BP_TrapArea.22"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_TrapArea_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectPath": "EM/Content/BluePrints/Item/AirWall/BP_TrapArea.21"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_TrapArea_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "EM/Content/BluePrints/Item/AirWall/BP_TrapArea.20"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BP_TrapArea_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "EM/Content/BluePrints/Item/AirWall/BP_TrapArea.18"
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "Mesh_0_GEN_VARIABLE",
+    "Outer": "BP_TrapArea_C",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'SM_IP_Door_Fort_TrapB01a'",
+        "ObjectPath": "EM/Content/Asset/Scene/common/InterProps/Mesh/SM_IP_Door_Fort_TrapB01a.2"
+      },
+      "OverrideMaterials": [
+        null
+      ],
+      "BodyInstance": {
+        "ObjectType": "ECC_WorldStatic",
+        "CollisionEnabled": "ECollisionEnabled::QueryOnly",
+        "CollisionProfileName": "MechanismBody",
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "PhysicsBody",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Vehicle",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Destructible",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "BreakableItem",
+              "Response": "ECR_Overlap"
+            },
+            {
+              "Channel": "TraceScene",
+              "Response": "ECR_Overlap"
+            }
+          ]
+        }
+      },
+      "PrimaryComponentTick": {
+        "bStartWithTickEnabled": false
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "StaticMeshComponent",
+    "Outer": "Default__BP_TrapArea_C",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Template": {
+      "ObjectName": "StaticMeshComponent'Default__BP_FieldCreatureBase_C:StaticMeshComponent'",
+      "ObjectPath": "EM/Content/BluePrints/Item/AirWall/BP_FieldCreatureBase.12"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "SceneComponent'Default__BP_TrapArea_C:SceneComponent'",
+        "ObjectPath": "EM/Content/BluePrints/Item/AirWall/BP_TrapArea.17"
+      },
+      "PrimaryComponentTick": {
+        "bStartWithTickEnabled": false
+      }
+    }
+  }
+]

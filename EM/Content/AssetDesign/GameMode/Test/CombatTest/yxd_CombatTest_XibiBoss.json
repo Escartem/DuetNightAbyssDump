@@ -1,0 +1,623 @@
+[
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_yxd_CombatTest_XibiBoss",
+    "Outer": "yxd_CombatTest_XibiBoss_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "StrProperty",
+        "Name": "K2Node_Event_EventName_1",
+        "Flags": "RF_Public",
+        "ElementSize": 16
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "K2Node_Event_Eid",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "K2Node_Event_UnitId",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "StrProperty",
+        "Name": "K2Node_Event_UnitType",
+        "Flags": "RF_Public",
+        "ElementSize": 16
+      },
+      {
+        "Type": "StrProperty",
+        "Name": "K2Node_Event_Reason",
+        "Flags": "RF_Public",
+        "ElementSize": 16
+      },
+      {
+        "Type": "StrProperty",
+        "Name": "K2Node_Event_EventName",
+        "Flags": "RF_Public",
+        "ElementSize": 16
+      },
+      {
+        "Type": "EnumProperty",
+        "Name": "K2Node_Event_Channel",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "Enum": {
+          "ObjectName": "Enum'EGameModeEventChannel'",
+          "ObjectPath": "/Script/EM"
+        },
+        "UnderlyingProp": {
+          "Type": "ByteProperty",
+          "Name": "UnderlyingType",
+          "Flags": "RF_Public",
+          "ElementSize": 1,
+          "Enum": null
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_Event_Char",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'CharacterBase'",
+          "ObjectPath": "/Script/EM"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "K2Node_Event_HpPercent",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnBossBattle",
+    "Outer": "yxd_CombatTest_XibiBoss_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "SuperStruct": {
+      "ObjectName": "Function'EMGameMode:OnBossBattle'",
+      "ObjectPath": "/Script/EM"
+    },
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnTriggerPlayerHpChanged",
+    "Outer": "yxd_CombatTest_XibiBoss_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "SuperStruct": {
+      "ObjectName": "Function'EMGameMode:OnTriggerPlayerHpChanged'",
+      "ObjectPath": "/Script/EM"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "Char",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "PropertyClass": {
+          "ObjectName": "Class'CharacterBase'",
+          "ObjectPath": "/Script/EM"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "HpPercent",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnCustomEvent",
+    "Outer": "yxd_CombatTest_XibiBoss_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "SuperStruct": {
+      "ObjectName": "Function'EMGameMode:OnCustomEvent'",
+      "ObjectPath": "/Script/EM"
+    },
+    "ChildProperties": [
+      {
+        "Type": "StrProperty",
+        "Name": "EventName",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "EnumProperty",
+        "Name": "Channel",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "Enum": {
+          "ObjectName": "Enum'EGameModeEventChannel'",
+          "ObjectPath": "/Script/EM"
+        },
+        "UnderlyingProp": {
+          "Type": "ByteProperty",
+          "Name": "UnderlyingType",
+          "Flags": "RF_Public",
+          "ElementSize": 1,
+          "Enum": null
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnPauseBattleEntities",
+    "Outer": "yxd_CombatTest_XibiBoss_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "SuperStruct": {
+      "ObjectName": "Function'EMGameMode:OnPauseBattleEntities'",
+      "ObjectPath": "/Script/EM"
+    },
+    "ChildProperties": [
+      {
+        "Type": "StrProperty",
+        "Name": "Reason",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnActive",
+    "Outer": "yxd_CombatTest_XibiBoss_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "SuperStruct": {
+      "ObjectName": "Function'EMGameMode:OnActive'",
+      "ObjectPath": "/Script/EM"
+    },
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnFirstActive",
+    "Outer": "yxd_CombatTest_XibiBoss_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "SuperStruct": {
+      "ObjectName": "Function'EMGameMode:OnFirstActive'",
+      "ObjectPath": "/Script/EM"
+    },
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnStaticCreatorEvent",
+    "Outer": "yxd_CombatTest_XibiBoss_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "SuperStruct": {
+      "ObjectName": "Function'EMGameMode:OnStaticCreatorEvent'",
+      "ObjectPath": "/Script/EM"
+    },
+    "ChildProperties": [
+      {
+        "Type": "StrProperty",
+        "Name": "EventName",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "Eid",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "UnitId",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "StrProperty",
+        "Name": "UnitType",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnInit",
+    "Outer": "yxd_CombatTest_XibiBoss_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "SuperStruct": {
+      "ObjectName": "Function'EMGameMode:OnInit'",
+      "ObjectPath": "/Script/EM"
+    },
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "yxd_CombatTest_XibiBoss_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Super": {
+      "ObjectName": "BlueprintGeneratedClass'BP_EMGameMode_Region_C'",
+      "ObjectPath": "EM/Content/AssetDesign/GameMode/BP_EMGameMode_Region.7"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'yxd_CombatTest_XibiBoss_C:SimpleConstructionScript_0'",
+        "ObjectPath": "EM/Content/AssetDesign/GameMode/Test/CombatTest/yxd_CombatTest_XibiBoss.16"
+      },
+      "InheritableComponentHandler": {
+        "ObjectName": "InheritableComponentHandler'yxd_CombatTest_XibiBoss_C:InheritableComponentHandler'",
+        "ObjectPath": "EM/Content/AssetDesign/GameMode/Test/CombatTest/yxd_CombatTest_XibiBoss.12"
+      },
+      "UberGraphFunction": {
+        "ObjectName": "Function'yxd_CombatTest_XibiBoss_C:ExecuteUbergraph_yxd_CombatTest_XibiBoss'",
+        "ObjectPath": "EM/Content/AssetDesign/GameMode/Test/CombatTest/yxd_CombatTest_XibiBoss.0"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "BlueprintGeneratedClass'BP_EMGameMode_Region_C'",
+      "ObjectPath": "EM/Content/AssetDesign/GameMode/BP_EMGameMode_Region.7"
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'yxd_CombatTest_XibiBoss_C:OnInit'",
+        "ObjectPath": "EM/Content/AssetDesign/GameMode/Test/CombatTest/yxd_CombatTest_XibiBoss.8"
+      },
+      {
+        "ObjectName": "Function'yxd_CombatTest_XibiBoss_C:OnStaticCreatorEvent'",
+        "ObjectPath": "EM/Content/AssetDesign/GameMode/Test/CombatTest/yxd_CombatTest_XibiBoss.7"
+      },
+      {
+        "ObjectName": "Function'yxd_CombatTest_XibiBoss_C:OnFirstActive'",
+        "ObjectPath": "EM/Content/AssetDesign/GameMode/Test/CombatTest/yxd_CombatTest_XibiBoss.6"
+      },
+      {
+        "ObjectName": "Function'yxd_CombatTest_XibiBoss_C:OnActive'",
+        "ObjectPath": "EM/Content/AssetDesign/GameMode/Test/CombatTest/yxd_CombatTest_XibiBoss.5"
+      },
+      {
+        "ObjectName": "Function'yxd_CombatTest_XibiBoss_C:OnPauseBattleEntities'",
+        "ObjectPath": "EM/Content/AssetDesign/GameMode/Test/CombatTest/yxd_CombatTest_XibiBoss.4"
+      },
+      {
+        "ObjectName": "Function'yxd_CombatTest_XibiBoss_C:OnCustomEvent'",
+        "ObjectPath": "EM/Content/AssetDesign/GameMode/Test/CombatTest/yxd_CombatTest_XibiBoss.3"
+      },
+      {
+        "ObjectName": "Function'yxd_CombatTest_XibiBoss_C:OnTriggerPlayerHpChanged'",
+        "ObjectPath": "EM/Content/AssetDesign/GameMode/Test/CombatTest/yxd_CombatTest_XibiBoss.2"
+      },
+      {
+        "ObjectName": "Function'yxd_CombatTest_XibiBoss_C:OnBossBattle'",
+        "ObjectPath": "EM/Content/AssetDesign/GameMode/Test/CombatTest/yxd_CombatTest_XibiBoss.1"
+      },
+      {
+        "ObjectName": "Function'yxd_CombatTest_XibiBoss_C:ExecuteUbergraph_yxd_CombatTest_XibiBoss'",
+        "ObjectPath": "EM/Content/AssetDesign/GameMode/Test/CombatTest/yxd_CombatTest_XibiBoss.0"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient",
+        "Struct": {
+          "ObjectName": "ScriptStruct'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "GameModeEvent",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'GameModeEvent_C'",
+          "ObjectPath": "EM/Content/AssetDesign/GameMode/GameModeComponent/EventComponent/GameModeEvent.6"
+        }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "WaveSQ",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "Edit | BlueprintVisible"
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "BOSS_Battle",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance"
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "FgChase",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance"
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "Boss_1_Finish",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "In Active Skill Names",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "Inner": {
+          "Type": "EnumProperty",
+          "Name": "In Active Skill Names",
+          "Flags": "RF_Public",
+          "ElementSize": 1,
+          "Enum": {
+            "ObjectName": "Enum'ESkillName'",
+            "ObjectPath": "/Script/EM"
+          },
+          "UnderlyingProp": {
+            "Type": "ByteProperty",
+            "Name": "UnderlyingType",
+            "Flags": "RF_Public",
+            "ElementSize": 1,
+            "Enum": null
+          }
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "LoadEnd",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "MapProperty",
+        "Name": "Key Value",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 80,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "KeyProp": {
+          "Type": "StrProperty",
+          "Name": "Key Value",
+          "Flags": "RF_Public",
+          "ElementSize": 16
+        },
+        "ValueProp": {
+          "Type": "FloatProperty",
+          "Name": "Key Value_Value",
+          "Flags": "RF_Public",
+          "ElementSize": 4
+        }
+      },
+      {
+        "Type": "MapProperty",
+        "Name": "Key Value_0",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 80,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "KeyProp": {
+          "Type": "StrProperty",
+          "Name": "Key Value_0",
+          "Flags": "RF_Public",
+          "ElementSize": 16
+        },
+        "ValueProp": {
+          "Type": "FloatProperty",
+          "Name": "Key Value_Value",
+          "Flags": "RF_Public",
+          "ElementSize": 4
+        }
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_yxd_CombatTest_XibiBoss": {
+        "ObjectName": "Function'yxd_CombatTest_XibiBoss_C:ExecuteUbergraph_yxd_CombatTest_XibiBoss'",
+        "ObjectPath": "EM/Content/AssetDesign/GameMode/Test/CombatTest/yxd_CombatTest_XibiBoss.0"
+      },
+      "OnBossBattle": {
+        "ObjectName": "Function'yxd_CombatTest_XibiBoss_C:OnBossBattle'",
+        "ObjectPath": "EM/Content/AssetDesign/GameMode/Test/CombatTest/yxd_CombatTest_XibiBoss.1"
+      },
+      "OnTriggerPlayerHpChanged": {
+        "ObjectName": "Function'yxd_CombatTest_XibiBoss_C:OnTriggerPlayerHpChanged'",
+        "ObjectPath": "EM/Content/AssetDesign/GameMode/Test/CombatTest/yxd_CombatTest_XibiBoss.2"
+      },
+      "OnCustomEvent": {
+        "ObjectName": "Function'yxd_CombatTest_XibiBoss_C:OnCustomEvent'",
+        "ObjectPath": "EM/Content/AssetDesign/GameMode/Test/CombatTest/yxd_CombatTest_XibiBoss.3"
+      },
+      "OnPauseBattleEntities": {
+        "ObjectName": "Function'yxd_CombatTest_XibiBoss_C:OnPauseBattleEntities'",
+        "ObjectPath": "EM/Content/AssetDesign/GameMode/Test/CombatTest/yxd_CombatTest_XibiBoss.4"
+      },
+      "OnActive": {
+        "ObjectName": "Function'yxd_CombatTest_XibiBoss_C:OnActive'",
+        "ObjectPath": "EM/Content/AssetDesign/GameMode/Test/CombatTest/yxd_CombatTest_XibiBoss.5"
+      },
+      "OnFirstActive": {
+        "ObjectName": "Function'yxd_CombatTest_XibiBoss_C:OnFirstActive'",
+        "ObjectPath": "EM/Content/AssetDesign/GameMode/Test/CombatTest/yxd_CombatTest_XibiBoss.6"
+      },
+      "OnStaticCreatorEvent": {
+        "ObjectName": "Function'yxd_CombatTest_XibiBoss_C:OnStaticCreatorEvent'",
+        "ObjectPath": "EM/Content/AssetDesign/GameMode/Test/CombatTest/yxd_CombatTest_XibiBoss.7"
+      },
+      "OnInit": {
+        "ObjectName": "Function'yxd_CombatTest_XibiBoss_C:OnInit'",
+        "ObjectPath": "EM/Content/AssetDesign/GameMode/Test/CombatTest/yxd_CombatTest_XibiBoss.8"
+      }
+    },
+    "ClassFlags": "CLASS_Config | CLASS_Transient | CLASS_Optional | CLASS_NotPlaceable | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Game",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "yxd_CombatTest_XibiBoss_C'Default__yxd_CombatTest_XibiBoss_C'",
+      "ObjectPath": "EM/Content/AssetDesign/GameMode/Test/CombatTest/yxd_CombatTest_XibiBoss.10"
+    }
+  },
+  {
+    "Type": "yxd_CombatTest_XibiBoss_C",
+    "Name": "Default__yxd_CombatTest_XibiBoss_C",
+    "Class": "BlueprintGeneratedClass'EM/Content/AssetDesign/GameMode/Test/CombatTest/yxd_CombatTest_XibiBoss.yxd_CombatTest_XibiBoss_C'",
+    "Template": {
+      "ObjectName": "BP_EMGameMode_Region_C'Default__BP_EMGameMode_Region_C'",
+      "ObjectPath": "EM/Content/AssetDesign/GameMode/BP_EMGameMode_Region.8"
+    },
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "UberGraphFrame": {},
+      "In Active Skill Names": [
+        "ESkillName::Skill2",
+        "ESkillName::Skill3"
+      ]
+    }
+  },
+  {
+    "Type": "GameModeEvent_C",
+    "Name": "GameModeEvent_GEN_VARIABLE",
+    "Outer": "yxd_CombatTest_XibiBoss_C",
+    "Class": "BlueprintGeneratedClass'EM/Content/AssetDesign/GameMode/GameModeComponent/EventComponent/GameModeEvent.GameModeEvent_C'",
+    "Template": {
+      "ObjectName": "GameModeEvent_C'Default__GameModeEvent_C'",
+      "ObjectPath": "EM/Content/AssetDesign/GameMode/GameModeComponent/EventComponent/GameModeEvent.7"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "InheritableComponentHandler",
+    "Name": "InheritableComponentHandler",
+    "Outer": "yxd_CombatTest_XibiBoss_C",
+    "Class": "UScriptClass'InheritableComponentHandler'",
+    "Flags": "RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Outer": "yxd_CombatTest_XibiBoss_C",
+    "Class": "UScriptClass'SceneComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'yxd_CombatTest_XibiBoss_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "EM/Content/AssetDesign/GameMode/Test/CombatTest/yxd_CombatTest_XibiBoss.13"
+      },
+      "VariableGuid": "BEC367A9-4610A961-C0DB2E88-568B9EDC",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_1",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "BlueprintGeneratedClass'GameModeEvent_C'",
+        "ObjectPath": "EM/Content/AssetDesign/GameMode/GameModeComponent/EventComponent/GameModeEvent.6"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "GameModeEvent_C'yxd_CombatTest_XibiBoss_C:GameModeEvent_GEN_VARIABLE'",
+        "ObjectPath": "EM/Content/AssetDesign/GameMode/Test/CombatTest/yxd_CombatTest_XibiBoss.11"
+      },
+      "VariableGuid": "558F2174-491E7EDD-F1D9ECA6-92156FEE",
+      "InternalVariableName": "GameModeEvent"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Outer": "yxd_CombatTest_XibiBoss_C",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node'yxd_CombatTest_XibiBoss_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "EM/Content/AssetDesign/GameMode/Test/CombatTest/yxd_CombatTest_XibiBoss.15"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node'yxd_CombatTest_XibiBoss_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "EM/Content/AssetDesign/GameMode/Test/CombatTest/yxd_CombatTest_XibiBoss.15"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'yxd_CombatTest_XibiBoss_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "EM/Content/AssetDesign/GameMode/Test/CombatTest/yxd_CombatTest_XibiBoss.14"
+      }
+    }
+  }
+]

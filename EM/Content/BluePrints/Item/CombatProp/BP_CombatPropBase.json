@@ -1,0 +1,476 @@
+[
+  {
+    "Type": "Function",
+    "Name": "Play Fx at Location",
+    "Outer": "BP_CombatPropBase_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "目标",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm | InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'SceneComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StrProperty",
+        "Name": "NiagaraPath",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "StrProperty",
+        "Name": "InputName",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "Cache",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "LocationOffset",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "Struct": {
+          "ObjectName": "ScriptStruct'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "RotationOffset",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "Struct": {
+          "ObjectName": "ScriptStruct'Rotator'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "Scale",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "Struct": {
+          "ObjectName": "ScriptStruct'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StrProperty",
+        "Name": "OutputName",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "Parm | OutParm"
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "NewLocalVar_1",
+        "Flags": "RF_Public",
+        "ElementSize": 48,
+        "PropertyFlags": "Edit | BlueprintVisible",
+        "Struct": {
+          "ObjectName": "ScriptStruct'Transform'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "NewLocalVar_0",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "PropertyFlags": "Edit | BlueprintVisible",
+        "Struct": {
+          "ObjectName": "ScriptStruct'Rotator'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_BreakRotator_Roll",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_BreakRotator_Pitch",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_BreakRotator_Yaw",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_K2_GetComponentToWorld_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 48,
+        "Struct": {
+          "ObjectName": "ScriptStruct'Transform'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_BreakTransform_Location",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "Struct": {
+          "ObjectName": "ScriptStruct'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_BreakTransform_Rotation",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "Struct": {
+          "ObjectName": "ScriptStruct'Rotator'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_BreakTransform_Scale",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "Struct": {
+          "ObjectName": "ScriptStruct'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_Add_VectorVector_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "Struct": {
+          "ObjectName": "ScriptStruct'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_BreakRotator_Roll_1",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_BreakRotator_Pitch_1",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_BreakRotator_Yaw_1",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_Add_FloatFloat_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_Add_FloatFloat_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_Add_FloatFloat_ReturnValue_2",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_MakeRotator_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "Struct": {
+          "ObjectName": "ScriptStruct'Rotator'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StrProperty",
+        "Name": "CallFunc_SpawnFXAtLocation_Level_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 16
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_HasOutParms | FUNC_HasDefaults | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "GetModuleName",
+    "Outer": "BP_CombatPropBase_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "ChildProperties": [
+      {
+        "Type": "StrProperty",
+        "Name": "ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "Parm | OutParm | ReturnParm"
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_HasOutParms | FUNC_BlueprintCallable | FUNC_BlueprintEvent | FUNC_Const"
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BP_CombatPropBase_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BP_CombatPropBase_C:SimpleConstructionScript_0'",
+        "ObjectPath": "EM/Content/BluePrints/Item/CombatProp/BP_CombatPropBase.12"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'CombatPropBase'",
+      "ObjectPath": "/Script/EM"
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'BP_CombatPropBase_C:GetModuleName'",
+        "ObjectPath": "EM/Content/BluePrints/Item/CombatProp/BP_CombatPropBase.1"
+      },
+      {
+        "ObjectName": "Function'BP_CombatPropBase_C:Play Fx at Location'",
+        "ObjectPath": "EM/Content/BluePrints/Item/CombatProp/BP_CombatPropBase.0"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "DefaultSceneRoot",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'SceneComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "NewVar_0",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 48,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "Struct": {
+          "ObjectName": "ScriptStruct'Transform'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      }
+    ],
+    "FuncMap": {
+      "Play Fx at Location": {
+        "ObjectName": "Function'BP_CombatPropBase_C:Play Fx at Location'",
+        "ObjectPath": "EM/Content/BluePrints/Item/CombatProp/BP_CombatPropBase.0"
+      },
+      "GetModuleName": {
+        "ObjectName": "Function'BP_CombatPropBase_C:GetModuleName'",
+        "ObjectPath": "EM/Content/BluePrints/Item/CombatProp/BP_CombatPropBase.1"
+      }
+    },
+    "ClassFlags": "CLASS_Config | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "Interfaces": [
+      {
+        "Class": {
+          "ObjectName": "Class'UnLuaInterface'",
+          "ObjectPath": "/Script/UnLua"
+        },
+        "PointerOffset": 0,
+        "bImplementedByK2": true
+      }
+    ],
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BP_CombatPropBase_C'Default__BP_CombatPropBase_C'",
+      "ObjectPath": "EM/Content/BluePrints/Item/CombatProp/BP_CombatPropBase.3"
+    }
+  },
+  {
+    "Type": "BP_CombatPropBase_C",
+    "Name": "Default__BP_CombatPropBase_C",
+    "Class": "BlueprintGeneratedClass'EM/Content/BluePrints/Item/CombatProp/BP_CombatPropBase.BP_CombatPropBase_C'",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "NewVar_0": {
+        "Rotation": {
+          "X": 0.0,
+          "Y": 0.0,
+          "Z": 0.0,
+          "W": 1.0,
+          "IsNormalized": true,
+          "Size": 1.0,
+          "SizeSquared": 1.0
+        },
+        "Translation": {
+          "X": 0.0,
+          "Y": 0.0,
+          "Z": 0.0
+        },
+        "Scale3D": {
+          "X": 1.0,
+          "Y": 1.0,
+          "Z": 1.0
+        }
+      },
+      "BattleEvent": {
+        "ObjectName": "BP_BattleEventComponent_C'Default__BP_CombatPropBase_C:BP_BattleEventComponent'",
+        "ObjectPath": "EM/Content/BluePrints/Item/CombatProp/BP_CombatPropBase.5"
+      },
+      "JumpWordComponent": {
+        "ObjectName": "BP_JumpWordComponent_C'Default__BP_CombatPropBase_C:BP_JumpWordComponent'",
+        "ObjectPath": "EM/Content/BluePrints/Item/CombatProp/BP_CombatPropBase.9"
+      },
+      "CombatStateChangeComponent": {
+        "ObjectName": "BP_CombatStateChangeComponent_C'Default__BP_CombatPropBase_C:CombatStateChangeComponent'",
+        "ObjectPath": "EM/Content/BluePrints/Item/CombatProp/BP_CombatPropBase.7"
+      },
+      "CombatClientEffectComponent": {
+        "ObjectName": "BP_CombatClientEffectComponent_C'Default__BP_CombatPropBase_C:CombatClientEffectComponent'",
+        "ObjectPath": "EM/Content/BluePrints/Item/CombatProp/BP_CombatPropBase.6"
+      },
+      "FXComponent": {
+        "ObjectName": "BP_FXComponent_C'Default__BP_CombatPropBase_C:BP_FXComponent'",
+        "ObjectPath": "EM/Content/BluePrints/Item/CombatProp/BP_CombatPropBase.8"
+      }
+    }
+  },
+  {
+    "Type": "BP_AroundLocationComponent_C",
+    "Name": "BP_AroundLocation",
+    "Outer": "Default__BP_CombatPropBase_C",
+    "Class": "BlueprintGeneratedClass'EM/Content/BluePrints/Char/BP_AroundLocationComponent.BP_AroundLocationComponent_C'",
+    "Template": {
+      "ObjectName": "BP_AroundLocationComponent_C'Default__BP_AroundLocationComponent_C'",
+      "ObjectPath": "EM/Content/BluePrints/Char/BP_AroundLocationComponent.2"
+    },
+    "Flags": "RF_Public | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "BP_BattleEventComponent_C",
+    "Name": "BP_BattleEventComponent",
+    "Outer": "Default__BP_CombatPropBase_C",
+    "Class": "BlueprintGeneratedClass'EM/Content/BluePrints/Combat/BP_BattleEventComponent.BP_BattleEventComponent_C'",
+    "Flags": "RF_Public | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "BP_CombatClientEffectComponent_C",
+    "Name": "CombatClientEffectComponent",
+    "Outer": "Default__BP_CombatPropBase_C",
+    "Class": "BlueprintGeneratedClass'EM/Content/BluePrints/Item/BP_CombatClientEffectComponent.BP_CombatClientEffectComponent_C'",
+    "Flags": "RF_Public | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "BP_CombatStateChangeComponent_C",
+    "Name": "CombatStateChangeComponent",
+    "Outer": "Default__BP_CombatPropBase_C",
+    "Class": "BlueprintGeneratedClass'EM/Content/BluePrints/Item/BP_CombatStateChangeComponent.BP_CombatStateChangeComponent_C'",
+    "Flags": "RF_Public | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "BP_FXComponent_C",
+    "Name": "BP_FXComponent",
+    "Outer": "Default__BP_CombatPropBase_C",
+    "Class": "BlueprintGeneratedClass'EM/Content/BluePrints/Char/BP_FXComponent.BP_FXComponent_C'",
+    "Flags": "RF_Public | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "BP_JumpWordComponent_C",
+    "Name": "BP_JumpWordComponent",
+    "Outer": "Default__BP_CombatPropBase_C",
+    "Class": "BlueprintGeneratedClass'EM/Content/BluePrints/Char/BP_JumpWordComponent.BP_JumpWordComponent_C'",
+    "Flags": "RF_Public | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Outer": "BP_CombatPropBase_C",
+    "Class": "UScriptClass'SceneComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BP_CombatPropBase_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "EM/Content/BluePrints/Item/CombatProp/BP_CombatPropBase.10"
+      },
+      "VariableGuid": "06339F92-45F8FBF8-CA75C781-09A5335B",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Outer": "BP_CombatPropBase_C",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_CombatPropBase_C:SimpleConstructionScript_0.SCS_Node_0'",
+          "ObjectPath": "EM/Content/BluePrints/Item/CombatProp/BP_CombatPropBase.11"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_CombatPropBase_C:SimpleConstructionScript_0.SCS_Node_0'",
+          "ObjectPath": "EM/Content/BluePrints/Item/CombatProp/BP_CombatPropBase.11"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BP_CombatPropBase_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "EM/Content/BluePrints/Item/CombatProp/BP_CombatPropBase.11"
+      }
+    }
+  }
+]

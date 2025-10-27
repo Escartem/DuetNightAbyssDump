@@ -1,0 +1,223 @@
+[
+  {
+    "Type": "Function",
+    "Name": "OnTrollyFirstActive__DelegateSignature",
+    "Outer": "BP_RegionHijackComponent_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "FunctionFlags": "FUNC_Public | FUNC_Delegate | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnWallCrashed__DelegateSignature",
+    "Outer": "BP_RegionHijackComponent_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "FunctionFlags": "FUNC_Public | FUNC_Delegate | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnWallDead__DelegateSignature",
+    "Outer": "BP_RegionHijackComponent_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "FunctionFlags": "FUNC_Public | FUNC_Delegate | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "CheckPointMonsterDead",
+    "Outer": "BP_RegionHijackComponent_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "Monster",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "PropertyClass": {
+          "ObjectName": "Class'MonsterCharacter'",
+          "ObjectPath": "/Script/EM"
+        }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "Checkpoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "Parm | OutParm"
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_HasOutParms | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "SetCheckpoint",
+    "Outer": "BP_RegionHijackComponent_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "Checkpoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "GetModuleName",
+    "Outer": "BP_RegionHijackComponent_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "ChildProperties": [
+      {
+        "Type": "StrProperty",
+        "Name": "ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "Parm | OutParm | ReturnParm"
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_HasOutParms | FUNC_BlueprintCallable | FUNC_BlueprintEvent | FUNC_Const"
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BP_RegionHijackComponent_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "SuperStruct": {
+      "ObjectName": "Class'ActorComponent'",
+      "ObjectPath": "/Script/Engine"
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'BP_RegionHijackComponent_C:GetModuleName'",
+        "ObjectPath": "EM/Content/AssetDesign/GameMode/GameModeComponent/RegionSpecialQuests/BP_RegionHijackComponent.5"
+      },
+      {
+        "ObjectName": "Function'BP_RegionHijackComponent_C:SetCheckpoint'",
+        "ObjectPath": "EM/Content/AssetDesign/GameMode/GameModeComponent/RegionSpecialQuests/BP_RegionHijackComponent.4"
+      },
+      {
+        "ObjectName": "Function'BP_RegionHijackComponent_C:CheckPointMonsterDead'",
+        "ObjectPath": "EM/Content/AssetDesign/GameMode/GameModeComponent/RegionSpecialQuests/BP_RegionHijackComponent.3"
+      },
+      {
+        "ObjectName": "Function'BP_RegionHijackComponent_C:OnWallDead__DelegateSignature'",
+        "ObjectPath": "EM/Content/AssetDesign/GameMode/GameModeComponent/RegionSpecialQuests/BP_RegionHijackComponent.2"
+      },
+      {
+        "ObjectName": "Function'BP_RegionHijackComponent_C:OnWallCrashed__DelegateSignature'",
+        "ObjectPath": "EM/Content/AssetDesign/GameMode/GameModeComponent/RegionSpecialQuests/BP_RegionHijackComponent.1"
+      },
+      {
+        "ObjectName": "Function'BP_RegionHijackComponent_C:OnTrollyFirstActive__DelegateSignature'",
+        "ObjectPath": "EM/Content/AssetDesign/GameMode/GameModeComponent/RegionSpecialQuests/BP_RegionHijackComponent.0"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "Trolly",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnTemplate",
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'BP_Trolly_Fort_C'",
+          "ObjectPath": "EM/Content/BluePrints/Item/DefenceCore/BP_Trolly_Fort.6"
+        }
+      },
+      {
+        "Type": "MulticastInlineDelegateProperty",
+        "Name": "OnTrollyFirstActive",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance | BlueprintAssignable | BlueprintCallable",
+        "SignatureFunction": {
+          "ObjectName": "Function'BP_RegionHijackComponent_C:OnTrollyFirstActive__DelegateSignature'",
+          "ObjectPath": "EM/Content/AssetDesign/GameMode/GameModeComponent/RegionSpecialQuests/BP_RegionHijackComponent.0"
+        }
+      },
+      {
+        "Type": "MulticastInlineDelegateProperty",
+        "Name": "OnWallCrashed",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance | BlueprintAssignable | BlueprintCallable",
+        "SignatureFunction": {
+          "ObjectName": "Function'BP_RegionHijackComponent_C:OnWallCrashed__DelegateSignature'",
+          "ObjectPath": "EM/Content/AssetDesign/GameMode/GameModeComponent/RegionSpecialQuests/BP_RegionHijackComponent.1"
+        }
+      },
+      {
+        "Type": "MulticastInlineDelegateProperty",
+        "Name": "OnWallDead",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance | BlueprintAssignable | BlueprintCallable",
+        "SignatureFunction": {
+          "ObjectName": "Function'BP_RegionHijackComponent_C:OnWallDead__DelegateSignature'",
+          "ObjectPath": "EM/Content/AssetDesign/GameMode/GameModeComponent/RegionSpecialQuests/BP_RegionHijackComponent.2"
+        }
+      }
+    ],
+    "FuncMap": {
+      "OnTrollyFirstActive__DelegateSignature": {
+        "ObjectName": "Function'BP_RegionHijackComponent_C:OnTrollyFirstActive__DelegateSignature'",
+        "ObjectPath": "EM/Content/AssetDesign/GameMode/GameModeComponent/RegionSpecialQuests/BP_RegionHijackComponent.0"
+      },
+      "OnWallCrashed__DelegateSignature": {
+        "ObjectName": "Function'BP_RegionHijackComponent_C:OnWallCrashed__DelegateSignature'",
+        "ObjectPath": "EM/Content/AssetDesign/GameMode/GameModeComponent/RegionSpecialQuests/BP_RegionHijackComponent.1"
+      },
+      "OnWallDead__DelegateSignature": {
+        "ObjectName": "Function'BP_RegionHijackComponent_C:OnWallDead__DelegateSignature'",
+        "ObjectPath": "EM/Content/AssetDesign/GameMode/GameModeComponent/RegionSpecialQuests/BP_RegionHijackComponent.2"
+      },
+      "CheckPointMonsterDead": {
+        "ObjectName": "Function'BP_RegionHijackComponent_C:CheckPointMonsterDead'",
+        "ObjectPath": "EM/Content/AssetDesign/GameMode/GameModeComponent/RegionSpecialQuests/BP_RegionHijackComponent.3"
+      },
+      "SetCheckpoint": {
+        "ObjectName": "Function'BP_RegionHijackComponent_C:SetCheckpoint'",
+        "ObjectPath": "EM/Content/AssetDesign/GameMode/GameModeComponent/RegionSpecialQuests/BP_RegionHijackComponent.4"
+      },
+      "GetModuleName": {
+        "ObjectName": "Function'BP_RegionHijackComponent_C:GetModuleName'",
+        "ObjectPath": "EM/Content/AssetDesign/GameMode/GameModeComponent/RegionSpecialQuests/BP_RegionHijackComponent.5"
+      }
+    },
+    "ClassFlags": "CLASS_Config | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_DefaultToInstanced | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "Interfaces": [
+      {
+        "Class": {
+          "ObjectName": "Class'UnLuaInterface'",
+          "ObjectPath": "/Script/UnLua"
+        },
+        "PointerOffset": 0,
+        "bImplementedByK2": true
+      }
+    ],
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BP_RegionHijackComponent_C'Default__BP_RegionHijackComponent_C'",
+      "ObjectPath": "EM/Content/AssetDesign/GameMode/GameModeComponent/RegionSpecialQuests/BP_RegionHijackComponent.7"
+    }
+  },
+  {
+    "Type": "BP_RegionHijackComponent_C",
+    "Name": "Default__BP_RegionHijackComponent_C",
+    "Class": "BlueprintGeneratedClass'EM/Content/AssetDesign/GameMode/GameModeComponent/RegionSpecialQuests/BP_RegionHijackComponent.BP_RegionHijackComponent_C'",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted"
+  }
+]

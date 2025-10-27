@@ -1,0 +1,1853 @@
+[
+  {
+    "Type": "BehaviorTree",
+    "Name": "BT_Npc_Saiqi2",
+    "Class": "UScriptClass'BehaviorTree'",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "RootNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Npc_Saiqi2:BTComposite_Sequence_3'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Saiqi/BT_Npc_Saiqi2.14"
+      },
+      "BlackboardAsset": {
+        "ObjectName": "BlackboardData'BB_Npc_Saiqi'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Saiqi/BB_Npc_Saiqi.0"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_1",
+    "Outer": "BT_Npc_Saiqi2",
+    "Class": "UScriptClass'BTComposite_Selector'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait'BT_Npc_Saiqi2:BTTask_Wait_1'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Saiqi/BT_Npc_Saiqi2.61"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Npc_Saiqi2:BTDecorator_Blackboard_24'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Saiqi/BT_Npc_Saiqi2.23"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_NewMoveTo'BT_Npc_Saiqi2:BTTask_NewMoveTo_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Saiqi/BT_Npc_Saiqi2.54"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Npc_Saiqi2:BTDecorator_Blackboard_2'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Saiqi/BT_Npc_Saiqi2.21"
+            }
+          ],
+          "DecoratorOps": []
+        }
+      ],
+      "Services": [
+        {
+          "ObjectName": "BTService_BBValueDis'BT_Npc_Saiqi2:BTService_BBValueDis_1'",
+          "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Saiqi/BT_Npc_Saiqi2.46"
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_Saiqi2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Saiqi/BT_Npc_Saiqi2.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Npc_Saiqi2:BTComposite_Sequence_11'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Saiqi/BT_Npc_Saiqi2.9"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_10",
+    "Outer": "BT_Npc_Saiqi2",
+    "Class": "UScriptClass'BTComposite_Selector'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_GetPatrolLoc'BT_Npc_Saiqi2:BTTask_GetPatrolLoc_3'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Saiqi/BT_Npc_Saiqi2.53"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Npc_Saiqi2:BTDecorator_Blackboard_34'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Saiqi/BT_Npc_Saiqi2.30"
+            },
+            {
+              "ObjectName": "BTDecorator_IsAtLocation'BT_Npc_Saiqi2:BTDecorator_IsAtLocation_27'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Saiqi/BT_Npc_Saiqi2.39"
+            }
+          ],
+          "DecoratorOps": [
+            {
+              "Operation": "EBTDecoratorLogic::Or",
+              "Number": 2
+            },
+            {
+              "Operation": "EBTDecoratorLogic::Test",
+              "Number": 0
+            },
+            {
+              "Operation": "EBTDecoratorLogic::Test",
+              "Number": 1
+            }
+          ]
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_Npc_Saiqi2:BTComposite_Sequence_14'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Saiqi/BT_Npc_Saiqi2.12"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Npc_Saiqi2:BTDecorator_Blackboard_35'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Saiqi/BT_Npc_Saiqi2.31"
+            },
+            {
+              "ObjectName": "BTDecorator_IsAtLocation'BT_Npc_Saiqi2:BTDecorator_IsAtLocation_28'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Saiqi/BT_Npc_Saiqi2.40"
+            }
+          ],
+          "DecoratorOps": [
+            {
+              "Operation": "EBTDecoratorLogic::And",
+              "Number": 2
+            },
+            {
+              "Operation": "EBTDecoratorLogic::Test",
+              "Number": 0
+            },
+            {
+              "Operation": "EBTDecoratorLogic::Not",
+              "Number": 1
+            },
+            {
+              "Operation": "EBTDecoratorLogic::Test",
+              "Number": 1
+            }
+          ]
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_Npc_Saiqi2:BTComposite_Sequence_15'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Saiqi/BT_Npc_Saiqi2.13"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Npc_Saiqi2:BTDecorator_Blackboard_36'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Saiqi/BT_Npc_Saiqi2.32"
+            },
+            {
+              "ObjectName": "BTDecorator_IsAtLocation'BT_Npc_Saiqi2:BTDecorator_IsAtLocation_29'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Saiqi/BT_Npc_Saiqi2.41"
+            }
+          ],
+          "DecoratorOps": [
+            {
+              "Operation": "EBTDecoratorLogic::And",
+              "Number": 2
+            },
+            {
+              "Operation": "EBTDecoratorLogic::Test",
+              "Number": 0
+            },
+            {
+              "Operation": "EBTDecoratorLogic::Test",
+              "Number": 1
+            }
+          ]
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_Saiqi2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Saiqi/BT_Npc_Saiqi2.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Npc_Saiqi2:BTComposite_Sequence_13'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Saiqi/BT_Npc_Saiqi2.11"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_4",
+    "Outer": "BT_Npc_Saiqi2",
+    "Class": "UScriptClass'BTComposite_Selector'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_Npc_Saiqi2:BTComposite_Sequence_9'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Saiqi/BT_Npc_Saiqi2.17"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Npc_Saiqi2:BTDecorator_Blackboard_5'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Saiqi/BT_Npc_Saiqi2.33"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_Npc_Saiqi2:BTComposite_Sequence_13'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Saiqi/BT_Npc_Saiqi2.11"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Npc_Saiqi2:BTDecorator_Blackboard_17'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Saiqi/BT_Npc_Saiqi2.20"
+            }
+          ],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_Saiqi2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Saiqi/BT_Npc_Saiqi2.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Npc_Saiqi2:BTComposite_Sequence_3'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Saiqi/BT_Npc_Saiqi2.14"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_5",
+    "Outer": "BT_Npc_Saiqi2",
+    "Class": "UScriptClass'BTComposite_Selector'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait'BT_Npc_Saiqi2:BTTask_Wait_2'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Saiqi/BT_Npc_Saiqi2.62"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Npc_Saiqi2:BTDecorator_Blackboard_33'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Saiqi/BT_Npc_Saiqi2.29"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_NewMoveTo'BT_Npc_Saiqi2:BTTask_NewMoveTo_5'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Saiqi/BT_Npc_Saiqi2.55"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Npc_Saiqi2:BTDecorator_Blackboard_32'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Saiqi/BT_Npc_Saiqi2.28"
+            }
+          ],
+          "DecoratorOps": []
+        }
+      ],
+      "Services": [
+        {
+          "ObjectName": "BTService_BBValueDis'BT_Npc_Saiqi2:BTService_BBValueDis_3'",
+          "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Saiqi/BT_Npc_Saiqi2.47"
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_Saiqi2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Saiqi/BT_Npc_Saiqi2.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Npc_Saiqi2:BTComposite_Sequence_8'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Saiqi/BT_Npc_Saiqi2.16"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_6",
+    "Outer": "BT_Npc_Saiqi2",
+    "Class": "UScriptClass'BTComposite_Selector'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_GetPatrolLoc'BT_Npc_Saiqi2:BTTask_GetPatrolLoc_2'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Saiqi/BT_Npc_Saiqi2.52"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Npc_Saiqi2:BTDecorator_Blackboard_8'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Saiqi/BT_Npc_Saiqi2.34"
+            },
+            {
+              "ObjectName": "BTDecorator_IsAtLocation'BT_Npc_Saiqi2:BTDecorator_IsAtLocation_3'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Saiqi/BT_Npc_Saiqi2.42"
+            }
+          ],
+          "DecoratorOps": [
+            {
+              "Operation": "EBTDecoratorLogic::Or",
+              "Number": 2
+            },
+            {
+              "Operation": "EBTDecoratorLogic::Test",
+              "Number": 0
+            },
+            {
+              "Operation": "EBTDecoratorLogic::Test",
+              "Number": 1
+            }
+          ]
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_Npc_Saiqi2:BTComposite_Sequence_11'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Saiqi/BT_Npc_Saiqi2.9"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Npc_Saiqi2:BTDecorator_Blackboard_12'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Saiqi/BT_Npc_Saiqi2.18"
+            },
+            {
+              "ObjectName": "BTDecorator_IsAtLocation'BT_Npc_Saiqi2:BTDecorator_IsAtLocation_5'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Saiqi/BT_Npc_Saiqi2.43"
+            }
+          ],
+          "DecoratorOps": [
+            {
+              "Operation": "EBTDecoratorLogic::And",
+              "Number": 2
+            },
+            {
+              "Operation": "EBTDecoratorLogic::Test",
+              "Number": 0
+            },
+            {
+              "Operation": "EBTDecoratorLogic::Not",
+              "Number": 1
+            },
+            {
+              "Operation": "EBTDecoratorLogic::Test",
+              "Number": 1
+            }
+          ]
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_Npc_Saiqi2:BTComposite_Sequence_12'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Saiqi/BT_Npc_Saiqi2.10"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Npc_Saiqi2:BTDecorator_Blackboard_14'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Saiqi/BT_Npc_Saiqi2.19"
+            },
+            {
+              "ObjectName": "BTDecorator_IsAtLocation'BT_Npc_Saiqi2:BTDecorator_IsAtLocation_7'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Saiqi/BT_Npc_Saiqi2.44"
+            }
+          ],
+          "DecoratorOps": [
+            {
+              "Operation": "EBTDecoratorLogic::And",
+              "Number": 2
+            },
+            {
+              "Operation": "EBTDecoratorLogic::Test",
+              "Number": 0
+            },
+            {
+              "Operation": "EBTDecoratorLogic::Test",
+              "Number": 1
+            }
+          ]
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_Saiqi2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Saiqi/BT_Npc_Saiqi2.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Npc_Saiqi2:BTComposite_Sequence_9'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Saiqi/BT_Npc_Saiqi2.17"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_7",
+    "Outer": "BT_Npc_Saiqi2",
+    "Class": "UScriptClass'BTComposite_Selector'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_GetPatrolLoc'BT_Npc_Saiqi2:BTTask_GetPatrolLoc_1'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Saiqi/BT_Npc_Saiqi2.51"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Npc_Saiqi2:BTDecorator_Blackboard_27'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Saiqi/BT_Npc_Saiqi2.25"
+            },
+            {
+              "ObjectName": "BTDecorator_IsAtLocation'BT_Npc_Saiqi2:BTDecorator_IsAtLocation_21'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Saiqi/BT_Npc_Saiqi2.36"
+            }
+          ],
+          "DecoratorOps": [
+            {
+              "Operation": "EBTDecoratorLogic::Or",
+              "Number": 2
+            },
+            {
+              "Operation": "EBTDecoratorLogic::Test",
+              "Number": 0
+            },
+            {
+              "Operation": "EBTDecoratorLogic::Test",
+              "Number": 1
+            }
+          ]
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_Npc_Saiqi2:BTComposite_Sequence_8'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Saiqi/BT_Npc_Saiqi2.16"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Npc_Saiqi2:BTDecorator_Blackboard_29'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Saiqi/BT_Npc_Saiqi2.26"
+            },
+            {
+              "ObjectName": "BTDecorator_IsAtLocation'BT_Npc_Saiqi2:BTDecorator_IsAtLocation_23'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Saiqi/BT_Npc_Saiqi2.37"
+            }
+          ],
+          "DecoratorOps": [
+            {
+              "Operation": "EBTDecoratorLogic::And",
+              "Number": 2
+            },
+            {
+              "Operation": "EBTDecoratorLogic::Test",
+              "Number": 0
+            },
+            {
+              "Operation": "EBTDecoratorLogic::Not",
+              "Number": 1
+            },
+            {
+              "Operation": "EBTDecoratorLogic::Test",
+              "Number": 1
+            }
+          ]
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_Npc_Saiqi2:BTComposite_Sequence_10'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Saiqi/BT_Npc_Saiqi2.8"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Npc_Saiqi2:BTDecorator_Blackboard_31'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Saiqi/BT_Npc_Saiqi2.27"
+            },
+            {
+              "ObjectName": "BTDecorator_IsAtLocation'BT_Npc_Saiqi2:BTDecorator_IsAtLocation_25'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Saiqi/BT_Npc_Saiqi2.38"
+            }
+          ],
+          "DecoratorOps": [
+            {
+              "Operation": "EBTDecoratorLogic::And",
+              "Number": 2
+            },
+            {
+              "Operation": "EBTDecoratorLogic::Test",
+              "Number": 0
+            },
+            {
+              "Operation": "EBTDecoratorLogic::Test",
+              "Number": 1
+            }
+          ]
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_Saiqi2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Saiqi/BT_Npc_Saiqi2.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Npc_Saiqi2:BTComposite_Sequence_4'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Saiqi/BT_Npc_Saiqi2.15"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_9",
+    "Outer": "BT_Npc_Saiqi2",
+    "Class": "UScriptClass'BTComposite_Selector'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait'BT_Npc_Saiqi2:BTTask_Wait_4'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Saiqi/BT_Npc_Saiqi2.63"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Npc_Saiqi2:BTDecorator_Blackboard_9'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Saiqi/BT_Npc_Saiqi2.35"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_NewMoveTo'BT_Npc_Saiqi2:BTTask_NewMoveTo_6'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Saiqi/BT_Npc_Saiqi2.56"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Npc_Saiqi2:BTDecorator_Blackboard_23'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Saiqi/BT_Npc_Saiqi2.22"
+            }
+          ],
+          "DecoratorOps": []
+        }
+      ],
+      "Services": [
+        {
+          "ObjectName": "BTService_BBValueDis'BT_Npc_Saiqi2:BTService_BBValueDis_0'",
+          "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Saiqi/BT_Npc_Saiqi2.45"
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_Saiqi2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Saiqi/BT_Npc_Saiqi2.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Npc_Saiqi2:BTComposite_Sequence_14'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Saiqi/BT_Npc_Saiqi2.12"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_10",
+    "Outer": "BT_Npc_Saiqi2",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_ClearKey'BT_Npc_Saiqi2:BTTask_ClearKey_6'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Saiqi/BT_Npc_Saiqi2.49"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_Saiqi2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Saiqi/BT_Npc_Saiqi2.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Npc_Saiqi2:BTComposite_Selector_7'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Saiqi/BT_Npc_Saiqi2.6"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_11",
+    "Outer": "BT_Npc_Saiqi2",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector'BT_Npc_Saiqi2:BTComposite_Selector_1'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Saiqi/BT_Npc_Saiqi2.1"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_Saiqi2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Saiqi/BT_Npc_Saiqi2.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Npc_Saiqi2:BTComposite_Selector_6'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Saiqi/BT_Npc_Saiqi2.5"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_12",
+    "Outer": "BT_Npc_Saiqi2",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_ClearKey'BT_Npc_Saiqi2:BTTask_ClearKey_4'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Saiqi/BT_Npc_Saiqi2.48"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_Saiqi2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Saiqi/BT_Npc_Saiqi2.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Npc_Saiqi2:BTComposite_Selector_6'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Saiqi/BT_Npc_Saiqi2.5"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_13",
+    "Outer": "BT_Npc_Saiqi2",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_NpcGetTarget'BT_Npc_Saiqi2:BTTask_NpcGetTarget_4'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Saiqi/BT_Npc_Saiqi2.59"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector'BT_Npc_Saiqi2:BTComposite_Selector_10'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Saiqi/BT_Npc_Saiqi2.2"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_Saiqi2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Saiqi/BT_Npc_Saiqi2.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Npc_Saiqi2:BTComposite_Selector_4'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Saiqi/BT_Npc_Saiqi2.3"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_14",
+    "Outer": "BT_Npc_Saiqi2",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector'BT_Npc_Saiqi2:BTComposite_Selector_9'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Saiqi/BT_Npc_Saiqi2.7"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_Saiqi2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Saiqi/BT_Npc_Saiqi2.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Npc_Saiqi2:BTComposite_Selector_10'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Saiqi/BT_Npc_Saiqi2.2"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_15",
+    "Outer": "BT_Npc_Saiqi2",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_ClearKey'BT_Npc_Saiqi2:BTTask_ClearKey_7'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Saiqi/BT_Npc_Saiqi2.50"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_Saiqi2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Saiqi/BT_Npc_Saiqi2.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Npc_Saiqi2:BTComposite_Selector_10'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Saiqi/BT_Npc_Saiqi2.2"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_3",
+    "Outer": "BT_Npc_Saiqi2",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector'BT_Npc_Saiqi2:BTComposite_Selector_4'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Saiqi/BT_Npc_Saiqi2.3"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_Npc_Saiqi2:BTComposite_Sequence_4'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Saiqi/BT_Npc_Saiqi2.15"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Npc_Saiqi2:BTDecorator_Blackboard_25'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Saiqi/BT_Npc_Saiqi2.24"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait'BT_Npc_Saiqi2:BTTask_Wait_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Saiqi/BT_Npc_Saiqi2.60"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_Saiqi2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Saiqi/BT_Npc_Saiqi2.0"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_4",
+    "Outer": "BT_Npc_Saiqi2",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_NpcGetTarget'BT_Npc_Saiqi2:BTTask_NpcGetTarget_3'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Saiqi/BT_Npc_Saiqi2.58"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector'BT_Npc_Saiqi2:BTComposite_Selector_7'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Saiqi/BT_Npc_Saiqi2.6"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_Saiqi2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Saiqi/BT_Npc_Saiqi2.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Npc_Saiqi2:BTComposite_Sequence_3'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Saiqi/BT_Npc_Saiqi2.14"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_8",
+    "Outer": "BT_Npc_Saiqi2",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector'BT_Npc_Saiqi2:BTComposite_Selector_5'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Saiqi/BT_Npc_Saiqi2.4"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_Saiqi2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Saiqi/BT_Npc_Saiqi2.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Npc_Saiqi2:BTComposite_Selector_7'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Saiqi/BT_Npc_Saiqi2.6"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_9",
+    "Outer": "BT_Npc_Saiqi2",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_NpcGetTarget'BT_Npc_Saiqi2:BTTask_NpcGetTarget_1'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Saiqi/BT_Npc_Saiqi2.57"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector'BT_Npc_Saiqi2:BTComposite_Selector_6'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Saiqi/BT_Npc_Saiqi2.5"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_Saiqi2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Saiqi/BT_Npc_Saiqi2.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Npc_Saiqi2:BTComposite_Selector_4'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Saiqi/BT_Npc_Saiqi2.3"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_12",
+    "Outer": "BT_Npc_Saiqi2",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "CachedDescription": "PatrolLoc is Is Set",
+      "BlackboardKey": {
+        "SelectedKeyName": "PatrolLoc"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_Saiqi2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Saiqi/BT_Npc_Saiqi2.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Npc_Saiqi2:BTComposite_Selector_6'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Saiqi/BT_Npc_Saiqi2.5"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_14",
+    "Outer": "BT_Npc_Saiqi2",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "CachedDescription": "PatrolLoc is Is Set",
+      "BlackboardKey": {
+        "SelectedKeyName": "PatrolLoc"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_Saiqi2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Saiqi/BT_Npc_Saiqi2.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Npc_Saiqi2:BTComposite_Selector_6'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Saiqi/BT_Npc_Saiqi2.5"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_17",
+    "Outer": "BT_Npc_Saiqi2",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "StringValue": "Goto2",
+      "CachedDescription": "QuestEvent Is Equal To [Goto2]",
+      "BlackboardKey": {
+        "SelectedKeyName": "QuestEvent"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_Saiqi2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Saiqi/BT_Npc_Saiqi2.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Npc_Saiqi2:BTComposite_Selector_4'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Saiqi/BT_Npc_Saiqi2.3"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_2",
+    "Outer": "BT_Npc_Saiqi2",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "FloatValue": 1000.0,
+      "CachedDescription": "TickTargetDis Is Less Than 1000.000000",
+      "OperationType": 2,
+      "BlackboardKey": {
+        "SelectedKeyName": "TickTargetDis"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::Self",
+      "NodeName": "Close to Player",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_Saiqi2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Saiqi/BT_Npc_Saiqi2.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Npc_Saiqi2:BTComposite_Selector_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Saiqi/BT_Npc_Saiqi2.1"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_23",
+    "Outer": "BT_Npc_Saiqi2",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "FloatValue": 800.0,
+      "CachedDescription": "TickTargetDis Is Less Than 800.000000",
+      "OperationType": 2,
+      "BlackboardKey": {
+        "SelectedKeyName": "TickTargetDis"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::Self",
+      "NodeName": "Close to Player",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_Saiqi2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Saiqi/BT_Npc_Saiqi2.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Npc_Saiqi2:BTComposite_Selector_9'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Saiqi/BT_Npc_Saiqi2.7"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_24",
+    "Outer": "BT_Npc_Saiqi2",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "FloatValue": 1000.0,
+      "CachedDescription": "TickTargetDis Is Greater Than Or Equal To 1000.000000",
+      "OperationType": 5,
+      "BlackboardKey": {
+        "SelectedKeyName": "TickTargetDis"
+      },
+      "NodeName": "Too Far From Player",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_Saiqi2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Saiqi/BT_Npc_Saiqi2.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Npc_Saiqi2:BTComposite_Selector_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Saiqi/BT_Npc_Saiqi2.1"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_25",
+    "Outer": "BT_Npc_Saiqi2",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "StringValue": "Goto2",
+      "CachedDescription": "QuestEvent Is Equal To [Goto2]",
+      "BlackboardKey": {
+        "SelectedKeyName": "QuestEvent"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_Saiqi2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Saiqi/BT_Npc_Saiqi2.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Npc_Saiqi2:BTComposite_Sequence_3'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Saiqi/BT_Npc_Saiqi2.14"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_27",
+    "Outer": "BT_Npc_Saiqi2",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "CachedDescription": "PatrolLoc is Is Not Set",
+      "OperationType": 1,
+      "BlackboardKey": {
+        "SelectedKeyName": "PatrolLoc"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_Saiqi2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Saiqi/BT_Npc_Saiqi2.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Npc_Saiqi2:BTComposite_Selector_7'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Saiqi/BT_Npc_Saiqi2.6"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_29",
+    "Outer": "BT_Npc_Saiqi2",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "CachedDescription": "PatrolLoc is Is Set",
+      "BlackboardKey": {
+        "SelectedKeyName": "PatrolLoc"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_Saiqi2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Saiqi/BT_Npc_Saiqi2.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Npc_Saiqi2:BTComposite_Selector_7'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Saiqi/BT_Npc_Saiqi2.6"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_31",
+    "Outer": "BT_Npc_Saiqi2",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "CachedDescription": "PatrolLoc is Is Set",
+      "BlackboardKey": {
+        "SelectedKeyName": "PatrolLoc"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_Saiqi2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Saiqi/BT_Npc_Saiqi2.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Npc_Saiqi2:BTComposite_Selector_7'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Saiqi/BT_Npc_Saiqi2.6"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_32",
+    "Outer": "BT_Npc_Saiqi2",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "FloatValue": 800.0,
+      "CachedDescription": "TickTargetDis Is Less Than 800.000000",
+      "OperationType": 2,
+      "BlackboardKey": {
+        "SelectedKeyName": "TickTargetDis"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::Self",
+      "NodeName": "Close to Player",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_Saiqi2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Saiqi/BT_Npc_Saiqi2.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Npc_Saiqi2:BTComposite_Selector_5'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Saiqi/BT_Npc_Saiqi2.4"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_33",
+    "Outer": "BT_Npc_Saiqi2",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "FloatValue": 800.0,
+      "CachedDescription": "TickTargetDis Is Greater Than Or Equal To 800.000000",
+      "OperationType": 5,
+      "BlackboardKey": {
+        "SelectedKeyName": "TickTargetDis"
+      },
+      "NodeName": "Too Far From Player",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_Saiqi2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Saiqi/BT_Npc_Saiqi2.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Npc_Saiqi2:BTComposite_Selector_5'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Saiqi/BT_Npc_Saiqi2.4"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_34",
+    "Outer": "BT_Npc_Saiqi2",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "CachedDescription": "PatrolLoc is Is Not Set",
+      "OperationType": 1,
+      "BlackboardKey": {
+        "SelectedKeyName": "PatrolLoc"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_Saiqi2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Saiqi/BT_Npc_Saiqi2.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Npc_Saiqi2:BTComposite_Selector_10'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Saiqi/BT_Npc_Saiqi2.2"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_35",
+    "Outer": "BT_Npc_Saiqi2",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "CachedDescription": "PatrolLoc is Is Set",
+      "BlackboardKey": {
+        "SelectedKeyName": "PatrolLoc"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_Saiqi2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Saiqi/BT_Npc_Saiqi2.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Npc_Saiqi2:BTComposite_Selector_10'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Saiqi/BT_Npc_Saiqi2.2"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_36",
+    "Outer": "BT_Npc_Saiqi2",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "CachedDescription": "PatrolLoc is Is Set",
+      "BlackboardKey": {
+        "SelectedKeyName": "PatrolLoc"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_Saiqi2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Saiqi/BT_Npc_Saiqi2.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Npc_Saiqi2:BTComposite_Selector_10'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Saiqi/BT_Npc_Saiqi2.2"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_5",
+    "Outer": "BT_Npc_Saiqi2",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "StringValue": "Goto",
+      "CachedDescription": "QuestEvent Is Equal To [Goto]",
+      "BlackboardKey": {
+        "SelectedKeyName": "QuestEvent"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_Saiqi2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Saiqi/BT_Npc_Saiqi2.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Npc_Saiqi2:BTComposite_Selector_4'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Saiqi/BT_Npc_Saiqi2.3"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_8",
+    "Outer": "BT_Npc_Saiqi2",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "CachedDescription": "PatrolLoc is Is Not Set",
+      "OperationType": 1,
+      "BlackboardKey": {
+        "SelectedKeyName": "PatrolLoc"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_Saiqi2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Saiqi/BT_Npc_Saiqi2.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Npc_Saiqi2:BTComposite_Selector_6'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Saiqi/BT_Npc_Saiqi2.5"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_9",
+    "Outer": "BT_Npc_Saiqi2",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "FloatValue": 800.0,
+      "CachedDescription": "TickTargetDis Is Greater Than Or Equal To 800.000000",
+      "OperationType": 5,
+      "BlackboardKey": {
+        "SelectedKeyName": "TickTargetDis"
+      },
+      "NodeName": "Too Far From Player",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_Saiqi2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Saiqi/BT_Npc_Saiqi2.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Npc_Saiqi2:BTComposite_Selector_9'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Saiqi/BT_Npc_Saiqi2.7"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_IsAtLocation",
+    "Name": "BTDecorator_IsAtLocation_21",
+    "Outer": "BT_Npc_Saiqi2",
+    "Class": "UScriptClass'BTDecorator_IsAtLocation'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "BlackboardKey": {
+        "SelectedKeyName": "PatrolLoc"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_Saiqi2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Saiqi/BT_Npc_Saiqi2.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Npc_Saiqi2:BTComposite_Selector_7'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Saiqi/BT_Npc_Saiqi2.6"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_IsAtLocation",
+    "Name": "BTDecorator_IsAtLocation_23",
+    "Outer": "BT_Npc_Saiqi2",
+    "Class": "UScriptClass'BTDecorator_IsAtLocation'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "BlackboardKey": {
+        "SelectedKeyName": "PatrolLoc"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_Saiqi2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Saiqi/BT_Npc_Saiqi2.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Npc_Saiqi2:BTComposite_Selector_7'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Saiqi/BT_Npc_Saiqi2.6"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_IsAtLocation",
+    "Name": "BTDecorator_IsAtLocation_25",
+    "Outer": "BT_Npc_Saiqi2",
+    "Class": "UScriptClass'BTDecorator_IsAtLocation'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "BlackboardKey": {
+        "SelectedKeyName": "PatrolLoc"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_Saiqi2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Saiqi/BT_Npc_Saiqi2.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Npc_Saiqi2:BTComposite_Selector_7'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Saiqi/BT_Npc_Saiqi2.6"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_IsAtLocation",
+    "Name": "BTDecorator_IsAtLocation_27",
+    "Outer": "BT_Npc_Saiqi2",
+    "Class": "UScriptClass'BTDecorator_IsAtLocation'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "BlackboardKey": {
+        "SelectedKeyName": "PatrolLoc"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_Saiqi2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Saiqi/BT_Npc_Saiqi2.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Npc_Saiqi2:BTComposite_Selector_10'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Saiqi/BT_Npc_Saiqi2.2"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_IsAtLocation",
+    "Name": "BTDecorator_IsAtLocation_28",
+    "Outer": "BT_Npc_Saiqi2",
+    "Class": "UScriptClass'BTDecorator_IsAtLocation'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "BlackboardKey": {
+        "SelectedKeyName": "PatrolLoc"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_Saiqi2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Saiqi/BT_Npc_Saiqi2.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Npc_Saiqi2:BTComposite_Selector_10'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Saiqi/BT_Npc_Saiqi2.2"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_IsAtLocation",
+    "Name": "BTDecorator_IsAtLocation_29",
+    "Outer": "BT_Npc_Saiqi2",
+    "Class": "UScriptClass'BTDecorator_IsAtLocation'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "BlackboardKey": {
+        "SelectedKeyName": "PatrolLoc"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_Saiqi2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Saiqi/BT_Npc_Saiqi2.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Npc_Saiqi2:BTComposite_Selector_10'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Saiqi/BT_Npc_Saiqi2.2"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_IsAtLocation",
+    "Name": "BTDecorator_IsAtLocation_3",
+    "Outer": "BT_Npc_Saiqi2",
+    "Class": "UScriptClass'BTDecorator_IsAtLocation'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "BlackboardKey": {
+        "SelectedKeyName": "PatrolLoc"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_Saiqi2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Saiqi/BT_Npc_Saiqi2.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Npc_Saiqi2:BTComposite_Selector_6'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Saiqi/BT_Npc_Saiqi2.5"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_IsAtLocation",
+    "Name": "BTDecorator_IsAtLocation_5",
+    "Outer": "BT_Npc_Saiqi2",
+    "Class": "UScriptClass'BTDecorator_IsAtLocation'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "BlackboardKey": {
+        "SelectedKeyName": "PatrolLoc"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_Saiqi2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Saiqi/BT_Npc_Saiqi2.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Npc_Saiqi2:BTComposite_Selector_6'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Saiqi/BT_Npc_Saiqi2.5"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_IsAtLocation",
+    "Name": "BTDecorator_IsAtLocation_7",
+    "Outer": "BT_Npc_Saiqi2",
+    "Class": "UScriptClass'BTDecorator_IsAtLocation'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "BlackboardKey": {
+        "SelectedKeyName": "PatrolLoc"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_Saiqi2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Saiqi/BT_Npc_Saiqi2.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Npc_Saiqi2:BTComposite_Selector_6'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Saiqi/BT_Npc_Saiqi2.5"
+      }
+    }
+  },
+  {
+    "Type": "BTService_BBValueDis",
+    "Name": "BTService_BBValueDis_0",
+    "Outer": "BT_Npc_Saiqi2",
+    "Class": "UScriptClass'BTService_BBValueDis'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "BBName": "Target",
+      "Interval": 0.2,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_Saiqi2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Saiqi/BT_Npc_Saiqi2.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Npc_Saiqi2:BTComposite_Selector_9'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Saiqi/BT_Npc_Saiqi2.7"
+      }
+    }
+  },
+  {
+    "Type": "BTService_BBValueDis",
+    "Name": "BTService_BBValueDis_1",
+    "Outer": "BT_Npc_Saiqi2",
+    "Class": "UScriptClass'BTService_BBValueDis'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "BBName": "Target",
+      "Interval": 0.2,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_Saiqi2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Saiqi/BT_Npc_Saiqi2.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Npc_Saiqi2:BTComposite_Selector_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Saiqi/BT_Npc_Saiqi2.1"
+      }
+    }
+  },
+  {
+    "Type": "BTService_BBValueDis",
+    "Name": "BTService_BBValueDis_3",
+    "Outer": "BT_Npc_Saiqi2",
+    "Class": "UScriptClass'BTService_BBValueDis'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "BBName": "Target",
+      "Interval": 0.2,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_Saiqi2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Saiqi/BT_Npc_Saiqi2.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Npc_Saiqi2:BTComposite_Selector_5'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Saiqi/BT_Npc_Saiqi2.4"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_ClearKey",
+    "Name": "BTTask_ClearKey_4",
+    "Outer": "BT_Npc_Saiqi2",
+    "Class": "UScriptClass'BTTask_ClearKey'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "BlackboadKeyName": "QuestEvent",
+      "BlackboardKey": {
+        "SelectedKeyName": "QuestEvent"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_Saiqi2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Saiqi/BT_Npc_Saiqi2.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Npc_Saiqi2:BTComposite_Sequence_12'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Saiqi/BT_Npc_Saiqi2.10"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_ClearKey",
+    "Name": "BTTask_ClearKey_6",
+    "Outer": "BT_Npc_Saiqi2",
+    "Class": "UScriptClass'BTTask_ClearKey'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "BlackboadKeyName": "QuestEvent",
+      "BlackboardKey": {
+        "SelectedKeyName": "QuestEvent"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_Saiqi2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Saiqi/BT_Npc_Saiqi2.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Npc_Saiqi2:BTComposite_Sequence_10'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Saiqi/BT_Npc_Saiqi2.8"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_ClearKey",
+    "Name": "BTTask_ClearKey_7",
+    "Outer": "BT_Npc_Saiqi2",
+    "Class": "UScriptClass'BTTask_ClearKey'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "BlackboadKeyName": "QuestEvent",
+      "BlackboardKey": {
+        "SelectedKeyName": "QuestEvent"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_Saiqi2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Saiqi/BT_Npc_Saiqi2.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Npc_Saiqi2:BTComposite_Sequence_15'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Saiqi/BT_Npc_Saiqi2.13"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_GetPatrolLoc",
+    "Name": "BTTask_GetPatrolLoc_1",
+    "Outer": "BT_Npc_Saiqi2",
+    "Class": "UScriptClass'BTTask_GetPatrolLoc'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_Saiqi2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Saiqi/BT_Npc_Saiqi2.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Npc_Saiqi2:BTComposite_Selector_7'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Saiqi/BT_Npc_Saiqi2.6"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_GetPatrolLoc",
+    "Name": "BTTask_GetPatrolLoc_2",
+    "Outer": "BT_Npc_Saiqi2",
+    "Class": "UScriptClass'BTTask_GetPatrolLoc'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_Saiqi2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Saiqi/BT_Npc_Saiqi2.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Npc_Saiqi2:BTComposite_Selector_6'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Saiqi/BT_Npc_Saiqi2.5"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_GetPatrolLoc",
+    "Name": "BTTask_GetPatrolLoc_3",
+    "Outer": "BT_Npc_Saiqi2",
+    "Class": "UScriptClass'BTTask_GetPatrolLoc'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_Saiqi2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Saiqi/BT_Npc_Saiqi2.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Npc_Saiqi2:BTComposite_Selector_10'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Saiqi/BT_Npc_Saiqi2.2"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_NewMoveTo",
+    "Name": "BTTask_NewMoveTo_0",
+    "Outer": "BT_Npc_Saiqi2",
+    "Class": "UScriptClass'BTTask_NewMoveTo'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "bOrientRotationToMovement": true,
+      "MoveTypeState": "EMoveTypeState::MTS_Run",
+      "MaxSpeed": 450.0,
+      "MaxAcceleration": 10000.0,
+      "AcceptableRadius": 20.0,
+      "bStopOnOverlapNeedsUpdate": false,
+      "BlackboardKey": {
+        "SelectedKeyName": "PatrolLoc"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_Saiqi2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Saiqi/BT_Npc_Saiqi2.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Npc_Saiqi2:BTComposite_Selector_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Saiqi/BT_Npc_Saiqi2.1"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_NewMoveTo",
+    "Name": "BTTask_NewMoveTo_5",
+    "Outer": "BT_Npc_Saiqi2",
+    "Class": "UScriptClass'BTTask_NewMoveTo'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "bOrientRotationToMovement": true,
+      "MaxSpeed": 150.0,
+      "MaxAcceleration": 150.0,
+      "AcceptableRadius": 20.0,
+      "bStopOnOverlapNeedsUpdate": false,
+      "BlackboardKey": {
+        "SelectedKeyName": "PatrolLoc"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_Saiqi2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Saiqi/BT_Npc_Saiqi2.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Npc_Saiqi2:BTComposite_Selector_5'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Saiqi/BT_Npc_Saiqi2.4"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_NewMoveTo",
+    "Name": "BTTask_NewMoveTo_6",
+    "Outer": "BT_Npc_Saiqi2",
+    "Class": "UScriptClass'BTTask_NewMoveTo'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "bOrientRotationToMovement": true,
+      "MaxSpeed": 150.0,
+      "MaxAcceleration": 150.0,
+      "AcceptableRadius": 20.0,
+      "bStopOnOverlapNeedsUpdate": false,
+      "BlackboardKey": {
+        "SelectedKeyName": "PatrolLoc"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_Saiqi2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Saiqi/BT_Npc_Saiqi2.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Npc_Saiqi2:BTComposite_Selector_9'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Saiqi/BT_Npc_Saiqi2.7"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_NpcGetTarget",
+    "Name": "BTTask_NpcGetTarget_1",
+    "Outer": "BT_Npc_Saiqi2",
+    "Class": "UScriptClass'BTTask_NpcGetTarget'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_Saiqi2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Saiqi/BT_Npc_Saiqi2.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Npc_Saiqi2:BTComposite_Sequence_9'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Saiqi/BT_Npc_Saiqi2.17"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_NpcGetTarget",
+    "Name": "BTTask_NpcGetTarget_3",
+    "Outer": "BT_Npc_Saiqi2",
+    "Class": "UScriptClass'BTTask_NpcGetTarget'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_Saiqi2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Saiqi/BT_Npc_Saiqi2.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Npc_Saiqi2:BTComposite_Sequence_4'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Saiqi/BT_Npc_Saiqi2.15"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_NpcGetTarget",
+    "Name": "BTTask_NpcGetTarget_4",
+    "Outer": "BT_Npc_Saiqi2",
+    "Class": "UScriptClass'BTTask_NpcGetTarget'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_Saiqi2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Saiqi/BT_Npc_Saiqi2.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Npc_Saiqi2:BTComposite_Sequence_13'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Saiqi/BT_Npc_Saiqi2.11"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_0",
+    "Outer": "BT_Npc_Saiqi2",
+    "Class": "UScriptClass'BTTask_Wait'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "WaitTime": 1.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_Saiqi2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Saiqi/BT_Npc_Saiqi2.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Npc_Saiqi2:BTComposite_Sequence_3'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Saiqi/BT_Npc_Saiqi2.14"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_1",
+    "Outer": "BT_Npc_Saiqi2",
+    "Class": "UScriptClass'BTTask_Wait'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "WaitTime": 2.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_Saiqi2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Saiqi/BT_Npc_Saiqi2.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Npc_Saiqi2:BTComposite_Selector_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Saiqi/BT_Npc_Saiqi2.1"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_2",
+    "Outer": "BT_Npc_Saiqi2",
+    "Class": "UScriptClass'BTTask_Wait'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "WaitTime": 2.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_Saiqi2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Saiqi/BT_Npc_Saiqi2.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Npc_Saiqi2:BTComposite_Selector_5'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Saiqi/BT_Npc_Saiqi2.4"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_4",
+    "Outer": "BT_Npc_Saiqi2",
+    "Class": "UScriptClass'BTTask_Wait'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "WaitTime": 2.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_Saiqi2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Saiqi/BT_Npc_Saiqi2.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Npc_Saiqi2:BTComposite_Selector_9'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Saiqi/BT_Npc_Saiqi2.7"
+      }
+    }
+  }
+]

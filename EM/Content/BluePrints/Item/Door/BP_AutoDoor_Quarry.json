@@ -1,0 +1,1970 @@
+[
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_BP_AutoDoor_Quarry",
+    "Outer": "BP_AutoDoor_Quarry_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_Lerp_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_MakeRotator_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "Struct": {
+          "ObjectName": "ScriptStruct'Rotator'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_K2_AddRelativeRotation_SweepHitResult",
+        "Flags": "RF_Public",
+        "ElementSize": 144,
+        "PropertyFlags": "ContainsInstancedReference",
+        "Struct": {
+          "ObjectName": "ScriptStruct'HitResult'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "K2Node_MakeArray_Array",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "ReferenceParm | ContainsInstancedReference",
+        "Inner": {
+          "Type": "ObjectProperty",
+          "Name": "K2Node_MakeArray_Array",
+          "Flags": "RF_Public",
+          "ElementSize": 8,
+          "PropertyFlags": "InstancedReference",
+          "PropertyClass": {
+            "ObjectName": "Class'StaticMeshComponent'",
+            "ObjectPath": "/Script/Engine"
+          }
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_Map_Find_Value",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "Struct": {
+          "ObjectName": "ScriptStruct'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Map_Find_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_Map_Find_Value_1",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "Struct": {
+          "ObjectName": "ScriptStruct'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Map_Find_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_BreakVector_X",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_BreakVector_Y",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_BreakVector_Z",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_BreakVector_X_1",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_BreakVector_Y_1",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_BreakVector_Z_1",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_Lerp_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_Lerp_ReturnValue_2",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_MakeVector_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "Struct": {
+          "ObjectName": "ScriptStruct'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_MakeVector_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "Struct": {
+          "ObjectName": "ScriptStruct'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_K2_SetRelativeLocation_SweepHitResult",
+        "Flags": "RF_Public",
+        "ElementSize": 144,
+        "PropertyFlags": "ContainsInstancedReference",
+        "Struct": {
+          "ObjectName": "ScriptStruct'HitResult'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_K2_SetRelativeLocation_SweepHitResult_1",
+        "Flags": "RF_Public",
+        "ElementSize": 144,
+        "PropertyFlags": "ContainsInstancedReference",
+        "Struct": {
+          "ObjectName": "ScriptStruct'HitResult'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_Map_Find_Value_2",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "Struct": {
+          "ObjectName": "ScriptStruct'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Map_Find_ReturnValue_2",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_Map_Find_Value_3",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "Struct": {
+          "ObjectName": "ScriptStruct'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Map_Find_ReturnValue_3",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_BreakVector_X_2",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_BreakVector_Y_2",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_BreakVector_Z_2",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_BreakVector_X_3",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_BreakVector_Y_3",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_BreakVector_Z_3",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_Lerp_ReturnValue_3",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_Lerp_ReturnValue_4",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_MakeVector_ReturnValue_2",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "Struct": {
+          "ObjectName": "ScriptStruct'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_MakeVector_ReturnValue_3",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "Struct": {
+          "ObjectName": "ScriptStruct'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_K2_SetRelativeLocation_SweepHitResult_2",
+        "Flags": "RF_Public",
+        "ElementSize": 144,
+        "PropertyFlags": "ContainsInstancedReference",
+        "Struct": {
+          "ObjectName": "ScriptStruct'HitResult'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_K2_SetRelativeLocation_SweepHitResult_3",
+        "Flags": "RF_Public",
+        "ElementSize": 144,
+        "PropertyFlags": "ContainsInstancedReference",
+        "Struct": {
+          "ObjectName": "ScriptStruct'HitResult'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_Map_Find_Value_4",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "Struct": {
+          "ObjectName": "ScriptStruct'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Map_Find_ReturnValue_4",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_BreakVector_X_4",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_BreakVector_Y_4",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_BreakVector_Z_4",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_Lerp_ReturnValue_5",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_MakeVector_ReturnValue_4",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "Struct": {
+          "ObjectName": "ScriptStruct'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_K2_SetRelativeLocation_SweepHitResult_4",
+        "Flags": "RF_Public",
+        "ElementSize": 144,
+        "PropertyFlags": "ContainsInstancedReference",
+        "Struct": {
+          "ObjectName": "ScriptStruct'HitResult'",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction | FUNC_HasDefaults"
+  },
+  {
+    "Type": "Function",
+    "Name": "CloseDoor",
+    "Outer": "BP_AutoDoor_Quarry_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "SuperStruct": {
+      "ObjectName": "Function'ConditionGateBase:CloseDoor'",
+      "ObjectPath": "/Script/EM"
+    },
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OpenDoor",
+    "Outer": "BP_AutoDoor_Quarry_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "SuperStruct": {
+      "ObjectName": "Function'ConditionGateBase:OpenDoor'",
+      "ObjectPath": "/Script/EM"
+    },
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "ReceiveBeginPlay",
+    "Outer": "BP_AutoDoor_Quarry_C",
+    "Class": "UScriptClass'Function'",
+    "Super": {
+      "ObjectName": "Function'BP_AutoDoorBase_C:ReceiveBeginPlay'",
+      "ObjectPath": "EM/Content/BluePrints/Item/Door/BP_AutoDoorBase.5"
+    },
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "SuperStruct": {
+      "ObjectName": "Function'BP_AutoDoorBase_C:ReceiveBeginPlay'",
+      "ObjectPath": "EM/Content/BluePrints/Item/Door/BP_AutoDoorBase.5"
+    },
+    "FunctionFlags": "FUNC_Event | FUNC_Protected | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "时间轴_0__UpdateFunc",
+    "Outer": "BP_AutoDoor_Quarry_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "时间轴_0__FinishedFunc",
+    "Outer": "BP_AutoDoor_Quarry_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "IndicatorColor",
+    "Outer": "BP_AutoDoor_Quarry_C",
+    "Class": "UScriptClass'Function'",
+    "Super": {
+      "ObjectName": "Function'BP_AutoDoorBase_C:IndicatorColor'",
+      "ObjectPath": "EM/Content/BluePrints/Item/Door/BP_AutoDoorBase.8"
+    },
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "SuperStruct": {
+      "ObjectName": "Function'BP_AutoDoorBase_C:IndicatorColor'",
+      "ObjectPath": "EM/Content/BluePrints/Item/Door/BP_AutoDoorBase.8"
+    },
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_MakeVector_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "Struct": {
+          "ObjectName": "ScriptStruct'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BP_AutoDoor_Quarry_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Super": {
+      "ObjectName": "BlueprintGeneratedClass'BP_AutoDoorBase_C'",
+      "ObjectPath": "EM/Content/BluePrints/Item/Door/BP_AutoDoorBase.9"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Timelines": [
+        {
+          "ObjectName": "TimelineTemplate'BP_AutoDoor_Quarry_C:时间轴_0_Template'",
+          "ObjectPath": "EM/Content/BluePrints/Item/Door/BP_AutoDoor_Quarry.36"
+        }
+      ],
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BP_AutoDoor_Quarry_C:SimpleConstructionScript_0'",
+        "ObjectPath": "EM/Content/BluePrints/Item/Door/BP_AutoDoor_Quarry.28"
+      },
+      "InheritableComponentHandler": {
+        "ObjectName": "InheritableComponentHandler'BP_AutoDoor_Quarry_C:InheritableComponentHandler'",
+        "ObjectPath": "EM/Content/BluePrints/Item/Door/BP_AutoDoor_Quarry.18"
+      },
+      "UberGraphFunction": {
+        "ObjectName": "Function'BP_AutoDoor_Quarry_C:ExecuteUbergraph_BP_AutoDoor_Quarry'",
+        "ObjectPath": "EM/Content/BluePrints/Item/Door/BP_AutoDoor_Quarry.0"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "BlueprintGeneratedClass'BP_AutoDoorBase_C'",
+      "ObjectPath": "EM/Content/BluePrints/Item/Door/BP_AutoDoorBase.9"
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'BP_AutoDoor_Quarry_C:IndicatorColor'",
+        "ObjectPath": "EM/Content/BluePrints/Item/Door/BP_AutoDoor_Quarry.6"
+      },
+      {
+        "ObjectName": "Function'BP_AutoDoor_Quarry_C:时间轴_0__FinishedFunc'",
+        "ObjectPath": "EM/Content/BluePrints/Item/Door/BP_AutoDoor_Quarry.5"
+      },
+      {
+        "ObjectName": "Function'BP_AutoDoor_Quarry_C:时间轴_0__UpdateFunc'",
+        "ObjectPath": "EM/Content/BluePrints/Item/Door/BP_AutoDoor_Quarry.4"
+      },
+      {
+        "ObjectName": "Function'BP_AutoDoor_Quarry_C:ReceiveBeginPlay'",
+        "ObjectPath": "EM/Content/BluePrints/Item/Door/BP_AutoDoor_Quarry.3"
+      },
+      {
+        "ObjectName": "Function'BP_AutoDoor_Quarry_C:OpenDoor'",
+        "ObjectPath": "EM/Content/BluePrints/Item/Door/BP_AutoDoor_Quarry.2"
+      },
+      {
+        "ObjectName": "Function'BP_AutoDoor_Quarry_C:CloseDoor'",
+        "ObjectPath": "EM/Content/BluePrints/Item/Door/BP_AutoDoor_Quarry.1"
+      },
+      {
+        "ObjectName": "Function'BP_AutoDoor_Quarry_C:ExecuteUbergraph_BP_AutoDoor_Quarry'",
+        "ObjectPath": "EM/Content/BluePrints/Item/Door/BP_AutoDoor_Quarry.0"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient",
+        "Struct": {
+          "ObjectName": "ScriptStruct'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Mesh_MenShuanB",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'StaticMeshComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Mesh_MenShuanA",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'StaticMeshComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "MenShuan",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'StaticMeshComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Mesh_Door_01",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'StaticMeshComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Mesh_Door_02",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'StaticMeshComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Mesh_Men01",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'StaticMeshComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Mesh_Men02",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'StaticMeshComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "____0_FR_7FE0B4064FFCDACA433057A77F489344",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "____0_F_7FE0B4064FFCDACA433057A77F489344",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "____0_DE_7FE0B4064FFCDACA433057A77F489344",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "____0_FX_7FE0B4064FFCDACA433057A77F489344",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "____0_BC_7FE0B4064FFCDACA433057A77F489344",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4
+      },
+      {
+        "Type": "ByteProperty",
+        "Name": "____0__Direction_7FE0B4064FFCDACA433057A77F489344",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "Enum": {
+          "ObjectName": "Enum'ETimelineDirection'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "时间轴_0",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'TimelineComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "IsDoorOpen",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "PropertyFlags": "Edit | BlueprintVisible",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "RunnerMaterial",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'MaterialInterface'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "RunnerMaterial_Mid",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'MaterialInstanceDynamic'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CharNum",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "Edit | BlueprintVisible"
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "Location_Men02D",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 12,
+        "PropertyFlags": "Edit | BlueprintVisible",
+        "Struct": {
+          "ObjectName": "ScriptStruct'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "Location_Men02E",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 12,
+        "PropertyFlags": "Edit | BlueprintVisible",
+        "Struct": {
+          "ObjectName": "ScriptStruct'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "EnumProperty",
+        "Name": "DoorState",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "PropertyFlags": "Edit | BlueprintVisible",
+        "Enum": {
+          "ObjectName": "Enum'EDoorType'",
+          "ObjectPath": "/Script/EM"
+        },
+        "UnderlyingProp": {
+          "Type": "ByteProperty",
+          "Name": "UnderlyingType",
+          "Flags": "RF_Public",
+          "ElementSize": 1,
+          "Enum": null
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "Location_Men02B",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 12,
+        "PropertyFlags": "Edit | BlueprintVisible",
+        "Struct": {
+          "ObjectName": "ScriptStruct'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "Location_Men02C",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 12,
+        "PropertyFlags": "Edit | BlueprintVisible",
+        "Struct": {
+          "ObjectName": "ScriptStruct'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "Location_MenShuan",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 12,
+        "PropertyFlags": "Edit | BlueprintVisible",
+        "Struct": {
+          "ObjectName": "ScriptStruct'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "GateColor",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "Struct": {
+          "ObjectName": "ScriptStruct'LinearColor'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_BP_AutoDoor_Quarry": {
+        "ObjectName": "Function'BP_AutoDoor_Quarry_C:ExecuteUbergraph_BP_AutoDoor_Quarry'",
+        "ObjectPath": "EM/Content/BluePrints/Item/Door/BP_AutoDoor_Quarry.0"
+      },
+      "CloseDoor": {
+        "ObjectName": "Function'BP_AutoDoor_Quarry_C:CloseDoor'",
+        "ObjectPath": "EM/Content/BluePrints/Item/Door/BP_AutoDoor_Quarry.1"
+      },
+      "OpenDoor": {
+        "ObjectName": "Function'BP_AutoDoor_Quarry_C:OpenDoor'",
+        "ObjectPath": "EM/Content/BluePrints/Item/Door/BP_AutoDoor_Quarry.2"
+      },
+      "ReceiveBeginPlay": {
+        "ObjectName": "Function'BP_AutoDoor_Quarry_C:ReceiveBeginPlay'",
+        "ObjectPath": "EM/Content/BluePrints/Item/Door/BP_AutoDoor_Quarry.3"
+      },
+      "时间轴_0__UpdateFunc": {
+        "ObjectName": "Function'BP_AutoDoor_Quarry_C:时间轴_0__UpdateFunc'",
+        "ObjectPath": "EM/Content/BluePrints/Item/Door/BP_AutoDoor_Quarry.4"
+      },
+      "时间轴_0__FinishedFunc": {
+        "ObjectName": "Function'BP_AutoDoor_Quarry_C:时间轴_0__FinishedFunc'",
+        "ObjectPath": "EM/Content/BluePrints/Item/Door/BP_AutoDoor_Quarry.5"
+      },
+      "IndicatorColor": {
+        "ObjectName": "Function'BP_AutoDoor_Quarry_C:IndicatorColor'",
+        "ObjectPath": "EM/Content/BluePrints/Item/Door/BP_AutoDoor_Quarry.6"
+      }
+    },
+    "ClassFlags": "CLASS_Config | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BP_AutoDoor_Quarry_C'Default__BP_AutoDoor_Quarry_C'",
+      "ObjectPath": "EM/Content/BluePrints/Item/Door/BP_AutoDoor_Quarry.8"
+    }
+  },
+  {
+    "Type": "BP_AutoDoor_Quarry_C",
+    "Name": "Default__BP_AutoDoor_Quarry_C",
+    "Class": "BlueprintGeneratedClass'EM/Content/BluePrints/Item/Door/BP_AutoDoor_Quarry.BP_AutoDoor_Quarry_C'",
+    "Template": {
+      "ObjectName": "BP_AutoDoorBase_C'Default__BP_AutoDoorBase_C'",
+      "ObjectPath": "EM/Content/BluePrints/Item/Door/BP_AutoDoorBase.10"
+    },
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "UberGraphFrame": {},
+      "RunnerMaterial": {
+        "ObjectName": "Material'MM_StateColor'",
+        "ObjectPath": "EM/Content/Asset/Scene/EN001_Ailixian/Common/Porp/Chest/Material/MM_StateColor.0"
+      },
+      "Location_Men02D": {
+        "X": 0.0,
+        "Y": -370.0,
+        "Z": 0.0
+      },
+      "Location_Men02E": {
+        "X": 0.0,
+        "Y": 370.0,
+        "Z": 0.0
+      },
+      "Location_Men02B": {
+        "X": 0.0,
+        "Y": 240.0,
+        "Z": 0.0
+      },
+      "Location_Men02C": {
+        "X": 0.0,
+        "Y": -240.0,
+        "Z": 0.0
+      },
+      "Location_MenShuan": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 110.0
+      },
+      "GateColor": {
+        "R": 0.0,
+        "G": 0.0,
+        "B": 0.0,
+        "A": 0.0,
+        "Hex": "000000"
+      },
+      "door_state": false,
+      "DoorTypeStateId": [
+        {
+          "Key": "104010",
+          "Value": "EDoorType::UnlockedDoor"
+        },
+        {
+          "Key": "104012",
+          "Value": "EDoorType::LockedDoor"
+        },
+        {
+          "Key": "104013",
+          "Value": "EDoorType::SealedDoor"
+        }
+      ],
+      "OpenSound": "event:/sfx/common/scene/gear/metal_door01_open",
+      "CloseSound": "event:/sfx/common/scene/gear/metal_door01_close",
+      "CombatStateChangeComponent": {
+        "ObjectName": "BP_CombatStateChangeComponent_C'Default__BP_AutoDoor_Quarry_C:CombatStateChangeComponent'",
+        "ObjectPath": "EM/Content/BluePrints/Item/Door/BP_AutoDoor_Quarry.11"
+      },
+      "CombatClientEffectComponent": {
+        "ObjectName": "BP_CombatClientEffectComponent_C'Default__BP_AutoDoor_Quarry_C:CombatClientEffectComponent'",
+        "ObjectPath": "EM/Content/BluePrints/Item/Door/BP_AutoDoor_Quarry.10"
+      },
+      "FXComponent": {
+        "ObjectName": "BP_FXComponent_C'Default__BP_AutoDoor_Quarry_C:BP_FXComponent'",
+        "ObjectPath": "EM/Content/BluePrints/Item/Door/BP_AutoDoor_Quarry.12"
+      }
+    }
+  },
+  {
+    "Type": "BoxComponent",
+    "Name": "Box_GEN_VARIABLE",
+    "Outer": "BP_AutoDoor_Quarry_C",
+    "Class": "UScriptClass'BoxComponent'",
+    "Template": {
+      "ObjectName": "BoxComponent'BP_ConditionalGate_Base_C:Box_GEN_VARIABLE'",
+      "ObjectPath": "EM/Content/BluePrints/Item/Door/BP_ConditionalGate_Base.11"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted | RF_InheritableComponentTemplate",
+    "Properties": {
+      "BoxExtent": {
+        "X": 200.0,
+        "Y": 800.0,
+        "Z": 250.0
+      },
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 250.0
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": 90.0,
+        "Roll": 0.0
+      },
+      "RelativeScale3D": {
+        "X": 2.0,
+        "Y": 1.0,
+        "Z": 1.0
+      }
+    }
+  },
+  {
+    "Type": "BP_CombatClientEffectComponent_C",
+    "Name": "CombatClientEffectComponent",
+    "Outer": "Default__BP_AutoDoor_Quarry_C",
+    "Class": "BlueprintGeneratedClass'EM/Content/BluePrints/Item/BP_CombatClientEffectComponent.BP_CombatClientEffectComponent_C'",
+    "Template": {
+      "ObjectName": "BP_CombatClientEffectComponent_C'Default__BP_AutoDoorBase_C:CombatClientEffectComponent'",
+      "ObjectPath": "EM/Content/BluePrints/Item/Door/BP_AutoDoorBase.11"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "BP_CombatStateChangeComponent_C",
+    "Name": "CombatStateChangeComponent",
+    "Outer": "Default__BP_AutoDoor_Quarry_C",
+    "Class": "BlueprintGeneratedClass'EM/Content/BluePrints/Item/BP_CombatStateChangeComponent.BP_CombatStateChangeComponent_C'",
+    "Template": {
+      "ObjectName": "BP_CombatStateChangeComponent_C'Default__BP_AutoDoorBase_C:CombatStateChangeComponent'",
+      "ObjectPath": "EM/Content/BluePrints/Item/Door/BP_AutoDoorBase.12"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "BP_FXComponent_C",
+    "Name": "BP_FXComponent",
+    "Outer": "Default__BP_AutoDoor_Quarry_C",
+    "Class": "BlueprintGeneratedClass'EM/Content/BluePrints/Char/BP_FXComponent.BP_FXComponent_C'",
+    "Template": {
+      "ObjectName": "BP_FXComponent_C'Default__BP_AutoDoorBase_C:BP_FXComponent'",
+      "ObjectPath": "EM/Content/BluePrints/Item/Door/BP_AutoDoorBase.13"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "CurveFloat",
+    "Name": "CurveFloat_0",
+    "Outer": "BP_AutoDoor_Quarry_C",
+    "Class": "UScriptClass'CurveFloat'",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "FloatCurve": {
+        "Keys": [
+          {
+            "InterpMode": "RCIM_Linear",
+            "TangentMode": "RCTM_Auto",
+            "TangentWeightMode": "RCTWM_WeightedNone",
+            "Time": 0.0,
+            "Value": 0.0,
+            "ArriveTangent": 0.0,
+            "ArriveTangentWeight": 0.0,
+            "LeaveTangent": 0.0,
+            "LeaveTangentWeight": 0.0
+          },
+          {
+            "InterpMode": "RCIM_Linear",
+            "TangentMode": "RCTM_Auto",
+            "TangentWeightMode": "RCTWM_WeightedNone",
+            "Time": 0.95,
+            "Value": 0.0,
+            "ArriveTangent": 0.0,
+            "ArriveTangentWeight": 0.0,
+            "LeaveTangent": 0.0,
+            "LeaveTangentWeight": 0.0
+          },
+          {
+            "InterpMode": "RCIM_Linear",
+            "TangentMode": "RCTM_Auto",
+            "TangentWeightMode": "RCTWM_WeightedNone",
+            "Time": 0.9985221,
+            "Value": 0.015,
+            "ArriveTangent": 0.5,
+            "ArriveTangentWeight": 0.0,
+            "LeaveTangent": 0.5,
+            "LeaveTangentWeight": 0.0
+          },
+          {
+            "InterpMode": "RCIM_Linear",
+            "TangentMode": "RCTM_Auto",
+            "TangentWeightMode": "RCTWM_WeightedNone",
+            "Time": 1.05,
+            "Value": 0.0,
+            "ArriveTangent": 0.0,
+            "ArriveTangentWeight": 0.0,
+            "LeaveTangent": 0.0,
+            "LeaveTangentWeight": 0.0
+          },
+          {
+            "InterpMode": "RCIM_Cubic",
+            "TangentMode": "RCTM_User",
+            "TangentWeightMode": "RCTWM_WeightedNone",
+            "Time": 2.0,
+            "Value": 1.0,
+            "ArriveTangent": 0.0,
+            "ArriveTangentWeight": 0.0,
+            "LeaveTangent": 0.0,
+            "LeaveTangentWeight": 0.0
+          }
+        ]
+      }
+    }
+  },
+  {
+    "Type": "CurveFloat",
+    "Name": "CurveFloat_1",
+    "Outer": "BP_AutoDoor_Quarry_C",
+    "Class": "UScriptClass'CurveFloat'",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "FloatCurve": {
+        "Keys": [
+          {
+            "InterpMode": "RCIM_Cubic",
+            "TangentMode": "RCTM_User",
+            "TangentWeightMode": "RCTWM_WeightedNone",
+            "Time": 0.0,
+            "Value": 1.0,
+            "ArriveTangent": -0.15870097,
+            "ArriveTangentWeight": 0.0,
+            "LeaveTangent": -0.15870097,
+            "LeaveTangentWeight": 0.0
+          },
+          {
+            "InterpMode": "RCIM_Linear",
+            "TangentMode": "RCTM_Auto",
+            "TangentWeightMode": "RCTWM_WeightedNone",
+            "Time": 0.4,
+            "Value": 0.0,
+            "ArriveTangent": 0.0,
+            "ArriveTangentWeight": 0.0,
+            "LeaveTangent": 0.0,
+            "LeaveTangentWeight": 0.0
+          }
+        ]
+      }
+    }
+  },
+  {
+    "Type": "CurveFloat",
+    "Name": "CurveFloat_2",
+    "Outer": "BP_AutoDoor_Quarry_C",
+    "Class": "UScriptClass'CurveFloat'",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "FloatCurve": {
+        "Keys": [
+          {
+            "InterpMode": "RCIM_Linear",
+            "TangentMode": "RCTM_Auto",
+            "TangentWeightMode": "RCTWM_WeightedNone",
+            "Time": 0.44472134,
+            "Value": 0.0,
+            "ArriveTangent": 0.0,
+            "ArriveTangentWeight": 0.0,
+            "LeaveTangent": 0.0,
+            "LeaveTangentWeight": 0.0
+          },
+          {
+            "InterpMode": "RCIM_Linear",
+            "TangentMode": "RCTM_Auto",
+            "TangentWeightMode": "RCTWM_WeightedNone",
+            "Time": 0.4704603,
+            "Value": 0.01,
+            "ArriveTangent": 0.0,
+            "ArriveTangentWeight": 0.0,
+            "LeaveTangent": 0.0,
+            "LeaveTangentWeight": 0.0
+          },
+          {
+            "InterpMode": "RCIM_Linear",
+            "TangentMode": "RCTM_Auto",
+            "TangentWeightMode": "RCTWM_WeightedNone",
+            "Time": 0.5,
+            "Value": 0.0,
+            "ArriveTangent": 0.0,
+            "ArriveTangentWeight": 0.0,
+            "LeaveTangent": 0.0,
+            "LeaveTangentWeight": 0.0
+          },
+          {
+            "InterpMode": "RCIM_Linear",
+            "TangentMode": "RCTM_Auto",
+            "TangentWeightMode": "RCTWM_WeightedNone",
+            "Time": 0.9608251,
+            "Value": 0.28808397,
+            "ArriveTangent": 0.0,
+            "ArriveTangentWeight": 0.0,
+            "LeaveTangent": 0.0,
+            "LeaveTangentWeight": 0.0
+          },
+          {
+            "InterpMode": "RCIM_Linear",
+            "TangentMode": "RCTM_Auto",
+            "TangentWeightMode": "RCTWM_WeightedNone",
+            "Time": 1.0,
+            "Value": 0.33838,
+            "ArriveTangent": 0.0,
+            "ArriveTangentWeight": 0.0,
+            "LeaveTangent": 0.0,
+            "LeaveTangentWeight": 0.0
+          },
+          {
+            "InterpMode": "RCIM_Linear",
+            "TangentMode": "RCTM_Auto",
+            "TangentWeightMode": "RCTWM_WeightedNone",
+            "Time": 1.0366566,
+            "Value": 0.3534726,
+            "ArriveTangent": 0.0,
+            "ArriveTangentWeight": 0.0,
+            "LeaveTangent": 0.0,
+            "LeaveTangentWeight": 0.0
+          },
+          {
+            "InterpMode": "RCIM_Linear",
+            "TangentMode": "RCTM_Auto",
+            "TangentWeightMode": "RCTWM_WeightedNone",
+            "Time": 2.0,
+            "Value": 1.0,
+            "ArriveTangent": 0.0,
+            "ArriveTangentWeight": 0.0,
+            "LeaveTangent": 0.0,
+            "LeaveTangentWeight": 0.0
+          }
+        ]
+      }
+    }
+  },
+  {
+    "Type": "CurveFloat",
+    "Name": "CurveFloat_3",
+    "Outer": "BP_AutoDoor_Quarry_C",
+    "Class": "UScriptClass'CurveFloat'",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "FloatCurve": {
+        "Keys": [
+          {
+            "InterpMode": "RCIM_Linear",
+            "TangentMode": "RCTM_Auto",
+            "TangentWeightMode": "RCTWM_WeightedNone",
+            "Time": 0.0,
+            "Value": 0.0,
+            "ArriveTangent": 0.0,
+            "ArriveTangentWeight": 0.0,
+            "LeaveTangent": 0.0,
+            "LeaveTangentWeight": 0.0
+          },
+          {
+            "InterpMode": "RCIM_Linear",
+            "TangentMode": "RCTM_Auto",
+            "TangentWeightMode": "RCTWM_WeightedNone",
+            "Time": 0.15,
+            "Value": 0.0,
+            "ArriveTangent": 0.0,
+            "ArriveTangentWeight": 0.0,
+            "LeaveTangent": 0.0,
+            "LeaveTangentWeight": 0.0
+          },
+          {
+            "InterpMode": "RCIM_Linear",
+            "TangentMode": "RCTM_Auto",
+            "TangentWeightMode": "RCTWM_WeightedNone",
+            "Time": 0.17,
+            "Value": 0.01,
+            "ArriveTangent": 0.0,
+            "ArriveTangentWeight": 0.0,
+            "LeaveTangent": 0.0,
+            "LeaveTangentWeight": 0.0
+          },
+          {
+            "InterpMode": "RCIM_Linear",
+            "TangentMode": "RCTM_Auto",
+            "TangentWeightMode": "RCTWM_WeightedNone",
+            "Time": 0.2,
+            "Value": 0.0,
+            "ArriveTangent": 0.0,
+            "ArriveTangentWeight": 0.0,
+            "LeaveTangent": 0.0,
+            "LeaveTangentWeight": 0.0
+          },
+          {
+            "InterpMode": "RCIM_Cubic",
+            "TangentMode": "RCTM_User",
+            "TangentWeightMode": "RCTWM_WeightedNone",
+            "Time": 0.4,
+            "Value": 0.0,
+            "ArriveTangent": 0.0,
+            "ArriveTangentWeight": 0.0,
+            "LeaveTangent": 0.0,
+            "LeaveTangentWeight": 0.0
+          },
+          {
+            "InterpMode": "RCIM_Cubic",
+            "TangentMode": "RCTM_User",
+            "TangentWeightMode": "RCTWM_WeightedNone",
+            "Time": 2.0,
+            "Value": 1.0,
+            "ArriveTangent": 0.0,
+            "ArriveTangentWeight": 0.0,
+            "LeaveTangent": 0.0,
+            "LeaveTangentWeight": 0.0
+          }
+        ]
+      }
+    }
+  },
+  {
+    "Type": "CurveFloat",
+    "Name": "CurveFloat_4",
+    "Outer": "BP_AutoDoor_Quarry_C",
+    "Class": "UScriptClass'CurveFloat'",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "FloatCurve": {
+        "Keys": [
+          {
+            "InterpMode": "RCIM_Linear",
+            "TangentMode": "RCTM_Auto",
+            "TangentWeightMode": "RCTWM_WeightedNone",
+            "Time": 0.0,
+            "Value": 0.0,
+            "ArriveTangent": 0.0,
+            "ArriveTangentWeight": 0.0,
+            "LeaveTangent": 0.0,
+            "LeaveTangentWeight": 0.0
+          },
+          {
+            "InterpMode": "RCIM_Linear",
+            "TangentMode": "RCTM_Auto",
+            "TangentWeightMode": "RCTWM_WeightedNone",
+            "Time": 0.15,
+            "Value": 0.0,
+            "ArriveTangent": 0.0,
+            "ArriveTangentWeight": 0.0,
+            "LeaveTangent": 0.0,
+            "LeaveTangentWeight": 0.0
+          },
+          {
+            "InterpMode": "RCIM_Linear",
+            "TangentMode": "RCTM_Auto",
+            "TangentWeightMode": "RCTWM_WeightedNone",
+            "Time": 0.17,
+            "Value": 0.02,
+            "ArriveTangent": 0.0,
+            "ArriveTangentWeight": 0.0,
+            "LeaveTangent": 0.0,
+            "LeaveTangentWeight": 0.0
+          },
+          {
+            "InterpMode": "RCIM_Linear",
+            "TangentMode": "RCTM_Auto",
+            "TangentWeightMode": "RCTWM_WeightedNone",
+            "Time": 0.2,
+            "Value": 0.0,
+            "ArriveTangent": 0.0,
+            "ArriveTangentWeight": 0.0,
+            "LeaveTangent": 0.0,
+            "LeaveTangentWeight": 0.0
+          },
+          {
+            "InterpMode": "RCIM_Linear",
+            "TangentMode": "RCTM_Auto",
+            "TangentWeightMode": "RCTWM_WeightedNone",
+            "Time": 0.4,
+            "Value": -0.00668931,
+            "ArriveTangent": 0.0,
+            "ArriveTangentWeight": 0.0,
+            "LeaveTangent": 0.0,
+            "LeaveTangentWeight": 0.0
+          },
+          {
+            "InterpMode": "RCIM_Linear",
+            "TangentMode": "RCTM_Auto",
+            "TangentWeightMode": "RCTWM_WeightedNone",
+            "Time": 2.0,
+            "Value": 1.0,
+            "ArriveTangent": 0.0,
+            "ArriveTangentWeight": 0.0,
+            "LeaveTangent": 0.0,
+            "LeaveTangentWeight": 0.0
+          }
+        ]
+      }
+    }
+  },
+  {
+    "Type": "InheritableComponentHandler",
+    "Name": "InheritableComponentHandler",
+    "Outer": "BP_AutoDoor_Quarry_C",
+    "Class": "UScriptClass'InheritableComponentHandler'",
+    "Flags": "RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Records": [
+        {
+          "ComponentClass": {
+            "ObjectName": "Class'BoxComponent'",
+            "ObjectPath": "/Script/Engine"
+          },
+          "ComponentTemplate": {
+            "ObjectName": "BoxComponent'BP_AutoDoor_Quarry_C:Box_GEN_VARIABLE'",
+            "ObjectPath": "EM/Content/BluePrints/Item/Door/BP_AutoDoor_Quarry.9"
+          },
+          "ComponentKey": {
+            "OwnerClass": {
+              "ObjectName": "BlueprintGeneratedClass'BP_ConditionalGate_Base_C'",
+              "ObjectPath": "EM/Content/BluePrints/Item/Door/BP_ConditionalGate_Base.9"
+            },
+            "SCSVariableName": "Box",
+            "AssociatedGuid": "2969435F-4400A395-75873D8F-574D1D88"
+          },
+          "CookedComponentInstancingData": {
+            "ChangedPropertyList": [],
+            "bHasValidCookedData": false
+          }
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Outer": "BP_AutoDoor_Quarry_C",
+    "Class": "UScriptClass'SceneComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BP_AutoDoor_Quarry_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "EM/Content/BluePrints/Item/Door/BP_AutoDoor_Quarry.19"
+      },
+      "VariableGuid": "8522D632-4C18A843-36421D9D-8E07D066",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_1",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'StaticMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "StaticMeshComponent'BP_AutoDoor_Quarry_C:Mesh_Door_01_GEN_VARIABLE'",
+        "ObjectPath": "EM/Content/BluePrints/Item/Door/BP_AutoDoor_Quarry.30"
+      },
+      "ParentComponentOrVariableName": "DefaultSceneRoot",
+      "ParentComponentOwnerClassName": "BP_ConditionalGate_Base_C",
+      "VariableGuid": "DC96F02D-46D64E08-9A252093-3D18191B",
+      "InternalVariableName": "Mesh_Door_01"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_11",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'StaticMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "StaticMeshComponent'BP_AutoDoor_Quarry_C:Mesh_MenShuanB_GEN_VARIABLE'",
+        "ObjectPath": "EM/Content/BluePrints/Item/Door/BP_AutoDoor_Quarry.35"
+      },
+      "VariableGuid": "2BF3B12A-4C0A4E63-B54C59B9-9A469A34",
+      "InternalVariableName": "Mesh_MenShuanB"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_2",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'StaticMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "StaticMeshComponent'BP_AutoDoor_Quarry_C:MenShuan_GEN_VARIABLE'",
+        "ObjectPath": "EM/Content/BluePrints/Item/Door/BP_AutoDoor_Quarry.29"
+      },
+      "ParentComponentOrVariableName": "DefaultSceneRoot",
+      "ParentComponentOwnerClassName": "BP_ConditionalGate_Base_C",
+      "ChildNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_AutoDoor_Quarry_C:SimpleConstructionScript_0.SCS_Node_6'",
+          "ObjectPath": "EM/Content/BluePrints/Item/Door/BP_AutoDoor_Quarry.25"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_AutoDoor_Quarry_C:SimpleConstructionScript_0.SCS_Node_11'",
+          "ObjectPath": "EM/Content/BluePrints/Item/Door/BP_AutoDoor_Quarry.22"
+        }
+      ],
+      "VariableGuid": "1611C69D-4370AABF-B829679A-F7E28541",
+      "InternalVariableName": "MenShuan"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_5",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'StaticMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "StaticMeshComponent'BP_AutoDoor_Quarry_C:Mesh_Men02_GEN_VARIABLE'",
+        "ObjectPath": "EM/Content/BluePrints/Item/Door/BP_AutoDoor_Quarry.33"
+      },
+      "ParentComponentOrVariableName": "DefaultSceneRoot",
+      "ParentComponentOwnerClassName": "BP_ConditionalGate_Base_C",
+      "VariableGuid": "F2F5031D-45B8F235-7BFF4685-4F5E9B38",
+      "InternalVariableName": "Mesh_Men02"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_6",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'StaticMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "StaticMeshComponent'BP_AutoDoor_Quarry_C:Mesh_MenShuanA_GEN_VARIABLE'",
+        "ObjectPath": "EM/Content/BluePrints/Item/Door/BP_AutoDoor_Quarry.34"
+      },
+      "VariableGuid": "69472E17-4DEEFA6A-EBE4C598-AB11BB58",
+      "InternalVariableName": "Mesh_MenShuanA"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_8",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'StaticMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "StaticMeshComponent'BP_AutoDoor_Quarry_C:Mesh_Men01_GEN_VARIABLE'",
+        "ObjectPath": "EM/Content/BluePrints/Item/Door/BP_AutoDoor_Quarry.32"
+      },
+      "ParentComponentOrVariableName": "DefaultSceneRoot",
+      "ParentComponentOwnerClassName": "BP_ConditionalGate_Base_C",
+      "VariableGuid": "3575C26D-4380A0B7-74CD27A5-885EFD79",
+      "InternalVariableName": "Mesh_Men01"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_9",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'StaticMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "StaticMeshComponent'BP_AutoDoor_Quarry_C:Mesh_Door_02_GEN_VARIABLE'",
+        "ObjectPath": "EM/Content/BluePrints/Item/Door/BP_AutoDoor_Quarry.31"
+      },
+      "ParentComponentOrVariableName": "DefaultSceneRoot",
+      "ParentComponentOwnerClassName": "BP_ConditionalGate_Base_C",
+      "VariableGuid": "0F870635-41C26B9B-1170ACA4-4F7C659D",
+      "InternalVariableName": "Mesh_Door_02"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Outer": "BP_AutoDoor_Quarry_C",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_AutoDoor_Quarry_C:SimpleConstructionScript_0.SCS_Node_5'",
+          "ObjectPath": "EM/Content/BluePrints/Item/Door/BP_AutoDoor_Quarry.24"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_AutoDoor_Quarry_C:SimpleConstructionScript_0.SCS_Node_8'",
+          "ObjectPath": "EM/Content/BluePrints/Item/Door/BP_AutoDoor_Quarry.26"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_AutoDoor_Quarry_C:SimpleConstructionScript_0.SCS_Node_9'",
+          "ObjectPath": "EM/Content/BluePrints/Item/Door/BP_AutoDoor_Quarry.27"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_AutoDoor_Quarry_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "EM/Content/BluePrints/Item/Door/BP_AutoDoor_Quarry.21"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_AutoDoor_Quarry_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "EM/Content/BluePrints/Item/Door/BP_AutoDoor_Quarry.23"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_AutoDoor_Quarry_C:SimpleConstructionScript_0.SCS_Node_5'",
+          "ObjectPath": "EM/Content/BluePrints/Item/Door/BP_AutoDoor_Quarry.24"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_AutoDoor_Quarry_C:SimpleConstructionScript_0.SCS_Node_8'",
+          "ObjectPath": "EM/Content/BluePrints/Item/Door/BP_AutoDoor_Quarry.26"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_AutoDoor_Quarry_C:SimpleConstructionScript_0.SCS_Node_9'",
+          "ObjectPath": "EM/Content/BluePrints/Item/Door/BP_AutoDoor_Quarry.27"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_AutoDoor_Quarry_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "EM/Content/BluePrints/Item/Door/BP_AutoDoor_Quarry.21"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_AutoDoor_Quarry_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "EM/Content/BluePrints/Item/Door/BP_AutoDoor_Quarry.23"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_AutoDoor_Quarry_C:SimpleConstructionScript_0.SCS_Node_6'",
+          "ObjectPath": "EM/Content/BluePrints/Item/Door/BP_AutoDoor_Quarry.25"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_AutoDoor_Quarry_C:SimpleConstructionScript_0.SCS_Node_11'",
+          "ObjectPath": "EM/Content/BluePrints/Item/Door/BP_AutoDoor_Quarry.22"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BP_AutoDoor_Quarry_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "EM/Content/BluePrints/Item/Door/BP_AutoDoor_Quarry.20"
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "MenShuan_GEN_VARIABLE",
+    "Outer": "BP_AutoDoor_Quarry_C",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "LDMaxDrawDistance": 20000.0,
+      "CachedMaxDrawDistance": 20000.0,
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 110.0
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "Mesh_Door_01_GEN_VARIABLE",
+    "Outer": "BP_AutoDoor_Quarry_C",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'SM_IP_Door_Quarry_ComA01a'",
+        "ObjectPath": "EM/Content/Asset/Scene/common/InterProps/Mesh/SM_IP_Door_Quarry_ComA01a.2"
+      },
+      "LDMaxDrawDistance": 20000.0,
+      "CachedMaxDrawDistance": 20000.0,
+      "BodyInstance": {
+        "ObjectType": "ECC_WorldStatic",
+        "CollisionProfileName": "SceneCollision",
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "WorldDynamic",
+              "Response": "ECR_Overlap"
+            },
+            {
+              "Channel": "TraceEnemyVision",
+              "Response": "ECR_Block"
+            },
+            {
+              "Channel": "TraceScene",
+              "Response": "ECR_Block"
+            },
+            {
+              "Channel": "TraceCreatureHit",
+              "Response": "ECR_Overlap"
+            },
+            {
+              "Channel": "TraceSkillCreatureBlock",
+              "Response": "ECR_Block"
+            },
+            {
+              "Channel": "SkillCreature",
+              "Response": "ECR_Overlap"
+            }
+          ]
+        }
+      },
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 240.0,
+        "Z": 0.0
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": 180.0,
+        "Roll": 0.0
+      },
+      "bCanEverAffectNavigation": false
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "Mesh_Door_02_GEN_VARIABLE",
+    "Outer": "BP_AutoDoor_Quarry_C",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'SM_IP_Door_Quarry_ComA01a'",
+        "ObjectPath": "EM/Content/Asset/Scene/common/InterProps/Mesh/SM_IP_Door_Quarry_ComA01a.2"
+      },
+      "LDMaxDrawDistance": 20000.0,
+      "CachedMaxDrawDistance": 20000.0,
+      "BodyInstance": {
+        "ObjectType": "ECC_WorldStatic",
+        "CollisionProfileName": "SceneCollision",
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "WorldDynamic",
+              "Response": "ECR_Overlap"
+            },
+            {
+              "Channel": "TraceEnemyVision",
+              "Response": "ECR_Block"
+            },
+            {
+              "Channel": "TraceScene",
+              "Response": "ECR_Block"
+            },
+            {
+              "Channel": "TraceCreatureHit",
+              "Response": "ECR_Overlap"
+            },
+            {
+              "Channel": "TraceSkillCreatureBlock",
+              "Response": "ECR_Block"
+            },
+            {
+              "Channel": "SkillCreature",
+              "Response": "ECR_Overlap"
+            }
+          ]
+        }
+      },
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": -240.0,
+        "Z": 0.0
+      },
+      "bCanEverAffectNavigation": false
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "Mesh_Men01_GEN_VARIABLE",
+    "Outer": "BP_AutoDoor_Quarry_C",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'SM_IP_Door_Quarry_ComA01b'",
+        "ObjectPath": "EM/Content/Asset/Scene/common/InterProps/Mesh/SM_IP_Door_Quarry_ComA01b.2"
+      },
+      "OverrideMaterials": [
+        null
+      ],
+      "LDMaxDrawDistance": 20000.0,
+      "CachedMaxDrawDistance": 20000.0,
+      "BodyInstance": {
+        "ObjectType": "ECC_WorldStatic",
+        "CollisionProfileName": "SceneCollision",
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "WorldDynamic",
+              "Response": "ECR_Overlap"
+            },
+            {
+              "Channel": "TraceEnemyVision",
+              "Response": "ECR_Block"
+            },
+            {
+              "Channel": "TraceScene",
+              "Response": "ECR_Block"
+            },
+            {
+              "Channel": "TraceCreatureHit",
+              "Response": "ECR_Overlap"
+            },
+            {
+              "Channel": "TraceSkillCreatureBlock",
+              "Response": "ECR_Block"
+            },
+            {
+              "Channel": "SkillCreature",
+              "Response": "ECR_Overlap"
+            }
+          ]
+        }
+      },
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": -380.0,
+        "Z": 0.0
+      },
+      "bCanEverAffectNavigation": false
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "Mesh_Men02_GEN_VARIABLE",
+    "Outer": "BP_AutoDoor_Quarry_C",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'SM_IP_Door_Quarry_ComA01b'",
+        "ObjectPath": "EM/Content/Asset/Scene/common/InterProps/Mesh/SM_IP_Door_Quarry_ComA01b.2"
+      },
+      "LDMaxDrawDistance": 20000.0,
+      "CachedMaxDrawDistance": 20000.0,
+      "BodyInstance": {
+        "ObjectType": "ECC_WorldStatic",
+        "CollisionProfileName": "SceneCollision",
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "WorldDynamic",
+              "Response": "ECR_Overlap"
+            },
+            {
+              "Channel": "TraceEnemyVision",
+              "Response": "ECR_Block"
+            },
+            {
+              "Channel": "TraceScene",
+              "Response": "ECR_Block"
+            },
+            {
+              "Channel": "TraceCreatureHit",
+              "Response": "ECR_Overlap"
+            },
+            {
+              "Channel": "TraceSkillCreatureBlock",
+              "Response": "ECR_Block"
+            },
+            {
+              "Channel": "SkillCreature",
+              "Response": "ECR_Overlap"
+            }
+          ]
+        }
+      },
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 380.0,
+        "Z": 0.0
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": 180.0,
+        "Roll": 0.0
+      },
+      "bCanEverAffectNavigation": false
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "Mesh_MenShuanA_GEN_VARIABLE",
+    "Outer": "BP_AutoDoor_Quarry_C",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'SM_Qua_Door04'",
+        "ObjectPath": "EM/Content/Asset/Scene/EN002_Haiboliya/Binghucheng/BH_Quarry/Mesh/SM_Qua_Door04.2"
+      },
+      "LDMaxDrawDistance": 20000.0,
+      "CachedMaxDrawDistance": 20000.0,
+      "RelativeLocation": {
+        "X": 36.5,
+        "Y": 0.0,
+        "Z": 397.0
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "Mesh_MenShuanB_GEN_VARIABLE",
+    "Outer": "BP_AutoDoor_Quarry_C",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'SM_Qua_Door04'",
+        "ObjectPath": "EM/Content/Asset/Scene/EN002_Haiboliya/Binghucheng/BH_Quarry/Mesh/SM_Qua_Door04.2"
+      },
+      "LDMaxDrawDistance": 20000.0,
+      "CachedMaxDrawDistance": 20000.0,
+      "RelativeLocation": {
+        "X": -36.5,
+        "Y": 0.0,
+        "Z": 397.0
+      }
+    }
+  },
+  {
+    "Type": "TimelineTemplate",
+    "Name": "时间轴_0_Template",
+    "Outer": "BP_AutoDoor_Quarry_C",
+    "Class": "UScriptClass'TimelineTemplate'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TimelineLength": 2.0,
+      "FloatTracks": [
+        {
+          "CurveFloat": {
+            "ObjectName": "CurveFloat'BP_AutoDoor_Quarry_C:CurveFloat_0'",
+            "ObjectPath": "EM/Content/BluePrints/Item/Door/BP_AutoDoor_Quarry.13"
+          },
+          "PropertyName": "____0_BC_7FE0B4064FFCDACA433057A77F489344",
+          "TrackName": "BC",
+          "bIsExternalCurve": false
+        },
+        {
+          "CurveFloat": {
+            "ObjectName": "CurveFloat'BP_AutoDoor_Quarry_C:CurveFloat_1'",
+            "ObjectPath": "EM/Content/BluePrints/Item/Door/BP_AutoDoor_Quarry.14"
+          },
+          "PropertyName": "____0_FX_7FE0B4064FFCDACA433057A77F489344",
+          "TrackName": "FX",
+          "bIsExternalCurve": false
+        },
+        {
+          "CurveFloat": {
+            "ObjectName": "CurveFloat'BP_AutoDoor_Quarry_C:CurveFloat_2'",
+            "ObjectPath": "EM/Content/BluePrints/Item/Door/BP_AutoDoor_Quarry.15"
+          },
+          "PropertyName": "____0_DE_7FE0B4064FFCDACA433057A77F489344",
+          "TrackName": "DE",
+          "bIsExternalCurve": false
+        },
+        {
+          "CurveFloat": {
+            "ObjectName": "CurveFloat'BP_AutoDoor_Quarry_C:CurveFloat_3'",
+            "ObjectPath": "EM/Content/BluePrints/Item/Door/BP_AutoDoor_Quarry.16"
+          },
+          "PropertyName": "____0_F_7FE0B4064FFCDACA433057A77F489344",
+          "TrackName": "F",
+          "bIsExternalCurve": false
+        },
+        {
+          "CurveFloat": {
+            "ObjectName": "CurveFloat'BP_AutoDoor_Quarry_C:CurveFloat_4'",
+            "ObjectPath": "EM/Content/BluePrints/Item/Door/BP_AutoDoor_Quarry.17"
+          },
+          "PropertyName": "____0_FR_7FE0B4064FFCDACA433057A77F489344",
+          "TrackName": "FR",
+          "bIsExternalCurve": false
+        }
+      ],
+      "TimelineGuid": "7FE0B406-4FFCDACA-433057A7-7F489344",
+      "VariableName": "时间轴_0",
+      "DirectionPropertyName": "____0__Direction_7FE0B4064FFCDACA433057A77F489344",
+      "UpdateFunctionName": "时间轴_0__UpdateFunc",
+      "FinishedFunctionName": "时间轴_0__FinishedFunc"
+    }
+  }
+]

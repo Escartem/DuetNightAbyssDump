@@ -1,0 +1,1357 @@
+[
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_BP_BreakablePlatform_East01",
+    "Outer": "BP_BreakablePlatform_East01_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_Event_DamageEvent",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'DamageStruct'",
+          "ObjectPath": "/Script/EM"
+        }
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "K2Node_Event_Tag",
+        "Flags": "RF_Public",
+        "ElementSize": 12
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "K2Node_Event_SkillId",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "K2Node_Event_InSourceEid",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_EqualEqual_NameName_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "K2Node_Event_NowStateId",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_SwitchInteger_CmpSuccess",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnEnterState",
+    "Outer": "BP_BreakablePlatform_East01_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "SuperStruct": {
+      "ObjectName": "Function'CombatItemBase:OnEnterState'",
+      "ObjectPath": "/Script/EM"
+    },
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "NowStateId",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnBreakCountDownTag",
+    "Outer": "BP_BreakablePlatform_East01_C",
+    "Class": "UScriptClass'Function'",
+    "Super": {
+      "ObjectName": "Function'BP_DongGuoBreakableBase_C:OnBreakCountDownTag'",
+      "ObjectPath": "EM/Content/BluePrints/Item/ExploreGroup/ExploreMechanism/DongGuo/BP_DongGuoBreakableBase.3"
+    },
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "SuperStruct": {
+      "ObjectName": "Function'BP_DongGuoBreakableBase_C:OnBreakCountDownTag'",
+      "ObjectPath": "EM/Content/BluePrints/Item/ExploreGroup/ExploreMechanism/DongGuo/BP_DongGuoBreakableBase.3"
+    },
+    "ChildProperties": [
+      {
+        "Type": "NameProperty",
+        "Name": "Tag",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "SkillId",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "InSourceEid",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "ReceiveBeginPlay",
+    "Outer": "BP_BreakablePlatform_East01_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "SuperStruct": {
+      "ObjectName": "Function'Actor:ReceiveBeginPlay'",
+      "ObjectPath": "/Script/Engine"
+    },
+    "FunctionFlags": "FUNC_Event | FUNC_Protected | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnDamaged",
+    "Outer": "BP_BreakablePlatform_East01_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "SuperStruct": {
+      "ObjectName": "Function'EffectSourceInterface:OnDamaged'",
+      "ObjectPath": "/Script/EM"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "DamageEvent",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "PropertyClass": {
+          "ObjectName": "Class'DamageStruct'",
+          "ObjectPath": "/Script/EM"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BP_BreakablePlatform_East01_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Super": {
+      "ObjectName": "BlueprintGeneratedClass'BP_DongGuoBreakableBase_C'",
+      "ObjectPath": "EM/Content/BluePrints/Item/ExploreGroup/ExploreMechanism/DongGuo/BP_DongGuoBreakableBase.10"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BP_BreakablePlatform_East01_C:SimpleConstructionScript_0'",
+        "ObjectPath": "EM/Content/AssetDesign/Item/East/BP_BreakablePlatform_East01.28"
+      },
+      "InheritableComponentHandler": {
+        "ObjectName": "InheritableComponentHandler'BP_BreakablePlatform_East01_C:InheritableComponentHandler'",
+        "ObjectPath": "EM/Content/AssetDesign/Item/East/BP_BreakablePlatform_East01.13"
+      },
+      "UberGraphFunction": {
+        "ObjectName": "Function'BP_BreakablePlatform_East01_C:ExecuteUbergraph_BP_BreakablePlatform_East01'",
+        "ObjectPath": "EM/Content/AssetDesign/Item/East/BP_BreakablePlatform_East01.0"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "BlueprintGeneratedClass'BP_DongGuoBreakableBase_C'",
+      "ObjectPath": "EM/Content/BluePrints/Item/ExploreGroup/ExploreMechanism/DongGuo/BP_DongGuoBreakableBase.10"
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'BP_BreakablePlatform_East01_C:OnDamaged'",
+        "ObjectPath": "EM/Content/AssetDesign/Item/East/BP_BreakablePlatform_East01.4"
+      },
+      {
+        "ObjectName": "Function'BP_BreakablePlatform_East01_C:ReceiveBeginPlay'",
+        "ObjectPath": "EM/Content/AssetDesign/Item/East/BP_BreakablePlatform_East01.3"
+      },
+      {
+        "ObjectName": "Function'BP_BreakablePlatform_East01_C:OnBreakCountDownTag'",
+        "ObjectPath": "EM/Content/AssetDesign/Item/East/BP_BreakablePlatform_East01.2"
+      },
+      {
+        "ObjectName": "Function'BP_BreakablePlatform_East01_C:OnEnterState'",
+        "ObjectPath": "EM/Content/AssetDesign/Item/East/BP_BreakablePlatform_East01.1"
+      },
+      {
+        "ObjectName": "Function'BP_BreakablePlatform_East01_C:ExecuteUbergraph_BP_BreakablePlatform_East01'",
+        "ObjectPath": "EM/Content/AssetDesign/Item/East/BP_BreakablePlatform_East01.0"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient",
+        "Struct": {
+          "ObjectName": "ScriptStruct'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Sphere12",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'StaticMeshComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Sphere11",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'StaticMeshComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Sphere10",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'StaticMeshComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Sphere9",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'StaticMeshComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Sphere8",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'StaticMeshComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Sphere7",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'StaticMeshComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Sphere6",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'StaticMeshComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Sphere5",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'StaticMeshComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Sphere4",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'StaticMeshComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Sphere",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'StaticMeshComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Capsule",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'CapsuleComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Source",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnTemplate | DisableEditOnInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'CharacterBase'",
+          "ObjectPath": "/Script/EM"
+        }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "Skill Id",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance"
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "State",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_BP_BreakablePlatform_East01": {
+        "ObjectName": "Function'BP_BreakablePlatform_East01_C:ExecuteUbergraph_BP_BreakablePlatform_East01'",
+        "ObjectPath": "EM/Content/AssetDesign/Item/East/BP_BreakablePlatform_East01.0"
+      },
+      "OnEnterState": {
+        "ObjectName": "Function'BP_BreakablePlatform_East01_C:OnEnterState'",
+        "ObjectPath": "EM/Content/AssetDesign/Item/East/BP_BreakablePlatform_East01.1"
+      },
+      "OnBreakCountDownTag": {
+        "ObjectName": "Function'BP_BreakablePlatform_East01_C:OnBreakCountDownTag'",
+        "ObjectPath": "EM/Content/AssetDesign/Item/East/BP_BreakablePlatform_East01.2"
+      },
+      "ReceiveBeginPlay": {
+        "ObjectName": "Function'BP_BreakablePlatform_East01_C:ReceiveBeginPlay'",
+        "ObjectPath": "EM/Content/AssetDesign/Item/East/BP_BreakablePlatform_East01.3"
+      },
+      "OnDamaged": {
+        "ObjectName": "Function'BP_BreakablePlatform_East01_C:OnDamaged'",
+        "ObjectPath": "EM/Content/AssetDesign/Item/East/BP_BreakablePlatform_East01.4"
+      }
+    },
+    "ClassFlags": "CLASS_Config | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BP_BreakablePlatform_East01_C'Default__BP_BreakablePlatform_East01_C'",
+      "ObjectPath": "EM/Content/AssetDesign/Item/East/BP_BreakablePlatform_East01.6"
+    }
+  },
+  {
+    "Type": "BP_BreakablePlatform_East01_C",
+    "Name": "Default__BP_BreakablePlatform_East01_C",
+    "Class": "BlueprintGeneratedClass'EM/Content/AssetDesign/Item/East/BP_BreakablePlatform_East01.BP_BreakablePlatform_East01_C'",
+    "Template": {
+      "ObjectName": "BP_DongGuoBreakableBase_C'Default__BP_DongGuoBreakableBase_C'",
+      "ObjectPath": "EM/Content/BluePrints/Item/ExploreGroup/ExploreMechanism/DongGuo/BP_DongGuoBreakableBase.11"
+    },
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "UberGraphFrame": {},
+      "Mesh": {
+        "ObjectName": "StaticMeshComponent'Default__BP_BreakablePlatform_East01_C:StaticMeshComponent'",
+        "ObjectPath": "EM/Content/AssetDesign/Item/East/BP_BreakablePlatform_East01.39"
+      },
+      "SceneComponent": {
+        "ObjectName": "SceneComponent'Default__BP_BreakablePlatform_East01_C:SceneComponent'",
+        "ObjectPath": "EM/Content/AssetDesign/Item/East/BP_BreakablePlatform_East01.15"
+      },
+      "BattleEvent": {
+        "ObjectName": "BP_BattleEventComponent_C'Default__BP_BreakablePlatform_East01_C:BP_BattleEventComponent'",
+        "ObjectPath": "EM/Content/AssetDesign/Item/East/BP_BreakablePlatform_East01.7"
+      },
+      "JumpWordComponent": {
+        "ObjectName": "BP_JumpWordComponent_C'Default__BP_BreakablePlatform_East01_C:BP_JumpWordComponent'",
+        "ObjectPath": "EM/Content/AssetDesign/Item/East/BP_BreakablePlatform_East01.11"
+      },
+      "CombatStateChangeComponent": {
+        "ObjectName": "BP_CombatStateChangeComponent_C'Default__BP_BreakablePlatform_East01_C:CombatStateChangeComponent'",
+        "ObjectPath": "EM/Content/AssetDesign/Item/East/BP_BreakablePlatform_East01.9"
+      },
+      "CombatClientEffectComponent": {
+        "ObjectName": "BP_CombatClientEffectComponent_C'Default__BP_BreakablePlatform_East01_C:CombatClientEffectComponent'",
+        "ObjectPath": "EM/Content/AssetDesign/Item/East/BP_BreakablePlatform_East01.8"
+      },
+      "FXComponent": {
+        "ObjectName": "BP_FXComponent_C'Default__BP_BreakablePlatform_East01_C:BP_FXComponent'",
+        "ObjectPath": "EM/Content/AssetDesign/Item/East/BP_BreakablePlatform_East01.10"
+      },
+      "RootComponent": {
+        "ObjectName": "SceneComponent'Default__BP_BreakablePlatform_East01_C:SceneComponent'",
+        "ObjectPath": "EM/Content/AssetDesign/Item/East/BP_BreakablePlatform_East01.15"
+      }
+    }
+  },
+  {
+    "Type": "BP_BattleEventComponent_C",
+    "Name": "BP_BattleEventComponent",
+    "Outer": "Default__BP_BreakablePlatform_East01_C",
+    "Class": "BlueprintGeneratedClass'EM/Content/BluePrints/Combat/BP_BattleEventComponent.BP_BattleEventComponent_C'",
+    "Template": {
+      "ObjectName": "BP_BattleEventComponent_C'Default__BP_DongGuoBreakableBase_C:BP_BattleEventComponent'",
+      "ObjectPath": "EM/Content/BluePrints/Item/ExploreGroup/ExploreMechanism/DongGuo/BP_DongGuoBreakableBase.12"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "BP_CombatClientEffectComponent_C",
+    "Name": "CombatClientEffectComponent",
+    "Outer": "Default__BP_BreakablePlatform_East01_C",
+    "Class": "BlueprintGeneratedClass'EM/Content/BluePrints/Item/BP_CombatClientEffectComponent.BP_CombatClientEffectComponent_C'",
+    "Template": {
+      "ObjectName": "BP_CombatClientEffectComponent_C'Default__BP_DongGuoBreakableBase_C:CombatClientEffectComponent'",
+      "ObjectPath": "EM/Content/BluePrints/Item/ExploreGroup/ExploreMechanism/DongGuo/BP_DongGuoBreakableBase.13"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "BP_CombatStateChangeComponent_C",
+    "Name": "CombatStateChangeComponent",
+    "Outer": "Default__BP_BreakablePlatform_East01_C",
+    "Class": "BlueprintGeneratedClass'EM/Content/BluePrints/Item/BP_CombatStateChangeComponent.BP_CombatStateChangeComponent_C'",
+    "Template": {
+      "ObjectName": "BP_CombatStateChangeComponent_C'Default__BP_DongGuoBreakableBase_C:CombatStateChangeComponent'",
+      "ObjectPath": "EM/Content/BluePrints/Item/ExploreGroup/ExploreMechanism/DongGuo/BP_DongGuoBreakableBase.14"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "BP_FXComponent_C",
+    "Name": "BP_FXComponent",
+    "Outer": "Default__BP_BreakablePlatform_East01_C",
+    "Class": "BlueprintGeneratedClass'EM/Content/BluePrints/Char/BP_FXComponent.BP_FXComponent_C'",
+    "Template": {
+      "ObjectName": "BP_FXComponent_C'Default__BP_DongGuoBreakableBase_C:BP_FXComponent'",
+      "ObjectPath": "EM/Content/BluePrints/Item/ExploreGroup/ExploreMechanism/DongGuo/BP_DongGuoBreakableBase.15"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "BP_JumpWordComponent_C",
+    "Name": "BP_JumpWordComponent",
+    "Outer": "Default__BP_BreakablePlatform_East01_C",
+    "Class": "BlueprintGeneratedClass'EM/Content/BluePrints/Char/BP_JumpWordComponent.BP_JumpWordComponent_C'",
+    "Template": {
+      "ObjectName": "BP_JumpWordComponent_C'Default__BP_DongGuoBreakableBase_C:BP_JumpWordComponent'",
+      "ObjectPath": "EM/Content/BluePrints/Item/ExploreGroup/ExploreMechanism/DongGuo/BP_DongGuoBreakableBase.16"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "CapsuleComponent",
+    "Name": "Capsule_GEN_VARIABLE",
+    "Outer": "BP_BreakablePlatform_East01_C",
+    "Class": "UScriptClass'CapsuleComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "CapsuleHalfHeight": 90.0,
+      "CapsuleRadius": 40.0,
+      "AreaClass": {
+        "ObjectName": "Class'NavArea_Obstacle'",
+        "ObjectPath": "/Script/NavigationSystem"
+      },
+      "BodyInstance": {
+        "ObjectType": "ECC_GameTraceChannel8",
+        "CollisionProfileName": "MonsterHitedCapsule",
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "WorldStatic",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "WorldDynamic",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Pawn",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Visibility",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Camera",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "PhysicsBody",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Vehicle",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Destructible",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Item",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "TraceExceptChar",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "TraceOverlap",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "MonsterPawn",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "BreakableItem",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "TraceScene",
+              "Response": "ECR_Overlap"
+            },
+            {
+              "Channel": "TraceCreatureHit",
+              "Response": "ECR_Overlap"
+            },
+            {
+              "Channel": "TraceSkillCreatureBlock",
+              "Response": "ECR_Block"
+            },
+            {
+              "Channel": "TraceThroughWall",
+              "Response": "ECR_Overlap"
+            },
+            {
+              "Channel": "SkillCreature",
+              "Response": "ECR_Overlap"
+            }
+          ]
+        }
+      },
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 90.0
+      }
+    }
+  },
+  {
+    "Type": "InheritableComponentHandler",
+    "Name": "InheritableComponentHandler",
+    "Outer": "BP_BreakablePlatform_East01_C",
+    "Class": "UScriptClass'InheritableComponentHandler'",
+    "Flags": "RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Outer": "BP_BreakablePlatform_East01_C",
+    "Class": "UScriptClass'SceneComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "SceneComponent",
+    "Outer": "Default__BP_BreakablePlatform_East01_C",
+    "Class": "UScriptClass'SceneComponent'",
+    "Template": {
+      "ObjectName": "SceneComponent'Default__BP_DongGuoBreakableBase_C:SceneComponent'",
+      "ObjectPath": "EM/Content/BluePrints/Item/ExploreGroup/ExploreMechanism/DongGuo/BP_DongGuoBreakableBase.19"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BP_BreakablePlatform_East01_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "EM/Content/AssetDesign/Item/East/BP_BreakablePlatform_East01.14"
+      },
+      "VariableGuid": "7F38CAC6-4C57D1E6-824031B3-943CDE97",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_10",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'StaticMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "StaticMeshComponent'BP_BreakablePlatform_East01_C:Sphere6_GEN_VARIABLE'",
+        "ObjectPath": "EM/Content/AssetDesign/Item/East/BP_BreakablePlatform_East01.34"
+      },
+      "ParentComponentOrVariableName": "SceneComponent",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "EA3CC0E1-47EA81E3-AF3B9EB2-951D06C2",
+      "InternalVariableName": "Sphere6"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_11",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'StaticMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "StaticMeshComponent'BP_BreakablePlatform_East01_C:Sphere7_GEN_VARIABLE'",
+        "ObjectPath": "EM/Content/AssetDesign/Item/East/BP_BreakablePlatform_East01.35"
+      },
+      "ParentComponentOrVariableName": "SceneComponent",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "891E0A0C-4E557932-3B59DAA4-26F1B2FC",
+      "InternalVariableName": "Sphere7"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_12",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'StaticMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "StaticMeshComponent'BP_BreakablePlatform_East01_C:Sphere8_GEN_VARIABLE'",
+        "ObjectPath": "EM/Content/AssetDesign/Item/East/BP_BreakablePlatform_East01.36"
+      },
+      "ParentComponentOrVariableName": "SceneComponent",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "8B390134-4B844DB8-6D2A1EB6-6D950928",
+      "InternalVariableName": "Sphere8"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_13",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'StaticMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "StaticMeshComponent'BP_BreakablePlatform_East01_C:Sphere9_GEN_VARIABLE'",
+        "ObjectPath": "EM/Content/AssetDesign/Item/East/BP_BreakablePlatform_East01.37"
+      },
+      "ParentComponentOrVariableName": "SceneComponent",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "1B59ADD9-4140C429-1C0655B0-117137B1",
+      "InternalVariableName": "Sphere9"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_14",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'StaticMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "StaticMeshComponent'BP_BreakablePlatform_East01_C:Sphere10_GEN_VARIABLE'",
+        "ObjectPath": "EM/Content/AssetDesign/Item/East/BP_BreakablePlatform_East01.29"
+      },
+      "ParentComponentOrVariableName": "SceneComponent",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "3480DF64-4F0C3C52-2BB7D8B3-1330131D",
+      "InternalVariableName": "Sphere10"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_15",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'StaticMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "StaticMeshComponent'BP_BreakablePlatform_East01_C:Sphere11_GEN_VARIABLE'",
+        "ObjectPath": "EM/Content/AssetDesign/Item/East/BP_BreakablePlatform_East01.30"
+      },
+      "ParentComponentOrVariableName": "SceneComponent",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "D7E8D0D1-4C7B8072-368500B5-789CBFC0",
+      "InternalVariableName": "Sphere11"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_16",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'StaticMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "StaticMeshComponent'BP_BreakablePlatform_East01_C:Sphere12_GEN_VARIABLE'",
+        "ObjectPath": "EM/Content/AssetDesign/Item/East/BP_BreakablePlatform_East01.31"
+      },
+      "ParentComponentOrVariableName": "SceneComponent",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "369C458A-40E0D53F-1E8A4A81-88B6F5AE",
+      "InternalVariableName": "Sphere12"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_2",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'CapsuleComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "CapsuleComponent'BP_BreakablePlatform_East01_C:Capsule_GEN_VARIABLE'",
+        "ObjectPath": "EM/Content/AssetDesign/Item/East/BP_BreakablePlatform_East01.12"
+      },
+      "ParentComponentOrVariableName": "SceneComponent",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "9961F814-4BF04852-B8ED60B7-3805BDA6",
+      "InternalVariableName": "Capsule"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_4",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'StaticMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "StaticMeshComponent'BP_BreakablePlatform_East01_C:Sphere_GEN_VARIABLE'",
+        "ObjectPath": "EM/Content/AssetDesign/Item/East/BP_BreakablePlatform_East01.38"
+      },
+      "ParentComponentOrVariableName": "SceneComponent",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "FCD8998B-46DBCA51-B5BA56BC-68AAA48D",
+      "InternalVariableName": "Sphere"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_8",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'StaticMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "StaticMeshComponent'BP_BreakablePlatform_East01_C:Sphere4_GEN_VARIABLE'",
+        "ObjectPath": "EM/Content/AssetDesign/Item/East/BP_BreakablePlatform_East01.32"
+      },
+      "ParentComponentOrVariableName": "SceneComponent",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "67DC9159-4F974794-2E80BF86-88029F95",
+      "InternalVariableName": "Sphere4"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_9",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'StaticMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "StaticMeshComponent'BP_BreakablePlatform_East01_C:Sphere5_GEN_VARIABLE'",
+        "ObjectPath": "EM/Content/AssetDesign/Item/East/BP_BreakablePlatform_East01.33"
+      },
+      "ParentComponentOrVariableName": "SceneComponent",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "3560C383-40B1B679-25024F8F-1C665FC1",
+      "InternalVariableName": "Sphere5"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Outer": "BP_BreakablePlatform_East01_C",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_BreakablePlatform_East01_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "EM/Content/AssetDesign/Item/East/BP_BreakablePlatform_East01.24"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_BreakablePlatform_East01_C:SimpleConstructionScript_0.SCS_Node_4'",
+          "ObjectPath": "EM/Content/AssetDesign/Item/East/BP_BreakablePlatform_East01.25"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_BreakablePlatform_East01_C:SimpleConstructionScript_0.SCS_Node_8'",
+          "ObjectPath": "EM/Content/AssetDesign/Item/East/BP_BreakablePlatform_East01.26"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_BreakablePlatform_East01_C:SimpleConstructionScript_0.SCS_Node_9'",
+          "ObjectPath": "EM/Content/AssetDesign/Item/East/BP_BreakablePlatform_East01.27"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_BreakablePlatform_East01_C:SimpleConstructionScript_0.SCS_Node_10'",
+          "ObjectPath": "EM/Content/AssetDesign/Item/East/BP_BreakablePlatform_East01.17"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_BreakablePlatform_East01_C:SimpleConstructionScript_0.SCS_Node_11'",
+          "ObjectPath": "EM/Content/AssetDesign/Item/East/BP_BreakablePlatform_East01.18"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_BreakablePlatform_East01_C:SimpleConstructionScript_0.SCS_Node_12'",
+          "ObjectPath": "EM/Content/AssetDesign/Item/East/BP_BreakablePlatform_East01.19"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_BreakablePlatform_East01_C:SimpleConstructionScript_0.SCS_Node_13'",
+          "ObjectPath": "EM/Content/AssetDesign/Item/East/BP_BreakablePlatform_East01.20"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_BreakablePlatform_East01_C:SimpleConstructionScript_0.SCS_Node_14'",
+          "ObjectPath": "EM/Content/AssetDesign/Item/East/BP_BreakablePlatform_East01.21"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_BreakablePlatform_East01_C:SimpleConstructionScript_0.SCS_Node_15'",
+          "ObjectPath": "EM/Content/AssetDesign/Item/East/BP_BreakablePlatform_East01.22"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_BreakablePlatform_East01_C:SimpleConstructionScript_0.SCS_Node_16'",
+          "ObjectPath": "EM/Content/AssetDesign/Item/East/BP_BreakablePlatform_East01.23"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_BreakablePlatform_East01_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "EM/Content/AssetDesign/Item/East/BP_BreakablePlatform_East01.24"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_BreakablePlatform_East01_C:SimpleConstructionScript_0.SCS_Node_4'",
+          "ObjectPath": "EM/Content/AssetDesign/Item/East/BP_BreakablePlatform_East01.25"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_BreakablePlatform_East01_C:SimpleConstructionScript_0.SCS_Node_8'",
+          "ObjectPath": "EM/Content/AssetDesign/Item/East/BP_BreakablePlatform_East01.26"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_BreakablePlatform_East01_C:SimpleConstructionScript_0.SCS_Node_9'",
+          "ObjectPath": "EM/Content/AssetDesign/Item/East/BP_BreakablePlatform_East01.27"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_BreakablePlatform_East01_C:SimpleConstructionScript_0.SCS_Node_10'",
+          "ObjectPath": "EM/Content/AssetDesign/Item/East/BP_BreakablePlatform_East01.17"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_BreakablePlatform_East01_C:SimpleConstructionScript_0.SCS_Node_11'",
+          "ObjectPath": "EM/Content/AssetDesign/Item/East/BP_BreakablePlatform_East01.18"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_BreakablePlatform_East01_C:SimpleConstructionScript_0.SCS_Node_12'",
+          "ObjectPath": "EM/Content/AssetDesign/Item/East/BP_BreakablePlatform_East01.19"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_BreakablePlatform_East01_C:SimpleConstructionScript_0.SCS_Node_13'",
+          "ObjectPath": "EM/Content/AssetDesign/Item/East/BP_BreakablePlatform_East01.20"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_BreakablePlatform_East01_C:SimpleConstructionScript_0.SCS_Node_14'",
+          "ObjectPath": "EM/Content/AssetDesign/Item/East/BP_BreakablePlatform_East01.21"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_BreakablePlatform_East01_C:SimpleConstructionScript_0.SCS_Node_15'",
+          "ObjectPath": "EM/Content/AssetDesign/Item/East/BP_BreakablePlatform_East01.22"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_BreakablePlatform_East01_C:SimpleConstructionScript_0.SCS_Node_16'",
+          "ObjectPath": "EM/Content/AssetDesign/Item/East/BP_BreakablePlatform_East01.23"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BP_BreakablePlatform_East01_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "EM/Content/AssetDesign/Item/East/BP_BreakablePlatform_East01.16"
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "Sphere10_GEN_VARIABLE",
+    "Outer": "BP_BreakablePlatform_East01_C",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'SM_East_Gear01A'",
+        "ObjectPath": "/Game/Asset/Scene/Layout/Eastern/SM_East_Gear01A"
+      },
+      "OverrideMaterials": [
+        {
+          "ObjectName": "MaterialInstanceConstant'MI_East_Gear01'",
+          "ObjectPath": "EM/Content/Asset/Scene/Misc/East/East01/Materials/MI_East_Gear01.0"
+        }
+      ],
+      "RelativeLocation": {
+        "X": -172.25897,
+        "Y": 156.6561,
+        "Z": -123.06412
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": -183.27158,
+        "Roll": 0.0
+      },
+      "RelativeScale3D": {
+        "X": 2.2,
+        "Y": 2.2,
+        "Z": 2.2
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "Sphere11_GEN_VARIABLE",
+    "Outer": "BP_BreakablePlatform_East01_C",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'SM_East_Gear01A'",
+        "ObjectPath": "/Game/Asset/Scene/Layout/Eastern/SM_East_Gear01A"
+      },
+      "OverrideMaterials": [
+        {
+          "ObjectName": "MaterialInstanceConstant'MI_East_Gear01'",
+          "ObjectPath": "EM/Content/Asset/Scene/Misc/East/East01/Materials/MI_East_Gear01.0"
+        }
+      ],
+      "RelativeLocation": {
+        "X": -117.8754,
+        "Y": -551.22766,
+        "Z": 207.25395
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": -183.27158,
+        "Roll": 0.0
+      },
+      "RelativeScale3D": {
+        "X": 2.0,
+        "Y": 2.0,
+        "Z": 2.0
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "Sphere12_GEN_VARIABLE",
+    "Outer": "BP_BreakablePlatform_East01_C",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'SM_East_Gear01E'",
+        "ObjectPath": "/Game/Asset/Scene/Layout/Eastern/SM_East_Gear01E"
+      },
+      "OverrideMaterials": [
+        {
+          "ObjectName": "MaterialInstanceConstant'MI_East_Gear02'",
+          "ObjectPath": "EM/Content/Asset/Scene/Misc/East/East01/Materials/MI_East_Gear02.0"
+        }
+      ],
+      "RelativeLocation": {
+        "X": -170.76865,
+        "Y": 341.23972,
+        "Z": -68.35646
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": -183.27158,
+        "Roll": 0.0
+      },
+      "RelativeScale3D": {
+        "X": 0.6,
+        "Y": 0.6,
+        "Z": 0.6
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "Sphere4_GEN_VARIABLE",
+    "Outer": "BP_BreakablePlatform_East01_C",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'SM_East_Gear01E'",
+        "ObjectPath": "/Game/Asset/Scene/Layout/Eastern/SM_East_Gear01E"
+      },
+      "OverrideMaterials": [
+        {
+          "ObjectName": "MaterialInstanceConstant'MI_East_Gear02'",
+          "ObjectPath": "EM/Content/Asset/Scene/Misc/East/East01/Materials/MI_East_Gear02.0"
+        }
+      ],
+      "RelativeLocation": {
+        "X": -854.7346,
+        "Y": 50.79488,
+        "Z": 78.77481
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": -183.27158,
+        "Roll": 0.0
+      },
+      "RelativeScale3D": {
+        "X": 0.6,
+        "Y": 0.6,
+        "Z": 0.6
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "Sphere5_GEN_VARIABLE",
+    "Outer": "BP_BreakablePlatform_East01_C",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'SM_East_Gear01E'",
+        "ObjectPath": "/Game/Asset/Scene/Layout/Eastern/SM_East_Gear01E"
+      },
+      "OverrideMaterials": [
+        {
+          "ObjectName": "MaterialInstanceConstant'MI_East_Gear02'",
+          "ObjectPath": "EM/Content/Asset/Scene/Misc/East/East01/Materials/MI_East_Gear02.0"
+        }
+      ],
+      "RelativeLocation": {
+        "X": -436.4132,
+        "Y": -435.53775,
+        "Z": -124.807465
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": -183.27158,
+        "Roll": 0.0
+      },
+      "RelativeScale3D": {
+        "X": 1.1,
+        "Y": 1.1,
+        "Z": 1.1
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "Sphere6_GEN_VARIABLE",
+    "Outer": "BP_BreakablePlatform_East01_C",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'SM_East_Gear01E'",
+        "ObjectPath": "/Game/Asset/Scene/Layout/Eastern/SM_East_Gear01E"
+      },
+      "OverrideMaterials": [
+        {
+          "ObjectName": "MaterialInstanceConstant'MI_East_Gear02'",
+          "ObjectPath": "EM/Content/Asset/Scene/Misc/East/East01/Materials/MI_East_Gear02.0"
+        }
+      ],
+      "RelativeLocation": {
+        "X": -167.38425,
+        "Y": -188.04613,
+        "Z": -101.186584
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": -183.27158,
+        "Roll": 0.0
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "Sphere7_GEN_VARIABLE",
+    "Outer": "BP_BreakablePlatform_East01_C",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'SM_East_Gear01E'",
+        "ObjectPath": "/Game/Asset/Scene/Layout/Eastern/SM_East_Gear01E"
+      },
+      "OverrideMaterials": [
+        {
+          "ObjectName": "MaterialInstanceConstant'MI_East_Gear02'",
+          "ObjectPath": "EM/Content/Asset/Scene/Misc/East/East01/Materials/MI_East_Gear02.0"
+        }
+      ],
+      "RelativeLocation": {
+        "X": 150.42886,
+        "Y": 81.32548,
+        "Z": 15.824646
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": -183.27158,
+        "Roll": 0.0
+      },
+      "RelativeScale3D": {
+        "X": 0.6,
+        "Y": 0.6,
+        "Z": 0.6
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "Sphere8_GEN_VARIABLE",
+    "Outer": "BP_BreakablePlatform_East01_C",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'SM_East_Gear01E'",
+        "ObjectPath": "/Game/Asset/Scene/Layout/Eastern/SM_East_Gear01E"
+      },
+      "OverrideMaterials": [
+        {
+          "ObjectName": "MaterialInstanceConstant'MI_East_Gear02'",
+          "ObjectPath": "EM/Content/Asset/Scene/Misc/East/East01/Materials/MI_East_Gear02.0"
+        }
+      ],
+      "RelativeLocation": {
+        "X": -408.32214,
+        "Y": -519.958,
+        "Z": -367.44736
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": -183.27158,
+        "Roll": 0.0
+      },
+      "RelativeScale3D": {
+        "X": 0.8,
+        "Y": 0.8,
+        "Z": 0.8
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "Sphere9_GEN_VARIABLE",
+    "Outer": "BP_BreakablePlatform_East01_C",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'SM_East_Gear01A'",
+        "ObjectPath": "/Game/Asset/Scene/Layout/Eastern/SM_East_Gear01A"
+      },
+      "OverrideMaterials": [
+        {
+          "ObjectName": "MaterialInstanceConstant'MI_East_Gear01'",
+          "ObjectPath": "EM/Content/Asset/Scene/Misc/East/East01/Materials/MI_East_Gear01.0"
+        }
+      ],
+      "RelativeLocation": {
+        "X": -540.79614,
+        "Y": -53.306335,
+        "Z": -103.53836
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": -183.27158,
+        "Roll": 0.0
+      },
+      "RelativeScale3D": {
+        "X": 2.0,
+        "Y": 2.0,
+        "Z": 2.0
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "Sphere_GEN_VARIABLE",
+    "Outer": "BP_BreakablePlatform_East01_C",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'SM_Com_Bot02'",
+        "ObjectPath": "EM/Content/Asset/Scene/common/Mesh/SM_Com_Bot02.2"
+      },
+      "OverrideMaterials": [
+        {
+          "ObjectName": "MaterialInstanceConstant'MI_Com_Bot02'",
+          "ObjectPath": "EM/Content/Asset/Scene/common/4Materials/MI_Com_Bot02.0"
+        }
+      ],
+      "BodyInstance": {
+        "ObjectType": "ECC_PhysicsBody",
+        "CollisionProfileName": "PhysicsActor",
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "TraceExceptChar",
+              "Response": "ECR_Ignore"
+            }
+          ]
+        },
+        "bSimulatePhysics": true
+      },
+      "RelativeScale3D": {
+        "X": 5.0,
+        "Y": 5.0,
+        "Z": 5.0
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "StaticMeshComponent",
+    "Outer": "Default__BP_BreakablePlatform_East01_C",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Template": {
+      "ObjectName": "StaticMeshComponent'Default__BP_DongGuoBreakableBase_C:StaticMeshComponent'",
+      "ObjectPath": "EM/Content/BluePrints/Item/ExploreGroup/ExploreMechanism/DongGuo/BP_DongGuoBreakableBase.22"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "SceneComponent'Default__BP_BreakablePlatform_East01_C:SceneComponent'",
+        "ObjectPath": "EM/Content/AssetDesign/Item/East/BP_BreakablePlatform_East01.15"
+      }
+    }
+  }
+]

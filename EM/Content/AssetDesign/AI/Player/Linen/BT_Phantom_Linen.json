@@ -1,0 +1,1435 @@
+[
+  {
+    "Type": "BehaviorTree",
+    "Name": "BT_Phantom_Linen",
+    "Class": "UScriptClass'BehaviorTree'",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "RootNode": {
+        "ObjectName": "BTComposite_Selector'BT_Phantom_Linen:BTComposite_Selector_4'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Linen/BT_Phantom_Linen.6"
+      },
+      "BlackboardAsset": {
+        "ObjectName": "BlackboardData'BB_Shadow'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Parent/BB_Shadow.0"
+      }
+    }
+  },
+  {
+    "Type": "BT_CheckSp_C",
+    "Name": "BT_CheckSp_C_0",
+    "Outer": "BT_Phantom_Linen",
+    "Class": "BlueprintGeneratedClass'EM/Content/AssetDesign/AI/Player/Parent/BT_CheckSp.BT_CheckSp_C'",
+    "Template": {
+      "ObjectName": "BT_CheckSp_C'Default__BT_CheckSp_C'",
+      "ObjectPath": "EM/Content/AssetDesign/AI/Player/Parent/BT_CheckSp.3"
+    },
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Target": {
+        "SelectedKeyName": "SelfActor"
+      },
+      "SkillID": 310102,
+      "Multiplier": 7.0,
+      "bShowPropertyDetails": false,
+      "RandomDeviation": 0.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Linen'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Linen/BT_Phantom_Linen.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Phantom_Linen:BTComposite_Selector_6'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Linen/BT_Phantom_Linen.7"
+      }
+    }
+  },
+  {
+    "Type": "BT_SkillMove_C",
+    "Name": "BT_SkillMove_C_0",
+    "Outer": "BT_Phantom_Linen",
+    "Class": "BlueprintGeneratedClass'EM/Content/AssetDesign/AI/Player/Parent/BT_SkillMove.BT_SkillMove_C'",
+    "Template": {
+      "ObjectName": "BT_SkillMove_C'Default__BT_SkillMove_C'",
+      "ObjectPath": "EM/Content/AssetDesign/AI/Player/Parent/BT_SkillMove.4"
+    },
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "MoveActor": {
+        "SelectedKeyName": "SelfActor"
+      },
+      "MoveInfo": {
+        "X": -450.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "MoveTime": 0.2,
+      "Delay": 0.1,
+      "bShowPropertyDetails": false,
+      "NodeName": "SkillMove",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Linen'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Linen/BT_Phantom_Linen.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Phantom_Linen:BTComposite_Selector_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Linen/BT_Phantom_Linen.3"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_0",
+    "Outer": "BT_Phantom_Linen",
+    "Class": "UScriptClass'BTComposite_Selector'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_UseSkill_Player'BT_Phantom_Linen:BTTask_UseSkill_Player_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Linen/BT_Phantom_Linen.47"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_CheckBuff'BT_Phantom_Linen:BTDecorator_CheckBuff_0'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Player/Linen/BT_Phantom_Linen.18"
+            },
+            {
+              "ObjectName": "BTDecorator_CheckSpCost'BT_Phantom_Linen:BTDecorator_CheckSpCost_1'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Player/Linen/BT_Phantom_Linen.27"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_PhantomDodge'BT_Phantom_Linen:BTTask_PhantomDodge_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Linen/BT_Phantom_Linen.40"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_CheckBuff'BT_Phantom_Linen:BTDecorator_CheckBuff_1'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Player/Linen/BT_Phantom_Linen.19"
+            }
+          ],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Linen'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Linen/BT_Phantom_Linen.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Phantom_Linen:BTComposite_Sequence_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Linen/BT_Phantom_Linen.9"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_1",
+    "Outer": "BT_Phantom_Linen",
+    "Class": "UScriptClass'BTComposite_Selector'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_UseSkill_Player'BT_Phantom_Linen:BTTask_UseSkill_Player_1'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Linen/BT_Phantom_Linen.48"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_CheckSpCost'BT_Phantom_Linen:BTDecorator_CheckSpCost_0'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Player/Linen/BT_Phantom_Linen.26"
+            },
+            {
+              "ObjectName": "BTDecorator_CoolDownPlayer'BT_Phantom_Linen:BTDecorator_CoolDownPlayer_1'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Player/Linen/BT_Phantom_Linen.32"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_SimpleParallel'BT_Phantom_Linen:BTComposite_SimpleParallel_3'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Linen/BT_Phantom_Linen.11"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Linen'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Linen/BT_Phantom_Linen.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Phantom_Linen:BTComposite_Selector_12'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Linen/BT_Phantom_Linen.5"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_12",
+    "Outer": "BT_Phantom_Linen",
+    "Class": "UScriptClass'BTComposite_Selector'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_ClearHatredList'BT_Phantom_Linen:BTTask_ClearHatredList_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Linen/BT_Phantom_Linen.38"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_CoolDownPlayer'BT_Phantom_Linen:BTDecorator_CoolDownPlayer_7'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Player/Linen/BT_Phantom_Linen.33"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector'BT_Phantom_Linen:BTComposite_Selector_1'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Linen/BT_Phantom_Linen.4"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_CheckBuff'BT_Phantom_Linen:BTDecorator_CheckBuff_20'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Player/Linen/BT_Phantom_Linen.23"
+            },
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Phantom_Linen:BTDecorator_Blackboard_12'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Player/Linen/BT_Phantom_Linen.13"
+            },
+            {
+              "ObjectName": "BTDecorator_CanHitTarget'BT_Phantom_Linen:BTDecorator_CanHitTarget_0'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Player/Linen/BT_Phantom_Linen.17"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_Phantom_Linen:BTComposite_Sequence_2'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Linen/BT_Phantom_Linen.10"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_CheckBuff'BT_Phantom_Linen:BTDecorator_CheckBuff_19'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Player/Linen/BT_Phantom_Linen.22"
+            },
+            {
+              "ObjectName": "BTDecorator_CheckSpCost'BT_Phantom_Linen:BTDecorator_CheckSpCost_9'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Player/Linen/BT_Phantom_Linen.28"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_RunBehavior'BT_Phantom_Linen:BTTask_RunBehavior_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Linen/BT_Phantom_Linen.41"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_CheckBuff'BT_Phantom_Linen:BTDecorator_CheckBuff_17'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Player/Linen/BT_Phantom_Linen.20"
+            },
+            {
+              "ObjectName": "BTDecorator_CheckWeaponType'BT_Phantom_Linen:BTDecorator_CheckWeaponType_8'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Player/Linen/BT_Phantom_Linen.29"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_RunBehavior'BT_Phantom_Linen:BTTask_RunBehavior_1'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Linen/BT_Phantom_Linen.42"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_CheckBuff'BT_Phantom_Linen:BTDecorator_CheckBuff_18'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Player/Linen/BT_Phantom_Linen.21"
+            },
+            {
+              "ObjectName": "BTDecorator_CheckWeaponType'BT_Phantom_Linen:BTDecorator_CheckWeaponType_9'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Player/Linen/BT_Phantom_Linen.30"
+            }
+          ],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Linen'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Linen/BT_Phantom_Linen.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Phantom_Linen:BTComposite_Selector_6'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Linen/BT_Phantom_Linen.7"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_4",
+    "Outer": "BT_Phantom_Linen",
+    "Class": "UScriptClass'BTComposite_Selector'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector'BT_Phantom_Linen:BTComposite_Selector_6'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Linen/BT_Phantom_Linen.7"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Phantom_Linen:BTDecorator_Blackboard_1'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Player/Linen/BT_Phantom_Linen.12"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait'BT_Phantom_Linen:BTTask_Wait_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Linen/BT_Phantom_Linen.53"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Phantom_Linen:BTDecorator_Blackboard_6'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Player/Linen/BT_Phantom_Linen.15"
+            }
+          ],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Linen'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Linen/BT_Phantom_Linen.0"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_6",
+    "Outer": "BT_Phantom_Linen",
+    "Class": "UScriptClass'BTComposite_Selector'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_Phantom_Linen:BTComposite_Sequence_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Linen/BT_Phantom_Linen.9"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Cooldown'BT_Phantom_Linen:BTDecorator_Cooldown_1'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Player/Linen/BT_Phantom_Linen.31"
+            },
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Phantom_Linen:BTDecorator_Blackboard_7'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Player/Linen/BT_Phantom_Linen.16"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_RunBehavior'BT_Phantom_Linen:BTTask_RunBehavior_4'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Linen/BT_Phantom_Linen.45"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector'BT_Phantom_Linen:BTComposite_Selector_12'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Linen/BT_Phantom_Linen.5"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Phantom_Linen:BTDecorator_Blackboard_26'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Player/Linen/BT_Phantom_Linen.14"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector'BT_Phantom_Linen:BTComposite_Selector_8'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Linen/BT_Phantom_Linen.8"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_CheckBuff'BT_Phantom_Linen:BTDecorator_CheckBuff_80'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Player/Linen/BT_Phantom_Linen.24"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_RunBehavior'BT_Phantom_Linen:BTTask_RunBehavior_2'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Linen/BT_Phantom_Linen.43"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "Services": [
+        {
+          "ObjectName": "BTService_EnemyVision'BT_Phantom_Linen:BTService_EnemyVision_0'",
+          "ObjectPath": "EM/Content/AssetDesign/AI/Player/Linen/BT_Phantom_Linen.36"
+        },
+        {
+          "ObjectName": "BTService_ClearBTTarget_Player'BT_Phantom_Linen:BTService_ClearBTTarget_Player_0'",
+          "ObjectPath": "EM/Content/AssetDesign/AI/Player/Linen/BT_Phantom_Linen.35"
+        },
+        {
+          "ObjectName": "BTService_BBValueDis'BT_Phantom_Linen:BTService_BBValueDis_0'",
+          "ObjectPath": "EM/Content/AssetDesign/AI/Player/Linen/BT_Phantom_Linen.34"
+        },
+        {
+          "ObjectName": "BT_CheckSp_C'BT_Phantom_Linen:BT_CheckSp_C_0'",
+          "ObjectPath": "EM/Content/AssetDesign/AI/Player/Linen/BT_Phantom_Linen.1"
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Linen'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Linen/BT_Phantom_Linen.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Phantom_Linen:BTComposite_Selector_4'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Linen/BT_Phantom_Linen.6"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_8",
+    "Outer": "BT_Phantom_Linen",
+    "Class": "UScriptClass'BTComposite_Selector'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_RunBehavior'BT_Phantom_Linen:BTTask_RunBehavior_3'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Linen/BT_Phantom_Linen.44"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_CanHitTarget'BT_Phantom_Linen:BTTask_CanHitTarget_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Linen/BT_Phantom_Linen.37"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_UseSkill_Player'BT_Phantom_Linen:BTTask_UseSkill_Player_2'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Linen/BT_Phantom_Linen.49"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Linen'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Linen/BT_Phantom_Linen.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Phantom_Linen:BTComposite_Selector_6'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Linen/BT_Phantom_Linen.7"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_0",
+    "Outer": "BT_Phantom_Linen",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector'BT_Phantom_Linen:BTComposite_Selector_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Linen/BT_Phantom_Linen.3"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_LastFilterTargetsByNum_P'BT_Phantom_Linen:BTTask_LastFilterTargetsByNum_P_1'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Linen/BT_Phantom_Linen.39"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Linen'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Linen/BT_Phantom_Linen.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Phantom_Linen:BTComposite_Selector_6'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Linen/BT_Phantom_Linen.7"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_2",
+    "Outer": "BT_Phantom_Linen",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_RunBehavior'BT_Phantom_Linen:BTTask_RunBehavior_5'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Linen/BT_Phantom_Linen.46"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_UseSkill_Player'BT_Phantom_Linen:BTTask_UseSkill_Player_7'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Linen/BT_Phantom_Linen.51"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Linen'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Linen/BT_Phantom_Linen.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Phantom_Linen:BTComposite_Selector_12'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Linen/BT_Phantom_Linen.5"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_SimpleParallel",
+    "Name": "BTComposite_SimpleParallel_3",
+    "Outer": "BT_Phantom_Linen",
+    "Class": "UScriptClass'BTComposite_SimpleParallel'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_UseSkill_Player'BT_Phantom_Linen:BTTask_UseSkill_Player_8'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Linen/BT_Phantom_Linen.52"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_UseSkill_Player'BT_Phantom_Linen:BTTask_UseSkill_Player_3'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Linen/BT_Phantom_Linen.50"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_CheckCombatCondition'BT_Phantom_Linen:BTDecorator_CheckCombatCondition_18'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Player/Linen/BT_Phantom_Linen.25"
+            }
+          ],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Linen'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Linen/BT_Phantom_Linen.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Phantom_Linen:BTComposite_Selector_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Linen/BT_Phantom_Linen.4"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_1",
+    "Outer": "BT_Phantom_Linen",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "CachedDescription": "ActionMode 等于 Active",
+      "BlackboardKey": {
+        "SelectedKeyName": "ActionMode"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::Self",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Linen'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Linen/BT_Phantom_Linen.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Phantom_Linen:BTComposite_Selector_4'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Linen/BT_Phantom_Linen.6"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_12",
+    "Outer": "BT_Phantom_Linen",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "CachedDescription": "Target is 已设置",
+      "BlackboardKey": {
+        "SelectedKeyName": "Target"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::Self",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Linen'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Linen/BT_Phantom_Linen.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Phantom_Linen:BTComposite_Selector_12'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Linen/BT_Phantom_Linen.5"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_26",
+    "Outer": "BT_Phantom_Linen",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "CachedDescription": "Target is 已设置",
+      "BlackboardKey": {
+        "SelectedKeyName": "Target"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Linen'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Linen/BT_Phantom_Linen.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Phantom_Linen:BTComposite_Selector_6'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Linen/BT_Phantom_Linen.7"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_6",
+    "Outer": "BT_Phantom_Linen",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "IntValue": 1,
+      "CachedDescription": "ActionMode 等于 Hitted",
+      "BlackboardKey": {
+        "SelectedKeyName": "ActionMode"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::Self",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Linen'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Linen/BT_Phantom_Linen.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Phantom_Linen:BTComposite_Selector_4'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Linen/BT_Phantom_Linen.6"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_7",
+    "Outer": "BT_Phantom_Linen",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "CachedDescription": "CanDodge 不等于 0",
+      "OperationType": 1,
+      "BlackboardKey": {
+        "SelectedKeyName": "CanDodge"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::LowerPriority",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Linen'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Linen/BT_Phantom_Linen.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Phantom_Linen:BTComposite_Selector_6'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Linen/BT_Phantom_Linen.7"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_CanHitTarget",
+    "Name": "BTDecorator_CanHitTarget_0",
+    "Outer": "BT_Phantom_Linen",
+    "Class": "UScriptClass'BTDecorator_CanHitTarget'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "CacheCalculateResult": true,
+      "CacheTime": 0.5,
+      "FlowAbortMode": "EBTFlowAbortMode::Self",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Linen'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Linen/BT_Phantom_Linen.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Phantom_Linen:BTComposite_Selector_12'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Linen/BT_Phantom_Linen.5"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_CheckBuff",
+    "Name": "BTDecorator_CheckBuff_0",
+    "Outer": "BT_Phantom_Linen",
+    "Class": "UScriptClass'BTDecorator_CheckBuff'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "BuffId": 310122,
+      "NodeName": "InSkill02",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Linen'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Linen/BT_Phantom_Linen.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Phantom_Linen:BTComposite_Selector_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Linen/BT_Phantom_Linen.3"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_CheckBuff",
+    "Name": "BTDecorator_CheckBuff_1",
+    "Outer": "BT_Phantom_Linen",
+    "Class": "UScriptClass'BTDecorator_CheckBuff'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "HasBuff": false,
+      "BuffId": 310122,
+      "NodeName": "NotInSkill02",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Linen'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Linen/BT_Phantom_Linen.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Phantom_Linen:BTComposite_Selector_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Linen/BT_Phantom_Linen.3"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_CheckBuff",
+    "Name": "BTDecorator_CheckBuff_17",
+    "Outer": "BT_Phantom_Linen",
+    "Class": "UScriptClass'BTDecorator_CheckBuff'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "HasBuff": false,
+      "BuffId": 310122,
+      "NodeName": "NotInSkill02",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Linen'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Linen/BT_Phantom_Linen.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Phantom_Linen:BTComposite_Selector_12'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Linen/BT_Phantom_Linen.5"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_CheckBuff",
+    "Name": "BTDecorator_CheckBuff_18",
+    "Outer": "BT_Phantom_Linen",
+    "Class": "UScriptClass'BTDecorator_CheckBuff'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "HasBuff": false,
+      "BuffId": 310122,
+      "NodeName": "NotInSkill02",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Linen'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Linen/BT_Phantom_Linen.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Phantom_Linen:BTComposite_Selector_12'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Linen/BT_Phantom_Linen.5"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_CheckBuff",
+    "Name": "BTDecorator_CheckBuff_19",
+    "Outer": "BT_Phantom_Linen",
+    "Class": "UScriptClass'BTDecorator_CheckBuff'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "HasBuff": false,
+      "BuffId": 310122,
+      "NodeName": "NotInSkill02",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Linen'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Linen/BT_Phantom_Linen.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Phantom_Linen:BTComposite_Selector_12'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Linen/BT_Phantom_Linen.5"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_CheckBuff",
+    "Name": "BTDecorator_CheckBuff_20",
+    "Outer": "BT_Phantom_Linen",
+    "Class": "UScriptClass'BTDecorator_CheckBuff'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "BuffId": 310122,
+      "FlowAbortMode": "EBTFlowAbortMode::Self",
+      "NodeName": "InSkill02",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Linen'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Linen/BT_Phantom_Linen.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Phantom_Linen:BTComposite_Selector_12'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Linen/BT_Phantom_Linen.5"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_CheckBuff",
+    "Name": "BTDecorator_CheckBuff_80",
+    "Outer": "BT_Phantom_Linen",
+    "Class": "UScriptClass'BTDecorator_CheckBuff'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "BuffId": 310122,
+      "NodeName": "InSkill02",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Linen'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Linen/BT_Phantom_Linen.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Phantom_Linen:BTComposite_Selector_6'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Linen/BT_Phantom_Linen.7"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_CheckCombatCondition",
+    "Name": "BTDecorator_CheckCombatCondition_18",
+    "Outer": "BT_Phantom_Linen",
+    "Class": "UScriptClass'BTDecorator_CheckCombatCondition'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "CombatConditionId": 900,
+      "CacheCalculateResult": true,
+      "CacheTime": 1.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Linen'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Linen/BT_Phantom_Linen.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_SimpleParallel'BT_Phantom_Linen:BTComposite_SimpleParallel_3'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Linen/BT_Phantom_Linen.11"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_CheckSpCost",
+    "Name": "BTDecorator_CheckSpCost_0",
+    "Outer": "BT_Phantom_Linen",
+    "Class": "UScriptClass'BTDecorator_CheckSpCost'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SkillId": 310101,
+      "CostMultiplier": 3.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Linen'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Linen/BT_Phantom_Linen.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Phantom_Linen:BTComposite_Selector_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Linen/BT_Phantom_Linen.4"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_CheckSpCost",
+    "Name": "BTDecorator_CheckSpCost_1",
+    "Outer": "BT_Phantom_Linen",
+    "Class": "UScriptClass'BTDecorator_CheckSpCost'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SkillId": 310101,
+      "CostMultiplier": 3.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Linen'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Linen/BT_Phantom_Linen.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Phantom_Linen:BTComposite_Selector_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Linen/BT_Phantom_Linen.3"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_CheckSpCost",
+    "Name": "BTDecorator_CheckSpCost_9",
+    "Outer": "BT_Phantom_Linen",
+    "Class": "UScriptClass'BTDecorator_CheckSpCost'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SkillId": 310102,
+      "CostMultiplier": 7.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Linen'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Linen/BT_Phantom_Linen.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Phantom_Linen:BTComposite_Selector_12'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Linen/BT_Phantom_Linen.5"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_CheckWeaponType",
+    "Name": "BTDecorator_CheckWeaponType_8",
+    "Outer": "BT_Phantom_Linen",
+    "Class": "UScriptClass'BTDecorator_CheckWeaponType'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "WeaponType": "Melee",
+      "NodeName": "MeleeWeapon",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Linen'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Linen/BT_Phantom_Linen.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Phantom_Linen:BTComposite_Selector_12'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Linen/BT_Phantom_Linen.5"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_CheckWeaponType",
+    "Name": "BTDecorator_CheckWeaponType_9",
+    "Outer": "BT_Phantom_Linen",
+    "Class": "UScriptClass'BTDecorator_CheckWeaponType'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "WeaponType": "Ranged",
+      "NodeName": "RangedWeapon",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Linen'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Linen/BT_Phantom_Linen.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Phantom_Linen:BTComposite_Selector_12'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Linen/BT_Phantom_Linen.5"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Cooldown",
+    "Name": "BTDecorator_Cooldown_1",
+    "Outer": "BT_Phantom_Linen",
+    "Class": "UScriptClass'BTDecorator_Cooldown'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Linen'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Linen/BT_Phantom_Linen.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Phantom_Linen:BTComposite_Selector_6'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Linen/BT_Phantom_Linen.7"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_CoolDownPlayer",
+    "Name": "BTDecorator_CoolDownPlayer_1",
+    "Outer": "BT_Phantom_Linen",
+    "Class": "UScriptClass'BTDecorator_CoolDownPlayer'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "bModifiedBySkillSustain": true,
+      "CoolDownTime": 8.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Linen'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Linen/BT_Phantom_Linen.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Phantom_Linen:BTComposite_Selector_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Linen/BT_Phantom_Linen.4"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_CoolDownPlayer",
+    "Name": "BTDecorator_CoolDownPlayer_7",
+    "Outer": "BT_Phantom_Linen",
+    "Class": "UScriptClass'BTDecorator_CoolDownPlayer'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "CoolDownTime": 10.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Linen'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Linen/BT_Phantom_Linen.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Phantom_Linen:BTComposite_Selector_12'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Linen/BT_Phantom_Linen.5"
+      }
+    }
+  },
+  {
+    "Type": "BTService_BBValueDis",
+    "Name": "BTService_BBValueDis_0",
+    "Outer": "BT_Phantom_Linen",
+    "Class": "UScriptClass'BTService_BBValueDis'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "BBName": "Target",
+      "Interval": 0.1,
+      "RandomDeviation": 0.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Linen'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Linen/BT_Phantom_Linen.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Phantom_Linen:BTComposite_Selector_6'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Linen/BT_Phantom_Linen.7"
+      }
+    }
+  },
+  {
+    "Type": "BTService_ClearBTTarget_Player",
+    "Name": "BTService_ClearBTTarget_Player_0",
+    "Outer": "BT_Phantom_Linen",
+    "Class": "UScriptClass'BTService_ClearBTTarget_Player'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Interval": 0.1,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Linen'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Linen/BT_Phantom_Linen.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Phantom_Linen:BTComposite_Selector_6'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Linen/BT_Phantom_Linen.7"
+      }
+    }
+  },
+  {
+    "Type": "BTService_EnemyVision",
+    "Name": "BTService_EnemyVision_0",
+    "Outer": "BT_Phantom_Linen",
+    "Class": "UScriptClass'BTService_EnemyVision'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "FVisionDistance": 2000.0,
+      "FVisionAngle": 180.0,
+      "Interval": 0.2,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Linen'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Linen/BT_Phantom_Linen.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Phantom_Linen:BTComposite_Selector_6'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Linen/BT_Phantom_Linen.7"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_CanHitTarget",
+    "Name": "BTTask_CanHitTarget_0",
+    "Outer": "BT_Phantom_Linen",
+    "Class": "UScriptClass'BTTask_CanHitTarget'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Linen'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Linen/BT_Phantom_Linen.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Phantom_Linen:BTComposite_Selector_8'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Linen/BT_Phantom_Linen.8"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_ClearHatredList",
+    "Name": "BTTask_ClearHatredList_0",
+    "Outer": "BT_Phantom_Linen",
+    "Class": "UScriptClass'BTTask_ClearHatredList'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Linen'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Linen/BT_Phantom_Linen.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Phantom_Linen:BTComposite_Selector_12'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Linen/BT_Phantom_Linen.5"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_LastFilterTargetsByNum_P",
+    "Name": "BTTask_LastFilterTargetsByNum_P_1",
+    "Outer": "BT_Phantom_Linen",
+    "Class": "UScriptClass'BTTask_LastFilterTargetsByNum_P'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Radius": 600.0,
+      "TypeOfFilterList": "ETypeOfFilterList::AfterFilter",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Linen'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Linen/BT_Phantom_Linen.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Phantom_Linen:BTComposite_Sequence_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Linen/BT_Phantom_Linen.9"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_PhantomDodge",
+    "Name": "BTTask_PhantomDodge_0",
+    "Outer": "BT_Phantom_Linen",
+    "Class": "UScriptClass'BTTask_PhantomDodge'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "DodgeBack": true,
+      "ContinueTime": 1.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Linen'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Linen/BT_Phantom_Linen.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Phantom_Linen:BTComposite_Selector_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Linen/BT_Phantom_Linen.3"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_RunBehavior",
+    "Name": "BTTask_RunBehavior_0",
+    "Outer": "BT_Phantom_Linen",
+    "Class": "UScriptClass'BTTask_RunBehavior'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "BehaviorAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Melee_Common'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Parent/BT_Phantom_Melee_Common.0"
+      },
+      "NodeName": "MeleeAttack",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Linen'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Linen/BT_Phantom_Linen.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Phantom_Linen:BTComposite_Selector_12'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Linen/BT_Phantom_Linen.5"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_RunBehavior",
+    "Name": "BTTask_RunBehavior_1",
+    "Outer": "BT_Phantom_Linen",
+    "Class": "UScriptClass'BTTask_RunBehavior'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "BehaviorAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Ranged_Common'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Parent/BT_Phantom_Ranged_Common.0"
+      },
+      "NodeName": "RangedAttack",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Linen'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Linen/BT_Phantom_Linen.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Phantom_Linen:BTComposite_Selector_12'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Linen/BT_Phantom_Linen.5"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_RunBehavior",
+    "Name": "BTTask_RunBehavior_2",
+    "Outer": "BT_Phantom_Linen",
+    "Class": "UScriptClass'BTTask_RunBehavior'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "BehaviorAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_DetectEnemy'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Parent/BT_Phantom_DetectEnemy.0"
+      },
+      "NodeName": "DetectEnemy",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Linen'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Linen/BT_Phantom_Linen.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Phantom_Linen:BTComposite_Selector_6'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Linen/BT_Phantom_Linen.7"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_RunBehavior",
+    "Name": "BTTask_RunBehavior_3",
+    "Outer": "BT_Phantom_Linen",
+    "Class": "UScriptClass'BTTask_RunBehavior'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "BehaviorAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_NoEnemySkill2Off'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Parent/BT_Phantom_NoEnemySkill2Off.0"
+      },
+      "NodeName": "NoEnemySkillEnd",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Linen'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Linen/BT_Phantom_Linen.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Phantom_Linen:BTComposite_Selector_8'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Linen/BT_Phantom_Linen.8"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_RunBehavior",
+    "Name": "BTTask_RunBehavior_4",
+    "Outer": "BT_Phantom_Linen",
+    "Class": "UScriptClass'BTTask_RunBehavior'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "BehaviorAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_MoveToOwner'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Parent/BT_Phantom_MoveToOwner.0"
+      },
+      "NodeName": "MoveToOwner",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Linen'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Linen/BT_Phantom_Linen.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Phantom_Linen:BTComposite_Selector_6'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Linen/BT_Phantom_Linen.7"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_RunBehavior",
+    "Name": "BTTask_RunBehavior_5",
+    "Outer": "BT_Phantom_Linen",
+    "Class": "UScriptClass'BTTask_RunBehavior'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "BehaviorAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_RangedEQS'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Parent/BT_Phantom_RangedEQS.0"
+      },
+      "bIgnoreRestartSelf": true,
+      "NodeName": "MoveToEqs",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Linen'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Linen/BT_Phantom_Linen.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Phantom_Linen:BTComposite_Sequence_2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Linen/BT_Phantom_Linen.10"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_UseSkill_Player",
+    "Name": "BTTask_UseSkill_Player_0",
+    "Outer": "BT_Phantom_Linen",
+    "Class": "UScriptClass'BTTask_UseSkill_Player'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SkillType": "EUseSkill_SkillType::Skill1",
+      "Services": [
+        {
+          "ObjectName": "BT_SkillMove_C'BT_Phantom_Linen:BT_SkillMove_C_0'",
+          "ObjectPath": "EM/Content/AssetDesign/AI/Player/Linen/BT_Phantom_Linen.2"
+        }
+      ],
+      "NodeName": "Skill1",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Linen'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Linen/BT_Phantom_Linen.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Phantom_Linen:BTComposite_Selector_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Linen/BT_Phantom_Linen.3"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_UseSkill_Player",
+    "Name": "BTTask_UseSkill_Player_1",
+    "Outer": "BT_Phantom_Linen",
+    "Class": "UScriptClass'BTTask_UseSkill_Player'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SkillType": "EUseSkill_SkillType::Skill1",
+      "NodeName": "Skill1",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Linen'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Linen/BT_Phantom_Linen.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Phantom_Linen:BTComposite_Selector_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Linen/BT_Phantom_Linen.4"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_UseSkill_Player",
+    "Name": "BTTask_UseSkill_Player_2",
+    "Outer": "BT_Phantom_Linen",
+    "Class": "UScriptClass'BTTask_UseSkill_Player'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SkillType": "EUseSkill_SkillType::Skill2",
+      "bUseControllerRotationYaw": false,
+      "AutoInput": false,
+      "NodeName": "Skill02_End",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Linen'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Linen/BT_Phantom_Linen.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Phantom_Linen:BTComposite_Selector_8'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Linen/BT_Phantom_Linen.8"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_UseSkill_Player",
+    "Name": "BTTask_UseSkill_Player_3",
+    "Outer": "BT_Phantom_Linen",
+    "Class": "UScriptClass'BTTask_UseSkill_Player'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SkillType": "EUseSkill_SkillType::Skill2",
+      "AutoInput": false,
+      "bIgnoreRestartSelf": true,
+      "NodeName": "Skill02",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Linen'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Linen/BT_Phantom_Linen.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_SimpleParallel'BT_Phantom_Linen:BTComposite_SimpleParallel_3'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Linen/BT_Phantom_Linen.11"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_UseSkill_Player",
+    "Name": "BTTask_UseSkill_Player_7",
+    "Outer": "BT_Phantom_Linen",
+    "Class": "UScriptClass'BTTask_UseSkill_Player'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SkillType": "EUseSkill_SkillType::Skill2",
+      "AutoInput": false,
+      "NodeName": "Skill02",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Linen'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Linen/BT_Phantom_Linen.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Phantom_Linen:BTComposite_Sequence_2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Linen/BT_Phantom_Linen.10"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_UseSkill_Player",
+    "Name": "BTTask_UseSkill_Player_8",
+    "Outer": "BT_Phantom_Linen",
+    "Class": "UScriptClass'BTTask_UseSkill_Player'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SkillType": "EUseSkill_SkillType::Shooting",
+      "NodeName": "Shooting",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Linen'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Linen/BT_Phantom_Linen.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_SimpleParallel'BT_Phantom_Linen:BTComposite_SimpleParallel_3'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Linen/BT_Phantom_Linen.11"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_0",
+    "Outer": "BT_Phantom_Linen",
+    "Class": "UScriptClass'BTTask_Wait'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "WaitTime": 3.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Linen'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Linen/BT_Phantom_Linen.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Phantom_Linen:BTComposite_Selector_4'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Linen/BT_Phantom_Linen.6"
+      }
+    }
+  }
+]

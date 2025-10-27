@@ -1,0 +1,790 @@
+[
+  {
+    "Type": "BehaviorTree",
+    "Name": "BT_6Youji_Tm",
+    "Class": "UScriptClass'BehaviorTree'",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "RootNode": {
+        "ObjectName": "BTComposite_Selector'BT_6Youji_Tm:BTComposite_Selector_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Youji/Team/BT_6Youji_Tm.1"
+      },
+      "BlackboardAsset": {
+        "ObjectName": "BlackboardData'BB_Mon_Parent_Ranged'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Parent/BB_Mon_Parent_Ranged.0"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_0",
+    "Outer": "BT_6Youji_Tm",
+    "Class": "UScriptClass'BTComposite_Selector'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_GetEliteTeamSeq'BT_6Youji_Tm:BTTask_GetEliteTeamSeq_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Youji/Team/BT_6Youji_Tm.18"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_6Youji_Tm:BTDecorator_Blackboard_8'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Youji/Team/BT_6Youji_Tm.15"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_6Youji_Tm:BTComposite_Sequence_1'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Youji/Team/BT_6Youji_Tm.6"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_6Youji_Tm:BTDecorator_Blackboard_5'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Youji/Team/BT_6Youji_Tm.12"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_QuitEliteTeam'BT_6Youji_Tm:BTTask_QuitEliteTeam_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Youji/Team/BT_6Youji_Tm.24"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_6Youji_Tm:BTDecorator_Blackboard_1'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Youji/Team/BT_6Youji_Tm.10"
+            }
+          ],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_6Youji_Tm'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Youji/Team/BT_6Youji_Tm.0"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_1",
+    "Outer": "BT_6Youji_Tm",
+    "Class": "UScriptClass'BTComposite_Selector'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_NewMoveTo'BT_6Youji_Tm:BTTask_NewMoveTo_1'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Youji/Team/BT_6Youji_Tm.20"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_IsAtLocation'BT_6Youji_Tm:BTDecorator_IsAtLocation_1'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Youji/Team/BT_6Youji_Tm.16"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_NewMoveTo'BT_6Youji_Tm:BTTask_NewMoveTo_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Youji/Team/BT_6Youji_Tm.19"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_6Youji_Tm'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Youji/Team/BT_6Youji_Tm.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_6Youji_Tm:BTComposite_Sequence_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Youji/Team/BT_6Youji_Tm.6"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_3",
+    "Outer": "BT_6Youji_Tm",
+    "Class": "UScriptClass'BTComposite_Selector'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_SimpleParallel'BT_6Youji_Tm:BTComposite_SimpleParallel_2'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Youji/Team/BT_6Youji_Tm.9"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_IsAtLocation'BT_6Youji_Tm:BTDecorator_IsAtLocation_2'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Youji/Team/BT_6Youji_Tm.17"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_NewMoveTo'BT_6Youji_Tm:BTTask_NewMoveTo_7'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Youji/Team/BT_6Youji_Tm.23"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "NodeName": "移动",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_6Youji_Tm'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Youji/Team/BT_6Youji_Tm.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_6Youji_Tm:BTComposite_Selector_4'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Youji/Team/BT_6Youji_Tm.4"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_4",
+    "Outer": "BT_6Youji_Tm",
+    "Class": "UScriptClass'BTComposite_Selector'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_6Youji_Tm:BTComposite_Sequence_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Youji/Team/BT_6Youji_Tm.5"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_6Youji_Tm:BTDecorator_Blackboard_6'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Youji/Team/BT_6Youji_Tm.13"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector'BT_6Youji_Tm:BTComposite_Selector_3'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Youji/Team/BT_6Youji_Tm.3"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_6Youji_Tm:BTDecorator_Blackboard_3'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Youji/Team/BT_6Youji_Tm.11"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_6Youji_Tm:BTComposite_Sequence_3'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Youji/Team/BT_6Youji_Tm.7"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_6Youji_Tm:BTDecorator_Blackboard_7'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Youji/Team/BT_6Youji_Tm.14"
+            }
+          ],
+          "DecoratorOps": []
+        }
+      ],
+      "NodeName": "SignalType",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_6Youji_Tm'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Youji/Team/BT_6Youji_Tm.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_6Youji_Tm:BTComposite_Sequence_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Youji/Team/BT_6Youji_Tm.6"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_0",
+    "Outer": "BT_6Youji_Tm",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_RunBehavior'BT_6Youji_Tm:BTTask_RunBehavior_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Youji/Team/BT_6Youji_Tm.25"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "NodeName": "原地待机",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_6Youji_Tm'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Youji/Team/BT_6Youji_Tm.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_6Youji_Tm:BTComposite_Selector_4'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Youji/Team/BT_6Youji_Tm.4"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_1",
+    "Outer": "BT_6Youji_Tm",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector'BT_6Youji_Tm:BTComposite_Selector_1'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Youji/Team/BT_6Youji_Tm.2"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector'BT_6Youji_Tm:BTComposite_Selector_4'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Youji/Team/BT_6Youji_Tm.4"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_6Youji_Tm'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Youji/Team/BT_6Youji_Tm.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_6Youji_Tm:BTComposite_Selector_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Youji/Team/BT_6Youji_Tm.1"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_3",
+    "Outer": "BT_6Youji_Tm",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_SimpleParallel'BT_6Youji_Tm:BTComposite_SimpleParallel_1'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Youji/Team/BT_6Youji_Tm.8"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "NodeName": "旋转队列",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_6Youji_Tm'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Youji/Team/BT_6Youji_Tm.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_6Youji_Tm:BTComposite_Selector_4'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Youji/Team/BT_6Youji_Tm.4"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_SimpleParallel",
+    "Name": "BTComposite_SimpleParallel_1",
+    "Outer": "BT_6Youji_Tm",
+    "Class": "UScriptClass'BTComposite_SimpleParallel'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "FinishMode": "EBTParallelMode::WaitForBackground",
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_NewMoveTo'BT_6Youji_Tm:BTTask_NewMoveTo_3'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Youji/Team/BT_6Youji_Tm.22"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_RunBehavior'BT_6Youji_Tm:BTTask_RunBehavior_2'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Youji/Team/BT_6Youji_Tm.27"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_6Youji_Tm'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Youji/Team/BT_6Youji_Tm.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_6Youji_Tm:BTComposite_Sequence_3'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Youji/Team/BT_6Youji_Tm.7"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_SimpleParallel",
+    "Name": "BTComposite_SimpleParallel_2",
+    "Outer": "BT_6Youji_Tm",
+    "Class": "UScriptClass'BTComposite_SimpleParallel'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "FinishMode": "EBTParallelMode::WaitForBackground",
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_NewMoveTo'BT_6Youji_Tm:BTTask_NewMoveTo_2'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Youji/Team/BT_6Youji_Tm.21"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_RunBehavior'BT_6Youji_Tm:BTTask_RunBehavior_1'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Youji/Team/BT_6Youji_Tm.26"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_6Youji_Tm'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Youji/Team/BT_6Youji_Tm.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_6Youji_Tm:BTComposite_Selector_3'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Youji/Team/BT_6Youji_Tm.3"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_1",
+    "Outer": "BT_6Youji_Tm",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "CachedDescription": "EliteTeamSignal 等于 无信号",
+      "NotifyObserver": "EBTBlackboardRestart::ValueChange",
+      "BlackboardKey": {
+        "SelectedKeyName": "EliteTeamSignal"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_6Youji_Tm'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Youji/Team/BT_6Youji_Tm.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_6Youji_Tm:BTComposite_Selector_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Youji/Team/BT_6Youji_Tm.1"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_3",
+    "Outer": "BT_6Youji_Tm",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "IntValue": 2,
+      "CachedDescription": "EliteTeamSignal 等于 移动",
+      "NotifyObserver": "EBTBlackboardRestart::ValueChange",
+      "BlackboardKey": {
+        "SelectedKeyName": "EliteTeamSignal"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_6Youji_Tm'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Youji/Team/BT_6Youji_Tm.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_6Youji_Tm:BTComposite_Selector_4'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Youji/Team/BT_6Youji_Tm.4"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_5",
+    "Outer": "BT_6Youji_Tm",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "CachedDescription": "invalid",
+      "OperationType": 2,
+      "NotifyObserver": "EBTBlackboardRestart::ValueChange",
+      "BlackboardKey": {
+        "SelectedKeyName": "EliteTeamId"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_6Youji_Tm'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Youji/Team/BT_6Youji_Tm.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_6Youji_Tm:BTComposite_Selector_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Youji/Team/BT_6Youji_Tm.1"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_6",
+    "Outer": "BT_6Youji_Tm",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "IntValue": 1,
+      "CachedDescription": "EliteTeamSignal 等于 等待",
+      "NotifyObserver": "EBTBlackboardRestart::ValueChange",
+      "BlackboardKey": {
+        "SelectedKeyName": "EliteTeamSignal"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::Self",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_6Youji_Tm'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Youji/Team/BT_6Youji_Tm.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_6Youji_Tm:BTComposite_Selector_4'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Youji/Team/BT_6Youji_Tm.4"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_7",
+    "Outer": "BT_6Youji_Tm",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "IntValue": 3,
+      "CachedDescription": "EliteTeamSignal 等于 调整",
+      "NotifyObserver": "EBTBlackboardRestart::ValueChange",
+      "BlackboardKey": {
+        "SelectedKeyName": "EliteTeamSignal"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_6Youji_Tm'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Youji/Team/BT_6Youji_Tm.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_6Youji_Tm:BTComposite_Selector_4'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Youji/Team/BT_6Youji_Tm.4"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_8",
+    "Outer": "BT_6Youji_Tm",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "CachedDescription": "invalid",
+      "OperationType": 4,
+      "BlackboardKey": {
+        "SelectedKeyName": "EliteTeamId"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_6Youji_Tm'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Youji/Team/BT_6Youji_Tm.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_6Youji_Tm:BTComposite_Selector_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Youji/Team/BT_6Youji_Tm.1"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_IsAtLocation",
+    "Name": "BTDecorator_IsAtLocation_1",
+    "Outer": "BT_6Youji_Tm",
+    "Class": "UScriptClass'BTDecorator_IsAtLocation'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "AcceptableRadius": 200.0,
+      "BlackboardKey": {
+        "SelectedKeyName": "EliteTeamLoc"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_6Youji_Tm'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Youji/Team/BT_6Youji_Tm.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_6Youji_Tm:BTComposite_Selector_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Youji/Team/BT_6Youji_Tm.2"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_IsAtLocation",
+    "Name": "BTDecorator_IsAtLocation_2",
+    "Outer": "BT_6Youji_Tm",
+    "Class": "UScriptClass'BTDecorator_IsAtLocation'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "AcceptableRadius": 300.0,
+      "BlackboardKey": {
+        "SelectedKeyName": "EliteTeamLoc"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_6Youji_Tm'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Youji/Team/BT_6Youji_Tm.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_6Youji_Tm:BTComposite_Selector_3'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Youji/Team/BT_6Youji_Tm.3"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_GetEliteTeamSeq",
+    "Name": "BTTask_GetEliteTeamSeq_0",
+    "Outer": "BT_6Youji_Tm",
+    "Class": "UScriptClass'BTTask_GetEliteTeamSeq'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_6Youji_Tm'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Youji/Team/BT_6Youji_Tm.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_6Youji_Tm:BTComposite_Selector_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Youji/Team/BT_6Youji_Tm.1"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_NewMoveTo",
+    "Name": "BTTask_NewMoveTo_0",
+    "Outer": "BT_6Youji_Tm",
+    "Class": "UScriptClass'BTTask_NewMoveTo'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "bOrientRotationToMovement": true,
+      "MoveTypeState": "EMoveTypeState::MTS_Run",
+      "bStopOnOverlapNeedsUpdate": false,
+      "BlackboardKey": {
+        "SelectedKeyName": "EliteTeamLoc"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_6Youji_Tm'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Youji/Team/BT_6Youji_Tm.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_6Youji_Tm:BTComposite_Selector_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Youji/Team/BT_6Youji_Tm.2"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_NewMoveTo",
+    "Name": "BTTask_NewMoveTo_1",
+    "Outer": "BT_6Youji_Tm",
+    "Class": "UScriptClass'BTTask_NewMoveTo'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "bUseControllerRotationYaw": true,
+      "bStareAt": true,
+      "AO": true,
+      "bStopOnOverlapNeedsUpdate": false,
+      "BlackboardKey": {
+        "SelectedKeyName": "EliteTeamLoc"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_6Youji_Tm'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Youji/Team/BT_6Youji_Tm.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_6Youji_Tm:BTComposite_Selector_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Youji/Team/BT_6Youji_Tm.2"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_NewMoveTo",
+    "Name": "BTTask_NewMoveTo_2",
+    "Outer": "BT_6Youji_Tm",
+    "Class": "UScriptClass'BTTask_NewMoveTo'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "bUseControllerRotationYaw": true,
+      "bStareAt": true,
+      "AO": true,
+      "bObserveBlackboardValue": true,
+      "bStopOnOverlapNeedsUpdate": false,
+      "BlackboardKey": {
+        "SelectedKeyName": "EliteTeamLoc"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_6Youji_Tm'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Youji/Team/BT_6Youji_Tm.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_SimpleParallel'BT_6Youji_Tm:BTComposite_SimpleParallel_2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Youji/Team/BT_6Youji_Tm.9"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_NewMoveTo",
+    "Name": "BTTask_NewMoveTo_3",
+    "Outer": "BT_6Youji_Tm",
+    "Class": "UScriptClass'BTTask_NewMoveTo'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "bUseControllerRotationYaw": true,
+      "bStareAt": true,
+      "AO": true,
+      "bObserveBlackboardValue": true,
+      "bStopOnOverlapNeedsUpdate": false,
+      "BlackboardKey": {
+        "SelectedKeyName": "EliteTeamLoc"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_6Youji_Tm'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Youji/Team/BT_6Youji_Tm.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_SimpleParallel'BT_6Youji_Tm:BTComposite_SimpleParallel_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Youji/Team/BT_6Youji_Tm.8"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_NewMoveTo",
+    "Name": "BTTask_NewMoveTo_7",
+    "Outer": "BT_6Youji_Tm",
+    "Class": "UScriptClass'BTTask_NewMoveTo'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "bOrientRotationToMovement": true,
+      "MoveTypeState": "EMoveTypeState::MTS_Run",
+      "bObserveBlackboardValue": true,
+      "bStopOnOverlapNeedsUpdate": false,
+      "BlackboardKey": {
+        "SelectedKeyName": "EliteTeamLoc"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_6Youji_Tm'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Youji/Team/BT_6Youji_Tm.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_6Youji_Tm:BTComposite_Selector_3'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Youji/Team/BT_6Youji_Tm.3"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_QuitEliteTeam",
+    "Name": "BTTask_QuitEliteTeam_0",
+    "Outer": "BT_6Youji_Tm",
+    "Class": "UScriptClass'BTTask_QuitEliteTeam'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_6Youji_Tm'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Youji/Team/BT_6Youji_Tm.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_6Youji_Tm:BTComposite_Selector_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Youji/Team/BT_6Youji_Tm.1"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_RunBehavior",
+    "Name": "BTTask_RunBehavior_0",
+    "Outer": "BT_6Youji_Tm",
+    "Class": "UScriptClass'BTTask_RunBehavior'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "BehaviorAsset": {
+        "ObjectName": "BehaviorTree'BT_6Youji_Attack'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Youji/BT_6Youji_Attack.0"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_6Youji_Tm'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Youji/Team/BT_6Youji_Tm.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_6Youji_Tm:BTComposite_Sequence_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Youji/Team/BT_6Youji_Tm.5"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_RunBehavior",
+    "Name": "BTTask_RunBehavior_1",
+    "Outer": "BT_6Youji_Tm",
+    "Class": "UScriptClass'BTTask_RunBehavior'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "BehaviorAsset": {
+        "ObjectName": "BehaviorTree'BT_6Youji_Attack'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Youji/BT_6Youji_Attack.0"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_6Youji_Tm'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Youji/Team/BT_6Youji_Tm.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_SimpleParallel'BT_6Youji_Tm:BTComposite_SimpleParallel_2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Youji/Team/BT_6Youji_Tm.9"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_RunBehavior",
+    "Name": "BTTask_RunBehavior_2",
+    "Outer": "BT_6Youji_Tm",
+    "Class": "UScriptClass'BTTask_RunBehavior'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "BehaviorAsset": {
+        "ObjectName": "BehaviorTree'BT_6Youji_Attack'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Youji/BT_6Youji_Attack.0"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_6Youji_Tm'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Youji/Team/BT_6Youji_Tm.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_SimpleParallel'BT_6Youji_Tm:BTComposite_SimpleParallel_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Youji/Team/BT_6Youji_Tm.8"
+      }
+    }
+  }
+]

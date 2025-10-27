@@ -1,0 +1,352 @@
+[
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_BP_RotScene",
+    "Outer": "BP_RotScene_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "___bool_Has_Been_Initd_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "___bool_IsClosed_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "K2Node_Event_DeltaSeconds",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_K2_AddLocalRotation_SweepHitResult",
+        "Flags": "RF_Public",
+        "ElementSize": 144,
+        "PropertyFlags": "ContainsInstancedReference",
+        "Struct": {
+          "ObjectName": "ScriptStruct'HitResult'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "___bool_Whether_the_gate_is_currently_open_or_close_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction | FUNC_HasDefaults"
+  },
+  {
+    "Type": "Function",
+    "Name": "ReceiveTick",
+    "Outer": "BP_RotScene_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "SuperStruct": {
+      "ObjectName": "Function'Actor:ReceiveTick'",
+      "ObjectPath": "/Script/Engine"
+    },
+    "ChildProperties": [
+      {
+        "Type": "FloatProperty",
+        "Name": "DeltaSeconds",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BP_RotScene_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BP_RotScene_C:SimpleConstructionScript_0'",
+        "ObjectPath": "EM/Content/AssetDesign/Item/Station/BP_RotScene.9"
+      },
+      "UberGraphFunction": {
+        "ObjectName": "Function'BP_RotScene_C:ExecuteUbergraph_BP_RotScene'",
+        "ObjectPath": "EM/Content/AssetDesign/Item/Station/BP_RotScene.0"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'Actor'",
+      "ObjectPath": "/Script/Engine"
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'BP_RotScene_C:ReceiveTick'",
+        "ObjectPath": "EM/Content/AssetDesign/Item/Station/BP_RotScene.1"
+      },
+      {
+        "ObjectName": "Function'BP_RotScene_C:ExecuteUbergraph_BP_RotScene'",
+        "ObjectPath": "EM/Content/AssetDesign/Item/Station/BP_RotScene.0"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient",
+        "Struct": {
+          "ObjectName": "ScriptStruct'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "StaticMesh",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'StaticMeshComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Scene",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'SceneComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "DefaultSceneRoot",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'SceneComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "speed",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 12,
+        "PropertyFlags": "Edit | BlueprintVisible",
+        "Struct": {
+          "ObjectName": "ScriptStruct'Rotator'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_BP_RotScene": {
+        "ObjectName": "Function'BP_RotScene_C:ExecuteUbergraph_BP_RotScene'",
+        "ObjectPath": "EM/Content/AssetDesign/Item/Station/BP_RotScene.0"
+      },
+      "ReceiveTick": {
+        "ObjectName": "Function'BP_RotScene_C:ReceiveTick'",
+        "ObjectPath": "EM/Content/AssetDesign/Item/Station/BP_RotScene.1"
+      }
+    },
+    "ClassFlags": "CLASS_Config | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BP_RotScene_C'Default__BP_RotScene_C'",
+      "ObjectPath": "EM/Content/AssetDesign/Item/Station/BP_RotScene.3"
+    }
+  },
+  {
+    "Type": "BP_RotScene_C",
+    "Name": "Default__BP_RotScene_C",
+    "Class": "BlueprintGeneratedClass'EM/Content/AssetDesign/Item/Station/BP_RotScene.BP_RotScene_C'",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "UberGraphFrame": {},
+      "speed": {
+        "Pitch": 0.0,
+        "Yaw": 1.0,
+        "Roll": 0.0
+      },
+      "PrimaryActorTick": {
+        "bCanEverTick": true
+      }
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Outer": "BP_RotScene_C",
+    "Class": "UScriptClass'SceneComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "Scene_GEN_VARIABLE",
+    "Outer": "BP_RotScene_C",
+    "Class": "UScriptClass'SceneComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BP_RotScene_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "EM/Content/AssetDesign/Item/Station/BP_RotScene.4"
+      },
+      "ChildNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_RotScene_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "EM/Content/AssetDesign/Item/Station/BP_RotScene.8"
+        }
+      ],
+      "VariableGuid": "3DC2AFDE-4CE8DFF5-AFE0C2AB-9919A646",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_1",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'StaticMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "StaticMeshComponent'BP_RotScene_C:StaticMesh_GEN_VARIABLE'",
+        "ObjectPath": "EM/Content/AssetDesign/Item/Station/BP_RotScene.10"
+      },
+      "VariableGuid": "4B46CB72-422D5A49-A5F4F1BD-F1A02BDF",
+      "InternalVariableName": "StaticMesh"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_2",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BP_RotScene_C:Scene_GEN_VARIABLE'",
+        "ObjectPath": "EM/Content/AssetDesign/Item/Station/BP_RotScene.5"
+      },
+      "ChildNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_RotScene_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "EM/Content/AssetDesign/Item/Station/BP_RotScene.7"
+        }
+      ],
+      "VariableGuid": "B7F5CD05-41D139B6-05FE3F99-77440B18",
+      "InternalVariableName": "Scene"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Outer": "BP_RotScene_C",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_RotScene_C:SimpleConstructionScript_0.SCS_Node_0'",
+          "ObjectPath": "EM/Content/AssetDesign/Item/Station/BP_RotScene.6"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_RotScene_C:SimpleConstructionScript_0.SCS_Node_0'",
+          "ObjectPath": "EM/Content/AssetDesign/Item/Station/BP_RotScene.6"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_RotScene_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "EM/Content/AssetDesign/Item/Station/BP_RotScene.8"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_RotScene_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "EM/Content/AssetDesign/Item/Station/BP_RotScene.7"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BP_RotScene_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "EM/Content/AssetDesign/Item/Station/BP_RotScene.6"
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "StaticMesh_GEN_VARIABLE",
+    "Outer": "BP_RotScene_C",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'Chezhan03_Layout'",
+        "ObjectPath": "/Game/Asset/Scene/Layout/Chapter03/Chezhan03_layout/Chezhan03_Layout"
+      },
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": -140000.0
+      }
+    }
+  }
+]

@@ -1,0 +1,496 @@
+[
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_Explore_AwakeLantern",
+    "Outer": "Explore_AwakeLantern_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_ComponentBoundEvent_Mechanism",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'CombatItemBase'",
+          "ObjectPath": "/Script/EM"
+        }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "K2Node_ComponentBoundEvent_StateId",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "K2Node_ComponentBoundEvent_LeaveStateId",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "K2Node_MakeArray_Array",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "ReferenceParm | ContainsInstancedReference",
+        "Inner": {
+          "Type": "ObjectProperty",
+          "Name": "K2Node_MakeArray_Array",
+          "Flags": "RF_Public",
+          "ElementSize": 8,
+          "PropertyFlags": "InstancedReference",
+          "PropertyClass": {
+            "ObjectName": "Class'StaticCreatorComponent'",
+            "ObjectPath": "/Script/EM"
+          }
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_EqualEqual_IntInt_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetGameMode_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'GameModeBase'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_DynamicCast_AsBP_EMGame_Mode",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'BP_EMGameMode_C'",
+          "ObjectPath": "EM/Content/AssetDesign/GameMode/BP_EMGameMode.3"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_DynamicCast_bSuccess",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction | FUNC_HasDefaults"
+  },
+  {
+    "Type": "Function",
+    "Name": "ReceiveOnExploreGroupReset",
+    "Outer": "Explore_AwakeLantern_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "SuperStruct": {
+      "ObjectName": "Function'ExploreStaticCreator:ReceiveOnExploreGroupReset'",
+      "ObjectPath": "/Script/EM"
+    },
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "ReceiveOnExploreGroupActive",
+    "Outer": "Explore_AwakeLantern_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "SuperStruct": {
+      "ObjectName": "Function'ExploreStaticCreator:ReceiveOnExploreGroupActive'",
+      "ObjectPath": "/Script/EM"
+    },
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "BndEvt__Explore_AwakeLantern_WindBell_K2Node_ComponentBoundEvent_1_OnMechanismStateChangeDelegate__DelegateSignature",
+    "Outer": "Explore_AwakeLantern_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "Mechanism",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "PropertyClass": {
+          "ObjectName": "Class'CombatItemBase'",
+          "ObjectPath": "/Script/EM"
+        }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "StateId",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "LeaveStateId",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "Explore_AwakeLantern_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "DynamicBindingObjects": [
+        {
+          "ObjectName": "ComponentDelegateBinding'Explore_AwakeLantern_C:ComponentDelegateBinding_0'",
+          "ObjectPath": "EM/Content/AssetDesign/Level/BluePrints/ExploreGroup/Explore_East01/East_Nai/Explore_AwakeLantern.9"
+        }
+      ],
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'Explore_AwakeLantern_C:SimpleConstructionScript_0'",
+        "ObjectPath": "EM/Content/AssetDesign/Level/BluePrints/ExploreGroup/Explore_East01/East_Nai/Explore_AwakeLantern.15"
+      },
+      "UberGraphFunction": {
+        "ObjectName": "Function'Explore_AwakeLantern_C:ExecuteUbergraph_Explore_AwakeLantern'",
+        "ObjectPath": "EM/Content/AssetDesign/Level/BluePrints/ExploreGroup/Explore_East01/East_Nai/Explore_AwakeLantern.0"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'ExploreStaticCreator'",
+      "ObjectPath": "/Script/EM"
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'Explore_AwakeLantern_C:BndEvt__Explore_AwakeLantern_WindBell_K2Node_ComponentBoundEvent_1_OnMechanismStateChangeDelegate__DelegateSignature'",
+        "ObjectPath": "EM/Content/AssetDesign/Level/BluePrints/ExploreGroup/Explore_East01/East_Nai/Explore_AwakeLantern.3"
+      },
+      {
+        "ObjectName": "Function'Explore_AwakeLantern_C:ReceiveOnExploreGroupActive'",
+        "ObjectPath": "EM/Content/AssetDesign/Level/BluePrints/ExploreGroup/Explore_East01/East_Nai/Explore_AwakeLantern.2"
+      },
+      {
+        "ObjectName": "Function'Explore_AwakeLantern_C:ReceiveOnExploreGroupReset'",
+        "ObjectPath": "EM/Content/AssetDesign/Level/BluePrints/ExploreGroup/Explore_East01/East_Nai/Explore_AwakeLantern.1"
+      },
+      {
+        "ObjectName": "Function'Explore_AwakeLantern_C:ExecuteUbergraph_Explore_AwakeLantern'",
+        "ObjectPath": "EM/Content/AssetDesign/Level/BluePrints/ExploreGroup/Explore_East01/East_Nai/Explore_AwakeLantern.0"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient",
+        "Struct": {
+          "ObjectName": "ScriptStruct'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Lantern04",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'BP_StaticCreatorComponent_C'",
+          "ObjectPath": "EM/Content/BluePrints/Item/ExploreGroup/BP_StaticCreatorComponent.3"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Lantern03",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'BP_StaticCreatorComponent_C'",
+          "ObjectPath": "EM/Content/BluePrints/Item/ExploreGroup/BP_StaticCreatorComponent.3"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "WindBell",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'BP_StaticCreatorComponent_C'",
+          "ObjectPath": "EM/Content/BluePrints/Item/ExploreGroup/BP_StaticCreatorComponent.3"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "DefaultSceneRoot",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'SceneComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_Explore_AwakeLantern": {
+        "ObjectName": "Function'Explore_AwakeLantern_C:ExecuteUbergraph_Explore_AwakeLantern'",
+        "ObjectPath": "EM/Content/AssetDesign/Level/BluePrints/ExploreGroup/Explore_East01/East_Nai/Explore_AwakeLantern.0"
+      },
+      "ReceiveOnExploreGroupReset": {
+        "ObjectName": "Function'Explore_AwakeLantern_C:ReceiveOnExploreGroupReset'",
+        "ObjectPath": "EM/Content/AssetDesign/Level/BluePrints/ExploreGroup/Explore_East01/East_Nai/Explore_AwakeLantern.1"
+      },
+      "ReceiveOnExploreGroupActive": {
+        "ObjectName": "Function'Explore_AwakeLantern_C:ReceiveOnExploreGroupActive'",
+        "ObjectPath": "EM/Content/AssetDesign/Level/BluePrints/ExploreGroup/Explore_East01/East_Nai/Explore_AwakeLantern.2"
+      },
+      "BndEvt__Explore_AwakeLantern_WindBell_K2Node_ComponentBoundEvent_1_OnMechanismStateChangeDelegate__DelegateSignature": {
+        "ObjectName": "Function'Explore_AwakeLantern_C:BndEvt__Explore_AwakeLantern_WindBell_K2Node_ComponentBoundEvent_1_OnMechanismStateChangeDelegate__DelegateSignature'",
+        "ObjectPath": "EM/Content/AssetDesign/Level/BluePrints/ExploreGroup/Explore_East01/East_Nai/Explore_AwakeLantern.3"
+      }
+    },
+    "ClassFlags": "CLASS_Config | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "Explore_AwakeLantern_C'Default__Explore_AwakeLantern_C'",
+      "ObjectPath": "EM/Content/AssetDesign/Level/BluePrints/ExploreGroup/Explore_East01/East_Nai/Explore_AwakeLantern.5"
+    }
+  },
+  {
+    "Type": "Explore_AwakeLantern_C",
+    "Name": "Default__Explore_AwakeLantern_C",
+    "Class": "BlueprintGeneratedClass'EM/Content/AssetDesign/Level/BluePrints/ExploreGroup/Explore_East01/East_Nai/Explore_AwakeLantern.Explore_AwakeLantern_C'",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "UberGraphFrame": {}
+    }
+  },
+  {
+    "Type": "BP_StaticCreatorComponent_C",
+    "Name": "Lantern03_GEN_VARIABLE",
+    "Outer": "Explore_AwakeLantern_C",
+    "Class": "BlueprintGeneratedClass'EM/Content/BluePrints/Item/ExploreGroup/BP_StaticCreatorComponent.BP_StaticCreatorComponent_C'",
+    "Template": {
+      "ObjectName": "BP_StaticCreatorComponent_C'Default__BP_StaticCreatorComponent_C'",
+      "ObjectPath": "EM/Content/BluePrints/Item/ExploreGroup/BP_StaticCreatorComponent.4"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "UnitType": "Mechanism",
+      "UnitId": 1310041
+    }
+  },
+  {
+    "Type": "BP_StaticCreatorComponent_C",
+    "Name": "Lantern04_GEN_VARIABLE",
+    "Outer": "Explore_AwakeLantern_C",
+    "Class": "BlueprintGeneratedClass'EM/Content/BluePrints/Item/ExploreGroup/BP_StaticCreatorComponent.BP_StaticCreatorComponent_C'",
+    "Template": {
+      "ObjectName": "BP_StaticCreatorComponent_C'Default__BP_StaticCreatorComponent_C'",
+      "ObjectPath": "EM/Content/BluePrints/Item/ExploreGroup/BP_StaticCreatorComponent.4"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "UnitType": "Mechanism",
+      "UnitId": 1310041
+    }
+  },
+  {
+    "Type": "BP_StaticCreatorComponent_C",
+    "Name": "WindBell_GEN_VARIABLE",
+    "Outer": "Explore_AwakeLantern_C",
+    "Class": "BlueprintGeneratedClass'EM/Content/BluePrints/Item/ExploreGroup/BP_StaticCreatorComponent.BP_StaticCreatorComponent_C'",
+    "Template": {
+      "ObjectName": "BP_StaticCreatorComponent_C'Default__BP_StaticCreatorComponent_C'",
+      "ObjectPath": "EM/Content/BluePrints/Item/ExploreGroup/BP_StaticCreatorComponent.4"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "UnitType": "Mechanism",
+      "UnitId": 131006
+    }
+  },
+  {
+    "Type": "ComponentDelegateBinding",
+    "Name": "ComponentDelegateBinding_0",
+    "Outer": "Explore_AwakeLantern_C",
+    "Class": "UScriptClass'ComponentDelegateBinding'",
+    "Flags": "RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentDelegateBindings": [
+        {
+          "ComponentPropertyName": "WindBell",
+          "DelegatePropertyName": "OnMechanismStateChange",
+          "FunctionNameToBind": "BndEvt__Explore_AwakeLantern_WindBell_K2Node_ComponentBoundEvent_1_OnMechanismStateChangeDelegate__DelegateSignature"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Outer": "Explore_AwakeLantern_C",
+    "Class": "UScriptClass'SceneComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'Explore_AwakeLantern_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "EM/Content/AssetDesign/Level/BluePrints/ExploreGroup/Explore_East01/East_Nai/Explore_AwakeLantern.10"
+      },
+      "ChildNodes": [
+        {
+          "ObjectName": "SCS_Node'Explore_AwakeLantern_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "EM/Content/AssetDesign/Level/BluePrints/ExploreGroup/Explore_East01/East_Nai/Explore_AwakeLantern.12"
+        },
+        {
+          "ObjectName": "SCS_Node'Explore_AwakeLantern_C:SimpleConstructionScript_0.SCS_Node_4'",
+          "ObjectPath": "EM/Content/AssetDesign/Level/BluePrints/ExploreGroup/Explore_East01/East_Nai/Explore_AwakeLantern.13"
+        },
+        {
+          "ObjectName": "SCS_Node'Explore_AwakeLantern_C:SimpleConstructionScript_0.SCS_Node_5'",
+          "ObjectPath": "EM/Content/AssetDesign/Level/BluePrints/ExploreGroup/Explore_East01/East_Nai/Explore_AwakeLantern.14"
+        }
+      ],
+      "VariableGuid": "72ECD67A-4426AA50-BB1E4DAB-768984A9",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_1",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "BlueprintGeneratedClass'BP_StaticCreatorComponent_C'",
+        "ObjectPath": "EM/Content/BluePrints/Item/ExploreGroup/BP_StaticCreatorComponent.3"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "BP_StaticCreatorComponent_C'Explore_AwakeLantern_C:WindBell_GEN_VARIABLE'",
+        "ObjectPath": "EM/Content/AssetDesign/Level/BluePrints/ExploreGroup/Explore_East01/East_Nai/Explore_AwakeLantern.8"
+      },
+      "VariableGuid": "56BF32B3-41430A54-B69D6E9F-3887BA52",
+      "InternalVariableName": "WindBell"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_4",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "BlueprintGeneratedClass'BP_StaticCreatorComponent_C'",
+        "ObjectPath": "EM/Content/BluePrints/Item/ExploreGroup/BP_StaticCreatorComponent.3"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "BP_StaticCreatorComponent_C'Explore_AwakeLantern_C:Lantern03_GEN_VARIABLE'",
+        "ObjectPath": "EM/Content/AssetDesign/Level/BluePrints/ExploreGroup/Explore_East01/East_Nai/Explore_AwakeLantern.6"
+      },
+      "VariableGuid": "9155150D-417E3317-78A1AB95-2C2E1300",
+      "InternalVariableName": "Lantern03"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_5",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "BlueprintGeneratedClass'BP_StaticCreatorComponent_C'",
+        "ObjectPath": "EM/Content/BluePrints/Item/ExploreGroup/BP_StaticCreatorComponent.3"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "BP_StaticCreatorComponent_C'Explore_AwakeLantern_C:Lantern04_GEN_VARIABLE'",
+        "ObjectPath": "EM/Content/AssetDesign/Level/BluePrints/ExploreGroup/Explore_East01/East_Nai/Explore_AwakeLantern.7"
+      },
+      "VariableGuid": "E4555DB4-4C300B65-3E38B6A3-DD2E917B",
+      "InternalVariableName": "Lantern04"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Outer": "Explore_AwakeLantern_C",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node'Explore_AwakeLantern_C:SimpleConstructionScript_0.SCS_Node_0'",
+          "ObjectPath": "EM/Content/AssetDesign/Level/BluePrints/ExploreGroup/Explore_East01/East_Nai/Explore_AwakeLantern.11"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node'Explore_AwakeLantern_C:SimpleConstructionScript_0.SCS_Node_0'",
+          "ObjectPath": "EM/Content/AssetDesign/Level/BluePrints/ExploreGroup/Explore_East01/East_Nai/Explore_AwakeLantern.11"
+        },
+        {
+          "ObjectName": "SCS_Node'Explore_AwakeLantern_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "EM/Content/AssetDesign/Level/BluePrints/ExploreGroup/Explore_East01/East_Nai/Explore_AwakeLantern.12"
+        },
+        {
+          "ObjectName": "SCS_Node'Explore_AwakeLantern_C:SimpleConstructionScript_0.SCS_Node_4'",
+          "ObjectPath": "EM/Content/AssetDesign/Level/BluePrints/ExploreGroup/Explore_East01/East_Nai/Explore_AwakeLantern.13"
+        },
+        {
+          "ObjectName": "SCS_Node'Explore_AwakeLantern_C:SimpleConstructionScript_0.SCS_Node_5'",
+          "ObjectPath": "EM/Content/AssetDesign/Level/BluePrints/ExploreGroup/Explore_East01/East_Nai/Explore_AwakeLantern.14"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'Explore_AwakeLantern_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "EM/Content/AssetDesign/Level/BluePrints/ExploreGroup/Explore_East01/East_Nai/Explore_AwakeLantern.11"
+      }
+    }
+  }
+]

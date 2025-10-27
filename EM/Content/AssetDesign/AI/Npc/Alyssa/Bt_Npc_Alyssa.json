@@ -1,0 +1,254 @@
+[
+  {
+    "Type": "BehaviorTree",
+    "Name": "Bt_Npc_Alyssa",
+    "Class": "UScriptClass'BehaviorTree'",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "RootNode": {
+        "ObjectName": "BTComposite_Sequence'Bt_Npc_Alyssa:BTComposite_Sequence_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Alyssa/Bt_Npc_Alyssa.2"
+      },
+      "BlackboardAsset": {
+        "ObjectName": "BlackboardData'BB_Npc_Alyssa'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Alyssa/BB_Npc_Alyssa.0"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_0",
+    "Outer": "Bt_Npc_Alyssa",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_GetPatrolLoc'Bt_Npc_Alyssa:BTTask_GetPatrolLoc_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Alyssa/Bt_Npc_Alyssa.7"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'Bt_Npc_Alyssa'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Alyssa/Bt_Npc_Alyssa.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'Bt_Npc_Alyssa:BTComposite_Sequence_3'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Alyssa/Bt_Npc_Alyssa.3"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_1",
+    "Outer": "Bt_Npc_Alyssa",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'Bt_Npc_Alyssa:BTComposite_Sequence_3'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Alyssa/Bt_Npc_Alyssa.3"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'Bt_Npc_Alyssa:BTDecorator_Blackboard_0'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Alyssa/Bt_Npc_Alyssa.4"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait'Bt_Npc_Alyssa:BTTask_Wait_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Alyssa/Bt_Npc_Alyssa.9"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'Bt_Npc_Alyssa'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Alyssa/Bt_Npc_Alyssa.0"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_3",
+    "Outer": "Bt_Npc_Alyssa",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'Bt_Npc_Alyssa:BTComposite_Sequence_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Alyssa/Bt_Npc_Alyssa.1"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Loop'Bt_Npc_Alyssa:BTDecorator_Loop_1'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Alyssa/Bt_Npc_Alyssa.5"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_NewMoveTo'Bt_Npc_Alyssa:BTTask_NewMoveTo_1'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Alyssa/Bt_Npc_Alyssa.8"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_ClearKey'Bt_Npc_Alyssa:BTTask_ClearKey_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Alyssa/Bt_Npc_Alyssa.6"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'Bt_Npc_Alyssa'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Alyssa/Bt_Npc_Alyssa.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'Bt_Npc_Alyssa:BTComposite_Sequence_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Alyssa/Bt_Npc_Alyssa.2"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_0",
+    "Outer": "Bt_Npc_Alyssa",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "StringValue": "AlyssaGo",
+      "CachedDescription": "QuestEvent 为相等 [AlyssaGo]",
+      "BlackboardKey": {
+        "SelectedKeyName": "QuestEvent"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'Bt_Npc_Alyssa'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Alyssa/Bt_Npc_Alyssa.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'Bt_Npc_Alyssa:BTComposite_Sequence_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Alyssa/Bt_Npc_Alyssa.2"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Loop",
+    "Name": "BTDecorator_Loop_1",
+    "Outer": "Bt_Npc_Alyssa",
+    "Class": "UScriptClass'BTDecorator_Loop'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'Bt_Npc_Alyssa'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Alyssa/Bt_Npc_Alyssa.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'Bt_Npc_Alyssa:BTComposite_Sequence_3'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Alyssa/Bt_Npc_Alyssa.3"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_ClearKey",
+    "Name": "BTTask_ClearKey_0",
+    "Outer": "Bt_Npc_Alyssa",
+    "Class": "UScriptClass'BTTask_ClearKey'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "BlackboadKeyName": "QuestEvent",
+      "BlackboardKey": {
+        "SelectedKeyName": "QuestEvent"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'Bt_Npc_Alyssa'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Alyssa/Bt_Npc_Alyssa.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'Bt_Npc_Alyssa:BTComposite_Sequence_3'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Alyssa/Bt_Npc_Alyssa.3"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_GetPatrolLoc",
+    "Name": "BTTask_GetPatrolLoc_0",
+    "Outer": "Bt_Npc_Alyssa",
+    "Class": "UScriptClass'BTTask_GetPatrolLoc'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'Bt_Npc_Alyssa'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Alyssa/Bt_Npc_Alyssa.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'Bt_Npc_Alyssa:BTComposite_Sequence_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Alyssa/Bt_Npc_Alyssa.1"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_NewMoveTo",
+    "Name": "BTTask_NewMoveTo_1",
+    "Outer": "Bt_Npc_Alyssa",
+    "Class": "UScriptClass'BTTask_NewMoveTo'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "bUseControllerRotationYaw": true,
+      "MaxSpeed": 125.0,
+      "MaxAcceleration": 2000.0,
+      "bStopOnOverlapNeedsUpdate": false,
+      "BlackboardKey": {
+        "SelectedKeyName": "PatrolLoc"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'Bt_Npc_Alyssa'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Alyssa/Bt_Npc_Alyssa.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'Bt_Npc_Alyssa:BTComposite_Sequence_3'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Alyssa/Bt_Npc_Alyssa.3"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_0",
+    "Outer": "Bt_Npc_Alyssa",
+    "Class": "UScriptClass'BTTask_Wait'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "WaitTime": 1.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'Bt_Npc_Alyssa'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Alyssa/Bt_Npc_Alyssa.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'Bt_Npc_Alyssa:BTComposite_Sequence_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Alyssa/Bt_Npc_Alyssa.2"
+      }
+    }
+  }
+]

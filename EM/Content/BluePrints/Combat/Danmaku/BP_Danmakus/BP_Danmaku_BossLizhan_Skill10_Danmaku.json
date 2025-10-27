@@ -1,0 +1,678 @@
+[
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_BP_Danmaku_BossLizhan_Skill10_Danmaku",
+    "Outer": "BP_Danmaku_BossLizhan_Skill10_Danmaku_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "___int_Array_Index_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "___int_Loop_Counter_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Add_IntInt_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_MakeRotator_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "Struct": {
+          "ObjectName": "ScriptStruct'Rotator'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_K2_AddWorldRotation_SweepHitResult",
+        "Flags": "RF_Public",
+        "ElementSize": 144,
+        "PropertyFlags": "ContainsInstancedReference",
+        "Struct": {
+          "ObjectName": "ScriptStruct'HitResult'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "CallFunc_Map_Values_Values",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "ReferenceParm | ContainsInstancedReference",
+        "Inner": {
+          "Type": "ObjectProperty",
+          "Name": "CallFunc_Map_Values_Values",
+          "Flags": "RF_Public",
+          "ElementSize": 8,
+          "PropertyFlags": "InstancedReference",
+          "PropertyClass": {
+            "ObjectName": "Class'DanmakuLaunchPort'",
+            "ObjectPath": "/Script/EM"
+          }
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_Add_FloatFloat_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_Array_Get_Item",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'DanmakuLaunchPort'",
+          "ObjectPath": "/Script/EM"
+        }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Array_Length_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Less_IntInt_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction | FUNC_HasDefaults"
+  },
+  {
+    "Type": "Function",
+    "Name": "ReceiveBeginPlay",
+    "Outer": "BP_Danmaku_BossLizhan_Skill10_Danmaku_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "SuperStruct": {
+      "ObjectName": "Function'Actor:ReceiveBeginPlay'",
+      "ObjectPath": "/Script/Engine"
+    },
+    "FunctionFlags": "FUNC_Event | FUNC_Protected | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "DanmakuFire",
+    "Outer": "BP_Danmaku_BossLizhan_Skill10_Danmaku_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "SuperStruct": {
+      "ObjectName": "Function'DanmakuTemplate:DanmakuFire'",
+      "ObjectPath": "/Script/EM"
+    },
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "SetPortRelativeLocAndRotationYZ",
+    "Outer": "BP_Danmaku_BossLizhan_Skill10_Danmaku_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "LuanchPort",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm | InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'DanmakuLaunchPort'",
+          "ObjectPath": "/Script/EM"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "AngleY",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "AngleZ",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_GetActorUpVector_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "Struct": {
+          "ObjectName": "ScriptStruct'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_BreakRotator_Roll",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_BreakRotator_Pitch",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_BreakRotator_Yaw",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_RotateAngleAxis_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "Struct": {
+          "ObjectName": "ScriptStruct'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_Add_FloatFloat_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_Add_FloatFloat_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_FMax_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_MakeRotator_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "Struct": {
+          "ObjectName": "ScriptStruct'Rotator'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_K2_SetRelativeLocationAndRotation_SweepHitResult",
+        "Flags": "RF_Public",
+        "ElementSize": 144,
+        "PropertyFlags": "ContainsInstancedReference",
+        "Struct": {
+          "ObjectName": "ScriptStruct'HitResult'",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_HasDefaults | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BP_Danmaku_BossLizhan_Skill10_Danmaku_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Super": {
+      "ObjectName": "BlueprintGeneratedClass'BP_DanmakuTemplate_C'",
+      "ObjectPath": "EM/Content/BluePrints/Combat/Danmaku/BP_DanmakuTemplate.6"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BP_Danmaku_BossLizhan_Skill10_Danmaku_C:SimpleConstructionScript_0'",
+        "ObjectPath": "EM/Content/BluePrints/Combat/Danmaku/BP_Danmakus/BP_Danmaku_BossLizhan_Skill10_Danmaku.17"
+      },
+      "InheritableComponentHandler": {
+        "ObjectName": "InheritableComponentHandler'BP_Danmaku_BossLizhan_Skill10_Danmaku_C:InheritableComponentHandler'",
+        "ObjectPath": "EM/Content/BluePrints/Combat/Danmaku/BP_Danmakus/BP_Danmaku_BossLizhan_Skill10_Danmaku.10"
+      },
+      "UberGraphFunction": {
+        "ObjectName": "Function'BP_Danmaku_BossLizhan_Skill10_Danmaku_C:ExecuteUbergraph_BP_Danmaku_BossLizhan_Skill10_Danmaku'",
+        "ObjectPath": "EM/Content/BluePrints/Combat/Danmaku/BP_Danmakus/BP_Danmaku_BossLizhan_Skill10_Danmaku.0"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "BlueprintGeneratedClass'BP_DanmakuTemplate_C'",
+      "ObjectPath": "EM/Content/BluePrints/Combat/Danmaku/BP_DanmakuTemplate.6"
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'BP_Danmaku_BossLizhan_Skill10_Danmaku_C:SetPortRelativeLocAndRotationYZ'",
+        "ObjectPath": "EM/Content/BluePrints/Combat/Danmaku/BP_Danmakus/BP_Danmaku_BossLizhan_Skill10_Danmaku.3"
+      },
+      {
+        "ObjectName": "Function'BP_Danmaku_BossLizhan_Skill10_Danmaku_C:DanmakuFire'",
+        "ObjectPath": "EM/Content/BluePrints/Combat/Danmaku/BP_Danmakus/BP_Danmaku_BossLizhan_Skill10_Danmaku.2"
+      },
+      {
+        "ObjectName": "Function'BP_Danmaku_BossLizhan_Skill10_Danmaku_C:ReceiveBeginPlay'",
+        "ObjectPath": "EM/Content/BluePrints/Combat/Danmaku/BP_Danmakus/BP_Danmaku_BossLizhan_Skill10_Danmaku.1"
+      },
+      {
+        "ObjectName": "Function'BP_Danmaku_BossLizhan_Skill10_Danmaku_C:ExecuteUbergraph_BP_Danmaku_BossLizhan_Skill10_Danmaku'",
+        "ObjectPath": "EM/Content/BluePrints/Combat/Danmaku/BP_Danmakus/BP_Danmaku_BossLizhan_Skill10_Danmaku.0"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient",
+        "Struct": {
+          "ObjectName": "ScriptStruct'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "BP_DanmakuLaunchPort1",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'BP_DanmakuLaunchPort_C'",
+          "ObjectPath": "EM/Content/BluePrints/Combat/Danmaku/BP_DanmakuLaunchPort.1"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "BP_DanmakuLaunchPort3",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'BP_DanmakuLaunchPort_C'",
+          "ObjectPath": "EM/Content/BluePrints/Combat/Danmaku/BP_DanmakuLaunchPort.1"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "BP_DanmakuLaunchPort2",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'BP_DanmakuLaunchPort_C'",
+          "ObjectPath": "EM/Content/BluePrints/Combat/Danmaku/BP_DanmakuLaunchPort.1"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "Rotation",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance"
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_BP_Danmaku_BossLizhan_Skill10_Danmaku": {
+        "ObjectName": "Function'BP_Danmaku_BossLizhan_Skill10_Danmaku_C:ExecuteUbergraph_BP_Danmaku_BossLizhan_Skill10_Danmaku'",
+        "ObjectPath": "EM/Content/BluePrints/Combat/Danmaku/BP_Danmakus/BP_Danmaku_BossLizhan_Skill10_Danmaku.0"
+      },
+      "ReceiveBeginPlay": {
+        "ObjectName": "Function'BP_Danmaku_BossLizhan_Skill10_Danmaku_C:ReceiveBeginPlay'",
+        "ObjectPath": "EM/Content/BluePrints/Combat/Danmaku/BP_Danmakus/BP_Danmaku_BossLizhan_Skill10_Danmaku.1"
+      },
+      "DanmakuFire": {
+        "ObjectName": "Function'BP_Danmaku_BossLizhan_Skill10_Danmaku_C:DanmakuFire'",
+        "ObjectPath": "EM/Content/BluePrints/Combat/Danmaku/BP_Danmakus/BP_Danmaku_BossLizhan_Skill10_Danmaku.2"
+      },
+      "SetPortRelativeLocAndRotationYZ": {
+        "ObjectName": "Function'BP_Danmaku_BossLizhan_Skill10_Danmaku_C:SetPortRelativeLocAndRotationYZ'",
+        "ObjectPath": "EM/Content/BluePrints/Combat/Danmaku/BP_Danmakus/BP_Danmaku_BossLizhan_Skill10_Danmaku.3"
+      }
+    },
+    "ClassFlags": "CLASS_Config | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BP_Danmaku_BossLizhan_Skill10_Danmaku_C'Default__BP_Danmaku_BossLizhan_Skill10_Danmaku_C'",
+      "ObjectPath": "EM/Content/BluePrints/Combat/Danmaku/BP_Danmakus/BP_Danmaku_BossLizhan_Skill10_Danmaku.5"
+    }
+  },
+  {
+    "Type": "BP_Danmaku_BossLizhan_Skill10_Danmaku_C",
+    "Name": "Default__BP_Danmaku_BossLizhan_Skill10_Danmaku_C",
+    "Class": "BlueprintGeneratedClass'EM/Content/BluePrints/Combat/Danmaku/BP_Danmakus/BP_Danmaku_BossLizhan_Skill10_Danmaku.BP_Danmaku_BossLizhan_Skill10_Danmaku_C'",
+    "Template": {
+      "ObjectName": "BP_DanmakuTemplate_C'Default__BP_DanmakuTemplate_C'",
+      "ObjectPath": "EM/Content/BluePrints/Combat/Danmaku/BP_DanmakuTemplate.7"
+    },
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "UberGraphFrame": {},
+      "Rotation": 0.7,
+      "DanmakuInstanced": {
+        "ObjectName": "DanmakuInstanceComponent'Default__BP_Danmaku_BossLizhan_Skill10_Danmaku_C:DanmakuInstanced'",
+        "ObjectPath": "EM/Content/BluePrints/Combat/Danmaku/BP_Danmakus/BP_Danmaku_BossLizhan_Skill10_Danmaku.9"
+      },
+      "PortRoot": {
+        "ObjectName": "SceneComponent'Default__BP_Danmaku_BossLizhan_Skill10_Danmaku_C:PortRoot'",
+        "ObjectPath": "EM/Content/BluePrints/Combat/Danmaku/BP_Danmakus/BP_Danmaku_BossLizhan_Skill10_Danmaku.12"
+      },
+      "RootComponent": {
+        "ObjectName": "DanmakuInstanceComponent'Default__BP_Danmaku_BossLizhan_Skill10_Danmaku_C:DanmakuInstanced'",
+        "ObjectPath": "EM/Content/BluePrints/Combat/Danmaku/BP_Danmakus/BP_Danmaku_BossLizhan_Skill10_Danmaku.9"
+      }
+    }
+  },
+  {
+    "Type": "BP_DanmakuLaunchPort_C",
+    "Name": "BP_DanmakuLaunchPort1_GEN_VARIABLE",
+    "Outer": "BP_Danmaku_BossLizhan_Skill10_Danmaku_C",
+    "Class": "BlueprintGeneratedClass'EM/Content/BluePrints/Combat/Danmaku/BP_DanmakuLaunchPort.BP_DanmakuLaunchPort_C'",
+    "Template": {
+      "ObjectName": "BP_DanmakuLaunchPort_C'Default__BP_DanmakuLaunchPort_C'",
+      "ObjectPath": "EM/Content/BluePrints/Combat/Danmaku/BP_DanmakuLaunchPort.2"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "LaunchPortId": 1,
+      "CreatureId": 850104,
+      "OverrideMaterials": [
+        null
+      ],
+      "RelativeLocation": {
+        "X": 102.32881,
+        "Y": -0.00016276477,
+        "Z": 40.00003
+      },
+      "RelativeRotation": {
+        "Pitch": 40.000008,
+        "Yaw": -6.882592E-05,
+        "Roll": -3.3301883E-05
+      }
+    }
+  },
+  {
+    "Type": "BP_DanmakuLaunchPort_C",
+    "Name": "BP_DanmakuLaunchPort2_GEN_VARIABLE",
+    "Outer": "BP_Danmaku_BossLizhan_Skill10_Danmaku_C",
+    "Class": "BlueprintGeneratedClass'EM/Content/BluePrints/Combat/Danmaku/BP_DanmakuLaunchPort.BP_DanmakuLaunchPort_C'",
+    "Template": {
+      "ObjectName": "BP_DanmakuLaunchPort_C'Default__BP_DanmakuLaunchPort_C'",
+      "ObjectPath": "EM/Content/BluePrints/Combat/Danmaku/BP_DanmakuLaunchPort.2"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "LaunchPortId": 2,
+      "CreatureId": 850104,
+      "OverrideMaterials": [
+        null
+      ],
+      "RelativeLocation": {
+        "X": -56.512363,
+        "Y": 97.8826,
+        "Z": 40.0
+      },
+      "RelativeRotation": {
+        "Pitch": 40.000065,
+        "Yaw": 119.9999,
+        "Roll": 2.2290465E-05
+      }
+    }
+  },
+  {
+    "Type": "BP_DanmakuLaunchPort_C",
+    "Name": "BP_DanmakuLaunchPort3_GEN_VARIABLE",
+    "Outer": "BP_Danmaku_BossLizhan_Skill10_Danmaku_C",
+    "Class": "BlueprintGeneratedClass'EM/Content/BluePrints/Combat/Danmaku/BP_DanmakuLaunchPort.BP_DanmakuLaunchPort_C'",
+    "Template": {
+      "ObjectName": "BP_DanmakuLaunchPort_C'Default__BP_DanmakuLaunchPort_C'",
+      "ObjectPath": "EM/Content/BluePrints/Combat/Danmaku/BP_DanmakuLaunchPort.2"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "LaunchPortId": 3,
+      "CreatureId": 850104,
+      "OverrideMaterials": [
+        null
+      ],
+      "RelativeLocation": {
+        "X": -52.74058,
+        "Y": -91.34895,
+        "Z": 40.0
+      },
+      "RelativeRotation": {
+        "Pitch": 40.000065,
+        "Yaw": -120.00012,
+        "Roll": 9.858534E-07
+      }
+    }
+  },
+  {
+    "Type": "DanmakuInstanceComponent",
+    "Name": "DanmakuInstanced",
+    "Outer": "Default__BP_Danmaku_BossLizhan_Skill10_Danmaku_C",
+    "Class": "UScriptClass'DanmakuInstanceComponent'",
+    "Template": {
+      "ObjectName": "DanmakuInstanceComponent'Default__BP_DanmakuTemplate_C:DanmakuInstanced'",
+      "ObjectPath": "EM/Content/BluePrints/Combat/Danmaku/BP_DanmakuTemplate.8"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'mesh_sysplane_yb_001'",
+        "ObjectPath": "EM/Content/Asset/Effect/Mesh/Plane/mesh_sysplane_yb_001.2"
+      }
+    }
+  },
+  {
+    "Type": "InheritableComponentHandler",
+    "Name": "InheritableComponentHandler",
+    "Outer": "BP_Danmaku_BossLizhan_Skill10_Danmaku_C",
+    "Class": "UScriptClass'InheritableComponentHandler'",
+    "Flags": "RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Outer": "BP_Danmaku_BossLizhan_Skill10_Danmaku_C",
+    "Class": "UScriptClass'SceneComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "PortRoot",
+    "Outer": "Default__BP_Danmaku_BossLizhan_Skill10_Danmaku_C",
+    "Class": "UScriptClass'SceneComponent'",
+    "Template": {
+      "ObjectName": "SceneComponent'Default__BP_DanmakuTemplate_C:PortRoot'",
+      "ObjectPath": "EM/Content/BluePrints/Combat/Danmaku/BP_DanmakuTemplate.10"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "DanmakuInstanceComponent'Default__BP_Danmaku_BossLizhan_Skill10_Danmaku_C:DanmakuInstanced'",
+        "ObjectPath": "EM/Content/BluePrints/Combat/Danmaku/BP_Danmakus/BP_Danmaku_BossLizhan_Skill10_Danmaku.9"
+      },
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 260.0
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": 0.0001039505,
+        "Roll": 0.0
+      }
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BP_Danmaku_BossLizhan_Skill10_Danmaku_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "EM/Content/BluePrints/Combat/Danmaku/BP_Danmakus/BP_Danmaku_BossLizhan_Skill10_Danmaku.11"
+      },
+      "VariableGuid": "556F11F3-4DEDE679-7E460B91-FDB1897F",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_1",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "BlueprintGeneratedClass'BP_DanmakuLaunchPort_C'",
+        "ObjectPath": "EM/Content/BluePrints/Combat/Danmaku/BP_DanmakuLaunchPort.1"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "BP_DanmakuLaunchPort_C'BP_Danmaku_BossLizhan_Skill10_Danmaku_C:BP_DanmakuLaunchPort1_GEN_VARIABLE'",
+        "ObjectPath": "EM/Content/BluePrints/Combat/Danmaku/BP_Danmakus/BP_Danmaku_BossLizhan_Skill10_Danmaku.6"
+      },
+      "ParentComponentOrVariableName": "PortRoot",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "D76D1B3A-43AC9ED3-221DF08A-2C966FB2",
+      "InternalVariableName": "BP_DanmakuLaunchPort1"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_2",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "BlueprintGeneratedClass'BP_DanmakuLaunchPort_C'",
+        "ObjectPath": "EM/Content/BluePrints/Combat/Danmaku/BP_DanmakuLaunchPort.1"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "BP_DanmakuLaunchPort_C'BP_Danmaku_BossLizhan_Skill10_Danmaku_C:BP_DanmakuLaunchPort2_GEN_VARIABLE'",
+        "ObjectPath": "EM/Content/BluePrints/Combat/Danmaku/BP_Danmakus/BP_Danmaku_BossLizhan_Skill10_Danmaku.7"
+      },
+      "ParentComponentOrVariableName": "PortRoot",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "5912CC4D-4DFC426B-7970ADA5-7BF5F322",
+      "InternalVariableName": "BP_DanmakuLaunchPort2"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_3",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "BlueprintGeneratedClass'BP_DanmakuLaunchPort_C'",
+        "ObjectPath": "EM/Content/BluePrints/Combat/Danmaku/BP_DanmakuLaunchPort.1"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "BP_DanmakuLaunchPort_C'BP_Danmaku_BossLizhan_Skill10_Danmaku_C:BP_DanmakuLaunchPort3_GEN_VARIABLE'",
+        "ObjectPath": "EM/Content/BluePrints/Combat/Danmaku/BP_Danmakus/BP_Danmaku_BossLizhan_Skill10_Danmaku.8"
+      },
+      "ParentComponentOrVariableName": "PortRoot",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "BF1CED2A-4882B044-830F8CA0-FC62EDAA",
+      "InternalVariableName": "BP_DanmakuLaunchPort3"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Outer": "BP_Danmaku_BossLizhan_Skill10_Danmaku_C",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_Danmaku_BossLizhan_Skill10_Danmaku_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "EM/Content/BluePrints/Combat/Danmaku/BP_Danmakus/BP_Danmaku_BossLizhan_Skill10_Danmaku.15"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_Danmaku_BossLizhan_Skill10_Danmaku_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectPath": "EM/Content/BluePrints/Combat/Danmaku/BP_Danmakus/BP_Danmaku_BossLizhan_Skill10_Danmaku.16"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_Danmaku_BossLizhan_Skill10_Danmaku_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "EM/Content/BluePrints/Combat/Danmaku/BP_Danmakus/BP_Danmaku_BossLizhan_Skill10_Danmaku.14"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_Danmaku_BossLizhan_Skill10_Danmaku_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "EM/Content/BluePrints/Combat/Danmaku/BP_Danmakus/BP_Danmaku_BossLizhan_Skill10_Danmaku.15"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_Danmaku_BossLizhan_Skill10_Danmaku_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectPath": "EM/Content/BluePrints/Combat/Danmaku/BP_Danmakus/BP_Danmaku_BossLizhan_Skill10_Danmaku.16"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_Danmaku_BossLizhan_Skill10_Danmaku_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "EM/Content/BluePrints/Combat/Danmaku/BP_Danmakus/BP_Danmaku_BossLizhan_Skill10_Danmaku.14"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BP_Danmaku_BossLizhan_Skill10_Danmaku_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "EM/Content/BluePrints/Combat/Danmaku/BP_Danmakus/BP_Danmaku_BossLizhan_Skill10_Danmaku.13"
+      }
+    }
+  }
+]

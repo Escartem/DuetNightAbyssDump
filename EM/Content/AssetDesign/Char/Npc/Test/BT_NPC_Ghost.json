@@ -1,0 +1,267 @@
+[
+  {
+    "Type": "BehaviorTree",
+    "Name": "BT_NPC_Ghost",
+    "Class": "UScriptClass'BehaviorTree'",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "RootNode": {
+        "ObjectName": "BTComposite_Sequence'BT_NPC_Ghost:BTComposite_Sequence_0'",
+        "ObjectPath": "EM/Content/AssetDesign/Char/Npc/Test/BT_NPC_Ghost.2"
+      },
+      "BlackboardAsset": {
+        "ObjectName": "BlackboardData'BB_Npc_Bai'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Bai/BB_Npc_Bai.0"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_6",
+    "Outer": "BT_NPC_Ghost",
+    "Class": "UScriptClass'BTComposite_Selector'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_GetPatrolLoc'BT_NPC_Ghost:BTTask_GetPatrolLoc_2'",
+            "ObjectPath": "EM/Content/AssetDesign/Char/Npc/Test/BT_NPC_Ghost.7"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_NPC_Ghost:BTDecorator_Blackboard_1'",
+              "ObjectPath": "EM/Content/AssetDesign/Char/Npc/Test/BT_NPC_Ghost.4"
+            },
+            {
+              "ObjectName": "BTDecorator_IsAtLocation'BT_NPC_Ghost:BTDecorator_IsAtLocation_4'",
+              "ObjectPath": "EM/Content/AssetDesign/Char/Npc/Test/BT_NPC_Ghost.6"
+            }
+          ],
+          "DecoratorOps": [
+            {
+              "Operation": "EBTDecoratorLogic::Or",
+              "Number": 2
+            },
+            {
+              "Operation": "EBTDecoratorLogic::Test",
+              "Number": 0
+            },
+            {
+              "Operation": "EBTDecoratorLogic::Test",
+              "Number": 1
+            }
+          ]
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_NewMoveTo'BT_NPC_Ghost:BTTask_NewMoveTo_0'",
+            "ObjectPath": "EM/Content/AssetDesign/Char/Npc/Test/BT_NPC_Ghost.8"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_NPC_Ghost'",
+        "ObjectPath": "EM/Content/AssetDesign/Char/Npc/Test/BT_NPC_Ghost.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_NPC_Ghost:BTComposite_Sequence_9'",
+        "ObjectPath": "EM/Content/AssetDesign/Char/Npc/Test/BT_NPC_Ghost.3"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_0",
+    "Outer": "BT_NPC_Ghost",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_NPC_Ghost:BTComposite_Sequence_9'",
+            "ObjectPath": "EM/Content/AssetDesign/Char/Npc/Test/BT_NPC_Ghost.3"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_NPC_Ghost:BTDecorator_Blackboard_7'",
+              "ObjectPath": "EM/Content/AssetDesign/Char/Npc/Test/BT_NPC_Ghost.5"
+            }
+          ],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_NPC_Ghost'",
+        "ObjectPath": "EM/Content/AssetDesign/Char/Npc/Test/BT_NPC_Ghost.0"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_9",
+    "Outer": "BT_NPC_Ghost",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_NpcGetTarget'BT_NPC_Ghost:BTTask_NpcGetTarget_1'",
+            "ObjectPath": "EM/Content/AssetDesign/Char/Npc/Test/BT_NPC_Ghost.9"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector'BT_NPC_Ghost:BTComposite_Selector_6'",
+            "ObjectPath": "EM/Content/AssetDesign/Char/Npc/Test/BT_NPC_Ghost.1"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_NPC_Ghost'",
+        "ObjectPath": "EM/Content/AssetDesign/Char/Npc/Test/BT_NPC_Ghost.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_NPC_Ghost:BTComposite_Sequence_0'",
+        "ObjectPath": "EM/Content/AssetDesign/Char/Npc/Test/BT_NPC_Ghost.2"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_1",
+    "Outer": "BT_NPC_Ghost",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "CachedDescription": "PatrolLoc is Is Not Set",
+      "OperationType": 1,
+      "BlackboardKey": {
+        "SelectedKeyName": "PatrolLoc"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_NPC_Ghost'",
+        "ObjectPath": "EM/Content/AssetDesign/Char/Npc/Test/BT_NPC_Ghost.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_NPC_Ghost:BTComposite_Selector_6'",
+        "ObjectPath": "EM/Content/AssetDesign/Char/Npc/Test/BT_NPC_Ghost.1"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_7",
+    "Outer": "BT_NPC_Ghost",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "StringValue": "GhostGo",
+      "CachedDescription": "QuestEvent Is Equal To [GhostGo]",
+      "BlackboardKey": {
+        "SelectedKeyName": "QuestEvent"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_NPC_Ghost'",
+        "ObjectPath": "EM/Content/AssetDesign/Char/Npc/Test/BT_NPC_Ghost.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_NPC_Ghost:BTComposite_Sequence_0'",
+        "ObjectPath": "EM/Content/AssetDesign/Char/Npc/Test/BT_NPC_Ghost.2"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_IsAtLocation",
+    "Name": "BTDecorator_IsAtLocation_4",
+    "Outer": "BT_NPC_Ghost",
+    "Class": "UScriptClass'BTDecorator_IsAtLocation'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "AcceptableRadius": 70.0,
+      "BlackboardKey": {
+        "SelectedKeyName": "PatrolLoc"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_NPC_Ghost'",
+        "ObjectPath": "EM/Content/AssetDesign/Char/Npc/Test/BT_NPC_Ghost.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_NPC_Ghost:BTComposite_Selector_6'",
+        "ObjectPath": "EM/Content/AssetDesign/Char/Npc/Test/BT_NPC_Ghost.1"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_GetPatrolLoc",
+    "Name": "BTTask_GetPatrolLoc_2",
+    "Outer": "BT_NPC_Ghost",
+    "Class": "UScriptClass'BTTask_GetPatrolLoc'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_NPC_Ghost'",
+        "ObjectPath": "EM/Content/AssetDesign/Char/Npc/Test/BT_NPC_Ghost.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_NPC_Ghost:BTComposite_Selector_6'",
+        "ObjectPath": "EM/Content/AssetDesign/Char/Npc/Test/BT_NPC_Ghost.1"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_NewMoveTo",
+    "Name": "BTTask_NewMoveTo_0",
+    "Outer": "BT_NPC_Ghost",
+    "Class": "UScriptClass'BTTask_NewMoveTo'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "bOrientRotationToMovement": true,
+      "MaxSpeed": 100.0,
+      "MaxAcceleration": 10000.0,
+      "AcceptableRadius": 20.0,
+      "bStopOnOverlapNeedsUpdate": false,
+      "BlackboardKey": {
+        "SelectedKeyName": "PatrolLoc"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_NPC_Ghost'",
+        "ObjectPath": "EM/Content/AssetDesign/Char/Npc/Test/BT_NPC_Ghost.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_NPC_Ghost:BTComposite_Selector_6'",
+        "ObjectPath": "EM/Content/AssetDesign/Char/Npc/Test/BT_NPC_Ghost.1"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_NpcGetTarget",
+    "Name": "BTTask_NpcGetTarget_1",
+    "Outer": "BT_NPC_Ghost",
+    "Class": "UScriptClass'BTTask_NpcGetTarget'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_NPC_Ghost'",
+        "ObjectPath": "EM/Content/AssetDesign/Char/Npc/Test/BT_NPC_Ghost.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_NPC_Ghost:BTComposite_Sequence_9'",
+        "ObjectPath": "EM/Content/AssetDesign/Char/Npc/Test/BT_NPC_Ghost.3"
+      }
+    }
+  }
+]

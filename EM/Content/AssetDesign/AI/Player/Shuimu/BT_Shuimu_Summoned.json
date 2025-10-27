@@ -1,0 +1,87 @@
+[
+  {
+    "Type": "BehaviorTree",
+    "Name": "BT_Shuimu_Summoned",
+    "Class": "UScriptClass'BehaviorTree'",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "RootNode": {
+        "ObjectName": "BTComposite_Selector'BT_Shuimu_Summoned:BTComposite_Selector_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Shuimu/BT_Shuimu_Summoned.1"
+      },
+      "BlackboardAsset": {
+        "ObjectName": "BlackboardData'BB_Shuimu_Summoned'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Shuimu/BB_Shuimu_Summoned.0"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_1",
+    "Outer": "BT_Shuimu_Summoned",
+    "Class": "UScriptClass'BTComposite_Selector'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_UseSkill'BT_Shuimu_Summoned:BTTask_UseSkill_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Shuimu/BT_Shuimu_Summoned.3"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Shuimu_Summoned:BTDecorator_Blackboard_0'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Player/Shuimu/BT_Shuimu_Summoned.2"
+            }
+          ],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Shuimu_Summoned'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Shuimu/BT_Shuimu_Summoned.0"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_0",
+    "Outer": "BT_Shuimu_Summoned",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "CachedDescription": "ActionMode 等于 Active",
+      "BlackboardKey": {
+        "SelectedKeyName": "ActionMode"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::Self",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Shuimu_Summoned'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Shuimu/BT_Shuimu_Summoned.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Shuimu_Summoned:BTComposite_Selector_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Shuimu/BT_Shuimu_Summoned.1"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_UseSkill",
+    "Name": "BTTask_UseSkill_0",
+    "Outer": "BT_Shuimu_Summoned",
+    "Class": "UScriptClass'BTTask_UseSkill'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ContinueTime": 2.8,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Shuimu_Summoned'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Shuimu/BT_Shuimu_Summoned.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Shuimu_Summoned:BTComposite_Selector_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Shuimu/BT_Shuimu_Summoned.1"
+      }
+    }
+  }
+]

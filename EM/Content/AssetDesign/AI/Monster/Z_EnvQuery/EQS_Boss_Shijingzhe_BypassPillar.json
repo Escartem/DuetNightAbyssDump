@@ -1,0 +1,219 @@
+[
+  {
+    "Type": "EnvQuery",
+    "Name": "EQS_Boss_Shijingzhe_BypassPillar",
+    "Class": "UScriptClass'EnvQuery'",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "QueryName": "EQS_Boss_Shijingzhe_returncenter_2",
+      "Options": [
+        {
+          "ObjectName": "EnvQueryOption'EQS_Boss_Shijingzhe_BypassPillar:EnvQueryOption_1'",
+          "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Z_EnvQuery/EQS_Boss_Shijingzhe_BypassPillar.2"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "EnvQueryGenerator_EMDonut",
+    "Name": "EnvQueryGenerator_EMDonut_0",
+    "Outer": "EQS_Boss_Shijingzhe_BypassPillar",
+    "Class": "UScriptClass'EnvQueryGenerator_EMDonut'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "InnerRadius": {
+        "DefaultValue": 400.0
+      },
+      "OuterRadius": {
+        "DefaultValue": 2500.0
+      },
+      "NumberOfRings": {
+        "DefaultValue": 10
+      },
+      "PointsPerRing": {
+        "DefaultValue": 20
+      },
+      "Center": {
+        "ObjectName": "BlueprintGeneratedClass'BTTargetEQS_C'",
+        "ObjectPath": "EM/Content/BluePrints/AI/EQSContext/BTTargetEQS.1"
+      },
+      "ProjectionData": {
+        "VersionNum": 1,
+        "ProjectDown": 400.0,
+        "ProjectUp": 300.0,
+        "ExtentX": 30.0,
+        "PostProjectionVerticalOffset": 20.0,
+        "SerializedChannel": "ECC_Visibility",
+        "TraceMode": "EEnvQueryTrace::Navigation"
+      },
+      "VerNum": 1
+    }
+  },
+  {
+    "Type": "EnvQueryOption",
+    "Name": "EnvQueryOption_1",
+    "Outer": "EQS_Boss_Shijingzhe_BypassPillar",
+    "Class": "UScriptClass'EnvQueryOption'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Generator": {
+        "ObjectName": "EnvQueryGenerator_EMDonut'EQS_Boss_Shijingzhe_BypassPillar:EnvQueryGenerator_EMDonut_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Z_EnvQuery/EQS_Boss_Shijingzhe_BypassPillar.1"
+      },
+      "Tests": [
+        {
+          "ObjectName": "EnvQueryTest_EMPathfinding'EQS_Boss_Shijingzhe_BypassPillar:EnvQueryTest_EMPathfinding_1'",
+          "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Z_EnvQuery/EQS_Boss_Shijingzhe_BypassPillar.8"
+        },
+        {
+          "ObjectName": "EnvQueryTest_EMDistance'EQS_Boss_Shijingzhe_BypassPillar:EnvQueryTest_EMDistance_3'",
+          "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Z_EnvQuery/EQS_Boss_Shijingzhe_BypassPillar.3"
+        },
+        {
+          "ObjectName": "EnvQueryTest_EMDistance'EQS_Boss_Shijingzhe_BypassPillar:EnvQueryTest_EMDistance_8'",
+          "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Z_EnvQuery/EQS_Boss_Shijingzhe_BypassPillar.7"
+        },
+        {
+          "ObjectName": "EnvQueryTest_EMDistance'EQS_Boss_Shijingzhe_BypassPillar:EnvQueryTest_EMDistance_4'",
+          "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Z_EnvQuery/EQS_Boss_Shijingzhe_BypassPillar.4"
+        },
+        {
+          "ObjectName": "EnvQueryTest_EMDistance'EQS_Boss_Shijingzhe_BypassPillar:EnvQueryTest_EMDistance_5'",
+          "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Z_EnvQuery/EQS_Boss_Shijingzhe_BypassPillar.5"
+        },
+        {
+          "ObjectName": "EnvQueryTest_EMDistance'EQS_Boss_Shijingzhe_BypassPillar:EnvQueryTest_EMDistance_6'",
+          "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Z_EnvQuery/EQS_Boss_Shijingzhe_BypassPillar.6"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "EnvQueryTest_EMDistance",
+    "Name": "EnvQueryTest_EMDistance_3",
+    "Outer": "EQS_Boss_Shijingzhe_BypassPillar",
+    "Class": "UScriptClass'EnvQueryTest_EMDistance'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TestMode": "EEMEnvTestDistance::Distance2D",
+      "DistanceTo": {
+        "ObjectName": "BlueprintGeneratedClass'BTTargetEQS_C'",
+        "ObjectPath": "EM/Content/BluePrints/AI/EQSContext/BTTargetEQS.1"
+      },
+      "TestOrder": 1,
+      "TestPurpose": "EEnvTestPurpose::Score",
+      "ScoringEquation": "EEnvTestScoreEquation::InverseLinear",
+      "ClampMinType": "EEnvQueryTestClamping::SpecifiedValue",
+      "ScoreClampMin": {
+        "DefaultValue": 100.0
+      },
+      "VerNum": 1
+    }
+  },
+  {
+    "Type": "EnvQueryTest_EMDistance",
+    "Name": "EnvQueryTest_EMDistance_4",
+    "Outer": "EQS_Boss_Shijingzhe_BypassPillar",
+    "Class": "UScriptClass'EnvQueryTest_EMDistance'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TestMode": "EEMEnvTestDistance::Distance2D",
+      "DistanceTo": {
+        "ObjectName": "BlueprintGeneratedClass'ShijingzhePillarLocEQS_1_C'",
+        "ObjectPath": "EM/Content/BluePrints/AI/EQSContext/ShijingzhePillarLocEQS_1.1"
+      },
+      "TestOrder": 3,
+      "TestPurpose": "EEnvTestPurpose::Filter",
+      "FilterType": "EEnvTestFilterType::Minimum",
+      "FloatValueMin": {
+        "DefaultValue": 1000.0
+      },
+      "ScoringEquation": "EEnvTestScoreEquation::InverseLinear",
+      "ScoringFactor": {
+        "DefaultValue": 3.0
+      },
+      "VerNum": 1
+    }
+  },
+  {
+    "Type": "EnvQueryTest_EMDistance",
+    "Name": "EnvQueryTest_EMDistance_5",
+    "Outer": "EQS_Boss_Shijingzhe_BypassPillar",
+    "Class": "UScriptClass'EnvQueryTest_EMDistance'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TestMode": "EEMEnvTestDistance::Distance2D",
+      "DistanceTo": {
+        "ObjectName": "BlueprintGeneratedClass'ShijingzhePillarLocEQS_2_C'",
+        "ObjectPath": "EM/Content/BluePrints/AI/EQSContext/ShijingzhePillarLocEQS_2.1"
+      },
+      "TestOrder": 4,
+      "TestPurpose": "EEnvTestPurpose::Filter",
+      "FilterType": "EEnvTestFilterType::Minimum",
+      "FloatValueMin": {
+        "DefaultValue": 1000.0
+      },
+      "ScoringEquation": "EEnvTestScoreEquation::InverseLinear",
+      "ScoringFactor": {
+        "DefaultValue": 3.0
+      },
+      "VerNum": 1
+    }
+  },
+  {
+    "Type": "EnvQueryTest_EMDistance",
+    "Name": "EnvQueryTest_EMDistance_6",
+    "Outer": "EQS_Boss_Shijingzhe_BypassPillar",
+    "Class": "UScriptClass'EnvQueryTest_EMDistance'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TestMode": "EEMEnvTestDistance::Distance2D",
+      "DistanceTo": {
+        "ObjectName": "BlueprintGeneratedClass'ShijingzhePillarLocEQS_3_C'",
+        "ObjectPath": "EM/Content/BluePrints/AI/EQSContext/ShijingzhePillarLocEQS_3.1"
+      },
+      "TestOrder": 5,
+      "TestPurpose": "EEnvTestPurpose::Filter",
+      "FilterType": "EEnvTestFilterType::Minimum",
+      "FloatValueMin": {
+        "DefaultValue": 1000.0
+      },
+      "ScoringEquation": "EEnvTestScoreEquation::InverseLinear",
+      "ScoringFactor": {
+        "DefaultValue": 3.0
+      },
+      "VerNum": 1
+    }
+  },
+  {
+    "Type": "EnvQueryTest_EMDistance",
+    "Name": "EnvQueryTest_EMDistance_8",
+    "Outer": "EQS_Boss_Shijingzhe_BypassPillar",
+    "Class": "UScriptClass'EnvQueryTest_EMDistance'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TestMode": "EEMEnvTestDistance::Distance2D",
+      "TestOrder": 2,
+      "TestPurpose": "EEnvTestPurpose::Score",
+      "ScoringEquation": "EEnvTestScoreEquation::InverseLinear",
+      "ScoreClampMin": {
+        "DefaultValue": 1200.0
+      },
+      "ScoreClampMax": {
+        "DefaultValue": 1000.0
+      },
+      "VerNum": 1
+    }
+  },
+  {
+    "Type": "EnvQueryTest_EMPathfinding",
+    "Name": "EnvQueryTest_EMPathfinding_1",
+    "Outer": "EQS_Boss_Shijingzhe_BypassPillar",
+    "Class": "UScriptClass'EnvQueryTest_EMPathfinding'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TestPurpose": "EEnvTestPurpose::Filter",
+      "VerNum": 1
+    }
+  }
+]

@@ -1,0 +1,320 @@
+[
+  {
+    "Type": "Function",
+    "Name": "GetModuleName",
+    "Outer": "BP_AOITriggerBox_SpecialQuest_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "ChildProperties": [
+      {
+        "Type": "StrProperty",
+        "Name": "ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "Parm | OutParm | ReturnParm"
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_HasOutParms | FUNC_BlueprintCallable | FUNC_BlueprintEvent | FUNC_Const"
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BP_AOITriggerBox_SpecialQuest_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BP_AOITriggerBox_SpecialQuest_C:SimpleConstructionScript_0'",
+        "ObjectPath": "EM/Content/BluePrints/Common/Triggers/BP_AOITriggerBox_SpecialQuest.8"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'AOITriggerBox'",
+      "ObjectPath": "/Script/EM"
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'BP_AOITriggerBox_SpecialQuest_C:GetModuleName'",
+        "ObjectPath": "EM/Content/BluePrints/Common/Triggers/BP_AOITriggerBox_SpecialQuest.0"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "TipTrigger",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'BoxComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "FuncMap": {
+      "GetModuleName": {
+        "ObjectName": "Function'BP_AOITriggerBox_SpecialQuest_C:GetModuleName'",
+        "ObjectPath": "EM/Content/BluePrints/Common/Triggers/BP_AOITriggerBox_SpecialQuest.0"
+      }
+    },
+    "ClassFlags": "CLASS_Config | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "Interfaces": [
+      {
+        "Class": {
+          "ObjectName": "Class'UnLuaInterface'",
+          "ObjectPath": "/Script/UnLua"
+        },
+        "PointerOffset": 0,
+        "bImplementedByK2": true
+      }
+    ],
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BP_AOITriggerBox_SpecialQuest_C'Default__BP_AOITriggerBox_SpecialQuest_C'",
+      "ObjectPath": "EM/Content/BluePrints/Common/Triggers/BP_AOITriggerBox_SpecialQuest.2"
+    }
+  },
+  {
+    "Type": "BP_AOITriggerBox_SpecialQuest_C",
+    "Name": "Default__BP_AOITriggerBox_SpecialQuest_C",
+    "Class": "BlueprintGeneratedClass'EM/Content/BluePrints/Common/Triggers/BP_AOITriggerBox_SpecialQuest.BP_AOITriggerBox_SpecialQuest_C'",
+    "Flags": "RF_Public | RF_Transactional | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "CollisionComponent": {
+        "ObjectName": "BoxComponent'Default__BP_AOITriggerBox_SpecialQuest_C:CollisionComp'",
+        "ObjectPath": "EM/Content/BluePrints/Common/Triggers/BP_AOITriggerBox_SpecialQuest.4"
+      },
+      "RootComponent": {
+        "ObjectName": "BoxComponent'Default__BP_AOITriggerBox_SpecialQuest_C:CollisionComp'",
+        "ObjectPath": "EM/Content/BluePrints/Common/Triggers/BP_AOITriggerBox_SpecialQuest.4"
+      }
+    }
+  },
+  {
+    "Type": "BoxComponent",
+    "Name": "TipTrigger_GEN_VARIABLE",
+    "Outer": "BP_AOITriggerBox_SpecialQuest_C",
+    "Class": "UScriptClass'BoxComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "BoxExtent": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "AreaClass": {
+        "ObjectName": "Class'NavArea_Obstacle'",
+        "ObjectPath": "/Script/NavigationSystem"
+      },
+      "BodyInstance": {
+        "CollisionProfileName": "OnlyPlayer",
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "WorldStatic",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "WorldDynamic",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Pawn",
+              "Response": "ECR_Overlap"
+            },
+            {
+              "Channel": "Visibility",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Camera",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "PhysicsBody",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Vehicle",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Destructible",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Item",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "TraceExceptChar",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "TraceOverlap",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "MonsterPawn",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "BreakableItem",
+              "Response": "ECR_Ignore"
+            }
+          ]
+        }
+      }
+    }
+  },
+  {
+    "Type": "BoxComponent",
+    "Name": "CollisionComp",
+    "Outer": "Default__BP_AOITriggerBox_SpecialQuest_C",
+    "Class": "UScriptClass'BoxComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "BoxExtent": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "BodyInstance": {
+        "CollisionEnabled": "ECollisionEnabled::NoCollision",
+        "CollisionProfileName": "Custom",
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "WorldStatic",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "WorldDynamic",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Pawn",
+              "Response": "ECR_Overlap"
+            },
+            {
+              "Channel": "Visibility",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Camera",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "PhysicsBody",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Vehicle",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Destructible",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Item",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "TraceExceptChar",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "TraceOverlap",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "MonsterPawn",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "BreakableItem",
+              "Response": "ECR_Ignore"
+            }
+          ]
+        }
+      }
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Outer": "BP_AOITriggerBox_SpecialQuest_C",
+    "Class": "UScriptClass'SceneComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BP_AOITriggerBox_SpecialQuest_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "EM/Content/BluePrints/Common/Triggers/BP_AOITriggerBox_SpecialQuest.5"
+      },
+      "VariableGuid": "C13D24A2-4CA7B3AF-BF295BBA-B50C4F03",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_1",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'BoxComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "BoxComponent'BP_AOITriggerBox_SpecialQuest_C:TipTrigger_GEN_VARIABLE'",
+        "ObjectPath": "EM/Content/BluePrints/Common/Triggers/BP_AOITriggerBox_SpecialQuest.3"
+      },
+      "ParentComponentOrVariableName": "CollisionComp",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "42F4C54F-4B9D6266-E65A5F82-59615820",
+      "InternalVariableName": "TipTrigger"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Outer": "BP_AOITriggerBox_SpecialQuest_C",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_AOITriggerBox_SpecialQuest_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "EM/Content/BluePrints/Common/Triggers/BP_AOITriggerBox_SpecialQuest.7"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_AOITriggerBox_SpecialQuest_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "EM/Content/BluePrints/Common/Triggers/BP_AOITriggerBox_SpecialQuest.7"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BP_AOITriggerBox_SpecialQuest_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "EM/Content/BluePrints/Common/Triggers/BP_AOITriggerBox_SpecialQuest.6"
+      }
+    }
+  }
+]

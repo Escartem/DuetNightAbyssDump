@@ -1,0 +1,170 @@
+[
+  {
+    "Type": "AIDataProvider_QueryParams",
+    "Name": "AIDataProvider_QueryParams_0",
+    "Outer": "EnvQueryGenerator_EMOnCircle_0",
+    "Class": "UScriptClass'AIDataProvider_QueryParams'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ParamName": "EMOnCircle.CircleRadius"
+    }
+  },
+  {
+    "Type": "AIDataProvider_QueryParams",
+    "Name": "AIDataProvider_QueryParams_1",
+    "Outer": "EnvQueryGenerator_EMOnCircle_0",
+    "Class": "UScriptClass'AIDataProvider_QueryParams'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ParamName": "EMOnCircle.NumberOfPoints"
+    }
+  },
+  {
+    "Type": "AIDataProvider_QueryParams",
+    "Name": "AIDataProvider_QueryParams_2",
+    "Outer": "EnvQueryGenerator_EMOnCircle_0",
+    "Class": "UScriptClass'AIDataProvider_QueryParams'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ParamName": "EMOnCircle.SpaceBetween"
+    }
+  },
+  {
+    "Type": "AIDataProvider_QueryParams",
+    "Name": "AIDataProvider_QueryParams_3",
+    "Outer": "EnvQueryGenerator_EMOnCircle_0",
+    "Class": "UScriptClass'AIDataProvider_QueryParams'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ParamName": "EMOnCircle.ArcAngle"
+    }
+  },
+  {
+    "Type": "EnvQuery",
+    "Name": "EQS_SelfCircle",
+    "Class": "UScriptClass'EnvQuery'",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "QueryName": "EQS_SelfDonut_2",
+      "Options": [
+        {
+          "ObjectName": "EnvQueryOption'EQS_SelfCircle:EnvQueryOption_1'",
+          "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Z_EnvQuery/EQS_SelfCircle.6"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "EnvQueryGenerator_EMOnCircle",
+    "Name": "EnvQueryGenerator_EMOnCircle_0",
+    "Outer": "EQS_SelfCircle",
+    "Class": "UScriptClass'EnvQueryGenerator_EMOnCircle'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "CircleRadius": {
+        "DataBinding": {
+          "ObjectName": "AIDataProvider_QueryParams'EQS_SelfCircle:EnvQueryGenerator_EMOnCircle_0.AIDataProvider_QueryParams_0'",
+          "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Z_EnvQuery/EQS_SelfCircle.0"
+        },
+        "DataField": "FloatValue"
+      },
+      "SpaceBetween": {
+        "DataBinding": {
+          "ObjectName": "AIDataProvider_QueryParams'EQS_SelfCircle:EnvQueryGenerator_EMOnCircle_0.AIDataProvider_QueryParams_2'",
+          "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Z_EnvQuery/EQS_SelfCircle.2"
+        },
+        "DataField": "FloatValue"
+      },
+      "NumberOfPoints": {
+        "DataBinding": {
+          "ObjectName": "AIDataProvider_QueryParams'EQS_SelfCircle:EnvQueryGenerator_EMOnCircle_0.AIDataProvider_QueryParams_1'",
+          "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Z_EnvQuery/EQS_SelfCircle.1"
+        },
+        "DataField": "IntValue"
+      },
+      "ArcAngle": {
+        "DataBinding": {
+          "ObjectName": "AIDataProvider_QueryParams'EQS_SelfCircle:EnvQueryGenerator_EMOnCircle_0.AIDataProvider_QueryParams_3'",
+          "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Z_EnvQuery/EQS_SelfCircle.3"
+        },
+        "DataField": "FloatValue"
+      },
+      "TraceData": {
+        "VersionNum": 1,
+        "SerializedChannel": "ECC_Visibility"
+      },
+      "ProjectionData": {
+        "VersionNum": 1,
+        "ProjectDown": 400.0,
+        "ProjectUp": 300.0,
+        "ExtentX": 30.0,
+        "PostProjectionVerticalOffset": 20.0,
+        "SerializedChannel": "ECC_Visibility",
+        "TraceMode": "EEnvQueryTrace::Navigation"
+      },
+      "VerNum": 1
+    }
+  },
+  {
+    "Type": "EnvQueryOption",
+    "Name": "EnvQueryOption_1",
+    "Outer": "EQS_SelfCircle",
+    "Class": "UScriptClass'EnvQueryOption'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Generator": {
+        "ObjectName": "EnvQueryGenerator_EMOnCircle'EQS_SelfCircle:EnvQueryGenerator_EMOnCircle_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Z_EnvQuery/EQS_SelfCircle.5"
+      },
+      "Tests": [
+        {
+          "ObjectName": "EnvQueryTest_EMPathfinding'EQS_SelfCircle:EnvQueryTest_EMPathfinding_1'",
+          "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Z_EnvQuery/EQS_SelfCircle.8"
+        },
+        {
+          "ObjectName": "EnvQueryTest_EMOverlap'EQS_SelfCircle:EnvQueryTest_EMOverlap_2'",
+          "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Z_EnvQuery/EQS_SelfCircle.7"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "EnvQueryTest_EMOverlap",
+    "Name": "EnvQueryTest_EMOverlap_2",
+    "Outer": "EQS_SelfCircle",
+    "Class": "UScriptClass'EnvQueryTest_EMOverlap'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "OverlapData": {
+        "ExtentX": 40.0,
+        "ExtentY": 40.0,
+        "ExtentZ": 40.0,
+        "ShapeOffset": {
+          "X": 0.0,
+          "Y": 0.0,
+          "Z": 90.0
+        },
+        "OverlapChannel": "ECC_GameTraceChannel6",
+        "OverlapShape": "EEnvOverlapShape::Capsule",
+        "bSkipOverlapQuerier": true
+      },
+      "TestOrder": 1,
+      "TestPurpose": "EEnvTestPurpose::Filter",
+      "BoolValue": {
+        "DefaultValue": false
+      },
+      "VerNum": 1
+    }
+  },
+  {
+    "Type": "EnvQueryTest_EMPathfinding",
+    "Name": "EnvQueryTest_EMPathfinding_1",
+    "Outer": "EQS_SelfCircle",
+    "Class": "UScriptClass'EnvQueryTest_EMPathfinding'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TestPurpose": "EEnvTestPurpose::Filter",
+      "VerNum": 1
+    }
+  }
+]

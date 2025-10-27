@@ -1,0 +1,853 @@
+[
+  {
+    "Type": "BehaviorTree",
+    "Name": "BT_Eve_Summoned_Rook",
+    "Class": "UScriptClass'BehaviorTree'",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "RootNode": {
+        "ObjectName": "BTComposite_Selector'BT_Eve_Summoned_Rook:BTComposite_Selector_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Rook.3"
+      },
+      "BlackboardAsset": {
+        "ObjectName": "BlackboardData'BB_9Wuyou'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/NE_Wuyou/BB_9Wuyou.0"
+      }
+    }
+  },
+  {
+    "Type": "BPServer_Common_JudgeDisFromKey_C",
+    "Name": "BPServer_Common_JudgeDisFromKey_C_3",
+    "Outer": "BT_Eve_Summoned_Rook",
+    "Class": "BlueprintGeneratedClass'EM/Content/BluePrints/AI/BTServer/BPServer_Common_JudgeDisFromKey.BPServer_Common_JudgeDisFromKey_C'",
+    "Template": {
+      "ObjectName": "BPServer_Common_JudgeDisFromKey_C'Default__BPServer_Common_JudgeDisFromKey_C'",
+      "ObjectPath": "EM/Content/BluePrints/AI/BTServer/BPServer_Common_JudgeDisFromKey.3"
+    },
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "KeyType": "Actor",
+      "TargetKeyName": "Player",
+      "ReturnKeyName": "PlayerDis",
+      "bShowPropertyDetails": false,
+      "Interval": 0.5,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Eve_Summoned_Rook'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Rook.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Eve_Summoned_Rook:BTComposite_Selector_4'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Rook.6"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_0",
+    "Outer": "BT_Eve_Summoned_Rook",
+    "Class": "UScriptClass'BTComposite_Selector'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_Eve_Summoned_Rook:BTComposite_Sequence_1'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Rook.8"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Eve_Summoned_Rook:BTDecorator_Blackboard_38'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Rook.13"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector'BT_Eve_Summoned_Rook:BTComposite_Selector_2'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Rook.5"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Eve_Summoned_Rook:BTDecorator_Blackboard_37'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Rook.12"
+            }
+          ],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Eve_Summoned_Rook'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Rook.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Eve_Summoned_Rook:BTComposite_Selector_9'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Rook.7"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_1",
+    "Outer": "BT_Eve_Summoned_Rook",
+    "Class": "UScriptClass'BTComposite_Selector'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_Eve_Summoned_Rook:BTComposite_Sequence_4'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Rook.9"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Eve_Summoned_Rook'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Rook.0"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_13",
+    "Outer": "BT_Eve_Summoned_Rook",
+    "Class": "UScriptClass'BTComposite_Selector'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_RunBehavior'BT_Eve_Summoned_Rook:BTTask_RunBehavior_5'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Rook.26"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_NewMoveTo'BT_Eve_Summoned_Rook:BTTask_NewMoveTo_3'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Rook.23"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Eve_Summoned_Rook'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Rook.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Eve_Summoned_Rook:BTComposite_Selector_4'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Rook.6"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_2",
+    "Outer": "BT_Eve_Summoned_Rook",
+    "Class": "UScriptClass'BTComposite_Selector'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_UseSkill'BT_Eve_Summoned_Rook:BTTask_UseSkill_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Rook.27"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Cooldown'BT_Eve_Summoned_Rook:BTDecorator_Cooldown_4'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Rook.17"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_UseSkill'BT_Eve_Summoned_Rook:BTTask_UseSkill_3'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Rook.29"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Eve_Summoned_Rook'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Rook.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Eve_Summoned_Rook:BTComposite_Selector_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Rook.2"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_4",
+    "Outer": "BT_Eve_Summoned_Rook",
+    "Class": "UScriptClass'BTComposite_Selector'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector'BT_Eve_Summoned_Rook:BTComposite_Selector_9'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Rook.7"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Eve_Summoned_Rook:BTDecorator_Blackboard_35'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Rook.10"
+            },
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Eve_Summoned_Rook:BTDecorator_Blackboard_36'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Rook.11"
+            }
+          ],
+          "DecoratorOps": [
+            {
+              "Operation": "EBTDecoratorLogic::And",
+              "Number": 2
+            },
+            {
+              "Operation": "EBTDecoratorLogic::Test",
+              "Number": 0
+            },
+            {
+              "Operation": "EBTDecoratorLogic::Test",
+              "Number": 1
+            }
+          ]
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector'BT_Eve_Summoned_Rook:BTComposite_Selector_13'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Rook.4"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Eve_Summoned_Rook:BTDecorator_Blackboard_42'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Rook.15"
+            },
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Eve_Summoned_Rook:BTDecorator_Blackboard_43'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Rook.16"
+            },
+            {
+              "ObjectName": "BTDecorator_TimeLimit'BT_Eve_Summoned_Rook:BTDecorator_TimeLimit_3'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Rook.18"
+            }
+          ],
+          "DecoratorOps": [
+            {
+              "Operation": "EBTDecoratorLogic::And",
+              "Number": 2
+            },
+            {
+              "Operation": "EBTDecoratorLogic::Or",
+              "Number": 2
+            },
+            {
+              "Operation": "EBTDecoratorLogic::Test",
+              "Number": 0
+            },
+            {
+              "Operation": "EBTDecoratorLogic::Test",
+              "Number": 1
+            },
+            {
+              "Operation": "EBTDecoratorLogic::Test",
+              "Number": 2
+            }
+          ]
+        }
+      ],
+      "Services": [
+        {
+          "ObjectName": "BPServer_Common_JudgeDisFromKey_C'BT_Eve_Summoned_Rook:BPServer_Common_JudgeDisFromKey_C_3'",
+          "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Rook.1"
+        },
+        {
+          "ObjectName": "BTService_BBValueDis'BT_Eve_Summoned_Rook:BTService_BBValueDis_3'",
+          "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Rook.19"
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Eve_Summoned_Rook'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Rook.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Eve_Summoned_Rook:BTComposite_Sequence_4'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Rook.9"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_9",
+    "Outer": "BT_Eve_Summoned_Rook",
+    "Class": "UScriptClass'BTComposite_Selector'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector'BT_Eve_Summoned_Rook:BTComposite_Selector_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Rook.2"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Eve_Summoned_Rook:BTDecorator_Blackboard_39'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Rook.14"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_RunBehavior'BT_Eve_Summoned_Rook:BTTask_RunBehavior_2'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Rook.24"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Eve_Summoned_Rook'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Rook.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Eve_Summoned_Rook:BTComposite_Selector_4'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Rook.6"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_1",
+    "Outer": "BT_Eve_Summoned_Rook",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_NewMoveTo'BT_Eve_Summoned_Rook:BTTask_NewMoveTo_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Rook.22"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_UseSkill'BT_Eve_Summoned_Rook:BTTask_UseSkill_2'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Rook.28"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Eve_Summoned_Rook'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Rook.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Eve_Summoned_Rook:BTComposite_Selector_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Rook.2"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_4",
+    "Outer": "BT_Eve_Summoned_Rook",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_RunBehavior'BT_Eve_Summoned_Rook:BTTask_RunBehavior_3'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Rook.25"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_EveSummoned_GetPlayer_C'BT_Eve_Summoned_Rook:BTTask_EveSummoned_GetPlayer_C_2'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Rook.21"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector'BT_Eve_Summoned_Rook:BTComposite_Selector_4'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Rook.6"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "Services": [
+        {
+          "ObjectName": "BTService_EnemyVision'BT_Eve_Summoned_Rook:BTService_EnemyVision_3'",
+          "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Rook.20"
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Eve_Summoned_Rook'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Rook.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Eve_Summoned_Rook:BTComposite_Selector_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Rook.3"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_35",
+    "Outer": "BT_Eve_Summoned_Rook",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "CachedDescription": "Target is 已设置",
+      "BlackboardKey": {
+        "SelectedKeyName": "Target"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Eve_Summoned_Rook'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Rook.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Eve_Summoned_Rook:BTComposite_Selector_4'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Rook.6"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_36",
+    "Outer": "BT_Eve_Summoned_Rook",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "CachedDescription": "TargetPlayerDead is 未设置",
+      "OperationType": 1,
+      "BlackboardKey": {
+        "SelectedKeyName": "TargetPlayerDead"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Eve_Summoned_Rook'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Rook.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Eve_Summoned_Rook:BTComposite_Selector_4'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Rook.6"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_37",
+    "Outer": "BT_Eve_Summoned_Rook",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "FloatValue": 800.0,
+      "CachedDescription": "TickTargetDis 小于或等于 800.000000",
+      "OperationType": 3,
+      "BlackboardKey": {
+        "SelectedKeyName": "TickTargetDis"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Eve_Summoned_Rook'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Rook.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Eve_Summoned_Rook:BTComposite_Selector_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Rook.2"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_38",
+    "Outer": "BT_Eve_Summoned_Rook",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "FloatValue": 800.0,
+      "CachedDescription": "TickTargetDis 大于 800.000000",
+      "OperationType": 4,
+      "BlackboardKey": {
+        "SelectedKeyName": "TickTargetDis"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Eve_Summoned_Rook'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Rook.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Eve_Summoned_Rook:BTComposite_Selector_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Rook.2"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_39",
+    "Outer": "BT_Eve_Summoned_Rook",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "FloatValue": 2000.0,
+      "CachedDescription": "PlayerDis 小于或等于 2000.000000",
+      "OperationType": 3,
+      "BlackboardKey": {
+        "SelectedKeyName": "PlayerDis"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Eve_Summoned_Rook'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Rook.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Eve_Summoned_Rook:BTComposite_Selector_9'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Rook.7"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_42",
+    "Outer": "BT_Eve_Summoned_Rook",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "CachedDescription": "Target is 未设置",
+      "OperationType": 1,
+      "BlackboardKey": {
+        "SelectedKeyName": "Target"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::Self",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Eve_Summoned_Rook'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Rook.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Eve_Summoned_Rook:BTComposite_Selector_4'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Rook.6"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_43",
+    "Outer": "BT_Eve_Summoned_Rook",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "CachedDescription": "TargetPlayerDead is 已设置",
+      "BlackboardKey": {
+        "SelectedKeyName": "TargetPlayerDead"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::Self",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Eve_Summoned_Rook'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Rook.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Eve_Summoned_Rook:BTComposite_Selector_4'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Rook.6"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Cooldown",
+    "Name": "BTDecorator_Cooldown_4",
+    "Outer": "BT_Eve_Summoned_Rook",
+    "Class": "UScriptClass'BTDecorator_Cooldown'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Eve_Summoned_Rook'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Rook.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Eve_Summoned_Rook:BTComposite_Selector_2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Rook.5"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_TimeLimit",
+    "Name": "BTDecorator_TimeLimit_3",
+    "Outer": "BT_Eve_Summoned_Rook",
+    "Class": "UScriptClass'BTDecorator_TimeLimit'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TimeLimit": 1.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Eve_Summoned_Rook'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Rook.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Eve_Summoned_Rook:BTComposite_Selector_4'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Rook.6"
+      }
+    }
+  },
+  {
+    "Type": "BTService_BBValueDis",
+    "Name": "BTService_BBValueDis_3",
+    "Outer": "BT_Eve_Summoned_Rook",
+    "Class": "UScriptClass'BTService_BBValueDis'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "BBName": "Target",
+      "Interval": 0.2,
+      "RandomDeviation": 0.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Eve_Summoned_Rook'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Rook.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Eve_Summoned_Rook:BTComposite_Selector_4'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Rook.6"
+      }
+    }
+  },
+  {
+    "Type": "BTService_EnemyVision",
+    "Name": "BTService_EnemyVision_3",
+    "Outer": "BT_Eve_Summoned_Rook",
+    "Class": "UScriptClass'BTService_EnemyVision'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "FVisionDistance": 3000.0,
+      "FVisionAngle": 360.0,
+      "bFilterWithLineTrace": false,
+      "Interval": 1.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Eve_Summoned_Rook'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Rook.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Eve_Summoned_Rook:BTComposite_Sequence_4'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Rook.9"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_EveSummoned_GetPlayer_C",
+    "Name": "BTTask_EveSummoned_GetPlayer_C_2",
+    "Outer": "BT_Eve_Summoned_Rook",
+    "Class": "BlueprintGeneratedClass'EM/Content/AssetDesign/AI/Player/Eve/BTTask_EveSummoned_GetPlayer.BTTask_EveSummoned_GetPlayer_C'",
+    "Template": {
+      "ObjectName": "BTTask_EveSummoned_GetPlayer_C'Default__BTTask_EveSummoned_GetPlayer_C'",
+      "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BTTask_EveSummoned_GetPlayer.3"
+    },
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Eve_Summoned_Rook'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Rook.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Eve_Summoned_Rook:BTComposite_Sequence_4'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Rook.9"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_NewMoveTo",
+    "Name": "BTTask_NewMoveTo_0",
+    "Outer": "BT_Eve_Summoned_Rook",
+    "Class": "UScriptClass'BTTask_NewMoveTo'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "bOrientRotationToMovement": true,
+      "HighPointDistance": 1000.0,
+      "MoveTypeState": "EMoveTypeState::MTS_Run",
+      "AcceptableRadius": 750.0,
+      "bStopOnOverlapNeedsUpdate": false,
+      "BlackboardKey": {
+        "SelectedKeyName": "Target"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Eve_Summoned_Rook'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Rook.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Eve_Summoned_Rook:BTComposite_Sequence_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Rook.8"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_NewMoveTo",
+    "Name": "BTTask_NewMoveTo_3",
+    "Outer": "BT_Eve_Summoned_Rook",
+    "Class": "UScriptClass'BTTask_NewMoveTo'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "bOrientRotationToMovement": true,
+      "MoveTypeState": "EMoveTypeState::MTS_Run",
+      "ForceTeleportDistance": 3000.0,
+      "bAllowTeleport": true,
+      "TeleportPointNum": 2,
+      "TeleportPointDistToOwner": 300.0,
+      "AcceptableRadius": 300.0,
+      "bStopOnOverlapNeedsUpdate": false,
+      "BlackboardKey": {
+        "SelectedKeyName": "Player"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Eve_Summoned_Rook'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Rook.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Eve_Summoned_Rook:BTComposite_Selector_13'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Rook.4"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_RunBehavior",
+    "Name": "BTTask_RunBehavior_2",
+    "Outer": "BT_Eve_Summoned_Rook",
+    "Class": "UScriptClass'BTTask_RunBehavior'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "BehaviorAsset": {
+        "ObjectName": "BehaviorTree'BT_Eve_Summoned_OutBattleDis'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_OutBattleDis.0"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Eve_Summoned_Rook'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Rook.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Eve_Summoned_Rook:BTComposite_Selector_9'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Rook.7"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_RunBehavior",
+    "Name": "BTTask_RunBehavior_3",
+    "Outer": "BT_Eve_Summoned_Rook",
+    "Class": "UScriptClass'BTTask_RunBehavior'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "BehaviorAsset": {
+        "ObjectName": "BehaviorTree'BT_Eve_Summoned_GetHatred'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_GetHatred.0"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Eve_Summoned_Rook'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Rook.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Eve_Summoned_Rook:BTComposite_Sequence_4'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Rook.9"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_RunBehavior",
+    "Name": "BTTask_RunBehavior_5",
+    "Outer": "BT_Eve_Summoned_Rook",
+    "Class": "UScriptClass'BTTask_RunBehavior'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "BehaviorAsset": {
+        "ObjectName": "BehaviorTree'BT_Eve_Summoned_OutBattleDis'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_OutBattleDis.0"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Eve_Summoned_Rook'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Rook.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Eve_Summoned_Rook:BTComposite_Selector_13'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Rook.4"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_UseSkill",
+    "Name": "BTTask_UseSkill_0",
+    "Outer": "BT_Eve_Summoned_Rook",
+    "Class": "UScriptClass'BTTask_UseSkill'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SkillId": 2,
+      "NodeName": "UseSkill2",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Eve_Summoned_Rook'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Rook.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Eve_Summoned_Rook:BTComposite_Selector_2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Rook.5"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_UseSkill",
+    "Name": "BTTask_UseSkill_2",
+    "Outer": "BT_Eve_Summoned_Rook",
+    "Class": "UScriptClass'BTTask_UseSkill'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "NodeName": "UseSkill1",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Eve_Summoned_Rook'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Rook.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Eve_Summoned_Rook:BTComposite_Sequence_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Rook.8"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_UseSkill",
+    "Name": "BTTask_UseSkill_3",
+    "Outer": "BT_Eve_Summoned_Rook",
+    "Class": "UScriptClass'BTTask_UseSkill'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "NodeName": "UseSkill1",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Eve_Summoned_Rook'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Rook.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Eve_Summoned_Rook:BTComposite_Selector_2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Rook.5"
+      }
+    }
+  }
+]

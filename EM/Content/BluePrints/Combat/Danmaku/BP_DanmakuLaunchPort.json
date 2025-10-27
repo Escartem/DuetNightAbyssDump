@@ -1,0 +1,115 @@
+[
+  {
+    "Type": "Function",
+    "Name": "GetModuleName",
+    "Outer": "BP_DanmakuLaunchPort_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "ChildProperties": [
+      {
+        "Type": "StrProperty",
+        "Name": "ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "Parm | OutParm | ReturnParm"
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_HasOutParms | FUNC_BlueprintCallable | FUNC_BlueprintEvent | FUNC_Const"
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BP_DanmakuLaunchPort_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "SuperStruct": {
+      "ObjectName": "Class'DanmakuLaunchPort'",
+      "ObjectPath": "/Script/EM"
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'BP_DanmakuLaunchPort_C:GetModuleName'",
+        "ObjectPath": "EM/Content/BluePrints/Combat/Danmaku/BP_DanmakuLaunchPort.0"
+      }
+    ],
+    "FuncMap": {
+      "GetModuleName": {
+        "ObjectName": "Function'BP_DanmakuLaunchPort_C:GetModuleName'",
+        "ObjectPath": "EM/Content/BluePrints/Combat/Danmaku/BP_DanmakuLaunchPort.0"
+      }
+    },
+    "ClassFlags": "CLASS_Config | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_EditInlineNew | CLASS_CompiledFromBlueprint | CLASS_DefaultToInstanced | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "Interfaces": [
+      {
+        "Class": {
+          "ObjectName": "Class'UnLuaInterface'",
+          "ObjectPath": "/Script/UnLua"
+        },
+        "PointerOffset": 0,
+        "bImplementedByK2": true
+      }
+    ],
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BP_DanmakuLaunchPort_C'Default__BP_DanmakuLaunchPort_C'",
+      "ObjectPath": "EM/Content/BluePrints/Combat/Danmaku/BP_DanmakuLaunchPort.2"
+    }
+  },
+  {
+    "Type": "BP_DanmakuLaunchPort_C",
+    "Name": "Default__BP_DanmakuLaunchPort_C",
+    "Class": "BlueprintGeneratedClass'EM/Content/BluePrints/Combat/Danmaku/BP_DanmakuLaunchPort.BP_DanmakuLaunchPort_C'",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'Sphere'",
+        "ObjectPath": "Engine/Content/BasicShapes/Sphere.2"
+      },
+      "OverrideMaterials": [
+        {
+          "ObjectName": "Material'BasicShapeMaterial'",
+          "ObjectPath": "Engine/Content/BasicShapes/BasicShapeMaterial.0"
+        }
+      ],
+      "bGenerateOverlapEvents": false,
+      "CanCharacterStepUpOn": "ECB_No",
+      "BodyInstance": {
+        "ObjectType": "ECC_WorldStatic",
+        "CollisionEnabled": "ECollisionEnabled::NoCollision",
+        "CollisionProfileName": "NoCollision",
+        "CollisionResponses": {
+          "ResponseToChannels": {
+            "Visibility": "ECR_Ignore",
+            "Camera": "ECR_Ignore",
+            "GameTraceChannel3": "ECR_Ignore"
+          },
+          "ResponseArray": [
+            {
+              "Channel": "Visibility",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Camera",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "TraceExceptChar",
+              "Response": "ECR_Ignore"
+            }
+          ]
+        },
+        "LinearDamping": 0.0,
+        "bEnableGravity": false
+      },
+      "bHiddenInGame": true,
+      "PrimaryComponentTick": {
+        "bStartWithTickEnabled": false
+      },
+      "bCanEverAffectNavigation": false
+    }
+  }
+]

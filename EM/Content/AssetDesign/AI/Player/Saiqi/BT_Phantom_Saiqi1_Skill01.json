@@ -1,0 +1,540 @@
+[
+  {
+    "Type": "BehaviorTree",
+    "Name": "BT_Phantom_Saiqi1_Skill01",
+    "Class": "UScriptClass'BehaviorTree'",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "RootNode": {
+        "ObjectName": "BTComposite_Selector'BT_Phantom_Saiqi1_Skill01:BTComposite_Selector_4'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Saiqi/BT_Phantom_Saiqi1_Skill01.2"
+      },
+      "BlackboardAsset": {
+        "ObjectName": "BlackboardData'BB_Shadow'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Parent/BB_Shadow.0"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_2",
+    "Outer": "BT_Phantom_Saiqi1_Skill01",
+    "Class": "UScriptClass'BTComposite_Selector'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_UseSkill_Player'BT_Phantom_Saiqi1_Skill01:BTTask_UseSkill_Player_3'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Saiqi/BT_Phantom_Saiqi1_Skill01.19"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_CoolDownPlayer'BT_Phantom_Saiqi1_Skill01:BTDecorator_CoolDownPlayer_2'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Player/Saiqi/BT_Phantom_Saiqi1_Skill01.11"
+            },
+            {
+              "ObjectName": "BTDecorator_CheckSpCost'BT_Phantom_Saiqi1_Skill01:BTDecorator_CheckSpCost_2'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Player/Saiqi/BT_Phantom_Saiqi1_Skill01.8"
+            },
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Phantom_Saiqi1_Skill01:BTDecorator_Blackboard_14'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Player/Saiqi/BT_Phantom_Saiqi1_Skill01.4"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_RunBehavior'BT_Phantom_Saiqi1_Skill01:BTTask_RunBehavior_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Saiqi/BT_Phantom_Saiqi1_Skill01.15"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_CheckWeaponType'BT_Phantom_Saiqi1_Skill01:BTDecorator_CheckWeaponType_6'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Player/Saiqi/BT_Phantom_Saiqi1_Skill01.9"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_RunBehavior'BT_Phantom_Saiqi1_Skill01:BTTask_RunBehavior_1'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Saiqi/BT_Phantom_Saiqi1_Skill01.16"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_CheckWeaponType'BT_Phantom_Saiqi1_Skill01:BTDecorator_CheckWeaponType_7'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Player/Saiqi/BT_Phantom_Saiqi1_Skill01.10"
+            }
+          ],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Saiqi1_Skill01'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Saiqi/BT_Phantom_Saiqi1_Skill01.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Phantom_Saiqi1_Skill01:BTComposite_Selector_6'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Saiqi/BT_Phantom_Saiqi1_Skill01.3"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_4",
+    "Outer": "BT_Phantom_Saiqi1_Skill01",
+    "Class": "UScriptClass'BTComposite_Selector'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector'BT_Phantom_Saiqi1_Skill01:BTComposite_Selector_6'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Saiqi/BT_Phantom_Saiqi1_Skill01.3"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Phantom_Saiqi1_Skill01:BTDecorator_Blackboard_2'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Player/Saiqi/BT_Phantom_Saiqi1_Skill01.5"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait'BT_Phantom_Saiqi1_Skill01:BTTask_Wait_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Saiqi/BT_Phantom_Saiqi1_Skill01.20"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Phantom_Saiqi1_Skill01:BTDecorator_Blackboard_7'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Player/Saiqi/BT_Phantom_Saiqi1_Skill01.7"
+            }
+          ],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Saiqi1_Skill01'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Saiqi/BT_Phantom_Saiqi1_Skill01.0"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_6",
+    "Outer": "BT_Phantom_Saiqi1_Skill01",
+    "Class": "UScriptClass'BTComposite_Selector'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_RunBehavior'BT_Phantom_Saiqi1_Skill01:BTTask_RunBehavior_3'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Saiqi/BT_Phantom_Saiqi1_Skill01.18"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector'BT_Phantom_Saiqi1_Skill01:BTComposite_Selector_2'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Saiqi/BT_Phantom_Saiqi1_Skill01.1"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Phantom_Saiqi1_Skill01:BTDecorator_Blackboard_3'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Player/Saiqi/BT_Phantom_Saiqi1_Skill01.6"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_RunBehavior'BT_Phantom_Saiqi1_Skill01:BTTask_RunBehavior_2'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Saiqi/BT_Phantom_Saiqi1_Skill01.17"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "Services": [
+        {
+          "ObjectName": "BTService_EnemyVision'BT_Phantom_Saiqi1_Skill01:BTService_EnemyVision_0'",
+          "ObjectPath": "EM/Content/AssetDesign/AI/Player/Saiqi/BT_Phantom_Saiqi1_Skill01.14"
+        },
+        {
+          "ObjectName": "BTService_ClearBTTarget_Player'BT_Phantom_Saiqi1_Skill01:BTService_ClearBTTarget_Player_0'",
+          "ObjectPath": "EM/Content/AssetDesign/AI/Player/Saiqi/BT_Phantom_Saiqi1_Skill01.13"
+        },
+        {
+          "ObjectName": "BTService_BBValueDis'BT_Phantom_Saiqi1_Skill01:BTService_BBValueDis_0'",
+          "ObjectPath": "EM/Content/AssetDesign/AI/Player/Saiqi/BT_Phantom_Saiqi1_Skill01.12"
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Saiqi1_Skill01'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Saiqi/BT_Phantom_Saiqi1_Skill01.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Phantom_Saiqi1_Skill01:BTComposite_Selector_4'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Saiqi/BT_Phantom_Saiqi1_Skill01.2"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_14",
+    "Outer": "BT_Phantom_Saiqi1_Skill01",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "FloatValue": 600.0,
+      "CachedDescription": "TickTargetDis 小于或等于 600.000000",
+      "OperationType": 3,
+      "BlackboardKey": {
+        "SelectedKeyName": "TickTargetDis"
+      },
+      "NodeName": "Distance<=600",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Saiqi1_Skill01'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Saiqi/BT_Phantom_Saiqi1_Skill01.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Phantom_Saiqi1_Skill01:BTComposite_Selector_2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Saiqi/BT_Phantom_Saiqi1_Skill01.1"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_2",
+    "Outer": "BT_Phantom_Saiqi1_Skill01",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "CachedDescription": "ActionMode 等于 Active",
+      "BlackboardKey": {
+        "SelectedKeyName": "ActionMode"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::Self",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Saiqi1_Skill01'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Saiqi/BT_Phantom_Saiqi1_Skill01.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Phantom_Saiqi1_Skill01:BTComposite_Selector_4'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Saiqi/BT_Phantom_Saiqi1_Skill01.2"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_3",
+    "Outer": "BT_Phantom_Saiqi1_Skill01",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "CachedDescription": "Target is 已设置",
+      "BlackboardKey": {
+        "SelectedKeyName": "Target"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Saiqi1_Skill01'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Saiqi/BT_Phantom_Saiqi1_Skill01.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Phantom_Saiqi1_Skill01:BTComposite_Selector_6'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Saiqi/BT_Phantom_Saiqi1_Skill01.3"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_7",
+    "Outer": "BT_Phantom_Saiqi1_Skill01",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "IntValue": 1,
+      "CachedDescription": "ActionMode 等于 Hitted",
+      "BlackboardKey": {
+        "SelectedKeyName": "ActionMode"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::Self",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Saiqi1_Skill01'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Saiqi/BT_Phantom_Saiqi1_Skill01.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Phantom_Saiqi1_Skill01:BTComposite_Selector_4'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Saiqi/BT_Phantom_Saiqi1_Skill01.2"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_CheckSpCost",
+    "Name": "BTDecorator_CheckSpCost_2",
+    "Outer": "BT_Phantom_Saiqi1_Skill01",
+    "Class": "UScriptClass'BTDecorator_CheckSpCost'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SkillId": 530101,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Saiqi1_Skill01'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Saiqi/BT_Phantom_Saiqi1_Skill01.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Phantom_Saiqi1_Skill01:BTComposite_Selector_2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Saiqi/BT_Phantom_Saiqi1_Skill01.1"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_CheckWeaponType",
+    "Name": "BTDecorator_CheckWeaponType_6",
+    "Outer": "BT_Phantom_Saiqi1_Skill01",
+    "Class": "UScriptClass'BTDecorator_CheckWeaponType'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "WeaponType": "Melee",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Saiqi1_Skill01'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Saiqi/BT_Phantom_Saiqi1_Skill01.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Phantom_Saiqi1_Skill01:BTComposite_Selector_2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Saiqi/BT_Phantom_Saiqi1_Skill01.1"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_CheckWeaponType",
+    "Name": "BTDecorator_CheckWeaponType_7",
+    "Outer": "BT_Phantom_Saiqi1_Skill01",
+    "Class": "UScriptClass'BTDecorator_CheckWeaponType'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "WeaponType": "Ranged",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Saiqi1_Skill01'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Saiqi/BT_Phantom_Saiqi1_Skill01.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Phantom_Saiqi1_Skill01:BTComposite_Selector_2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Saiqi/BT_Phantom_Saiqi1_Skill01.1"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_CoolDownPlayer",
+    "Name": "BTDecorator_CoolDownPlayer_2",
+    "Outer": "BT_Phantom_Saiqi1_Skill01",
+    "Class": "UScriptClass'BTDecorator_CoolDownPlayer'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Saiqi1_Skill01'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Saiqi/BT_Phantom_Saiqi1_Skill01.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Phantom_Saiqi1_Skill01:BTComposite_Selector_2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Saiqi/BT_Phantom_Saiqi1_Skill01.1"
+      }
+    }
+  },
+  {
+    "Type": "BTService_BBValueDis",
+    "Name": "BTService_BBValueDis_0",
+    "Outer": "BT_Phantom_Saiqi1_Skill01",
+    "Class": "UScriptClass'BTService_BBValueDis'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "BBName": "Target",
+      "Interval": 0.02,
+      "RandomDeviation": 0.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Saiqi1_Skill01'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Saiqi/BT_Phantom_Saiqi1_Skill01.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Phantom_Saiqi1_Skill01:BTComposite_Selector_6'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Saiqi/BT_Phantom_Saiqi1_Skill01.3"
+      }
+    }
+  },
+  {
+    "Type": "BTService_ClearBTTarget_Player",
+    "Name": "BTService_ClearBTTarget_Player_0",
+    "Outer": "BT_Phantom_Saiqi1_Skill01",
+    "Class": "UScriptClass'BTService_ClearBTTarget_Player'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Interval": 0.1,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Saiqi1_Skill01'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Saiqi/BT_Phantom_Saiqi1_Skill01.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Phantom_Saiqi1_Skill01:BTComposite_Selector_6'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Saiqi/BT_Phantom_Saiqi1_Skill01.3"
+      }
+    }
+  },
+  {
+    "Type": "BTService_EnemyVision",
+    "Name": "BTService_EnemyVision_0",
+    "Outer": "BT_Phantom_Saiqi1_Skill01",
+    "Class": "UScriptClass'BTService_EnemyVision'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "FVisionDistance": 2000.0,
+      "FVisionAngle": 180.0,
+      "Interval": 0.2,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Saiqi1_Skill01'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Saiqi/BT_Phantom_Saiqi1_Skill01.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Phantom_Saiqi1_Skill01:BTComposite_Selector_6'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Saiqi/BT_Phantom_Saiqi1_Skill01.3"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_RunBehavior",
+    "Name": "BTTask_RunBehavior_0",
+    "Outer": "BT_Phantom_Saiqi1_Skill01",
+    "Class": "UScriptClass'BTTask_RunBehavior'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "BehaviorAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Melee_Common'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Parent/BT_Phantom_Melee_Common.0"
+      },
+      "NodeName": "MeleeAttack",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Saiqi1_Skill01'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Saiqi/BT_Phantom_Saiqi1_Skill01.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Phantom_Saiqi1_Skill01:BTComposite_Selector_2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Saiqi/BT_Phantom_Saiqi1_Skill01.1"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_RunBehavior",
+    "Name": "BTTask_RunBehavior_1",
+    "Outer": "BT_Phantom_Saiqi1_Skill01",
+    "Class": "UScriptClass'BTTask_RunBehavior'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "BehaviorAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Ranged_Common'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Parent/BT_Phantom_Ranged_Common.0"
+      },
+      "NodeName": "RangedAttack",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Saiqi1_Skill01'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Saiqi/BT_Phantom_Saiqi1_Skill01.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Phantom_Saiqi1_Skill01:BTComposite_Selector_2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Saiqi/BT_Phantom_Saiqi1_Skill01.1"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_RunBehavior",
+    "Name": "BTTask_RunBehavior_2",
+    "Outer": "BT_Phantom_Saiqi1_Skill01",
+    "Class": "UScriptClass'BTTask_RunBehavior'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "BehaviorAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_DetectEnemy'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Parent/BT_Phantom_DetectEnemy.0"
+      },
+      "NodeName": "DetectEnemy",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Saiqi1_Skill01'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Saiqi/BT_Phantom_Saiqi1_Skill01.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Phantom_Saiqi1_Skill01:BTComposite_Selector_6'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Saiqi/BT_Phantom_Saiqi1_Skill01.3"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_RunBehavior",
+    "Name": "BTTask_RunBehavior_3",
+    "Outer": "BT_Phantom_Saiqi1_Skill01",
+    "Class": "UScriptClass'BTTask_RunBehavior'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "BehaviorAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_MoveToOwner'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Parent/BT_Phantom_MoveToOwner.0"
+      },
+      "NodeName": "MoveToOwner",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Saiqi1_Skill01'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Saiqi/BT_Phantom_Saiqi1_Skill01.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Phantom_Saiqi1_Skill01:BTComposite_Selector_6'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Saiqi/BT_Phantom_Saiqi1_Skill01.3"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_UseSkill_Player",
+    "Name": "BTTask_UseSkill_Player_3",
+    "Outer": "BT_Phantom_Saiqi1_Skill01",
+    "Class": "UScriptClass'BTTask_UseSkill_Player'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SkillType": "EUseSkill_SkillType::Skill1",
+      "AutoInput": false,
+      "NodeName": "Skill01",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Saiqi1_Skill01'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Saiqi/BT_Phantom_Saiqi1_Skill01.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Phantom_Saiqi1_Skill01:BTComposite_Selector_2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Saiqi/BT_Phantom_Saiqi1_Skill01.1"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_0",
+    "Outer": "BT_Phantom_Saiqi1_Skill01",
+    "Class": "UScriptClass'BTTask_Wait'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "WaitTime": 3.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Saiqi1_Skill01'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Saiqi/BT_Phantom_Saiqi1_Skill01.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Phantom_Saiqi1_Skill01:BTComposite_Selector_4'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Saiqi/BT_Phantom_Saiqi1_Skill01.2"
+      }
+    }
+  }
+]

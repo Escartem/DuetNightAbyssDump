@@ -1,0 +1,230 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BP_DongGuo_BlockRock_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Super": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TouchItemBase_C'",
+      "ObjectPath": "EM/Content/BluePrints/Item/ExploreGroup/ExploreMechanism/DongGuo/BP_TouchItemBase.1"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BP_DongGuo_BlockRock_C:SimpleConstructionScript_0'",
+        "ObjectPath": "EM/Content/BluePrints/Item/ExploreGroup/ExploreMechanism/DongGuo/BP_DongGuo_BlockRock.10"
+      },
+      "InheritableComponentHandler": {
+        "ObjectName": "InheritableComponentHandler'BP_DongGuo_BlockRock_C:InheritableComponentHandler'",
+        "ObjectPath": "EM/Content/BluePrints/Item/ExploreGroup/ExploreMechanism/DongGuo/BP_DongGuo_BlockRock.6"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "BlueprintGeneratedClass'BP_TouchItemBase_C'",
+      "ObjectPath": "EM/Content/BluePrints/Item/ExploreGroup/ExploreMechanism/DongGuo/BP_TouchItemBase.1"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "TougeRange",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'BoxComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "ClassFlags": "CLASS_Config | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BP_DongGuo_BlockRock_C'Default__BP_DongGuo_BlockRock_C'",
+      "ObjectPath": "EM/Content/BluePrints/Item/ExploreGroup/ExploreMechanism/DongGuo/BP_DongGuo_BlockRock.1"
+    }
+  },
+  {
+    "Type": "BP_DongGuo_BlockRock_C",
+    "Name": "Default__BP_DongGuo_BlockRock_C",
+    "Class": "BlueprintGeneratedClass'EM/Content/BluePrints/Item/ExploreGroup/ExploreMechanism/DongGuo/BP_DongGuo_BlockRock.BP_DongGuo_BlockRock_C'",
+    "Template": {
+      "ObjectName": "BP_TouchItemBase_C'Default__BP_TouchItemBase_C'",
+      "ObjectPath": "EM/Content/BluePrints/Item/ExploreGroup/ExploreMechanism/DongGuo/BP_TouchItemBase.2"
+    },
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "CombatStateChangeComponent": {
+        "ObjectName": "BP_CombatStateChangeComponent_C'Default__BP_DongGuo_BlockRock_C:CombatStateChangeComponent'",
+        "ObjectPath": "EM/Content/BluePrints/Item/ExploreGroup/ExploreMechanism/DongGuo/BP_DongGuo_BlockRock.4"
+      },
+      "CombatClientEffectComponent": {
+        "ObjectName": "BP_CombatClientEffectComponent_C'Default__BP_DongGuo_BlockRock_C:CombatClientEffectComponent'",
+        "ObjectPath": "EM/Content/BluePrints/Item/ExploreGroup/ExploreMechanism/DongGuo/BP_DongGuo_BlockRock.3"
+      },
+      "FXComponent": {
+        "ObjectName": "BP_FXComponent_C'Default__BP_DongGuo_BlockRock_C:BP_FXComponent'",
+        "ObjectPath": "EM/Content/BluePrints/Item/ExploreGroup/ExploreMechanism/DongGuo/BP_DongGuo_BlockRock.5"
+      }
+    }
+  },
+  {
+    "Type": "BoxComponent",
+    "Name": "TougeRange_GEN_VARIABLE",
+    "Outer": "BP_DongGuo_BlockRock_C",
+    "Class": "UScriptClass'BoxComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "BoxExtent": {
+        "X": 50.0,
+        "Y": 50.0,
+        "Z": 50.0
+      },
+      "AreaClass": {
+        "ObjectName": "Class'NavArea_Obstacle'",
+        "ObjectPath": "/Script/NavigationSystem"
+      },
+      "BodyInstance": {
+        "ObjectType": "ECC_WorldStatic",
+        "CollisionEnabled": "ECollisionEnabled::NoCollision",
+        "CollisionProfileName": "NoCollision",
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "Visibility",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Camera",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "TraceExceptChar",
+              "Response": "ECR_Ignore"
+            }
+          ]
+        }
+      },
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 50.0
+      }
+    }
+  },
+  {
+    "Type": "BP_CombatClientEffectComponent_C",
+    "Name": "CombatClientEffectComponent",
+    "Outer": "Default__BP_DongGuo_BlockRock_C",
+    "Class": "BlueprintGeneratedClass'EM/Content/BluePrints/Item/BP_CombatClientEffectComponent.BP_CombatClientEffectComponent_C'",
+    "Template": {
+      "ObjectName": "BP_CombatClientEffectComponent_C'Default__BP_TouchItemBase_C:CombatClientEffectComponent'",
+      "ObjectPath": "EM/Content/BluePrints/Item/ExploreGroup/ExploreMechanism/DongGuo/BP_TouchItemBase.3"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "BP_CombatStateChangeComponent_C",
+    "Name": "CombatStateChangeComponent",
+    "Outer": "Default__BP_DongGuo_BlockRock_C",
+    "Class": "BlueprintGeneratedClass'EM/Content/BluePrints/Item/BP_CombatStateChangeComponent.BP_CombatStateChangeComponent_C'",
+    "Template": {
+      "ObjectName": "BP_CombatStateChangeComponent_C'Default__BP_TouchItemBase_C:CombatStateChangeComponent'",
+      "ObjectPath": "EM/Content/BluePrints/Item/ExploreGroup/ExploreMechanism/DongGuo/BP_TouchItemBase.4"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "BP_FXComponent_C",
+    "Name": "BP_FXComponent",
+    "Outer": "Default__BP_DongGuo_BlockRock_C",
+    "Class": "BlueprintGeneratedClass'EM/Content/BluePrints/Char/BP_FXComponent.BP_FXComponent_C'",
+    "Template": {
+      "ObjectName": "BP_FXComponent_C'Default__BP_TouchItemBase_C:BP_FXComponent'",
+      "ObjectPath": "EM/Content/BluePrints/Item/ExploreGroup/ExploreMechanism/DongGuo/BP_TouchItemBase.5"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "InheritableComponentHandler",
+    "Name": "InheritableComponentHandler",
+    "Outer": "BP_DongGuo_BlockRock_C",
+    "Class": "UScriptClass'InheritableComponentHandler'",
+    "Flags": "RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Outer": "BP_DongGuo_BlockRock_C",
+    "Class": "UScriptClass'SceneComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BP_DongGuo_BlockRock_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "EM/Content/BluePrints/Item/ExploreGroup/ExploreMechanism/DongGuo/BP_DongGuo_BlockRock.7"
+      },
+      "VariableGuid": "9963F2E5-4CCD2187-1C0C72BB-863BB2C9",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_1",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'BoxComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "BoxComponent'BP_DongGuo_BlockRock_C:TougeRange_GEN_VARIABLE'",
+        "ObjectPath": "EM/Content/BluePrints/Item/ExploreGroup/ExploreMechanism/DongGuo/BP_DongGuo_BlockRock.2"
+      },
+      "ParentComponentOrVariableName": "DefaultSceneRoot",
+      "ParentComponentOwnerClassName": "BP_CombatItemBase_C",
+      "VariableGuid": "3136E2CB-4BDE72AE-6C5E59BC-4775BB97",
+      "InternalVariableName": "TougeRange"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Outer": "BP_DongGuo_BlockRock_C",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_DongGuo_BlockRock_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "EM/Content/BluePrints/Item/ExploreGroup/ExploreMechanism/DongGuo/BP_DongGuo_BlockRock.9"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_DongGuo_BlockRock_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "EM/Content/BluePrints/Item/ExploreGroup/ExploreMechanism/DongGuo/BP_DongGuo_BlockRock.9"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BP_DongGuo_BlockRock_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "EM/Content/BluePrints/Item/ExploreGroup/ExploreMechanism/DongGuo/BP_DongGuo_BlockRock.8"
+      }
+    }
+  }
+]

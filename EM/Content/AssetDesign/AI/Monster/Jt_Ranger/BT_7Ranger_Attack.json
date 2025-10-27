@@ -1,0 +1,136 @@
+[
+  {
+    "Type": "BehaviorTree",
+    "Name": "BT_7Ranger_Attack",
+    "Class": "UScriptClass'BehaviorTree'",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "RootNode": {
+        "ObjectName": "BTComposite_Selector'BT_7Ranger_Attack:BTComposite_Selector_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_Ranger/BT_7Ranger_Attack.1"
+      },
+      "BlackboardAsset": {
+        "ObjectName": "BlackboardData'BB_Mon_Parent_Ranged'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Parent/BB_Mon_Parent_Ranged.0"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_1",
+    "Outer": "BT_7Ranger_Attack",
+    "Class": "UScriptClass'BTComposite_Selector'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_UseSkill'BT_7Ranger_Attack:BTTask_UseSkill_2'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_Ranger/BT_7Ranger_Attack.5"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_7Ranger_Attack:BTDecorator_Blackboard_1'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_Ranger/BT_7Ranger_Attack.2"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_UseSkill'BT_7Ranger_Attack:BTTask_UseSkill_1'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_Ranger/BT_7Ranger_Attack.4"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_TargetInVision'BT_7Ranger_Attack:BTDecorator_TargetInVision_1'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_Ranger/BT_7Ranger_Attack.3"
+            }
+          ],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_7Ranger_Attack'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_Ranger/BT_7Ranger_Attack.0"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_1",
+    "Outer": "BT_7Ranger_Attack",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "IntValue": 1,
+      "CachedDescription": "IsBulletEmpty is 已设置",
+      "BlackboardKey": {
+        "SelectedKeyName": "IsBulletEmpty"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_7Ranger_Attack'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_Ranger/BT_7Ranger_Attack.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_7Ranger_Attack:BTComposite_Selector_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_Ranger/BT_7Ranger_Attack.1"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_TargetInVision",
+    "Name": "BTDecorator_TargetInVision_1",
+    "Outer": "BT_7Ranger_Attack",
+    "Class": "UScriptClass'BTDecorator_TargetInVision'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_7Ranger_Attack'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_Ranger/BT_7Ranger_Attack.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_7Ranger_Attack:BTComposite_Selector_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_Ranger/BT_7Ranger_Attack.1"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_UseSkill",
+    "Name": "BTTask_UseSkill_1",
+    "Outer": "BT_7Ranger_Attack",
+    "Class": "UScriptClass'BTTask_UseSkill'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "EnableAimOffset": true,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_7Ranger_Attack'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_Ranger/BT_7Ranger_Attack.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_7Ranger_Attack:BTComposite_Selector_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_Ranger/BT_7Ranger_Attack.1"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_UseSkill",
+    "Name": "BTTask_UseSkill_2",
+    "Outer": "BT_7Ranger_Attack",
+    "Class": "UScriptClass'BTTask_UseSkill'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SkillId": 4,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_7Ranger_Attack'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_Ranger/BT_7Ranger_Attack.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_7Ranger_Attack:BTComposite_Selector_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_Ranger/BT_7Ranger_Attack.1"
+      }
+    }
+  }
+]

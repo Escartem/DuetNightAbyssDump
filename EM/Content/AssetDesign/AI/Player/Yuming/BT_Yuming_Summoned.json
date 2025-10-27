@@ -1,0 +1,272 @@
+[
+  {
+    "Type": "BehaviorTree",
+    "Name": "BT_Yuming_Summoned",
+    "Class": "UScriptClass'BehaviorTree'",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "RootNode": {
+        "ObjectName": "BTComposite_Selector'BT_Yuming_Summoned:BTComposite_Selector_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Yuming/BT_Yuming_Summoned.1"
+      },
+      "BlackboardAsset": {
+        "ObjectName": "BlackboardData'BB_Yuming_Summoned'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Yuming/BB_Yuming_Summoned.0"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_0",
+    "Outer": "BT_Yuming_Summoned",
+    "Class": "UScriptClass'BTComposite_Selector'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_Yuming_Summoned:BTComposite_Sequence_1'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Yuming/BT_Yuming_Summoned.2"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_YumingSummonState_C'BT_Yuming_Summoned:BTDecorator_YumingSummonState_C_1'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Player/Yuming/BT_Yuming_Summoned.4"
+            }
+          ],
+          "DecoratorOps": []
+        }
+      ],
+      "Services": [
+        {
+          "ObjectName": "BTService_ClearBTTarget_Player'BT_Yuming_Summoned:BTService_ClearBTTarget_Player_0'",
+          "ObjectPath": "EM/Content/AssetDesign/AI/Player/Yuming/BT_Yuming_Summoned.5"
+        },
+        {
+          "ObjectName": "BTService_EnemyVision'BT_Yuming_Summoned:BTService_EnemyVision_0'",
+          "ObjectPath": "EM/Content/AssetDesign/AI/Player/Yuming/BT_Yuming_Summoned.6"
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Yuming_Summoned'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Yuming/BT_Yuming_Summoned.0"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_1",
+    "Outer": "BT_Yuming_Summoned",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_FilterTargetsByDis'BT_Yuming_Summoned:BTTask_FilterTargetsByDis_1'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Yuming/BT_Yuming_Summoned.8"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_LastFilterTargets'BT_Yuming_Summoned:BTTask_LastFilterTargets_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Yuming/BT_Yuming_Summoned.9"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_CanHitTarget'BT_Yuming_Summoned:BTTask_CanHitTarget_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Yuming/BT_Yuming_Summoned.7"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_UseSkill'BT_Yuming_Summoned:BTTask_UseSkill_2'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Yuming/BT_Yuming_Summoned.10"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Yuming_Summoned:BTDecorator_Blackboard_0'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Player/Yuming/BT_Yuming_Summoned.3"
+            }
+          ],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Yuming_Summoned'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Yuming/BT_Yuming_Summoned.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Yuming_Summoned:BTComposite_Selector_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Yuming/BT_Yuming_Summoned.1"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_0",
+    "Outer": "BT_Yuming_Summoned",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "FloatValue": 1000.0,
+      "CachedDescription": "TargetCapsuleDis 小于或等于 1000.000000",
+      "OperationType": 3,
+      "BlackboardKey": {
+        "SelectedKeyName": "TargetCapsuleDis"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Yuming_Summoned'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Yuming/BT_Yuming_Summoned.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Yuming_Summoned:BTComposite_Sequence_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Yuming/BT_Yuming_Summoned.2"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_YumingSummonState_C",
+    "Name": "BTDecorator_YumingSummonState_C_1",
+    "Outer": "BT_Yuming_Summoned",
+    "Class": "BlueprintGeneratedClass'EM/Content/BluePrints/AI/BTDecorator/BTDecorator_YumingSummonState.BTDecorator_YumingSummonState_C'",
+    "Template": {
+      "ObjectName": "BTDecorator_YumingSummonState_C'Default__BTDecorator_YumingSummonState_C'",
+      "ObjectPath": "EM/Content/BluePrints/AI/BTDecorator/BTDecorator_YumingSummonState.2"
+    },
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "bInverseCondition": true,
+      "FlowAbortMode": "EBTFlowAbortMode::Self",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Yuming_Summoned'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Yuming/BT_Yuming_Summoned.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Yuming_Summoned:BTComposite_Selector_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Yuming/BT_Yuming_Summoned.1"
+      }
+    }
+  },
+  {
+    "Type": "BTService_ClearBTTarget_Player",
+    "Name": "BTService_ClearBTTarget_Player_0",
+    "Outer": "BT_Yuming_Summoned",
+    "Class": "UScriptClass'BTService_ClearBTTarget_Player'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Interval": 0.2,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Yuming_Summoned'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Yuming/BT_Yuming_Summoned.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Yuming_Summoned:BTComposite_Selector_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Yuming/BT_Yuming_Summoned.1"
+      }
+    }
+  },
+  {
+    "Type": "BTService_EnemyVision",
+    "Name": "BTService_EnemyVision_0",
+    "Outer": "BT_Yuming_Summoned",
+    "Class": "UScriptClass'BTService_EnemyVision'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "FVisionDistance": 1500.0,
+      "FVisionAngle": 360.0,
+      "Interval": 0.1,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Yuming_Summoned'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Yuming/BT_Yuming_Summoned.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Yuming_Summoned:BTComposite_Selector_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Yuming/BT_Yuming_Summoned.1"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_CanHitTarget",
+    "Name": "BTTask_CanHitTarget_0",
+    "Outer": "BT_Yuming_Summoned",
+    "Class": "UScriptClass'BTTask_CanHitTarget'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "IsDebug": true,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Yuming_Summoned'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Yuming/BT_Yuming_Summoned.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Yuming_Summoned:BTComposite_Sequence_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Yuming/BT_Yuming_Summoned.2"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_FilterTargetsByDis",
+    "Name": "BTTask_FilterTargetsByDis_1",
+    "Outer": "BT_Yuming_Summoned",
+    "Class": "UScriptClass'BTTask_FilterTargetsByDis'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "MaxDis": 1500.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Yuming_Summoned'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Yuming/BT_Yuming_Summoned.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Yuming_Summoned:BTComposite_Sequence_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Yuming/BT_Yuming_Summoned.2"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_LastFilterTargets",
+    "Name": "BTTask_LastFilterTargets_0",
+    "Outer": "BT_Yuming_Summoned",
+    "Class": "UScriptClass'BTTask_LastFilterTargets'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TypeOfFilterList": "ETypeOfFilterList::AfterFilter",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Yuming_Summoned'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Yuming/BT_Yuming_Summoned.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Yuming_Summoned:BTComposite_Sequence_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Yuming/BT_Yuming_Summoned.2"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_UseSkill",
+    "Name": "BTTask_UseSkill_2",
+    "Outer": "BT_Yuming_Summoned",
+    "Class": "UScriptClass'BTTask_UseSkill'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Yuming_Summoned'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Yuming/BT_Yuming_Summoned.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Yuming_Summoned:BTComposite_Sequence_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Yuming/BT_Yuming_Summoned.2"
+      }
+    }
+  }
+]

@@ -1,0 +1,193 @@
+[
+  {
+    "Type": "BehaviorTree",
+    "Name": "BT_Phantom_NoEnemySkill2Off",
+    "Class": "UScriptClass'BehaviorTree'",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "RootNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Phantom_NoEnemySkill2Off:BTComposite_Sequence_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Parent/BT_Phantom_NoEnemySkill2Off.1"
+      },
+      "BlackboardAsset": {
+        "ObjectName": "BlackboardData'BB_Shadow'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Parent/BB_Shadow.0"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_1",
+    "Outer": "BT_Phantom_NoEnemySkill2Off",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_FilterTargetsByOwnerDis'BT_Phantom_NoEnemySkill2Off:BTTask_FilterTargetsByOwnerDis_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Parent/BT_Phantom_NoEnemySkill2Off.4"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_LastFilterTargetsByNum_P'BT_Phantom_NoEnemySkill2Off:BTTask_LastFilterTargetsByNum_P_1'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Parent/BT_Phantom_NoEnemySkill2Off.5"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_SetPartAsTarget'BT_Phantom_NoEnemySkill2Off:BTTask_SetPartAsTarget_1'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Parent/BT_Phantom_NoEnemySkill2Off.6"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_ForceSuccess'BT_Phantom_NoEnemySkill2Off:BTDecorator_ForceSuccess_2'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Player/Parent/BT_Phantom_NoEnemySkill2Off.3"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_UseSkill_Player'BT_Phantom_NoEnemySkill2Off:BTTask_UseSkill_Player_2'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Parent/BT_Phantom_NoEnemySkill2Off.7"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Phantom_NoEnemySkill2Off:BTDecorator_Blackboard_7'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Player/Parent/BT_Phantom_NoEnemySkill2Off.2"
+            }
+          ],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_NoEnemySkill2Off'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Parent/BT_Phantom_NoEnemySkill2Off.0"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_7",
+    "Outer": "BT_Phantom_NoEnemySkill2Off",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "CachedDescription": "Target is 未设置",
+      "OperationType": 1,
+      "BlackboardKey": {
+        "SelectedKeyName": "Target"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_NoEnemySkill2Off'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Parent/BT_Phantom_NoEnemySkill2Off.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Phantom_NoEnemySkill2Off:BTComposite_Sequence_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Parent/BT_Phantom_NoEnemySkill2Off.1"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_ForceSuccess",
+    "Name": "BTDecorator_ForceSuccess_2",
+    "Outer": "BT_Phantom_NoEnemySkill2Off",
+    "Class": "UScriptClass'BTDecorator_ForceSuccess'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_NoEnemySkill2Off'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Parent/BT_Phantom_NoEnemySkill2Off.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Phantom_NoEnemySkill2Off:BTComposite_Sequence_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Parent/BT_Phantom_NoEnemySkill2Off.1"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_FilterTargetsByOwnerDis",
+    "Name": "BTTask_FilterTargetsByOwnerDis_0",
+    "Outer": "BT_Phantom_NoEnemySkill2Off",
+    "Class": "UScriptClass'BTTask_FilterTargetsByOwnerDis'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "MaxDis": 4000.0,
+      "NodeName": "FilterTargetsByOwner",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_NoEnemySkill2Off'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Parent/BT_Phantom_NoEnemySkill2Off.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Phantom_NoEnemySkill2Off:BTComposite_Sequence_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Parent/BT_Phantom_NoEnemySkill2Off.1"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_LastFilterTargetsByNum_P",
+    "Name": "BTTask_LastFilterTargetsByNum_P_1",
+    "Outer": "BT_Phantom_NoEnemySkill2Off",
+    "Class": "UScriptClass'BTTask_LastFilterTargetsByNum_P'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Radius": 600.0,
+      "TypeOfFilterList": "ETypeOfFilterList::AfterFilter",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_NoEnemySkill2Off'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Parent/BT_Phantom_NoEnemySkill2Off.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Phantom_NoEnemySkill2Off:BTComposite_Sequence_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Parent/BT_Phantom_NoEnemySkill2Off.1"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_SetPartAsTarget",
+    "Name": "BTTask_SetPartAsTarget_1",
+    "Outer": "BT_Phantom_NoEnemySkill2Off",
+    "Class": "UScriptClass'BTTask_SetPartAsTarget'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_NoEnemySkill2Off'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Parent/BT_Phantom_NoEnemySkill2Off.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Phantom_NoEnemySkill2Off:BTComposite_Sequence_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Parent/BT_Phantom_NoEnemySkill2Off.1"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_UseSkill_Player",
+    "Name": "BTTask_UseSkill_Player_2",
+    "Outer": "BT_Phantom_NoEnemySkill2Off",
+    "Class": "UScriptClass'BTTask_UseSkill_Player'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SkillType": "EUseSkill_SkillType::Skill2",
+      "AutoInput": false,
+      "NodeName": "Skill02_End",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_NoEnemySkill2Off'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Parent/BT_Phantom_NoEnemySkill2Off.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Phantom_NoEnemySkill2Off:BTComposite_Sequence_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Parent/BT_Phantom_NoEnemySkill2Off.1"
+      }
+    }
+  }
+]

@@ -1,0 +1,340 @@
+[
+  {
+    "Type": "AIDataProvider_QueryParams",
+    "Name": "AIDataProvider_QueryParams_0",
+    "Outer": "EnvQueryGenerator_EMPathingGrid_0",
+    "Class": "UScriptClass'AIDataProvider_QueryParams'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ParamName": "EMPathingGrid.GridSize"
+    }
+  },
+  {
+    "Type": "AIDataProvider_QueryParams",
+    "Name": "AIDataProvider_QueryParams_1",
+    "Outer": "EnvQueryGenerator_EMPathingGrid_0",
+    "Class": "UScriptClass'AIDataProvider_QueryParams'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ParamName": "EMPathingGrid.SpaceBetween"
+    }
+  },
+  {
+    "Type": "AIDataProvider_QueryParams",
+    "Name": "AIDataProvider_QueryParams_0",
+    "Outer": "EnvQueryTest_EMDistance_0",
+    "Class": "UScriptClass'AIDataProvider_QueryParams'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ParamName": "EMDistance.ScoringFactor_SelfDis"
+    }
+  },
+  {
+    "Type": "AIDataProvider_QueryParams",
+    "Name": "AIDataProvider_QueryParams_0",
+    "Outer": "EnvQueryTest_EMDistance_1",
+    "Class": "UScriptClass'AIDataProvider_QueryParams'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ParamName": "EMDistance.ScoringFactor_BTTargetDis"
+    }
+  },
+  {
+    "Type": "EnvQuery",
+    "Name": "EQS_SelfGridLeft",
+    "Class": "UScriptClass'EnvQuery'",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "QueryName": "EQS_NearbyNoBlock_2",
+      "Options": [
+        {
+          "ObjectName": "EnvQueryOption'EQS_SelfGridLeft:EnvQueryOption_0'",
+          "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Z_EnvQuery/EQS_SelfGridLeft.6"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "EnvQueryGenerator_EMPathingGrid",
+    "Name": "EnvQueryGenerator_EMPathingGrid_0",
+    "Outer": "EQS_SelfGridLeft",
+    "Class": "UScriptClass'EnvQueryGenerator_EMPathingGrid'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "GridSize": {
+        "DataBinding": {
+          "ObjectName": "AIDataProvider_QueryParams'EQS_SelfGridLeft:EnvQueryGenerator_EMPathingGrid_0.AIDataProvider_QueryParams_0'",
+          "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Z_EnvQuery/EQS_SelfGridLeft.0"
+        },
+        "DataField": "FloatValue"
+      },
+      "SpaceBetween": {
+        "DataBinding": {
+          "ObjectName": "AIDataProvider_QueryParams'EQS_SelfGridLeft:EnvQueryGenerator_EMPathingGrid_0.AIDataProvider_QueryParams_1'",
+          "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Z_EnvQuery/EQS_SelfGridLeft.1"
+        },
+        "DataField": "FloatValue"
+      },
+      "ProjectionData": {
+        "VersionNum": 1,
+        "ProjectDown": 400.0,
+        "ProjectUp": 300.0,
+        "ExtentX": 30.0,
+        "PostProjectionVerticalOffset": 20.0,
+        "SerializedChannel": "ECC_Visibility"
+      },
+      "VerNum": 1
+    }
+  },
+  {
+    "Type": "EnvQueryOption",
+    "Name": "EnvQueryOption_0",
+    "Outer": "EQS_SelfGridLeft",
+    "Class": "UScriptClass'EnvQueryOption'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Generator": {
+        "ObjectName": "EnvQueryGenerator_EMPathingGrid'EQS_SelfGridLeft:EnvQueryGenerator_EMPathingGrid_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Z_EnvQuery/EQS_SelfGridLeft.5"
+      },
+      "Tests": [
+        {
+          "ObjectName": "EnvQueryTest_EMPathfinding'EQS_SelfGridLeft:EnvQueryTest_EMPathfinding_0'",
+          "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Z_EnvQuery/EQS_SelfGridLeft.12"
+        },
+        {
+          "ObjectName": "EnvQueryTest_EMOverlap'EQS_SelfGridLeft:EnvQueryTest_EMOverlap_0'",
+          "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Z_EnvQuery/EQS_SelfGridLeft.11"
+        },
+        {
+          "ObjectName": "EnvQueryTest_EMTrace'EQS_SelfGridLeft:EnvQueryTest_EMTrace_0'",
+          "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Z_EnvQuery/EQS_SelfGridLeft.13"
+        },
+        {
+          "ObjectName": "EnvQueryTest_EMTrace'EQS_SelfGridLeft:EnvQueryTest_EMTrace_1'",
+          "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Z_EnvQuery/EQS_SelfGridLeft.14"
+        },
+        {
+          "ObjectName": "EnvQueryTest_EMDot'EQS_SelfGridLeft:EnvQueryTest_EMDot_0'",
+          "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Z_EnvQuery/EQS_SelfGridLeft.9"
+        },
+        {
+          "ObjectName": "EnvQueryTest_EMDot'EQS_SelfGridLeft:EnvQueryTest_EMDot_1'",
+          "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Z_EnvQuery/EQS_SelfGridLeft.10"
+        },
+        {
+          "ObjectName": "EnvQueryTest_EMDistance'EQS_SelfGridLeft:EnvQueryTest_EMDistance_0'",
+          "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Z_EnvQuery/EQS_SelfGridLeft.7"
+        },
+        {
+          "ObjectName": "EnvQueryTest_EMDistance'EQS_SelfGridLeft:EnvQueryTest_EMDistance_1'",
+          "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Z_EnvQuery/EQS_SelfGridLeft.8"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "EnvQueryTest_EMDistance",
+    "Name": "EnvQueryTest_EMDistance_0",
+    "Outer": "EQS_SelfGridLeft",
+    "Class": "UScriptClass'EnvQueryTest_EMDistance'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TestMode": "EEMEnvTestDistance::Distance2D",
+      "TestOrder": 6,
+      "TestPurpose": "EEnvTestPurpose::Score",
+      "ScoringFactor": {
+        "DataBinding": {
+          "ObjectName": "AIDataProvider_QueryParams'EQS_SelfGridLeft:EnvQueryTest_EMDistance_0.AIDataProvider_QueryParams_0'",
+          "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Z_EnvQuery/EQS_SelfGridLeft.2"
+        },
+        "DataField": "FloatValue"
+      },
+      "VerNum": 1
+    }
+  },
+  {
+    "Type": "EnvQueryTest_EMDistance",
+    "Name": "EnvQueryTest_EMDistance_1",
+    "Outer": "EQS_SelfGridLeft",
+    "Class": "UScriptClass'EnvQueryTest_EMDistance'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "DistanceTo": {
+        "ObjectName": "BlueprintGeneratedClass'BTTargetEQS_C'",
+        "ObjectPath": "EM/Content/BluePrints/AI/EQSContext/BTTargetEQS.1"
+      },
+      "TestOrder": 7,
+      "TestPurpose": "EEnvTestPurpose::Score",
+      "ScoringFactor": {
+        "DataBinding": {
+          "ObjectName": "AIDataProvider_QueryParams'EQS_SelfGridLeft:EnvQueryTest_EMDistance_1.AIDataProvider_QueryParams_0'",
+          "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Z_EnvQuery/EQS_SelfGridLeft.3"
+        },
+        "DataField": "FloatValue"
+      },
+      "VerNum": 1
+    }
+  },
+  {
+    "Type": "EnvQueryTest_EMDot",
+    "Name": "EnvQueryTest_EMDot_0",
+    "Outer": "EQS_SelfGridLeft",
+    "Class": "UScriptClass'EnvQueryTest_EMDot'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "LineA": {
+        "LineFrom": {
+          "ObjectName": "Class'EnvQueryContext_Querier'",
+          "ObjectPath": "/Script/AIModule"
+        },
+        "LineTo": {
+          "ObjectName": "Class'EnvQueryContext_Item'",
+          "ObjectPath": "/Script/AIModule"
+        },
+        "DirMode": "EEnvDirection::TwoPoints"
+      },
+      "LineB": {
+        "LineTo": {
+          "ObjectName": "BlueprintGeneratedClass'BTTargetEQS_C'",
+          "ObjectPath": "EM/Content/BluePrints/AI/EQSContext/BTTargetEQS.1"
+        }
+      },
+      "bAbsoluteValue": true,
+      "TestOrder": 4,
+      "TestPurpose": "EEnvTestPurpose::Score",
+      "ScoringFactor": {
+        "DefaultValue": 4.0
+      },
+      "VerNum": 1
+    }
+  },
+  {
+    "Type": "EnvQueryTest_EMDot",
+    "Name": "EnvQueryTest_EMDot_1",
+    "Outer": "EQS_SelfGridLeft",
+    "Class": "UScriptClass'EnvQueryTest_EMDot'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "LineA": {
+        "LineFrom": {
+          "ObjectName": "Class'EnvQueryContext_Querier'",
+          "ObjectPath": "/Script/AIModule"
+        },
+        "LineTo": {
+          "ObjectName": "BlueprintGeneratedClass'MonsterLeftEQS_C'",
+          "ObjectPath": "EM/Content/BluePrints/AI/EQSContext/MonsterLeftEQS.1"
+        },
+        "DirMode": "EEnvDirection::TwoPoints"
+      },
+      "bAbsoluteValue": true,
+      "TestOrder": 5,
+      "TestPurpose": "EEnvTestPurpose::Score",
+      "ScoringFactor": {
+        "DefaultValue": 4.0
+      },
+      "VerNum": 1
+    }
+  },
+  {
+    "Type": "EnvQueryTest_EMOverlap",
+    "Name": "EnvQueryTest_EMOverlap_0",
+    "Outer": "EQS_SelfGridLeft",
+    "Class": "UScriptClass'EnvQueryTest_EMOverlap'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "OverlapData": {
+        "ExtentX": 40.0,
+        "ExtentY": 40.0,
+        "ExtentZ": 40.0,
+        "ShapeOffset": {
+          "X": 0.0,
+          "Y": 0.0,
+          "Z": 90.0
+        },
+        "OverlapChannel": "ECC_GameTraceChannel6",
+        "OverlapShape": "EEnvOverlapShape::Capsule",
+        "bSkipOverlapQuerier": true
+      },
+      "TestOrder": 1,
+      "TestPurpose": "EEnvTestPurpose::Filter",
+      "BoolValue": {
+        "DefaultValue": false
+      },
+      "VerNum": 1
+    }
+  },
+  {
+    "Type": "EnvQueryTest_EMPathfinding",
+    "Name": "EnvQueryTest_EMPathfinding_0",
+    "Outer": "EQS_SelfGridLeft",
+    "Class": "UScriptClass'EnvQueryTest_EMPathfinding'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TestPurpose": "EEnvTestPurpose::Filter",
+      "VerNum": 1
+    }
+  },
+  {
+    "Type": "EnvQueryTest_EMTrace",
+    "Name": "EnvQueryTest_EMTrace_0",
+    "Outer": "EQS_SelfGridLeft",
+    "Class": "UScriptClass'EnvQueryTest_EMTrace'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TraceData": {
+        "VersionNum": 1,
+        "TraceChannel": "TraceTypeQuery5",
+        "SerializedChannel": "ECC_GameTraceChannel5"
+      },
+      "ItemHeightOffset": {
+        "DefaultValue": 90.0
+      },
+      "ContextHeightOffset": {
+        "DefaultValue": 90.0
+      },
+      "Context": {
+        "ObjectName": "BlueprintGeneratedClass'BTTargetEQS_C'",
+        "ObjectPath": "EM/Content/BluePrints/AI/EQSContext/BTTargetEQS.1"
+      },
+      "TestOrder": 2,
+      "TestPurpose": "EEnvTestPurpose::Filter",
+      "BoolValue": {
+        "DefaultValue": false
+      },
+      "ScoringFactor": {
+        "DefaultValue": 2.0
+      },
+      "VerNum": 1
+    }
+  },
+  {
+    "Type": "EnvQueryTest_EMTrace",
+    "Name": "EnvQueryTest_EMTrace_1",
+    "Outer": "EQS_SelfGridLeft",
+    "Class": "UScriptClass'EnvQueryTest_EMTrace'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TraceData": {
+        "VersionNum": 1,
+        "TraceChannel": "TraceTypeQuery5",
+        "SerializedChannel": "ECC_GameTraceChannel5"
+      },
+      "ItemHeightOffset": {
+        "DefaultValue": 90.0
+      },
+      "ContextHeightOffset": {
+        "DefaultValue": 90.0
+      },
+      "TestOrder": 3,
+      "TestPurpose": "EEnvTestPurpose::Filter",
+      "BoolValue": {
+        "DefaultValue": false
+      },
+      "ScoringFactor": {
+        "DefaultValue": 2.0
+      },
+      "VerNum": 1
+    }
+  }
+]

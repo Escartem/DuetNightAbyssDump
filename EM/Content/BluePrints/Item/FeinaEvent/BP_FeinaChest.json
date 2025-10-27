@@ -1,0 +1,680 @@
+[
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_BP_FeinaChest",
+    "Outer": "BP_FeinaChest_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "K2Node_Event_NowStateId",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "StrProperty",
+        "Name": "CallFunc_Conv_IntToString_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 16
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetMaterial_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'MaterialInterface'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_SwitchString_CmpSuccess",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_CreateDynamicMaterialInstance_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'MaterialInstanceDynamic'",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnEnterState",
+    "Outer": "BP_FeinaChest_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "SuperStruct": {
+      "ObjectName": "Function'CombatItemBase:OnEnterState'",
+      "ObjectPath": "/Script/EM"
+    },
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "NowStateId",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "ReceiveBeginPlay",
+    "Outer": "BP_FeinaChest_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "SuperStruct": {
+      "ObjectName": "Function'Actor:ReceiveBeginPlay'",
+      "ObjectPath": "/Script/Engine"
+    },
+    "FunctionFlags": "FUNC_Event | FUNC_Protected | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "TL_Fade__UpdateFunc",
+    "Outer": "BP_FeinaChest_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "TL_Fade__FinishedFunc",
+    "Outer": "BP_FeinaChest_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "TL_Open__UpdateFunc",
+    "Outer": "BP_FeinaChest_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "TL_Open__FinishedFunc",
+    "Outer": "BP_FeinaChest_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BP_FeinaChest_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Super": {
+      "ObjectName": "BlueprintGeneratedClass'BP_CombatItemBase_C'",
+      "ObjectPath": "EM/Content/BluePrints/Item/BP_CombatItemBase.1"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Timelines": [
+        {
+          "ObjectName": "TimelineTemplate'BP_FeinaChest_C:TL_Open_Template'",
+          "ObjectPath": "EM/Content/BluePrints/Item/FeinaEvent/BP_FeinaChest.22"
+        },
+        {
+          "ObjectName": "TimelineTemplate'BP_FeinaChest_C:TL_Fade_Template'",
+          "ObjectPath": "EM/Content/BluePrints/Item/FeinaEvent/BP_FeinaChest.21"
+        }
+      ],
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BP_FeinaChest_C:SimpleConstructionScript_0'",
+        "ObjectPath": "EM/Content/BluePrints/Item/FeinaEvent/BP_FeinaChest.19"
+      },
+      "InheritableComponentHandler": {
+        "ObjectName": "InheritableComponentHandler'BP_FeinaChest_C:InheritableComponentHandler'",
+        "ObjectPath": "EM/Content/BluePrints/Item/FeinaEvent/BP_FeinaChest.15"
+      },
+      "UberGraphFunction": {
+        "ObjectName": "Function'BP_FeinaChest_C:ExecuteUbergraph_BP_FeinaChest'",
+        "ObjectPath": "EM/Content/BluePrints/Item/FeinaEvent/BP_FeinaChest.0"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "BlueprintGeneratedClass'BP_CombatItemBase_C'",
+      "ObjectPath": "EM/Content/BluePrints/Item/BP_CombatItemBase.1"
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'BP_FeinaChest_C:TL_Open__FinishedFunc'",
+        "ObjectPath": "EM/Content/BluePrints/Item/FeinaEvent/BP_FeinaChest.6"
+      },
+      {
+        "ObjectName": "Function'BP_FeinaChest_C:TL_Open__UpdateFunc'",
+        "ObjectPath": "EM/Content/BluePrints/Item/FeinaEvent/BP_FeinaChest.5"
+      },
+      {
+        "ObjectName": "Function'BP_FeinaChest_C:TL_Fade__FinishedFunc'",
+        "ObjectPath": "EM/Content/BluePrints/Item/FeinaEvent/BP_FeinaChest.4"
+      },
+      {
+        "ObjectName": "Function'BP_FeinaChest_C:TL_Fade__UpdateFunc'",
+        "ObjectPath": "EM/Content/BluePrints/Item/FeinaEvent/BP_FeinaChest.3"
+      },
+      {
+        "ObjectName": "Function'BP_FeinaChest_C:ReceiveBeginPlay'",
+        "ObjectPath": "EM/Content/BluePrints/Item/FeinaEvent/BP_FeinaChest.2"
+      },
+      {
+        "ObjectName": "Function'BP_FeinaChest_C:OnEnterState'",
+        "ObjectPath": "EM/Content/BluePrints/Item/FeinaEvent/BP_FeinaChest.1"
+      },
+      {
+        "ObjectName": "Function'BP_FeinaChest_C:ExecuteUbergraph_BP_FeinaChest'",
+        "ObjectPath": "EM/Content/BluePrints/Item/FeinaEvent/BP_FeinaChest.0"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient",
+        "Struct": {
+          "ObjectName": "ScriptStruct'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "SV_IP_Chest_HX01",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'StaticMeshComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "TL_Fade______0_938B9B14400D84E239211C820E23F0C2",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4
+      },
+      {
+        "Type": "ByteProperty",
+        "Name": "TL_Fade__Direction_938B9B14400D84E239211C820E23F0C2",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "Enum": {
+          "ObjectName": "Enum'ETimelineDirection'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "TL_Fade",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'TimelineComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "TL_Open_LineWidth_C0CF878640C1BE2D21467CB83F12B465",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "TL_Open_Frame_C0CF878640C1BE2D21467CB83F12B465",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4
+      },
+      {
+        "Type": "ByteProperty",
+        "Name": "TL_Open__Direction_C0CF878640C1BE2D21467CB83F12B465",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "Enum": {
+          "ObjectName": "Enum'ETimelineDirection'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "TL_Open",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'TimelineComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "开启时发光颜色",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "Struct": {
+          "ObjectName": "ScriptStruct'LinearColor'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_BP_FeinaChest": {
+        "ObjectName": "Function'BP_FeinaChest_C:ExecuteUbergraph_BP_FeinaChest'",
+        "ObjectPath": "EM/Content/BluePrints/Item/FeinaEvent/BP_FeinaChest.0"
+      },
+      "OnEnterState": {
+        "ObjectName": "Function'BP_FeinaChest_C:OnEnterState'",
+        "ObjectPath": "EM/Content/BluePrints/Item/FeinaEvent/BP_FeinaChest.1"
+      },
+      "ReceiveBeginPlay": {
+        "ObjectName": "Function'BP_FeinaChest_C:ReceiveBeginPlay'",
+        "ObjectPath": "EM/Content/BluePrints/Item/FeinaEvent/BP_FeinaChest.2"
+      },
+      "TL_Fade__UpdateFunc": {
+        "ObjectName": "Function'BP_FeinaChest_C:TL_Fade__UpdateFunc'",
+        "ObjectPath": "EM/Content/BluePrints/Item/FeinaEvent/BP_FeinaChest.3"
+      },
+      "TL_Fade__FinishedFunc": {
+        "ObjectName": "Function'BP_FeinaChest_C:TL_Fade__FinishedFunc'",
+        "ObjectPath": "EM/Content/BluePrints/Item/FeinaEvent/BP_FeinaChest.4"
+      },
+      "TL_Open__UpdateFunc": {
+        "ObjectName": "Function'BP_FeinaChest_C:TL_Open__UpdateFunc'",
+        "ObjectPath": "EM/Content/BluePrints/Item/FeinaEvent/BP_FeinaChest.5"
+      },
+      "TL_Open__FinishedFunc": {
+        "ObjectName": "Function'BP_FeinaChest_C:TL_Open__FinishedFunc'",
+        "ObjectPath": "EM/Content/BluePrints/Item/FeinaEvent/BP_FeinaChest.6"
+      }
+    },
+    "ClassFlags": "CLASS_Config | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BP_FeinaChest_C'Default__BP_FeinaChest_C'",
+      "ObjectPath": "EM/Content/BluePrints/Item/FeinaEvent/BP_FeinaChest.8"
+    }
+  },
+  {
+    "Type": "BP_FeinaChest_C",
+    "Name": "Default__BP_FeinaChest_C",
+    "Class": "BlueprintGeneratedClass'EM/Content/BluePrints/Item/FeinaEvent/BP_FeinaChest.BP_FeinaChest_C'",
+    "Template": {
+      "ObjectName": "BP_CombatItemBase_C'Default__BP_CombatItemBase_C'",
+      "ObjectPath": "EM/Content/BluePrints/Item/BP_CombatItemBase.2"
+    },
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "UberGraphFrame": {},
+      "开启时发光颜色": {
+        "R": 10.0,
+        "G": 1.0,
+        "B": 0.0,
+        "A": 0.0,
+        "Hex": "FFFF00"
+      },
+      "CombatStateChangeComponent": {
+        "ObjectName": "BP_CombatStateChangeComponent_C'Default__BP_FeinaChest_C:CombatStateChangeComponent'",
+        "ObjectPath": "EM/Content/BluePrints/Item/FeinaEvent/BP_FeinaChest.10"
+      },
+      "CombatClientEffectComponent": {
+        "ObjectName": "BP_CombatClientEffectComponent_C'Default__BP_FeinaChest_C:CombatClientEffectComponent'",
+        "ObjectPath": "EM/Content/BluePrints/Item/FeinaEvent/BP_FeinaChest.9"
+      },
+      "FXComponent": {
+        "ObjectName": "BP_FXComponent_C'Default__BP_FeinaChest_C:BP_FXComponent'",
+        "ObjectPath": "EM/Content/BluePrints/Item/FeinaEvent/BP_FeinaChest.11"
+      },
+      "BpBorn": true,
+      "UnitId": 39042,
+      "UnitType": "Mechanism"
+    }
+  },
+  {
+    "Type": "BP_CombatClientEffectComponent_C",
+    "Name": "CombatClientEffectComponent",
+    "Outer": "Default__BP_FeinaChest_C",
+    "Class": "BlueprintGeneratedClass'EM/Content/BluePrints/Item/BP_CombatClientEffectComponent.BP_CombatClientEffectComponent_C'",
+    "Template": {
+      "ObjectName": "BP_CombatClientEffectComponent_C'Default__BP_CombatItemBase_C:CombatClientEffectComponent'",
+      "ObjectPath": "EM/Content/BluePrints/Item/BP_CombatItemBase.3"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "BP_CombatStateChangeComponent_C",
+    "Name": "CombatStateChangeComponent",
+    "Outer": "Default__BP_FeinaChest_C",
+    "Class": "BlueprintGeneratedClass'EM/Content/BluePrints/Item/BP_CombatStateChangeComponent.BP_CombatStateChangeComponent_C'",
+    "Template": {
+      "ObjectName": "BP_CombatStateChangeComponent_C'Default__BP_CombatItemBase_C:CombatStateChangeComponent'",
+      "ObjectPath": "EM/Content/BluePrints/Item/BP_CombatItemBase.4"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "BP_FXComponent_C",
+    "Name": "BP_FXComponent",
+    "Outer": "Default__BP_FeinaChest_C",
+    "Class": "BlueprintGeneratedClass'EM/Content/BluePrints/Char/BP_FXComponent.BP_FXComponent_C'",
+    "Template": {
+      "ObjectName": "BP_FXComponent_C'Default__BP_CombatItemBase_C:BP_FXComponent'",
+      "ObjectPath": "EM/Content/BluePrints/Item/BP_CombatItemBase.5"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "CurveFloat",
+    "Name": "CurveFloat_1",
+    "Outer": "BP_FeinaChest_C",
+    "Class": "UScriptClass'CurveFloat'",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "FloatCurve": {
+        "Keys": [
+          {
+            "InterpMode": "RCIM_Cubic",
+            "TangentMode": "RCTM_User",
+            "TangentWeightMode": "RCTWM_WeightedNone",
+            "Time": 0.0,
+            "Value": 0.0,
+            "ArriveTangent": 1.4766171,
+            "ArriveTangentWeight": 0.0,
+            "LeaveTangent": 1.4766165,
+            "LeaveTangentWeight": 0.0
+          },
+          {
+            "InterpMode": "RCIM_Cubic",
+            "TangentMode": "RCTM_User",
+            "TangentWeightMode": "RCTWM_WeightedNone",
+            "Time": 1.0,
+            "Value": 1.0,
+            "ArriveTangent": 0.08569974,
+            "ArriveTangentWeight": 0.0,
+            "LeaveTangent": 0.0856992,
+            "LeaveTangentWeight": 0.0
+          }
+        ]
+      }
+    }
+  },
+  {
+    "Type": "CurveFloat",
+    "Name": "CurveFloat_2",
+    "Outer": "BP_FeinaChest_C",
+    "Class": "UScriptClass'CurveFloat'",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "FloatCurve": {
+        "Keys": [
+          {
+            "InterpMode": "RCIM_Linear",
+            "TangentMode": "RCTM_Auto",
+            "TangentWeightMode": "RCTWM_WeightedNone",
+            "Time": 0.0,
+            "Value": 1.0,
+            "ArriveTangent": 0.0,
+            "ArriveTangentWeight": 0.0,
+            "LeaveTangent": 0.0,
+            "LeaveTangentWeight": 0.0
+          },
+          {
+            "InterpMode": "RCIM_Linear",
+            "TangentMode": "RCTM_Auto",
+            "TangentWeightMode": "RCTWM_WeightedNone",
+            "Time": 0.5,
+            "Value": 15.0,
+            "ArriveTangent": 0.0,
+            "ArriveTangentWeight": 0.0,
+            "LeaveTangent": 0.0,
+            "LeaveTangentWeight": 0.0
+          }
+        ]
+      }
+    }
+  },
+  {
+    "Type": "CurveFloat",
+    "Name": "CurveFloat_4",
+    "Outer": "BP_FeinaChest_C",
+    "Class": "UScriptClass'CurveFloat'",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "FloatCurve": {
+        "Keys": [
+          {
+            "InterpMode": "RCIM_Linear",
+            "TangentMode": "RCTM_Auto",
+            "TangentWeightMode": "RCTWM_WeightedNone",
+            "Time": 0.0,
+            "Value": 2.0,
+            "ArriveTangent": 0.0,
+            "ArriveTangentWeight": 0.0,
+            "LeaveTangent": 0.0,
+            "LeaveTangentWeight": 0.0
+          },
+          {
+            "InterpMode": "RCIM_Linear",
+            "TangentMode": "RCTM_Auto",
+            "TangentWeightMode": "RCTWM_WeightedNone",
+            "Time": 0.01,
+            "Value": 0.1,
+            "ArriveTangent": 0.0,
+            "ArriveTangentWeight": 0.0,
+            "LeaveTangent": 0.0,
+            "LeaveTangentWeight": 0.0
+          },
+          {
+            "InterpMode": "RCIM_Linear",
+            "TangentMode": "RCTM_Auto",
+            "TangentWeightMode": "RCTWM_WeightedNone",
+            "Time": 0.113748,
+            "Value": 0.624848,
+            "ArriveTangent": 0.0,
+            "ArriveTangentWeight": 0.0,
+            "LeaveTangent": 0.0,
+            "LeaveTangentWeight": 0.0
+          },
+          {
+            "InterpMode": "RCIM_Linear",
+            "TangentMode": "RCTM_Auto",
+            "TangentWeightMode": "RCTWM_WeightedNone",
+            "Time": 0.209476,
+            "Value": 2.0,
+            "ArriveTangent": 0.0,
+            "ArriveTangentWeight": 0.0,
+            "LeaveTangent": 0.0,
+            "LeaveTangentWeight": 0.0
+          }
+        ]
+      }
+    }
+  },
+  {
+    "Type": "InheritableComponentHandler",
+    "Name": "InheritableComponentHandler",
+    "Outer": "BP_FeinaChest_C",
+    "Class": "UScriptClass'InheritableComponentHandler'",
+    "Flags": "RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Outer": "BP_FeinaChest_C",
+    "Class": "UScriptClass'SceneComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BP_FeinaChest_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "EM/Content/BluePrints/Item/FeinaEvent/BP_FeinaChest.16"
+      },
+      "VariableGuid": "D21896D2-401E40FA-6EFE30AE-90B70540",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_1",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'StaticMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "StaticMeshComponent'BP_FeinaChest_C:SV_IP_Chest_HX01_GEN_VARIABLE'",
+        "ObjectPath": "EM/Content/BluePrints/Item/FeinaEvent/BP_FeinaChest.20"
+      },
+      "ParentComponentOrVariableName": "DefaultSceneRoot",
+      "ParentComponentOwnerClassName": "BP_CombatItemBase_C",
+      "VariableGuid": "88A31DE6-4B4A8F9F-1FCB978E-F8BEBC5E",
+      "InternalVariableName": "SV_IP_Chest_HX01"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Outer": "BP_FeinaChest_C",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_FeinaChest_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "EM/Content/BluePrints/Item/FeinaEvent/BP_FeinaChest.18"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_FeinaChest_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "EM/Content/BluePrints/Item/FeinaEvent/BP_FeinaChest.18"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BP_FeinaChest_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "EM/Content/BluePrints/Item/FeinaEvent/BP_FeinaChest.17"
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "SV_IP_Chest_HX01_GEN_VARIABLE",
+    "Outer": "BP_FeinaChest_C",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'SV_IP_Chest_AL01'",
+        "ObjectPath": "EM/Content/Asset/Scene/common/InterProps/Mesh/SV_IP_Chest_AL01.2"
+      }
+    }
+  },
+  {
+    "Type": "TimelineTemplate",
+    "Name": "TL_Fade_Template",
+    "Outer": "BP_FeinaChest_C",
+    "Class": "UScriptClass'TimelineTemplate'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TimelineLength": 1.0,
+      "FloatTracks": [
+        {
+          "CurveFloat": {
+            "ObjectName": "CurveFloat'BP_FeinaChest_C:CurveFloat_1'",
+            "ObjectPath": "EM/Content/BluePrints/Item/FeinaEvent/BP_FeinaChest.12"
+          },
+          "PropertyName": "TL_Fade______0_938B9B14400D84E239211C820E23F0C2",
+          "TrackName": "新建轨道_0",
+          "bIsExternalCurve": false
+        }
+      ],
+      "TimelineGuid": "938B9B14-400D84E2-39211C82-0E23F0C2",
+      "VariableName": "TL_Fade",
+      "DirectionPropertyName": "TL_Fade__Direction_938B9B14400D84E239211C820E23F0C2",
+      "UpdateFunctionName": "TL_Fade__UpdateFunc",
+      "FinishedFunctionName": "TL_Fade__FinishedFunc"
+    }
+  },
+  {
+    "Type": "TimelineTemplate",
+    "Name": "TL_Open_Template",
+    "Outer": "BP_FeinaChest_C",
+    "Class": "UScriptClass'TimelineTemplate'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TimelineLength": 0.5,
+      "FloatTracks": [
+        {
+          "CurveFloat": {
+            "ObjectName": "CurveFloat'BP_FeinaChest_C:CurveFloat_2'",
+            "ObjectPath": "EM/Content/BluePrints/Item/FeinaEvent/BP_FeinaChest.13"
+          },
+          "PropertyName": "TL_Open_Frame_C0CF878640C1BE2D21467CB83F12B465",
+          "TrackName": "Frame",
+          "bIsExternalCurve": false
+        },
+        {
+          "CurveFloat": {
+            "ObjectName": "CurveFloat'BP_FeinaChest_C:CurveFloat_4'",
+            "ObjectPath": "EM/Content/BluePrints/Item/FeinaEvent/BP_FeinaChest.14"
+          },
+          "PropertyName": "TL_Open_LineWidth_C0CF878640C1BE2D21467CB83F12B465",
+          "TrackName": "LineWidth",
+          "bIsExternalCurve": false
+        }
+      ],
+      "TimelineGuid": "C0CF8786-40C1BE2D-21467CB8-3F12B465",
+      "VariableName": "TL_Open",
+      "DirectionPropertyName": "TL_Open__Direction_C0CF878640C1BE2D21467CB83F12B465",
+      "UpdateFunctionName": "TL_Open__UpdateFunc",
+      "FinishedFunctionName": "TL_Open__FinishedFunc"
+    }
+  }
+]

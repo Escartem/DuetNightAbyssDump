@@ -1,0 +1,372 @@
+[
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_BP_Boss_Jushi_Skill05",
+    "Outer": "BP_Boss_Jushi_Skill05_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "K2Node_Event_KillMineRoleEid",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "K2Node_Event_KillMineSkillId",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "EnumProperty",
+        "Name": "K2Node_Event_DeathReason",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "Enum": {
+          "ObjectName": "Enum'EDeathReason'",
+          "ObjectPath": "/Script/EM"
+        },
+        "UnderlyingProp": {
+          "Type": "ByteProperty",
+          "Name": "UnderlyingType",
+          "Flags": "RF_Public",
+          "ElementSize": 1,
+          "Enum": null
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_SwitchEnum_CmpSuccess",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "K2Node_MakeArray_Array",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "ConstParm | ReferenceParm",
+        "Inner": {
+          "Type": "IntProperty",
+          "Name": "K2Node_MakeArray_Array",
+          "Flags": "RF_Public",
+          "ElementSize": 4
+        }
+      },
+      {
+        "Type": "InterfaceProperty",
+        "Name": "CallFunc_ExecuteSkillEffects_Source_CastInput",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "ConstParm | UObjectWrapper",
+        "InterfaceClass": {
+          "ObjectName": "Class'EffectSourceInterface'",
+          "ObjectPath": "/Script/EM"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction | FUNC_HasDefaults"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnCreatureDead",
+    "Outer": "BP_Boss_Jushi_Skill05_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "SuperStruct": {
+      "ObjectName": "Function'SkillCreature:OnCreatureDead'",
+      "ObjectPath": "/Script/EM"
+    },
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "KillMineRoleEid",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "KillMineSkillId",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "EnumProperty",
+        "Name": "DeathReason",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "Enum": {
+          "ObjectName": "Enum'EDeathReason'",
+          "ObjectPath": "/Script/EM"
+        },
+        "UnderlyingProp": {
+          "Type": "ByteProperty",
+          "Name": "UnderlyingType",
+          "Flags": "RF_Public",
+          "ElementSize": 1,
+          "Enum": null
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BP_Boss_Jushi_Skill05_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Super": {
+      "ObjectName": "BlueprintGeneratedClass'BP_SkillCreature_C'",
+      "ObjectPath": "EM/Content/BluePrints/Combat/SkillCreatures/BP_SkillCreature.3"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BP_Boss_Jushi_Skill05_C:SimpleConstructionScript_0'",
+        "ObjectPath": "EM/Content/BluePrints/Combat/SkillCreatures/Monster/BP_Boss_Jushi_Skill05.11"
+      },
+      "InheritableComponentHandler": {
+        "ObjectName": "InheritableComponentHandler'BP_Boss_Jushi_Skill05_C:InheritableComponentHandler'",
+        "ObjectPath": "EM/Content/BluePrints/Combat/SkillCreatures/Monster/BP_Boss_Jushi_Skill05.5"
+      },
+      "UberGraphFunction": {
+        "ObjectName": "Function'BP_Boss_Jushi_Skill05_C:ExecuteUbergraph_BP_Boss_Jushi_Skill05'",
+        "ObjectPath": "EM/Content/BluePrints/Combat/SkillCreatures/Monster/BP_Boss_Jushi_Skill05.0"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "BlueprintGeneratedClass'BP_SkillCreature_C'",
+      "ObjectPath": "EM/Content/BluePrints/Combat/SkillCreatures/BP_SkillCreature.3"
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'BP_Boss_Jushi_Skill05_C:OnCreatureDead'",
+        "ObjectPath": "EM/Content/BluePrints/Combat/SkillCreatures/Monster/BP_Boss_Jushi_Skill05.1"
+      },
+      {
+        "ObjectName": "Function'BP_Boss_Jushi_Skill05_C:ExecuteUbergraph_BP_Boss_Jushi_Skill05'",
+        "ObjectPath": "EM/Content/BluePrints/Combat/SkillCreatures/Monster/BP_Boss_Jushi_Skill05.0"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient",
+        "Struct": {
+          "ObjectName": "ScriptStruct'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Scene",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'SceneComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "SkillEffectId",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "Edit | BlueprintVisible"
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "ExecuteOnLifeEnd",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "PropertyFlags": "Edit | BlueprintVisible",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_BP_Boss_Jushi_Skill05": {
+        "ObjectName": "Function'BP_Boss_Jushi_Skill05_C:ExecuteUbergraph_BP_Boss_Jushi_Skill05'",
+        "ObjectPath": "EM/Content/BluePrints/Combat/SkillCreatures/Monster/BP_Boss_Jushi_Skill05.0"
+      },
+      "OnCreatureDead": {
+        "ObjectName": "Function'BP_Boss_Jushi_Skill05_C:OnCreatureDead'",
+        "ObjectPath": "EM/Content/BluePrints/Combat/SkillCreatures/Monster/BP_Boss_Jushi_Skill05.1"
+      }
+    },
+    "ClassFlags": "CLASS_Config | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BP_Boss_Jushi_Skill05_C'Default__BP_Boss_Jushi_Skill05_C'",
+      "ObjectPath": "EM/Content/BluePrints/Combat/SkillCreatures/Monster/BP_Boss_Jushi_Skill05.3"
+    }
+  },
+  {
+    "Type": "BP_Boss_Jushi_Skill05_C",
+    "Name": "Default__BP_Boss_Jushi_Skill05_C",
+    "Class": "BlueprintGeneratedClass'EM/Content/BluePrints/Combat/SkillCreatures/Monster/BP_Boss_Jushi_Skill05.BP_Boss_Jushi_Skill05_C'",
+    "Template": {
+      "ObjectName": "BP_SkillCreature_C'Default__BP_SkillCreature_C'",
+      "ObjectPath": "EM/Content/BluePrints/Combat/SkillCreatures/BP_SkillCreature.4"
+    },
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "UberGraphFrame": {},
+      "SkillEffectId": 851529,
+      "FXComponent": {
+        "ObjectName": "BP_FXComponent_C'Default__BP_Boss_Jushi_Skill05_C:BP_FXComponent'",
+        "ObjectPath": "EM/Content/BluePrints/Combat/SkillCreatures/Monster/BP_Boss_Jushi_Skill05.4"
+      },
+      "Collision": null,
+      "SceneCollision": null,
+      "RootComponent": {
+        "ObjectName": "SceneComponent'Default__BP_Boss_Jushi_Skill05_C:RootComponent'",
+        "ObjectPath": "EM/Content/BluePrints/Combat/SkillCreatures/Monster/BP_Boss_Jushi_Skill05.8"
+      }
+    }
+  },
+  {
+    "Type": "BP_FXComponent_C",
+    "Name": "BP_FXComponent",
+    "Outer": "Default__BP_Boss_Jushi_Skill05_C",
+    "Class": "BlueprintGeneratedClass'EM/Content/BluePrints/Char/BP_FXComponent.BP_FXComponent_C'",
+    "Template": {
+      "ObjectName": "BP_FXComponent_C'Default__BP_SkillCreature_C:BP_FXComponent'",
+      "ObjectPath": "EM/Content/BluePrints/Combat/SkillCreatures/BP_SkillCreature.5"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "InheritableComponentHandler",
+    "Name": "InheritableComponentHandler",
+    "Outer": "BP_Boss_Jushi_Skill05_C",
+    "Class": "UScriptClass'InheritableComponentHandler'",
+    "Flags": "RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Outer": "BP_Boss_Jushi_Skill05_C",
+    "Class": "UScriptClass'SceneComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "Scene_GEN_VARIABLE",
+    "Outer": "BP_Boss_Jushi_Skill05_C",
+    "Class": "UScriptClass'SceneComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": -100.0
+      }
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "RootComponent",
+    "Outer": "Default__BP_Boss_Jushi_Skill05_C",
+    "Class": "UScriptClass'SceneComponent'",
+    "Template": {
+      "ObjectName": "SceneComponent'Default__BP_SkillCreature_C:RootComponent'",
+      "ObjectPath": "EM/Content/BluePrints/Combat/SkillCreatures/BP_SkillCreature.7"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BP_Boss_Jushi_Skill05_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "EM/Content/BluePrints/Combat/SkillCreatures/Monster/BP_Boss_Jushi_Skill05.6"
+      },
+      "VariableGuid": "8DFFE9B5-4576E1E0-6CB81480-DA4D2A2D",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_1",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BP_Boss_Jushi_Skill05_C:Scene_GEN_VARIABLE'",
+        "ObjectPath": "EM/Content/BluePrints/Combat/SkillCreatures/Monster/BP_Boss_Jushi_Skill05.7"
+      },
+      "ParentComponentOrVariableName": "RootComponent",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "C5AF6554-4C2EB706-0A442891-686E0706",
+      "InternalVariableName": "Scene"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Outer": "BP_Boss_Jushi_Skill05_C",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_Boss_Jushi_Skill05_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "EM/Content/BluePrints/Combat/SkillCreatures/Monster/BP_Boss_Jushi_Skill05.10"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_Boss_Jushi_Skill05_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "EM/Content/BluePrints/Combat/SkillCreatures/Monster/BP_Boss_Jushi_Skill05.10"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BP_Boss_Jushi_Skill05_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "EM/Content/BluePrints/Combat/SkillCreatures/Monster/BP_Boss_Jushi_Skill05.9"
+      }
+    }
+  }
+]

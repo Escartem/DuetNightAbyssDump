@@ -1,0 +1,391 @@
+[
+  {
+    "Type": "BehaviorTree",
+    "Name": "TestMonsterBehaviorTree",
+    "Class": "UScriptClass'BehaviorTree'",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "RootNode": {
+        "ObjectName": "BTComposite_Selector'TestMonsterBehaviorTree:BTComposite_Selector_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/TestMonsterBehaviorTree.1"
+      },
+      "BlackboardAsset": {
+        "ObjectName": "BlackboardData'TestNewBlackBoard'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/TestNewBlackBoard.0"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_0",
+    "Outer": "TestMonsterBehaviorTree",
+    "Class": "UScriptClass'BTComposite_Selector'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'TestMonsterBehaviorTree:BTComposite_Sequence_2'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/TestMonsterBehaviorTree.4"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_IsNearestCharacter'TestMonsterBehaviorTree:BTDecorator_IsNearestCharacter_0'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/TestMonsterBehaviorTree.6"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'TestMonsterBehaviorTree:BTComposite_Sequence_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/TestMonsterBehaviorTree.2"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'TestMonsterBehaviorTree:BTComposite_Sequence_1'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/TestMonsterBehaviorTree.3"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'TestMonsterBehaviorTree:BTDecorator_Blackboard_0'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/TestMonsterBehaviorTree.5"
+            }
+          ],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'TestMonsterBehaviorTree'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/TestMonsterBehaviorTree.0"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_0",
+    "Outer": "TestMonsterBehaviorTree",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_SetNearestPlayerAsTarget'TestMonsterBehaviorTree:BTTask_SetNearestPlayerAsTarget_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/TestMonsterBehaviorTree.10"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_MoveTo'TestMonsterBehaviorTree:BTTask_MoveTo_1'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/TestMonsterBehaviorTree.8"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait'TestMonsterBehaviorTree:BTTask_Wait_1'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/TestMonsterBehaviorTree.13"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'TestMonsterBehaviorTree'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/TestMonsterBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'TestMonsterBehaviorTree:BTComposite_Selector_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/TestMonsterBehaviorTree.1"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_1",
+    "Outer": "TestMonsterBehaviorTree",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_SetNearestPlayerAsTarget'TestMonsterBehaviorTree:BTTask_SetNearestPlayerAsTarget_1'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/TestMonsterBehaviorTree.11"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_MoveTo'TestMonsterBehaviorTree:BTTask_MoveTo_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/TestMonsterBehaviorTree.7"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait'TestMonsterBehaviorTree:BTTask_Wait_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/TestMonsterBehaviorTree.12"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'TestMonsterBehaviorTree'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/TestMonsterBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'TestMonsterBehaviorTree:BTComposite_Selector_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/TestMonsterBehaviorTree.1"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_2",
+    "Outer": "TestMonsterBehaviorTree",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_MoveTo'TestMonsterBehaviorTree:BTTask_MoveTo_2'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/TestMonsterBehaviorTree.9"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait'TestMonsterBehaviorTree:BTTask_Wait_2'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/TestMonsterBehaviorTree.14"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'TestMonsterBehaviorTree'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/TestMonsterBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'TestMonsterBehaviorTree:BTComposite_Selector_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/TestMonsterBehaviorTree.1"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_0",
+    "Outer": "TestMonsterBehaviorTree",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "CachedDescription": "SelfActor is Is Set",
+      "BlackboardKey": {
+        "SelectedKeyName": "SelfActor"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'TestMonsterBehaviorTree'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/TestMonsterBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'TestMonsterBehaviorTree:BTComposite_Selector_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/TestMonsterBehaviorTree.1"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_IsNearestCharacter",
+    "Name": "BTDecorator_IsNearestCharacter_0",
+    "Outer": "TestMonsterBehaviorTree",
+    "Class": "UScriptClass'BTDecorator_IsNearestCharacter'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'TestMonsterBehaviorTree'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/TestMonsterBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'TestMonsterBehaviorTree:BTComposite_Selector_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/TestMonsterBehaviorTree.1"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_MoveTo",
+    "Name": "BTTask_MoveTo_0",
+    "Outer": "TestMonsterBehaviorTree",
+    "Class": "UScriptClass'BTTask_MoveTo'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "bStopOnOverlapNeedsUpdate": false,
+      "BlackboardKey": {
+        "SelectedKeyName": "Target"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'TestMonsterBehaviorTree'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/TestMonsterBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'TestMonsterBehaviorTree:BTComposite_Sequence_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/TestMonsterBehaviorTree.3"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_MoveTo",
+    "Name": "BTTask_MoveTo_1",
+    "Outer": "TestMonsterBehaviorTree",
+    "Class": "UScriptClass'BTTask_MoveTo'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "bStopOnOverlapNeedsUpdate": false,
+      "BlackboardKey": {
+        "SelectedKeyName": "Target"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'TestMonsterBehaviorTree'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/TestMonsterBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'TestMonsterBehaviorTree:BTComposite_Sequence_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/TestMonsterBehaviorTree.2"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_MoveTo",
+    "Name": "BTTask_MoveTo_2",
+    "Outer": "TestMonsterBehaviorTree",
+    "Class": "UScriptClass'BTTask_MoveTo'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "bStopOnOverlapNeedsUpdate": false,
+      "BlackboardKey": {
+        "SelectedKeyName": "PatrolLocation"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'TestMonsterBehaviorTree'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/TestMonsterBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'TestMonsterBehaviorTree:BTComposite_Sequence_2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/TestMonsterBehaviorTree.4"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_SetNearestPlayerAsTarget",
+    "Name": "BTTask_SetNearestPlayerAsTarget_0",
+    "Outer": "TestMonsterBehaviorTree",
+    "Class": "UScriptClass'BTTask_SetNearestPlayerAsTarget'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'TestMonsterBehaviorTree'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/TestMonsterBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'TestMonsterBehaviorTree:BTComposite_Sequence_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/TestMonsterBehaviorTree.2"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_SetNearestPlayerAsTarget",
+    "Name": "BTTask_SetNearestPlayerAsTarget_1",
+    "Outer": "TestMonsterBehaviorTree",
+    "Class": "UScriptClass'BTTask_SetNearestPlayerAsTarget'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'TestMonsterBehaviorTree'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/TestMonsterBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'TestMonsterBehaviorTree:BTComposite_Sequence_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/TestMonsterBehaviorTree.3"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_0",
+    "Outer": "TestMonsterBehaviorTree",
+    "Class": "UScriptClass'BTTask_Wait'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'TestMonsterBehaviorTree'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/TestMonsterBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'TestMonsterBehaviorTree:BTComposite_Sequence_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/TestMonsterBehaviorTree.3"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_1",
+    "Outer": "TestMonsterBehaviorTree",
+    "Class": "UScriptClass'BTTask_Wait'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'TestMonsterBehaviorTree'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/TestMonsterBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'TestMonsterBehaviorTree:BTComposite_Sequence_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/TestMonsterBehaviorTree.2"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_2",
+    "Outer": "TestMonsterBehaviorTree",
+    "Class": "UScriptClass'BTTask_Wait'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'TestMonsterBehaviorTree'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/TestMonsterBehaviorTree.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'TestMonsterBehaviorTree:BTComposite_Sequence_2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/TestMonsterBehaviorTree.4"
+      }
+    }
+  }
+]

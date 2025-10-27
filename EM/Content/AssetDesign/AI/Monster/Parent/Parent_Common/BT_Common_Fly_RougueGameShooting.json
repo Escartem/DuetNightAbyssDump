@@ -1,0 +1,90 @@
+[
+  {
+    "Type": "BehaviorTree",
+    "Name": "BT_Common_Fly_RougueGameShooting",
+    "Class": "UScriptClass'BehaviorTree'",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "RootNode": {
+        "ObjectName": "BTComposite_Selector'BT_Common_Fly_RougueGameShooting:BTComposite_Selector_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Parent/Parent_Common/BT_Common_Fly_RougueGameShooting.1"
+      },
+      "BlackboardAsset": {
+        "ObjectName": "BlackboardData'BB_Mon_Parent'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Parent/BB_Mon_Parent.0"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_0",
+    "Outer": "BT_Common_Fly_RougueGameShooting",
+    "Class": "UScriptClass'BTComposite_Selector'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_MoveToNextBattlePoint'BT_Common_Fly_RougueGameShooting:BTTask_MoveToNextBattlePoint_2'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Parent/Parent_Common/BT_Common_Fly_RougueGameShooting.3"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_KillSelf'BT_Common_Fly_RougueGameShooting:BTTask_KillSelf_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Parent/Parent_Common/BT_Common_Fly_RougueGameShooting.2"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Common_Fly_RougueGameShooting'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Parent/Parent_Common/BT_Common_Fly_RougueGameShooting.0"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_KillSelf",
+    "Name": "BTTask_KillSelf_0",
+    "Outer": "BT_Common_Fly_RougueGameShooting",
+    "Class": "UScriptClass'BTTask_KillSelf'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "NormalDeath": true,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Common_Fly_RougueGameShooting'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Parent/Parent_Common/BT_Common_Fly_RougueGameShooting.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Common_Fly_RougueGameShooting:BTComposite_Selector_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Parent/Parent_Common/BT_Common_Fly_RougueGameShooting.1"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_MoveToNextBattlePoint",
+    "Name": "BTTask_MoveToNextBattlePoint_2",
+    "Outer": "BT_Common_Fly_RougueGameShooting",
+    "Class": "UScriptClass'BTTask_MoveToNextBattlePoint'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "bReachTestIncludesAgentRadius": true,
+      "bOrientRotationToMovement": true,
+      "bUseFlyingMode": true,
+      "NodeName": "MoveToNextBattlePoint",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Common_Fly_RougueGameShooting'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Parent/Parent_Common/BT_Common_Fly_RougueGameShooting.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Common_Fly_RougueGameShooting:BTComposite_Selector_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Parent/Parent_Common/BT_Common_Fly_RougueGameShooting.1"
+      }
+    }
+  }
+]

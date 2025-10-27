@@ -1,0 +1,445 @@
+[
+  {
+    "Type": "BehaviorTree",
+    "Name": "BT_7Ranger_Cap_VIP",
+    "Class": "UScriptClass'BehaviorTree'",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "RootNode": {
+        "ObjectName": "BTComposite_Selector'BT_7Ranger_Cap_VIP:BTComposite_Selector_4'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_Ranger/Level_Capture/BT_7Ranger_Cap_VIP.2"
+      },
+      "BlackboardAsset": {
+        "ObjectName": "BlackboardData'BB_Mon_Parent_Ranged'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Parent/BB_Mon_Parent_Ranged.0"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_3",
+    "Outer": "BT_7Ranger_Cap_VIP",
+    "Class": "UScriptClass'BTComposite_Selector'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_UseSkill'BT_7Ranger_Cap_VIP:BTTask_UseSkill_2'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_Ranger/Level_Capture/BT_7Ranger_Cap_VIP.13"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "NodeName": "TryAttack",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_7Ranger_Cap_VIP'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_Ranger/Level_Capture/BT_7Ranger_Cap_VIP.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_7Ranger_Cap_VIP:BTComposite_Selector_4'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_Ranger/Level_Capture/BT_7Ranger_Cap_VIP.2"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_4",
+    "Outer": "BT_7Ranger_Cap_VIP",
+    "Class": "UScriptClass'BTComposite_Selector'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector'BT_7Ranger_Cap_VIP:BTComposite_Selector_3'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_Ranger/Level_Capture/BT_7Ranger_Cap_VIP.1"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_7Ranger_Cap_VIP:BTDecorator_Blackboard_7'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_Ranger/Level_Capture/BT_7Ranger_Cap_VIP.6"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_RunBehavior'BT_7Ranger_Cap_VIP:BTTask_RunBehavior_1'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_Ranger/Level_Capture/BT_7Ranger_Cap_VIP.11"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_7Ranger_Cap_VIP:BTDecorator_Blackboard_1'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_Ranger/Level_Capture/BT_7Ranger_Cap_VIP.5"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_RunBehavior'BT_7Ranger_Cap_VIP:BTTask_RunBehavior_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_Ranger/Level_Capture/BT_7Ranger_Cap_VIP.10"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_7Ranger_Cap_VIP:BTComposite_Sequence_1'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_Ranger/Level_Capture/BT_7Ranger_Cap_VIP.3"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "Services": [
+        {
+          "ObjectName": "BTService_BBValueDis'BT_7Ranger_Cap_VIP:BTService_BBValueDis_1'",
+          "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_Ranger/Level_Capture/BT_7Ranger_Cap_VIP.7"
+        }
+      ],
+      "NodeName": "IsCapture",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_7Ranger_Cap_VIP'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_Ranger/Level_Capture/BT_7Ranger_Cap_VIP.0"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_1",
+    "Outer": "BT_7Ranger_Cap_VIP",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_EMRunEQSQuery'BT_7Ranger_Cap_VIP:BTTask_EMRunEQSQuery_1'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_Ranger/Level_Capture/BT_7Ranger_Cap_VIP.8"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_SimpleParallel'BT_7Ranger_Cap_VIP:BTComposite_SimpleParallel_2'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_Ranger/Level_Capture/BT_7Ranger_Cap_VIP.4"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "NodeName": "Shoot",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_7Ranger_Cap_VIP'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_Ranger/Level_Capture/BT_7Ranger_Cap_VIP.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_7Ranger_Cap_VIP:BTComposite_Selector_4'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_Ranger/Level_Capture/BT_7Ranger_Cap_VIP.2"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_SimpleParallel",
+    "Name": "BTComposite_SimpleParallel_2",
+    "Outer": "BT_7Ranger_Cap_VIP",
+    "Class": "UScriptClass'BTComposite_SimpleParallel'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "FinishMode": "EBTParallelMode::WaitForBackground",
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_NewMoveTo'BT_7Ranger_Cap_VIP:BTTask_NewMoveTo_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_Ranger/Level_Capture/BT_7Ranger_Cap_VIP.9"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_UseSkill'BT_7Ranger_Cap_VIP:BTTask_UseSkill_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_Ranger/Level_Capture/BT_7Ranger_Cap_VIP.12"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_7Ranger_Cap_VIP'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_Ranger/Level_Capture/BT_7Ranger_Cap_VIP.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_7Ranger_Cap_VIP:BTComposite_Sequence_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_Ranger/Level_Capture/BT_7Ranger_Cap_VIP.3"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_1",
+    "Outer": "BT_7Ranger_Cap_VIP",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "FloatValue": 150.0,
+      "CachedDescription": "TickTargetDis 大于 150.000000",
+      "OperationType": 4,
+      "BlackboardKey": {
+        "SelectedKeyName": "TickTargetDis"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::Self",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_7Ranger_Cap_VIP'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_Ranger/Level_Capture/BT_7Ranger_Cap_VIP.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_7Ranger_Cap_VIP:BTComposite_Selector_4'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_Ranger/Level_Capture/BT_7Ranger_Cap_VIP.2"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_7",
+    "Outer": "BT_7Ranger_Cap_VIP",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "FloatValue": 150.0,
+      "CachedDescription": "TickTargetDis 小于或等于 150.000000",
+      "OperationType": 3,
+      "BlackboardKey": {
+        "SelectedKeyName": "TickTargetDis"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_7Ranger_Cap_VIP'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_Ranger/Level_Capture/BT_7Ranger_Cap_VIP.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_7Ranger_Cap_VIP:BTComposite_Selector_4'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_Ranger/Level_Capture/BT_7Ranger_Cap_VIP.2"
+      }
+    }
+  },
+  {
+    "Type": "BTService_BBValueDis",
+    "Name": "BTService_BBValueDis_1",
+    "Outer": "BT_7Ranger_Cap_VIP",
+    "Class": "UScriptClass'BTService_BBValueDis'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "BBName": "Target",
+      "Interval": 0.02,
+      "RandomDeviation": 0.0,
+      "bCallTickOnSearchStart": true,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_7Ranger_Cap_VIP'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_Ranger/Level_Capture/BT_7Ranger_Cap_VIP.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_7Ranger_Cap_VIP:BTComposite_Selector_4'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_Ranger/Level_Capture/BT_7Ranger_Cap_VIP.2"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_EMRunEQSQuery",
+    "Name": "BTTask_EMRunEQSQuery_1",
+    "Outer": "BT_7Ranger_Cap_VIP",
+    "Class": "UScriptClass'BTTask_EMRunEQSQuery'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "EQSRequest": {
+        "QueryTemplate": {
+          "ObjectName": "EnvQuery'EQS_BTTargetDonutInVision'",
+          "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Z_EnvQuery/EQS_BTTargetDonutInVision.6"
+        },
+        "QueryConfig": [
+          {
+            "ParamName": "EMDonut.InnerRadius",
+            "ParamType": "EAIParamType::Float",
+            "Value": 300.0,
+            "BBKey": {
+              "SelectedKeyName": "None",
+              "bNoneIsAllowedValue": true
+            }
+          },
+          {
+            "ParamName": "EMDonut.OuterRadius",
+            "ParamType": "EAIParamType::Float",
+            "Value": 380.0,
+            "BBKey": {
+              "SelectedKeyName": "None",
+              "bNoneIsAllowedValue": true
+            }
+          },
+          {
+            "ParamName": "EMDonut.NumberOfRings",
+            "ParamType": "EAIParamType::Int",
+            "Value": 4.0,
+            "BBKey": {
+              "SelectedKeyName": "None",
+              "bNoneIsAllowedValue": true
+            }
+          },
+          {
+            "ParamName": "EMDonut.PointsPerRing",
+            "ParamType": "EAIParamType::Int",
+            "Value": 20.0,
+            "BBKey": {
+              "SelectedKeyName": "None",
+              "bNoneIsAllowedValue": true
+            }
+          },
+          {
+            "ParamName": "EMDonut.ArcAngle",
+            "ParamType": "EAIParamType::Float",
+            "Value": 90.0,
+            "BBKey": {
+              "SelectedKeyName": "None",
+              "bNoneIsAllowedValue": true
+            }
+          },
+          {
+            "ParamName": "EMDistance.ScoringFactor",
+            "ParamType": "EAIParamType::Float",
+            "Value": 2.0,
+            "BBKey": {
+              "SelectedKeyName": "None",
+              "bNoneIsAllowedValue": true
+            }
+          }
+        ],
+        "RunMode": "EEnvQueryRunMode::RandomBest25Pct"
+      },
+      "BlackboardKey": {
+        "SelectedKeyName": "EQSQueryLoc"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_7Ranger_Cap_VIP'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_Ranger/Level_Capture/BT_7Ranger_Cap_VIP.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_7Ranger_Cap_VIP:BTComposite_Sequence_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_Ranger/Level_Capture/BT_7Ranger_Cap_VIP.3"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_NewMoveTo",
+    "Name": "BTTask_NewMoveTo_0",
+    "Outer": "BT_7Ranger_Cap_VIP",
+    "Class": "UScriptClass'BTTask_NewMoveTo'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "bUseControllerRotationYaw": true,
+      "bStareAt": true,
+      "AO": true,
+      "AcceptableRadius": 600.0,
+      "bStopOnOverlapNeedsUpdate": false,
+      "BlackboardKey": {
+        "SelectedKeyName": "EQSQueryLoc"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_7Ranger_Cap_VIP'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_Ranger/Level_Capture/BT_7Ranger_Cap_VIP.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_SimpleParallel'BT_7Ranger_Cap_VIP:BTComposite_SimpleParallel_2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_Ranger/Level_Capture/BT_7Ranger_Cap_VIP.4"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_RunBehavior",
+    "Name": "BTTask_RunBehavior_0",
+    "Outer": "BT_7Ranger_Cap_VIP",
+    "Class": "UScriptClass'BTTask_RunBehavior'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "BehaviorAsset": {
+        "ObjectName": "BehaviorTree'BT_7Ranger_Cap_VIP_RunStop'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_Ranger/Level_Capture/BT_7Ranger_Cap_VIP_RunStop.0"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_7Ranger_Cap_VIP'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_Ranger/Level_Capture/BT_7Ranger_Cap_VIP.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_7Ranger_Cap_VIP:BTComposite_Selector_4'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_Ranger/Level_Capture/BT_7Ranger_Cap_VIP.2"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_RunBehavior",
+    "Name": "BTTask_RunBehavior_1",
+    "Outer": "BT_7Ranger_Cap_VIP",
+    "Class": "UScriptClass'BTTask_RunBehavior'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "BehaviorAsset": {
+        "ObjectName": "BehaviorTree'BT_7Ranger_Cap_VIP_RunStop'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_Ranger/Level_Capture/BT_7Ranger_Cap_VIP_RunStop.0"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_7Ranger_Cap_VIP'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_Ranger/Level_Capture/BT_7Ranger_Cap_VIP.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_7Ranger_Cap_VIP:BTComposite_Selector_4'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_Ranger/Level_Capture/BT_7Ranger_Cap_VIP.2"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_UseSkill",
+    "Name": "BTTask_UseSkill_0",
+    "Outer": "BT_7Ranger_Cap_VIP",
+    "Class": "UScriptClass'BTTask_UseSkill'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "EnableAimOffset": true,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_7Ranger_Cap_VIP'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_Ranger/Level_Capture/BT_7Ranger_Cap_VIP.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_SimpleParallel'BT_7Ranger_Cap_VIP:BTComposite_SimpleParallel_2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_Ranger/Level_Capture/BT_7Ranger_Cap_VIP.4"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_UseSkill",
+    "Name": "BTTask_UseSkill_2",
+    "Outer": "BT_7Ranger_Cap_VIP",
+    "Class": "UScriptClass'BTTask_UseSkill'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SkillId": 5,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_7Ranger_Cap_VIP'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_Ranger/Level_Capture/BT_7Ranger_Cap_VIP.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_7Ranger_Cap_VIP:BTComposite_Selector_3'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_Ranger/Level_Capture/BT_7Ranger_Cap_VIP.1"
+      }
+    }
+  }
+]

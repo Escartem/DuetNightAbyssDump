@@ -1,0 +1,1670 @@
+[
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_BP_Boss_LiechePillar",
+    "Outer": "BP_Boss_LiechePillar_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "___int_Array_Index_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate",
+        "Flags": "RF_Public",
+        "ElementSize": 20,
+        "SignatureFunction": {
+          "ObjectName": "DelegateFunction'TimerDynamicDelegate__DelegateSignature'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "___int_Loop_Counter_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Add_IntInt_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "___int_Array_Index_Variable_1",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "InterfaceProperty",
+        "Name": "K2Node_ComponentBoundEvent_Source",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "ConstParm | UObjectWrapper",
+        "InterfaceClass": {
+          "ObjectName": "Class'EffectSourceInterface'",
+          "ObjectPath": "/Script/EM"
+        }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "K2Node_ComponentBoundEvent_KillMineRoleId",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "ConstParm"
+      },
+      {
+        "Type": "EnumProperty",
+        "Name": "K2Node_ComponentBoundEvent_DeathReason",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "PropertyFlags": "ConstParm",
+        "Enum": {
+          "ObjectName": "Enum'EDeathReason'",
+          "ObjectPath": "/Script/EM"
+        },
+        "UnderlyingProp": {
+          "Type": "ByteProperty",
+          "Name": "UnderlyingType",
+          "Flags": "RF_Public",
+          "ElementSize": 1,
+          "Enum": null
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_ComponentBoundEvent_Damage",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "ConstParm",
+        "PropertyClass": {
+          "ObjectName": "Class'DamageStruct'",
+          "ObjectPath": "/Script/EM"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_Battle___",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'BP_Battle_C'",
+          "ObjectPath": "EM/Content/BluePrints/Combat/BP_Battle.8"
+        }
+      },
+      {
+        "Type": "InterfaceProperty",
+        "Name": "CallFunc_DoTargetFilter_Source_CastInput",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "ConstParm | UObjectWrapper",
+        "InterfaceClass": {
+          "ObjectName": "Class'EffectSourceInterface'",
+          "ObjectPath": "/Script/EM"
+        }
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "CallFunc_DoTargetFilter_TargetEids",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "ReferenceParm",
+        "Inner": {
+          "Type": "IntProperty",
+          "Name": "CallFunc_DoTargetFilter_TargetEids",
+          "Flags": "RF_Public",
+          "ElementSize": 4
+        }
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "CallFunc_DoTargetFilter_DeadTargetEids",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "ReferenceParm",
+        "Inner": {
+          "Type": "IntProperty",
+          "Name": "CallFunc_DoTargetFilter_DeadTargetEids",
+          "Flags": "RF_Public",
+          "ElementSize": 4
+        }
+      },
+      {
+        "Type": "MapProperty",
+        "Name": "CallFunc_DoTargetFilter_OutCollisionComps",
+        "Flags": "RF_Public",
+        "ElementSize": 80,
+        "PropertyFlags": "ContainsInstancedReference",
+        "KeyProp": {
+          "Type": "IntProperty",
+          "Name": "CallFunc_DoTargetFilter_OutCollisionComps",
+          "Flags": "RF_Public",
+          "ElementSize": 4
+        },
+        "ValueProp": {
+          "Type": "StructProperty",
+          "Name": "CallFunc_DoTargetFilter_OutCollisionComps_Value",
+          "Flags": "RF_Public",
+          "ElementSize": 16,
+          "PropertyFlags": "ContainsInstancedReference",
+          "Struct": {
+            "ObjectName": "ScriptStruct'CollisionsArray'",
+            "ObjectPath": "/Script/EM"
+          }
+        }
+      },
+      {
+        "Type": "MapProperty",
+        "Name": "CallFunc_DoTargetFilter_OutPartEidArray",
+        "Flags": "RF_Public",
+        "ElementSize": 80,
+        "KeyProp": {
+          "Type": "IntProperty",
+          "Name": "CallFunc_DoTargetFilter_OutPartEidArray",
+          "Flags": "RF_Public",
+          "ElementSize": 4
+        },
+        "ValueProp": {
+          "Type": "StructProperty",
+          "Name": "CallFunc_DoTargetFilter_OutPartEidArray_Value",
+          "Flags": "RF_Public",
+          "ElementSize": 16,
+          "Struct": {
+            "ObjectName": "ScriptStruct'PartEidArray'",
+            "ObjectPath": "/Script/EM"
+          }
+        }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Array_Get_Item",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Array_Length_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetEntity_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Actor'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_DynamicCast_AsBP_Boss_Lieche_Pillar_Fake",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'BP_Boss_LiechePillarFake_C'",
+          "ObjectPath": "EM/Content/AssetDesign/Char/Monster/Boss_19_Lieche/BP_Boss_LiechePillarFake.0"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_DynamicCast_bSuccess",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "InterfaceProperty",
+        "Name": "CallFunc_IsDead_Source_CastInput",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "ConstParm | UObjectWrapper",
+        "InterfaceClass": {
+          "ObjectName": "Class'EffectSourceInterface'",
+          "ObjectPath": "/Script/EM"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsDead_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_DynamicCast_AsBP_Boss_Lieche_Core",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'BP_Boss_LiecheCore_C'",
+          "ObjectPath": "EM/Content/AssetDesign/Char/Monster/Boss_19_Lieche/BP_Boss_LiecheCore.7"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_DynamicCast_bSuccess_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Not_PreBool_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_DynamicCast_AsBP_Boss_Lieche_Pillar",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'BP_Boss_LiechePillar_C'",
+          "ObjectPath": "EM/Content/AssetDesign/Char/Monster/Boss_19_Lieche/BP_Boss_LiechePillar.5"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_DynamicCast_bSuccess_2",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Array_Add_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "InterfaceProperty",
+        "Name": "CallFunc_IsDead_Source_CastInput_1",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "ConstParm | UObjectWrapper",
+        "InterfaceClass": {
+          "ObjectName": "Class'EffectSourceInterface'",
+          "ObjectPath": "/Script/EM"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsDead_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Not_PreBool_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Array_Add_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_Array_Get_Item_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'BP_Boss_LiechePillarFake_C'",
+          "ObjectPath": "EM/Content/AssetDesign/Char/Monster/Boss_19_Lieche/BP_Boss_LiechePillarFake.0"
+        }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Array_Length_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Less_IntInt_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_K2_GetActorLocation_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "Struct": {
+          "ObjectName": "ScriptStruct'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "InterfaceProperty",
+        "Name": "CallFunc_K2_SetTimerDelegate_Combat_OwnerActor_CastInput",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "ConstParm | UObjectWrapper",
+        "InterfaceClass": {
+          "ObjectName": "Class'TimerManagerInterface'",
+          "ObjectPath": "/Script/EM"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_K2_SetTimerDelegate_Combat_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "Struct": {
+          "ObjectName": "ScriptStruct'CombatTimerHandle'",
+          "ObjectPath": "/Script/EM"
+        }
+      },
+      {
+        "Type": "InterfaceProperty",
+        "Name": "CallFunc_GetRootSource_Source_CastInput",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "ConstParm | UObjectWrapper",
+        "InterfaceClass": {
+          "ObjectName": "Class'EffectSourceInterface'",
+          "ObjectPath": "/Script/EM"
+        }
+      },
+      {
+        "Type": "InterfaceProperty",
+        "Name": "CallFunc_GetRootSource_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "UObjectWrapper",
+        "InterfaceClass": {
+          "ObjectName": "Class'EffectSourceInterface'",
+          "ObjectPath": "/Script/EM"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_CastToActor_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Actor'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_K2_GetActorLocation_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "Struct": {
+          "ObjectName": "ScriptStruct'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue_2",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "___int_Loop_Counter_Variable_1",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Less_IntInt_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Add_IntInt_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Array_Length_ReturnValue_2",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Greater_IntInt_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Not_PreBool_ReturnValue_2",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction | FUNC_HasDefaults"
+  },
+  {
+    "Type": "Function",
+    "Name": "KillSelf",
+    "Outer": "BP_Boss_LiechePillar_C",
+    "Class": "UScriptClass'Function'",
+    "Super": {
+      "ObjectName": "Function'BP_Boss_LiechePillarParent_C:KillSelf'",
+      "ObjectPath": "EM/Content/AssetDesign/Char/Monster/Boss_19_Lieche/BP_Boss_LiechePillarParent.2"
+    },
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "SuperStruct": {
+      "ObjectName": "Function'BP_Boss_LiechePillarParent_C:KillSelf'",
+      "ObjectPath": "EM/Content/AssetDesign/Char/Monster/Boss_19_Lieche/BP_Boss_LiechePillarParent.2"
+    },
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "TestLine",
+    "Outer": "BP_Boss_LiechePillar_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "ReceiveBeginPlay",
+    "Outer": "BP_Boss_LiechePillar_C",
+    "Class": "UScriptClass'Function'",
+    "Super": {
+      "ObjectName": "Function'BP_MonsterCharacter_C:ReceiveBeginPlay'",
+      "ObjectPath": "EM/Content/BluePrints/Char/BP_Monsters/BP_MonsterCharacter.20"
+    },
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "SuperStruct": {
+      "ObjectName": "Function'BP_MonsterCharacter_C:ReceiveBeginPlay'",
+      "ObjectPath": "EM/Content/BluePrints/Char/BP_Monsters/BP_MonsterCharacter.20"
+    },
+    "FunctionFlags": "FUNC_Event | FUNC_Protected | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "BndEvt__BP_Boss_LiecheCore_BattleEvent_K2Node_ComponentBoundEvent_0_AfterDead__DelegateSignature",
+    "Outer": "BP_Boss_LiechePillar_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "ChildProperties": [
+      {
+        "Type": "InterfaceProperty",
+        "Name": "Source",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "ConstParm | BlueprintVisible | BlueprintReadOnly | Parm | OutParm | ReferenceParm | UObjectWrapper",
+        "InterfaceClass": {
+          "ObjectName": "Class'EffectSourceInterface'",
+          "ObjectPath": "/Script/EM"
+        }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "KillMineRoleId",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "ConstParm | BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "EnumProperty",
+        "Name": "DeathReason",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "PropertyFlags": "ConstParm | BlueprintVisible | BlueprintReadOnly | Parm | OutParm | ReferenceParm",
+        "Enum": {
+          "ObjectName": "Enum'EDeathReason'",
+          "ObjectPath": "/Script/EM"
+        },
+        "UnderlyingProp": {
+          "Type": "ByteProperty",
+          "Name": "UnderlyingType",
+          "Flags": "RF_Public",
+          "ElementSize": 1,
+          "Enum": null
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Damage",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "ConstParm | BlueprintVisible | BlueprintReadOnly | Parm",
+        "PropertyClass": {
+          "ObjectName": "Class'DamageStruct'",
+          "ObjectPath": "/Script/EM"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_HasOutParms | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BP_Boss_LiechePillar_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Super": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Boss_LiechePillarParent_C'",
+      "ObjectPath": "EM/Content/AssetDesign/Char/Monster/Boss_19_Lieche/BP_Boss_LiechePillarParent.3"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "DynamicBindingObjects": [
+        {
+          "ObjectName": "ComponentDelegateBinding'BP_Boss_LiechePillar_C:ComponentDelegateBinding_0'",
+          "ObjectPath": "EM/Content/AssetDesign/Char/Monster/Boss_19_Lieche/BP_Boss_LiechePillar.20"
+        }
+      ],
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BP_Boss_LiechePillar_C:SimpleConstructionScript_0'",
+        "ObjectPath": "EM/Content/AssetDesign/Char/Monster/Boss_19_Lieche/BP_Boss_LiechePillar.42"
+      },
+      "InheritableComponentHandler": {
+        "ObjectName": "InheritableComponentHandler'BP_Boss_LiechePillar_C:InheritableComponentHandler'",
+        "ObjectPath": "EM/Content/AssetDesign/Char/Monster/Boss_19_Lieche/BP_Boss_LiechePillar.24"
+      },
+      "UberGraphFunction": {
+        "ObjectName": "Function'BP_Boss_LiechePillar_C:ExecuteUbergraph_BP_Boss_LiechePillar'",
+        "ObjectPath": "EM/Content/AssetDesign/Char/Monster/Boss_19_Lieche/BP_Boss_LiechePillar.0"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Boss_LiechePillarParent_C'",
+      "ObjectPath": "EM/Content/AssetDesign/Char/Monster/Boss_19_Lieche/BP_Boss_LiechePillarParent.3"
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'BP_Boss_LiechePillar_C:BndEvt__BP_Boss_LiecheCore_BattleEvent_K2Node_ComponentBoundEvent_0_AfterDead__DelegateSignature'",
+        "ObjectPath": "EM/Content/AssetDesign/Char/Monster/Boss_19_Lieche/BP_Boss_LiechePillar.4"
+      },
+      {
+        "ObjectName": "Function'BP_Boss_LiechePillar_C:ReceiveBeginPlay'",
+        "ObjectPath": "EM/Content/AssetDesign/Char/Monster/Boss_19_Lieche/BP_Boss_LiechePillar.3"
+      },
+      {
+        "ObjectName": "Function'BP_Boss_LiechePillar_C:TestLine'",
+        "ObjectPath": "EM/Content/AssetDesign/Char/Monster/Boss_19_Lieche/BP_Boss_LiechePillar.2"
+      },
+      {
+        "ObjectName": "Function'BP_Boss_LiechePillar_C:KillSelf'",
+        "ObjectPath": "EM/Content/AssetDesign/Char/Monster/Boss_19_Lieche/BP_Boss_LiechePillar.1"
+      },
+      {
+        "ObjectName": "Function'BP_Boss_LiechePillar_C:ExecuteUbergraph_BP_Boss_LiechePillar'",
+        "ObjectPath": "EM/Content/AssetDesign/Char/Monster/Boss_19_Lieche/BP_Boss_LiechePillar.0"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient",
+        "Struct": {
+          "ObjectName": "ScriptStruct'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Niagara",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'NiagaraComponent'",
+          "ObjectPath": "/Script/Niagara"
+        }
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "LiechePillar",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnTemplate | DisableEditOnInstance",
+        "Inner": {
+          "Type": "ObjectProperty",
+          "Name": "LiechePillar",
+          "Flags": "RF_Public",
+          "ElementSize": 8,
+          "PropertyClass": {
+            "ObjectName": "BlueprintGeneratedClass'BP_Boss_LiechePillar_C'",
+            "ObjectPath": "EM/Content/AssetDesign/Char/Monster/Boss_19_Lieche/BP_Boss_LiechePillar.5"
+          }
+        }
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "LichePillarFake",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnTemplate | DisableEditOnInstance",
+        "Inner": {
+          "Type": "ObjectProperty",
+          "Name": "LichePillarFake",
+          "Flags": "RF_Public",
+          "ElementSize": 8,
+          "PropertyClass": {
+            "ObjectName": "BlueprintGeneratedClass'BP_Boss_LiechePillarFake_C'",
+            "ObjectPath": "EM/Content/AssetDesign/Char/Monster/Boss_19_Lieche/BP_Boss_LiechePillarFake.0"
+          }
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "LiecheCore",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnTemplate | DisableEditOnInstance",
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'BP_Boss_LiecheCore_C'",
+          "ObjectPath": "EM/Content/AssetDesign/Char/Monster/Boss_19_Lieche/BP_Boss_LiecheCore.7"
+        }
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_BP_Boss_LiechePillar": {
+        "ObjectName": "Function'BP_Boss_LiechePillar_C:ExecuteUbergraph_BP_Boss_LiechePillar'",
+        "ObjectPath": "EM/Content/AssetDesign/Char/Monster/Boss_19_Lieche/BP_Boss_LiechePillar.0"
+      },
+      "KillSelf": {
+        "ObjectName": "Function'BP_Boss_LiechePillar_C:KillSelf'",
+        "ObjectPath": "EM/Content/AssetDesign/Char/Monster/Boss_19_Lieche/BP_Boss_LiechePillar.1"
+      },
+      "TestLine": {
+        "ObjectName": "Function'BP_Boss_LiechePillar_C:TestLine'",
+        "ObjectPath": "EM/Content/AssetDesign/Char/Monster/Boss_19_Lieche/BP_Boss_LiechePillar.2"
+      },
+      "ReceiveBeginPlay": {
+        "ObjectName": "Function'BP_Boss_LiechePillar_C:ReceiveBeginPlay'",
+        "ObjectPath": "EM/Content/AssetDesign/Char/Monster/Boss_19_Lieche/BP_Boss_LiechePillar.3"
+      },
+      "BndEvt__BP_Boss_LiecheCore_BattleEvent_K2Node_ComponentBoundEvent_0_AfterDead__DelegateSignature": {
+        "ObjectName": "Function'BP_Boss_LiechePillar_C:BndEvt__BP_Boss_LiecheCore_BattleEvent_K2Node_ComponentBoundEvent_0_AfterDead__DelegateSignature'",
+        "ObjectPath": "EM/Content/AssetDesign/Char/Monster/Boss_19_Lieche/BP_Boss_LiechePillar.4"
+      }
+    },
+    "ClassFlags": "CLASS_Config | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Game",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BP_Boss_LiechePillar_C'Default__BP_Boss_LiechePillar_C'",
+      "ObjectPath": "EM/Content/AssetDesign/Char/Monster/Boss_19_Lieche/BP_Boss_LiechePillar.6"
+    }
+  },
+  {
+    "Type": "BP_Boss_LiechePillar_C",
+    "Name": "Default__BP_Boss_LiechePillar_C",
+    "Class": "BlueprintGeneratedClass'EM/Content/AssetDesign/Char/Monster/Boss_19_Lieche/BP_Boss_LiechePillar.BP_Boss_LiechePillar_C'",
+    "Template": {
+      "ObjectName": "BP_Boss_LiechePillarParent_C'Default__BP_Boss_LiechePillarParent_C'",
+      "ObjectPath": "EM/Content/AssetDesign/Char/Monster/Boss_19_Lieche/BP_Boss_LiechePillarParent.4"
+    },
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "UberGraphFrame": {},
+      "NavLinkJumpComponent": {
+        "ObjectName": "NavLinkJumpComponent'Default__BP_Boss_LiechePillar_C:NavLinkJumpComponent'",
+        "ObjectPath": "EM/Content/AssetDesign/Char/Monster/Boss_19_Lieche/BP_Boss_LiechePillar.37"
+      },
+      "MonDecisionStateComponent": {
+        "ObjectName": "MonDecisionStateComponent'Default__BP_Boss_LiechePillar_C:MonDecisionStateComponent'",
+        "ObjectPath": "EM/Content/AssetDesign/Char/Monster/Boss_19_Lieche/BP_Boss_LiechePillar.27"
+      },
+      "AirWallPenetrateComponent": {
+        "ObjectName": "AirWallPenetrateComponent'Default__BP_Boss_LiechePillar_C:AirWallPenetrateComponent'",
+        "ObjectPath": "EM/Content/AssetDesign/Char/Monster/Boss_19_Lieche/BP_Boss_LiechePillar.8"
+      },
+      "MonAlertComponent": {
+        "ObjectName": "MonAlertComponent'Default__BP_Boss_LiechePillar_C:MonAlertComponent'",
+        "ObjectPath": "EM/Content/AssetDesign/Char/Monster/Boss_19_Lieche/BP_Boss_LiechePillar.25"
+      },
+      "MonEliteComponent": {
+        "ObjectName": "MonEliteComponent'Default__BP_Boss_LiechePillar_C:MonEliteComponent'",
+        "ObjectPath": "EM/Content/AssetDesign/Char/Monster/Boss_19_Lieche/BP_Boss_LiechePillar.28"
+      },
+      "MonUpdateBBComponent": {
+        "ObjectName": "MonUpdateBBComponent'Default__BP_Boss_LiechePillar_C:MonUpdateBBComponent'",
+        "ObjectPath": "EM/Content/AssetDesign/Char/Monster/Boss_19_Lieche/BP_Boss_LiechePillar.34"
+      },
+      "MonExtraVitaminComponent": {
+        "ObjectName": "MonExtraVitaminComponent'Default__BP_Boss_LiechePillar_C:MonExtraVitaminComponent'",
+        "ObjectPath": "EM/Content/AssetDesign/Char/Monster/Boss_19_Lieche/BP_Boss_LiechePillar.29"
+      },
+      "BeAttackTimeline": {
+        "ObjectName": "TimelineComponent'Default__BP_Boss_LiechePillar_C:BeAttackTimeline'",
+        "ObjectPath": "EM/Content/AssetDesign/Char/Monster/Boss_19_Lieche/BP_Boss_LiechePillar.43"
+      },
+      "EQSTestingComponent": {
+        "ObjectName": "EQSTestingComponent'Default__BP_Boss_LiechePillar_C:EQSTestingComponent'",
+        "ObjectPath": "EM/Content/AssetDesign/Char/Monster/Boss_19_Lieche/BP_Boss_LiechePillar.23"
+      },
+      "MonOptimizationComponent": {
+        "ObjectName": "MonOptimizationComponent'Default__BP_Boss_LiechePillar_C:MonOptimizationComponent'",
+        "ObjectPath": "EM/Content/AssetDesign/Char/Monster/Boss_19_Lieche/BP_Boss_LiechePillar.31"
+      },
+      "MonMoveComponent": {
+        "ObjectName": "MonMoveLogicComponent'Default__BP_Boss_LiechePillar_C:MonMoveLogicComponent'",
+        "ObjectPath": "EM/Content/AssetDesign/Char/Monster/Boss_19_Lieche/BP_Boss_LiechePillar.30"
+      },
+      "SignificanceComponent": {
+        "ObjectName": "AISignificanceComponent'Default__BP_Boss_LiechePillar_C:SignificanceComponent'",
+        "ObjectPath": "EM/Content/AssetDesign/Char/Monster/Boss_19_Lieche/BP_Boss_LiechePillar.9"
+      },
+      "BudgetAllocComponent": {
+        "ObjectName": "AIBudgetAllocateComponent'Default__BP_Boss_LiechePillar_C:BudgetAllocComponent'",
+        "ObjectPath": "EM/Content/AssetDesign/Char/Monster/Boss_19_Lieche/BP_Boss_LiechePillar.7"
+      },
+      "CharRenderBoxComponent": {
+        "ObjectName": "CharRenderBoxComponent'Default__BP_Boss_LiechePillar_C:CharRenderBoxComponent'",
+        "ObjectPath": "EM/Content/AssetDesign/Char/Monster/Boss_19_Lieche/BP_Boss_LiechePillar.19"
+      },
+      "MonRotateProcessComponent": {
+        "ObjectName": "MonRotateProcessComponent'Default__BP_Boss_LiechePillar_C:MonRotateProcessComponent'",
+        "ObjectPath": "EM/Content/AssetDesign/Char/Monster/Boss_19_Lieche/BP_Boss_LiechePillar.32"
+      },
+      "JumpWordComponent": {
+        "ObjectName": "BP_JumpWordComponent_C'Default__BP_Boss_LiechePillar_C:BP_JumpWordComponent'",
+        "ObjectPath": "EM/Content/AssetDesign/Char/Monster/Boss_19_Lieche/BP_Boss_LiechePillar.15"
+      },
+      "CharacterFashion": {
+        "ObjectName": "BP_CharacterFashion_C'Default__BP_Boss_LiechePillar_C:BP_CharacterFashion'",
+        "ObjectPath": "EM/Content/AssetDesign/Char/Monster/Boss_19_Lieche/BP_Boss_LiechePillar.12"
+      },
+      "BattleEvent": {
+        "ObjectName": "BP_BattleEventComponent_C'Default__BP_Boss_LiechePillar_C:BP_BattleEventComponent'",
+        "ObjectPath": "EM/Content/AssetDesign/Char/Monster/Boss_19_Lieche/BP_Boss_LiechePillar.10"
+      },
+      "BuffManager": {
+        "ObjectName": "BP_BuffManager_C'Default__BP_Boss_LiechePillar_C:BP_BuffManager'",
+        "ObjectPath": "EM/Content/AssetDesign/Char/Monster/Boss_19_Lieche/BP_Boss_LiechePillar.11"
+      },
+      "FXComponent": {
+        "ObjectName": "BP_FXComponent_C'Default__BP_Boss_LiechePillar_C:BP_FXComponent'",
+        "ObjectPath": "EM/Content/AssetDesign/Char/Monster/Boss_19_Lieche/BP_Boss_LiechePillar.13"
+      },
+      "HollowSphereComponent": {
+        "ObjectName": "BP_HollowSphereComponent_C'Default__BP_Boss_LiechePillar_C:BP_HollowSphereComponent'",
+        "ObjectPath": "EM/Content/AssetDesign/Char/Monster/Boss_19_Lieche/BP_Boss_LiechePillar.14"
+      },
+      "SkillsComponent": {
+        "ObjectName": "BP_SkillsComponent_C'Default__BP_Boss_LiechePillar_C:BP_SkillsComponent'",
+        "ObjectPath": "EM/Content/AssetDesign/Char/Monster/Boss_19_Lieche/BP_Boss_LiechePillar.16"
+      },
+      "CharFSMComp": {
+        "ObjectName": "CharacterFSM'Default__BP_Boss_LiechePillar_C:CharFSMComp'",
+        "ObjectPath": "EM/Content/AssetDesign/Char/Monster/Boss_19_Lieche/BP_Boss_LiechePillar.18"
+      },
+      "AutoSyncProp": {
+        "ObjectName": "CharacterAutoSyncProp'Default__BP_Boss_LiechePillar_C:AutoSyncProp'",
+        "ObjectPath": "EM/Content/AssetDesign/Char/Monster/Boss_19_Lieche/BP_Boss_LiechePillar.17"
+      },
+      "MotionWarpingComponent": {
+        "ObjectName": "MotionWarpingComponent'Default__BP_Boss_LiechePillar_C:MotionWarpingComponent'",
+        "ObjectPath": "EM/Content/AssetDesign/Char/Monster/Boss_19_Lieche/BP_Boss_LiechePillar.35"
+      },
+      "EMComponents": [
+        {
+          "Key": "CharFSMComp",
+          "Value": {
+            "ObjectName": "CharacterFSM'Default__BP_Boss_LiechePillar_C:CharFSMComp'",
+            "ObjectPath": "EM/Content/AssetDesign/Char/Monster/Boss_19_Lieche/BP_Boss_LiechePillar.18"
+          }
+        }
+      ],
+      "MoveRequestComponent": {
+        "ObjectName": "MoveRequestComponent'Default__BP_Boss_LiechePillar_C:MoveRequestComponent'",
+        "ObjectPath": "EM/Content/AssetDesign/Char/Monster/Boss_19_Lieche/BP_Boss_LiechePillar.36"
+      },
+      "Mesh": {
+        "ObjectName": "MonSkeletalMeshComponent'Default__BP_Boss_LiechePillar_C:CharacterMesh0'",
+        "ObjectPath": "EM/Content/AssetDesign/Char/Monster/Boss_19_Lieche/BP_Boss_LiechePillar.33"
+      },
+      "CharacterMovement": {
+        "ObjectName": "MonCharMoveComp'Default__BP_Boss_LiechePillar_C:CharMoveComp'",
+        "ObjectPath": "EM/Content/AssetDesign/Char/Monster/Boss_19_Lieche/BP_Boss_LiechePillar.26"
+      },
+      "CapsuleComponent": {
+        "ObjectName": "EMCapsuleComponent'Default__BP_Boss_LiechePillar_C:CollisionCylinder'",
+        "ObjectPath": "EM/Content/AssetDesign/Char/Monster/Boss_19_Lieche/BP_Boss_LiechePillar.22"
+      },
+      "RootComponent": {
+        "ObjectName": "EMCapsuleComponent'Default__BP_Boss_LiechePillar_C:CollisionCylinder'",
+        "ObjectPath": "EM/Content/AssetDesign/Char/Monster/Boss_19_Lieche/BP_Boss_LiechePillar.22"
+      }
+    }
+  },
+  {
+    "Type": "AIBudgetAllocateComponent",
+    "Name": "BudgetAllocComponent",
+    "Outer": "Default__BP_Boss_LiechePillar_C",
+    "Class": "UScriptClass'AIBudgetAllocateComponent'",
+    "Template": {
+      "ObjectName": "AIBudgetAllocateComponent'Default__BP_Boss_LiechePillarParent_C:BudgetAllocComponent'",
+      "ObjectPath": "EM/Content/AssetDesign/Char/Monster/Boss_19_Lieche/BP_Boss_LiechePillarParent.5"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "AirWallPenetrateComponent",
+    "Name": "AirWallPenetrateComponent",
+    "Outer": "Default__BP_Boss_LiechePillar_C",
+    "Class": "UScriptClass'AirWallPenetrateComponent'",
+    "Template": {
+      "ObjectName": "AirWallPenetrateComponent'Default__BP_Boss_LiechePillarParent_C:AirWallPenetrateComponent'",
+      "ObjectPath": "EM/Content/AssetDesign/Char/Monster/Boss_19_Lieche/BP_Boss_LiechePillarParent.6"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "AISignificanceComponent",
+    "Name": "SignificanceComponent",
+    "Outer": "Default__BP_Boss_LiechePillar_C",
+    "Class": "UScriptClass'AISignificanceComponent'",
+    "Template": {
+      "ObjectName": "AISignificanceComponent'Default__BP_Boss_LiechePillarParent_C:SignificanceComponent'",
+      "ObjectPath": "EM/Content/AssetDesign/Char/Monster/Boss_19_Lieche/BP_Boss_LiechePillarParent.7"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "BP_BattleEventComponent_C",
+    "Name": "BP_BattleEventComponent",
+    "Outer": "Default__BP_Boss_LiechePillar_C",
+    "Class": "BlueprintGeneratedClass'EM/Content/BluePrints/Combat/BP_BattleEventComponent.BP_BattleEventComponent_C'",
+    "Template": {
+      "ObjectName": "BP_BattleEventComponent_C'Default__BP_Boss_LiechePillarParent_C:BP_BattleEventComponent'",
+      "ObjectPath": "EM/Content/AssetDesign/Char/Monster/Boss_19_Lieche/BP_Boss_LiechePillarParent.9"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "BP_BuffManager_C",
+    "Name": "BP_BuffManager",
+    "Outer": "Default__BP_Boss_LiechePillar_C",
+    "Class": "BlueprintGeneratedClass'EM/Content/BluePrints/Combat/Buff/BP_BuffManager.BP_BuffManager_C'",
+    "Template": {
+      "ObjectName": "BP_BuffManager_C'Default__BP_Boss_LiechePillarParent_C:BP_BuffManager'",
+      "ObjectPath": "EM/Content/AssetDesign/Char/Monster/Boss_19_Lieche/BP_Boss_LiechePillarParent.10"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "BP_CharacterFashion_C",
+    "Name": "BP_CharacterFashion",
+    "Outer": "Default__BP_Boss_LiechePillar_C",
+    "Class": "BlueprintGeneratedClass'EM/Content/BluePrints/Char/BP_CharacterFashion.BP_CharacterFashion_C'",
+    "Template": {
+      "ObjectName": "BP_CharacterFashion_C'Default__BP_Boss_LiechePillarParent_C:BP_CharacterFashion'",
+      "ObjectPath": "EM/Content/AssetDesign/Char/Monster/Boss_19_Lieche/BP_Boss_LiechePillarParent.11"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "BP_FXComponent_C",
+    "Name": "BP_FXComponent",
+    "Outer": "Default__BP_Boss_LiechePillar_C",
+    "Class": "BlueprintGeneratedClass'EM/Content/BluePrints/Char/BP_FXComponent.BP_FXComponent_C'",
+    "Template": {
+      "ObjectName": "BP_FXComponent_C'Default__BP_Boss_LiechePillarParent_C:BP_FXComponent'",
+      "ObjectPath": "EM/Content/AssetDesign/Char/Monster/Boss_19_Lieche/BP_Boss_LiechePillarParent.12"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "BP_HollowSphereComponent_C",
+    "Name": "BP_HollowSphereComponent",
+    "Outer": "Default__BP_Boss_LiechePillar_C",
+    "Class": "BlueprintGeneratedClass'EM/Content/BluePrints/Combat/BP_HollowSphereComponent.BP_HollowSphereComponent_C'",
+    "Template": {
+      "ObjectName": "BP_HollowSphereComponent_C'Default__BP_Boss_LiechePillarParent_C:BP_HollowSphereComponent'",
+      "ObjectPath": "EM/Content/AssetDesign/Char/Monster/Boss_19_Lieche/BP_Boss_LiechePillarParent.13"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "OnComponentBeginOverlap": {
+        "InvocationList": [
+          {
+            "Object": {
+              "ObjectName": "BP_HollowSphereComponent_C'Default__BP_Boss_LiechePillar_C:BP_HollowSphereComponent'",
+              "ObjectPath": "EM/Content/AssetDesign/Char/Monster/Boss_19_Lieche/BP_Boss_LiechePillar.14"
+            },
+            "FunctionName": "OnBeginOverlap"
+          }
+        ]
+      },
+      "OnComponentEndOverlap": {
+        "InvocationList": [
+          {
+            "Object": {
+              "ObjectName": "BP_HollowSphereComponent_C'Default__BP_Boss_LiechePillar_C:BP_HollowSphereComponent'",
+              "ObjectPath": "EM/Content/AssetDesign/Char/Monster/Boss_19_Lieche/BP_Boss_LiechePillar.14"
+            },
+            "FunctionName": "OnEndOverlap"
+          }
+        ]
+      },
+      "AttachParent": {
+        "ObjectName": "EMCapsuleComponent'Default__BP_Boss_LiechePillar_C:CollisionCylinder'",
+        "ObjectPath": "EM/Content/AssetDesign/Char/Monster/Boss_19_Lieche/BP_Boss_LiechePillar.22"
+      }
+    }
+  },
+  {
+    "Type": "BP_JumpWordComponent_C",
+    "Name": "BP_JumpWordComponent",
+    "Outer": "Default__BP_Boss_LiechePillar_C",
+    "Class": "BlueprintGeneratedClass'EM/Content/BluePrints/Char/BP_JumpWordComponent.BP_JumpWordComponent_C'",
+    "Template": {
+      "ObjectName": "BP_JumpWordComponent_C'Default__BP_Boss_LiechePillarParent_C:BP_JumpWordComponent'",
+      "ObjectPath": "EM/Content/AssetDesign/Char/Monster/Boss_19_Lieche/BP_Boss_LiechePillarParent.14"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "BP_SkillsComponent_C",
+    "Name": "BP_SkillsComponent",
+    "Outer": "Default__BP_Boss_LiechePillar_C",
+    "Class": "BlueprintGeneratedClass'EM/Content/BluePrints/Combat/Skill/BP_SkillsComponent.BP_SkillsComponent_C'",
+    "Template": {
+      "ObjectName": "BP_SkillsComponent_C'Default__BP_Boss_LiechePillarParent_C:BP_SkillsComponent'",
+      "ObjectPath": "EM/Content/AssetDesign/Char/Monster/Boss_19_Lieche/BP_Boss_LiechePillarParent.15"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "CharacterAutoSyncProp",
+    "Name": "AutoSyncProp",
+    "Outer": "Default__BP_Boss_LiechePillar_C",
+    "Class": "UScriptClass'CharacterAutoSyncProp'",
+    "Template": {
+      "ObjectName": "CharacterAutoSyncProp'Default__BP_Boss_LiechePillarParent_C:AutoSyncProp'",
+      "ObjectPath": "EM/Content/AssetDesign/Char/Monster/Boss_19_Lieche/BP_Boss_LiechePillarParent.17"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "CharacterFSM",
+    "Name": "CharFSMComp",
+    "Outer": "Default__BP_Boss_LiechePillar_C",
+    "Class": "UScriptClass'CharacterFSM'",
+    "Template": {
+      "ObjectName": "CharacterFSM'Default__BP_Boss_LiechePillarParent_C:CharFSMComp'",
+      "ObjectPath": "EM/Content/AssetDesign/Char/Monster/Boss_19_Lieche/BP_Boss_LiechePillarParent.18"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "CharRenderBoxComponent",
+    "Name": "CharRenderBoxComponent",
+    "Outer": "Default__BP_Boss_LiechePillar_C",
+    "Class": "UScriptClass'CharRenderBoxComponent'",
+    "Template": {
+      "ObjectName": "CharRenderBoxComponent'Default__BP_Boss_LiechePillarParent_C:CharRenderBoxComponent'",
+      "ObjectPath": "EM/Content/AssetDesign/Char/Monster/Boss_19_Lieche/BP_Boss_LiechePillarParent.19"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "EMCapsuleComponent'Default__BP_Boss_LiechePillar_C:CollisionCylinder'",
+        "ObjectPath": "EM/Content/AssetDesign/Char/Monster/Boss_19_Lieche/BP_Boss_LiechePillar.22"
+      }
+    }
+  },
+  {
+    "Type": "ComponentDelegateBinding",
+    "Name": "ComponentDelegateBinding_0",
+    "Outer": "BP_Boss_LiechePillar_C",
+    "Class": "UScriptClass'ComponentDelegateBinding'",
+    "Flags": "RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentDelegateBindings": [
+        {
+          "ComponentPropertyName": "BattleEvent",
+          "DelegatePropertyName": "OnAfterDead",
+          "FunctionNameToBind": "BndEvt__BP_Boss_LiecheCore_BattleEvent_K2Node_ComponentBoundEvent_0_AfterDead__DelegateSignature"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "DestructableBodyMgr",
+    "Name": "DestructableBodyMgr",
+    "Outer": "Default__BP_Boss_LiechePillar_C",
+    "Class": "UScriptClass'DestructableBodyMgr'",
+    "Template": {
+      "ObjectName": "DestructableBodyMgr'Default__BP_Boss_LiechePillarParent_C:DestructableBodyMgr'",
+      "ObjectPath": "EM/Content/AssetDesign/Char/Monster/Boss_19_Lieche/BP_Boss_LiechePillarParent.20"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "EMCapsuleComponent",
+    "Name": "CollisionCylinder",
+    "Outer": "Default__BP_Boss_LiechePillar_C",
+    "Class": "UScriptClass'EMCapsuleComponent'",
+    "Template": {
+      "ObjectName": "EMCapsuleComponent'Default__BP_Boss_LiechePillarParent_C:CollisionCylinder'",
+      "ObjectPath": "EM/Content/AssetDesign/Char/Monster/Boss_19_Lieche/BP_Boss_LiechePillarParent.21"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "EQSTestingComponent",
+    "Name": "EQSTestingComponent",
+    "Outer": "Default__BP_Boss_LiechePillar_C",
+    "Class": "UScriptClass'EQSTestingComponent'",
+    "Template": {
+      "ObjectName": "EQSTestingComponent'Default__BP_Boss_LiechePillarParent_C:EQSTestingComponent'",
+      "ObjectPath": "EM/Content/AssetDesign/Char/Monster/Boss_19_Lieche/BP_Boss_LiechePillarParent.22"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "InheritableComponentHandler",
+    "Name": "InheritableComponentHandler",
+    "Outer": "BP_Boss_LiechePillar_C",
+    "Class": "UScriptClass'InheritableComponentHandler'",
+    "Flags": "RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "MonAlertComponent",
+    "Name": "MonAlertComponent",
+    "Outer": "Default__BP_Boss_LiechePillar_C",
+    "Class": "UScriptClass'MonAlertComponent'",
+    "Template": {
+      "ObjectName": "MonAlertComponent'Default__BP_Boss_LiechePillarParent_C:MonAlertComponent'",
+      "ObjectPath": "EM/Content/AssetDesign/Char/Monster/Boss_19_Lieche/BP_Boss_LiechePillarParent.24"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "MonCharMoveComp",
+    "Name": "CharMoveComp",
+    "Outer": "Default__BP_Boss_LiechePillar_C",
+    "Class": "UScriptClass'MonCharMoveComp'",
+    "Template": {
+      "ObjectName": "MonCharMoveComp'Default__BP_Boss_LiechePillarParent_C:CharMoveComp'",
+      "ObjectPath": "EM/Content/AssetDesign/Char/Monster/Boss_19_Lieche/BP_Boss_LiechePillarParent.25"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "MonDecisionStateComponent",
+    "Name": "MonDecisionStateComponent",
+    "Outer": "Default__BP_Boss_LiechePillar_C",
+    "Class": "UScriptClass'MonDecisionStateComponent'",
+    "Template": {
+      "ObjectName": "MonDecisionStateComponent'Default__BP_Boss_LiechePillarParent_C:MonDecisionStateComponent'",
+      "ObjectPath": "EM/Content/AssetDesign/Char/Monster/Boss_19_Lieche/BP_Boss_LiechePillarParent.26"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "MonEliteComponent",
+    "Name": "MonEliteComponent",
+    "Outer": "Default__BP_Boss_LiechePillar_C",
+    "Class": "UScriptClass'MonEliteComponent'",
+    "Template": {
+      "ObjectName": "MonEliteComponent'Default__BP_Boss_LiechePillarParent_C:MonEliteComponent'",
+      "ObjectPath": "EM/Content/AssetDesign/Char/Monster/Boss_19_Lieche/BP_Boss_LiechePillarParent.27"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "MonExtraVitaminComponent",
+    "Name": "MonExtraVitaminComponent",
+    "Outer": "Default__BP_Boss_LiechePillar_C",
+    "Class": "UScriptClass'MonExtraVitaminComponent'",
+    "Template": {
+      "ObjectName": "MonExtraVitaminComponent'Default__BP_Boss_LiechePillarParent_C:MonExtraVitaminComponent'",
+      "ObjectPath": "EM/Content/AssetDesign/Char/Monster/Boss_19_Lieche/BP_Boss_LiechePillarParent.28"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "MonMoveLogicComponent",
+    "Name": "MonMoveLogicComponent",
+    "Outer": "Default__BP_Boss_LiechePillar_C",
+    "Class": "UScriptClass'MonMoveLogicComponent'",
+    "Template": {
+      "ObjectName": "MonMoveLogicComponent'Default__BP_Boss_LiechePillarParent_C:MonMoveLogicComponent'",
+      "ObjectPath": "EM/Content/AssetDesign/Char/Monster/Boss_19_Lieche/BP_Boss_LiechePillarParent.29"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "MonOptimizationComponent",
+    "Name": "MonOptimizationComponent",
+    "Outer": "Default__BP_Boss_LiechePillar_C",
+    "Class": "UScriptClass'MonOptimizationComponent'",
+    "Template": {
+      "ObjectName": "MonOptimizationComponent'Default__BP_Boss_LiechePillarParent_C:MonOptimizationComponent'",
+      "ObjectPath": "EM/Content/AssetDesign/Char/Monster/Boss_19_Lieche/BP_Boss_LiechePillarParent.30"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "MonRotateProcessComponent",
+    "Name": "MonRotateProcessComponent",
+    "Outer": "Default__BP_Boss_LiechePillar_C",
+    "Class": "UScriptClass'MonRotateProcessComponent'",
+    "Template": {
+      "ObjectName": "MonRotateProcessComponent'Default__BP_Boss_LiechePillarParent_C:MonRotateProcessComponent'",
+      "ObjectPath": "EM/Content/AssetDesign/Char/Monster/Boss_19_Lieche/BP_Boss_LiechePillarParent.31"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "MonSkeletalMeshComponent",
+    "Name": "CharacterMesh0",
+    "Outer": "Default__BP_Boss_LiechePillar_C",
+    "Class": "UScriptClass'MonSkeletalMeshComponent'",
+    "Template": {
+      "ObjectName": "MonSkeletalMeshComponent'Default__BP_Boss_LiechePillarParent_C:CharacterMesh0'",
+      "ObjectPath": "EM/Content/AssetDesign/Char/Monster/Boss_19_Lieche/BP_Boss_LiechePillarParent.32"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "OnAnimInitialized": {
+        "InvocationList": [
+          {
+            "Object": {
+              "ObjectName": "BP_Boss_LiechePillar_C'Default__BP_Boss_LiechePillar_C'",
+              "ObjectPath": "EM/Content/AssetDesign/Char/Monster/Boss_19_Lieche/BP_Boss_LiechePillar.6"
+            },
+            "FunctionName": "OnAnimInitialized"
+          }
+        ]
+      },
+      "AttachParent": {
+        "ObjectName": "EMCapsuleComponent'Default__BP_Boss_LiechePillar_C:CollisionCylinder'",
+        "ObjectPath": "EM/Content/AssetDesign/Char/Monster/Boss_19_Lieche/BP_Boss_LiechePillar.22"
+      }
+    }
+  },
+  {
+    "Type": "MonUpdateBBComponent",
+    "Name": "MonUpdateBBComponent",
+    "Outer": "Default__BP_Boss_LiechePillar_C",
+    "Class": "UScriptClass'MonUpdateBBComponent'",
+    "Template": {
+      "ObjectName": "MonUpdateBBComponent'Default__BP_Boss_LiechePillarParent_C:MonUpdateBBComponent'",
+      "ObjectPath": "EM/Content/AssetDesign/Char/Monster/Boss_19_Lieche/BP_Boss_LiechePillarParent.33"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "MotionWarpingComponent",
+    "Name": "MotionWarpingComponent",
+    "Outer": "Default__BP_Boss_LiechePillar_C",
+    "Class": "UScriptClass'MotionWarpingComponent'",
+    "Template": {
+      "ObjectName": "MotionWarpingComponent'Default__BP_Boss_LiechePillarParent_C:MotionWarpingComponent'",
+      "ObjectPath": "EM/Content/AssetDesign/Char/Monster/Boss_19_Lieche/BP_Boss_LiechePillarParent.34"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "MoveRequestComponent",
+    "Name": "MoveRequestComponent",
+    "Outer": "Default__BP_Boss_LiechePillar_C",
+    "Class": "UScriptClass'MoveRequestComponent'",
+    "Template": {
+      "ObjectName": "MoveRequestComponent'Default__BP_Boss_LiechePillarParent_C:MoveRequestComponent'",
+      "ObjectPath": "EM/Content/AssetDesign/Char/Monster/Boss_19_Lieche/BP_Boss_LiechePillarParent.35"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "NavLinkJumpComponent",
+    "Name": "NavLinkJumpComponent",
+    "Outer": "Default__BP_Boss_LiechePillar_C",
+    "Class": "UScriptClass'NavLinkJumpComponent'",
+    "Template": {
+      "ObjectName": "NavLinkJumpComponent'Default__BP_Boss_LiechePillarParent_C:NavLinkJumpComponent'",
+      "ObjectPath": "EM/Content/AssetDesign/Char/Monster/Boss_19_Lieche/BP_Boss_LiechePillarParent.36"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "NiagaraComponent",
+    "Name": "Niagara_GEN_VARIABLE",
+    "Outer": "BP_Boss_LiechePillar_C",
+    "Class": "UScriptClass'NiagaraComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Asset": {
+        "ObjectName": "NiagaraSystem'NS_Boss_Linen_Skill08_Dun02'",
+        "ObjectPath": "EM/Content/Asset/Effect/Niagara/Boss/Linen/NS_Boss_Linen_Skill08_Dun02.60"
+      },
+      "OverrideParameters": {
+        "UserParameterRedirects": [
+          {
+            "Key": {
+              "VarData": "",
+              "Name": "Color",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'LinearColor'",
+                  "ObjectPath": "/Script/CoreUObject"
+                },
+                "UnderlyingType": 2
+              }
+            },
+            "Value": {
+              "VarData": "",
+              "Name": "User.Color",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'LinearColor'",
+                  "ObjectPath": "/Script/CoreUObject"
+                },
+                "UnderlyingType": 2
+              }
+            }
+          },
+          {
+            "Key": {
+              "VarData": "",
+              "Name": "DeadTime",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'NiagaraBool'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2
+              }
+            },
+            "Value": {
+              "VarData": "",
+              "Name": "User.DeadTime",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'NiagaraBool'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2
+              }
+            }
+          },
+          {
+            "Key": {
+              "VarData": "",
+              "Name": "IgnoreGamePause",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2
+              }
+            },
+            "Value": {
+              "VarData": "",
+              "Name": "User.IgnoreGamePause",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2
+              }
+            }
+          },
+          {
+            "Key": {
+              "VarData": "",
+              "Name": "All_Size",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2
+              }
+            },
+            "Value": {
+              "VarData": "",
+              "Name": "User.All_Size",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2
+              }
+            }
+          },
+          {
+            "Key": {
+              "VarData": "",
+              "Name": "Delay",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2
+              }
+            },
+            "Value": {
+              "VarData": "",
+              "Name": "User.Delay",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2
+              }
+            }
+          }
+        ],
+        "SortedParameterOffsets": [
+          {
+            "Offset": 24,
+            "Name": "User.All_Size",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "ScriptStruct'NiagaraFloat'",
+                "ObjectPath": "/Script/Niagara"
+              },
+              "UnderlyingType": 2
+            }
+          },
+          {
+            "Offset": 0,
+            "Name": "User.Color",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "ScriptStruct'LinearColor'",
+                "ObjectPath": "/Script/CoreUObject"
+              },
+              "UnderlyingType": 2
+            }
+          },
+          {
+            "Offset": 16,
+            "Name": "User.DeadTime",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "ScriptStruct'NiagaraBool'",
+                "ObjectPath": "/Script/Niagara"
+              },
+              "UnderlyingType": 2
+            }
+          },
+          {
+            "Offset": 28,
+            "Name": "User.Delay",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "ScriptStruct'NiagaraFloat'",
+                "ObjectPath": "/Script/Niagara"
+              },
+              "UnderlyingType": 2
+            }
+          },
+          {
+            "Offset": 20,
+            "Name": "User.IgnoreGamePause",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "ScriptStruct'NiagaraFloat'",
+                "ObjectPath": "/Script/Niagara"
+              },
+              "UnderlyingType": 2
+            }
+          }
+        ],
+        "ParameterData": [
+          0,
+          0,
+          128,
+          63,
+          0,
+          0,
+          128,
+          63,
+          0,
+          0,
+          128,
+          63,
+          0,
+          0,
+          128,
+          63,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          128,
+          63,
+          0,
+          0,
+          128,
+          63
+        ]
+      },
+      "RelativeLocation": {
+        "X": 3.63975E-06,
+        "Y": -2.9977239E-06,
+        "Z": 79.0126
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": 89.99999,
+        "Roll": 0.0
+      },
+      "RelativeScale3D": {
+        "X": 0.4,
+        "Y": 0.4,
+        "Z": 0.4
+      }
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Outer": "BP_Boss_LiechePillar_C",
+    "Class": "UScriptClass'SceneComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BP_Boss_LiechePillar_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "EM/Content/AssetDesign/Char/Monster/Boss_19_Lieche/BP_Boss_LiechePillar.39"
+      },
+      "VariableGuid": "94C9A52B-4D3991A0-5BAA3F81-66C3C20D",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_1",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'NiagaraComponent'",
+        "ObjectPath": "/Script/Niagara"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "NiagaraComponent'BP_Boss_LiechePillar_C:Niagara_GEN_VARIABLE'",
+        "ObjectPath": "EM/Content/AssetDesign/Char/Monster/Boss_19_Lieche/BP_Boss_LiechePillar.38"
+      },
+      "ParentComponentOrVariableName": "StaticMesh",
+      "ParentComponentOwnerClassName": "BP_Boss_LiechePillarParent_C",
+      "VariableGuid": "F595BF7A-4002D0C8-A54808A9-42A9BB7C",
+      "InternalVariableName": "Niagara"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Outer": "BP_Boss_LiechePillar_C",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_Boss_LiechePillar_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "EM/Content/AssetDesign/Char/Monster/Boss_19_Lieche/BP_Boss_LiechePillar.41"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_Boss_LiechePillar_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "EM/Content/AssetDesign/Char/Monster/Boss_19_Lieche/BP_Boss_LiechePillar.41"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BP_Boss_LiechePillar_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "EM/Content/AssetDesign/Char/Monster/Boss_19_Lieche/BP_Boss_LiechePillar.40"
+      }
+    }
+  },
+  {
+    "Type": "TimelineComponent",
+    "Name": "BeAttackTimeline",
+    "Outer": "Default__BP_Boss_LiechePillar_C",
+    "Class": "UScriptClass'TimelineComponent'",
+    "Template": {
+      "ObjectName": "TimelineComponent'Default__BP_Boss_LiechePillarParent_C:BeAttackTimeline'",
+      "ObjectPath": "EM/Content/AssetDesign/Char/Monster/Boss_19_Lieche/BP_Boss_LiechePillarParent.43"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
+  }
+]

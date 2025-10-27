@@ -1,0 +1,811 @@
+[
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_BP_DoubleVentilator",
+    "Outer": "BP_DoubleVentilator_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "K2Node_Event_DeltaSeconds",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_MakeRotator_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "Struct": {
+          "ObjectName": "ScriptStruct'Rotator'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_K2_AddLocalRotation_SweepHitResult",
+        "Flags": "RF_Public",
+        "ElementSize": 144,
+        "PropertyFlags": "ContainsInstancedReference",
+        "Struct": {
+          "ObjectName": "ScriptStruct'HitResult'",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction | FUNC_HasDefaults"
+  },
+  {
+    "Type": "Function",
+    "Name": "ReceiveTick",
+    "Outer": "BP_DoubleVentilator_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "SuperStruct": {
+      "ObjectName": "Function'Actor:ReceiveTick'",
+      "ObjectPath": "/Script/Engine"
+    },
+    "ChildProperties": [
+      {
+        "Type": "FloatProperty",
+        "Name": "DeltaSeconds",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "GetModuleName",
+    "Outer": "BP_DoubleVentilator_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "ChildProperties": [
+      {
+        "Type": "StrProperty",
+        "Name": "ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "Parm | OutParm | ReturnParm"
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_HasOutParms | FUNC_BlueprintCallable | FUNC_BlueprintEvent | FUNC_Const"
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BP_DoubleVentilator_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BP_DoubleVentilator_C:SimpleConstructionScript_0'",
+        "ObjectPath": "EM/Content/BluePrints/Item/Temple/BP_DoubleVentilator.16"
+      },
+      "UberGraphFunction": {
+        "ObjectName": "Function'BP_DoubleVentilator_C:ExecuteUbergraph_BP_DoubleVentilator'",
+        "ObjectPath": "EM/Content/BluePrints/Item/Temple/BP_DoubleVentilator.0"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'CombatItemBase'",
+      "ObjectPath": "/Script/EM"
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'BP_DoubleVentilator_C:GetModuleName'",
+        "ObjectPath": "EM/Content/BluePrints/Item/Temple/BP_DoubleVentilator.2"
+      },
+      {
+        "ObjectName": "Function'BP_DoubleVentilator_C:ReceiveTick'",
+        "ObjectPath": "EM/Content/BluePrints/Item/Temple/BP_DoubleVentilator.1"
+      },
+      {
+        "ObjectName": "Function'BP_DoubleVentilator_C:ExecuteUbergraph_BP_DoubleVentilator'",
+        "ObjectPath": "EM/Content/BluePrints/Item/Temple/BP_DoubleVentilator.0"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient",
+        "Struct": {
+          "ObjectName": "ScriptStruct'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Plane",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'StaticMeshComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "SM_Ventilator03",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'StaticMeshComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "SM_Ventilator02",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'StaticMeshComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Sphere",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'SphereComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "SM_Layout_IcePlatform",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'StaticMeshComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "SM_Layout_SewerPipe_2Tong",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'StaticMeshComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "DefaultSceneRoot",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'SceneComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "speed",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "Edit | BlueprintVisible"
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "IsOpen",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "PropertyFlags": "Edit | BlueprintVisible",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "LinkArchiveID",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "Edit | BlueprintVisible"
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_BP_DoubleVentilator": {
+        "ObjectName": "Function'BP_DoubleVentilator_C:ExecuteUbergraph_BP_DoubleVentilator'",
+        "ObjectPath": "EM/Content/BluePrints/Item/Temple/BP_DoubleVentilator.0"
+      },
+      "ReceiveTick": {
+        "ObjectName": "Function'BP_DoubleVentilator_C:ReceiveTick'",
+        "ObjectPath": "EM/Content/BluePrints/Item/Temple/BP_DoubleVentilator.1"
+      },
+      "GetModuleName": {
+        "ObjectName": "Function'BP_DoubleVentilator_C:GetModuleName'",
+        "ObjectPath": "EM/Content/BluePrints/Item/Temple/BP_DoubleVentilator.2"
+      }
+    },
+    "ClassFlags": "CLASS_Config | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "Interfaces": [
+      {
+        "Class": {
+          "ObjectName": "Class'UnLuaInterface'",
+          "ObjectPath": "/Script/UnLua"
+        },
+        "PointerOffset": 0,
+        "bImplementedByK2": true
+      }
+    ],
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BP_DoubleVentilator_C'Default__BP_DoubleVentilator_C'",
+      "ObjectPath": "EM/Content/BluePrints/Item/Temple/BP_DoubleVentilator.4"
+    }
+  },
+  {
+    "Type": "BP_DoubleVentilator_C",
+    "Name": "Default__BP_DoubleVentilator_C",
+    "Class": "BlueprintGeneratedClass'EM/Content/BluePrints/Item/Temple/BP_DoubleVentilator.BP_DoubleVentilator_C'",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "UberGraphFrame": {},
+      "speed": 1.0,
+      "IsOpen": true,
+      "CombatStateChangeComponent": {
+        "ObjectName": "BP_CombatStateChangeComponent_C'Default__BP_DoubleVentilator_C:CombatStateChangeComponent'",
+        "ObjectPath": "EM/Content/BluePrints/Item/Temple/BP_DoubleVentilator.6"
+      },
+      "CombatClientEffectComponent": {
+        "ObjectName": "BP_CombatClientEffectComponent_C'Default__BP_DoubleVentilator_C:CombatClientEffectComponent'",
+        "ObjectPath": "EM/Content/BluePrints/Item/Temple/BP_DoubleVentilator.5"
+      },
+      "FXComponent": {
+        "ObjectName": "BP_FXComponent_C'Default__BP_DoubleVentilator_C:BP_FXComponent'",
+        "ObjectPath": "EM/Content/BluePrints/Item/Temple/BP_DoubleVentilator.7"
+      },
+      "BpBorn": true,
+      "UnitId": 80104,
+      "UnitType": "Mechanism",
+      "bAddTickLod": false,
+      "PrimaryActorTick": {
+        "bCanEverTick": true
+      }
+    }
+  },
+  {
+    "Type": "BP_CombatClientEffectComponent_C",
+    "Name": "CombatClientEffectComponent",
+    "Outer": "Default__BP_DoubleVentilator_C",
+    "Class": "BlueprintGeneratedClass'EM/Content/BluePrints/Item/BP_CombatClientEffectComponent.BP_CombatClientEffectComponent_C'",
+    "Flags": "RF_Public | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "BP_CombatStateChangeComponent_C",
+    "Name": "CombatStateChangeComponent",
+    "Outer": "Default__BP_DoubleVentilator_C",
+    "Class": "BlueprintGeneratedClass'EM/Content/BluePrints/Item/BP_CombatStateChangeComponent.BP_CombatStateChangeComponent_C'",
+    "Flags": "RF_Public | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "BP_FXComponent_C",
+    "Name": "BP_FXComponent",
+    "Outer": "Default__BP_DoubleVentilator_C",
+    "Class": "BlueprintGeneratedClass'EM/Content/BluePrints/Char/BP_FXComponent.BP_FXComponent_C'",
+    "Flags": "RF_Public | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Outer": "BP_DoubleVentilator_C",
+    "Class": "UScriptClass'SceneComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Mobility": "EComponentMobility::Static"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BP_DoubleVentilator_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "EM/Content/BluePrints/Item/Temple/BP_DoubleVentilator.8"
+      },
+      "ChildNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_DoubleVentilator_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "EM/Content/BluePrints/Item/Temple/BP_DoubleVentilator.10"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_DoubleVentilator_C:SimpleConstructionScript_0.SCS_Node_7'",
+          "ObjectPath": "EM/Content/BluePrints/Item/Temple/BP_DoubleVentilator.15"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_DoubleVentilator_C:SimpleConstructionScript_0.SCS_Node_10'",
+          "ObjectPath": "EM/Content/BluePrints/Item/Temple/BP_DoubleVentilator.11"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_DoubleVentilator_C:SimpleConstructionScript_0.SCS_Node_13'",
+          "ObjectPath": "EM/Content/BluePrints/Item/Temple/BP_DoubleVentilator.12"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_DoubleVentilator_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "EM/Content/BluePrints/Item/Temple/BP_DoubleVentilator.13"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_DoubleVentilator_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectPath": "EM/Content/BluePrints/Item/Temple/BP_DoubleVentilator.14"
+        }
+      ],
+      "VariableGuid": "B722A093-44A8B27D-DC306A89-3287CE58",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_1",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'StaticMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "StaticMeshComponent'BP_DoubleVentilator_C:SM_Layout_SewerPipe_2Tong_GEN_VARIABLE'",
+        "ObjectPath": "EM/Content/BluePrints/Item/Temple/BP_DoubleVentilator.20"
+      },
+      "VariableGuid": "0A9B1414-4812A7D4-3A168AB1-A3105695",
+      "InternalVariableName": "SM_Layout_SewerPipe_2Tong"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_10",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SphereComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SphereComponent'BP_DoubleVentilator_C:Sphere_GEN_VARIABLE'",
+        "ObjectPath": "EM/Content/BluePrints/Item/Temple/BP_DoubleVentilator.17"
+      },
+      "VariableGuid": "B2216545-4103DE86-BA91EAB2-84B0F272",
+      "InternalVariableName": "Sphere"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_13",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'StaticMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "StaticMeshComponent'BP_DoubleVentilator_C:SM_Ventilator02_GEN_VARIABLE'",
+        "ObjectPath": "EM/Content/BluePrints/Item/Temple/BP_DoubleVentilator.21"
+      },
+      "VariableGuid": "C1DE4B79-41696622-1A8EE996-E06276B0",
+      "InternalVariableName": "SM_Ventilator02"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_2",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'StaticMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "StaticMeshComponent'BP_DoubleVentilator_C:SM_Ventilator03_GEN_VARIABLE'",
+        "ObjectPath": "EM/Content/BluePrints/Item/Temple/BP_DoubleVentilator.22"
+      },
+      "VariableGuid": "2965382F-401FE166-F02D05B3-47E2CC19",
+      "InternalVariableName": "SM_Ventilator03"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_3",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'StaticMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "StaticMeshComponent'BP_DoubleVentilator_C:Plane_GEN_VARIABLE'",
+        "ObjectPath": "EM/Content/BluePrints/Item/Temple/BP_DoubleVentilator.18"
+      },
+      "VariableGuid": "2F34EBE9-45FDDEA8-D16A1AAC-081768C8",
+      "InternalVariableName": "Plane"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_7",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'StaticMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "StaticMeshComponent'BP_DoubleVentilator_C:SM_Layout_IcePlatform_GEN_VARIABLE'",
+        "ObjectPath": "EM/Content/BluePrints/Item/Temple/BP_DoubleVentilator.19"
+      },
+      "VariableGuid": "2248CDA1-4492A15A-2131A99E-7D21FAD2",
+      "InternalVariableName": "SM_Layout_IcePlatform"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Outer": "BP_DoubleVentilator_C",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_DoubleVentilator_C:SimpleConstructionScript_0.SCS_Node_0'",
+          "ObjectPath": "EM/Content/BluePrints/Item/Temple/BP_DoubleVentilator.9"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_DoubleVentilator_C:SimpleConstructionScript_0.SCS_Node_0'",
+          "ObjectPath": "EM/Content/BluePrints/Item/Temple/BP_DoubleVentilator.9"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_DoubleVentilator_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "EM/Content/BluePrints/Item/Temple/BP_DoubleVentilator.10"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_DoubleVentilator_C:SimpleConstructionScript_0.SCS_Node_7'",
+          "ObjectPath": "EM/Content/BluePrints/Item/Temple/BP_DoubleVentilator.15"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_DoubleVentilator_C:SimpleConstructionScript_0.SCS_Node_10'",
+          "ObjectPath": "EM/Content/BluePrints/Item/Temple/BP_DoubleVentilator.11"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_DoubleVentilator_C:SimpleConstructionScript_0.SCS_Node_13'",
+          "ObjectPath": "EM/Content/BluePrints/Item/Temple/BP_DoubleVentilator.12"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_DoubleVentilator_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "EM/Content/BluePrints/Item/Temple/BP_DoubleVentilator.13"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_DoubleVentilator_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectPath": "EM/Content/BluePrints/Item/Temple/BP_DoubleVentilator.14"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BP_DoubleVentilator_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "EM/Content/BluePrints/Item/Temple/BP_DoubleVentilator.9"
+      }
+    }
+  },
+  {
+    "Type": "SphereComponent",
+    "Name": "Sphere_GEN_VARIABLE",
+    "Outer": "BP_DoubleVentilator_C",
+    "Class": "UScriptClass'SphereComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "AreaClass": {
+        "ObjectName": "Class'NavArea_Obstacle'",
+        "ObjectPath": "/Script/NavigationSystem"
+      },
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": -200.0,
+        "Z": 400.0
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "Plane_GEN_VARIABLE",
+    "Outer": "BP_DoubleVentilator_C",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'Plane'",
+        "ObjectPath": "Engine/Content/BasicShapes/Plane.2"
+      },
+      "OverrideMaterials": [
+        {
+          "ObjectName": "MaterialInstanceConstant'1MSize_Inst1'",
+          "ObjectPath": "EM/Content/Asset/Scene/common/4Mtl/1MSize_Inst1.0"
+        }
+      ],
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 1000.0,
+        "Z": 0.0
+      },
+      "RelativeScale3D": {
+        "X": 2.0,
+        "Y": 2.0,
+        "Z": 1.0
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "SM_Layout_IcePlatform_GEN_VARIABLE",
+    "Outer": "BP_DoubleVentilator_C",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'SM_Layout_IcePlatform'",
+        "ObjectPath": "/Game/Asset/Scene/Layout/BasicLayout/SM_Layout_IcePlatform"
+      },
+      "BodyInstance": {
+        "ObjectType": "ECC_WorldStatic",
+        "CollisionProfileName": "SceneCollision",
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "WorldDynamic",
+              "Response": "ECR_Overlap"
+            },
+            {
+              "Channel": "TraceEnemyVision",
+              "Response": "ECR_Block"
+            },
+            {
+              "Channel": "TraceScene",
+              "Response": "ECR_Block"
+            },
+            {
+              "Channel": "TraceCreatureHit",
+              "Response": "ECR_Overlap"
+            },
+            {
+              "Channel": "TraceSkillCreatureBlock",
+              "Response": "ECR_Block"
+            },
+            {
+              "Channel": "SkillCreature",
+              "Response": "ECR_Overlap"
+            }
+          ]
+        }
+      },
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": -199.99869,
+        "Z": 400.00064
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": 0.0,
+        "Roll": 90.00018
+      },
+      "RelativeScale3D": {
+        "X": 0.25,
+        "Y": 0.25,
+        "Z": 0.25
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "SM_Layout_SewerPipe_2Tong_GEN_VARIABLE",
+    "Outer": "BP_DoubleVentilator_C",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'SM_Layout_SewerPipe_2Tong'",
+        "ObjectPath": "/Game/Asset/Scene/Layout/BasicLayout/SM_Layout_SewerPipe_2Tong"
+      },
+      "BodyInstance": {
+        "ObjectType": "ECC_WorldStatic",
+        "CollisionProfileName": "SceneCollision",
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "WorldDynamic",
+              "Response": "ECR_Overlap"
+            },
+            {
+              "Channel": "TraceEnemyVision",
+              "Response": "ECR_Block"
+            },
+            {
+              "Channel": "TraceScene",
+              "Response": "ECR_Block"
+            },
+            {
+              "Channel": "TraceCreatureHit",
+              "Response": "ECR_Overlap"
+            },
+            {
+              "Channel": "TraceSkillCreatureBlock",
+              "Response": "ECR_Block"
+            },
+            {
+              "Channel": "SkillCreature",
+              "Response": "ECR_Overlap"
+            }
+          ]
+        }
+      },
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": -150.0,
+        "Z": 0.0
+      },
+      "RelativeScale3D": {
+        "X": 2.0,
+        "Y": 0.3,
+        "Z": 2.0
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "SM_Ventilator02_GEN_VARIABLE",
+    "Outer": "BP_DoubleVentilator_C",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'SM_Ventilator02'",
+        "ObjectPath": "/Game/AssetDesign/Item/Item_Test/SM_Ventilator02"
+      },
+      "BodyInstance": {
+        "ObjectType": "ECC_WorldStatic",
+        "CollisionProfileName": "SceneCollision",
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "WorldDynamic",
+              "Response": "ECR_Overlap"
+            },
+            {
+              "Channel": "TraceEnemyVision",
+              "Response": "ECR_Block"
+            },
+            {
+              "Channel": "TraceScene",
+              "Response": "ECR_Block"
+            },
+            {
+              "Channel": "TraceCreatureHit",
+              "Response": "ECR_Overlap"
+            },
+            {
+              "Channel": "TraceSkillCreatureBlock",
+              "Response": "ECR_Block"
+            },
+            {
+              "Channel": "SkillCreature",
+              "Response": "ECR_Overlap"
+            }
+          ]
+        }
+      },
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": -199.99997,
+        "Z": 400.0
+      },
+      "RelativeRotation": {
+        "Pitch": -90.0,
+        "Yaw": 180.0,
+        "Roll": 179.99998
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "SM_Ventilator03_GEN_VARIABLE",
+    "Outer": "BP_DoubleVentilator_C",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'SM_Ventilator02'",
+        "ObjectPath": "/Game/AssetDesign/Item/Item_Test/SM_Ventilator02"
+      },
+      "BodyInstance": {
+        "ObjectType": "ECC_WorldStatic",
+        "CollisionProfileName": "SceneCollision",
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "WorldDynamic",
+              "Response": "ECR_Overlap"
+            },
+            {
+              "Channel": "TraceEnemyVision",
+              "Response": "ECR_Block"
+            },
+            {
+              "Channel": "TraceScene",
+              "Response": "ECR_Block"
+            },
+            {
+              "Channel": "TraceCreatureHit",
+              "Response": "ECR_Overlap"
+            },
+            {
+              "Channel": "TraceSkillCreatureBlock",
+              "Response": "ECR_Block"
+            },
+            {
+              "Channel": "SkillCreature",
+              "Response": "ECR_Overlap"
+            }
+          ]
+        }
+      },
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": -199.99997,
+        "Z": 400.0
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": -180.0,
+        "Roll": 0.0
+      }
+    }
+  }
+]

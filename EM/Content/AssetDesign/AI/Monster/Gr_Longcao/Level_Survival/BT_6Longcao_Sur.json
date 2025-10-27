@@ -1,0 +1,2426 @@
+[
+  {
+    "Type": "BehaviorTree",
+    "Name": "BT_6Longcao_Sur",
+    "Class": "UScriptClass'BehaviorTree'",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "RootNode": {
+        "ObjectName": "BTComposite_Sequence'BT_6Longcao_Sur:BTComposite_Sequence_15'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Longcao/Level_Survival/BT_6Longcao_Sur.10"
+      },
+      "BlackboardAsset": {
+        "ObjectName": "BlackboardData'BB_Mon_Parent_Melee'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Parent/BB_Mon_Parent_Melee.0"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Rate",
+    "Name": "BTComposite_Rate_0",
+    "Outer": "BT_6Longcao_Sur",
+    "Class": "UScriptClass'BTComposite_Rate'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Rates": [
+        3,
+        1
+      ],
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_UseSkill'BT_6Longcao_Sur:BTTask_UseSkill_5'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Longcao/Level_Survival/BT_6Longcao_Sur.64"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_6Longcao_Sur:BTComposite_Sequence_12'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Longcao/Level_Survival/BT_6Longcao_Sur.9"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_6Longcao_Sur'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Longcao/Level_Survival/BT_6Longcao_Sur.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_6Longcao_Sur:BTComposite_Selector_10'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Longcao/Level_Survival/BT_6Longcao_Sur.2"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_10",
+    "Outer": "BT_6Longcao_Sur",
+    "Class": "UScriptClass'BTComposite_Selector'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_UseSkill'BT_6Longcao_Sur:BTTask_UseSkill_6'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Longcao/Level_Survival/BT_6Longcao_Sur.65"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_6Longcao_Sur:BTDecorator_Blackboard_7'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Longcao/Level_Survival/BT_6Longcao_Sur.33"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Rate'BT_6Longcao_Sur:BTComposite_Rate_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Longcao/Level_Survival/BT_6Longcao_Sur.1"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_TargetLocCondition'BT_6Longcao_Sur:BTDecorator_TargetLocCondition_8'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Longcao/Level_Survival/BT_6Longcao_Sur.48"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_6Longcao_Sur:BTComposite_Sequence_10'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Longcao/Level_Survival/BT_6Longcao_Sur.7"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_TargetLocCondition'BT_6Longcao_Sur:BTDecorator_TargetLocCondition_9'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Longcao/Level_Survival/BT_6Longcao_Sur.49"
+            },
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_6Longcao_Sur:BTDecorator_Blackboard_80'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Longcao/Level_Survival/BT_6Longcao_Sur.35"
+            },
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_6Longcao_Sur:BTDecorator_Blackboard_82'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Longcao/Level_Survival/BT_6Longcao_Sur.37"
+            },
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_6Longcao_Sur:BTDecorator_Blackboard_81'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Longcao/Level_Survival/BT_6Longcao_Sur.36"
+            },
+            {
+              "ObjectName": "BTDecorator_Mon_Gr_Longcao_AngleCheck_C'BT_6Longcao_Sur:BTDecorator_Mon_Gr_Longcao_AngleCheck_C_29'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Longcao/Level_Survival/BT_6Longcao_Sur.45"
+            }
+          ],
+          "DecoratorOps": [
+            {
+              "Operation": "EBTDecoratorLogic::And",
+              "Number": 2
+            },
+            {
+              "Operation": "EBTDecoratorLogic::Test",
+              "Number": 0
+            },
+            {
+              "Operation": "EBTDecoratorLogic::Or",
+              "Number": 2
+            },
+            {
+              "Operation": "EBTDecoratorLogic::Test",
+              "Number": 1
+            },
+            {
+              "Operation": "EBTDecoratorLogic::And",
+              "Number": 3
+            },
+            {
+              "Operation": "EBTDecoratorLogic::Test",
+              "Number": 2
+            },
+            {
+              "Operation": "EBTDecoratorLogic::Test",
+              "Number": 3
+            },
+            {
+              "Operation": "EBTDecoratorLogic::Test",
+              "Number": 4
+            }
+          ]
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_6Longcao_Sur:BTComposite_Sequence_2'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Longcao/Level_Survival/BT_6Longcao_Sur.11"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_6Longcao_Sur:BTDecorator_Blackboard_4'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Longcao/Level_Survival/BT_6Longcao_Sur.29"
+            },
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_6Longcao_Sur:BTDecorator_Blackboard_6'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Longcao/Level_Survival/BT_6Longcao_Sur.31"
+            },
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_6Longcao_Sur:BTDecorator_Blackboard_5'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Longcao/Level_Survival/BT_6Longcao_Sur.30"
+            },
+            {
+              "ObjectName": "BTDecorator_Mon_Gr_Longcao_AngleCheck_C'BT_6Longcao_Sur:BTDecorator_Mon_Gr_Longcao_AngleCheck_C_1'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Longcao/Level_Survival/BT_6Longcao_Sur.42"
+            }
+          ],
+          "DecoratorOps": [
+            {
+              "Operation": "EBTDecoratorLogic::Or",
+              "Number": 2
+            },
+            {
+              "Operation": "EBTDecoratorLogic::Test",
+              "Number": 0
+            },
+            {
+              "Operation": "EBTDecoratorLogic::And",
+              "Number": 3
+            },
+            {
+              "Operation": "EBTDecoratorLogic::Test",
+              "Number": 1
+            },
+            {
+              "Operation": "EBTDecoratorLogic::Test",
+              "Number": 2
+            },
+            {
+              "Operation": "EBTDecoratorLogic::Test",
+              "Number": 3
+            }
+          ]
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_6Longcao_Sur'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Longcao/Level_Survival/BT_6Longcao_Sur.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_6Longcao_Sur:BTComposite_Selector_2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Longcao/Level_Survival/BT_6Longcao_Sur.3"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_2",
+    "Outer": "BT_6Longcao_Sur",
+    "Class": "UScriptClass'BTComposite_Selector'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_6Longcao_Sur:BTComposite_Sequence_1'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Longcao/Level_Survival/BT_6Longcao_Sur.6"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_6Longcao_Sur:BTDecorator_Blackboard_10'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Longcao/Level_Survival/BT_6Longcao_Sur.16"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_6Longcao_Sur:BTComposite_Sequence_9'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Longcao/Level_Survival/BT_6Longcao_Sur.14"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_6Longcao_Sur:BTDecorator_Blackboard_32'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Longcao/Level_Survival/BT_6Longcao_Sur.28"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_6Longcao_Sur:BTComposite_Sequence_11'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Longcao/Level_Survival/BT_6Longcao_Sur.8"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_6Longcao_Sur:BTDecorator_Blackboard_29'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Longcao/Level_Survival/BT_6Longcao_Sur.26"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_UseSkill'BT_6Longcao_Sur:BTTask_UseSkill_7'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Longcao/Level_Survival/BT_6Longcao_Sur.66"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_6Longcao_Sur:BTDecorator_Blackboard_28'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Longcao/Level_Survival/BT_6Longcao_Sur.25"
+            },
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_6Longcao_Sur:BTDecorator_Blackboard_27'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Longcao/Level_Survival/BT_6Longcao_Sur.24"
+            },
+            {
+              "ObjectName": "BTDecorator_Mon_Gr_Longcao_AngleCheck_C'BT_6Longcao_Sur:BTDecorator_Mon_Gr_Longcao_AngleCheck_C_13'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Longcao/Level_Survival/BT_6Longcao_Sur.43"
+            },
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_6Longcao_Sur:BTDecorator_Blackboard_30'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Longcao/Level_Survival/BT_6Longcao_Sur.27"
+            },
+            {
+              "ObjectName": "BTDecorator_CheckCombatCondition'BT_6Longcao_Sur:BTDecorator_CheckCombatCondition_13'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Longcao/Level_Survival/BT_6Longcao_Sur.38"
+            }
+          ],
+          "DecoratorOps": [
+            {
+              "Operation": "EBTDecoratorLogic::And",
+              "Number": 2
+            },
+            {
+              "Operation": "EBTDecoratorLogic::Or",
+              "Number": 2
+            },
+            {
+              "Operation": "EBTDecoratorLogic::And",
+              "Number": 3
+            },
+            {
+              "Operation": "EBTDecoratorLogic::Test",
+              "Number": 0
+            },
+            {
+              "Operation": "EBTDecoratorLogic::Test",
+              "Number": 1
+            },
+            {
+              "Operation": "EBTDecoratorLogic::Test",
+              "Number": 2
+            },
+            {
+              "Operation": "EBTDecoratorLogic::Test",
+              "Number": 3
+            },
+            {
+              "Operation": "EBTDecoratorLogic::Test",
+              "Number": 4
+            }
+          ]
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_6Longcao_Sur:BTComposite_Sequence_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Longcao/Level_Survival/BT_6Longcao_Sur.5"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_6Longcao_Sur:BTDecorator_Blackboard_1'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Longcao/Level_Survival/BT_6Longcao_Sur.15"
+            },
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_6Longcao_Sur:BTDecorator_Blackboard_70'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Longcao/Level_Survival/BT_6Longcao_Sur.34"
+            },
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_6Longcao_Sur:BTDecorator_Blackboard_69'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Longcao/Level_Survival/BT_6Longcao_Sur.32"
+            },
+            {
+              "ObjectName": "BTDecorator_Mon_Gr_Longcao_AngleCheck_C'BT_6Longcao_Sur:BTDecorator_Mon_Gr_Longcao_AngleCheck_C_25'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Longcao/Level_Survival/BT_6Longcao_Sur.44"
+            },
+            {
+              "ObjectName": "BTDecorator_CheckCombatCondition'BT_6Longcao_Sur:BTDecorator_CheckCombatCondition_14'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Longcao/Level_Survival/BT_6Longcao_Sur.39"
+            }
+          ],
+          "DecoratorOps": [
+            {
+              "Operation": "EBTDecoratorLogic::And",
+              "Number": 2
+            },
+            {
+              "Operation": "EBTDecoratorLogic::Or",
+              "Number": 2
+            },
+            {
+              "Operation": "EBTDecoratorLogic::Test",
+              "Number": 0
+            },
+            {
+              "Operation": "EBTDecoratorLogic::And",
+              "Number": 3
+            },
+            {
+              "Operation": "EBTDecoratorLogic::Test",
+              "Number": 1
+            },
+            {
+              "Operation": "EBTDecoratorLogic::Test",
+              "Number": 2
+            },
+            {
+              "Operation": "EBTDecoratorLogic::Test",
+              "Number": 3
+            },
+            {
+              "Operation": "EBTDecoratorLogic::Test",
+              "Number": 4
+            }
+          ]
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector'BT_6Longcao_Sur:BTComposite_Selector_9'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Longcao/Level_Survival/BT_6Longcao_Sur.4"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_CheckCombatCondition'BT_6Longcao_Sur:BTDecorator_CheckCombatCondition_2'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Longcao/Level_Survival/BT_6Longcao_Sur.40"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector'BT_6Longcao_Sur:BTComposite_Selector_10'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Longcao/Level_Survival/BT_6Longcao_Sur.2"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_CheckCombatCondition'BT_6Longcao_Sur:BTDecorator_CheckCombatCondition_5'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Longcao/Level_Survival/BT_6Longcao_Sur.41"
+            }
+          ],
+          "DecoratorOps": []
+        }
+      ],
+      "NodeName": "IsInRange?",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_6Longcao_Sur'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Longcao/Level_Survival/BT_6Longcao_Sur.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_6Longcao_Sur:BTComposite_Sequence_15'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Longcao/Level_Survival/BT_6Longcao_Sur.10"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_9",
+    "Outer": "BT_6Longcao_Sur",
+    "Class": "UScriptClass'BTComposite_Selector'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_UseSkill'BT_6Longcao_Sur:BTTask_UseSkill_10'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Longcao/Level_Survival/BT_6Longcao_Sur.63"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_6Longcao_Sur:BTDecorator_Blackboard_26'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Longcao/Level_Survival/BT_6Longcao_Sur.23"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait'BT_6Longcao_Sur:BTTask_Wait_1'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Longcao/Level_Survival/BT_6Longcao_Sur.68"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_6Longcao_Sur'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Longcao/Level_Survival/BT_6Longcao_Sur.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_6Longcao_Sur:BTComposite_Selector_2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Longcao/Level_Survival/BT_6Longcao_Sur.3"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_0",
+    "Outer": "BT_6Longcao_Sur",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_UseSkill'BT_6Longcao_Sur:BTTask_UseSkill_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Longcao/Level_Survival/BT_6Longcao_Sur.61"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_EMRunEQSQuery'BT_6Longcao_Sur:BTTask_EMRunEQSQuery_1'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Longcao/Level_Survival/BT_6Longcao_Sur.53"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_6Longcao_Sur:BTComposite_Sequence_5'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Longcao/Level_Survival/BT_6Longcao_Sur.13"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_6Longcao_Sur:BTDecorator_Blackboard_18'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Longcao/Level_Survival/BT_6Longcao_Sur.20"
+            },
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_6Longcao_Sur:BTDecorator_Blackboard_20'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Longcao/Level_Survival/BT_6Longcao_Sur.22"
+            },
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_6Longcao_Sur:BTDecorator_Blackboard_19'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Longcao/Level_Survival/BT_6Longcao_Sur.21"
+            },
+            {
+              "ObjectName": "BTDecorator_Mon_Gr_Longcao_AngleCheck_C'BT_6Longcao_Sur:BTDecorator_Mon_Gr_Longcao_AngleCheck_C_5'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Longcao/Level_Survival/BT_6Longcao_Sur.47"
+            }
+          ],
+          "DecoratorOps": [
+            {
+              "Operation": "EBTDecoratorLogic::Or",
+              "Number": 2
+            },
+            {
+              "Operation": "EBTDecoratorLogic::Test",
+              "Number": 0
+            },
+            {
+              "Operation": "EBTDecoratorLogic::And",
+              "Number": 3
+            },
+            {
+              "Operation": "EBTDecoratorLogic::Test",
+              "Number": 1
+            },
+            {
+              "Operation": "EBTDecoratorLogic::Test",
+              "Number": 2
+            },
+            {
+              "Operation": "EBTDecoratorLogic::Test",
+              "Number": 3
+            }
+          ]
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_6Longcao_Sur'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Longcao/Level_Survival/BT_6Longcao_Sur.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_6Longcao_Sur:BTComposite_Selector_2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Longcao/Level_Survival/BT_6Longcao_Sur.3"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_1",
+    "Outer": "BT_6Longcao_Sur",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait'BT_6Longcao_Sur:BTTask_Wait_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Longcao/Level_Survival/BT_6Longcao_Sur.67"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_6Longcao_Sur'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Longcao/Level_Survival/BT_6Longcao_Sur.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_6Longcao_Sur:BTComposite_Selector_2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Longcao/Level_Survival/BT_6Longcao_Sur.3"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_10",
+    "Outer": "BT_6Longcao_Sur",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_EMRunEQSQuery'BT_6Longcao_Sur:BTTask_EMRunEQSQuery_8'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Longcao/Level_Survival/BT_6Longcao_Sur.55"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_NewMoveTo'BT_6Longcao_Sur:BTTask_NewMoveTo_8'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Longcao/Level_Survival/BT_6Longcao_Sur.58"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait'BT_6Longcao_Sur:BTTask_Wait_2'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Longcao/Level_Survival/BT_6Longcao_Sur.69"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_6Longcao_Sur'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Longcao/Level_Survival/BT_6Longcao_Sur.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_6Longcao_Sur:BTComposite_Selector_10'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Longcao/Level_Survival/BT_6Longcao_Sur.2"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_11",
+    "Outer": "BT_6Longcao_Sur",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_ClearHatredList'BT_6Longcao_Sur:BTTask_ClearHatredList_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Longcao/Level_Survival/BT_6Longcao_Sur.52"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_AlertStateChange'BT_6Longcao_Sur:BTTask_AlertStateChange_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Longcao/Level_Survival/BT_6Longcao_Sur.51"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "NodeName": "EscapeFromBattle",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_6Longcao_Sur'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Longcao/Level_Survival/BT_6Longcao_Sur.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_6Longcao_Sur:BTComposite_Selector_2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Longcao/Level_Survival/BT_6Longcao_Sur.3"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_12",
+    "Outer": "BT_6Longcao_Sur",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_EMRunEQSQuery'BT_6Longcao_Sur:BTTask_EMRunEQSQuery_7'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Longcao/Level_Survival/BT_6Longcao_Sur.54"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_6Longcao_Sur:BTComposite_Sequence_4'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Longcao/Level_Survival/BT_6Longcao_Sur.12"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_6Longcao_Sur:BTDecorator_Blackboard_12'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Longcao/Level_Survival/BT_6Longcao_Sur.17"
+            },
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_6Longcao_Sur:BTDecorator_Blackboard_14'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Longcao/Level_Survival/BT_6Longcao_Sur.19"
+            },
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_6Longcao_Sur:BTDecorator_Blackboard_13'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Longcao/Level_Survival/BT_6Longcao_Sur.18"
+            },
+            {
+              "ObjectName": "BTDecorator_Mon_Gr_Longcao_AngleCheck_C'BT_6Longcao_Sur:BTDecorator_Mon_Gr_Longcao_AngleCheck_C_3'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Longcao/Level_Survival/BT_6Longcao_Sur.46"
+            }
+          ],
+          "DecoratorOps": [
+            {
+              "Operation": "EBTDecoratorLogic::Or",
+              "Number": 2
+            },
+            {
+              "Operation": "EBTDecoratorLogic::Test",
+              "Number": 0
+            },
+            {
+              "Operation": "EBTDecoratorLogic::And",
+              "Number": 3
+            },
+            {
+              "Operation": "EBTDecoratorLogic::Test",
+              "Number": 1
+            },
+            {
+              "Operation": "EBTDecoratorLogic::Test",
+              "Number": 2
+            },
+            {
+              "Operation": "EBTDecoratorLogic::Test",
+              "Number": 3
+            }
+          ]
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_6Longcao_Sur'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Longcao/Level_Survival/BT_6Longcao_Sur.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Rate'BT_6Longcao_Sur:BTComposite_Rate_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Longcao/Level_Survival/BT_6Longcao_Sur.1"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_15",
+    "Outer": "BT_6Longcao_Sur",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_RunBehavior'BT_6Longcao_Sur:BTTask_RunBehavior_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Longcao/Level_Survival/BT_6Longcao_Sur.60"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector'BT_6Longcao_Sur:BTComposite_Selector_2'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Longcao/Level_Survival/BT_6Longcao_Sur.3"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "Services": [
+        {
+          "ObjectName": "BTService_BBValueDis'BT_6Longcao_Sur:BTService_BBValueDis_0'",
+          "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Longcao/Level_Survival/BT_6Longcao_Sur.50"
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_6Longcao_Sur'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Longcao/Level_Survival/BT_6Longcao_Sur.0"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_2",
+    "Outer": "BT_6Longcao_Sur",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_NewMoveTo'BT_6Longcao_Sur:BTTask_NewMoveTo_7'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Longcao/Level_Survival/BT_6Longcao_Sur.57"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_UseSkill'BT_6Longcao_Sur:BTTask_UseSkill_1'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Longcao/Level_Survival/BT_6Longcao_Sur.62"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_6Longcao_Sur'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Longcao/Level_Survival/BT_6Longcao_Sur.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_6Longcao_Sur:BTComposite_Selector_10'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Longcao/Level_Survival/BT_6Longcao_Sur.2"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_4",
+    "Outer": "BT_6Longcao_Sur",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_NewMoveTo'BT_6Longcao_Sur:BTTask_NewMoveTo_9'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Longcao/Level_Survival/BT_6Longcao_Sur.59"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait'BT_6Longcao_Sur:BTTask_Wait_4'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Longcao/Level_Survival/BT_6Longcao_Sur.71"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_6Longcao_Sur'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Longcao/Level_Survival/BT_6Longcao_Sur.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_6Longcao_Sur:BTComposite_Sequence_12'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Longcao/Level_Survival/BT_6Longcao_Sur.9"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_5",
+    "Outer": "BT_6Longcao_Sur",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_NewMoveTo'BT_6Longcao_Sur:BTTask_NewMoveTo_2'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Longcao/Level_Survival/BT_6Longcao_Sur.56"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait'BT_6Longcao_Sur:BTTask_Wait_5'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Longcao/Level_Survival/BT_6Longcao_Sur.72"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_6Longcao_Sur'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Longcao/Level_Survival/BT_6Longcao_Sur.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_6Longcao_Sur:BTComposite_Sequence_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Longcao/Level_Survival/BT_6Longcao_Sur.5"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_9",
+    "Outer": "BT_6Longcao_Sur",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait'BT_6Longcao_Sur:BTTask_Wait_3'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Longcao/Level_Survival/BT_6Longcao_Sur.70"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_6Longcao_Sur'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Longcao/Level_Survival/BT_6Longcao_Sur.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_6Longcao_Sur:BTComposite_Selector_2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Longcao/Level_Survival/BT_6Longcao_Sur.3"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_1",
+    "Outer": "BT_6Longcao_Sur",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "FloatValue": 1000.0,
+      "CachedDescription": "TickTargetDis 大于 1000.000000",
+      "OperationType": 4,
+      "BlackboardKey": {
+        "SelectedKeyName": "TickTargetDis"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_6Longcao_Sur'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Longcao/Level_Survival/BT_6Longcao_Sur.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_6Longcao_Sur:BTComposite_Selector_2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Longcao/Level_Survival/BT_6Longcao_Sur.3"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_10",
+    "Outer": "BT_6Longcao_Sur",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "CachedDescription": "TargetPlayerInvisible is 已设置",
+      "BlackboardKey": {
+        "SelectedKeyName": "TargetPlayerInvisible"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::Self",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_6Longcao_Sur'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Longcao/Level_Survival/BT_6Longcao_Sur.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_6Longcao_Sur:BTComposite_Selector_2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Longcao/Level_Survival/BT_6Longcao_Sur.3"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_12",
+    "Outer": "BT_6Longcao_Sur",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "FloatValue": 1000.0,
+      "CachedDescription": "TickTargetDis 大于 1000.000000",
+      "OperationType": 4,
+      "BlackboardKey": {
+        "SelectedKeyName": "TickTargetDis"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::Self",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_6Longcao_Sur'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Longcao/Level_Survival/BT_6Longcao_Sur.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_6Longcao_Sur:BTComposite_Sequence_12'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Longcao/Level_Survival/BT_6Longcao_Sur.9"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_13",
+    "Outer": "BT_6Longcao_Sur",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "FloatValue": 1000.0,
+      "CachedDescription": "TickTargetDis 小于或等于 1000.000000",
+      "OperationType": 3,
+      "BlackboardKey": {
+        "SelectedKeyName": "TickTargetDis"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::Self",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_6Longcao_Sur'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Longcao/Level_Survival/BT_6Longcao_Sur.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_6Longcao_Sur:BTComposite_Sequence_12'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Longcao/Level_Survival/BT_6Longcao_Sur.9"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_14",
+    "Outer": "BT_6Longcao_Sur",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "FloatValue": 800.0,
+      "CachedDescription": "TickTargetDis 大于 800.000000",
+      "OperationType": 4,
+      "BlackboardKey": {
+        "SelectedKeyName": "TickTargetDis"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::Self",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_6Longcao_Sur'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Longcao/Level_Survival/BT_6Longcao_Sur.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_6Longcao_Sur:BTComposite_Sequence_12'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Longcao/Level_Survival/BT_6Longcao_Sur.9"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_18",
+    "Outer": "BT_6Longcao_Sur",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "FloatValue": 1000.0,
+      "CachedDescription": "TickTargetDis 大于 1000.000000",
+      "OperationType": 4,
+      "BlackboardKey": {
+        "SelectedKeyName": "TickTargetDis"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::Self",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_6Longcao_Sur'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Longcao/Level_Survival/BT_6Longcao_Sur.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_6Longcao_Sur:BTComposite_Sequence_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Longcao/Level_Survival/BT_6Longcao_Sur.5"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_19",
+    "Outer": "BT_6Longcao_Sur",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "FloatValue": 1000.0,
+      "CachedDescription": "TickTargetDis 小于或等于 1000.000000",
+      "OperationType": 3,
+      "BlackboardKey": {
+        "SelectedKeyName": "TickTargetDis"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::Self",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_6Longcao_Sur'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Longcao/Level_Survival/BT_6Longcao_Sur.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_6Longcao_Sur:BTComposite_Sequence_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Longcao/Level_Survival/BT_6Longcao_Sur.5"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_20",
+    "Outer": "BT_6Longcao_Sur",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "FloatValue": 800.0,
+      "CachedDescription": "TickTargetDis 大于 800.000000",
+      "OperationType": 4,
+      "BlackboardKey": {
+        "SelectedKeyName": "TickTargetDis"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::Self",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_6Longcao_Sur'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Longcao/Level_Survival/BT_6Longcao_Sur.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_6Longcao_Sur:BTComposite_Sequence_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Longcao/Level_Survival/BT_6Longcao_Sur.5"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_26",
+    "Outer": "BT_6Longcao_Sur",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "FloatValue": 600.0,
+      "CachedDescription": "TickTargetDis 小于或等于 600.000000",
+      "OperationType": 3,
+      "BlackboardKey": {
+        "SelectedKeyName": "TickTargetDis"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_6Longcao_Sur'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Longcao/Level_Survival/BT_6Longcao_Sur.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_6Longcao_Sur:BTComposite_Selector_9'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Longcao/Level_Survival/BT_6Longcao_Sur.4"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_27",
+    "Outer": "BT_6Longcao_Sur",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "FloatValue": 1000.0,
+      "CachedDescription": "TickTargetDis 小于或等于 1000.000000",
+      "OperationType": 3,
+      "BlackboardKey": {
+        "SelectedKeyName": "TickTargetDis"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_6Longcao_Sur'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Longcao/Level_Survival/BT_6Longcao_Sur.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_6Longcao_Sur:BTComposite_Selector_2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Longcao/Level_Survival/BT_6Longcao_Sur.3"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_28",
+    "Outer": "BT_6Longcao_Sur",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "FloatValue": 800.0,
+      "CachedDescription": "TickTargetDis 大于 800.000000",
+      "OperationType": 4,
+      "BlackboardKey": {
+        "SelectedKeyName": "TickTargetDis"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_6Longcao_Sur'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Longcao/Level_Survival/BT_6Longcao_Sur.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_6Longcao_Sur:BTComposite_Selector_2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Longcao/Level_Survival/BT_6Longcao_Sur.3"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_29",
+    "Outer": "BT_6Longcao_Sur",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "FloatValue": 30000.0,
+      "CachedDescription": "TickTargetDis 大于或等于 30000.000000",
+      "OperationType": 5,
+      "BlackboardKey": {
+        "SelectedKeyName": "TickTargetDis"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_6Longcao_Sur'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Longcao/Level_Survival/BT_6Longcao_Sur.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_6Longcao_Sur:BTComposite_Selector_2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Longcao/Level_Survival/BT_6Longcao_Sur.3"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_30",
+    "Outer": "BT_6Longcao_Sur",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "FloatValue": 800.0,
+      "CachedDescription": "TickTargetDis 小于或等于 800.000000",
+      "OperationType": 3,
+      "BlackboardKey": {
+        "SelectedKeyName": "TickTargetDis"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_6Longcao_Sur'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Longcao/Level_Survival/BT_6Longcao_Sur.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_6Longcao_Sur:BTComposite_Selector_2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Longcao/Level_Survival/BT_6Longcao_Sur.3"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_32",
+    "Outer": "BT_6Longcao_Sur",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "CachedDescription": "TargetPlayerDead is 已设置",
+      "BlackboardKey": {
+        "SelectedKeyName": "TargetPlayerDead"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::Self",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_6Longcao_Sur'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Longcao/Level_Survival/BT_6Longcao_Sur.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_6Longcao_Sur:BTComposite_Selector_2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Longcao/Level_Survival/BT_6Longcao_Sur.3"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_4",
+    "Outer": "BT_6Longcao_Sur",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "FloatValue": 1000.0,
+      "CachedDescription": "TickTargetDis 大于 1000.000000",
+      "OperationType": 4,
+      "BlackboardKey": {
+        "SelectedKeyName": "TickTargetDis"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::Self",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_6Longcao_Sur'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Longcao/Level_Survival/BT_6Longcao_Sur.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_6Longcao_Sur:BTComposite_Selector_10'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Longcao/Level_Survival/BT_6Longcao_Sur.2"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_5",
+    "Outer": "BT_6Longcao_Sur",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "FloatValue": 1000.0,
+      "CachedDescription": "TickTargetDis 小于或等于 1000.000000",
+      "OperationType": 3,
+      "BlackboardKey": {
+        "SelectedKeyName": "TickTargetDis"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::Self",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_6Longcao_Sur'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Longcao/Level_Survival/BT_6Longcao_Sur.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_6Longcao_Sur:BTComposite_Selector_10'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Longcao/Level_Survival/BT_6Longcao_Sur.2"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_6",
+    "Outer": "BT_6Longcao_Sur",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "FloatValue": 800.0,
+      "CachedDescription": "TickTargetDis 大于 800.000000",
+      "OperationType": 4,
+      "BlackboardKey": {
+        "SelectedKeyName": "TickTargetDis"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::Self",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_6Longcao_Sur'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Longcao/Level_Survival/BT_6Longcao_Sur.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_6Longcao_Sur:BTComposite_Selector_10'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Longcao/Level_Survival/BT_6Longcao_Sur.2"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_69",
+    "Outer": "BT_6Longcao_Sur",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "FloatValue": 1000.0,
+      "CachedDescription": "TickTargetDis 小于或等于 1000.000000",
+      "OperationType": 3,
+      "BlackboardKey": {
+        "SelectedKeyName": "TickTargetDis"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_6Longcao_Sur'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Longcao/Level_Survival/BT_6Longcao_Sur.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_6Longcao_Sur:BTComposite_Selector_2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Longcao/Level_Survival/BT_6Longcao_Sur.3"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_7",
+    "Outer": "BT_6Longcao_Sur",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "FloatValue": 900.0,
+      "CachedDescription": "TickTargetDis 小于或等于 900.000000",
+      "OperationType": 3,
+      "BlackboardKey": {
+        "SelectedKeyName": "TickTargetDis"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_6Longcao_Sur'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Longcao/Level_Survival/BT_6Longcao_Sur.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_6Longcao_Sur:BTComposite_Selector_10'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Longcao/Level_Survival/BT_6Longcao_Sur.2"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_70",
+    "Outer": "BT_6Longcao_Sur",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "FloatValue": 800.0,
+      "CachedDescription": "TickTargetDis 大于 800.000000",
+      "OperationType": 4,
+      "BlackboardKey": {
+        "SelectedKeyName": "TickTargetDis"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_6Longcao_Sur'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Longcao/Level_Survival/BT_6Longcao_Sur.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_6Longcao_Sur:BTComposite_Selector_2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Longcao/Level_Survival/BT_6Longcao_Sur.3"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_80",
+    "Outer": "BT_6Longcao_Sur",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "FloatValue": 1000.0,
+      "CachedDescription": "TickTargetDis 大于 1000.000000",
+      "OperationType": 4,
+      "BlackboardKey": {
+        "SelectedKeyName": "TickTargetDis"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::Self",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_6Longcao_Sur'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Longcao/Level_Survival/BT_6Longcao_Sur.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_6Longcao_Sur:BTComposite_Selector_10'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Longcao/Level_Survival/BT_6Longcao_Sur.2"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_81",
+    "Outer": "BT_6Longcao_Sur",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "FloatValue": 1000.0,
+      "CachedDescription": "TickTargetDis 小于或等于 1000.000000",
+      "OperationType": 3,
+      "BlackboardKey": {
+        "SelectedKeyName": "TickTargetDis"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::Self",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_6Longcao_Sur'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Longcao/Level_Survival/BT_6Longcao_Sur.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_6Longcao_Sur:BTComposite_Selector_10'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Longcao/Level_Survival/BT_6Longcao_Sur.2"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_82",
+    "Outer": "BT_6Longcao_Sur",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "FloatValue": 800.0,
+      "CachedDescription": "TickTargetDis 大于 800.000000",
+      "OperationType": 4,
+      "BlackboardKey": {
+        "SelectedKeyName": "TickTargetDis"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::Self",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_6Longcao_Sur'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Longcao/Level_Survival/BT_6Longcao_Sur.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_6Longcao_Sur:BTComposite_Selector_10'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Longcao/Level_Survival/BT_6Longcao_Sur.2"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_CheckCombatCondition",
+    "Name": "BTDecorator_CheckCombatCondition_13",
+    "Outer": "BT_6Longcao_Sur",
+    "Class": "UScriptClass'BTDecorator_CheckCombatCondition'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "CombatConditionId": 600501,
+      "bInverseCondition": true,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_6Longcao_Sur'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Longcao/Level_Survival/BT_6Longcao_Sur.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_6Longcao_Sur:BTComposite_Selector_2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Longcao/Level_Survival/BT_6Longcao_Sur.3"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_CheckCombatCondition",
+    "Name": "BTDecorator_CheckCombatCondition_14",
+    "Outer": "BT_6Longcao_Sur",
+    "Class": "UScriptClass'BTDecorator_CheckCombatCondition'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "CombatConditionId": 600501,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_6Longcao_Sur'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Longcao/Level_Survival/BT_6Longcao_Sur.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_6Longcao_Sur:BTComposite_Selector_2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Longcao/Level_Survival/BT_6Longcao_Sur.3"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_CheckCombatCondition",
+    "Name": "BTDecorator_CheckCombatCondition_2",
+    "Outer": "BT_6Longcao_Sur",
+    "Class": "UScriptClass'BTDecorator_CheckCombatCondition'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "CombatConditionId": 600501,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_6Longcao_Sur'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Longcao/Level_Survival/BT_6Longcao_Sur.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_6Longcao_Sur:BTComposite_Selector_2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Longcao/Level_Survival/BT_6Longcao_Sur.3"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_CheckCombatCondition",
+    "Name": "BTDecorator_CheckCombatCondition_5",
+    "Outer": "BT_6Longcao_Sur",
+    "Class": "UScriptClass'BTDecorator_CheckCombatCondition'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "CombatConditionId": 600501,
+      "bInverseCondition": true,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_6Longcao_Sur'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Longcao/Level_Survival/BT_6Longcao_Sur.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_6Longcao_Sur:BTComposite_Selector_2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Longcao/Level_Survival/BT_6Longcao_Sur.3"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Mon_Gr_Longcao_AngleCheck_C",
+    "Name": "BTDecorator_Mon_Gr_Longcao_AngleCheck_C_1",
+    "Outer": "BT_6Longcao_Sur",
+    "Class": "BlueprintGeneratedClass'EM/Content/BluePrints/AI/BTDecorator/BTDecorator_Mon_Gr_Longcao_AngleCheck.BTDecorator_Mon_Gr_Longcao_AngleCheck_C'",
+    "Template": {
+      "ObjectName": "BTDecorator_Mon_Gr_Longcao_AngleCheck_C'Default__BTDecorator_Mon_Gr_Longcao_AngleCheck_C'",
+      "ObjectPath": "EM/Content/BluePrints/AI/BTDecorator/BTDecorator_Mon_Gr_Longcao_AngleCheck.2"
+    },
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "MaxAngle": 90.0,
+      "FlowAbortMode": "EBTFlowAbortMode::Self",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_6Longcao_Sur'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Longcao/Level_Survival/BT_6Longcao_Sur.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_6Longcao_Sur:BTComposite_Selector_10'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Longcao/Level_Survival/BT_6Longcao_Sur.2"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Mon_Gr_Longcao_AngleCheck_C",
+    "Name": "BTDecorator_Mon_Gr_Longcao_AngleCheck_C_13",
+    "Outer": "BT_6Longcao_Sur",
+    "Class": "BlueprintGeneratedClass'EM/Content/BluePrints/AI/BTDecorator/BTDecorator_Mon_Gr_Longcao_AngleCheck.BTDecorator_Mon_Gr_Longcao_AngleCheck_C'",
+    "Template": {
+      "ObjectName": "BTDecorator_Mon_Gr_Longcao_AngleCheck_C'Default__BTDecorator_Mon_Gr_Longcao_AngleCheck_C'",
+      "ObjectPath": "EM/Content/BluePrints/AI/BTDecorator/BTDecorator_Mon_Gr_Longcao_AngleCheck.2"
+    },
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "MinAngle": 100.0,
+      "MaxAngle": 180.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_6Longcao_Sur'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Longcao/Level_Survival/BT_6Longcao_Sur.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_6Longcao_Sur:BTComposite_Selector_2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Longcao/Level_Survival/BT_6Longcao_Sur.3"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Mon_Gr_Longcao_AngleCheck_C",
+    "Name": "BTDecorator_Mon_Gr_Longcao_AngleCheck_C_25",
+    "Outer": "BT_6Longcao_Sur",
+    "Class": "BlueprintGeneratedClass'EM/Content/BluePrints/AI/BTDecorator/BTDecorator_Mon_Gr_Longcao_AngleCheck.BTDecorator_Mon_Gr_Longcao_AngleCheck_C'",
+    "Template": {
+      "ObjectName": "BTDecorator_Mon_Gr_Longcao_AngleCheck_C'Default__BTDecorator_Mon_Gr_Longcao_AngleCheck_C'",
+      "ObjectPath": "EM/Content/BluePrints/AI/BTDecorator/BTDecorator_Mon_Gr_Longcao_AngleCheck.2"
+    },
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "MaxAngle": 90.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_6Longcao_Sur'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Longcao/Level_Survival/BT_6Longcao_Sur.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_6Longcao_Sur:BTComposite_Selector_2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Longcao/Level_Survival/BT_6Longcao_Sur.3"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Mon_Gr_Longcao_AngleCheck_C",
+    "Name": "BTDecorator_Mon_Gr_Longcao_AngleCheck_C_29",
+    "Outer": "BT_6Longcao_Sur",
+    "Class": "BlueprintGeneratedClass'EM/Content/BluePrints/AI/BTDecorator/BTDecorator_Mon_Gr_Longcao_AngleCheck.BTDecorator_Mon_Gr_Longcao_AngleCheck_C'",
+    "Template": {
+      "ObjectName": "BTDecorator_Mon_Gr_Longcao_AngleCheck_C'Default__BTDecorator_Mon_Gr_Longcao_AngleCheck_C'",
+      "ObjectPath": "EM/Content/BluePrints/AI/BTDecorator/BTDecorator_Mon_Gr_Longcao_AngleCheck.2"
+    },
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "MaxAngle": 90.0,
+      "FlowAbortMode": "EBTFlowAbortMode::Self",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_6Longcao_Sur'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Longcao/Level_Survival/BT_6Longcao_Sur.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_6Longcao_Sur:BTComposite_Selector_10'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Longcao/Level_Survival/BT_6Longcao_Sur.2"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Mon_Gr_Longcao_AngleCheck_C",
+    "Name": "BTDecorator_Mon_Gr_Longcao_AngleCheck_C_3",
+    "Outer": "BT_6Longcao_Sur",
+    "Class": "BlueprintGeneratedClass'EM/Content/BluePrints/AI/BTDecorator/BTDecorator_Mon_Gr_Longcao_AngleCheck.BTDecorator_Mon_Gr_Longcao_AngleCheck_C'",
+    "Template": {
+      "ObjectName": "BTDecorator_Mon_Gr_Longcao_AngleCheck_C'Default__BTDecorator_Mon_Gr_Longcao_AngleCheck_C'",
+      "ObjectPath": "EM/Content/BluePrints/AI/BTDecorator/BTDecorator_Mon_Gr_Longcao_AngleCheck.2"
+    },
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "MaxAngle": 90.0,
+      "FlowAbortMode": "EBTFlowAbortMode::Self",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_6Longcao_Sur'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Longcao/Level_Survival/BT_6Longcao_Sur.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_6Longcao_Sur:BTComposite_Sequence_12'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Longcao/Level_Survival/BT_6Longcao_Sur.9"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Mon_Gr_Longcao_AngleCheck_C",
+    "Name": "BTDecorator_Mon_Gr_Longcao_AngleCheck_C_5",
+    "Outer": "BT_6Longcao_Sur",
+    "Class": "BlueprintGeneratedClass'EM/Content/BluePrints/AI/BTDecorator/BTDecorator_Mon_Gr_Longcao_AngleCheck.BTDecorator_Mon_Gr_Longcao_AngleCheck_C'",
+    "Template": {
+      "ObjectName": "BTDecorator_Mon_Gr_Longcao_AngleCheck_C'Default__BTDecorator_Mon_Gr_Longcao_AngleCheck_C'",
+      "ObjectPath": "EM/Content/BluePrints/AI/BTDecorator/BTDecorator_Mon_Gr_Longcao_AngleCheck.2"
+    },
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "MaxAngle": 90.0,
+      "FlowAbortMode": "EBTFlowAbortMode::Self",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_6Longcao_Sur'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Longcao/Level_Survival/BT_6Longcao_Sur.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_6Longcao_Sur:BTComposite_Sequence_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Longcao/Level_Survival/BT_6Longcao_Sur.5"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_TargetLocCondition",
+    "Name": "BTDecorator_TargetLocCondition_8",
+    "Outer": "BT_6Longcao_Sur",
+    "Class": "UScriptClass'BTDecorator_TargetLocCondition'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "MaxDisKey": {
+        "SelectedKeyName": "MaxAttackRange"
+      },
+      "MinDis": 0.0,
+      "MaxDis": 1000.0,
+      "HitType": "ETypeOfHit::Hit",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_6Longcao_Sur'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Longcao/Level_Survival/BT_6Longcao_Sur.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_6Longcao_Sur:BTComposite_Selector_10'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Longcao/Level_Survival/BT_6Longcao_Sur.2"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_TargetLocCondition",
+    "Name": "BTDecorator_TargetLocCondition_9",
+    "Outer": "BT_6Longcao_Sur",
+    "Class": "UScriptClass'BTDecorator_TargetLocCondition'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "MaxDisKey": {
+        "SelectedKeyName": "MaxAttackRange"
+      },
+      "MinDis": 0.0,
+      "MaxDis": 1000.0,
+      "HitType": "ETypeOfHit::NotHit",
+      "FlowAbortMode": "EBTFlowAbortMode::Both",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_6Longcao_Sur'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Longcao/Level_Survival/BT_6Longcao_Sur.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_6Longcao_Sur:BTComposite_Selector_10'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Longcao/Level_Survival/BT_6Longcao_Sur.2"
+      }
+    }
+  },
+  {
+    "Type": "BTService_BBValueDis",
+    "Name": "BTService_BBValueDis_0",
+    "Outer": "BT_6Longcao_Sur",
+    "Class": "UScriptClass'BTService_BBValueDis'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "BBName": "Target",
+      "Interval": 0.02,
+      "RandomDeviation": 0.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_6Longcao_Sur'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Longcao/Level_Survival/BT_6Longcao_Sur.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_6Longcao_Sur:BTComposite_Sequence_15'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Longcao/Level_Survival/BT_6Longcao_Sur.10"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_AlertStateChange",
+    "Name": "BTTask_AlertStateChange_0",
+    "Outer": "BT_6Longcao_Sur",
+    "Class": "UScriptClass'BTTask_AlertStateChange'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TargetState": "EMonsterBattleState::EEndBattleState",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_6Longcao_Sur'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Longcao/Level_Survival/BT_6Longcao_Sur.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_6Longcao_Sur:BTComposite_Sequence_11'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Longcao/Level_Survival/BT_6Longcao_Sur.8"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_ClearHatredList",
+    "Name": "BTTask_ClearHatredList_0",
+    "Outer": "BT_6Longcao_Sur",
+    "Class": "UScriptClass'BTTask_ClearHatredList'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_6Longcao_Sur'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Longcao/Level_Survival/BT_6Longcao_Sur.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_6Longcao_Sur:BTComposite_Sequence_11'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Longcao/Level_Survival/BT_6Longcao_Sur.8"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_EMRunEQSQuery",
+    "Name": "BTTask_EMRunEQSQuery_1",
+    "Outer": "BT_6Longcao_Sur",
+    "Class": "UScriptClass'BTTask_EMRunEQSQuery'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "EQSRequest": {
+        "QueryTemplate": {
+          "ObjectName": "EnvQuery'EQS_BTTargetDonutInVision_ClampDot'",
+          "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Z_EnvQuery/EQS_BTTargetDonutInVision_ClampDot.8"
+        },
+        "QueryConfig": [
+          {
+            "ParamName": "EMDonut.InnerRadius",
+            "ParamType": "EAIParamType::Float",
+            "Value": 930.0,
+            "BBKey": {
+              "SelectedKeyName": "None",
+              "bNoneIsAllowedValue": true
+            }
+          },
+          {
+            "ParamName": "EMDonut.OuterRadius",
+            "ParamType": "EAIParamType::Float",
+            "Value": 950.0,
+            "BBKey": {
+              "SelectedKeyName": "None",
+              "bNoneIsAllowedValue": true
+            }
+          },
+          {
+            "ParamName": "EMDonut.NumberOfRings",
+            "ParamType": "EAIParamType::Int",
+            "Value": 12.0,
+            "BBKey": {
+              "SelectedKeyName": "None",
+              "bNoneIsAllowedValue": true
+            }
+          },
+          {
+            "ParamName": "EMDonut.PointsPerRing",
+            "ParamType": "EAIParamType::Int",
+            "Value": 12.0,
+            "BBKey": {
+              "SelectedKeyName": "None",
+              "bNoneIsAllowedValue": true
+            }
+          },
+          {
+            "ParamName": "EMDonut.ArcAngle",
+            "ParamType": "EAIParamType::Float",
+            "Value": 360.0,
+            "BBKey": {
+              "SelectedKeyName": "None",
+              "bNoneIsAllowedValue": true
+            }
+          },
+          {
+            "ParamName": "EMDistance.ScoringFactor",
+            "ParamType": "EAIParamType::Float",
+            "Value": 1.0,
+            "BBKey": {
+              "SelectedKeyName": "None",
+              "bNoneIsAllowedValue": true
+            }
+          },
+          {
+            "ParamName": "EMDot.ScoreClampMin",
+            "ParamType": "EAIParamType::Float",
+            "Value": 0.3,
+            "BBKey": {
+              "SelectedKeyName": "None",
+              "bNoneIsAllowedValue": true
+            }
+          },
+          {
+            "ParamName": "EMDot.ScoreClampMax",
+            "ParamType": "EAIParamType::Float",
+            "Value": 1.0,
+            "BBKey": {
+              "SelectedKeyName": "None",
+              "bNoneIsAllowedValue": true
+            }
+          }
+        ],
+        "RunMode": "EEnvQueryRunMode::RandomBest25Pct"
+      },
+      "BlackboardKey": {
+        "SelectedKeyName": "EQSQueryLoc"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_6Longcao_Sur'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Longcao/Level_Survival/BT_6Longcao_Sur.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_6Longcao_Sur:BTComposite_Sequence_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Longcao/Level_Survival/BT_6Longcao_Sur.5"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_EMRunEQSQuery",
+    "Name": "BTTask_EMRunEQSQuery_7",
+    "Outer": "BT_6Longcao_Sur",
+    "Class": "UScriptClass'BTTask_EMRunEQSQuery'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "EQSRequest": {
+        "QueryTemplate": {
+          "ObjectName": "EnvQuery'EQS_BTTargetDonutInVision_ClampDot'",
+          "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Z_EnvQuery/EQS_BTTargetDonutInVision_ClampDot.8"
+        },
+        "QueryConfig": [
+          {
+            "ParamName": "EMDonut.InnerRadius",
+            "ParamType": "EAIParamType::Float",
+            "Value": 930.0,
+            "BBKey": {
+              "SelectedKeyName": "None",
+              "bNoneIsAllowedValue": true
+            }
+          },
+          {
+            "ParamName": "EMDonut.OuterRadius",
+            "ParamType": "EAIParamType::Float",
+            "Value": 950.0,
+            "BBKey": {
+              "SelectedKeyName": "None",
+              "bNoneIsAllowedValue": true
+            }
+          },
+          {
+            "ParamName": "EMDonut.NumberOfRings",
+            "ParamType": "EAIParamType::Int",
+            "Value": 12.0,
+            "BBKey": {
+              "SelectedKeyName": "None",
+              "bNoneIsAllowedValue": true
+            }
+          },
+          {
+            "ParamName": "EMDonut.PointsPerRing",
+            "ParamType": "EAIParamType::Int",
+            "Value": 12.0,
+            "BBKey": {
+              "SelectedKeyName": "None",
+              "bNoneIsAllowedValue": true
+            }
+          },
+          {
+            "ParamName": "EMDonut.ArcAngle",
+            "ParamType": "EAIParamType::Float",
+            "Value": 360.0,
+            "BBKey": {
+              "SelectedKeyName": "None",
+              "bNoneIsAllowedValue": true
+            }
+          },
+          {
+            "ParamName": "EMDistance.ScoringFactor",
+            "ParamType": "EAIParamType::Float",
+            "Value": 1.0,
+            "BBKey": {
+              "SelectedKeyName": "None",
+              "bNoneIsAllowedValue": true
+            }
+          },
+          {
+            "ParamName": "EMDot.ScoreClampMin",
+            "ParamType": "EAIParamType::Float",
+            "Value": 0.3,
+            "BBKey": {
+              "SelectedKeyName": "None",
+              "bNoneIsAllowedValue": true
+            }
+          },
+          {
+            "ParamName": "EMDot.ScoreClampMax",
+            "ParamType": "EAIParamType::Float",
+            "Value": 1.0,
+            "BBKey": {
+              "SelectedKeyName": "None",
+              "bNoneIsAllowedValue": true
+            }
+          }
+        ],
+        "RunMode": "EEnvQueryRunMode::RandomBest25Pct"
+      },
+      "BlackboardKey": {
+        "SelectedKeyName": "EQSQueryLoc"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_6Longcao_Sur'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Longcao/Level_Survival/BT_6Longcao_Sur.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_6Longcao_Sur:BTComposite_Sequence_12'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Longcao/Level_Survival/BT_6Longcao_Sur.9"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_EMRunEQSQuery",
+    "Name": "BTTask_EMRunEQSQuery_8",
+    "Outer": "BT_6Longcao_Sur",
+    "Class": "UScriptClass'BTTask_EMRunEQSQuery'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "EQSRequest": {
+        "QueryTemplate": {
+          "ObjectName": "EnvQuery'EQS_BTTargetDonutInVision_ClampDot'",
+          "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Z_EnvQuery/EQS_BTTargetDonutInVision_ClampDot.8"
+        },
+        "QueryConfig": [
+          {
+            "ParamName": "EMDonut.InnerRadius",
+            "ParamType": "EAIParamType::Float",
+            "Value": 930.0,
+            "BBKey": {
+              "SelectedKeyName": "None",
+              "bNoneIsAllowedValue": true
+            }
+          },
+          {
+            "ParamName": "EMDonut.OuterRadius",
+            "ParamType": "EAIParamType::Float",
+            "Value": 950.0,
+            "BBKey": {
+              "SelectedKeyName": "None",
+              "bNoneIsAllowedValue": true
+            }
+          },
+          {
+            "ParamName": "EMDonut.NumberOfRings",
+            "ParamType": "EAIParamType::Int",
+            "Value": 12.0,
+            "BBKey": {
+              "SelectedKeyName": "None",
+              "bNoneIsAllowedValue": true
+            }
+          },
+          {
+            "ParamName": "EMDonut.PointsPerRing",
+            "ParamType": "EAIParamType::Int",
+            "Value": 12.0,
+            "BBKey": {
+              "SelectedKeyName": "None",
+              "bNoneIsAllowedValue": true
+            }
+          },
+          {
+            "ParamName": "EMDonut.ArcAngle",
+            "ParamType": "EAIParamType::Float",
+            "Value": 360.0,
+            "BBKey": {
+              "SelectedKeyName": "None",
+              "bNoneIsAllowedValue": true
+            }
+          },
+          {
+            "ParamName": "EMDistance.ScoringFactor",
+            "ParamType": "EAIParamType::Float",
+            "Value": 1.0,
+            "BBKey": {
+              "SelectedKeyName": "None",
+              "bNoneIsAllowedValue": true
+            }
+          },
+          {
+            "ParamName": "EMDot.ScoreClampMin",
+            "ParamType": "EAIParamType::Float",
+            "Value": 0.3,
+            "BBKey": {
+              "SelectedKeyName": "None",
+              "bNoneIsAllowedValue": true
+            }
+          },
+          {
+            "ParamName": "EMDot.ScoreClampMax",
+            "ParamType": "EAIParamType::Float",
+            "Value": 1.0,
+            "BBKey": {
+              "SelectedKeyName": "None",
+              "bNoneIsAllowedValue": true
+            }
+          }
+        ],
+        "RunMode": "EEnvQueryRunMode::RandomBest25Pct"
+      },
+      "BlackboardKey": {
+        "SelectedKeyName": "EQSQueryLoc"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_6Longcao_Sur'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Longcao/Level_Survival/BT_6Longcao_Sur.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_6Longcao_Sur:BTComposite_Sequence_10'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Longcao/Level_Survival/BT_6Longcao_Sur.7"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_NewMoveTo",
+    "Name": "BTTask_NewMoveTo_2",
+    "Outer": "BT_6Longcao_Sur",
+    "Class": "UScriptClass'BTTask_NewMoveTo'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "bOrientRotationToMovement": true,
+      "MoveTypeState": "EMoveTypeState::MTS_Run",
+      "bReachTestIncludesAgentRadius": false,
+      "bReachTestIncludesGoalRadius": false,
+      "bStopOnOverlapNeedsUpdate": false,
+      "BlackboardKey": {
+        "SelectedKeyName": "EQSQueryLoc"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_6Longcao_Sur'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Longcao/Level_Survival/BT_6Longcao_Sur.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_6Longcao_Sur:BTComposite_Sequence_5'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Longcao/Level_Survival/BT_6Longcao_Sur.13"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_NewMoveTo",
+    "Name": "BTTask_NewMoveTo_7",
+    "Outer": "BT_6Longcao_Sur",
+    "Class": "UScriptClass'BTTask_NewMoveTo'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "bOrientRotationToMovement": true,
+      "MoveTypeState": "EMoveTypeState::MTS_Run",
+      "AcceptableRadius": 900.0,
+      "bStopOnOverlapNeedsUpdate": false,
+      "BlackboardKey": {
+        "SelectedKeyName": "Target"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_6Longcao_Sur'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Longcao/Level_Survival/BT_6Longcao_Sur.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_6Longcao_Sur:BTComposite_Sequence_2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Longcao/Level_Survival/BT_6Longcao_Sur.11"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_NewMoveTo",
+    "Name": "BTTask_NewMoveTo_8",
+    "Outer": "BT_6Longcao_Sur",
+    "Class": "UScriptClass'BTTask_NewMoveTo'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "bOrientRotationToMovement": true,
+      "MoveTypeState": "EMoveTypeState::MTS_Run",
+      "bReachTestIncludesAgentRadius": false,
+      "bReachTestIncludesGoalRadius": false,
+      "bStopOnOverlapNeedsUpdate": false,
+      "BlackboardKey": {
+        "SelectedKeyName": "EQSQueryLoc"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_6Longcao_Sur'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Longcao/Level_Survival/BT_6Longcao_Sur.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_6Longcao_Sur:BTComposite_Sequence_10'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Longcao/Level_Survival/BT_6Longcao_Sur.7"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_NewMoveTo",
+    "Name": "BTTask_NewMoveTo_9",
+    "Outer": "BT_6Longcao_Sur",
+    "Class": "UScriptClass'BTTask_NewMoveTo'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "bOrientRotationToMovement": true,
+      "MoveTypeState": "EMoveTypeState::MTS_Run",
+      "bReachTestIncludesAgentRadius": false,
+      "bReachTestIncludesGoalRadius": false,
+      "bStopOnOverlapNeedsUpdate": false,
+      "BlackboardKey": {
+        "SelectedKeyName": "EQSQueryLoc"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_6Longcao_Sur'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Longcao/Level_Survival/BT_6Longcao_Sur.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_6Longcao_Sur:BTComposite_Sequence_4'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Longcao/Level_Survival/BT_6Longcao_Sur.12"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_RunBehavior",
+    "Name": "BTTask_RunBehavior_0",
+    "Outer": "BT_6Longcao_Sur",
+    "Class": "UScriptClass'BTTask_RunBehavior'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "BehaviorAsset": {
+        "ObjectName": "BehaviorTree'BT_6Longcao_GetHatred'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Longcao/BT_6Longcao_GetHatred.0"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_6Longcao_Sur'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Longcao/Level_Survival/BT_6Longcao_Sur.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_6Longcao_Sur:BTComposite_Sequence_15'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Longcao/Level_Survival/BT_6Longcao_Sur.10"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_UseSkill",
+    "Name": "BTTask_UseSkill_0",
+    "Outer": "BT_6Longcao_Sur",
+    "Class": "UScriptClass'BTTask_UseSkill'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SkillId": 4,
+      "NodeName": "Skill4-Quit",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_6Longcao_Sur'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Longcao/Level_Survival/BT_6Longcao_Sur.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_6Longcao_Sur:BTComposite_Sequence_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Longcao/Level_Survival/BT_6Longcao_Sur.5"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_UseSkill",
+    "Name": "BTTask_UseSkill_1",
+    "Outer": "BT_6Longcao_Sur",
+    "Class": "UScriptClass'BTTask_UseSkill'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_6Longcao_Sur'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Longcao/Level_Survival/BT_6Longcao_Sur.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_6Longcao_Sur:BTComposite_Sequence_2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Longcao/Level_Survival/BT_6Longcao_Sur.11"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_UseSkill",
+    "Name": "BTTask_UseSkill_10",
+    "Outer": "BT_6Longcao_Sur",
+    "Class": "UScriptClass'BTTask_UseSkill'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SkillId": 5,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_6Longcao_Sur'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Longcao/Level_Survival/BT_6Longcao_Sur.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_6Longcao_Sur:BTComposite_Selector_9'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Longcao/Level_Survival/BT_6Longcao_Sur.4"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_UseSkill",
+    "Name": "BTTask_UseSkill_5",
+    "Outer": "BT_6Longcao_Sur",
+    "Class": "UScriptClass'BTTask_UseSkill'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_6Longcao_Sur'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Longcao/Level_Survival/BT_6Longcao_Sur.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Rate'BT_6Longcao_Sur:BTComposite_Rate_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Longcao/Level_Survival/BT_6Longcao_Sur.1"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_UseSkill",
+    "Name": "BTTask_UseSkill_6",
+    "Outer": "BT_6Longcao_Sur",
+    "Class": "UScriptClass'BTTask_UseSkill'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SkillId": 2,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_6Longcao_Sur'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Longcao/Level_Survival/BT_6Longcao_Sur.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_6Longcao_Sur:BTComposite_Selector_10'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Longcao/Level_Survival/BT_6Longcao_Sur.2"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_UseSkill",
+    "Name": "BTTask_UseSkill_7",
+    "Outer": "BT_6Longcao_Sur",
+    "Class": "UScriptClass'BTTask_UseSkill'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SkillId": 3,
+      "NodeName": "Skill3-Enter",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_6Longcao_Sur'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Longcao/Level_Survival/BT_6Longcao_Sur.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_6Longcao_Sur:BTComposite_Selector_2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Longcao/Level_Survival/BT_6Longcao_Sur.3"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_0",
+    "Outer": "BT_6Longcao_Sur",
+    "Class": "UScriptClass'BTTask_Wait'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "WaitTime": 2.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_6Longcao_Sur'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Longcao/Level_Survival/BT_6Longcao_Sur.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_6Longcao_Sur:BTComposite_Sequence_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Longcao/Level_Survival/BT_6Longcao_Sur.6"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_1",
+    "Outer": "BT_6Longcao_Sur",
+    "Class": "UScriptClass'BTTask_Wait'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "WaitTime": 0.1,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_6Longcao_Sur'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Longcao/Level_Survival/BT_6Longcao_Sur.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_6Longcao_Sur:BTComposite_Selector_9'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Longcao/Level_Survival/BT_6Longcao_Sur.4"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_2",
+    "Outer": "BT_6Longcao_Sur",
+    "Class": "UScriptClass'BTTask_Wait'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "WaitTime": 1.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_6Longcao_Sur'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Longcao/Level_Survival/BT_6Longcao_Sur.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_6Longcao_Sur:BTComposite_Sequence_10'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Longcao/Level_Survival/BT_6Longcao_Sur.7"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_3",
+    "Outer": "BT_6Longcao_Sur",
+    "Class": "UScriptClass'BTTask_Wait'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "WaitTime": 2.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_6Longcao_Sur'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Longcao/Level_Survival/BT_6Longcao_Sur.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_6Longcao_Sur:BTComposite_Sequence_9'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Longcao/Level_Survival/BT_6Longcao_Sur.14"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_4",
+    "Outer": "BT_6Longcao_Sur",
+    "Class": "UScriptClass'BTTask_Wait'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "WaitTime": 1.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_6Longcao_Sur'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Longcao/Level_Survival/BT_6Longcao_Sur.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_6Longcao_Sur:BTComposite_Sequence_4'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Longcao/Level_Survival/BT_6Longcao_Sur.12"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_5",
+    "Outer": "BT_6Longcao_Sur",
+    "Class": "UScriptClass'BTTask_Wait'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "WaitTime": 1.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_6Longcao_Sur'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Longcao/Level_Survival/BT_6Longcao_Sur.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_6Longcao_Sur:BTComposite_Sequence_5'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Longcao/Level_Survival/BT_6Longcao_Sur.13"
+      }
+    }
+  }
+]

@@ -1,0 +1,1303 @@
+[
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_BP_NPC",
+    "Outer": "BP_NPC_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "ByteProperty",
+        "Name": "K2Node_CustomEvent_EyeEnum",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "Enum": {
+          "ObjectName": "UserDefinedEnum'Enum_NPC_Exp_Eyes'",
+          "ObjectPath": "EM/Content/Asset/Char/Npc/Npc_Custom/Common/Expression/Enum_NPC_Exp_Eyes.0"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "K2Node_CustomEvent_Rate_1",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "StrProperty",
+        "Name": "CallFunc_GetEnumeratorUserFriendlyName_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 16
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "CallFunc_Conv_StringToName_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 12
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_GetDataTableRowFromName_OutRow",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "Struct": {
+          "ObjectName": "UserDefinedStruct'Struct_NPC_Exp'",
+          "ObjectPath": "EM/Content/Asset/Char/Npc/Npc_Custom/Common/Expression/Struct_NPC_Exp.0"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_GetDataTableRowFromName_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ByteProperty",
+        "Name": "K2Node_CustomEvent_MouthEnum",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "Enum": {
+          "ObjectName": "UserDefinedEnum'Enum_NPC_Exp_Mouth'",
+          "ObjectPath": "EM/Content/Asset/Char/Npc/Npc_Custom/Common/Expression/Enum_NPC_Exp_Mouth.0"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "K2Node_CustomEvent_Rate",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "StrProperty",
+        "Name": "CallFunc_GetEnumeratorUserFriendlyName_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 16
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "CallFunc_Conv_StringToName_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 12
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_GetDataTableRowFromName_OutRow_1",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "Struct": {
+          "ObjectName": "UserDefinedStruct'Struct_NPC_Exp'",
+          "ObjectPath": "EM/Content/Asset/Char/Npc/Npc_Custom/Common/Expression/Struct_NPC_Exp.0"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_GetDataTableRowFromName_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_Add_FloatFloat_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_Add_FloatFloat_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction | FUNC_HasDefaults"
+  },
+  {
+    "Type": "Function",
+    "Name": "Event_NPC_Mouth",
+    "Outer": "BP_NPC_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "ChildProperties": [
+      {
+        "Type": "ByteProperty",
+        "Name": "MouthEnum",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "Enum": {
+          "ObjectName": "UserDefinedEnum'Enum_NPC_Exp_Mouth'",
+          "ObjectPath": "EM/Content/Asset/Char/Npc/Npc_Custom/Common/Expression/Enum_NPC_Exp_Mouth.0"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "Rate",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "Event_NPC_Blink",
+    "Outer": "BP_NPC_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "ChildProperties": [
+      {
+        "Type": "ByteProperty",
+        "Name": "EyeEnum",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "Enum": {
+          "ObjectName": "UserDefinedEnum'Enum_NPC_Exp_Eyes'",
+          "ObjectPath": "EM/Content/Asset/Char/Npc/Npc_Custom/Common/Expression/Enum_NPC_Exp_Eyes.0"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "Rate",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "ReceiveBeginPlay",
+    "Outer": "BP_NPC_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "SuperStruct": {
+      "ObjectName": "Function'Actor:ReceiveBeginPlay'",
+      "ObjectPath": "/Script/Engine"
+    },
+    "FunctionFlags": "FUNC_Event | FUNC_Protected | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "MouthTimeline__UpdateFunc",
+    "Outer": "BP_NPC_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "MouthTimeline__FinishedFunc",
+    "Outer": "BP_NPC_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "EyeTimeline__UpdateFunc",
+    "Outer": "BP_NPC_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "EyeTimeline__FinishedFunc",
+    "Outer": "BP_NPC_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "UserConstructionScript",
+    "Outer": "BP_NPC_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "SuperStruct": {
+      "ObjectName": "Function'Actor:UserConstructionScript'",
+      "ObjectPath": "/Script/Engine"
+    },
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "PlayDefaultFacialInEditor",
+    "Outer": "BP_NPC_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "ChildProperties": [
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_WithEditor_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_LoadAsset_Blocking_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Object'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_DynamicCast_As_____",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'AnimMontage'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_DynamicCast_bSuccess",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_PlayAnimMontage_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "GetModuleName",
+    "Outer": "BP_NPC_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "ChildProperties": [
+      {
+        "Type": "StrProperty",
+        "Name": "ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "Parm | OutParm | ReturnParm"
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_HasOutParms | FUNC_BlueprintCallable | FUNC_BlueprintEvent | FUNC_Const"
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BP_NPC_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Timelines": [
+        {
+          "ObjectName": "TimelineTemplate'BP_NPC_C:EyeTimeline_Template'",
+          "ObjectPath": "EM/Content/BluePrints/Char/BP_NPC/BP_NPC.48"
+        },
+        {
+          "ObjectName": "TimelineTemplate'BP_NPC_C:MouthTimeline_Template'",
+          "ObjectPath": "EM/Content/BluePrints/Char/BP_NPC/BP_NPC.49"
+        }
+      ],
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BP_NPC_C:SimpleConstructionScript_0'",
+        "ObjectPath": "EM/Content/BluePrints/Char/BP_NPC/BP_NPC.46"
+      },
+      "UberGraphFunction": {
+        "ObjectName": "Function'BP_NPC_C:ExecuteUbergraph_BP_NPC'",
+        "ObjectPath": "EM/Content/BluePrints/Char/BP_NPC/BP_NPC.0"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'NpcCharacter'",
+      "ObjectPath": "/Script/EM"
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'BP_NPC_C:GetModuleName'",
+        "ObjectPath": "EM/Content/BluePrints/Char/BP_NPC/BP_NPC.10"
+      },
+      {
+        "ObjectName": "Function'BP_NPC_C:PlayDefaultFacialInEditor'",
+        "ObjectPath": "EM/Content/BluePrints/Char/BP_NPC/BP_NPC.9"
+      },
+      {
+        "ObjectName": "Function'BP_NPC_C:UserConstructionScript'",
+        "ObjectPath": "EM/Content/BluePrints/Char/BP_NPC/BP_NPC.8"
+      },
+      {
+        "ObjectName": "Function'BP_NPC_C:EyeTimeline__FinishedFunc'",
+        "ObjectPath": "EM/Content/BluePrints/Char/BP_NPC/BP_NPC.7"
+      },
+      {
+        "ObjectName": "Function'BP_NPC_C:EyeTimeline__UpdateFunc'",
+        "ObjectPath": "EM/Content/BluePrints/Char/BP_NPC/BP_NPC.6"
+      },
+      {
+        "ObjectName": "Function'BP_NPC_C:MouthTimeline__FinishedFunc'",
+        "ObjectPath": "EM/Content/BluePrints/Char/BP_NPC/BP_NPC.5"
+      },
+      {
+        "ObjectName": "Function'BP_NPC_C:MouthTimeline__UpdateFunc'",
+        "ObjectPath": "EM/Content/BluePrints/Char/BP_NPC/BP_NPC.4"
+      },
+      {
+        "ObjectName": "Function'BP_NPC_C:ReceiveBeginPlay'",
+        "ObjectPath": "EM/Content/BluePrints/Char/BP_NPC/BP_NPC.3"
+      },
+      {
+        "ObjectName": "Function'BP_NPC_C:Event_NPC_Blink'",
+        "ObjectPath": "EM/Content/BluePrints/Char/BP_NPC/BP_NPC.2"
+      },
+      {
+        "ObjectName": "Function'BP_NPC_C:Event_NPC_Mouth'",
+        "ObjectPath": "EM/Content/BluePrints/Char/BP_NPC/BP_NPC.1"
+      },
+      {
+        "ObjectName": "Function'BP_NPC_C:ExecuteUbergraph_BP_NPC'",
+        "ObjectPath": "EM/Content/BluePrints/Char/BP_NPC/BP_NPC.0"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient",
+        "Struct": {
+          "ObjectName": "ScriptStruct'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "EMLipSync",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'EMLipSyncComponent'",
+          "ObjectPath": "/Script/EMLipSync"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "MonsterLookAt",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'MonsterLookAtComponent'",
+          "ObjectPath": "/Script/EM"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "MouthTimeline_Mouth_3FEA0CFC4971B618EDBBBFB655CC70AA",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4
+      },
+      {
+        "Type": "ByteProperty",
+        "Name": "MouthTimeline__Direction_3FEA0CFC4971B618EDBBBFB655CC70AA",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "Enum": {
+          "ObjectName": "Enum'ETimelineDirection'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "MouthTimeline",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'TimelineComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "EyeTimeline_Eyes_75B84520470B47CD64FC9EA3D25A131F",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4
+      },
+      {
+        "Type": "ByteProperty",
+        "Name": "EyeTimeline__Direction_75B84520470B47CD64FC9EA3D25A131F",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "Enum": {
+          "ObjectName": "Enum'ETimelineDirection'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "EyeTimeline",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'TimelineComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "HeadWidgetComponent",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance | InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'ActorComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_BP_NPC": {
+        "ObjectName": "Function'BP_NPC_C:ExecuteUbergraph_BP_NPC'",
+        "ObjectPath": "EM/Content/BluePrints/Char/BP_NPC/BP_NPC.0"
+      },
+      "Event_NPC_Mouth": {
+        "ObjectName": "Function'BP_NPC_C:Event_NPC_Mouth'",
+        "ObjectPath": "EM/Content/BluePrints/Char/BP_NPC/BP_NPC.1"
+      },
+      "Event_NPC_Blink": {
+        "ObjectName": "Function'BP_NPC_C:Event_NPC_Blink'",
+        "ObjectPath": "EM/Content/BluePrints/Char/BP_NPC/BP_NPC.2"
+      },
+      "ReceiveBeginPlay": {
+        "ObjectName": "Function'BP_NPC_C:ReceiveBeginPlay'",
+        "ObjectPath": "EM/Content/BluePrints/Char/BP_NPC/BP_NPC.3"
+      },
+      "MouthTimeline__UpdateFunc": {
+        "ObjectName": "Function'BP_NPC_C:MouthTimeline__UpdateFunc'",
+        "ObjectPath": "EM/Content/BluePrints/Char/BP_NPC/BP_NPC.4"
+      },
+      "MouthTimeline__FinishedFunc": {
+        "ObjectName": "Function'BP_NPC_C:MouthTimeline__FinishedFunc'",
+        "ObjectPath": "EM/Content/BluePrints/Char/BP_NPC/BP_NPC.5"
+      },
+      "EyeTimeline__UpdateFunc": {
+        "ObjectName": "Function'BP_NPC_C:EyeTimeline__UpdateFunc'",
+        "ObjectPath": "EM/Content/BluePrints/Char/BP_NPC/BP_NPC.6"
+      },
+      "EyeTimeline__FinishedFunc": {
+        "ObjectName": "Function'BP_NPC_C:EyeTimeline__FinishedFunc'",
+        "ObjectPath": "EM/Content/BluePrints/Char/BP_NPC/BP_NPC.7"
+      },
+      "UserConstructionScript": {
+        "ObjectName": "Function'BP_NPC_C:UserConstructionScript'",
+        "ObjectPath": "EM/Content/BluePrints/Char/BP_NPC/BP_NPC.8"
+      },
+      "PlayDefaultFacialInEditor": {
+        "ObjectName": "Function'BP_NPC_C:PlayDefaultFacialInEditor'",
+        "ObjectPath": "EM/Content/BluePrints/Char/BP_NPC/BP_NPC.9"
+      },
+      "GetModuleName": {
+        "ObjectName": "Function'BP_NPC_C:GetModuleName'",
+        "ObjectPath": "EM/Content/BluePrints/Char/BP_NPC/BP_NPC.10"
+      }
+    },
+    "ClassFlags": "CLASS_Config | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Game",
+    "Interfaces": [
+      {
+        "Class": {
+          "ObjectName": "Class'UnLuaInterface'",
+          "ObjectPath": "/Script/UnLua"
+        },
+        "PointerOffset": 0,
+        "bImplementedByK2": true
+      }
+    ],
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BP_NPC_C'Default__BP_NPC_C'",
+      "ObjectPath": "EM/Content/BluePrints/Char/BP_NPC/BP_NPC.12"
+    }
+  },
+  {
+    "Type": "BP_NPC_C",
+    "Name": "Default__BP_NPC_C",
+    "Class": "BlueprintGeneratedClass'EM/Content/BluePrints/Char/BP_NPC/BP_NPC.BP_NPC_C'",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "UberGraphFrame": {},
+      "ExpressionComponent": {
+        "ObjectName": "BP_ExpressionComponent_C'Default__BP_NPC_C:BP_ExpressionComponent'",
+        "ObjectPath": "EM/Content/BluePrints/Char/BP_NPC/BP_NPC.17"
+      },
+      "bClearFlag": true,
+      "CommonUIConfirmID": 100004,
+      "InteractiveDistance": 200.0,
+      "NameDisplayDistance": 300.0,
+      "BubbleDisplayDistance": 500.0,
+      "EQSTestingComponent": {
+        "ObjectName": "EQSTestingComponent'Default__BP_NPC_C:EQSTestingComponent'",
+        "ObjectPath": "EM/Content/BluePrints/Char/BP_NPC/BP_NPC.32"
+      },
+      "NpcOptimizationComponent": {
+        "ObjectName": "NpcOptimizationComponent'Default__BP_NPC_C:NpcOptimizationComponent'",
+        "ObjectPath": "EM/Content/BluePrints/Char/BP_NPC/BP_NPC.40"
+      },
+      "MonMoveComponent": {
+        "ObjectName": "MonMoveLogicComponent'Default__BP_NPC_C:MonMoveLogicComponent'",
+        "ObjectPath": "EM/Content/BluePrints/Char/BP_NPC/BP_NPC.33"
+      },
+      "NpcSignificanceComponent": {
+        "ObjectName": "NpcSignificanceComponent'Default__BP_NPC_C:NpcSignificanceComponent'",
+        "ObjectPath": "EM/Content/BluePrints/Char/BP_NPC/BP_NPC.41"
+      },
+      "BudgetAllocComponent": {
+        "ObjectName": "AIBudgetAllocateComponent'Default__BP_NPC_C:BudgetAllocComponent'",
+        "ObjectPath": "EM/Content/BluePrints/Char/BP_NPC/BP_NPC.13"
+      },
+      "CharRenderBoxComponent": {
+        "ObjectName": "CharRenderBoxComponent'Default__BP_NPC_C:CharRenderBoxComponent'",
+        "ObjectPath": "EM/Content/BluePrints/Char/BP_NPC/BP_NPC.26"
+      },
+      "MonRotateProcessComponent": {
+        "ObjectName": "MonRotateProcessComponent'Default__BP_NPC_C:MonRotateProcessComponent'",
+        "ObjectPath": "EM/Content/BluePrints/Char/BP_NPC/BP_NPC.34"
+      },
+      "bEnableRenderBoxOptimization": true,
+      "JumpWordComponent": {
+        "ObjectName": "BP_JumpWordComponent_C'Default__BP_NPC_C:BP_JumpWordComponent'",
+        "ObjectPath": "EM/Content/BluePrints/Char/BP_NPC/BP_NPC.20"
+      },
+      "CharacterFashion": {
+        "ObjectName": "BP_CharacterFashion_C'Default__BP_NPC_C:BP_CharacterFashion'",
+        "ObjectPath": "EM/Content/BluePrints/Char/BP_NPC/BP_NPC.16"
+      },
+      "BattleEvent": {
+        "ObjectName": "BP_BattleEventComponent_C'Default__BP_NPC_C:BP_BattleEventComponent'",
+        "ObjectPath": "EM/Content/BluePrints/Char/BP_NPC/BP_NPC.14"
+      },
+      "BuffManager": {
+        "ObjectName": "BP_BuffManager_C'Default__BP_NPC_C:BP_BuffManager'",
+        "ObjectPath": "EM/Content/BluePrints/Char/BP_NPC/BP_NPC.15"
+      },
+      "FXComponent": {
+        "ObjectName": "BP_FXComponent_C'Default__BP_NPC_C:BP_FXComponent'",
+        "ObjectPath": "EM/Content/BluePrints/Char/BP_NPC/BP_NPC.18"
+      },
+      "HollowSphereComponent": {
+        "ObjectName": "BP_HollowSphereComponent_C'Default__BP_NPC_C:BP_HollowSphereComponent'",
+        "ObjectPath": "EM/Content/BluePrints/Char/BP_NPC/BP_NPC.19"
+      },
+      "PartsMesh": {
+        "ObjectName": "SkeletalMeshComponent'Default__BP_NPC_C:PartsMesh'",
+        "ObjectPath": "EM/Content/BluePrints/Char/BP_NPC/BP_NPC.47"
+      },
+      "bEnableRootMotionOptimizations": true,
+      "SkillsComponent": {
+        "ObjectName": "BP_SkillsComponent_C'Default__BP_NPC_C:BP_SkillsComponent'",
+        "ObjectPath": "EM/Content/BluePrints/Char/BP_NPC/BP_NPC.21"
+      },
+      "CharFSMComp": {
+        "ObjectName": "CharacterFSM'Default__BP_NPC_C:CharFSMComp'",
+        "ObjectPath": "EM/Content/BluePrints/Char/BP_NPC/BP_NPC.25"
+      },
+      "AutoSyncProp": {
+        "ObjectName": "CharacterAutoSyncProp'Default__BP_NPC_C:AutoSyncProp'",
+        "ObjectPath": "EM/Content/BluePrints/Char/BP_NPC/BP_NPC.24"
+      },
+      "MotionWarpingComponent": {
+        "ObjectName": "MotionWarpingComponent'Default__BP_NPC_C:MotionWarpingComponent'",
+        "ObjectPath": "EM/Content/BluePrints/Char/BP_NPC/BP_NPC.37"
+      },
+      "CameraCollisionFade": true,
+      "EMComponents": [
+        {
+          "Key": "CharFSMComp",
+          "Value": {
+            "ObjectName": "CharacterFSM'Default__BP_NPC_C:CharFSMComp'",
+            "ObjectPath": "EM/Content/BluePrints/Char/BP_NPC/BP_NPC.25"
+          }
+        },
+        {
+          "Key": "CharacterName",
+          "Value": null
+        }
+      ],
+      "MoveRequestComponent": {
+        "ObjectName": "MoveRequestComponent'Default__BP_NPC_C:MoveRequestComponent'",
+        "ObjectPath": "EM/Content/BluePrints/Char/BP_NPC/BP_NPC.38"
+      },
+      "Mesh": {
+        "ObjectName": "MonSkeletalMeshComponent'Default__BP_NPC_C:CharacterMesh0'",
+        "ObjectPath": "EM/Content/BluePrints/Char/BP_NPC/BP_NPC.35"
+      },
+      "CharacterMovement": {
+        "ObjectName": "NpcMovementComponent'Default__BP_NPC_C:CharMoveComp'",
+        "ObjectPath": "EM/Content/BluePrints/Char/BP_NPC/BP_NPC.39"
+      },
+      "CapsuleComponent": {
+        "ObjectName": "EMCapsuleComponent'Default__BP_NPC_C:CollisionCylinder'",
+        "ObjectPath": "EM/Content/BluePrints/Char/BP_NPC/BP_NPC.30"
+      },
+      "AIControllerClass": {
+        "ObjectName": "BlueprintGeneratedClass'BP_EMAIController_C'",
+        "ObjectPath": "EM/Content/BluePrints/AI/BP_EMAIController.2"
+      },
+      "RootComponent": {
+        "ObjectName": "EMCapsuleComponent'Default__BP_NPC_C:CollisionCylinder'",
+        "ObjectPath": "EM/Content/BluePrints/Char/BP_NPC/BP_NPC.30"
+      }
+    }
+  },
+  {
+    "Type": "AIBudgetAllocateComponent",
+    "Name": "BudgetAllocComponent",
+    "Outer": "Default__BP_NPC_C",
+    "Class": "UScriptClass'AIBudgetAllocateComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "BP_BattleEventComponent_C",
+    "Name": "BP_BattleEventComponent",
+    "Outer": "Default__BP_NPC_C",
+    "Class": "BlueprintGeneratedClass'EM/Content/BluePrints/Combat/BP_BattleEventComponent.BP_BattleEventComponent_C'",
+    "Flags": "RF_Public | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "BP_BuffManager_C",
+    "Name": "BP_BuffManager",
+    "Outer": "Default__BP_NPC_C",
+    "Class": "BlueprintGeneratedClass'EM/Content/BluePrints/Combat/Buff/BP_BuffManager.BP_BuffManager_C'",
+    "Flags": "RF_Public | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "BP_CharacterFashion_C",
+    "Name": "BP_CharacterFashion",
+    "Outer": "Default__BP_NPC_C",
+    "Class": "BlueprintGeneratedClass'EM/Content/BluePrints/Char/BP_CharacterFashion.BP_CharacterFashion_C'",
+    "Flags": "RF_Public | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "BP_ExpressionComponent_C",
+    "Name": "BP_ExpressionComponent",
+    "Outer": "Default__BP_NPC_C",
+    "Class": "BlueprintGeneratedClass'EM/Content/BluePrints/Char/BP_ExpressionComponent.BP_ExpressionComponent_C'",
+    "Flags": "RF_Public | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "BP_FXComponent_C",
+    "Name": "BP_FXComponent",
+    "Outer": "Default__BP_NPC_C",
+    "Class": "BlueprintGeneratedClass'EM/Content/BluePrints/Char/BP_FXComponent.BP_FXComponent_C'",
+    "Flags": "RF_Public | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "BP_HollowSphereComponent_C",
+    "Name": "BP_HollowSphereComponent",
+    "Outer": "Default__BP_NPC_C",
+    "Class": "BlueprintGeneratedClass'EM/Content/BluePrints/Combat/BP_HollowSphereComponent.BP_HollowSphereComponent_C'",
+    "Flags": "RF_Public | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "OnComponentBeginOverlap": {
+        "InvocationList": [
+          {
+            "Object": {
+              "ObjectName": "BP_HollowSphereComponent_C'Default__BP_NPC_C:BP_HollowSphereComponent'",
+              "ObjectPath": "EM/Content/BluePrints/Char/BP_NPC/BP_NPC.19"
+            },
+            "FunctionName": "OnBeginOverlap"
+          }
+        ]
+      },
+      "OnComponentEndOverlap": {
+        "InvocationList": [
+          {
+            "Object": {
+              "ObjectName": "BP_HollowSphereComponent_C'Default__BP_NPC_C:BP_HollowSphereComponent'",
+              "ObjectPath": "EM/Content/BluePrints/Char/BP_NPC/BP_NPC.19"
+            },
+            "FunctionName": "OnEndOverlap"
+          }
+        ]
+      },
+      "AttachParent": {
+        "ObjectName": "EMCapsuleComponent'Default__BP_NPC_C:CollisionCylinder'",
+        "ObjectPath": "EM/Content/BluePrints/Char/BP_NPC/BP_NPC.30"
+      }
+    }
+  },
+  {
+    "Type": "BP_JumpWordComponent_C",
+    "Name": "BP_JumpWordComponent",
+    "Outer": "Default__BP_NPC_C",
+    "Class": "BlueprintGeneratedClass'EM/Content/BluePrints/Char/BP_JumpWordComponent.BP_JumpWordComponent_C'",
+    "Flags": "RF_Public | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "BP_SkillsComponent_C",
+    "Name": "BP_SkillsComponent",
+    "Outer": "Default__BP_NPC_C",
+    "Class": "BlueprintGeneratedClass'EM/Content/BluePrints/Combat/Skill/BP_SkillsComponent.BP_SkillsComponent_C'",
+    "Flags": "RF_Public | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "BP_TalkActionComponent_C",
+    "Name": "BP_TalkActionComponent",
+    "Outer": "Default__BP_NPC_C",
+    "Class": "BlueprintGeneratedClass'EM/Content/BluePrints/Char/BP_TalkActionComponent.BP_TalkActionComponent_C'",
+    "Template": {
+      "ObjectName": "BP_TalkActionComponent_C'Default__BP_TalkActionComponent_C'",
+      "ObjectPath": "EM/Content/BluePrints/Char/BP_TalkActionComponent.3"
+    },
+    "Flags": "RF_Public | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "BP_TalkAIControlComponent_C",
+    "Name": "BP_TalkAIControlComponent",
+    "Outer": "Default__BP_NPC_C",
+    "Class": "BlueprintGeneratedClass'EM/Content/BluePrints/Story/Talk/TalkControlComponent/BP_TalkAIControlComponent.BP_TalkAIControlComponent_C'",
+    "Template": {
+      "ObjectName": "BP_TalkAIControlComponent_C'Default__BP_TalkAIControlComponent_C'",
+      "ObjectPath": "EM/Content/BluePrints/Story/Talk/TalkControlComponent/BP_TalkAIControlComponent.1"
+    },
+    "Flags": "RF_Public | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "CharacterAutoSyncProp",
+    "Name": "AutoSyncProp",
+    "Outer": "Default__BP_NPC_C",
+    "Class": "UScriptClass'CharacterAutoSyncProp'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "CharacterFSM",
+    "Name": "CharFSMComp",
+    "Outer": "Default__BP_NPC_C",
+    "Class": "UScriptClass'CharacterFSM'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "CharRenderBoxComponent",
+    "Name": "CharRenderBoxComponent",
+    "Outer": "Default__BP_NPC_C",
+    "Class": "UScriptClass'CharRenderBoxComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "EMCapsuleComponent'Default__BP_NPC_C:CollisionCylinder'",
+        "ObjectPath": "EM/Content/BluePrints/Char/BP_NPC/BP_NPC.30"
+      }
+    }
+  },
+  {
+    "Type": "CurveFloat",
+    "Name": "CurveFloat_0",
+    "Outer": "BP_NPC_C",
+    "Class": "UScriptClass'CurveFloat'",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "FloatCurve": {
+        "Keys": [
+          {
+            "InterpMode": "RCIM_Linear",
+            "TangentMode": "RCTM_Auto",
+            "TangentWeightMode": "RCTWM_WeightedNone",
+            "Time": 0.0,
+            "Value": 0.0,
+            "ArriveTangent": 0.0,
+            "ArriveTangentWeight": 0.0,
+            "LeaveTangent": 0.0,
+            "LeaveTangentWeight": 0.0
+          },
+          {
+            "InterpMode": "RCIM_Linear",
+            "TangentMode": "RCTM_Auto",
+            "TangentWeightMode": "RCTWM_WeightedNone",
+            "Time": 0.03,
+            "Value": 1.0,
+            "ArriveTangent": 0.0,
+            "ArriveTangentWeight": 0.0,
+            "LeaveTangent": 0.0,
+            "LeaveTangentWeight": 0.0
+          },
+          {
+            "InterpMode": "RCIM_Linear",
+            "TangentMode": "RCTM_Auto",
+            "TangentWeightMode": "RCTWM_WeightedNone",
+            "Time": 0.05,
+            "Value": 2.0,
+            "ArriveTangent": 0.0,
+            "ArriveTangentWeight": 0.0,
+            "LeaveTangent": 0.0,
+            "LeaveTangentWeight": 0.0
+          },
+          {
+            "InterpMode": "RCIM_Linear",
+            "TangentMode": "RCTM_Auto",
+            "TangentWeightMode": "RCTWM_WeightedNone",
+            "Time": 0.13,
+            "Value": 2.0,
+            "ArriveTangent": 0.0,
+            "ArriveTangentWeight": 0.0,
+            "LeaveTangent": 0.0,
+            "LeaveTangentWeight": 0.0
+          },
+          {
+            "InterpMode": "RCIM_Linear",
+            "TangentMode": "RCTM_Auto",
+            "TangentWeightMode": "RCTWM_WeightedNone",
+            "Time": 0.2,
+            "Value": 0.0,
+            "ArriveTangent": 0.0,
+            "ArriveTangentWeight": 0.0,
+            "LeaveTangent": 0.0,
+            "LeaveTangentWeight": 0.0
+          }
+        ]
+      }
+    }
+  },
+  {
+    "Type": "CurveFloat",
+    "Name": "CurveFloat_0_1",
+    "Outer": "BP_NPC_C",
+    "Class": "UScriptClass'CurveFloat'",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "FloatCurve": {
+        "Keys": [
+          {
+            "InterpMode": "RCIM_Linear",
+            "TangentMode": "RCTM_Auto",
+            "TangentWeightMode": "RCTWM_WeightedNone",
+            "Time": 0.0,
+            "Value": 0.0,
+            "ArriveTangent": 0.0,
+            "ArriveTangentWeight": 0.0,
+            "LeaveTangent": 0.0,
+            "LeaveTangentWeight": 0.0
+          },
+          {
+            "InterpMode": "RCIM_Linear",
+            "TangentMode": "RCTM_Auto",
+            "TangentWeightMode": "RCTWM_WeightedNone",
+            "Time": 0.03,
+            "Value": 1.0,
+            "ArriveTangent": 0.0,
+            "ArriveTangentWeight": 0.0,
+            "LeaveTangent": 0.0,
+            "LeaveTangentWeight": 0.0
+          },
+          {
+            "InterpMode": "RCIM_Linear",
+            "TangentMode": "RCTM_Auto",
+            "TangentWeightMode": "RCTWM_WeightedNone",
+            "Time": 0.06,
+            "Value": 2.0,
+            "ArriveTangent": 0.0,
+            "ArriveTangentWeight": 0.0,
+            "LeaveTangent": 0.0,
+            "LeaveTangentWeight": 0.0
+          },
+          {
+            "InterpMode": "RCIM_Linear",
+            "TangentMode": "RCTM_Auto",
+            "TangentWeightMode": "RCTWM_WeightedNone",
+            "Time": 0.14,
+            "Value": 2.0,
+            "ArriveTangent": 0.0,
+            "ArriveTangentWeight": 0.0,
+            "LeaveTangent": 0.0,
+            "LeaveTangentWeight": 0.0
+          },
+          {
+            "InterpMode": "RCIM_Linear",
+            "TangentMode": "RCTM_Auto",
+            "TangentWeightMode": "RCTWM_WeightedNone",
+            "Time": 0.2,
+            "Value": 0.0,
+            "ArriveTangent": 0.0,
+            "ArriveTangentWeight": 0.0,
+            "LeaveTangent": 0.0,
+            "LeaveTangentWeight": 0.0
+          }
+        ]
+      }
+    }
+  },
+  {
+    "Type": "DestructableBodyMgr",
+    "Name": "DestructableBodyMgr",
+    "Outer": "Default__BP_NPC_C",
+    "Class": "UScriptClass'DestructableBodyMgr'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "EMCapsuleComponent",
+    "Name": "CollisionCylinder",
+    "Outer": "Default__BP_NPC_C",
+    "Class": "UScriptClass'EMCapsuleComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "CapsuleRadius": 25.0,
+      "BodyInstance": {
+        "ObjectType": "ECC_GameTraceChannel6",
+        "CollisionProfileName": "Monster",
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "Visibility",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Camera",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Destructible",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "TraceExceptChar",
+              "Response": "ECR_Ignore"
+            }
+          ]
+        }
+      }
+    }
+  },
+  {
+    "Type": "EMLipSyncComponent",
+    "Name": "EMLipSync_GEN_VARIABLE",
+    "Outer": "BP_NPC_C",
+    "Class": "UScriptClass'EMLipSyncComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "BlendInfos": [
+        {
+          "PhonemeName": "Mouth_A",
+          "EffectRate": 1.0
+        },
+        {
+          "PhonemeName": "Mouth_E",
+          "EffectRate": 1.0
+        },
+        {
+          "PhonemeName": "Mouth_I",
+          "EffectRate": 1.0
+        },
+        {
+          "PhonemeName": "Mouth_O",
+          "EffectRate": 1.0
+        },
+        {
+          "PhonemeName": "Mouth_U",
+          "EffectRate": 1.0
+        }
+      ]
+    }
+  },
+  {
+    "Type": "EQSTestingComponent",
+    "Name": "EQSTestingComponent",
+    "Outer": "Default__BP_NPC_C",
+    "Class": "UScriptClass'EQSTestingComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "MonMoveLogicComponent",
+    "Name": "MonMoveLogicComponent",
+    "Outer": "Default__BP_NPC_C",
+    "Class": "UScriptClass'MonMoveLogicComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "MonRotateProcessComponent",
+    "Name": "MonRotateProcessComponent",
+    "Outer": "Default__BP_NPC_C",
+    "Class": "UScriptClass'MonRotateProcessComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "MonSkeletalMeshComponent",
+    "Name": "CharacterMesh0",
+    "Outer": "Default__BP_NPC_C",
+    "Class": "UScriptClass'MonSkeletalMeshComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "bAllowCreateMeshPhysState": false,
+      "bReceivesDecals": false,
+      "bCastInsetShadow": true,
+      "AttachParent": {
+        "ObjectName": "EMCapsuleComponent'Default__BP_NPC_C:CollisionCylinder'",
+        "ObjectPath": "EM/Content/BluePrints/Char/BP_NPC/BP_NPC.30"
+      },
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": -88.0
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": -90.0,
+        "Roll": 0.0
+      }
+    }
+  },
+  {
+    "Type": "MonsterLookAtComponent",
+    "Name": "MonsterLookAt_GEN_VARIABLE",
+    "Outer": "BP_NPC_C",
+    "Class": "UScriptClass'MonsterLookAtComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "MotionWarpingComponent",
+    "Name": "MotionWarpingComponent",
+    "Outer": "Default__BP_NPC_C",
+    "Class": "UScriptClass'MotionWarpingComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "MoveRequestComponent",
+    "Name": "MoveRequestComponent",
+    "Outer": "Default__BP_NPC_C",
+    "Class": "UScriptClass'MoveRequestComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "NpcMovementComponent",
+    "Name": "CharMoveComp",
+    "Outer": "Default__BP_NPC_C",
+    "Class": "UScriptClass'NpcMovementComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "PerStepDownHeight": 0.0,
+      "PerStepUpHeight": 45.0,
+      "FloorAdjustInterp": 0.0
+    }
+  },
+  {
+    "Type": "NpcOptimizationComponent",
+    "Name": "NpcOptimizationComponent",
+    "Outer": "Default__BP_NPC_C",
+    "Class": "UScriptClass'NpcOptimizationComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "NpcSignificanceComponent",
+    "Name": "NpcSignificanceComponent",
+    "Outer": "Default__BP_NPC_C",
+    "Class": "UScriptClass'NpcSignificanceComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Outer": "BP_NPC_C",
+    "Class": "UScriptClass'SceneComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BP_NPC_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "EM/Content/BluePrints/Char/BP_NPC/BP_NPC.42"
+      },
+      "VariableGuid": "0A44F295-4741E8C5-C44E0C95-B5B84C59",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_2",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'MonsterLookAtComponent'",
+        "ObjectPath": "/Script/EM"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "MonsterLookAtComponent'BP_NPC_C:MonsterLookAt_GEN_VARIABLE'",
+        "ObjectPath": "EM/Content/BluePrints/Char/BP_NPC/BP_NPC.36"
+      },
+      "VariableGuid": "F9C0508C-41332837-34E856AA-0B4E7F9A",
+      "InternalVariableName": "MonsterLookAt"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_3",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'EMLipSyncComponent'",
+        "ObjectPath": "/Script/EMLipSync"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "EMLipSyncComponent'BP_NPC_C:EMLipSync_GEN_VARIABLE'",
+        "ObjectPath": "EM/Content/BluePrints/Char/BP_NPC/BP_NPC.31"
+      },
+      "VariableGuid": "8EF540CE-43E904FD-19AE7EB8-06F2E23A",
+      "InternalVariableName": "EMLipSync"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Outer": "BP_NPC_C",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_NPC_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "EM/Content/BluePrints/Char/BP_NPC/BP_NPC.44"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_NPC_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectPath": "EM/Content/BluePrints/Char/BP_NPC/BP_NPC.45"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_NPC_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "EM/Content/BluePrints/Char/BP_NPC/BP_NPC.44"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_NPC_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectPath": "EM/Content/BluePrints/Char/BP_NPC/BP_NPC.45"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BP_NPC_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "EM/Content/BluePrints/Char/BP_NPC/BP_NPC.43"
+      }
+    }
+  },
+  {
+    "Type": "SkeletalMeshComponent",
+    "Name": "PartsMesh",
+    "Outer": "Default__BP_NPC_C",
+    "Class": "UScriptClass'SkeletalMeshComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "MasterPoseComponent": {
+        "ObjectName": "MonSkeletalMeshComponent'Default__BP_NPC_C:CharacterMesh0'",
+        "ObjectPath": "EM/Content/BluePrints/Char/BP_NPC/BP_NPC.35"
+      },
+      "VisibilityBasedAnimTickOption": "EVisibilityBasedAnimTickOption::AlwaysTickPose",
+      "bCastInsetShadow": true,
+      "AttachParent": {
+        "ObjectName": "MonSkeletalMeshComponent'Default__BP_NPC_C:CharacterMesh0'",
+        "ObjectPath": "EM/Content/BluePrints/Char/BP_NPC/BP_NPC.35"
+      }
+    }
+  },
+  {
+    "Type": "TimelineTemplate",
+    "Name": "EyeTimeline_Template",
+    "Outer": "BP_NPC_C",
+    "Class": "UScriptClass'TimelineTemplate'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TimelineLength": 1.0,
+      "FloatTracks": [
+        {
+          "CurveFloat": {
+            "ObjectName": "CurveFloat'BP_NPC_C:CurveFloat_0'",
+            "ObjectPath": "EM/Content/BluePrints/Char/BP_NPC/BP_NPC.27"
+          },
+          "PropertyName": "EyeTimeline_Eyes_75B84520470B47CD64FC9EA3D25A131F",
+          "TrackName": "Eyes",
+          "bIsExternalCurve": false
+        }
+      ],
+      "TimelineGuid": "75B84520-470B47CD-64FC9EA3-D25A131F",
+      "VariableName": "EyeTimeline",
+      "DirectionPropertyName": "EyeTimeline__Direction_75B84520470B47CD64FC9EA3D25A131F",
+      "UpdateFunctionName": "EyeTimeline__UpdateFunc",
+      "FinishedFunctionName": "EyeTimeline__FinishedFunc"
+    }
+  },
+  {
+    "Type": "TimelineTemplate",
+    "Name": "MouthTimeline_Template",
+    "Outer": "BP_NPC_C",
+    "Class": "UScriptClass'TimelineTemplate'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TimelineLength": 1.0,
+      "FloatTracks": [
+        {
+          "CurveFloat": {
+            "ObjectName": "CurveFloat'BP_NPC_C:CurveFloat_0_1'",
+            "ObjectPath": "EM/Content/BluePrints/Char/BP_NPC/BP_NPC.28"
+          },
+          "PropertyName": "MouthTimeline_Mouth_3FEA0CFC4971B618EDBBBFB655CC70AA",
+          "TrackName": "Mouth",
+          "bIsExternalCurve": false
+        }
+      ],
+      "TimelineGuid": "3FEA0CFC-4971B618-EDBBBFB6-55CC70AA",
+      "VariableName": "MouthTimeline",
+      "DirectionPropertyName": "MouthTimeline__Direction_3FEA0CFC4971B618EDBBBFB655CC70AA",
+      "UpdateFunctionName": "MouthTimeline__UpdateFunc",
+      "FinishedFunctionName": "MouthTimeline__FinishedFunc"
+    }
+  }
+]

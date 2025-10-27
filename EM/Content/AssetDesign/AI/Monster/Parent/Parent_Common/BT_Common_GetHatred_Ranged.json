@@ -1,0 +1,360 @@
+[
+  {
+    "Type": "BehaviorTree",
+    "Name": "BT_Common_GetHatred_Ranged",
+    "Class": "UScriptClass'BehaviorTree'",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "RootNode": {
+        "ObjectName": "BTComposite_Selector'BT_Common_GetHatred_Ranged:BTComposite_Selector_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Parent/Parent_Common/BT_Common_GetHatred_Ranged.1"
+      },
+      "BlackboardAsset": {
+        "ObjectName": "BlackboardData'BB_Mon_Parent'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Parent/BB_Mon_Parent.0"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_1",
+    "Outer": "BT_Common_GetHatred_Ranged",
+    "Class": "UScriptClass'BTComposite_Selector'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_GetTeamLeaderTarget'BT_Common_GetHatred_Ranged:BTTask_GetTeamLeaderTarget_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Parent/Parent_Common/BT_Common_GetHatred_Ranged.11"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Common_GetHatred_Ranged:BTDecorator_Blackboard_0'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Parent/Parent_Common/BT_Common_GetHatred_Ranged.4"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_Common_GetHatred_Ranged:BTComposite_Sequence_6'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Parent/Parent_Common/BT_Common_GetHatred_Ranged.3"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_Common_GetHatred_Ranged:BTComposite_Sequence_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Parent/Parent_Common/BT_Common_GetHatred_Ranged.2"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_GetTarget'BT_Common_GetHatred_Ranged:BTTask_GetTarget_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Parent/Parent_Common/BT_Common_GetHatred_Ranged.9"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_GetTargetbyPreset'BT_Common_GetHatred_Ranged:BTTask_GetTargetbyPreset_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Parent/Parent_Common/BT_Common_GetHatred_Ranged.10"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Common_GetHatred_Ranged'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Parent/Parent_Common/BT_Common_GetHatred_Ranged.0"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_0",
+    "Outer": "BT_Common_GetHatred_Ranged",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_FilterTargetsByDis'BT_Common_GetHatred_Ranged:BTTask_FilterTargetsByDis_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Parent/Parent_Common/BT_Common_GetHatred_Ranged.5"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_FilterTargetsByLiving'BT_Common_GetHatred_Ranged:BTTask_FilterTargetsByLiving_1'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Parent/Parent_Common/BT_Common_GetHatred_Ranged.8"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_LastFilterTargets'BT_Common_GetHatred_Ranged:BTTask_LastFilterTargets_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Parent/Parent_Common/BT_Common_GetHatred_Ranged.12"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Common_GetHatred_Ranged'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Parent/Parent_Common/BT_Common_GetHatred_Ranged.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Common_GetHatred_Ranged:BTComposite_Selector_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Parent/Parent_Common/BT_Common_GetHatred_Ranged.1"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_6",
+    "Outer": "BT_Common_GetHatred_Ranged",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_FilterTargetsByDis'BT_Common_GetHatred_Ranged:BTTask_FilterTargetsByDis_1'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Parent/Parent_Common/BT_Common_GetHatred_Ranged.6"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_FilterTargetsByLiving'BT_Common_GetHatred_Ranged:BTTask_FilterTargetsByLiving_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Parent/Parent_Common/BT_Common_GetHatred_Ranged.7"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_LastFilterTargets'BT_Common_GetHatred_Ranged:BTTask_LastFilterTargets_3'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Parent/Parent_Common/BT_Common_GetHatred_Ranged.13"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Common_GetHatred_Ranged'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Parent/Parent_Common/BT_Common_GetHatred_Ranged.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Common_GetHatred_Ranged:BTComposite_Selector_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Parent/Parent_Common/BT_Common_GetHatred_Ranged.1"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_0",
+    "Outer": "BT_Common_GetHatred_Ranged",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "IntValue": 1,
+      "CachedDescription": "EliteTeamState 等于 已入队",
+      "BlackboardKey": {
+        "SelectedKeyName": "EliteTeamState"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Common_GetHatred_Ranged'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Parent/Parent_Common/BT_Common_GetHatred_Ranged.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Common_GetHatred_Ranged:BTComposite_Selector_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Parent/Parent_Common/BT_Common_GetHatred_Ranged.1"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_FilterTargetsByDis",
+    "Name": "BTTask_FilterTargetsByDis_0",
+    "Outer": "BT_Common_GetHatred_Ranged",
+    "Class": "UScriptClass'BTTask_FilterTargetsByDis'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "MaxDis": 3000.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Common_GetHatred_Ranged'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Parent/Parent_Common/BT_Common_GetHatred_Ranged.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Common_GetHatred_Ranged:BTComposite_Sequence_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Parent/Parent_Common/BT_Common_GetHatred_Ranged.2"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_FilterTargetsByDis",
+    "Name": "BTTask_FilterTargetsByDis_1",
+    "Outer": "BT_Common_GetHatred_Ranged",
+    "Class": "UScriptClass'BTTask_FilterTargetsByDis'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "MaxDisKey": {
+        "SelectedKeyName": "MaxAttackRange"
+      },
+      "MaxDis": 3000.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Common_GetHatred_Ranged'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Parent/Parent_Common/BT_Common_GetHatred_Ranged.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Common_GetHatred_Ranged:BTComposite_Sequence_6'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Parent/Parent_Common/BT_Common_GetHatred_Ranged.3"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_FilterTargetsByLiving",
+    "Name": "BTTask_FilterTargetsByLiving_0",
+    "Outer": "BT_Common_GetHatred_Ranged",
+    "Class": "UScriptClass'BTTask_FilterTargetsByLiving'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TypeOfFilterList": "ETypeOfFilterList::AfterFilter",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Common_GetHatred_Ranged'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Parent/Parent_Common/BT_Common_GetHatred_Ranged.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Common_GetHatred_Ranged:BTComposite_Sequence_6'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Parent/Parent_Common/BT_Common_GetHatred_Ranged.3"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_FilterTargetsByLiving",
+    "Name": "BTTask_FilterTargetsByLiving_1",
+    "Outer": "BT_Common_GetHatred_Ranged",
+    "Class": "UScriptClass'BTTask_FilterTargetsByLiving'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TypeOfFilterList": "ETypeOfFilterList::AfterFilter",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Common_GetHatred_Ranged'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Parent/Parent_Common/BT_Common_GetHatred_Ranged.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Common_GetHatred_Ranged:BTComposite_Sequence_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Parent/Parent_Common/BT_Common_GetHatred_Ranged.2"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_GetTarget",
+    "Name": "BTTask_GetTarget_0",
+    "Outer": "BT_Common_GetHatred_Ranged",
+    "Class": "UScriptClass'BTTask_GetTarget'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Common_GetHatred_Ranged'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Parent/Parent_Common/BT_Common_GetHatred_Ranged.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Common_GetHatred_Ranged:BTComposite_Selector_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Parent/Parent_Common/BT_Common_GetHatred_Ranged.1"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_GetTargetbyPreset",
+    "Name": "BTTask_GetTargetbyPreset_0",
+    "Outer": "BT_Common_GetHatred_Ranged",
+    "Class": "UScriptClass'BTTask_GetTargetbyPreset'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Common_GetHatred_Ranged'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Parent/Parent_Common/BT_Common_GetHatred_Ranged.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Common_GetHatred_Ranged:BTComposite_Selector_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Parent/Parent_Common/BT_Common_GetHatred_Ranged.1"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_GetTeamLeaderTarget",
+    "Name": "BTTask_GetTeamLeaderTarget_0",
+    "Outer": "BT_Common_GetHatred_Ranged",
+    "Class": "UScriptClass'BTTask_GetTeamLeaderTarget'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Common_GetHatred_Ranged'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Parent/Parent_Common/BT_Common_GetHatred_Ranged.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Common_GetHatred_Ranged:BTComposite_Selector_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Parent/Parent_Common/BT_Common_GetHatred_Ranged.1"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_LastFilterTargets",
+    "Name": "BTTask_LastFilterTargets_0",
+    "Outer": "BT_Common_GetHatred_Ranged",
+    "Class": "UScriptClass'BTTask_LastFilterTargets'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TypeOfFilter": "ELastTargetFilterType::TargetFilterMaxHatredValue",
+      "TypeOfFilterList": "ETypeOfFilterList::AfterFilter",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Common_GetHatred_Ranged'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Parent/Parent_Common/BT_Common_GetHatred_Ranged.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Common_GetHatred_Ranged:BTComposite_Sequence_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Parent/Parent_Common/BT_Common_GetHatred_Ranged.2"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_LastFilterTargets",
+    "Name": "BTTask_LastFilterTargets_3",
+    "Outer": "BT_Common_GetHatred_Ranged",
+    "Class": "UScriptClass'BTTask_LastFilterTargets'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TypeOfFilterList": "ETypeOfFilterList::AfterFilter",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Common_GetHatred_Ranged'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Parent/Parent_Common/BT_Common_GetHatred_Ranged.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Common_GetHatred_Ranged:BTComposite_Sequence_6'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Parent/Parent_Common/BT_Common_GetHatred_Ranged.3"
+      }
+    }
+  }
+]

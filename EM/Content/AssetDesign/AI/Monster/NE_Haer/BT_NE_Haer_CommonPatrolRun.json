@@ -1,0 +1,325 @@
+[
+  {
+    "Type": "BehaviorTree",
+    "Name": "BT_NE_Haer_CommonPatrolRun",
+    "Class": "UScriptClass'BehaviorTree'",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "RootNode": {
+        "ObjectName": "BTComposite_Selector'BT_NE_Haer_CommonPatrolRun:BTComposite_Selector_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/NE_Haer/BT_NE_Haer_CommonPatrolRun.1"
+      },
+      "BlackboardAsset": {
+        "ObjectName": "BlackboardData'BB_Mon_Parent_Ranged'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Parent/BB_Mon_Parent_Ranged.0"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_0",
+    "Outer": "BT_NE_Haer_CommonPatrolRun",
+    "Class": "UScriptClass'BTComposite_Selector'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_GetPatrolLoc'BT_NE_Haer_CommonPatrolRun:BTTask_GetPatrolLoc_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/NE_Haer/BT_NE_Haer_CommonPatrolRun.8"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_NE_Haer_CommonPatrolRun:BTDecorator_Blackboard_2'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/NE_Haer/BT_NE_Haer_CommonPatrolRun.5"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector'BT_NE_Haer_CommonPatrolRun:BTComposite_Selector_1'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/NE_Haer/BT_NE_Haer_CommonPatrolRun.2"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_NE_Haer_CommonPatrolRun:BTDecorator_Blackboard_1'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/NE_Haer/BT_NE_Haer_CommonPatrolRun.4"
+            }
+          ],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_NE_Haer_CommonPatrolRun'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/NE_Haer/BT_NE_Haer_CommonPatrolRun.0"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_1",
+    "Outer": "BT_NE_Haer_CommonPatrolRun",
+    "Class": "UScriptClass'BTComposite_Selector'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_NewMoveTo'BT_NE_Haer_CommonPatrolRun:BTTask_NewMoveTo_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/NE_Haer/BT_NE_Haer_CommonPatrolRun.10"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_IsAtLocation'BT_NE_Haer_CommonPatrolRun:BTDecorator_IsAtLocation_1'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/NE_Haer/BT_NE_Haer_CommonPatrolRun.7"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_NE_Haer_CommonPatrolRun:BTComposite_Sequence_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/NE_Haer/BT_NE_Haer_CommonPatrolRun.3"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_IsAtLocation'BT_NE_Haer_CommonPatrolRun:BTDecorator_IsAtLocation_0'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/NE_Haer/BT_NE_Haer_CommonPatrolRun.6"
+            }
+          ],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_NE_Haer_CommonPatrolRun'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/NE_Haer/BT_NE_Haer_CommonPatrolRun.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_NE_Haer_CommonPatrolRun:BTComposite_Selector_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/NE_Haer/BT_NE_Haer_CommonPatrolRun.1"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_0",
+    "Outer": "BT_NE_Haer_CommonPatrolRun",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_GetPatrolLoc'BT_NE_Haer_CommonPatrolRun:BTTask_GetPatrolLoc_1'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/NE_Haer/BT_NE_Haer_CommonPatrolRun.9"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_NewMoveTo'BT_NE_Haer_CommonPatrolRun:BTTask_NewMoveTo_1'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/NE_Haer/BT_NE_Haer_CommonPatrolRun.11"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_NE_Haer_CommonPatrolRun'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/NE_Haer/BT_NE_Haer_CommonPatrolRun.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_NE_Haer_CommonPatrolRun:BTComposite_Selector_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/NE_Haer/BT_NE_Haer_CommonPatrolRun.2"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_1",
+    "Outer": "BT_NE_Haer_CommonPatrolRun",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "CachedDescription": "PatrolLoc is 已设置",
+      "BlackboardKey": {
+        "SelectedKeyName": "PatrolLoc"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_NE_Haer_CommonPatrolRun'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/NE_Haer/BT_NE_Haer_CommonPatrolRun.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_NE_Haer_CommonPatrolRun:BTComposite_Selector_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/NE_Haer/BT_NE_Haer_CommonPatrolRun.1"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_2",
+    "Outer": "BT_NE_Haer_CommonPatrolRun",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "CachedDescription": "PatrolLoc is 未设置",
+      "OperationType": 1,
+      "BlackboardKey": {
+        "SelectedKeyName": "PatrolLoc"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_NE_Haer_CommonPatrolRun'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/NE_Haer/BT_NE_Haer_CommonPatrolRun.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_NE_Haer_CommonPatrolRun:BTComposite_Selector_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/NE_Haer/BT_NE_Haer_CommonPatrolRun.1"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_IsAtLocation",
+    "Name": "BTDecorator_IsAtLocation_0",
+    "Outer": "BT_NE_Haer_CommonPatrolRun",
+    "Class": "UScriptClass'BTDecorator_IsAtLocation'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "AcceptableRadius": 100.0,
+      "ParametrizedAcceptableRadius": {
+        "DataField": "FloatValue"
+      },
+      "GeometricDistanceType": "FAIDistanceType::Distance2D",
+      "bUseNavAgentGoalLocation": false,
+      "bPathFindingBasedTest": false,
+      "BlackboardKey": {
+        "SelectedKeyName": "PatrolLoc"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_NE_Haer_CommonPatrolRun'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/NE_Haer/BT_NE_Haer_CommonPatrolRun.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_NE_Haer_CommonPatrolRun:BTComposite_Selector_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/NE_Haer/BT_NE_Haer_CommonPatrolRun.2"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_IsAtLocation",
+    "Name": "BTDecorator_IsAtLocation_1",
+    "Outer": "BT_NE_Haer_CommonPatrolRun",
+    "Class": "UScriptClass'BTDecorator_IsAtLocation'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "AcceptableRadius": 100.0,
+      "ParametrizedAcceptableRadius": {
+        "DataField": "FloatValue"
+      },
+      "GeometricDistanceType": "FAIDistanceType::Distance2D",
+      "bUseNavAgentGoalLocation": false,
+      "bPathFindingBasedTest": false,
+      "BlackboardKey": {
+        "SelectedKeyName": "PatrolLoc"
+      },
+      "bInverseCondition": true,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_NE_Haer_CommonPatrolRun'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/NE_Haer/BT_NE_Haer_CommonPatrolRun.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_NE_Haer_CommonPatrolRun:BTComposite_Selector_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/NE_Haer/BT_NE_Haer_CommonPatrolRun.2"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_GetPatrolLoc",
+    "Name": "BTTask_GetPatrolLoc_0",
+    "Outer": "BT_NE_Haer_CommonPatrolRun",
+    "Class": "UScriptClass'BTTask_GetPatrolLoc'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_NE_Haer_CommonPatrolRun'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/NE_Haer/BT_NE_Haer_CommonPatrolRun.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_NE_Haer_CommonPatrolRun:BTComposite_Selector_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/NE_Haer/BT_NE_Haer_CommonPatrolRun.1"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_GetPatrolLoc",
+    "Name": "BTTask_GetPatrolLoc_1",
+    "Outer": "BT_NE_Haer_CommonPatrolRun",
+    "Class": "UScriptClass'BTTask_GetPatrolLoc'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_NE_Haer_CommonPatrolRun'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/NE_Haer/BT_NE_Haer_CommonPatrolRun.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_NE_Haer_CommonPatrolRun:BTComposite_Sequence_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/NE_Haer/BT_NE_Haer_CommonPatrolRun.3"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_NewMoveTo",
+    "Name": "BTTask_NewMoveTo_0",
+    "Outer": "BT_NE_Haer_CommonPatrolRun",
+    "Class": "UScriptClass'BTTask_NewMoveTo'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "bOrientRotationToMovement": true,
+      "MoveTypeState": "EMoveTypeState::MTS_Run",
+      "AcceptableRadius": 40.0,
+      "bStopOnOverlapNeedsUpdate": false,
+      "BlackboardKey": {
+        "SelectedKeyName": "PatrolLoc"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_NE_Haer_CommonPatrolRun'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/NE_Haer/BT_NE_Haer_CommonPatrolRun.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_NE_Haer_CommonPatrolRun:BTComposite_Selector_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/NE_Haer/BT_NE_Haer_CommonPatrolRun.2"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_NewMoveTo",
+    "Name": "BTTask_NewMoveTo_1",
+    "Outer": "BT_NE_Haer_CommonPatrolRun",
+    "Class": "UScriptClass'BTTask_NewMoveTo'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "bOrientRotationToMovement": true,
+      "MoveTypeState": "EMoveTypeState::MTS_Run",
+      "AcceptableRadius": 40.0,
+      "bStopOnOverlapNeedsUpdate": false,
+      "BlackboardKey": {
+        "SelectedKeyName": "PatrolLoc"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_NE_Haer_CommonPatrolRun'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/NE_Haer/BT_NE_Haer_CommonPatrolRun.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_NE_Haer_CommonPatrolRun:BTComposite_Sequence_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/NE_Haer/BT_NE_Haer_CommonPatrolRun.3"
+      }
+    }
+  }
+]

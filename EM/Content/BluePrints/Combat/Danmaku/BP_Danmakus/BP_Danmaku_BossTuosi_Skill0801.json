@@ -1,0 +1,727 @@
+[
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_BP_Danmaku_BossTuosi_Skill0801",
+    "Outer": "BP_Danmaku_BossTuosi_Skill0801_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetBattlePointsById_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'BattlePoint'",
+          "ObjectPath": "/Script/EM"
+        }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "___int_Array_Index_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_K2_GetActorLocation_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "Struct": {
+          "ObjectName": "ScriptStruct'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_K2_SetActorLocation_SweepHitResult",
+        "Flags": "RF_Public",
+        "ElementSize": 144,
+        "PropertyFlags": "ContainsInstancedReference",
+        "Struct": {
+          "ObjectName": "ScriptStruct'HitResult'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_K2_SetActorLocation_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "CallFunc_Map_Values_Values",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "ReferenceParm | ContainsInstancedReference",
+        "Inner": {
+          "Type": "ObjectProperty",
+          "Name": "CallFunc_Map_Values_Values",
+          "Flags": "RF_Public",
+          "ElementSize": 8,
+          "PropertyFlags": "InstancedReference",
+          "PropertyClass": {
+            "ObjectName": "Class'DanmakuLaunchPort'",
+            "ObjectPath": "/Script/EM"
+          }
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_Array_Get_Item",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'DanmakuLaunchPort'",
+          "ObjectPath": "/Script/EM"
+        }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Array_Length_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "___int_Loop_Counter_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_DynamicCast_AsBP_Monster_Character",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'BP_MonsterCharacter_C'",
+          "ObjectPath": "EM/Content/BluePrints/Char/BP_Monsters/BP_MonsterCharacter.42"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_DynamicCast_bSuccess",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Less_IntInt_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Add_IntInt_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction | FUNC_HasDefaults"
+  },
+  {
+    "Type": "Function",
+    "Name": "ReceiveBeginPlay",
+    "Outer": "BP_Danmaku_BossTuosi_Skill0801_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "SuperStruct": {
+      "ObjectName": "Function'Actor:ReceiveBeginPlay'",
+      "ObjectPath": "/Script/Engine"
+    },
+    "FunctionFlags": "FUNC_Event | FUNC_Protected | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "DanmakuFire",
+    "Outer": "BP_Danmaku_BossTuosi_Skill0801_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "SuperStruct": {
+      "ObjectName": "Function'DanmakuTemplate:DanmakuFire'",
+      "ObjectPath": "/Script/EM"
+    },
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "SetPortRelativeLocAndRotationYZ",
+    "Outer": "BP_Danmaku_BossTuosi_Skill0801_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "LuanchPort",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm | InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'DanmakuLaunchPort'",
+          "ObjectPath": "/Script/EM"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "AngleY",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "AngleZ",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_GetActorUpVector_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "Struct": {
+          "ObjectName": "ScriptStruct'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_BreakRotator_Roll",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_BreakRotator_Pitch",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_BreakRotator_Yaw",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_RotateAngleAxis_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "Struct": {
+          "ObjectName": "ScriptStruct'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_Add_FloatFloat_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_Add_FloatFloat_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_FMax_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_MakeRotator_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "Struct": {
+          "ObjectName": "ScriptStruct'Rotator'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_K2_SetRelativeLocationAndRotation_SweepHitResult",
+        "Flags": "RF_Public",
+        "ElementSize": 144,
+        "PropertyFlags": "ContainsInstancedReference",
+        "Struct": {
+          "ObjectName": "ScriptStruct'HitResult'",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_HasDefaults | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "ScaleTransform",
+    "Outer": "BP_Danmaku_BossTuosi_Skill0801_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "目标",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm | InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'SceneComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "Scale",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_GetRelativeTransform_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 48,
+        "Struct": {
+          "ObjectName": "ScriptStruct'Transform'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_BreakTransform_Location",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "Struct": {
+          "ObjectName": "ScriptStruct'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_BreakTransform_Rotation",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "Struct": {
+          "ObjectName": "ScriptStruct'Rotator'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_BreakTransform_Scale",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "Struct": {
+          "ObjectName": "ScriptStruct'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_Multiply_VectorFloat_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "Struct": {
+          "ObjectName": "ScriptStruct'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_K2_SetRelativeLocation_SweepHitResult",
+        "Flags": "RF_Public",
+        "ElementSize": 144,
+        "PropertyFlags": "ContainsInstancedReference",
+        "Struct": {
+          "ObjectName": "ScriptStruct'HitResult'",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_HasDefaults | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BP_Danmaku_BossTuosi_Skill0801_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Super": {
+      "ObjectName": "BlueprintGeneratedClass'BP_DanmakuTemplate_C'",
+      "ObjectPath": "EM/Content/BluePrints/Combat/Danmaku/BP_DanmakuTemplate.6"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BP_Danmaku_BossTuosi_Skill0801_C:SimpleConstructionScript_0'",
+        "ObjectPath": "EM/Content/BluePrints/Combat/Danmaku/BP_Danmakus/BP_Danmaku_BossTuosi_Skill0801.16"
+      },
+      "InheritableComponentHandler": {
+        "ObjectName": "InheritableComponentHandler'BP_Danmaku_BossTuosi_Skill0801_C:InheritableComponentHandler'",
+        "ObjectPath": "EM/Content/BluePrints/Combat/Danmaku/BP_Danmakus/BP_Danmaku_BossTuosi_Skill0801.9"
+      },
+      "UberGraphFunction": {
+        "ObjectName": "Function'BP_Danmaku_BossTuosi_Skill0801_C:ExecuteUbergraph_BP_Danmaku_BossTuosi_Skill0801'",
+        "ObjectPath": "EM/Content/BluePrints/Combat/Danmaku/BP_Danmakus/BP_Danmaku_BossTuosi_Skill0801.0"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "BlueprintGeneratedClass'BP_DanmakuTemplate_C'",
+      "ObjectPath": "EM/Content/BluePrints/Combat/Danmaku/BP_DanmakuTemplate.6"
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'BP_Danmaku_BossTuosi_Skill0801_C:ScaleTransform'",
+        "ObjectPath": "EM/Content/BluePrints/Combat/Danmaku/BP_Danmakus/BP_Danmaku_BossTuosi_Skill0801.4"
+      },
+      {
+        "ObjectName": "Function'BP_Danmaku_BossTuosi_Skill0801_C:SetPortRelativeLocAndRotationYZ'",
+        "ObjectPath": "EM/Content/BluePrints/Combat/Danmaku/BP_Danmakus/BP_Danmaku_BossTuosi_Skill0801.3"
+      },
+      {
+        "ObjectName": "Function'BP_Danmaku_BossTuosi_Skill0801_C:DanmakuFire'",
+        "ObjectPath": "EM/Content/BluePrints/Combat/Danmaku/BP_Danmakus/BP_Danmaku_BossTuosi_Skill0801.2"
+      },
+      {
+        "ObjectName": "Function'BP_Danmaku_BossTuosi_Skill0801_C:ReceiveBeginPlay'",
+        "ObjectPath": "EM/Content/BluePrints/Combat/Danmaku/BP_Danmakus/BP_Danmaku_BossTuosi_Skill0801.1"
+      },
+      {
+        "ObjectName": "Function'BP_Danmaku_BossTuosi_Skill0801_C:ExecuteUbergraph_BP_Danmaku_BossTuosi_Skill0801'",
+        "ObjectPath": "EM/Content/BluePrints/Combat/Danmaku/BP_Danmakus/BP_Danmaku_BossTuosi_Skill0801.0"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient",
+        "Struct": {
+          "ObjectName": "ScriptStruct'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "BP_DanmakuLaunchPort1",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'BP_DanmakuLaunchPort_C'",
+          "ObjectPath": "EM/Content/BluePrints/Combat/Danmaku/BP_DanmakuLaunchPort.1"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "XY",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'SceneComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "Scale",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "Edit | BlueprintVisible"
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "MonsterCharacter",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnTemplate | DisableEditOnInstance",
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'BP_MonsterCharacter_C'",
+          "ObjectPath": "EM/Content/BluePrints/Char/BP_Monsters/BP_MonsterCharacter.42"
+        }
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_BP_Danmaku_BossTuosi_Skill0801": {
+        "ObjectName": "Function'BP_Danmaku_BossTuosi_Skill0801_C:ExecuteUbergraph_BP_Danmaku_BossTuosi_Skill0801'",
+        "ObjectPath": "EM/Content/BluePrints/Combat/Danmaku/BP_Danmakus/BP_Danmaku_BossTuosi_Skill0801.0"
+      },
+      "ReceiveBeginPlay": {
+        "ObjectName": "Function'BP_Danmaku_BossTuosi_Skill0801_C:ReceiveBeginPlay'",
+        "ObjectPath": "EM/Content/BluePrints/Combat/Danmaku/BP_Danmakus/BP_Danmaku_BossTuosi_Skill0801.1"
+      },
+      "DanmakuFire": {
+        "ObjectName": "Function'BP_Danmaku_BossTuosi_Skill0801_C:DanmakuFire'",
+        "ObjectPath": "EM/Content/BluePrints/Combat/Danmaku/BP_Danmakus/BP_Danmaku_BossTuosi_Skill0801.2"
+      },
+      "SetPortRelativeLocAndRotationYZ": {
+        "ObjectName": "Function'BP_Danmaku_BossTuosi_Skill0801_C:SetPortRelativeLocAndRotationYZ'",
+        "ObjectPath": "EM/Content/BluePrints/Combat/Danmaku/BP_Danmakus/BP_Danmaku_BossTuosi_Skill0801.3"
+      },
+      "ScaleTransform": {
+        "ObjectName": "Function'BP_Danmaku_BossTuosi_Skill0801_C:ScaleTransform'",
+        "ObjectPath": "EM/Content/BluePrints/Combat/Danmaku/BP_Danmakus/BP_Danmaku_BossTuosi_Skill0801.4"
+      }
+    },
+    "ClassFlags": "CLASS_Config | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BP_Danmaku_BossTuosi_Skill0801_C'Default__BP_Danmaku_BossTuosi_Skill0801_C'",
+      "ObjectPath": "EM/Content/BluePrints/Combat/Danmaku/BP_Danmakus/BP_Danmaku_BossTuosi_Skill0801.6"
+    }
+  },
+  {
+    "Type": "BP_Danmaku_BossTuosi_Skill0801_C",
+    "Name": "Default__BP_Danmaku_BossTuosi_Skill0801_C",
+    "Class": "BlueprintGeneratedClass'EM/Content/BluePrints/Combat/Danmaku/BP_Danmakus/BP_Danmaku_BossTuosi_Skill0801.BP_Danmaku_BossTuosi_Skill0801_C'",
+    "Template": {
+      "ObjectName": "BP_DanmakuTemplate_C'Default__BP_DanmakuTemplate_C'",
+      "ObjectPath": "EM/Content/BluePrints/Combat/Danmaku/BP_DanmakuTemplate.7"
+    },
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "UberGraphFrame": {},
+      "Scale": 0.5,
+      "Interval": 999.0,
+      "DanmakuInstanced": {
+        "ObjectName": "DanmakuInstanceComponent'Default__BP_Danmaku_BossTuosi_Skill0801_C:DanmakuInstanced'",
+        "ObjectPath": "EM/Content/BluePrints/Combat/Danmaku/BP_Danmakus/BP_Danmaku_BossTuosi_Skill0801.8"
+      },
+      "PortRoot": {
+        "ObjectName": "SceneComponent'Default__BP_Danmaku_BossTuosi_Skill0801_C:PortRoot'",
+        "ObjectPath": "EM/Content/BluePrints/Combat/Danmaku/BP_Danmakus/BP_Danmaku_BossTuosi_Skill0801.12"
+      },
+      "RootComponent": {
+        "ObjectName": "DanmakuInstanceComponent'Default__BP_Danmaku_BossTuosi_Skill0801_C:DanmakuInstanced'",
+        "ObjectPath": "EM/Content/BluePrints/Combat/Danmaku/BP_Danmakus/BP_Danmaku_BossTuosi_Skill0801.8"
+      }
+    }
+  },
+  {
+    "Type": "BP_DanmakuLaunchPort_C",
+    "Name": "BP_DanmakuLaunchPort1_GEN_VARIABLE",
+    "Outer": "BP_Danmaku_BossTuosi_Skill0801_C",
+    "Class": "BlueprintGeneratedClass'EM/Content/BluePrints/Combat/Danmaku/BP_DanmakuLaunchPort.BP_DanmakuLaunchPort_C'",
+    "Template": {
+      "ObjectName": "BP_DanmakuLaunchPort_C'Default__BP_DanmakuLaunchPort_C'",
+      "ObjectPath": "EM/Content/BluePrints/Combat/Danmaku/BP_DanmakuLaunchPort.2"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "LaunchPortId": 1,
+      "CreatureId": 850041,
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 350.0
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": 0.0,
+        "Roll": 1.3281406E-05
+      },
+      "bVisible": false,
+      "bHiddenInGame": false
+    }
+  },
+  {
+    "Type": "DanmakuInstanceComponent",
+    "Name": "DanmakuInstanced",
+    "Outer": "Default__BP_Danmaku_BossTuosi_Skill0801_C",
+    "Class": "UScriptClass'DanmakuInstanceComponent'",
+    "Template": {
+      "ObjectName": "DanmakuInstanceComponent'Default__BP_DanmakuTemplate_C:DanmakuInstanced'",
+      "ObjectPath": "EM/Content/BluePrints/Combat/Danmaku/BP_DanmakuTemplate.8"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "CreatureId": 850903,
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'mesh_sysplane_yb_001'",
+        "ObjectPath": "EM/Content/Asset/Effect/Mesh/Plane/mesh_sysplane_yb_001.2"
+      },
+      "bVisible": false
+    }
+  },
+  {
+    "Type": "InheritableComponentHandler",
+    "Name": "InheritableComponentHandler",
+    "Outer": "BP_Danmaku_BossTuosi_Skill0801_C",
+    "Class": "UScriptClass'InheritableComponentHandler'",
+    "Flags": "RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Outer": "BP_Danmaku_BossTuosi_Skill0801_C",
+    "Class": "UScriptClass'SceneComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "XY_GEN_VARIABLE",
+    "Outer": "BP_Danmaku_BossTuosi_Skill0801_C",
+    "Class": "UScriptClass'SceneComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "PortRoot",
+    "Outer": "Default__BP_Danmaku_BossTuosi_Skill0801_C",
+    "Class": "UScriptClass'SceneComponent'",
+    "Template": {
+      "ObjectName": "SceneComponent'Default__BP_DanmakuTemplate_C:PortRoot'",
+      "ObjectPath": "EM/Content/BluePrints/Combat/Danmaku/BP_DanmakuTemplate.10"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "DanmakuInstanceComponent'Default__BP_Danmaku_BossTuosi_Skill0801_C:DanmakuInstanced'",
+        "ObjectPath": "EM/Content/BluePrints/Combat/Danmaku/BP_Danmakus/BP_Danmaku_BossTuosi_Skill0801.8"
+      }
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BP_Danmaku_BossTuosi_Skill0801_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "EM/Content/BluePrints/Combat/Danmaku/BP_Danmakus/BP_Danmaku_BossTuosi_Skill0801.10"
+      },
+      "VariableGuid": "556F11F3-4DEDE679-7E460B91-FDB1897F",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_1",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "BlueprintGeneratedClass'BP_DanmakuLaunchPort_C'",
+        "ObjectPath": "EM/Content/BluePrints/Combat/Danmaku/BP_DanmakuLaunchPort.1"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "BP_DanmakuLaunchPort_C'BP_Danmaku_BossTuosi_Skill0801_C:BP_DanmakuLaunchPort1_GEN_VARIABLE'",
+        "ObjectPath": "EM/Content/BluePrints/Combat/Danmaku/BP_Danmakus/BP_Danmaku_BossTuosi_Skill0801.7"
+      },
+      "VariableGuid": "D76D1B3A-43AC9ED3-221DF08A-2C966FB2",
+      "InternalVariableName": "BP_DanmakuLaunchPort1"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_9",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BP_Danmaku_BossTuosi_Skill0801_C:XY_GEN_VARIABLE'",
+        "ObjectPath": "EM/Content/BluePrints/Combat/Danmaku/BP_Danmakus/BP_Danmaku_BossTuosi_Skill0801.11"
+      },
+      "ParentComponentOrVariableName": "DanmakuInstanced",
+      "bIsParentComponentNative": true,
+      "ChildNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_Danmaku_BossTuosi_Skill0801_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "EM/Content/BluePrints/Combat/Danmaku/BP_Danmakus/BP_Danmaku_BossTuosi_Skill0801.14"
+        }
+      ],
+      "VariableGuid": "F1D74B78-4EFBAC99-D82E149C-13BB5583",
+      "InternalVariableName": "XY"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Outer": "BP_Danmaku_BossTuosi_Skill0801_C",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_Danmaku_BossTuosi_Skill0801_C:SimpleConstructionScript_0.SCS_Node_9'",
+          "ObjectPath": "EM/Content/BluePrints/Combat/Danmaku/BP_Danmakus/BP_Danmaku_BossTuosi_Skill0801.15"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_Danmaku_BossTuosi_Skill0801_C:SimpleConstructionScript_0.SCS_Node_9'",
+          "ObjectPath": "EM/Content/BluePrints/Combat/Danmaku/BP_Danmakus/BP_Danmaku_BossTuosi_Skill0801.15"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_Danmaku_BossTuosi_Skill0801_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "EM/Content/BluePrints/Combat/Danmaku/BP_Danmakus/BP_Danmaku_BossTuosi_Skill0801.14"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BP_Danmaku_BossTuosi_Skill0801_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "EM/Content/BluePrints/Combat/Danmaku/BP_Danmakus/BP_Danmaku_BossTuosi_Skill0801.13"
+      }
+    }
+  }
+]

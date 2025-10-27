@@ -1,0 +1,588 @@
+[
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_BP_SewWall",
+    "Outer": "BP_SewWall_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "StrProperty",
+        "Name": "K2Node_Event_Message",
+        "Flags": "RF_Public",
+        "ElementSize": 16
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_EqualEqual_StrStr_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "StrProperty",
+        "Name": "CallFunc_SetFXColorParam_Level_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 16
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_GetTransform_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 48,
+        "PropertyFlags": "ConstParm",
+        "Struct": {
+          "ObjectName": "ScriptStruct'Transform'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_BreakTransform_Location",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "Struct": {
+          "ObjectName": "ScriptStruct'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_BreakTransform_Rotation",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "Struct": {
+          "ObjectName": "ScriptStruct'Rotator'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_BreakTransform_Scale",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "Struct": {
+          "ObjectName": "ScriptStruct'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_Multiply_VectorInt_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "Struct": {
+          "ObjectName": "ScriptStruct'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StrProperty",
+        "Name": "CallFunc_SpawnFXAtLocation_Level_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 16
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction | FUNC_HasDefaults"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnReceivedMessage",
+    "Outer": "BP_SewWall_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "SuperStruct": {
+      "ObjectName": "Function'SceneItemBase:OnReceivedMessage'",
+      "ObjectPath": "/Script/EM"
+    },
+    "ChildProperties": [
+      {
+        "Type": "StrProperty",
+        "Name": "Message",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "ReceiveBeginPlay",
+    "Outer": "BP_SewWall_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "SuperStruct": {
+      "ObjectName": "Function'Actor:ReceiveBeginPlay'",
+      "ObjectPath": "/Script/Engine"
+    },
+    "FunctionFlags": "FUNC_Event | FUNC_Protected | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BP_SewWall_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Super": {
+      "ObjectName": "BlueprintGeneratedClass'BP_CombatItemBase_C'",
+      "ObjectPath": "EM/Content/BluePrints/Item/BP_CombatItemBase.1"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BP_SewWall_C:SimpleConstructionScript_0'",
+        "ObjectPath": "EM/Content/AssetDesign/Item/CombatProp/BP_SewWall.16"
+      },
+      "InheritableComponentHandler": {
+        "ObjectName": "InheritableComponentHandler'BP_SewWall_C:InheritableComponentHandler'",
+        "ObjectPath": "EM/Content/AssetDesign/Item/CombatProp/BP_SewWall.10"
+      },
+      "UberGraphFunction": {
+        "ObjectName": "Function'BP_SewWall_C:ExecuteUbergraph_BP_SewWall'",
+        "ObjectPath": "EM/Content/AssetDesign/Item/CombatProp/BP_SewWall.0"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "BlueprintGeneratedClass'BP_CombatItemBase_C'",
+      "ObjectPath": "EM/Content/BluePrints/Item/BP_CombatItemBase.1"
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'BP_SewWall_C:ReceiveBeginPlay'",
+        "ObjectPath": "EM/Content/AssetDesign/Item/CombatProp/BP_SewWall.2"
+      },
+      {
+        "ObjectName": "Function'BP_SewWall_C:OnReceivedMessage'",
+        "ObjectPath": "EM/Content/AssetDesign/Item/CombatProp/BP_SewWall.1"
+      },
+      {
+        "ObjectName": "Function'BP_SewWall_C:ExecuteUbergraph_BP_SewWall'",
+        "ObjectPath": "EM/Content/AssetDesign/Item/CombatProp/BP_SewWall.0"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient",
+        "Struct": {
+          "ObjectName": "ScriptStruct'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "BodyCollision",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'BoxComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "EMNavModifier",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'EMNavModifierComponent'",
+          "ObjectPath": "/Script/EM"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Mesh",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'StaticMeshComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "MechanismColor",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "Struct": {
+          "ObjectName": "ScriptStruct'LinearColor'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_BP_SewWall": {
+        "ObjectName": "Function'BP_SewWall_C:ExecuteUbergraph_BP_SewWall'",
+        "ObjectPath": "EM/Content/AssetDesign/Item/CombatProp/BP_SewWall.0"
+      },
+      "OnReceivedMessage": {
+        "ObjectName": "Function'BP_SewWall_C:OnReceivedMessage'",
+        "ObjectPath": "EM/Content/AssetDesign/Item/CombatProp/BP_SewWall.1"
+      },
+      "ReceiveBeginPlay": {
+        "ObjectName": "Function'BP_SewWall_C:ReceiveBeginPlay'",
+        "ObjectPath": "EM/Content/AssetDesign/Item/CombatProp/BP_SewWall.2"
+      }
+    },
+    "ClassFlags": "CLASS_Config | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BP_SewWall_C'Default__BP_SewWall_C'",
+      "ObjectPath": "EM/Content/AssetDesign/Item/CombatProp/BP_SewWall.4"
+    }
+  },
+  {
+    "Type": "BP_SewWall_C",
+    "Name": "Default__BP_SewWall_C",
+    "Class": "BlueprintGeneratedClass'EM/Content/AssetDesign/Item/CombatProp/BP_SewWall.BP_SewWall_C'",
+    "Template": {
+      "ObjectName": "BP_CombatItemBase_C'Default__BP_CombatItemBase_C'",
+      "ObjectPath": "EM/Content/BluePrints/Item/BP_CombatItemBase.2"
+    },
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "UberGraphFrame": {},
+      "MechanismColor": {
+        "R": 1.2,
+        "G": 0.61,
+        "B": 0.2,
+        "A": 1.0,
+        "Hex": "FFCD7C"
+      },
+      "NeedNavModifier": true,
+      "CombatStateChangeComponent": {
+        "ObjectName": "BP_CombatStateChangeComponent_C'Default__BP_SewWall_C:CombatStateChangeComponent'",
+        "ObjectPath": "EM/Content/AssetDesign/Item/CombatProp/BP_SewWall.7"
+      },
+      "CombatClientEffectComponent": {
+        "ObjectName": "BP_CombatClientEffectComponent_C'Default__BP_SewWall_C:CombatClientEffectComponent'",
+        "ObjectPath": "EM/Content/AssetDesign/Item/CombatProp/BP_SewWall.6"
+      },
+      "FXComponent": {
+        "ObjectName": "BP_FXComponent_C'Default__BP_SewWall_C:BP_FXComponent'",
+        "ObjectPath": "EM/Content/AssetDesign/Item/CombatProp/BP_SewWall.8"
+      },
+      "NavModifierName": "Mesh",
+      "UnitId": 49205,
+      "UnitType": "Mechanism"
+    }
+  },
+  {
+    "Type": "BoxComponent",
+    "Name": "BodyCollision_GEN_VARIABLE",
+    "Outer": "BP_SewWall_C",
+    "Class": "UScriptClass'BoxComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "AreaClass": {
+        "ObjectName": "Class'NavArea_Obstacle'",
+        "ObjectPath": "/Script/NavigationSystem"
+      },
+      "BodyInstance": {
+        "ObjectType": "ECC_WorldStatic",
+        "CollisionEnabled": "ECollisionEnabled::QueryAndPhysics",
+        "CollisionProfileName": "SceneCollision",
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "WorldDynamic",
+              "Response": "ECR_Overlap"
+            },
+            {
+              "Channel": "TraceEnemyVision",
+              "Response": "ECR_Block"
+            },
+            {
+              "Channel": "TraceScene",
+              "Response": "ECR_Block"
+            },
+            {
+              "Channel": "TraceCreatureHit",
+              "Response": "ECR_Overlap"
+            },
+            {
+              "Channel": "TraceSkillCreatureBlock",
+              "Response": "ECR_Block"
+            },
+            {
+              "Channel": "SkillCreature",
+              "Response": "ECR_Overlap"
+            }
+          ]
+        }
+      },
+      "RelativeLocation": {
+        "X": 5.9604654E-06,
+        "Y": 98.0,
+        "Z": 100.0
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": 90.0,
+        "Roll": 0.0
+      },
+      "RelativeScale3D": {
+        "X": 9.5,
+        "Y": 0.75,
+        "Z": 9.5
+      },
+      "bCanEverAffectNavigation": false
+    }
+  },
+  {
+    "Type": "BP_CombatClientEffectComponent_C",
+    "Name": "CombatClientEffectComponent",
+    "Outer": "Default__BP_SewWall_C",
+    "Class": "BlueprintGeneratedClass'EM/Content/BluePrints/Item/BP_CombatClientEffectComponent.BP_CombatClientEffectComponent_C'",
+    "Template": {
+      "ObjectName": "BP_CombatClientEffectComponent_C'Default__BP_CombatItemBase_C:CombatClientEffectComponent'",
+      "ObjectPath": "EM/Content/BluePrints/Item/BP_CombatItemBase.3"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "BP_CombatStateChangeComponent_C",
+    "Name": "CombatStateChangeComponent",
+    "Outer": "Default__BP_SewWall_C",
+    "Class": "BlueprintGeneratedClass'EM/Content/BluePrints/Item/BP_CombatStateChangeComponent.BP_CombatStateChangeComponent_C'",
+    "Template": {
+      "ObjectName": "BP_CombatStateChangeComponent_C'Default__BP_CombatItemBase_C:CombatStateChangeComponent'",
+      "ObjectPath": "EM/Content/BluePrints/Item/BP_CombatItemBase.4"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "BP_FXComponent_C",
+    "Name": "BP_FXComponent",
+    "Outer": "Default__BP_SewWall_C",
+    "Class": "BlueprintGeneratedClass'EM/Content/BluePrints/Char/BP_FXComponent.BP_FXComponent_C'",
+    "Template": {
+      "ObjectName": "BP_FXComponent_C'Default__BP_CombatItemBase_C:BP_FXComponent'",
+      "ObjectPath": "EM/Content/BluePrints/Item/BP_CombatItemBase.5"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "EMNavModifierComponent",
+    "Name": "EMNavModifier_GEN_VARIABLE",
+    "Outer": "BP_SewWall_C",
+    "Class": "UScriptClass'EMNavModifierComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "InheritableComponentHandler",
+    "Name": "InheritableComponentHandler",
+    "Outer": "BP_SewWall_C",
+    "Class": "UScriptClass'InheritableComponentHandler'",
+    "Flags": "RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Outer": "BP_SewWall_C",
+    "Class": "UScriptClass'SceneComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BP_SewWall_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "EM/Content/AssetDesign/Item/CombatProp/BP_SewWall.11"
+      },
+      "VariableGuid": "3BF11476-4319F64A-A0BC6B84-9EDFBE44",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_1",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'StaticMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "StaticMeshComponent'BP_SewWall_C:Mesh_GEN_VARIABLE'",
+        "ObjectPath": "EM/Content/AssetDesign/Item/CombatProp/BP_SewWall.17"
+      },
+      "ParentComponentOrVariableName": "DefaultSceneRoot",
+      "ParentComponentOwnerClassName": "BP_CombatItemBase_C",
+      "VariableGuid": "0587BDAF-4EB2D1EE-82212280-C627071B",
+      "InternalVariableName": "Mesh"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_2",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'EMNavModifierComponent'",
+        "ObjectPath": "/Script/EM"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "EMNavModifierComponent'BP_SewWall_C:EMNavModifier_GEN_VARIABLE'",
+        "ObjectPath": "EM/Content/AssetDesign/Item/CombatProp/BP_SewWall.9"
+      },
+      "VariableGuid": "A919936C-4C2B4888-E8F36BB0-C642CE90",
+      "InternalVariableName": "EMNavModifier"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_3",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'BoxComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "BoxComponent'BP_SewWall_C:BodyCollision_GEN_VARIABLE'",
+        "ObjectPath": "EM/Content/AssetDesign/Item/CombatProp/BP_SewWall.5"
+      },
+      "ParentComponentOrVariableName": "DefaultSceneRoot",
+      "ParentComponentOwnerClassName": "BP_CombatItemBase_C",
+      "VariableGuid": "C7D975DD-4BAB4349-B77AF6B8-A3743D22",
+      "InternalVariableName": "BodyCollision"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Outer": "BP_SewWall_C",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_SewWall_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "EM/Content/AssetDesign/Item/CombatProp/BP_SewWall.13"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_SewWall_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "EM/Content/AssetDesign/Item/CombatProp/BP_SewWall.14"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_SewWall_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectPath": "EM/Content/AssetDesign/Item/CombatProp/BP_SewWall.15"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_SewWall_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "EM/Content/AssetDesign/Item/CombatProp/BP_SewWall.13"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_SewWall_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "EM/Content/AssetDesign/Item/CombatProp/BP_SewWall.14"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_SewWall_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectPath": "EM/Content/AssetDesign/Item/CombatProp/BP_SewWall.15"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BP_SewWall_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "EM/Content/AssetDesign/Item/CombatProp/BP_SewWall.12"
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "Mesh_GEN_VARIABLE",
+    "Outer": "BP_SewWall_C",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'SM_Sew_Wall01A'",
+        "ObjectPath": "EM/Content/Asset/Scene/EN002_Haiboliya/Binghucheng/BH_Sew/Mesh/SM_Sew_Wall01A.2"
+      },
+      "BodyInstance": {
+        "ObjectType": "ECC_WorldStatic",
+        "CollisionEnabled": "ECollisionEnabled::QueryOnly",
+        "CollisionProfileName": "MechanismBody",
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "PhysicsBody",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Vehicle",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Destructible",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "BreakableItem",
+              "Response": "ECR_Overlap"
+            },
+            {
+              "Channel": "TraceScene",
+              "Response": "ECR_Overlap"
+            }
+          ]
+        }
+      },
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": -200.0,
+        "Z": -200.0
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": 90.0,
+        "Roll": 0.0
+      },
+      "RelativeScale3D": {
+        "X": 1.5,
+        "Y": 1.5,
+        "Z": 1.5
+      },
+      "bCanEverAffectNavigation": false
+    }
+  }
+]

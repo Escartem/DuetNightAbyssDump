@@ -1,0 +1,218 @@
+[
+  {
+    "Type": "BehaviorTree",
+    "Name": "BT_Boss_Tuosi_StareAtMoveTo",
+    "Class": "UScriptClass'BehaviorTree'",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "RootNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Tuosi_StareAtMoveTo:BTComposite_Sequence_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_09_Tuosi/BT_Boss_Tuosi_StareAtMoveTo.1"
+      },
+      "BlackboardAsset": {
+        "ObjectName": "BlackboardData'BB_Boss_Tuosi'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_09_Tuosi/BB_Boss_Tuosi.0"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_0",
+    "Outer": "BT_Boss_Tuosi_StareAtMoveTo",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_EMRunEQSQuery'BT_Boss_Tuosi_StareAtMoveTo:BTTask_EMRunEQSQuery_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_09_Tuosi/BT_Boss_Tuosi_StareAtMoveTo.4"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_NewMoveTo'BT_Boss_Tuosi_StareAtMoveTo:BTTask_NewMoveTo_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_09_Tuosi/BT_Boss_Tuosi_StareAtMoveTo.5"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_TimeLimit'BT_Boss_Tuosi_StareAtMoveTo:BTDecorator_TimeLimit_1'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_09_Tuosi/BT_Boss_Tuosi_StareAtMoveTo.3"
+            },
+            {
+              "ObjectName": "BTDecorator_ForceSuccess'BT_Boss_Tuosi_StareAtMoveTo:BTDecorator_ForceSuccess_1'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_09_Tuosi/BT_Boss_Tuosi_StareAtMoveTo.2"
+            }
+          ],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Tuosi_StareAtMoveTo'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_09_Tuosi/BT_Boss_Tuosi_StareAtMoveTo.0"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_ForceSuccess",
+    "Name": "BTDecorator_ForceSuccess_1",
+    "Outer": "BT_Boss_Tuosi_StareAtMoveTo",
+    "Class": "UScriptClass'BTDecorator_ForceSuccess'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Tuosi_StareAtMoveTo'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_09_Tuosi/BT_Boss_Tuosi_StareAtMoveTo.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Tuosi_StareAtMoveTo:BTComposite_Sequence_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_09_Tuosi/BT_Boss_Tuosi_StareAtMoveTo.1"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_TimeLimit",
+    "Name": "BTDecorator_TimeLimit_1",
+    "Outer": "BT_Boss_Tuosi_StareAtMoveTo",
+    "Class": "UScriptClass'BTDecorator_TimeLimit'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TimeLimit": 4.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Tuosi_StareAtMoveTo'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_09_Tuosi/BT_Boss_Tuosi_StareAtMoveTo.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Tuosi_StareAtMoveTo:BTComposite_Sequence_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_09_Tuosi/BT_Boss_Tuosi_StareAtMoveTo.1"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_EMRunEQSQuery",
+    "Name": "BTTask_EMRunEQSQuery_0",
+    "Outer": "BT_Boss_Tuosi_StareAtMoveTo",
+    "Class": "UScriptClass'BTTask_EMRunEQSQuery'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "EQSRequest": {
+        "QueryTemplate": {
+          "ObjectName": "EnvQuery'EQS_SelfCircleBornPos'",
+          "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Z_EnvQuery/EQS_SelfCircleBornPos.8"
+        },
+        "QueryConfig": [
+          {
+            "ParamName": "EMOnCircle.CircleRadius",
+            "ParamType": "EAIParamType::Float",
+            "Value": 400.0,
+            "BBKey": {
+              "SelectedKeyName": "None",
+              "bNoneIsAllowedValue": true
+            }
+          },
+          {
+            "ParamName": "EMOnCircle.SpaceBetween",
+            "ParamType": "EAIParamType::Float",
+            "Value": 50.0,
+            "BBKey": {
+              "SelectedKeyName": "None",
+              "bNoneIsAllowedValue": true
+            }
+          },
+          {
+            "ParamName": "EMOnCircle.NumberOfPoints",
+            "ParamType": "EAIParamType::Int",
+            "Value": 24.0,
+            "BBKey": {
+              "SelectedKeyName": "None",
+              "bNoneIsAllowedValue": true
+            }
+          },
+          {
+            "ParamName": "EMOnCircle.ArcAngle",
+            "ParamType": "EAIParamType::Float",
+            "Value": 360.0,
+            "BBKey": {
+              "SelectedKeyName": "None",
+              "bNoneIsAllowedValue": true
+            }
+          },
+          {
+            "ParamName": "EMDistance.FloatValueMax",
+            "ParamType": "EAIParamType::Float",
+            "Value": 1800.0,
+            "BBKey": {
+              "SelectedKeyName": "None",
+              "bNoneIsAllowedValue": true
+            }
+          },
+          {
+            "ParamName": "EMDistance.ScoringFactor",
+            "ParamType": "EAIParamType::Float",
+            "Value": 0.8,
+            "BBKey": {
+              "SelectedKeyName": "None",
+              "bNoneIsAllowedValue": true
+            }
+          },
+          {
+            "ParamName": "EMDot.FloatValueMin",
+            "ParamType": "EAIParamType::Float",
+            "Value": -0.8,
+            "BBKey": {
+              "SelectedKeyName": "None",
+              "bNoneIsAllowedValue": true
+            }
+          },
+          {
+            "ParamName": "EMDot.FloatValueMax",
+            "ParamType": "EAIParamType::Float",
+            "Value": 1.0,
+            "BBKey": {
+              "SelectedKeyName": "None",
+              "bNoneIsAllowedValue": true
+            }
+          }
+        ]
+      },
+      "BlackboardKey": {
+        "SelectedKeyName": "EQSQueryLoc"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Tuosi_StareAtMoveTo'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_09_Tuosi/BT_Boss_Tuosi_StareAtMoveTo.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Tuosi_StareAtMoveTo:BTComposite_Sequence_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_09_Tuosi/BT_Boss_Tuosi_StareAtMoveTo.1"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_NewMoveTo",
+    "Name": "BTTask_NewMoveTo_0",
+    "Outer": "BT_Boss_Tuosi_StareAtMoveTo",
+    "Class": "UScriptClass'BTTask_NewMoveTo'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "bUseControllerRotationYaw": true,
+      "bStareAt": true,
+      "bStopOnOverlapNeedsUpdate": false,
+      "BlackboardKey": {
+        "SelectedKeyName": "EQSQueryLoc"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Tuosi_StareAtMoveTo'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_09_Tuosi/BT_Boss_Tuosi_StareAtMoveTo.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Tuosi_StareAtMoveTo:BTComposite_Sequence_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_09_Tuosi/BT_Boss_Tuosi_StareAtMoveTo.1"
+      }
+    }
+  }
+]

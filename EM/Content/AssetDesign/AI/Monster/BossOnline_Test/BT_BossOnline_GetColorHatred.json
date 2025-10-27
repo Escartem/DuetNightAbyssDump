@@ -1,0 +1,491 @@
+[
+  {
+    "Type": "BehaviorTree",
+    "Name": "BT_BossOnline_GetColorHatred",
+    "Class": "UScriptClass'BehaviorTree'",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "RootNode": {
+        "ObjectName": "BTComposite_Selector'BT_BossOnline_GetColorHatred:BTComposite_Selector_21'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/BossOnline_Test/BT_BossOnline_GetColorHatred.2"
+      },
+      "BlackboardAsset": {
+        "ObjectName": "BlackboardData'BB_BossOnline_Test'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/BossOnline_Test/BB_BossOnline_Test.0"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_0",
+    "Outer": "BT_BossOnline_GetColorHatred",
+    "Class": "UScriptClass'BTComposite_Selector'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_FilterTargetsByBuffType'BT_BossOnline_GetColorHatred:BTTask_FilterTargetsByBuffType_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/BossOnline_Test/BT_BossOnline_GetColorHatred.8"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_CheckCombatCondition'BT_BossOnline_GetColorHatred:BTDecorator_CheckCombatCondition_0'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/BossOnline_Test/BT_BossOnline_GetColorHatred.5"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_FilterTargetsByBuffType'BT_BossOnline_GetColorHatred:BTTask_FilterTargetsByBuffType_1'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/BossOnline_Test/BT_BossOnline_GetColorHatred.9"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_CheckCombatCondition'BT_BossOnline_GetColorHatred:BTDecorator_CheckCombatCondition_1'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/BossOnline_Test/BT_BossOnline_GetColorHatred.6"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_FilterTargetsByBuffType'BT_BossOnline_GetColorHatred:BTTask_FilterTargetsByBuffType_2'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/BossOnline_Test/BT_BossOnline_GetColorHatred.10"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_CheckCombatCondition'BT_BossOnline_GetColorHatred:BTDecorator_CheckCombatCondition_2'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/BossOnline_Test/BT_BossOnline_GetColorHatred.7"
+            }
+          ],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_BossOnline_GetColorHatred'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/BossOnline_Test/BT_BossOnline_GetColorHatred.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_BossOnline_GetColorHatred:BTComposite_Sequence_33'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/BossOnline_Test/BT_BossOnline_GetColorHatred.4"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_21",
+    "Outer": "BT_BossOnline_GetColorHatred",
+    "Class": "UScriptClass'BTComposite_Selector'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_BossOnline_GetColorHatred:BTComposite_Sequence_33'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/BossOnline_Test/BT_BossOnline_GetColorHatred.4"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_BossOnline_GetColorHatred:BTComposite_Sequence_1'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/BossOnline_Test/BT_BossOnline_GetColorHatred.3"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_GetTarget'BT_BossOnline_GetColorHatred:BTTask_GetTarget_7'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/BossOnline_Test/BT_BossOnline_GetColorHatred.16"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_BossOnline_GetColorHatred'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/BossOnline_Test/BT_BossOnline_GetColorHatred.0"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_1",
+    "Outer": "BT_BossOnline_GetColorHatred",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_FilterTargetsByDis'BT_BossOnline_GetColorHatred:BTTask_FilterTargetsByDis_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/BossOnline_Test/BT_BossOnline_GetColorHatred.11"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_FilterTargetsByType'BT_BossOnline_GetColorHatred:BTTask_FilterTargetsByType_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/BossOnline_Test/BT_BossOnline_GetColorHatred.14"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_FilterTargetsByLiving'BT_BossOnline_GetColorHatred:BTTask_FilterTargetsByLiving_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/BossOnline_Test/BT_BossOnline_GetColorHatred.13"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_LastFilterTargets'BT_BossOnline_GetColorHatred:BTTask_LastFilterTargets_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/BossOnline_Test/BT_BossOnline_GetColorHatred.17"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_BossOnline_GetColorHatred'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/BossOnline_Test/BT_BossOnline_GetColorHatred.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_BossOnline_GetColorHatred:BTComposite_Selector_21'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/BossOnline_Test/BT_BossOnline_GetColorHatred.2"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_33",
+    "Outer": "BT_BossOnline_GetColorHatred",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_FilterTargetsByDis'BT_BossOnline_GetColorHatred:BTTask_FilterTargetsByDis_3'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/BossOnline_Test/BT_BossOnline_GetColorHatred.12"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_FilterTargetsByType'BT_BossOnline_GetColorHatred:BTTask_FilterTargetsByType_4'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/BossOnline_Test/BT_BossOnline_GetColorHatred.15"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector'BT_BossOnline_GetColorHatred:BTComposite_Selector_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/BossOnline_Test/BT_BossOnline_GetColorHatred.1"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_LastFilterTargets'BT_BossOnline_GetColorHatred:BTTask_LastFilterTargets_3'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/BossOnline_Test/BT_BossOnline_GetColorHatred.18"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_BossOnline_GetColorHatred'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/BossOnline_Test/BT_BossOnline_GetColorHatred.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_BossOnline_GetColorHatred:BTComposite_Selector_21'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/BossOnline_Test/BT_BossOnline_GetColorHatred.2"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_CheckCombatCondition",
+    "Name": "BTDecorator_CheckCombatCondition_0",
+    "Outer": "BT_BossOnline_GetColorHatred",
+    "Class": "UScriptClass'BTDecorator_CheckCombatCondition'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "CombatConditionId": 3040004,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_BossOnline_GetColorHatred'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/BossOnline_Test/BT_BossOnline_GetColorHatred.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_BossOnline_GetColorHatred:BTComposite_Selector_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/BossOnline_Test/BT_BossOnline_GetColorHatred.1"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_CheckCombatCondition",
+    "Name": "BTDecorator_CheckCombatCondition_1",
+    "Outer": "BT_BossOnline_GetColorHatred",
+    "Class": "UScriptClass'BTDecorator_CheckCombatCondition'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "CombatConditionId": 3040005,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_BossOnline_GetColorHatred'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/BossOnline_Test/BT_BossOnline_GetColorHatred.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_BossOnline_GetColorHatred:BTComposite_Selector_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/BossOnline_Test/BT_BossOnline_GetColorHatred.1"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_CheckCombatCondition",
+    "Name": "BTDecorator_CheckCombatCondition_2",
+    "Outer": "BT_BossOnline_GetColorHatred",
+    "Class": "UScriptClass'BTDecorator_CheckCombatCondition'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "CombatConditionId": 3040006,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_BossOnline_GetColorHatred'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/BossOnline_Test/BT_BossOnline_GetColorHatred.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_BossOnline_GetColorHatred:BTComposite_Selector_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/BossOnline_Test/BT_BossOnline_GetColorHatred.1"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_FilterTargetsByBuffType",
+    "Name": "BTTask_FilterTargetsByBuffType_0",
+    "Outer": "BT_BossOnline_GetColorHatred",
+    "Class": "UScriptClass'BTTask_FilterTargetsByBuffType'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "BuffType": 30401,
+      "TypeOfFilterType": "EHatredTargetType::Player",
+      "TypeOfFilterList": "ETypeOfFilterList::AfterFilter",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_BossOnline_GetColorHatred'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/BossOnline_Test/BT_BossOnline_GetColorHatred.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_BossOnline_GetColorHatred:BTComposite_Selector_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/BossOnline_Test/BT_BossOnline_GetColorHatred.1"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_FilterTargetsByBuffType",
+    "Name": "BTTask_FilterTargetsByBuffType_1",
+    "Outer": "BT_BossOnline_GetColorHatred",
+    "Class": "UScriptClass'BTTask_FilterTargetsByBuffType'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "BuffType": 30402,
+      "TypeOfFilterType": "EHatredTargetType::Player",
+      "TypeOfFilterList": "ETypeOfFilterList::AfterFilter",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_BossOnline_GetColorHatred'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/BossOnline_Test/BT_BossOnline_GetColorHatred.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_BossOnline_GetColorHatred:BTComposite_Selector_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/BossOnline_Test/BT_BossOnline_GetColorHatred.1"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_FilterTargetsByBuffType",
+    "Name": "BTTask_FilterTargetsByBuffType_2",
+    "Outer": "BT_BossOnline_GetColorHatred",
+    "Class": "UScriptClass'BTTask_FilterTargetsByBuffType'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "BuffType": 30407,
+      "TypeOfFilterType": "EHatredTargetType::Player",
+      "TypeOfFilterList": "ETypeOfFilterList::AfterFilter",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_BossOnline_GetColorHatred'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/BossOnline_Test/BT_BossOnline_GetColorHatred.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_BossOnline_GetColorHatred:BTComposite_Selector_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/BossOnline_Test/BT_BossOnline_GetColorHatred.1"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_FilterTargetsByDis",
+    "Name": "BTTask_FilterTargetsByDis_0",
+    "Outer": "BT_BossOnline_GetColorHatred",
+    "Class": "UScriptClass'BTTask_FilterTargetsByDis'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "MaxDis": 10000.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_BossOnline_GetColorHatred'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/BossOnline_Test/BT_BossOnline_GetColorHatred.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_BossOnline_GetColorHatred:BTComposite_Sequence_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/BossOnline_Test/BT_BossOnline_GetColorHatred.3"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_FilterTargetsByDis",
+    "Name": "BTTask_FilterTargetsByDis_3",
+    "Outer": "BT_BossOnline_GetColorHatred",
+    "Class": "UScriptClass'BTTask_FilterTargetsByDis'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "MaxDis": 10000.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_BossOnline_GetColorHatred'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/BossOnline_Test/BT_BossOnline_GetColorHatred.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_BossOnline_GetColorHatred:BTComposite_Sequence_33'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/BossOnline_Test/BT_BossOnline_GetColorHatred.4"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_FilterTargetsByLiving",
+    "Name": "BTTask_FilterTargetsByLiving_0",
+    "Outer": "BT_BossOnline_GetColorHatred",
+    "Class": "UScriptClass'BTTask_FilterTargetsByLiving'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TypeOfFilterList": "ETypeOfFilterList::AfterFilter",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_BossOnline_GetColorHatred'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/BossOnline_Test/BT_BossOnline_GetColorHatred.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_BossOnline_GetColorHatred:BTComposite_Sequence_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/BossOnline_Test/BT_BossOnline_GetColorHatred.3"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_FilterTargetsByType",
+    "Name": "BTTask_FilterTargetsByType_0",
+    "Outer": "BT_BossOnline_GetColorHatred",
+    "Class": "UScriptClass'BTTask_FilterTargetsByType'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TypeOfFilterType": "EHatredTargetType::Player",
+      "TypeOfFilterList": "ETypeOfFilterList::AfterFilter",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_BossOnline_GetColorHatred'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/BossOnline_Test/BT_BossOnline_GetColorHatred.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_BossOnline_GetColorHatred:BTComposite_Sequence_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/BossOnline_Test/BT_BossOnline_GetColorHatred.3"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_FilterTargetsByType",
+    "Name": "BTTask_FilterTargetsByType_4",
+    "Outer": "BT_BossOnline_GetColorHatred",
+    "Class": "UScriptClass'BTTask_FilterTargetsByType'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TypeOfFilterType": "EHatredTargetType::Player",
+      "TypeOfFilterList": "ETypeOfFilterList::AfterFilter",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_BossOnline_GetColorHatred'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/BossOnline_Test/BT_BossOnline_GetColorHatred.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_BossOnline_GetColorHatred:BTComposite_Sequence_33'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/BossOnline_Test/BT_BossOnline_GetColorHatred.4"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_GetTarget",
+    "Name": "BTTask_GetTarget_7",
+    "Outer": "BT_BossOnline_GetColorHatred",
+    "Class": "UScriptClass'BTTask_GetTarget'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TargetType": "EHatredTargetType::Player",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_BossOnline_GetColorHatred'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/BossOnline_Test/BT_BossOnline_GetColorHatred.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_BossOnline_GetColorHatred:BTComposite_Selector_21'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/BossOnline_Test/BT_BossOnline_GetColorHatred.2"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_LastFilterTargets",
+    "Name": "BTTask_LastFilterTargets_0",
+    "Outer": "BT_BossOnline_GetColorHatred",
+    "Class": "UScriptClass'BTTask_LastFilterTargets'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TypeOfFilterList": "ETypeOfFilterList::AfterFilter",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_BossOnline_GetColorHatred'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/BossOnline_Test/BT_BossOnline_GetColorHatred.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_BossOnline_GetColorHatred:BTComposite_Sequence_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/BossOnline_Test/BT_BossOnline_GetColorHatred.3"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_LastFilterTargets",
+    "Name": "BTTask_LastFilterTargets_3",
+    "Outer": "BT_BossOnline_GetColorHatred",
+    "Class": "UScriptClass'BTTask_LastFilterTargets'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TypeOfFilterList": "ETypeOfFilterList::AfterFilter",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_BossOnline_GetColorHatred'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/BossOnline_Test/BT_BossOnline_GetColorHatred.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_BossOnline_GetColorHatred:BTComposite_Sequence_33'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/BossOnline_Test/BT_BossOnline_GetColorHatred.4"
+      }
+    }
+  }
+]

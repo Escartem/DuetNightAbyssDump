@@ -1,0 +1,474 @@
+[
+  {
+    "Type": "BehaviorTree",
+    "Name": "BT_9Dajie_Run",
+    "Class": "UScriptClass'BehaviorTree'",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "RootNode": {
+        "ObjectName": "BTComposite_Selector'BT_9Dajie_Run:BTComposite_Selector_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/NE_Dajie/BT_9Dajie_Run.1"
+      },
+      "BlackboardAsset": {
+        "ObjectName": "BlackboardData'BB_9Dajie'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/NE_Dajie/BB_9Dajie.0"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_1",
+    "Outer": "BT_9Dajie_Run",
+    "Class": "UScriptClass'BTComposite_Selector'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_9Dajie_Run:BTComposite_Sequence_1'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/NE_Dajie/BT_9Dajie_Run.2"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_9Dajie_Run:BTDecorator_Blackboard_14'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/NE_Dajie/BT_9Dajie_Run.6"
+            },
+            {
+              "ObjectName": "BTDecorator_IsAtLocation'BT_9Dajie_Run:BTDecorator_IsAtLocation_6'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/NE_Dajie/BT_9Dajie_Run.8"
+            },
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_9Dajie_Run:BTDecorator_Blackboard_15'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/NE_Dajie/BT_9Dajie_Run.7"
+            },
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_9Dajie_Run:BTDecorator_Blackboard_0'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/NE_Dajie/BT_9Dajie_Run.4"
+            }
+          ],
+          "DecoratorOps": [
+            {
+              "Operation": "EBTDecoratorLogic::Or",
+              "Number": 4
+            },
+            {
+              "Operation": "EBTDecoratorLogic::Test",
+              "Number": 0
+            },
+            {
+              "Operation": "EBTDecoratorLogic::Test",
+              "Number": 1
+            },
+            {
+              "Operation": "EBTDecoratorLogic::Test",
+              "Number": 2
+            },
+            {
+              "Operation": "EBTDecoratorLogic::Test",
+              "Number": 3
+            }
+          ]
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_9Dajie_Run:BTComposite_Sequence_6'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/NE_Dajie/BT_9Dajie_Run.3"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_9Dajie_Run:BTDecorator_Blackboard_1'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/NE_Dajie/BT_9Dajie_Run.5"
+            }
+          ],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_9Dajie_Run'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/NE_Dajie/BT_9Dajie_Run.0"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_1",
+    "Outer": "BT_9Dajie_Run",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_EMRunEQSQuery'BT_9Dajie_Run:BTTask_EMRunEQSQuery_2'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/NE_Dajie/BT_9Dajie_Run.11"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_NewMoveTo'BT_9Dajie_Run:BTTask_NewMoveTo_1'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/NE_Dajie/BT_9Dajie_Run.13"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_TimeLimit'BT_9Dajie_Run:BTDecorator_TimeLimit_2'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/NE_Dajie/BT_9Dajie_Run.9"
+            }
+          ],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_9Dajie_Run'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/NE_Dajie/BT_9Dajie_Run.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_9Dajie_Run:BTComposite_Selector_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/NE_Dajie/BT_9Dajie_Run.1"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_6",
+    "Outer": "BT_9Dajie_Run",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_NewMoveTo'BT_9Dajie_Run:BTTask_NewMoveTo_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/NE_Dajie/BT_9Dajie_Run.12"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_TimeLimit'BT_9Dajie_Run:BTDecorator_TimeLimit_3'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/NE_Dajie/BT_9Dajie_Run.10"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_SetBBValue_C'BT_9Dajie_Run:BTTask_SetBBValue_C_3'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/NE_Dajie/BT_9Dajie_Run.14"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_9Dajie_Run'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/NE_Dajie/BT_9Dajie_Run.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_9Dajie_Run:BTComposite_Selector_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/NE_Dajie/BT_9Dajie_Run.1"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_0",
+    "Outer": "BT_9Dajie_Run",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "CachedDescription": "CanReachEscape is 未设置",
+      "OperationType": 1,
+      "BlackboardKey": {
+        "SelectedKeyName": "CanReachEscape"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_9Dajie_Run'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/NE_Dajie/BT_9Dajie_Run.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_9Dajie_Run:BTComposite_Selector_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/NE_Dajie/BT_9Dajie_Run.1"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_1",
+    "Outer": "BT_9Dajie_Run",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "CachedDescription": "CanReachEscape is 已设置",
+      "BlackboardKey": {
+        "SelectedKeyName": "CanReachEscape"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_9Dajie_Run'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/NE_Dajie/BT_9Dajie_Run.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_9Dajie_Run:BTComposite_Selector_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/NE_Dajie/BT_9Dajie_Run.1"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_14",
+    "Outer": "BT_9Dajie_Run",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "CachedDescription": "ExtractionLoc is 未设置",
+      "OperationType": 1,
+      "BlackboardKey": {
+        "SelectedKeyName": "ExtractionLoc"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_9Dajie_Run'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/NE_Dajie/BT_9Dajie_Run.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_9Dajie_Run:BTComposite_Selector_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/NE_Dajie/BT_9Dajie_Run.1"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_15",
+    "Outer": "BT_9Dajie_Run",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "CachedDescription": "ReachExtractionLoc is 已设置",
+      "BlackboardKey": {
+        "SelectedKeyName": "ReachExtractionLoc"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_9Dajie_Run'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/NE_Dajie/BT_9Dajie_Run.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_9Dajie_Run:BTComposite_Selector_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/NE_Dajie/BT_9Dajie_Run.1"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_IsAtLocation",
+    "Name": "BTDecorator_IsAtLocation_6",
+    "Outer": "BT_9Dajie_Run",
+    "Class": "UScriptClass'BTDecorator_IsAtLocation'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "AcceptableRadius": 1000.0,
+      "bUseNavAgentGoalLocation": false,
+      "bPathFindingBasedTest": false,
+      "BlackboardKey": {
+        "SelectedKeyName": "Target"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_9Dajie_Run'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/NE_Dajie/BT_9Dajie_Run.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_9Dajie_Run:BTComposite_Selector_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/NE_Dajie/BT_9Dajie_Run.1"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_TimeLimit",
+    "Name": "BTDecorator_TimeLimit_2",
+    "Outer": "BT_9Dajie_Run",
+    "Class": "UScriptClass'BTDecorator_TimeLimit'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_9Dajie_Run'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/NE_Dajie/BT_9Dajie_Run.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_9Dajie_Run:BTComposite_Sequence_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/NE_Dajie/BT_9Dajie_Run.2"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_TimeLimit",
+    "Name": "BTDecorator_TimeLimit_3",
+    "Outer": "BT_9Dajie_Run",
+    "Class": "UScriptClass'BTDecorator_TimeLimit'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_9Dajie_Run'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/NE_Dajie/BT_9Dajie_Run.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_9Dajie_Run:BTComposite_Sequence_6'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/NE_Dajie/BT_9Dajie_Run.3"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_EMRunEQSQuery",
+    "Name": "BTTask_EMRunEQSQuery_2",
+    "Outer": "BT_9Dajie_Run",
+    "Class": "UScriptClass'BTTask_EMRunEQSQuery'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "EQSRequest": {
+        "QueryTemplate": {
+          "ObjectName": "EnvQuery'EQS_SelfDonutConsiderBTTarget'",
+          "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Z_EnvQuery/EQS_SelfDonutConsiderBTTarget.6"
+        },
+        "QueryConfig": [
+          {
+            "ParamName": "EMDonut.InnerRadius",
+            "ParamType": "EAIParamType::Float",
+            "Value": 300.0,
+            "BBKey": {
+              "SelectedKeyName": "None",
+              "bNoneIsAllowedValue": true
+            }
+          },
+          {
+            "ParamName": "EMDonut.OuterRadius",
+            "ParamType": "EAIParamType::Float",
+            "Value": 3000.0,
+            "BBKey": {
+              "SelectedKeyName": "None",
+              "bNoneIsAllowedValue": true
+            }
+          },
+          {
+            "ParamName": "EMDonut.NumberOfRings",
+            "ParamType": "EAIParamType::Int",
+            "Value": 8.0,
+            "BBKey": {
+              "SelectedKeyName": "None",
+              "bNoneIsAllowedValue": true
+            }
+          },
+          {
+            "ParamName": "EMDonut.PointsPerRing",
+            "ParamType": "EAIParamType::Int",
+            "Value": 10.0,
+            "BBKey": {
+              "SelectedKeyName": "None",
+              "bNoneIsAllowedValue": true
+            }
+          },
+          {
+            "ParamName": "EMDonut.ArcAngle",
+            "ParamType": "EAIParamType::Float",
+            "Value": 360.0,
+            "BBKey": {
+              "SelectedKeyName": "None",
+              "bNoneIsAllowedValue": true
+            }
+          },
+          {
+            "ParamName": "EMDistance.ScoringFactor",
+            "ParamType": "EAIParamType::Float",
+            "Value": 1.0,
+            "BBKey": {
+              "SelectedKeyName": "None",
+              "bNoneIsAllowedValue": true
+            }
+          }
+        ],
+        "RunMode": "EEnvQueryRunMode::RandomBest5Pct"
+      },
+      "BlackboardKey": {
+        "SelectedKeyName": "EQSQueryLoc"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_9Dajie_Run'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/NE_Dajie/BT_9Dajie_Run.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_9Dajie_Run:BTComposite_Sequence_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/NE_Dajie/BT_9Dajie_Run.2"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_NewMoveTo",
+    "Name": "BTTask_NewMoveTo_0",
+    "Outer": "BT_9Dajie_Run",
+    "Class": "UScriptClass'BTTask_NewMoveTo'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "bOrientRotationToMovement": true,
+      "MoveTypeState": "EMoveTypeState::MTS_Run",
+      "AcceptableRadius": 200.0,
+      "bStopOnOverlapNeedsUpdate": false,
+      "BlackboardKey": {
+        "SelectedKeyName": "ExtractionLoc"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_9Dajie_Run'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/NE_Dajie/BT_9Dajie_Run.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_9Dajie_Run:BTComposite_Sequence_6'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/NE_Dajie/BT_9Dajie_Run.3"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_NewMoveTo",
+    "Name": "BTTask_NewMoveTo_1",
+    "Outer": "BT_9Dajie_Run",
+    "Class": "UScriptClass'BTTask_NewMoveTo'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "bOrientRotationToMovement": true,
+      "MoveTypeState": "EMoveTypeState::MTS_Run",
+      "bStopOnOverlapNeedsUpdate": false,
+      "BlackboardKey": {
+        "SelectedKeyName": "EQSQueryLoc"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_9Dajie_Run'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/NE_Dajie/BT_9Dajie_Run.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_9Dajie_Run:BTComposite_Sequence_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/NE_Dajie/BT_9Dajie_Run.2"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_SetBBValue_C",
+    "Name": "BTTask_SetBBValue_C_3",
+    "Outer": "BT_9Dajie_Run",
+    "Class": "BlueprintGeneratedClass'EM/Content/BluePrints/AI/BTTask/BTTask_SetBBValue.BTTask_SetBBValue_C'",
+    "Template": {
+      "ObjectName": "BTTask_SetBBValue_C'Default__BTTask_SetBBValue_C'",
+      "ObjectPath": "EM/Content/BluePrints/AI/BTTask/BTTask_SetBBValue.3"
+    },
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "KeyName": "ReachExtractionLoc",
+      "BoolValue": true,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_9Dajie_Run'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/NE_Dajie/BT_9Dajie_Run.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_9Dajie_Run:BTComposite_Sequence_6'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/NE_Dajie/BT_9Dajie_Run.3"
+      }
+    }
+  }
+]

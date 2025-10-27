@@ -1,0 +1,202 @@
+[
+  {
+    "Type": "BehaviorTree",
+    "Name": "BT_7Juji_Alarm",
+    "Class": "UScriptClass'BehaviorTree'",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "RootNode": {
+        "ObjectName": "BTComposite_Selector'BT_7Juji_Alarm:BTComposite_Selector_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_Juji/BT_7Juji_Alarm.1"
+      },
+      "BlackboardAsset": {
+        "ObjectName": "BlackboardData'BB_Mon_Parent_Ranged'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Parent/BB_Mon_Parent_Ranged.0"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_0",
+    "Outer": "BT_7Juji_Alarm",
+    "Class": "UScriptClass'BTComposite_Selector'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_7Juji_Alarm:BTComposite_Sequence_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_Juji/BT_7Juji_Alarm.2"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_7Juji_Alarm:BTDecorator_Blackboard_0'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_Juji/BT_7Juji_Alarm.3"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait'BT_7Juji_Alarm:BTTask_Wait_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_Juji/BT_7Juji_Alarm.7"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_7Juji_Alarm'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_Juji/BT_7Juji_Alarm.0"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_0",
+    "Outer": "BT_7Juji_Alarm",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_NewMoveTo'BT_7Juji_Alarm:BTTask_NewMoveTo_1'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_Juji/BT_7Juji_Alarm.4"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_StareAt'BT_7Juji_Alarm:BTTask_StareAt_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_Juji/BT_7Juji_Alarm.5"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_UseSkill'BT_7Juji_Alarm:BTTask_UseSkill_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_Juji/BT_7Juji_Alarm.6"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_7Juji_Alarm'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_Juji/BT_7Juji_Alarm.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_7Juji_Alarm:BTComposite_Selector_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_Juji/BT_7Juji_Alarm.1"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_0",
+    "Outer": "BT_7Juji_Alarm",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "StringValue": "UseAlarmMechanism",
+      "CachedDescription": "AlarmMode 为相等 [UseAlarmMechanism]",
+      "BlackboardKey": {
+        "SelectedKeyName": "AlarmMode"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_7Juji_Alarm'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_Juji/BT_7Juji_Alarm.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_7Juji_Alarm:BTComposite_Selector_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_Juji/BT_7Juji_Alarm.1"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_NewMoveTo",
+    "Name": "BTTask_NewMoveTo_1",
+    "Outer": "BT_7Juji_Alarm",
+    "Class": "UScriptClass'BTTask_NewMoveTo'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "bOrientRotationToMovement": true,
+      "MoveTypeState": "EMoveTypeState::MTS_Run",
+      "bStopOnOverlapNeedsUpdate": false,
+      "BlackboardKey": {
+        "SelectedKeyName": "AlarmMechanismInteractiveLoc"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_7Juji_Alarm'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_Juji/BT_7Juji_Alarm.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_7Juji_Alarm:BTComposite_Sequence_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_Juji/BT_7Juji_Alarm.2"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_StareAt",
+    "Name": "BTTask_StareAt_0",
+    "Outer": "BT_7Juji_Alarm",
+    "Class": "UScriptClass'BTTask_StareAt'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "bPlayMontageRotate": true,
+      "BBName": "AlarmMechanism",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_7Juji_Alarm'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_Juji/BT_7Juji_Alarm.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_7Juji_Alarm:BTComposite_Sequence_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_Juji/BT_7Juji_Alarm.2"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_UseSkill",
+    "Name": "BTTask_UseSkill_0",
+    "Outer": "BT_7Juji_Alarm",
+    "Class": "UScriptClass'BTTask_UseSkill'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SkillId": 4,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_7Juji_Alarm'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_Juji/BT_7Juji_Alarm.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_7Juji_Alarm:BTComposite_Sequence_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_Juji/BT_7Juji_Alarm.2"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_0",
+    "Outer": "BT_7Juji_Alarm",
+    "Class": "UScriptClass'BTTask_Wait'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "WaitTime": 0.5,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_7Juji_Alarm'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_Juji/BT_7Juji_Alarm.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_7Juji_Alarm:BTComposite_Selector_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_Juji/BT_7Juji_Alarm.1"
+      }
+    }
+  }
+]

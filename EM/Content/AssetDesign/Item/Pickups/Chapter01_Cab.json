@@ -1,0 +1,244 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "Chapter01_Cab_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Super": {
+      "ObjectName": "BlueprintGeneratedClass'BP_PickupStatic_C'",
+      "ObjectPath": "EM/Content/AssetDesign/Item/Pickups/BP_PickupStatic.3"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'Chapter01_Cab_C:SimpleConstructionScript_0'",
+        "ObjectPath": "EM/Content/AssetDesign/Item/Pickups/Chapter01_Cab.6"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "BlueprintGeneratedClass'BP_PickupStatic_C'",
+      "ObjectPath": "EM/Content/AssetDesign/Item/Pickups/BP_PickupStatic.3"
+    },
+    "ClassFlags": "CLASS_Config | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "Chapter01_Cab_C'Default__Chapter01_Cab_C'",
+      "ObjectPath": "EM/Content/AssetDesign/Item/Pickups/Chapter01_Cab.1"
+    }
+  },
+  {
+    "Type": "Chapter01_Cab_C",
+    "Name": "Default__Chapter01_Cab_C",
+    "Class": "BlueprintGeneratedClass'EM/Content/AssetDesign/Item/Pickups/Chapter01_Cab.Chapter01_Cab_C'",
+    "Template": {
+      "ObjectName": "BP_PickupStatic_C'Default__BP_PickupStatic_C'",
+      "ObjectPath": "EM/Content/AssetDesign/Item/Pickups/BP_PickupStatic.4"
+    },
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "StaticMeshComponent": {
+        "ObjectName": "StaticMeshComponent'Default__Chapter01_Cab_C:StaticMeshComponent'",
+        "ObjectPath": "EM/Content/AssetDesign/Item/Pickups/Chapter01_Cab.8"
+      },
+      "SphereComponent": {
+        "ObjectName": "SphereComponent'Default__Chapter01_Cab_C:SphereComponent'",
+        "ObjectPath": "EM/Content/AssetDesign/Item/Pickups/Chapter01_Cab.7"
+      },
+      "PickUpInteractiveComponent": {
+        "ObjectName": "BP_PickUpInteractiveComponent_C'Default__Chapter01_Cab_C:UPickUpInteractiveComponent'",
+        "ObjectPath": "EM/Content/AssetDesign/Item/Pickups/Chapter01_Cab.2"
+      },
+      "ProjectileMovementComponent": {
+        "ObjectName": "PickupBaseMovementComponent'Default__Chapter01_Cab_C:ProjectileMovementComponent'",
+        "ObjectPath": "EM/Content/AssetDesign/Item/Pickups/Chapter01_Cab.3"
+      },
+      "RootComponent": {
+        "ObjectName": "SphereComponent'Default__Chapter01_Cab_C:SphereComponent'",
+        "ObjectPath": "EM/Content/AssetDesign/Item/Pickups/Chapter01_Cab.7"
+      }
+    }
+  },
+  {
+    "Type": "BP_PickUpInteractiveComponent_C",
+    "Name": "UPickUpInteractiveComponent",
+    "Outer": "Default__Chapter01_Cab_C",
+    "Class": "BlueprintGeneratedClass'EM/Content/BluePrints/Item/BP_PickUpInteractiveComponent.BP_PickUpInteractiveComponent_C'",
+    "Template": {
+      "ObjectName": "BP_PickUpInteractiveComponent_C'Default__BP_PickupStatic_C:UPickUpInteractiveComponent'",
+      "ObjectPath": "EM/Content/AssetDesign/Item/Pickups/BP_PickupStatic.5"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "SphereComponent'Default__Chapter01_Cab_C:SphereComponent'",
+        "ObjectPath": "EM/Content/AssetDesign/Item/Pickups/Chapter01_Cab.7"
+      },
+      "RelativeScale3D": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      }
+    }
+  },
+  {
+    "Type": "PickupBaseMovementComponent",
+    "Name": "ProjectileMovementComponent",
+    "Outer": "Default__Chapter01_Cab_C",
+    "Class": "UScriptClass'PickupBaseMovementComponent'",
+    "Template": {
+      "ObjectName": "PickupBaseMovementComponent'Default__BP_PickupStatic_C:ProjectileMovementComponent'",
+      "ObjectPath": "EM/Content/AssetDesign/Item/Pickups/BP_PickupStatic.6"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "OnProjectileStop": {
+        "InvocationList": [
+          {
+            "Object": {
+              "ObjectName": "Chapter01_Cab_C'Default__Chapter01_Cab_C'",
+              "ObjectPath": "EM/Content/AssetDesign/Item/Pickups/Chapter01_Cab.1"
+            },
+            "FunctionName": "OnProjectileStopEvent"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Outer": "Chapter01_Cab_C",
+    "Class": "UScriptClass'SceneComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'Chapter01_Cab_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "EM/Content/AssetDesign/Item/Pickups/Chapter01_Cab.4"
+      },
+      "VariableGuid": "1C805E18-4CC7F748-E6D09D8D-7D8D99FD",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Outer": "Chapter01_Cab_C",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'Chapter01_Cab_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "EM/Content/AssetDesign/Item/Pickups/Chapter01_Cab.5"
+      }
+    }
+  },
+  {
+    "Type": "SphereComponent",
+    "Name": "SphereComponent",
+    "Outer": "Default__Chapter01_Cab_C",
+    "Class": "UScriptClass'SphereComponent'",
+    "Template": {
+      "ObjectName": "SphereComponent'Default__BP_PickupStatic_C:SphereComponent'",
+      "ObjectPath": "EM/Content/AssetDesign/Item/Pickups/BP_PickupStatic.10"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "PhysicsVolumeChangedDelegate": {
+        "InvocationList": [
+          {
+            "Object": {
+              "ObjectName": "PickupBaseMovementComponent'Default__Chapter01_Cab_C:ProjectileMovementComponent'",
+              "ObjectPath": "EM/Content/AssetDesign/Item/Pickups/Chapter01_Cab.3"
+            },
+            "FunctionName": "PhysicsVolumeChanged"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "StaticMeshComponent",
+    "Outer": "Default__Chapter01_Cab_C",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Template": {
+      "ObjectName": "StaticMeshComponent'Default__BP_PickupStatic_C:StaticMeshComponent'",
+      "ObjectPath": "EM/Content/AssetDesign/Item/Pickups/BP_PickupStatic.11"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'SM_Home_Cab01A'",
+        "ObjectPath": "EM/Content/Asset/Scene/EN002_Haiboliya/Binghucheng/BH_Home/Mesh/SM_Home_Cab01A.2"
+      },
+      "BodyInstance": {
+        "CollisionProfileName": "Custom",
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "WorldDynamic",
+              "Response": "ECR_Overlap"
+            },
+            {
+              "Channel": "Pawn",
+              "Response": "ECR_Overlap"
+            },
+            {
+              "Channel": "Camera",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "PhysicsBody",
+              "Response": "ECR_Overlap"
+            },
+            {
+              "Channel": "Vehicle",
+              "Response": "ECR_Overlap"
+            },
+            {
+              "Channel": "Destructible",
+              "Response": "ECR_Overlap"
+            },
+            {
+              "Channel": "TraceExceptChar",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "MonsterPawn",
+              "Response": "ECR_Overlap"
+            }
+          ]
+        }
+      },
+      "AttachParent": {
+        "ObjectName": "SphereComponent'Default__Chapter01_Cab_C:SphereComponent'",
+        "ObjectPath": "EM/Content/AssetDesign/Item/Pickups/Chapter01_Cab.7"
+      },
+      "RelativeLocation": {
+        "X": -0.00027111886,
+        "Y": 0.0003747239,
+        "Z": 28.214016
+      },
+      "RelativeRotation": {
+        "Pitch": 90.0,
+        "Yaw": -0.057429396,
+        "Roll": 92.113
+      }
+    }
+  }
+]

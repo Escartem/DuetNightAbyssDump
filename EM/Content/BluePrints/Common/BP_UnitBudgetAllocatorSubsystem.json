@@ -1,0 +1,2851 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BP_UnitBudgetAllocatorSubsystem_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "SuperStruct": {
+      "ObjectName": "Class'UnitBudgetAllocatorSubsystem'",
+      "ObjectPath": "/Script/EM"
+    },
+    "ClassFlags": "CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint",
+    "ClassWithin": {
+      "ObjectName": "Class'GameInstance'",
+      "ObjectPath": "/Script/Engine"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BP_UnitBudgetAllocatorSubsystem_C'Default__BP_UnitBudgetAllocatorSubsystem_C'",
+      "ObjectPath": "EM/Content/BluePrints/Common/BP_UnitBudgetAllocatorSubsystem.1"
+    }
+  },
+  {
+    "Type": "BP_UnitBudgetAllocatorSubsystem_C",
+    "Name": "Default__BP_UnitBudgetAllocatorSubsystem_C",
+    "Class": "BlueprintGeneratedClass'EM/Content/BluePrints/Common/BP_UnitBudgetAllocatorSubsystem.BP_UnitBudgetAllocatorSubsystem_C'",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "UnitBudgetPCParameters": [
+        {
+          "Key": "EUnitBudgetType::MonsterUnit",
+          "Value": {
+            "Parameters": [
+              {
+                "Key": "EEMUnitBudgetQualityLevel::High",
+                "Value": {
+                  "UnitTickLimitCount": 50,
+                  "ExtraUnitTickLimitCount": 0,
+                  "ExtraUnitTickLimitTime": 10.0,
+                  "ExtraUnitTickExitDistance": 2500.0,
+                  "StateChangeThrottleInTimes": 2.0,
+                  "ExtraSignificanceParameters": [
+                    {
+                      "ExtraSource": "EExtraSignificanceSource::GameModeType",
+                      "ExtraParam": "Defence",
+                      "ExtraTarget": "EExtraSignificanceTarget::DefenceCore",
+                      "ExtraLimitCount": 10
+                    },
+                    {
+                      "ExtraSource": "EExtraSignificanceSource::GameModeType",
+                      "ExtraParam": "DefencePro",
+                      "ExtraTarget": "EExtraSignificanceTarget::DefenceCore",
+                      "ExtraLimitCount": 10
+                    },
+                    {
+                      "ExtraSource": "EExtraSignificanceSource::GameModeType",
+                      "ExtraParam": "Excavation",
+                      "ExtraTarget": "EExtraSignificanceTarget::Excavation",
+                      "ExtraLimitCount": 20
+                    },
+                    {
+                      "ExtraSource": "EExtraSignificanceSource::GameModeType",
+                      "ExtraParam": "Hijack",
+                      "ExtraTarget": "EExtraSignificanceTarget::Trolly",
+                      "ExtraLimitCount": 10
+                    }
+                  ],
+                  "TickInterval": 0.0,
+                  "LowWarningTickInterval": 0.0,
+                  "HighWarningTickInterval": 0.0,
+                  "TickBalance": 1,
+                  "LowWarningBalance": 0,
+                  "HighWarningTickBalance": 0
+                }
+              },
+              {
+                "Key": "EEMUnitBudgetQualityLevel::Medium",
+                "Value": {
+                  "UnitTickLimitCount": 50,
+                  "ExtraUnitTickLimitCount": 0,
+                  "ExtraUnitTickLimitTime": 10.0,
+                  "ExtraUnitTickExitDistance": 2500.0,
+                  "StateChangeThrottleInTimes": 2.0,
+                  "ExtraSignificanceParameters": [
+                    {
+                      "ExtraSource": "EExtraSignificanceSource::GameModeType",
+                      "ExtraParam": "Defence",
+                      "ExtraTarget": "EExtraSignificanceTarget::DefenceCore",
+                      "ExtraLimitCount": 10
+                    },
+                    {
+                      "ExtraSource": "EExtraSignificanceSource::GameModeType",
+                      "ExtraParam": "DefencePro",
+                      "ExtraTarget": "EExtraSignificanceTarget::DefenceCore",
+                      "ExtraLimitCount": 10
+                    },
+                    {
+                      "ExtraSource": "EExtraSignificanceSource::GameModeType",
+                      "ExtraParam": "Excavation",
+                      "ExtraTarget": "EExtraSignificanceTarget::Excavation",
+                      "ExtraLimitCount": 20
+                    },
+                    {
+                      "ExtraSource": "EExtraSignificanceSource::GameModeType",
+                      "ExtraParam": "Hijack",
+                      "ExtraTarget": "EExtraSignificanceTarget::Trolly",
+                      "ExtraLimitCount": 10
+                    }
+                  ],
+                  "TickInterval": 0.0,
+                  "LowWarningTickInterval": 0.0,
+                  "HighWarningTickInterval": 0.0,
+                  "TickBalance": 2,
+                  "LowWarningBalance": 0,
+                  "HighWarningTickBalance": 0
+                }
+              },
+              {
+                "Key": "EEMUnitBudgetQualityLevel::Low",
+                "Value": {
+                  "UnitTickLimitCount": 45,
+                  "ExtraUnitTickLimitCount": 0,
+                  "ExtraUnitTickLimitTime": 10.0,
+                  "ExtraUnitTickExitDistance": 2500.0,
+                  "StateChangeThrottleInTimes": 2.0,
+                  "ExtraSignificanceParameters": [
+                    {
+                      "ExtraSource": "EExtraSignificanceSource::GameModeType",
+                      "ExtraParam": "Defence",
+                      "ExtraTarget": "EExtraSignificanceTarget::DefenceCore",
+                      "ExtraLimitCount": 10
+                    },
+                    {
+                      "ExtraSource": "EExtraSignificanceSource::GameModeType",
+                      "ExtraParam": "DefencePro",
+                      "ExtraTarget": "EExtraSignificanceTarget::DefenceCore",
+                      "ExtraLimitCount": 10
+                    },
+                    {
+                      "ExtraSource": "EExtraSignificanceSource::GameModeType",
+                      "ExtraParam": "Excavation",
+                      "ExtraTarget": "EExtraSignificanceTarget::Excavation",
+                      "ExtraLimitCount": 20
+                    },
+                    {
+                      "ExtraSource": "EExtraSignificanceSource::GameModeType",
+                      "ExtraParam": "Hijack",
+                      "ExtraTarget": "EExtraSignificanceTarget::Trolly",
+                      "ExtraLimitCount": 10
+                    }
+                  ],
+                  "TickInterval": 0.0,
+                  "LowWarningTickInterval": 0.0,
+                  "HighWarningTickInterval": 0.0,
+                  "TickBalance": 2,
+                  "LowWarningBalance": 0,
+                  "HighWarningTickBalance": 0
+                }
+              },
+              {
+                "Key": "EEMUnitBudgetQualityLevel::VeryLow",
+                "Value": {
+                  "UnitTickLimitCount": 40,
+                  "ExtraUnitTickLimitCount": 0,
+                  "ExtraUnitTickLimitTime": 10.0,
+                  "ExtraUnitTickExitDistance": 2500.0,
+                  "StateChangeThrottleInTimes": 2.0,
+                  "ExtraSignificanceParameters": [
+                    {
+                      "ExtraSource": "EExtraSignificanceSource::GameModeType",
+                      "ExtraParam": "Defence",
+                      "ExtraTarget": "EExtraSignificanceTarget::DefenceCore",
+                      "ExtraLimitCount": 10
+                    },
+                    {
+                      "ExtraSource": "EExtraSignificanceSource::GameModeType",
+                      "ExtraParam": "DefencePro",
+                      "ExtraTarget": "EExtraSignificanceTarget::DefenceCore",
+                      "ExtraLimitCount": 10
+                    },
+                    {
+                      "ExtraSource": "EExtraSignificanceSource::GameModeType",
+                      "ExtraParam": "Excavation",
+                      "ExtraTarget": "EExtraSignificanceTarget::Excavation",
+                      "ExtraLimitCount": 20
+                    },
+                    {
+                      "ExtraSource": "EExtraSignificanceSource::GameModeType",
+                      "ExtraParam": "Hijack",
+                      "ExtraTarget": "EExtraSignificanceTarget::Trolly",
+                      "ExtraLimitCount": 10
+                    }
+                  ],
+                  "TickInterval": 0.0,
+                  "LowWarningTickInterval": 0.0,
+                  "HighWarningTickInterval": 0.0,
+                  "TickBalance": 2,
+                  "LowWarningBalance": 0,
+                  "HighWarningTickBalance": 0
+                }
+              },
+              {
+                "Key": "EEMUnitBudgetQualityLevel::VeryHigh",
+                "Value": {
+                  "UnitTickLimitCount": 55,
+                  "ExtraUnitTickLimitCount": 0,
+                  "ExtraUnitTickLimitTime": 10.0,
+                  "ExtraUnitTickExitDistance": 2500.0,
+                  "StateChangeThrottleInTimes": 2.0,
+                  "ExtraSignificanceParameters": [
+                    {
+                      "ExtraSource": "EExtraSignificanceSource::GameModeType",
+                      "ExtraParam": "Defence",
+                      "ExtraTarget": "EExtraSignificanceTarget::DefenceCore",
+                      "ExtraLimitCount": 10
+                    },
+                    {
+                      "ExtraSource": "EExtraSignificanceSource::GameModeType",
+                      "ExtraParam": "DefencePro",
+                      "ExtraTarget": "EExtraSignificanceTarget::DefenceCore",
+                      "ExtraLimitCount": 10
+                    },
+                    {
+                      "ExtraSource": "EExtraSignificanceSource::GameModeType",
+                      "ExtraParam": "Evcavation",
+                      "ExtraTarget": "EExtraSignificanceTarget::Excavation",
+                      "ExtraLimitCount": 20
+                    },
+                    {
+                      "ExtraSource": "EExtraSignificanceSource::GameModeType",
+                      "ExtraParam": "Hijack",
+                      "ExtraTarget": "EExtraSignificanceTarget::Trolly",
+                      "ExtraLimitCount": 10
+                    }
+                  ],
+                  "TickInterval": 0.0,
+                  "LowWarningTickInterval": 0.0,
+                  "HighWarningTickInterval": 0.0,
+                  "TickBalance": 1,
+                  "LowWarningBalance": 0,
+                  "HighWarningTickBalance": 0
+                }
+              },
+              {
+                "Key": "EEMUnitBudgetQualityLevel::Worst",
+                "Value": {
+                  "UnitTickLimitCount": 35,
+                  "ExtraUnitTickLimitCount": 0,
+                  "ExtraUnitTickLimitTime": 10.0,
+                  "ExtraUnitTickExitDistance": 2500.0,
+                  "StateChangeThrottleInTimes": 2.0,
+                  "ExtraSignificanceParameters": [
+                    {
+                      "ExtraSource": "EExtraSignificanceSource::GameModeType",
+                      "ExtraParam": "Defence",
+                      "ExtraTarget": "EExtraSignificanceTarget::DefenceCore",
+                      "ExtraLimitCount": 10
+                    },
+                    {
+                      "ExtraSource": "EExtraSignificanceSource::GameModeType",
+                      "ExtraParam": "DefencePro",
+                      "ExtraTarget": "EExtraSignificanceTarget::DefenceCore",
+                      "ExtraLimitCount": 10
+                    },
+                    {
+                      "ExtraSource": "EExtraSignificanceSource::GameModeType",
+                      "ExtraParam": "Excavation",
+                      "ExtraTarget": "EExtraSignificanceTarget::Excavation",
+                      "ExtraLimitCount": 20
+                    },
+                    {
+                      "ExtraSource": "EExtraSignificanceSource::GameModeType",
+                      "ExtraParam": "Hijack",
+                      "ExtraTarget": "EExtraSignificanceTarget::Trolly",
+                      "ExtraLimitCount": 10
+                    }
+                  ],
+                  "TickInterval": 0.0,
+                  "LowWarningTickInterval": 0.0,
+                  "HighWarningTickInterval": 0.0,
+                  "TickBalance": 2,
+                  "LowWarningBalance": 0,
+                  "HighWarningTickBalance": 0
+                }
+              }
+            ]
+          }
+        },
+        {
+          "Key": "EUnitBudgetType::OtherWorldPlayerUnit",
+          "Value": {
+            "Parameters": [
+              {
+                "Key": "EEMUnitBudgetQualityLevel::VeryHigh",
+                "Value": {
+                  "UnitTickLimitCount": 0,
+                  "ExtraUnitTickLimitCount": 0,
+                  "ExtraUnitTickLimitTime": 10.0,
+                  "ExtraUnitTickExitDistance": 2500.0,
+                  "StateChangeThrottleInTimes": 1.0,
+                  "ExtraSignificanceParameters": [],
+                  "TickInterval": 0.0,
+                  "LowWarningTickInterval": 0.0,
+                  "HighWarningTickInterval": 0.0,
+                  "TickBalance": 1,
+                  "LowWarningBalance": 0,
+                  "HighWarningTickBalance": 0
+                }
+              },
+              {
+                "Key": "EEMUnitBudgetQualityLevel::High",
+                "Value": {
+                  "UnitTickLimitCount": 0,
+                  "ExtraUnitTickLimitCount": 0,
+                  "ExtraUnitTickLimitTime": 10.0,
+                  "ExtraUnitTickExitDistance": 2500.0,
+                  "StateChangeThrottleInTimes": 1.0,
+                  "ExtraSignificanceParameters": [],
+                  "TickInterval": 0.0,
+                  "LowWarningTickInterval": 0.0,
+                  "HighWarningTickInterval": 0.0,
+                  "TickBalance": 1,
+                  "LowWarningBalance": 0,
+                  "HighWarningTickBalance": 0
+                }
+              },
+              {
+                "Key": "EEMUnitBudgetQualityLevel::Medium",
+                "Value": {
+                  "UnitTickLimitCount": 0,
+                  "ExtraUnitTickLimitCount": 0,
+                  "ExtraUnitTickLimitTime": 10.0,
+                  "ExtraUnitTickExitDistance": 2500.0,
+                  "StateChangeThrottleInTimes": 1.0,
+                  "ExtraSignificanceParameters": [],
+                  "TickInterval": 0.0,
+                  "LowWarningTickInterval": 0.0,
+                  "HighWarningTickInterval": 0.0,
+                  "TickBalance": 2,
+                  "LowWarningBalance": 0,
+                  "HighWarningTickBalance": 0
+                }
+              },
+              {
+                "Key": "EEMUnitBudgetQualityLevel::Low",
+                "Value": {
+                  "UnitTickLimitCount": 0,
+                  "ExtraUnitTickLimitCount": 0,
+                  "ExtraUnitTickLimitTime": 10.0,
+                  "ExtraUnitTickExitDistance": 2500.0,
+                  "StateChangeThrottleInTimes": 1.0,
+                  "ExtraSignificanceParameters": [],
+                  "TickInterval": 0.0,
+                  "LowWarningTickInterval": 0.0,
+                  "HighWarningTickInterval": 0.0,
+                  "TickBalance": 2,
+                  "LowWarningBalance": 0,
+                  "HighWarningTickBalance": 0
+                }
+              },
+              {
+                "Key": "EEMUnitBudgetQualityLevel::VeryLow",
+                "Value": {
+                  "UnitTickLimitCount": 0,
+                  "ExtraUnitTickLimitCount": 0,
+                  "ExtraUnitTickLimitTime": 10.0,
+                  "ExtraUnitTickExitDistance": 2500.0,
+                  "StateChangeThrottleInTimes": 1.0,
+                  "ExtraSignificanceParameters": [],
+                  "TickInterval": 0.0,
+                  "LowWarningTickInterval": 0.0,
+                  "HighWarningTickInterval": 0.0,
+                  "TickBalance": 2,
+                  "LowWarningBalance": 0,
+                  "HighWarningTickBalance": 0
+                }
+              },
+              {
+                "Key": "EEMUnitBudgetQualityLevel::Worst",
+                "Value": {
+                  "UnitTickLimitCount": 0,
+                  "ExtraUnitTickLimitCount": 0,
+                  "ExtraUnitTickLimitTime": 10.0,
+                  "ExtraUnitTickExitDistance": 2500.0,
+                  "StateChangeThrottleInTimes": 1.0,
+                  "ExtraSignificanceParameters": [],
+                  "TickInterval": 0.0,
+                  "LowWarningTickInterval": 0.0,
+                  "HighWarningTickInterval": 0.0,
+                  "TickBalance": 2,
+                  "LowWarningBalance": 0,
+                  "HighWarningTickBalance": 0
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "UnitBudgetIOSParameters": [
+        {
+          "Key": "EUnitBudgetType::MonsterUnit",
+          "Value": {
+            "Parameters": [
+              {
+                "Key": "EEMUnitBudgetQualityLevel::High",
+                "Value": {
+                  "UnitTickLimitCount": 30,
+                  "ExtraUnitTickLimitCount": 0,
+                  "ExtraUnitTickLimitTime": 10.0,
+                  "ExtraUnitTickExitDistance": 2500.0,
+                  "StateChangeThrottleInTimes": 2.0,
+                  "ExtraSignificanceParameters": [
+                    {
+                      "ExtraSource": "EExtraSignificanceSource::GameModeType",
+                      "ExtraParam": "Defence",
+                      "ExtraTarget": "EExtraSignificanceTarget::DefenceCore",
+                      "ExtraLimitCount": 15
+                    },
+                    {
+                      "ExtraSource": "EExtraSignificanceSource::GameModeType",
+                      "ExtraParam": "DefencePro",
+                      "ExtraTarget": "EExtraSignificanceTarget::DefenceCore",
+                      "ExtraLimitCount": 15
+                    },
+                    {
+                      "ExtraSource": "EExtraSignificanceSource::GameModeType",
+                      "ExtraParam": "Excavation",
+                      "ExtraTarget": "EExtraSignificanceTarget::Excavation",
+                      "ExtraLimitCount": 20
+                    },
+                    {
+                      "ExtraSource": "EExtraSignificanceSource::GameModeType",
+                      "ExtraParam": "Hijack",
+                      "ExtraTarget": "EExtraSignificanceTarget::Trolly",
+                      "ExtraLimitCount": 15
+                    }
+                  ],
+                  "TickInterval": 0.0,
+                  "LowWarningTickInterval": 0.0,
+                  "HighWarningTickInterval": 0.0,
+                  "TickBalance": 2,
+                  "LowWarningBalance": 0,
+                  "HighWarningTickBalance": 0
+                }
+              },
+              {
+                "Key": "EEMUnitBudgetQualityLevel::Medium",
+                "Value": {
+                  "UnitTickLimitCount": 27,
+                  "ExtraUnitTickLimitCount": 0,
+                  "ExtraUnitTickLimitTime": 10.0,
+                  "ExtraUnitTickExitDistance": 2500.0,
+                  "StateChangeThrottleInTimes": 2.0,
+                  "ExtraSignificanceParameters": [
+                    {
+                      "ExtraSource": "EExtraSignificanceSource::GameModeType",
+                      "ExtraParam": "Defence",
+                      "ExtraTarget": "EExtraSignificanceTarget::DefenceCore",
+                      "ExtraLimitCount": 15
+                    },
+                    {
+                      "ExtraSource": "EExtraSignificanceSource::GameModeType",
+                      "ExtraParam": "DefencePro",
+                      "ExtraTarget": "EExtraSignificanceTarget::DefenceCore",
+                      "ExtraLimitCount": 15
+                    },
+                    {
+                      "ExtraSource": "EExtraSignificanceSource::GameModeType",
+                      "ExtraParam": "Excavation",
+                      "ExtraTarget": "EExtraSignificanceTarget::Excavation",
+                      "ExtraLimitCount": 20
+                    },
+                    {
+                      "ExtraSource": "EExtraSignificanceSource::GameModeType",
+                      "ExtraParam": "Hijack",
+                      "ExtraTarget": "EExtraSignificanceTarget::Trolly",
+                      "ExtraLimitCount": 15
+                    }
+                  ],
+                  "TickInterval": 0.0,
+                  "LowWarningTickInterval": 0.0,
+                  "HighWarningTickInterval": 0.0,
+                  "TickBalance": 2,
+                  "LowWarningBalance": 0,
+                  "HighWarningTickBalance": 0
+                }
+              },
+              {
+                "Key": "EEMUnitBudgetQualityLevel::Low",
+                "Value": {
+                  "UnitTickLimitCount": 25,
+                  "ExtraUnitTickLimitCount": 0,
+                  "ExtraUnitTickLimitTime": 10.0,
+                  "ExtraUnitTickExitDistance": 2500.0,
+                  "StateChangeThrottleInTimes": 2.0,
+                  "ExtraSignificanceParameters": [
+                    {
+                      "ExtraSource": "EExtraSignificanceSource::GameModeType",
+                      "ExtraParam": "Defence",
+                      "ExtraTarget": "EExtraSignificanceTarget::DefenceCore",
+                      "ExtraLimitCount": 10
+                    },
+                    {
+                      "ExtraSource": "EExtraSignificanceSource::GameModeType",
+                      "ExtraParam": "DefencePro",
+                      "ExtraTarget": "EExtraSignificanceTarget::DefenceCore",
+                      "ExtraLimitCount": 10
+                    },
+                    {
+                      "ExtraSource": "EExtraSignificanceSource::GameModeType",
+                      "ExtraParam": "Excavation",
+                      "ExtraTarget": "EExtraSignificanceTarget::Excavation",
+                      "ExtraLimitCount": 15
+                    },
+                    {
+                      "ExtraSource": "EExtraSignificanceSource::GameModeType",
+                      "ExtraParam": "Hijack",
+                      "ExtraTarget": "EExtraSignificanceTarget::Trolly",
+                      "ExtraLimitCount": 10
+                    }
+                  ],
+                  "TickInterval": 0.0,
+                  "LowWarningTickInterval": 0.0,
+                  "HighWarningTickInterval": 0.0,
+                  "TickBalance": 2,
+                  "LowWarningBalance": 0,
+                  "HighWarningTickBalance": 0
+                }
+              },
+              {
+                "Key": "EEMUnitBudgetQualityLevel::VeryLow",
+                "Value": {
+                  "UnitTickLimitCount": 22,
+                  "ExtraUnitTickLimitCount": 0,
+                  "ExtraUnitTickLimitTime": 10.0,
+                  "ExtraUnitTickExitDistance": 2500.0,
+                  "StateChangeThrottleInTimes": 2.0,
+                  "ExtraSignificanceParameters": [
+                    {
+                      "ExtraSource": "EExtraSignificanceSource::GameModeType",
+                      "ExtraParam": "Defence",
+                      "ExtraTarget": "EExtraSignificanceTarget::DefenceCore",
+                      "ExtraLimitCount": 2
+                    },
+                    {
+                      "ExtraSource": "EExtraSignificanceSource::GameModeType",
+                      "ExtraParam": "DefencePro",
+                      "ExtraTarget": "EExtraSignificanceTarget::DefenceCore",
+                      "ExtraLimitCount": 2
+                    },
+                    {
+                      "ExtraSource": "EExtraSignificanceSource::GameModeType",
+                      "ExtraParam": "Excavation",
+                      "ExtraTarget": "EExtraSignificanceTarget::Excavation",
+                      "ExtraLimitCount": 3
+                    },
+                    {
+                      "ExtraSource": "EExtraSignificanceSource::GameModeType",
+                      "ExtraParam": "Hijack",
+                      "ExtraTarget": "EExtraSignificanceTarget::Trolly",
+                      "ExtraLimitCount": 2
+                    }
+                  ],
+                  "TickInterval": 0.0,
+                  "LowWarningTickInterval": 0.0,
+                  "HighWarningTickInterval": 0.0,
+                  "TickBalance": 2,
+                  "LowWarningBalance": 0,
+                  "HighWarningTickBalance": 0
+                }
+              },
+              {
+                "Key": "EEMUnitBudgetQualityLevel::VeryHigh",
+                "Value": {
+                  "UnitTickLimitCount": 33,
+                  "ExtraUnitTickLimitCount": 0,
+                  "ExtraUnitTickLimitTime": 10.0,
+                  "ExtraUnitTickExitDistance": 2500.0,
+                  "StateChangeThrottleInTimes": 1.0,
+                  "ExtraSignificanceParameters": [
+                    {
+                      "ExtraSource": "EExtraSignificanceSource::GameModeType",
+                      "ExtraParam": "Defence",
+                      "ExtraTarget": "EExtraSignificanceTarget::DefenceCore",
+                      "ExtraLimitCount": 16
+                    },
+                    {
+                      "ExtraSource": "EExtraSignificanceSource::GameModeType",
+                      "ExtraParam": "DefencePro",
+                      "ExtraTarget": "EExtraSignificanceTarget::DefenceCore",
+                      "ExtraLimitCount": 16
+                    },
+                    {
+                      "ExtraSource": "EExtraSignificanceSource::GameModeType",
+                      "ExtraParam": "Excavation",
+                      "ExtraTarget": "EExtraSignificanceTarget::Excavation",
+                      "ExtraLimitCount": 22
+                    },
+                    {
+                      "ExtraSource": "EExtraSignificanceSource::GameModeType",
+                      "ExtraParam": "Hijack",
+                      "ExtraTarget": "EExtraSignificanceTarget::Trolly",
+                      "ExtraLimitCount": 16
+                    }
+                  ],
+                  "TickInterval": 0.0,
+                  "LowWarningTickInterval": 0.0,
+                  "HighWarningTickInterval": 0.0,
+                  "TickBalance": 2,
+                  "LowWarningBalance": 0,
+                  "HighWarningTickBalance": 0
+                }
+              },
+              {
+                "Key": "EEMUnitBudgetQualityLevel::Worst",
+                "Value": {
+                  "UnitTickLimitCount": 20,
+                  "ExtraUnitTickLimitCount": 0,
+                  "ExtraUnitTickLimitTime": 10.0,
+                  "ExtraUnitTickExitDistance": 2500.0,
+                  "StateChangeThrottleInTimes": 2.0,
+                  "ExtraSignificanceParameters": [
+                    {
+                      "ExtraSource": "EExtraSignificanceSource::GameModeType",
+                      "ExtraParam": "Defence",
+                      "ExtraTarget": "EExtraSignificanceTarget::DefenceCore",
+                      "ExtraLimitCount": 2
+                    },
+                    {
+                      "ExtraSource": "EExtraSignificanceSource::GameModeType",
+                      "ExtraParam": "DefencePro",
+                      "ExtraTarget": "EExtraSignificanceTarget::DefenceCore",
+                      "ExtraLimitCount": 2
+                    },
+                    {
+                      "ExtraSource": "EExtraSignificanceSource::GameModeType",
+                      "ExtraParam": "Excavation",
+                      "ExtraTarget": "EExtraSignificanceTarget::Excavation",
+                      "ExtraLimitCount": 2
+                    },
+                    {
+                      "ExtraSource": "EExtraSignificanceSource::GameModeType",
+                      "ExtraParam": "Hijack",
+                      "ExtraTarget": "EExtraSignificanceTarget::Trolly",
+                      "ExtraLimitCount": 2
+                    }
+                  ],
+                  "TickInterval": 0.0,
+                  "LowWarningTickInterval": 0.0,
+                  "HighWarningTickInterval": 0.0,
+                  "TickBalance": 2,
+                  "LowWarningBalance": 0,
+                  "HighWarningTickBalance": 0
+                }
+              }
+            ]
+          }
+        },
+        {
+          "Key": "EUnitBudgetType::OtherWorldPlayerUnit",
+          "Value": {
+            "Parameters": [
+              {
+                "Key": "EEMUnitBudgetQualityLevel::VeryHigh",
+                "Value": {
+                  "UnitTickLimitCount": 0,
+                  "ExtraUnitTickLimitCount": 0,
+                  "ExtraUnitTickLimitTime": 10.0,
+                  "ExtraUnitTickExitDistance": 2500.0,
+                  "StateChangeThrottleInTimes": 1.0,
+                  "ExtraSignificanceParameters": [],
+                  "TickInterval": 0.0,
+                  "LowWarningTickInterval": 0.0,
+                  "HighWarningTickInterval": 0.0,
+                  "TickBalance": 2,
+                  "LowWarningBalance": 0,
+                  "HighWarningTickBalance": 0
+                }
+              },
+              {
+                "Key": "EEMUnitBudgetQualityLevel::High",
+                "Value": {
+                  "UnitTickLimitCount": 0,
+                  "ExtraUnitTickLimitCount": 0,
+                  "ExtraUnitTickLimitTime": 10.0,
+                  "ExtraUnitTickExitDistance": 2500.0,
+                  "StateChangeThrottleInTimes": 1.0,
+                  "ExtraSignificanceParameters": [],
+                  "TickInterval": 0.0,
+                  "LowWarningTickInterval": 0.0,
+                  "HighWarningTickInterval": 0.0,
+                  "TickBalance": 2,
+                  "LowWarningBalance": 0,
+                  "HighWarningTickBalance": 0
+                }
+              },
+              {
+                "Key": "EEMUnitBudgetQualityLevel::Medium",
+                "Value": {
+                  "UnitTickLimitCount": 0,
+                  "ExtraUnitTickLimitCount": 0,
+                  "ExtraUnitTickLimitTime": 10.0,
+                  "ExtraUnitTickExitDistance": 2500.0,
+                  "StateChangeThrottleInTimes": 1.0,
+                  "ExtraSignificanceParameters": [],
+                  "TickInterval": 0.0,
+                  "LowWarningTickInterval": 0.0,
+                  "HighWarningTickInterval": 0.0,
+                  "TickBalance": 2,
+                  "LowWarningBalance": 0,
+                  "HighWarningTickBalance": 0
+                }
+              },
+              {
+                "Key": "EEMUnitBudgetQualityLevel::Low",
+                "Value": {
+                  "UnitTickLimitCount": 0,
+                  "ExtraUnitTickLimitCount": 0,
+                  "ExtraUnitTickLimitTime": 10.0,
+                  "ExtraUnitTickExitDistance": 2500.0,
+                  "StateChangeThrottleInTimes": 1.0,
+                  "ExtraSignificanceParameters": [],
+                  "TickInterval": 0.0,
+                  "LowWarningTickInterval": 0.0,
+                  "HighWarningTickInterval": 0.0,
+                  "TickBalance": 2,
+                  "LowWarningBalance": 0,
+                  "HighWarningTickBalance": 0
+                }
+              },
+              {
+                "Key": "EEMUnitBudgetQualityLevel::VeryLow",
+                "Value": {
+                  "UnitTickLimitCount": 0,
+                  "ExtraUnitTickLimitCount": 0,
+                  "ExtraUnitTickLimitTime": 10.0,
+                  "ExtraUnitTickExitDistance": 2500.0,
+                  "StateChangeThrottleInTimes": 1.0,
+                  "ExtraSignificanceParameters": [],
+                  "TickInterval": 0.0,
+                  "LowWarningTickInterval": 0.0,
+                  "HighWarningTickInterval": 0.0,
+                  "TickBalance": 2,
+                  "LowWarningBalance": 0,
+                  "HighWarningTickBalance": 0
+                }
+              },
+              {
+                "Key": "EEMUnitBudgetQualityLevel::Worst",
+                "Value": {
+                  "UnitTickLimitCount": 0,
+                  "ExtraUnitTickLimitCount": 0,
+                  "ExtraUnitTickLimitTime": 10.0,
+                  "ExtraUnitTickExitDistance": 2500.0,
+                  "StateChangeThrottleInTimes": 1.0,
+                  "ExtraSignificanceParameters": [],
+                  "TickInterval": 0.0,
+                  "LowWarningTickInterval": 0.0,
+                  "HighWarningTickInterval": 0.0,
+                  "TickBalance": 2,
+                  "LowWarningBalance": 0,
+                  "HighWarningTickBalance": 0
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "UnitBudgetAndroidParameters": [
+        {
+          "Key": "EUnitBudgetType::MonsterUnit",
+          "Value": {
+            "Parameters": [
+              {
+                "Key": "EEMUnitBudgetQualityLevel::High",
+                "Value": {
+                  "UnitTickLimitCount": 21,
+                  "ExtraUnitTickLimitCount": 3,
+                  "ExtraUnitTickLimitTime": 10.0,
+                  "ExtraUnitTickExitDistance": 3500.0,
+                  "StateChangeThrottleInTimes": 2.0,
+                  "ExtraSignificanceParameters": [
+                    {
+                      "ExtraSource": "EExtraSignificanceSource::GameModeType",
+                      "ExtraParam": "Defence",
+                      "ExtraTarget": "EExtraSignificanceTarget::DefenceCore",
+                      "ExtraLimitCount": 10
+                    },
+                    {
+                      "ExtraSource": "EExtraSignificanceSource::GameModeType",
+                      "ExtraParam": "DefencePro",
+                      "ExtraTarget": "EExtraSignificanceTarget::DefenceCore",
+                      "ExtraLimitCount": 10
+                    },
+                    {
+                      "ExtraSource": "EExtraSignificanceSource::GameModeType",
+                      "ExtraParam": "Excavation",
+                      "ExtraTarget": "EExtraSignificanceTarget::Excavation",
+                      "ExtraLimitCount": 15
+                    },
+                    {
+                      "ExtraSource": "EExtraSignificanceSource::GameModeType",
+                      "ExtraParam": "Hijack",
+                      "ExtraTarget": "EExtraSignificanceTarget::Trolly",
+                      "ExtraLimitCount": 10
+                    }
+                  ],
+                  "TickInterval": 0.0,
+                  "LowWarningTickInterval": 0.0,
+                  "HighWarningTickInterval": 0.0,
+                  "TickBalance": 2,
+                  "LowWarningBalance": 0,
+                  "HighWarningTickBalance": 0
+                }
+              },
+              {
+                "Key": "EEMUnitBudgetQualityLevel::Medium",
+                "Value": {
+                  "UnitTickLimitCount": 19,
+                  "ExtraUnitTickLimitCount": 3,
+                  "ExtraUnitTickLimitTime": 10.0,
+                  "ExtraUnitTickExitDistance": 3500.0,
+                  "StateChangeThrottleInTimes": 2.0,
+                  "ExtraSignificanceParameters": [
+                    {
+                      "ExtraSource": "EExtraSignificanceSource::GameModeType",
+                      "ExtraParam": "Defence",
+                      "ExtraTarget": "EExtraSignificanceTarget::DefenceCore",
+                      "ExtraLimitCount": 10
+                    },
+                    {
+                      "ExtraSource": "EExtraSignificanceSource::GameModeType",
+                      "ExtraParam": "DefencePro",
+                      "ExtraTarget": "EExtraSignificanceTarget::DefenceCore",
+                      "ExtraLimitCount": 10
+                    },
+                    {
+                      "ExtraSource": "EExtraSignificanceSource::GameModeType",
+                      "ExtraParam": "Excavation",
+                      "ExtraTarget": "EExtraSignificanceTarget::Excavation",
+                      "ExtraLimitCount": 15
+                    },
+                    {
+                      "ExtraSource": "EExtraSignificanceSource::GameModeType",
+                      "ExtraParam": "Hijack",
+                      "ExtraTarget": "EExtraSignificanceTarget::Trolly",
+                      "ExtraLimitCount": 10
+                    }
+                  ],
+                  "TickInterval": 0.0,
+                  "LowWarningTickInterval": 0.0,
+                  "HighWarningTickInterval": 0.0,
+                  "TickBalance": 2,
+                  "LowWarningBalance": 0,
+                  "HighWarningTickBalance": 0
+                }
+              },
+              {
+                "Key": "EEMUnitBudgetQualityLevel::Low",
+                "Value": {
+                  "UnitTickLimitCount": 15,
+                  "ExtraUnitTickLimitCount": 2,
+                  "ExtraUnitTickLimitTime": 10.0,
+                  "ExtraUnitTickExitDistance": 3500.0,
+                  "StateChangeThrottleInTimes": 2.0,
+                  "ExtraSignificanceParameters": [
+                    {
+                      "ExtraSource": "EExtraSignificanceSource::GameModeType",
+                      "ExtraParam": "Defence",
+                      "ExtraTarget": "EExtraSignificanceTarget::DefenceCore",
+                      "ExtraLimitCount": 8
+                    },
+                    {
+                      "ExtraSource": "EExtraSignificanceSource::GameModeType",
+                      "ExtraParam": "DefencePro",
+                      "ExtraTarget": "EExtraSignificanceTarget::DefenceCore",
+                      "ExtraLimitCount": 8
+                    },
+                    {
+                      "ExtraSource": "EExtraSignificanceSource::GameModeType",
+                      "ExtraParam": "Excavation",
+                      "ExtraTarget": "EExtraSignificanceTarget::Excavation",
+                      "ExtraLimitCount": 12
+                    },
+                    {
+                      "ExtraSource": "EExtraSignificanceSource::GameModeType",
+                      "ExtraParam": "Hijack",
+                      "ExtraTarget": "EExtraSignificanceTarget::Trolly",
+                      "ExtraLimitCount": 8
+                    }
+                  ],
+                  "TickInterval": 0.0,
+                  "LowWarningTickInterval": 0.0,
+                  "HighWarningTickInterval": 0.0,
+                  "TickBalance": 2,
+                  "LowWarningBalance": 0,
+                  "HighWarningTickBalance": 0
+                }
+              },
+              {
+                "Key": "EEMUnitBudgetQualityLevel::VeryLow",
+                "Value": {
+                  "UnitTickLimitCount": 10,
+                  "ExtraUnitTickLimitCount": 1,
+                  "ExtraUnitTickLimitTime": 10.0,
+                  "ExtraUnitTickExitDistance": 3500.0,
+                  "StateChangeThrottleInTimes": 2.0,
+                  "ExtraSignificanceParameters": [
+                    {
+                      "ExtraSource": "EExtraSignificanceSource::GameModeType",
+                      "ExtraParam": "Defence",
+                      "ExtraTarget": "EExtraSignificanceTarget::DefenceCore",
+                      "ExtraLimitCount": 8
+                    },
+                    {
+                      "ExtraSource": "EExtraSignificanceSource::GameModeType",
+                      "ExtraParam": "DefencePro",
+                      "ExtraTarget": "EExtraSignificanceTarget::DefenceCore",
+                      "ExtraLimitCount": 8
+                    },
+                    {
+                      "ExtraSource": "EExtraSignificanceSource::GameModeType",
+                      "ExtraParam": "Excavation",
+                      "ExtraTarget": "EExtraSignificanceTarget::Excavation",
+                      "ExtraLimitCount": 10
+                    },
+                    {
+                      "ExtraSource": "EExtraSignificanceSource::GameModeType",
+                      "ExtraParam": "Hijack",
+                      "ExtraTarget": "EExtraSignificanceTarget::Trolly",
+                      "ExtraLimitCount": 8
+                    }
+                  ],
+                  "TickInterval": 0.0,
+                  "LowWarningTickInterval": 0.0,
+                  "HighWarningTickInterval": 0.0,
+                  "TickBalance": 2,
+                  "LowWarningBalance": 0,
+                  "HighWarningTickBalance": 0
+                }
+              },
+              {
+                "Key": "EEMUnitBudgetQualityLevel::VeryHigh",
+                "Value": {
+                  "UnitTickLimitCount": 23,
+                  "ExtraUnitTickLimitCount": 3,
+                  "ExtraUnitTickLimitTime": 10.0,
+                  "ExtraUnitTickExitDistance": 3500.0,
+                  "StateChangeThrottleInTimes": 2.0,
+                  "ExtraSignificanceParameters": [
+                    {
+                      "ExtraSource": "EExtraSignificanceSource::GameModeType",
+                      "ExtraParam": "Defence",
+                      "ExtraTarget": "EExtraSignificanceTarget::DefenceCore",
+                      "ExtraLimitCount": 10
+                    },
+                    {
+                      "ExtraSource": "EExtraSignificanceSource::GameModeType",
+                      "ExtraParam": "DefencePro",
+                      "ExtraTarget": "EExtraSignificanceTarget::DefenceCore",
+                      "ExtraLimitCount": 10
+                    },
+                    {
+                      "ExtraSource": "EExtraSignificanceSource::GameModeType",
+                      "ExtraParam": "Excavation",
+                      "ExtraTarget": "EExtraSignificanceTarget::Excavation",
+                      "ExtraLimitCount": 15
+                    },
+                    {
+                      "ExtraSource": "EExtraSignificanceSource::GameModeType",
+                      "ExtraParam": "Hijack",
+                      "ExtraTarget": "EExtraSignificanceTarget::Trolly",
+                      "ExtraLimitCount": 10
+                    }
+                  ],
+                  "TickInterval": 0.0,
+                  "LowWarningTickInterval": 0.0,
+                  "HighWarningTickInterval": 0.0,
+                  "TickBalance": 2,
+                  "LowWarningBalance": 0,
+                  "HighWarningTickBalance": 0
+                }
+              },
+              {
+                "Key": "EEMUnitBudgetQualityLevel::Worst",
+                "Value": {
+                  "UnitTickLimitCount": 8,
+                  "ExtraUnitTickLimitCount": 1,
+                  "ExtraUnitTickLimitTime": 10.0,
+                  "ExtraUnitTickExitDistance": 3500.0,
+                  "StateChangeThrottleInTimes": 2.0,
+                  "ExtraSignificanceParameters": [
+                    {
+                      "ExtraSource": "EExtraSignificanceSource::GameModeType",
+                      "ExtraParam": "Defence",
+                      "ExtraTarget": "EExtraSignificanceTarget::DefenceCore",
+                      "ExtraLimitCount": 6
+                    },
+                    {
+                      "ExtraSource": "EExtraSignificanceSource::GameModeType",
+                      "ExtraParam": "DefencePro",
+                      "ExtraTarget": "EExtraSignificanceTarget::DefenceCore",
+                      "ExtraLimitCount": 6
+                    },
+                    {
+                      "ExtraSource": "EExtraSignificanceSource::GameModeType",
+                      "ExtraParam": "Excavation",
+                      "ExtraTarget": "EExtraSignificanceTarget::Excavation",
+                      "ExtraLimitCount": 8
+                    },
+                    {
+                      "ExtraSource": "EExtraSignificanceSource::GameModeType",
+                      "ExtraParam": "Hijack",
+                      "ExtraTarget": "EExtraSignificanceTarget::Trolly",
+                      "ExtraLimitCount": 6
+                    }
+                  ],
+                  "TickInterval": 0.0,
+                  "LowWarningTickInterval": 0.0,
+                  "HighWarningTickInterval": 0.8,
+                  "TickBalance": 2,
+                  "LowWarningBalance": 0,
+                  "HighWarningTickBalance": 0
+                }
+              }
+            ]
+          }
+        },
+        {
+          "Key": "EUnitBudgetType::OtherWorldPlayerUnit",
+          "Value": {
+            "Parameters": [
+              {
+                "Key": "EEMUnitBudgetQualityLevel::VeryHigh",
+                "Value": {
+                  "UnitTickLimitCount": 0,
+                  "ExtraUnitTickLimitCount": 0,
+                  "ExtraUnitTickLimitTime": 10.0,
+                  "ExtraUnitTickExitDistance": 2500.0,
+                  "StateChangeThrottleInTimes": 1.0,
+                  "ExtraSignificanceParameters": [],
+                  "TickInterval": 0.0,
+                  "LowWarningTickInterval": 0.0,
+                  "HighWarningTickInterval": 0.0,
+                  "TickBalance": 2,
+                  "LowWarningBalance": 0,
+                  "HighWarningTickBalance": 0
+                }
+              },
+              {
+                "Key": "EEMUnitBudgetQualityLevel::High",
+                "Value": {
+                  "UnitTickLimitCount": 0,
+                  "ExtraUnitTickLimitCount": 0,
+                  "ExtraUnitTickLimitTime": 10.0,
+                  "ExtraUnitTickExitDistance": 2500.0,
+                  "StateChangeThrottleInTimes": 1.0,
+                  "ExtraSignificanceParameters": [],
+                  "TickInterval": 0.0,
+                  "LowWarningTickInterval": 0.0,
+                  "HighWarningTickInterval": 0.0,
+                  "TickBalance": 2,
+                  "LowWarningBalance": 0,
+                  "HighWarningTickBalance": 0
+                }
+              },
+              {
+                "Key": "EEMUnitBudgetQualityLevel::Medium",
+                "Value": {
+                  "UnitTickLimitCount": 0,
+                  "ExtraUnitTickLimitCount": 0,
+                  "ExtraUnitTickLimitTime": 10.0,
+                  "ExtraUnitTickExitDistance": 2500.0,
+                  "StateChangeThrottleInTimes": 1.0,
+                  "ExtraSignificanceParameters": [],
+                  "TickInterval": 0.0,
+                  "LowWarningTickInterval": 0.0,
+                  "HighWarningTickInterval": 0.0,
+                  "TickBalance": 2,
+                  "LowWarningBalance": 0,
+                  "HighWarningTickBalance": 0
+                }
+              },
+              {
+                "Key": "EEMUnitBudgetQualityLevel::Low",
+                "Value": {
+                  "UnitTickLimitCount": 0,
+                  "ExtraUnitTickLimitCount": 0,
+                  "ExtraUnitTickLimitTime": 10.0,
+                  "ExtraUnitTickExitDistance": 2500.0,
+                  "StateChangeThrottleInTimes": 1.0,
+                  "ExtraSignificanceParameters": [],
+                  "TickInterval": 0.0,
+                  "LowWarningTickInterval": 0.0,
+                  "HighWarningTickInterval": 0.0,
+                  "TickBalance": 2,
+                  "LowWarningBalance": 0,
+                  "HighWarningTickBalance": 0
+                }
+              },
+              {
+                "Key": "EEMUnitBudgetQualityLevel::VeryLow",
+                "Value": {
+                  "UnitTickLimitCount": 0,
+                  "ExtraUnitTickLimitCount": 0,
+                  "ExtraUnitTickLimitTime": 10.0,
+                  "ExtraUnitTickExitDistance": 2500.0,
+                  "StateChangeThrottleInTimes": 1.0,
+                  "ExtraSignificanceParameters": [],
+                  "TickInterval": 0.0,
+                  "LowWarningTickInterval": 0.0,
+                  "HighWarningTickInterval": 0.0,
+                  "TickBalance": 2,
+                  "LowWarningBalance": 0,
+                  "HighWarningTickBalance": 0
+                }
+              },
+              {
+                "Key": "EEMUnitBudgetQualityLevel::Worst",
+                "Value": {
+                  "UnitTickLimitCount": 0,
+                  "ExtraUnitTickLimitCount": 0,
+                  "ExtraUnitTickLimitTime": 10.0,
+                  "ExtraUnitTickExitDistance": 2500.0,
+                  "StateChangeThrottleInTimes": 1.0,
+                  "ExtraSignificanceParameters": [],
+                  "TickInterval": 0.0,
+                  "LowWarningTickInterval": 0.0,
+                  "HighWarningTickInterval": 0.0,
+                  "TickBalance": 2,
+                  "LowWarningBalance": 0,
+                  "HighWarningTickBalance": 0
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "UnitMeshLOD_PCConfig": [
+        {
+          "Key": "EUnitBudgetType::MonsterUnit",
+          "Value": {
+            "MeshLODs": [
+              {
+                "Key": "EEMQualityLevel::High",
+                "Value": {
+                  "LODParameters": [
+                    {
+                      "Key": "EMeshLODType::LOD2",
+                      "Value": 100
+                    },
+                    {
+                      "Key": "EMeshLODType::LOD1",
+                      "Value": 20
+                    },
+                    {
+                      "Key": "EMeshLODType::LOD0",
+                      "Value": 10
+                    }
+                  ]
+                }
+              },
+              {
+                "Key": "EEMQualityLevel::Medium",
+                "Value": {
+                  "LODParameters": [
+                    {
+                      "Key": "EMeshLODType::LOD2",
+                      "Value": 100
+                    },
+                    {
+                      "Key": "EMeshLODType::LOD1",
+                      "Value": 20
+                    },
+                    {
+                      "Key": "EMeshLODType::LOD0",
+                      "Value": 7
+                    }
+                  ]
+                }
+              },
+              {
+                "Key": "EEMQualityLevel::Low",
+                "Value": {
+                  "LODParameters": [
+                    {
+                      "Key": "EMeshLODType::LOD2",
+                      "Value": 100
+                    },
+                    {
+                      "Key": "EMeshLODType::LOD1",
+                      "Value": 20
+                    },
+                    {
+                      "Key": "EMeshLODType::LOD0",
+                      "Value": 5
+                    }
+                  ]
+                }
+              },
+              {
+                "Key": "EEMQualityLevel::VeryHigh",
+                "Value": {
+                  "LODParameters": [
+                    {
+                      "Key": "EMeshLODType::LOD2",
+                      "Value": 100
+                    },
+                    {
+                      "Key": "EMeshLODType::LOD1",
+                      "Value": 30
+                    },
+                    {
+                      "Key": "EMeshLODType::LOD0",
+                      "Value": 15
+                    }
+                  ]
+                }
+              },
+              {
+                "Key": "EEMQualityLevel::VeryLow",
+                "Value": {
+                  "LODParameters": [
+                    {
+                      "Key": "EMeshLODType::LOD2",
+                      "Value": 100
+                    },
+                    {
+                      "Key": "EMeshLODType::LOD1",
+                      "Value": 15
+                    },
+                    {
+                      "Key": "EMeshLODType::LOD0",
+                      "Value": 3
+                    }
+                  ]
+                }
+              }
+            ],
+            "MeshLODLimits": []
+          }
+        },
+        {
+          "Key": "EUnitBudgetType::CharNpcUnit",
+          "Value": {
+            "MeshLODs": [],
+            "MeshLODLimits": []
+          }
+        },
+        {
+          "Key": "EUnitBudgetType::CustomNpcUnit",
+          "Value": {
+            "MeshLODs": [],
+            "MeshLODLimits": []
+          }
+        },
+        {
+          "Key": "EUnitBudgetType::MainPlayerUnit",
+          "Value": {
+            "MeshLODs": [],
+            "MeshLODLimits": [
+              {
+                "Key": "EEMQualityLevel::High",
+                "Value": {
+                  "LODBias": 0,
+                  "MinLOD": 0
+                }
+              },
+              {
+                "Key": "EEMQualityLevel::Medium",
+                "Value": {
+                  "LODBias": 0,
+                  "MinLOD": 1
+                }
+              },
+              {
+                "Key": "EEMQualityLevel::Low",
+                "Value": {
+                  "LODBias": 0,
+                  "MinLOD": 1
+                }
+              },
+              {
+                "Key": "EEMQualityLevel::VeryHigh",
+                "Value": {
+                  "LODBias": 0,
+                  "MinLOD": 0
+                }
+              },
+              {
+                "Key": "EEMQualityLevel::VeryLow",
+                "Value": {
+                  "LODBias": 0,
+                  "MinLOD": 1
+                }
+              }
+            ]
+          }
+        },
+        {
+          "Key": "EUnitBudgetType::ThirdPartyUnit",
+          "Value": {
+            "MeshLODs": [],
+            "MeshLODLimits": [
+              {
+                "Key": "EEMQualityLevel::High",
+                "Value": {
+                  "LODBias": 0,
+                  "MinLOD": 1
+                }
+              },
+              {
+                "Key": "EEMQualityLevel::Medium",
+                "Value": {
+                  "LODBias": 0,
+                  "MinLOD": 2
+                }
+              },
+              {
+                "Key": "EEMQualityLevel::Low",
+                "Value": {
+                  "LODBias": 0,
+                  "MinLOD": 2
+                }
+              },
+              {
+                "Key": "EEMQualityLevel::VeryHigh",
+                "Value": {
+                  "LODBias": 0,
+                  "MinLOD": 1
+                }
+              },
+              {
+                "Key": "EEMQualityLevel::VeryLow",
+                "Value": {
+                  "LODBias": 0,
+                  "MinLOD": 2
+                }
+              }
+            ]
+          }
+        },
+        {
+          "Key": "EUnitBudgetType::PhantomUnit",
+          "Value": {
+            "MeshLODs": [],
+            "MeshLODLimits": [
+              {
+                "Key": "EEMQualityLevel::High",
+                "Value": {
+                  "LODBias": 0,
+                  "MinLOD": 1
+                }
+              },
+              {
+                "Key": "EEMQualityLevel::Medium",
+                "Value": {
+                  "LODBias": 0,
+                  "MinLOD": 2
+                }
+              },
+              {
+                "Key": "EEMQualityLevel::Low",
+                "Value": {
+                  "LODBias": 0,
+                  "MinLOD": 2
+                }
+              },
+              {
+                "Key": "EEMQualityLevel::VeryHigh",
+                "Value": {
+                  "LODBias": 0,
+                  "MinLOD": 1
+                }
+              },
+              {
+                "Key": "EEMQualityLevel::VeryLow",
+                "Value": {
+                  "LODBias": 0,
+                  "MinLOD": 2
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "UnitMeshLOD_AndroidConfig": [
+        {
+          "Key": "EUnitBudgetType::MonsterUnit",
+          "Value": {
+            "MeshLODs": [
+              {
+                "Key": "EEMQualityLevel::High",
+                "Value": {
+                  "LODParameters": [
+                    {
+                      "Key": "EMeshLODType::LOD2",
+                      "Value": 100
+                    },
+                    {
+                      "Key": "EMeshLODType::LOD1",
+                      "Value": 15
+                    },
+                    {
+                      "Key": "EMeshLODType::LOD0",
+                      "Value": 0
+                    }
+                  ]
+                }
+              },
+              {
+                "Key": "EEMQualityLevel::Medium",
+                "Value": {
+                  "LODParameters": [
+                    {
+                      "Key": "EMeshLODType::LOD2",
+                      "Value": 100
+                    },
+                    {
+                      "Key": "EMeshLODType::LOD1",
+                      "Value": 13
+                    },
+                    {
+                      "Key": "EMeshLODType::LOD0",
+                      "Value": 0
+                    }
+                  ]
+                }
+              },
+              {
+                "Key": "EEMQualityLevel::Low",
+                "Value": {
+                  "LODParameters": [
+                    {
+                      "Key": "EMeshLODType::LOD2",
+                      "Value": 100
+                    },
+                    {
+                      "Key": "EMeshLODType::LOD1",
+                      "Value": 10
+                    },
+                    {
+                      "Key": "EMeshLODType::LOD0",
+                      "Value": 0
+                    }
+                  ]
+                }
+              },
+              {
+                "Key": "EEMQualityLevel::VeryHigh",
+                "Value": {
+                  "LODParameters": [
+                    {
+                      "Key": "EMeshLODType::LOD2",
+                      "Value": 100
+                    },
+                    {
+                      "Key": "EMeshLODType::LOD1",
+                      "Value": 18
+                    },
+                    {
+                      "Key": "EMeshLODType::LOD0",
+                      "Value": 0
+                    }
+                  ]
+                }
+              },
+              {
+                "Key": "EEMQualityLevel::VeryLow",
+                "Value": {
+                  "LODParameters": [
+                    {
+                      "Key": "EMeshLODType::LOD2",
+                      "Value": 100
+                    },
+                    {
+                      "Key": "EMeshLODType::LOD1",
+                      "Value": 7
+                    },
+                    {
+                      "Key": "EMeshLODType::LOD0",
+                      "Value": 0
+                    }
+                  ]
+                }
+              }
+            ],
+            "MeshLODLimits": []
+          }
+        },
+        {
+          "Key": "EUnitBudgetType::CharNpcUnit",
+          "Value": {
+            "MeshLODs": [
+              {
+                "Key": "EEMQualityLevel::High",
+                "Value": {
+                  "LODParameters": [
+                    {
+                      "Key": "EMeshLODType::LOD2",
+                      "Value": 100
+                    },
+                    {
+                      "Key": "EMeshLODType::LOD1",
+                      "Value": 10
+                    },
+                    {
+                      "Key": "EMeshLODType::LOD0",
+                      "Value": 6
+                    }
+                  ]
+                }
+              },
+              {
+                "Key": "EEMQualityLevel::Medium",
+                "Value": {
+                  "LODParameters": [
+                    {
+                      "Key": "EMeshLODType::LOD2",
+                      "Value": 100
+                    },
+                    {
+                      "Key": "EMeshLODType::LOD1",
+                      "Value": 10
+                    },
+                    {
+                      "Key": "EMeshLODType::LOD0",
+                      "Value": 4
+                    }
+                  ]
+                }
+              },
+              {
+                "Key": "EEMQualityLevel::Low",
+                "Value": {
+                  "LODParameters": [
+                    {
+                      "Key": "EMeshLODType::LOD2",
+                      "Value": 100
+                    },
+                    {
+                      "Key": "EMeshLODType::LOD1",
+                      "Value": 15
+                    },
+                    {
+                      "Key": "EMeshLODType::LOD0",
+                      "Value": 0
+                    }
+                  ]
+                }
+              },
+              {
+                "Key": "EEMQualityLevel::VeryHigh",
+                "Value": {
+                  "LODParameters": [
+                    {
+                      "Key": "EMeshLODType::LOD2",
+                      "Value": 100
+                    },
+                    {
+                      "Key": "EMeshLODType::LOD1",
+                      "Value": 10
+                    },
+                    {
+                      "Key": "EMeshLODType::LOD0",
+                      "Value": 8
+                    }
+                  ]
+                }
+              },
+              {
+                "Key": "EEMQualityLevel::VeryLow",
+                "Value": {
+                  "LODParameters": [
+                    {
+                      "Key": "EMeshLODType::LOD2",
+                      "Value": 100
+                    },
+                    {
+                      "Key": "EMeshLODType::LOD1",
+                      "Value": 10
+                    },
+                    {
+                      "Key": "EMeshLODType::LOD0",
+                      "Value": 0
+                    }
+                  ]
+                }
+              }
+            ],
+            "MeshLODLimits": []
+          }
+        },
+        {
+          "Key": "EUnitBudgetType::CustomNpcUnit",
+          "Value": {
+            "MeshLODs": [
+              {
+                "Key": "EEMQualityLevel::High",
+                "Value": {
+                  "LODParameters": [
+                    {
+                      "Key": "EMeshLODType::LOD2",
+                      "Value": 100
+                    },
+                    {
+                      "Key": "EMeshLODType::LOD1",
+                      "Value": 10
+                    },
+                    {
+                      "Key": "EMeshLODType::LOD0",
+                      "Value": 4
+                    }
+                  ]
+                }
+              },
+              {
+                "Key": "EEMQualityLevel::Medium",
+                "Value": {
+                  "LODParameters": [
+                    {
+                      "Key": "EMeshLODType::LOD2",
+                      "Value": 100
+                    },
+                    {
+                      "Key": "EMeshLODType::LOD1",
+                      "Value": 10
+                    },
+                    {
+                      "Key": "EMeshLODType::LOD0",
+                      "Value": 3
+                    }
+                  ]
+                }
+              },
+              {
+                "Key": "EEMQualityLevel::Low",
+                "Value": {
+                  "LODParameters": [
+                    {
+                      "Key": "EMeshLODType::LOD2",
+                      "Value": 100
+                    },
+                    {
+                      "Key": "EMeshLODType::LOD1",
+                      "Value": 15
+                    },
+                    {
+                      "Key": "EMeshLODType::LOD0",
+                      "Value": 0
+                    }
+                  ]
+                }
+              },
+              {
+                "Key": "EEMQualityLevel::VeryHigh",
+                "Value": {
+                  "LODParameters": [
+                    {
+                      "Key": "EMeshLODType::LOD2",
+                      "Value": 100
+                    },
+                    {
+                      "Key": "EMeshLODType::LOD1",
+                      "Value": 10
+                    },
+                    {
+                      "Key": "EMeshLODType::LOD0",
+                      "Value": 5
+                    }
+                  ]
+                }
+              },
+              {
+                "Key": "EEMQualityLevel::VeryLow",
+                "Value": {
+                  "LODParameters": [
+                    {
+                      "Key": "EMeshLODType::LOD2",
+                      "Value": 100
+                    },
+                    {
+                      "Key": "EMeshLODType::LOD1",
+                      "Value": 10
+                    },
+                    {
+                      "Key": "EMeshLODType::LOD0",
+                      "Value": 0
+                    }
+                  ]
+                }
+              }
+            ],
+            "MeshLODLimits": []
+          }
+        },
+        {
+          "Key": "EUnitBudgetType::MainPlayerUnit",
+          "Value": {
+            "MeshLODs": [],
+            "MeshLODLimits": [
+              {
+                "Key": "EEMQualityLevel::High",
+                "Value": {
+                  "LODBias": 0,
+                  "MinLOD": 0
+                }
+              },
+              {
+                "Key": "EEMQualityLevel::Medium",
+                "Value": {
+                  "LODBias": 0,
+                  "MinLOD": 1
+                }
+              },
+              {
+                "Key": "EEMQualityLevel::Low",
+                "Value": {
+                  "LODBias": 0,
+                  "MinLOD": 1
+                }
+              },
+              {
+                "Key": "EEMQualityLevel::VeryHigh",
+                "Value": {
+                  "LODBias": 0,
+                  "MinLOD": 0
+                }
+              },
+              {
+                "Key": "EEMQualityLevel::VeryLow",
+                "Value": {
+                  "LODBias": 0,
+                  "MinLOD": 1
+                }
+              }
+            ]
+          }
+        },
+        {
+          "Key": "EUnitBudgetType::ThirdPartyUnit",
+          "Value": {
+            "MeshLODs": [],
+            "MeshLODLimits": [
+              {
+                "Key": "EEMQualityLevel::High",
+                "Value": {
+                  "LODBias": 0,
+                  "MinLOD": 1
+                }
+              },
+              {
+                "Key": "EEMQualityLevel::Medium",
+                "Value": {
+                  "LODBias": 0,
+                  "MinLOD": 2
+                }
+              },
+              {
+                "Key": "EEMQualityLevel::Low",
+                "Value": {
+                  "LODBias": 0,
+                  "MinLOD": 2
+                }
+              },
+              {
+                "Key": "EEMQualityLevel::VeryHigh",
+                "Value": {
+                  "LODBias": 0,
+                  "MinLOD": 1
+                }
+              },
+              {
+                "Key": "EEMQualityLevel::VeryLow",
+                "Value": {
+                  "LODBias": 0,
+                  "MinLOD": 2
+                }
+              }
+            ]
+          }
+        },
+        {
+          "Key": "EUnitBudgetType::PhantomUnit",
+          "Value": {
+            "MeshLODs": [],
+            "MeshLODLimits": [
+              {
+                "Key": "EEMQualityLevel::High",
+                "Value": {
+                  "LODBias": 0,
+                  "MinLOD": 1
+                }
+              },
+              {
+                "Key": "EEMQualityLevel::Medium",
+                "Value": {
+                  "LODBias": 0,
+                  "MinLOD": 2
+                }
+              },
+              {
+                "Key": "EEMQualityLevel::Low",
+                "Value": {
+                  "LODBias": 0,
+                  "MinLOD": 2
+                }
+              },
+              {
+                "Key": "EEMQualityLevel::VeryHigh",
+                "Value": {
+                  "LODBias": 0,
+                  "MinLOD": 1
+                }
+              },
+              {
+                "Key": "EEMQualityLevel::VeryLow",
+                "Value": {
+                  "LODBias": 0,
+                  "MinLOD": 2
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "UnitMeshLOD_IOSConfig": [
+        {
+          "Key": "EUnitBudgetType::MonsterUnit",
+          "Value": {
+            "MeshLODs": [
+              {
+                "Key": "EEMQualityLevel::High",
+                "Value": {
+                  "LODParameters": [
+                    {
+                      "Key": "EMeshLODType::LOD2",
+                      "Value": 100
+                    },
+                    {
+                      "Key": "EMeshLODType::LOD1",
+                      "Value": 15
+                    },
+                    {
+                      "Key": "EMeshLODType::LOD0",
+                      "Value": 0
+                    }
+                  ]
+                }
+              },
+              {
+                "Key": "EEMQualityLevel::Medium",
+                "Value": {
+                  "LODParameters": [
+                    {
+                      "Key": "EMeshLODType::LOD2",
+                      "Value": 100
+                    },
+                    {
+                      "Key": "EMeshLODType::LOD1",
+                      "Value": 13
+                    },
+                    {
+                      "Key": "EMeshLODType::LOD0",
+                      "Value": 0
+                    }
+                  ]
+                }
+              },
+              {
+                "Key": "EEMQualityLevel::Low",
+                "Value": {
+                  "LODParameters": [
+                    {
+                      "Key": "EMeshLODType::LOD2",
+                      "Value": 100
+                    },
+                    {
+                      "Key": "EMeshLODType::LOD1",
+                      "Value": 10
+                    },
+                    {
+                      "Key": "EMeshLODType::LOD0",
+                      "Value": 0
+                    }
+                  ]
+                }
+              },
+              {
+                "Key": "EEMQualityLevel::VeryHigh",
+                "Value": {
+                  "LODParameters": [
+                    {
+                      "Key": "EMeshLODType::LOD2",
+                      "Value": 100
+                    },
+                    {
+                      "Key": "EMeshLODType::LOD1",
+                      "Value": 18
+                    },
+                    {
+                      "Key": "EMeshLODType::LOD0",
+                      "Value": 0
+                    }
+                  ]
+                }
+              },
+              {
+                "Key": "EEMQualityLevel::VeryLow",
+                "Value": {
+                  "LODParameters": [
+                    {
+                      "Key": "EMeshLODType::LOD2",
+                      "Value": 100
+                    },
+                    {
+                      "Key": "EMeshLODType::LOD1",
+                      "Value": 7
+                    },
+                    {
+                      "Key": "EMeshLODType::LOD0",
+                      "Value": 0
+                    }
+                  ]
+                }
+              }
+            ],
+            "MeshLODLimits": []
+          }
+        },
+        {
+          "Key": "EUnitBudgetType::CharNpcUnit",
+          "Value": {
+            "MeshLODs": [
+              {
+                "Key": "EEMQualityLevel::High",
+                "Value": {
+                  "LODParameters": [
+                    {
+                      "Key": "EMeshLODType::LOD2",
+                      "Value": 100
+                    },
+                    {
+                      "Key": "EMeshLODType::LOD1",
+                      "Value": 10
+                    },
+                    {
+                      "Key": "EMeshLODType::LOD0",
+                      "Value": 6
+                    }
+                  ]
+                }
+              },
+              {
+                "Key": "EEMQualityLevel::Medium",
+                "Value": {
+                  "LODParameters": [
+                    {
+                      "Key": "EMeshLODType::LOD2",
+                      "Value": 100
+                    },
+                    {
+                      "Key": "EMeshLODType::LOD1",
+                      "Value": 10
+                    },
+                    {
+                      "Key": "EMeshLODType::LOD0",
+                      "Value": 4
+                    }
+                  ]
+                }
+              },
+              {
+                "Key": "EEMQualityLevel::Low",
+                "Value": {
+                  "LODParameters": [
+                    {
+                      "Key": "EMeshLODType::LOD2",
+                      "Value": 100
+                    },
+                    {
+                      "Key": "EMeshLODType::LOD1",
+                      "Value": 15
+                    },
+                    {
+                      "Key": "EMeshLODType::LOD0",
+                      "Value": 0
+                    }
+                  ]
+                }
+              },
+              {
+                "Key": "EEMQualityLevel::VeryHigh",
+                "Value": {
+                  "LODParameters": [
+                    {
+                      "Key": "EMeshLODType::LOD2",
+                      "Value": 100
+                    },
+                    {
+                      "Key": "EMeshLODType::LOD1",
+                      "Value": 10
+                    },
+                    {
+                      "Key": "EMeshLODType::LOD0",
+                      "Value": 8
+                    }
+                  ]
+                }
+              },
+              {
+                "Key": "EEMQualityLevel::VeryLow",
+                "Value": {
+                  "LODParameters": [
+                    {
+                      "Key": "EMeshLODType::LOD2",
+                      "Value": 100
+                    },
+                    {
+                      "Key": "EMeshLODType::LOD1",
+                      "Value": 10
+                    },
+                    {
+                      "Key": "EMeshLODType::LOD0",
+                      "Value": 0
+                    }
+                  ]
+                }
+              }
+            ],
+            "MeshLODLimits": []
+          }
+        },
+        {
+          "Key": "EUnitBudgetType::CustomNpcUnit",
+          "Value": {
+            "MeshLODs": [
+              {
+                "Key": "EEMQualityLevel::High",
+                "Value": {
+                  "LODParameters": [
+                    {
+                      "Key": "EMeshLODType::LOD2",
+                      "Value": 100
+                    },
+                    {
+                      "Key": "EMeshLODType::LOD1",
+                      "Value": 10
+                    },
+                    {
+                      "Key": "EMeshLODType::LOD0",
+                      "Value": 4
+                    }
+                  ]
+                }
+              },
+              {
+                "Key": "EEMQualityLevel::Medium",
+                "Value": {
+                  "LODParameters": [
+                    {
+                      "Key": "EMeshLODType::LOD2",
+                      "Value": 100
+                    },
+                    {
+                      "Key": "EMeshLODType::LOD1",
+                      "Value": 10
+                    },
+                    {
+                      "Key": "EMeshLODType::LOD0",
+                      "Value": 3
+                    }
+                  ]
+                }
+              },
+              {
+                "Key": "EEMQualityLevel::Low",
+                "Value": {
+                  "LODParameters": [
+                    {
+                      "Key": "EMeshLODType::LOD2",
+                      "Value": 100
+                    },
+                    {
+                      "Key": "EMeshLODType::LOD1",
+                      "Value": 15
+                    },
+                    {
+                      "Key": "EMeshLODType::LOD0",
+                      "Value": 0
+                    }
+                  ]
+                }
+              },
+              {
+                "Key": "EEMQualityLevel::VeryHigh",
+                "Value": {
+                  "LODParameters": [
+                    {
+                      "Key": "EMeshLODType::LOD2",
+                      "Value": 100
+                    },
+                    {
+                      "Key": "EMeshLODType::LOD1",
+                      "Value": 10
+                    },
+                    {
+                      "Key": "EMeshLODType::LOD0",
+                      "Value": 5
+                    }
+                  ]
+                }
+              },
+              {
+                "Key": "EEMQualityLevel::VeryLow",
+                "Value": {
+                  "LODParameters": [
+                    {
+                      "Key": "EMeshLODType::LOD2",
+                      "Value": 100
+                    },
+                    {
+                      "Key": "EMeshLODType::LOD1",
+                      "Value": 10
+                    },
+                    {
+                      "Key": "EMeshLODType::LOD0",
+                      "Value": 0
+                    }
+                  ]
+                }
+              }
+            ],
+            "MeshLODLimits": []
+          }
+        },
+        {
+          "Key": "EUnitBudgetType::MainPlayerUnit",
+          "Value": {
+            "MeshLODs": [],
+            "MeshLODLimits": [
+              {
+                "Key": "EEMQualityLevel::High",
+                "Value": {
+                  "LODBias": 0,
+                  "MinLOD": 0
+                }
+              },
+              {
+                "Key": "EEMQualityLevel::Medium",
+                "Value": {
+                  "LODBias": 0,
+                  "MinLOD": 1
+                }
+              },
+              {
+                "Key": "EEMQualityLevel::Low",
+                "Value": {
+                  "LODBias": 0,
+                  "MinLOD": 1
+                }
+              },
+              {
+                "Key": "EEMQualityLevel::VeryHigh",
+                "Value": {
+                  "LODBias": 0,
+                  "MinLOD": 0
+                }
+              },
+              {
+                "Key": "EEMQualityLevel::VeryLow",
+                "Value": {
+                  "LODBias": 0,
+                  "MinLOD": 1
+                }
+              }
+            ]
+          }
+        },
+        {
+          "Key": "EUnitBudgetType::ThirdPartyUnit",
+          "Value": {
+            "MeshLODs": [],
+            "MeshLODLimits": [
+              {
+                "Key": "EEMQualityLevel::High",
+                "Value": {
+                  "LODBias": 0,
+                  "MinLOD": 1
+                }
+              },
+              {
+                "Key": "EEMQualityLevel::Medium",
+                "Value": {
+                  "LODBias": 0,
+                  "MinLOD": 2
+                }
+              },
+              {
+                "Key": "EEMQualityLevel::Low",
+                "Value": {
+                  "LODBias": 0,
+                  "MinLOD": 2
+                }
+              },
+              {
+                "Key": "EEMQualityLevel::VeryHigh",
+                "Value": {
+                  "LODBias": 0,
+                  "MinLOD": 1
+                }
+              },
+              {
+                "Key": "EEMQualityLevel::VeryLow",
+                "Value": {
+                  "LODBias": 0,
+                  "MinLOD": 2
+                }
+              }
+            ]
+          }
+        },
+        {
+          "Key": "EUnitBudgetType::PhantomUnit",
+          "Value": {
+            "MeshLODs": [],
+            "MeshLODLimits": [
+              {
+                "Key": "EEMQualityLevel::High",
+                "Value": {
+                  "LODBias": 0,
+                  "MinLOD": 1
+                }
+              },
+              {
+                "Key": "EEMQualityLevel::Medium",
+                "Value": {
+                  "LODBias": 0,
+                  "MinLOD": 2
+                }
+              },
+              {
+                "Key": "EEMQualityLevel::Low",
+                "Value": {
+                  "LODBias": 0,
+                  "MinLOD": 2
+                }
+              },
+              {
+                "Key": "EEMQualityLevel::VeryHigh",
+                "Value": {
+                  "LODBias": 0,
+                  "MinLOD": 1
+                }
+              },
+              {
+                "Key": "EEMQualityLevel::VeryLow",
+                "Value": {
+                  "LODBias": 0,
+                  "MinLOD": 2
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "UnitHidden_PCConfig": [
+        {
+          "Key": "EUnitBudgetType::CharNpcUnit",
+          "Value": {
+            "HiddenConfig": [
+              {
+                "Key": "EEMQualityLevel::High",
+                "Value": {
+                  "bUseDistance": true,
+                  "HiddenDistance": 6000.0,
+                  "bUseBudget": false,
+                  "BudgetLimitCount": -1.0,
+                  "StateChangeThrottleInTimes": 1.0
+                }
+              },
+              {
+                "Key": "EEMQualityLevel::Medium",
+                "Value": {
+                  "bUseDistance": true,
+                  "HiddenDistance": 5000.0,
+                  "bUseBudget": false,
+                  "BudgetLimitCount": -1.0,
+                  "StateChangeThrottleInTimes": 1.0
+                }
+              },
+              {
+                "Key": "EEMQualityLevel::Low",
+                "Value": {
+                  "bUseDistance": true,
+                  "HiddenDistance": 4000.0,
+                  "bUseBudget": false,
+                  "BudgetLimitCount": -1.0,
+                  "StateChangeThrottleInTimes": 1.0
+                }
+              },
+              {
+                "Key": "EEMQualityLevel::VeryHigh",
+                "Value": {
+                  "bUseDistance": true,
+                  "HiddenDistance": 7000.0,
+                  "bUseBudget": false,
+                  "BudgetLimitCount": -1.0,
+                  "StateChangeThrottleInTimes": 1.0
+                }
+              },
+              {
+                "Key": "EEMQualityLevel::VeryLow",
+                "Value": {
+                  "bUseDistance": true,
+                  "HiddenDistance": 3000.0,
+                  "bUseBudget": false,
+                  "BudgetLimitCount": -1.0,
+                  "StateChangeThrottleInTimes": 1.0
+                }
+              }
+            ]
+          }
+        },
+        {
+          "Key": "EUnitBudgetType::CustomNpcUnit",
+          "Value": {
+            "HiddenConfig": [
+              {
+                "Key": "EEMQualityLevel::High",
+                "Value": {
+                  "bUseDistance": true,
+                  "HiddenDistance": 5000.0,
+                  "bUseBudget": false,
+                  "BudgetLimitCount": -1.0,
+                  "StateChangeThrottleInTimes": 1.0
+                }
+              },
+              {
+                "Key": "EEMQualityLevel::Medium",
+                "Value": {
+                  "bUseDistance": true,
+                  "HiddenDistance": 4000.0,
+                  "bUseBudget": false,
+                  "BudgetLimitCount": -1.0,
+                  "StateChangeThrottleInTimes": 1.0
+                }
+              },
+              {
+                "Key": "EEMQualityLevel::Low",
+                "Value": {
+                  "bUseDistance": true,
+                  "HiddenDistance": 3000.0,
+                  "bUseBudget": false,
+                  "BudgetLimitCount": -1.0,
+                  "StateChangeThrottleInTimes": 1.0
+                }
+              },
+              {
+                "Key": "EEMQualityLevel::VeryHigh",
+                "Value": {
+                  "bUseDistance": true,
+                  "HiddenDistance": 6000.0,
+                  "bUseBudget": false,
+                  "BudgetLimitCount": -1.0,
+                  "StateChangeThrottleInTimes": 1.0
+                }
+              },
+              {
+                "Key": "EEMQualityLevel::VeryLow",
+                "Value": {
+                  "bUseDistance": true,
+                  "HiddenDistance": 2500.0,
+                  "bUseBudget": false,
+                  "BudgetLimitCount": -1.0,
+                  "StateChangeThrottleInTimes": 1.0
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "UnitHidden_AndroidConfig": [
+        {
+          "Key": "EUnitBudgetType::CharNpcUnit",
+          "Value": {
+            "HiddenConfig": [
+              {
+                "Key": "EEMQualityLevel::High",
+                "Value": {
+                  "bUseDistance": true,
+                  "HiddenDistance": 4000.0,
+                  "bUseBudget": false,
+                  "BudgetLimitCount": -1.0,
+                  "StateChangeThrottleInTimes": 1.0
+                }
+              },
+              {
+                "Key": "EEMQualityLevel::Medium",
+                "Value": {
+                  "bUseDistance": true,
+                  "HiddenDistance": 3500.0,
+                  "bUseBudget": false,
+                  "BudgetLimitCount": -1.0,
+                  "StateChangeThrottleInTimes": 1.0
+                }
+              },
+              {
+                "Key": "EEMQualityLevel::Low",
+                "Value": {
+                  "bUseDistance": true,
+                  "HiddenDistance": 2500.0,
+                  "bUseBudget": false,
+                  "BudgetLimitCount": -1.0,
+                  "StateChangeThrottleInTimes": 1.0
+                }
+              },
+              {
+                "Key": "EEMQualityLevel::VeryHigh",
+                "Value": {
+                  "bUseDistance": true,
+                  "HiddenDistance": 4500.0,
+                  "bUseBudget": false,
+                  "BudgetLimitCount": -1.0,
+                  "StateChangeThrottleInTimes": 1.0
+                }
+              },
+              {
+                "Key": "EEMQualityLevel::VeryLow",
+                "Value": {
+                  "bUseDistance": true,
+                  "HiddenDistance": 2000.0,
+                  "bUseBudget": false,
+                  "BudgetLimitCount": -1.0,
+                  "StateChangeThrottleInTimes": 1.0
+                }
+              }
+            ]
+          }
+        },
+        {
+          "Key": "EUnitBudgetType::CustomNpcUnit",
+          "Value": {
+            "HiddenConfig": [
+              {
+                "Key": "EEMQualityLevel::High",
+                "Value": {
+                  "bUseDistance": true,
+                  "HiddenDistance": 3500.0,
+                  "bUseBudget": false,
+                  "BudgetLimitCount": -1.0,
+                  "StateChangeThrottleInTimes": 1.0
+                }
+              },
+              {
+                "Key": "EEMQualityLevel::Medium",
+                "Value": {
+                  "bUseDistance": true,
+                  "HiddenDistance": 2500.0,
+                  "bUseBudget": false,
+                  "BudgetLimitCount": -1.0,
+                  "StateChangeThrottleInTimes": 1.0
+                }
+              },
+              {
+                "Key": "EEMQualityLevel::Low",
+                "Value": {
+                  "bUseDistance": true,
+                  "HiddenDistance": 2000.0,
+                  "bUseBudget": false,
+                  "BudgetLimitCount": -1.0,
+                  "StateChangeThrottleInTimes": 1.0
+                }
+              },
+              {
+                "Key": "EEMQualityLevel::VeryHigh",
+                "Value": {
+                  "bUseDistance": true,
+                  "HiddenDistance": 4500.0,
+                  "bUseBudget": false,
+                  "BudgetLimitCount": -1.0,
+                  "StateChangeThrottleInTimes": 1.0
+                }
+              },
+              {
+                "Key": "EEMQualityLevel::VeryLow",
+                "Value": {
+                  "bUseDistance": true,
+                  "HiddenDistance": 1500.0,
+                  "bUseBudget": false,
+                  "BudgetLimitCount": -1.0,
+                  "StateChangeThrottleInTimes": 1.0
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "UnitHidden_IOSConfig": [
+        {
+          "Key": "EUnitBudgetType::CharNpcUnit",
+          "Value": {
+            "HiddenConfig": [
+              {
+                "Key": "EEMQualityLevel::High",
+                "Value": {
+                  "bUseDistance": true,
+                  "HiddenDistance": 4000.0,
+                  "bUseBudget": false,
+                  "BudgetLimitCount": -1.0,
+                  "StateChangeThrottleInTimes": 1.0
+                }
+              },
+              {
+                "Key": "EEMQualityLevel::Medium",
+                "Value": {
+                  "bUseDistance": true,
+                  "HiddenDistance": 3500.0,
+                  "bUseBudget": false,
+                  "BudgetLimitCount": -1.0,
+                  "StateChangeThrottleInTimes": 1.0
+                }
+              },
+              {
+                "Key": "EEMQualityLevel::Low",
+                "Value": {
+                  "bUseDistance": true,
+                  "HiddenDistance": 2500.0,
+                  "bUseBudget": false,
+                  "BudgetLimitCount": -1.0,
+                  "StateChangeThrottleInTimes": 1.0
+                }
+              },
+              {
+                "Key": "EEMQualityLevel::VeryHigh",
+                "Value": {
+                  "bUseDistance": true,
+                  "HiddenDistance": 4500.0,
+                  "bUseBudget": false,
+                  "BudgetLimitCount": -1.0,
+                  "StateChangeThrottleInTimes": 1.0
+                }
+              },
+              {
+                "Key": "EEMQualityLevel::VeryLow",
+                "Value": {
+                  "bUseDistance": true,
+                  "HiddenDistance": 2000.0,
+                  "bUseBudget": false,
+                  "BudgetLimitCount": -1.0,
+                  "StateChangeThrottleInTimes": 1.0
+                }
+              }
+            ]
+          }
+        },
+        {
+          "Key": "EUnitBudgetType::CustomNpcUnit",
+          "Value": {
+            "HiddenConfig": [
+              {
+                "Key": "EEMQualityLevel::High",
+                "Value": {
+                  "bUseDistance": true,
+                  "HiddenDistance": 3500.0,
+                  "bUseBudget": false,
+                  "BudgetLimitCount": -1.0,
+                  "StateChangeThrottleInTimes": 1.0
+                }
+              },
+              {
+                "Key": "EEMQualityLevel::Medium",
+                "Value": {
+                  "bUseDistance": true,
+                  "HiddenDistance": 2500.0,
+                  "bUseBudget": false,
+                  "BudgetLimitCount": -1.0,
+                  "StateChangeThrottleInTimes": 1.0
+                }
+              },
+              {
+                "Key": "EEMQualityLevel::Low",
+                "Value": {
+                  "bUseDistance": true,
+                  "HiddenDistance": 2000.0,
+                  "bUseBudget": false,
+                  "BudgetLimitCount": -1.0,
+                  "StateChangeThrottleInTimes": 1.0
+                }
+              },
+              {
+                "Key": "EEMQualityLevel::VeryHigh",
+                "Value": {
+                  "bUseDistance": true,
+                  "HiddenDistance": 4500.0,
+                  "bUseBudget": false,
+                  "BudgetLimitCount": -1.0,
+                  "StateChangeThrottleInTimes": 1.0
+                }
+              },
+              {
+                "Key": "EEMQualityLevel::VeryLow",
+                "Value": {
+                  "bUseDistance": true,
+                  "HiddenDistance": 1500.0,
+                  "bUseBudget": false,
+                  "BudgetLimitCount": -1.0,
+                  "StateChangeThrottleInTimes": 1.0
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "UnitDynamicShadow_PCConfig": [
+        {
+          "Key": "EUnitBudgetType::MonsterUnit",
+          "Value": {
+            "DynamicShadowInfo": [
+              {
+                "Key": "EEMQualityLevel::High",
+                "Value": {
+                  "DyanmicShadowCount": 10
+                }
+              },
+              {
+                "Key": "EEMQualityLevel::Medium",
+                "Value": {
+                  "DyanmicShadowCount": 7
+                }
+              },
+              {
+                "Key": "EEMQualityLevel::Low",
+                "Value": {
+                  "DyanmicShadowCount": 5
+                }
+              },
+              {
+                "Key": "EEMQualityLevel::VeryHigh",
+                "Value": {
+                  "DyanmicShadowCount": 12
+                }
+              },
+              {
+                "Key": "EEMQualityLevel::VeryLow",
+                "Value": {
+                  "DyanmicShadowCount": 3
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "UnitDynamicShadow_AndroidConfig": [
+        {
+          "Key": "EUnitBudgetType::MonsterUnit",
+          "Value": {
+            "DynamicShadowInfo": [
+              {
+                "Key": "EEMQualityLevel::High",
+                "Value": {
+                  "DyanmicShadowCount": 7
+                }
+              },
+              {
+                "Key": "EEMQualityLevel::Medium",
+                "Value": {
+                  "DyanmicShadowCount": 5
+                }
+              },
+              {
+                "Key": "EEMQualityLevel::Low",
+                "Value": {
+                  "DyanmicShadowCount": 3
+                }
+              },
+              {
+                "Key": "EEMQualityLevel::VeryHigh",
+                "Value": {
+                  "DyanmicShadowCount": 10
+                }
+              },
+              {
+                "Key": "EEMQualityLevel::VeryLow",
+                "Value": {
+                  "DyanmicShadowCount": 2
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "UnitDynamicShadow_IOSConfig": [
+        {
+          "Key": "EUnitBudgetType::MonsterUnit",
+          "Value": {
+            "DynamicShadowInfo": [
+              {
+                "Key": "EEMQualityLevel::High",
+                "Value": {
+                  "DyanmicShadowCount": 7
+                }
+              },
+              {
+                "Key": "EEMQualityLevel::Medium",
+                "Value": {
+                  "DyanmicShadowCount": 5
+                }
+              },
+              {
+                "Key": "EEMQualityLevel::Low",
+                "Value": {
+                  "DyanmicShadowCount": 3
+                }
+              },
+              {
+                "Key": "EEMQualityLevel::VeryHigh",
+                "Value": {
+                  "DyanmicShadowCount": 10
+                }
+              },
+              {
+                "Key": "EEMQualityLevel::VeryLow",
+                "Value": {
+                  "DyanmicShadowCount": 2
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "UnitMeshTick_PCConfig": [
+        {
+          "Key": "EUnitBudgetType::MonsterUnit",
+          "Value": {
+            "MeshTickInfo": [
+              {
+                "Key": "EEMQualityLevel::High",
+                "Value": {
+                  "GlobalMeshTickMs": 1.0
+                }
+              },
+              {
+                "Key": "EEMQualityLevel::Medium",
+                "Value": {
+                  "GlobalMeshTickMs": 1.0
+                }
+              },
+              {
+                "Key": "EEMQualityLevel::Low",
+                "Value": {
+                  "GlobalMeshTickMs": 1.0
+                }
+              },
+              {
+                "Key": "EEMQualityLevel::VeryHigh",
+                "Value": {
+                  "GlobalMeshTickMs": 1.0
+                }
+              },
+              {
+                "Key": "EEMQualityLevel::VeryLow",
+                "Value": {
+                  "GlobalMeshTickMs": 1.0
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "UnitMeshTick_AndroidConfig": [
+        {
+          "Key": "EUnitBudgetType::MonsterUnit",
+          "Value": {
+            "MeshTickInfo": [
+              {
+                "Key": "EEMQualityLevel::High",
+                "Value": {
+                  "GlobalMeshTickMs": 1.0
+                }
+              },
+              {
+                "Key": "EEMQualityLevel::Medium",
+                "Value": {
+                  "GlobalMeshTickMs": 1.0
+                }
+              },
+              {
+                "Key": "EEMQualityLevel::Low",
+                "Value": {
+                  "GlobalMeshTickMs": 1.0
+                }
+              },
+              {
+                "Key": "EEMQualityLevel::VeryHigh",
+                "Value": {
+                  "GlobalMeshTickMs": 1.0
+                }
+              },
+              {
+                "Key": "EEMQualityLevel::VeryLow",
+                "Value": {
+                  "GlobalMeshTickMs": 1.0
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "UnitMeshTick_IOSConfig": [
+        {
+          "Key": "EUnitBudgetType::MonsterUnit",
+          "Value": {
+            "MeshTickInfo": [
+              {
+                "Key": "EEMQualityLevel::High",
+                "Value": {
+                  "GlobalMeshTickMs": 1.0
+                }
+              },
+              {
+                "Key": "EEMQualityLevel::Medium",
+                "Value": {
+                  "GlobalMeshTickMs": 1.0
+                }
+              },
+              {
+                "Key": "EEMQualityLevel::Low",
+                "Value": {
+                  "GlobalMeshTickMs": 1.0
+                }
+              },
+              {
+                "Key": "EEMQualityLevel::VeryHigh",
+                "Value": {
+                  "GlobalMeshTickMs": 1.0
+                }
+              },
+              {
+                "Key": "EEMQualityLevel::VeryLow",
+                "Value": {
+                  "GlobalMeshTickMs": 1.0
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+]

@@ -1,0 +1,2975 @@
+[
+  {
+    "Type": "BehaviorTree",
+    "Name": "BT_Boss_Kuxiu",
+    "Class": "UScriptClass'BehaviorTree'",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "RootNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Kuxiu:BTComposite_Selector_43'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.4"
+      },
+      "BlackboardAsset": {
+        "ObjectName": "BlackboardData'BB_Boss_Kuxiu'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BB_Boss_Kuxiu.0"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Rate",
+    "Name": "BTComposite_Rate_0",
+    "Outer": "BT_Boss_Kuxiu",
+    "Class": "UScriptClass'BTComposite_Rate'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Rates": [
+        1,
+        1
+      ],
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_Boss_Kuxiu:BTComposite_Sequence_12'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.12"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_Boss_Kuxiu:BTComposite_Sequence_2'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.15"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Kuxiu'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Kuxiu:BTComposite_Selector_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.3"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_0",
+    "Outer": "BT_Boss_Kuxiu",
+    "Class": "UScriptClass'BTComposite_Selector'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_Boss_Kuxiu:BTComposite_Sequence_5'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.18"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_Boss_Kuxiu:BTComposite_Sequence_6'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.19"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector'BT_Boss_Kuxiu:BTComposite_Selector_1'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.3"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Boss_Kuxiu:BTDecorator_Blackboard_20'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.28"
+            },
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Boss_Kuxiu:BTDecorator_Blackboard_21'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.29"
+            }
+          ],
+          "DecoratorOps": [
+            {
+              "Operation": "EBTDecoratorLogic::And",
+              "Number": 2
+            },
+            {
+              "Operation": "EBTDecoratorLogic::Test",
+              "Number": 0
+            },
+            {
+              "Operation": "EBTDecoratorLogic::Test",
+              "Number": 1
+            }
+          ]
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector'BT_Boss_Kuxiu:BTComposite_Selector_6'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.7"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Boss_Kuxiu:BTDecorator_Blackboard_22'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.30"
+            },
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Boss_Kuxiu:BTDecorator_Blackboard_23'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.31"
+            }
+          ],
+          "DecoratorOps": [
+            {
+              "Operation": "EBTDecoratorLogic::Or",
+              "Number": 2
+            },
+            {
+              "Operation": "EBTDecoratorLogic::Test",
+              "Number": 0
+            },
+            {
+              "Operation": "EBTDecoratorLogic::Test",
+              "Number": 1
+            }
+          ]
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Kuxiu'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Kuxiu:BTComposite_Sequence_106'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.10"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_1",
+    "Outer": "BT_Boss_Kuxiu",
+    "Class": "UScriptClass'BTComposite_Selector'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Rate'BT_Boss_Kuxiu:BTComposite_Rate_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.1"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Boss_Kuxiu:BTDecorator_Blackboard_24'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.32"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_Boss_Kuxiu:BTComposite_Sequence_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.8"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Boss_Kuxiu:BTDecorator_Blackboard_26'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.34"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_Boss_Kuxiu:BTComposite_Sequence_1'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.9"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Boss_Kuxiu:BTDecorator_Blackboard_30'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.38"
+            },
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Boss_Kuxiu:BTDecorator_Blackboard_25'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.33"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_Boss_Kuxiu:BTComposite_Sequence_4'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.17"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Boss_Kuxiu:BTDecorator_Blackboard_27'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.35"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_NewMoveTo'BT_Boss_Kuxiu:BTTask_NewMoveTo_2'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.87"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Boss_Kuxiu:BTDecorator_Blackboard_28'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.36"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_NewMoveTo'BT_Boss_Kuxiu:BTTask_NewMoveTo_4'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.89"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_ForceSuccess'BT_Boss_Kuxiu:BTDecorator_ForceSuccess_7'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.51"
+            },
+            {
+              "ObjectName": "BTDecorator_TimeLimit'BT_Boss_Kuxiu:BTDecorator_TimeLimit_7'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.62"
+            }
+          ],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Kuxiu'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Kuxiu:BTComposite_Selector_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.2"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_43",
+    "Outer": "BT_Boss_Kuxiu",
+    "Class": "UScriptClass'BTComposite_Selector'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector'BT_Boss_Kuxiu:BTComposite_Selector_45'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.5"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Boss_Kuxiu:BTDecorator_Blackboard_120'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.25"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait'BT_Boss_Kuxiu:BTTask_Wait_58'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.106"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Boss_Kuxiu:BTDecorator_Blackboard_119'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.24"
+            }
+          ],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Kuxiu'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.0"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_45",
+    "Outer": "BT_Boss_Kuxiu",
+    "Class": "UScriptClass'BTComposite_Selector'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_Boss_Kuxiu:BTComposite_Sequence_106'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.10"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Boss_Kuxiu:BTDecorator_Blackboard_109'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.22"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_Boss_Kuxiu:BTComposite_Sequence_127'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.14"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Boss_Kuxiu:BTDecorator_Blackboard_129'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.26"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_Boss_Kuxiu:BTComposite_Sequence_107'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.11"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Boss_Kuxiu:BTDecorator_Blackboard_110'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.23"
+            }
+          ],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Kuxiu'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Kuxiu:BTComposite_Selector_43'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.4"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_52",
+    "Outer": "BT_Boss_Kuxiu",
+    "Class": "UScriptClass'BTComposite_Selector'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_Boss_Kuxiu:BTComposite_Sequence_126'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.13"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_GetTarget'BT_Boss_Kuxiu:BTTask_GetTarget_9'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.79"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Kuxiu'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Kuxiu:BTComposite_Sequence_106'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.10"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_6",
+    "Outer": "BT_Boss_Kuxiu",
+    "Class": "UScriptClass'BTComposite_Selector'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_Boss_Kuxiu:BTComposite_Sequence_7'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.20"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_Boss_Kuxiu:BTComposite_Sequence_8'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.21"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_NewMoveTo'BT_Boss_Kuxiu:BTTask_NewMoveTo_8'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.93"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Boss_Kuxiu:BTDecorator_Blackboard_14'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.27"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_NewMoveTo'BT_Boss_Kuxiu:BTTask_NewMoveTo_9'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.94"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_ForceSuccess'BT_Boss_Kuxiu:BTDecorator_ForceSuccess_4'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.49"
+            },
+            {
+              "ObjectName": "BTDecorator_TimeLimit'BT_Boss_Kuxiu:BTDecorator_TimeLimit_4'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.60"
+            }
+          ],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Kuxiu'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Kuxiu:BTComposite_Selector_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.2"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_0",
+    "Outer": "BT_Boss_Kuxiu",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_UseSkill'BT_Boss_Kuxiu:BTTask_UseSkill_3'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.101"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Cooldown'BT_Boss_Kuxiu:BTDecorator_Cooldown_9'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.42"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_Boss_Kuxiu:BTComposite_Sequence_3'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.16"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Kuxiu'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Kuxiu:BTComposite_Selector_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.3"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_1",
+    "Outer": "BT_Boss_Kuxiu",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_UseSkill'BT_Boss_Kuxiu:BTTask_UseSkill_2'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.100"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Cooldown'BT_Boss_Kuxiu:BTDecorator_Cooldown_8'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.41"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_NewMoveTo'BT_Boss_Kuxiu:BTTask_NewMoveTo_1'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.82"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_ForceSuccess'BT_Boss_Kuxiu:BTDecorator_ForceSuccess_0'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.43"
+            },
+            {
+              "ObjectName": "BTDecorator_TimeLimit'BT_Boss_Kuxiu:BTDecorator_TimeLimit_0'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.54"
+            }
+          ],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Kuxiu'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Kuxiu:BTComposite_Selector_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.3"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_106",
+    "Outer": "BT_Boss_Kuxiu",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector'BT_Boss_Kuxiu:BTComposite_Selector_52'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.6"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector'BT_Boss_Kuxiu:BTComposite_Selector_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.2"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "Services": [
+        {
+          "ObjectName": "BTService_EnemyVision'BT_Boss_Kuxiu:BTService_EnemyVision_7'",
+          "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.66"
+        },
+        {
+          "ObjectName": "BTService_BBValueDis'BT_Boss_Kuxiu:BTService_BBValueDis_7'",
+          "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.65"
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Kuxiu'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Kuxiu:BTComposite_Selector_45'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.5"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_107",
+    "Outer": "BT_Boss_Kuxiu",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait'BT_Boss_Kuxiu:BTTask_Wait_51'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.105"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Kuxiu'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Kuxiu:BTComposite_Selector_45'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.5"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_12",
+    "Outer": "BT_Boss_Kuxiu",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_UseSkill'BT_Boss_Kuxiu:BTTask_UseSkill_6'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.104"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_FindSpecifyLocation'BT_Boss_Kuxiu:BTTask_FindSpecifyLocation_12'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.73"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_NewMoveTo'BT_Boss_Kuxiu:BTTask_NewMoveTo_7'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.92"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_TimeLimit'BT_Boss_Kuxiu:BTDecorator_TimeLimit_9'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.64"
+            },
+            {
+              "ObjectName": "BTDecorator_ForceSuccess'BT_Boss_Kuxiu:BTDecorator_ForceSuccess_9'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.53"
+            }
+          ],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Kuxiu'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Rate'BT_Boss_Kuxiu:BTComposite_Rate_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.1"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_126",
+    "Outer": "BT_Boss_Kuxiu",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_FilterTargetsByDis'BT_Boss_Kuxiu:BTTask_FilterTargetsByDis_4'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.68"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_FilterTargetsByType'BT_Boss_Kuxiu:BTTask_FilterTargetsByType_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.70"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_FilterTargetsByLiving'BT_Boss_Kuxiu:BTTask_FilterTargetsByLiving_4'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.69"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_LastFilterTargets'BT_Boss_Kuxiu:BTTask_LastFilterTargets_4'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.80"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Kuxiu'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Kuxiu:BTComposite_Selector_52'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.6"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_127",
+    "Outer": "BT_Boss_Kuxiu",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_SetTarget'BT_Boss_Kuxiu:BTTask_SetTarget_4'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.95"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_EMRunEQSQuery'BT_Boss_Kuxiu:BTTask_EMRunEQSQuery_4'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.67"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_NewMoveTo'BT_Boss_Kuxiu:BTTask_NewMoveTo_46'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.90"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Kuxiu'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Kuxiu:BTComposite_Selector_45'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.5"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_2",
+    "Outer": "BT_Boss_Kuxiu",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_UseSkill'BT_Boss_Kuxiu:BTTask_UseSkill_5'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.103"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_FindSpecifyLocation'BT_Boss_Kuxiu:BTTask_FindSpecifyLocation_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.71"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_NewMoveTo'BT_Boss_Kuxiu:BTTask_NewMoveTo_10'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.83"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_TimeLimit'BT_Boss_Kuxiu:BTDecorator_TimeLimit_8'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.63"
+            },
+            {
+              "ObjectName": "BTDecorator_ForceSuccess'BT_Boss_Kuxiu:BTDecorator_ForceSuccess_8'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.52"
+            }
+          ],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Kuxiu'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Rate'BT_Boss_Kuxiu:BTComposite_Rate_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.1"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_3",
+    "Outer": "BT_Boss_Kuxiu",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_FindSpecifyLocation'BT_Boss_Kuxiu:BTTask_FindSpecifyLocation_1'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.72"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_NewMoveTo'BT_Boss_Kuxiu:BTTask_NewMoveTo_11'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.84"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_TimeLimit'BT_Boss_Kuxiu:BTDecorator_TimeLimit_1'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.55"
+            },
+            {
+              "ObjectName": "BTDecorator_ForceSuccess'BT_Boss_Kuxiu:BTDecorator_ForceSuccess_1'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.44"
+            }
+          ],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Kuxiu'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Kuxiu:BTComposite_Sequence_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.8"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_4",
+    "Outer": "BT_Boss_Kuxiu",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_UseSkill'BT_Boss_Kuxiu:BTTask_UseSkill_4'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.102"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Cooldown'BT_Boss_Kuxiu:BTDecorator_Cooldown_10'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.40"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_FindSpecifyLocation'BT_Boss_Kuxiu:BTTask_FindSpecifyLocation_4'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.76"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_NewMoveTo'BT_Boss_Kuxiu:BTTask_NewMoveTo_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.81"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_TimeLimit'BT_Boss_Kuxiu:BTDecorator_TimeLimit_2'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.57"
+            },
+            {
+              "ObjectName": "BTDecorator_ForceSuccess'BT_Boss_Kuxiu:BTDecorator_ForceSuccess_2'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.46"
+            }
+          ],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Kuxiu'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Kuxiu:BTComposite_Selector_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.3"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_5",
+    "Outer": "BT_Boss_Kuxiu",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_UseSkill'BT_Boss_Kuxiu:BTTask_UseSkill_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.96"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_FindSpecifyLocation'BT_Boss_Kuxiu:BTTask_FindSpecifyLocation_2'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.74"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_NewMoveTo'BT_Boss_Kuxiu:BTTask_NewMoveTo_12'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.85"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_TimeLimit'BT_Boss_Kuxiu:BTDecorator_TimeLimit_5'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.61"
+            },
+            {
+              "ObjectName": "BTDecorator_ForceSuccess'BT_Boss_Kuxiu:BTDecorator_ForceSuccess_5'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.50"
+            }
+          ],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Kuxiu'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Kuxiu:BTComposite_Selector_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.2"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_6",
+    "Outer": "BT_Boss_Kuxiu",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_UseSkill'BT_Boss_Kuxiu:BTTask_UseSkill_1'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.97"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_FindSpecifyLocation'BT_Boss_Kuxiu:BTTask_FindSpecifyLocation_3'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.75"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_NewMoveTo'BT_Boss_Kuxiu:BTTask_NewMoveTo_13'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.86"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_TimeLimit'BT_Boss_Kuxiu:BTDecorator_TimeLimit_10'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.56"
+            },
+            {
+              "ObjectName": "BTDecorator_ForceSuccess'BT_Boss_Kuxiu:BTDecorator_ForceSuccess_10'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.45"
+            }
+          ],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Kuxiu'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Kuxiu:BTComposite_Selector_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.2"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_7",
+    "Outer": "BT_Boss_Kuxiu",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_UseSkill'BT_Boss_Kuxiu:BTTask_UseSkill_13'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.99"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Boss_Kuxiu:BTDecorator_Blackboard_29'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.37"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_FindSpecifyLocation'BT_Boss_Kuxiu:BTTask_FindSpecifyLocation_5'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.77"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_NewMoveTo'BT_Boss_Kuxiu:BTTask_NewMoveTo_3'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.88"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_TimeLimit'BT_Boss_Kuxiu:BTDecorator_TimeLimit_3'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.58"
+            },
+            {
+              "ObjectName": "BTDecorator_ForceSuccess'BT_Boss_Kuxiu:BTDecorator_ForceSuccess_3'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.47"
+            }
+          ],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Kuxiu'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Kuxiu:BTComposite_Selector_6'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.7"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_8",
+    "Outer": "BT_Boss_Kuxiu",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_UseSkill'BT_Boss_Kuxiu:BTTask_UseSkill_11'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.98"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Cooldown'BT_Boss_Kuxiu:BTDecorator_Cooldown_0'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.39"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_FindSpecifyLocation'BT_Boss_Kuxiu:BTTask_FindSpecifyLocation_6'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.78"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_NewMoveTo'BT_Boss_Kuxiu:BTTask_NewMoveTo_5'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.91"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_TimeLimit'BT_Boss_Kuxiu:BTDecorator_TimeLimit_30'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.59"
+            },
+            {
+              "ObjectName": "BTDecorator_ForceSuccess'BT_Boss_Kuxiu:BTDecorator_ForceSuccess_30'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.48"
+            }
+          ],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Kuxiu'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Kuxiu:BTComposite_Selector_6'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.7"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_109",
+    "Outer": "BT_Boss_Kuxiu",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "IntValue": 2,
+      "CachedDescription": "DecisionState 等于 Battle",
+      "BlackboardKey": {
+        "SelectedKeyName": "DecisionState"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::Both",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Kuxiu'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Kuxiu:BTComposite_Selector_45'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.5"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_110",
+    "Outer": "BT_Boss_Kuxiu",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "CachedDescription": "DecisionState 等于 Out Battle",
+      "BlackboardKey": {
+        "SelectedKeyName": "DecisionState"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::Self",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Kuxiu'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Kuxiu:BTComposite_Selector_45'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.5"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_119",
+    "Outer": "BT_Boss_Kuxiu",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "IntValue": 1,
+      "CachedDescription": "ActionMode 等于 Hitted",
+      "BlackboardKey": {
+        "SelectedKeyName": "ActionMode"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::Self",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Kuxiu'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Kuxiu:BTComposite_Selector_43'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.4"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_120",
+    "Outer": "BT_Boss_Kuxiu",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "CachedDescription": "ActionMode 等于 Active",
+      "BlackboardKey": {
+        "SelectedKeyName": "ActionMode"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::Self",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Kuxiu'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Kuxiu:BTComposite_Selector_43'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.4"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_129",
+    "Outer": "BT_Boss_Kuxiu",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "IntValue": 1,
+      "CachedDescription": "DecisionState 等于 Alert",
+      "BlackboardKey": {
+        "SelectedKeyName": "DecisionState"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::Both",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Kuxiu'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Kuxiu:BTComposite_Selector_45'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.5"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_14",
+    "Outer": "BT_Boss_Kuxiu",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "FloatValue": 1600.0,
+      "CachedDescription": "TickTargetDis 大于 1600.000000",
+      "OperationType": 4,
+      "BlackboardKey": {
+        "SelectedKeyName": "TickTargetDis"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Kuxiu'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Kuxiu:BTComposite_Selector_6'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.7"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_20",
+    "Outer": "BT_Boss_Kuxiu",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "FloatValue": 200.0,
+      "CachedDescription": "TickTargetDisZ 小于或等于 200.000000",
+      "OperationType": 3,
+      "BlackboardKey": {
+        "SelectedKeyName": "TickTargetDisZ"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Kuxiu'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Kuxiu:BTComposite_Selector_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.2"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_21",
+    "Outer": "BT_Boss_Kuxiu",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "FloatValue": -200.0,
+      "CachedDescription": "TickTargetDisZ 大于或等于 -200.000000",
+      "OperationType": 5,
+      "BlackboardKey": {
+        "SelectedKeyName": "TickTargetDisZ"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Kuxiu'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Kuxiu:BTComposite_Selector_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.2"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_22",
+    "Outer": "BT_Boss_Kuxiu",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "FloatValue": -200.0,
+      "CachedDescription": "TickTargetDisZ 小于或等于 -200.000000",
+      "OperationType": 3,
+      "BlackboardKey": {
+        "SelectedKeyName": "TickTargetDisZ"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Kuxiu'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Kuxiu:BTComposite_Selector_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.2"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_23",
+    "Outer": "BT_Boss_Kuxiu",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "FloatValue": 200.0,
+      "CachedDescription": "TickTargetDisZ 大于或等于 200.000000",
+      "OperationType": 5,
+      "BlackboardKey": {
+        "SelectedKeyName": "TickTargetDisZ"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Kuxiu'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Kuxiu:BTComposite_Selector_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.2"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_24",
+    "Outer": "BT_Boss_Kuxiu",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "FloatValue": 500.0,
+      "CachedDescription": "TickTargetDis 小于或等于 500.000000",
+      "OperationType": 3,
+      "BlackboardKey": {
+        "SelectedKeyName": "TickTargetDis"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Kuxiu'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Kuxiu:BTComposite_Selector_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.3"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_25",
+    "Outer": "BT_Boss_Kuxiu",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "FloatValue": 500.0,
+      "CachedDescription": "TickTargetDis 大于 500.000000",
+      "OperationType": 4,
+      "BlackboardKey": {
+        "SelectedKeyName": "TickTargetDis"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Kuxiu'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Kuxiu:BTComposite_Selector_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.3"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_26",
+    "Outer": "BT_Boss_Kuxiu",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "FloatValue": 1200.0,
+      "CachedDescription": "TickTargetDis 小于或等于 1200.000000",
+      "OperationType": 3,
+      "BlackboardKey": {
+        "SelectedKeyName": "TickTargetDis"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Kuxiu'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Kuxiu:BTComposite_Selector_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.3"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_27",
+    "Outer": "BT_Boss_Kuxiu",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "FloatValue": 1600.0,
+      "CachedDescription": "TickTargetDis 小于或等于 1600.000000",
+      "OperationType": 3,
+      "BlackboardKey": {
+        "SelectedKeyName": "TickTargetDis"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Kuxiu'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Kuxiu:BTComposite_Selector_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.3"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_28",
+    "Outer": "BT_Boss_Kuxiu",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "FloatValue": 1600.0,
+      "CachedDescription": "TickTargetDis 大于 1600.000000",
+      "OperationType": 4,
+      "BlackboardKey": {
+        "SelectedKeyName": "TickTargetDis"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Kuxiu'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Kuxiu:BTComposite_Selector_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.3"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_29",
+    "Outer": "BT_Boss_Kuxiu",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "FloatValue": 500.0,
+      "CachedDescription": "TickTargetDis 小于或等于 500.000000",
+      "OperationType": 3,
+      "BlackboardKey": {
+        "SelectedKeyName": "TickTargetDis"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Kuxiu'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Kuxiu:BTComposite_Sequence_7'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.20"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_30",
+    "Outer": "BT_Boss_Kuxiu",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "FloatValue": 1200.0,
+      "CachedDescription": "TickTargetDis 小于或等于 1200.000000",
+      "OperationType": 3,
+      "BlackboardKey": {
+        "SelectedKeyName": "TickTargetDis"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Kuxiu'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Kuxiu:BTComposite_Selector_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.3"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Cooldown",
+    "Name": "BTDecorator_Cooldown_0",
+    "Outer": "BT_Boss_Kuxiu",
+    "Class": "UScriptClass'BTDecorator_Cooldown'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "CoolDownTime": 8.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Kuxiu'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Kuxiu:BTComposite_Sequence_8'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.21"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Cooldown",
+    "Name": "BTDecorator_Cooldown_10",
+    "Outer": "BT_Boss_Kuxiu",
+    "Class": "UScriptClass'BTDecorator_Cooldown'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "CoolDownTime": 40.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Kuxiu'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Kuxiu:BTComposite_Sequence_4'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.17"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Cooldown",
+    "Name": "BTDecorator_Cooldown_8",
+    "Outer": "BT_Boss_Kuxiu",
+    "Class": "UScriptClass'BTDecorator_Cooldown'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "CoolDownTime": 40.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Kuxiu'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Kuxiu:BTComposite_Sequence_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.9"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Cooldown",
+    "Name": "BTDecorator_Cooldown_9",
+    "Outer": "BT_Boss_Kuxiu",
+    "Class": "UScriptClass'BTDecorator_Cooldown'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "CoolDownTime": 50.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Kuxiu'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Kuxiu:BTComposite_Sequence_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.8"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_ForceSuccess",
+    "Name": "BTDecorator_ForceSuccess_0",
+    "Outer": "BT_Boss_Kuxiu",
+    "Class": "UScriptClass'BTDecorator_ForceSuccess'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Kuxiu'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Kuxiu:BTComposite_Sequence_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.9"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_ForceSuccess",
+    "Name": "BTDecorator_ForceSuccess_1",
+    "Outer": "BT_Boss_Kuxiu",
+    "Class": "UScriptClass'BTDecorator_ForceSuccess'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Kuxiu'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Kuxiu:BTComposite_Sequence_3'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.16"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_ForceSuccess",
+    "Name": "BTDecorator_ForceSuccess_10",
+    "Outer": "BT_Boss_Kuxiu",
+    "Class": "UScriptClass'BTDecorator_ForceSuccess'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Kuxiu'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Kuxiu:BTComposite_Sequence_6'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.19"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_ForceSuccess",
+    "Name": "BTDecorator_ForceSuccess_2",
+    "Outer": "BT_Boss_Kuxiu",
+    "Class": "UScriptClass'BTDecorator_ForceSuccess'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Kuxiu'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Kuxiu:BTComposite_Sequence_4'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.17"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_ForceSuccess",
+    "Name": "BTDecorator_ForceSuccess_3",
+    "Outer": "BT_Boss_Kuxiu",
+    "Class": "UScriptClass'BTDecorator_ForceSuccess'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Kuxiu'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Kuxiu:BTComposite_Sequence_7'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.20"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_ForceSuccess",
+    "Name": "BTDecorator_ForceSuccess_30",
+    "Outer": "BT_Boss_Kuxiu",
+    "Class": "UScriptClass'BTDecorator_ForceSuccess'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Kuxiu'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Kuxiu:BTComposite_Sequence_8'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.21"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_ForceSuccess",
+    "Name": "BTDecorator_ForceSuccess_4",
+    "Outer": "BT_Boss_Kuxiu",
+    "Class": "UScriptClass'BTDecorator_ForceSuccess'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Kuxiu'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Kuxiu:BTComposite_Selector_6'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.7"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_ForceSuccess",
+    "Name": "BTDecorator_ForceSuccess_5",
+    "Outer": "BT_Boss_Kuxiu",
+    "Class": "UScriptClass'BTDecorator_ForceSuccess'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Kuxiu'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Kuxiu:BTComposite_Sequence_5'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.18"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_ForceSuccess",
+    "Name": "BTDecorator_ForceSuccess_7",
+    "Outer": "BT_Boss_Kuxiu",
+    "Class": "UScriptClass'BTDecorator_ForceSuccess'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Kuxiu'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Kuxiu:BTComposite_Selector_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.3"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_ForceSuccess",
+    "Name": "BTDecorator_ForceSuccess_8",
+    "Outer": "BT_Boss_Kuxiu",
+    "Class": "UScriptClass'BTDecorator_ForceSuccess'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Kuxiu'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Kuxiu:BTComposite_Sequence_2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.15"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_ForceSuccess",
+    "Name": "BTDecorator_ForceSuccess_9",
+    "Outer": "BT_Boss_Kuxiu",
+    "Class": "UScriptClass'BTDecorator_ForceSuccess'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Kuxiu'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Kuxiu:BTComposite_Sequence_12'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.12"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_TimeLimit",
+    "Name": "BTDecorator_TimeLimit_0",
+    "Outer": "BT_Boss_Kuxiu",
+    "Class": "UScriptClass'BTDecorator_TimeLimit'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TimeLimit": 3.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Kuxiu'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Kuxiu:BTComposite_Sequence_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.9"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_TimeLimit",
+    "Name": "BTDecorator_TimeLimit_1",
+    "Outer": "BT_Boss_Kuxiu",
+    "Class": "UScriptClass'BTDecorator_TimeLimit'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TimeLimit": 4.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Kuxiu'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Kuxiu:BTComposite_Sequence_3'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.16"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_TimeLimit",
+    "Name": "BTDecorator_TimeLimit_10",
+    "Outer": "BT_Boss_Kuxiu",
+    "Class": "UScriptClass'BTDecorator_TimeLimit'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TimeLimit": 4.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Kuxiu'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Kuxiu:BTComposite_Sequence_6'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.19"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_TimeLimit",
+    "Name": "BTDecorator_TimeLimit_2",
+    "Outer": "BT_Boss_Kuxiu",
+    "Class": "UScriptClass'BTDecorator_TimeLimit'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TimeLimit": 4.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Kuxiu'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Kuxiu:BTComposite_Sequence_4'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.17"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_TimeLimit",
+    "Name": "BTDecorator_TimeLimit_3",
+    "Outer": "BT_Boss_Kuxiu",
+    "Class": "UScriptClass'BTDecorator_TimeLimit'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TimeLimit": 4.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Kuxiu'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Kuxiu:BTComposite_Sequence_7'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.20"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_TimeLimit",
+    "Name": "BTDecorator_TimeLimit_30",
+    "Outer": "BT_Boss_Kuxiu",
+    "Class": "UScriptClass'BTDecorator_TimeLimit'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TimeLimit": 4.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Kuxiu'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Kuxiu:BTComposite_Sequence_8'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.21"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_TimeLimit",
+    "Name": "BTDecorator_TimeLimit_4",
+    "Outer": "BT_Boss_Kuxiu",
+    "Class": "UScriptClass'BTDecorator_TimeLimit'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TimeLimit": 3.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Kuxiu'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Kuxiu:BTComposite_Selector_6'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.7"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_TimeLimit",
+    "Name": "BTDecorator_TimeLimit_5",
+    "Outer": "BT_Boss_Kuxiu",
+    "Class": "UScriptClass'BTDecorator_TimeLimit'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TimeLimit": 4.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Kuxiu'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Kuxiu:BTComposite_Sequence_5'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.18"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_TimeLimit",
+    "Name": "BTDecorator_TimeLimit_7",
+    "Outer": "BT_Boss_Kuxiu",
+    "Class": "UScriptClass'BTDecorator_TimeLimit'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TimeLimit": 3.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Kuxiu'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Kuxiu:BTComposite_Selector_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.3"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_TimeLimit",
+    "Name": "BTDecorator_TimeLimit_8",
+    "Outer": "BT_Boss_Kuxiu",
+    "Class": "UScriptClass'BTDecorator_TimeLimit'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TimeLimit": 4.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Kuxiu'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Kuxiu:BTComposite_Sequence_2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.15"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_TimeLimit",
+    "Name": "BTDecorator_TimeLimit_9",
+    "Outer": "BT_Boss_Kuxiu",
+    "Class": "UScriptClass'BTDecorator_TimeLimit'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TimeLimit": 4.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Kuxiu'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Kuxiu:BTComposite_Sequence_12'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.12"
+      }
+    }
+  },
+  {
+    "Type": "BTService_BBValueDis",
+    "Name": "BTService_BBValueDis_7",
+    "Outer": "BT_Boss_Kuxiu",
+    "Class": "UScriptClass'BTService_BBValueDis'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "BBName": "Target",
+      "Interval": 0.02,
+      "RandomDeviation": 0.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Kuxiu'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Kuxiu:BTComposite_Sequence_106'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.10"
+      }
+    }
+  },
+  {
+    "Type": "BTService_EnemyVision",
+    "Name": "BTService_EnemyVision_7",
+    "Outer": "BT_Boss_Kuxiu",
+    "Class": "UScriptClass'BTService_EnemyVision'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "FVisionDistance": 1000.0,
+      "FVisionAngle": 360.0,
+      "Interval": 0.1,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Kuxiu'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Kuxiu:BTComposite_Sequence_106'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.10"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_EMRunEQSQuery",
+    "Name": "BTTask_EMRunEQSQuery_4",
+    "Outer": "BT_Boss_Kuxiu",
+    "Class": "UScriptClass'BTTask_EMRunEQSQuery'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "EQSRequest": {
+        "QueryTemplate": {
+          "ObjectName": "EnvQuery'EQS_SelfDonut'",
+          "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Z_EnvQuery/EQS_SelfDonut.5"
+        },
+        "QueryConfig": [
+          {
+            "ParamName": "EMDonut.InnerRadius",
+            "ParamType": "EAIParamType::Float",
+            "Value": 200.0,
+            "BBKey": {
+              "SelectedKeyName": "None",
+              "bNoneIsAllowedValue": true
+            }
+          },
+          {
+            "ParamName": "EMDonut.OuterRadius",
+            "ParamType": "EAIParamType::Float",
+            "Value": 500.0,
+            "BBKey": {
+              "SelectedKeyName": "None",
+              "bNoneIsAllowedValue": true
+            }
+          },
+          {
+            "ParamName": "EMDonut.NumberOfRings",
+            "ParamType": "EAIParamType::Int",
+            "Value": 3.0,
+            "BBKey": {
+              "SelectedKeyName": "None",
+              "bNoneIsAllowedValue": true
+            }
+          },
+          {
+            "ParamName": "EMDonut.PointsPerRing",
+            "ParamType": "EAIParamType::Int",
+            "Value": 8.0,
+            "BBKey": {
+              "SelectedKeyName": "None",
+              "bNoneIsAllowedValue": true
+            }
+          },
+          {
+            "ParamName": "EMDonut.ArcAngle",
+            "ParamType": "EAIParamType::Float",
+            "Value": 180.0,
+            "BBKey": {
+              "SelectedKeyName": "None",
+              "bNoneIsAllowedValue": true
+            }
+          }
+        ],
+        "RunMode": "EEnvQueryRunMode::RandomBest25Pct"
+      },
+      "BlackboardKey": {
+        "SelectedKeyName": "EQSQueryLoc"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Kuxiu'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Kuxiu:BTComposite_Sequence_127'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.14"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_FilterTargetsByDis",
+    "Name": "BTTask_FilterTargetsByDis_4",
+    "Outer": "BT_Boss_Kuxiu",
+    "Class": "UScriptClass'BTTask_FilterTargetsByDis'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "MaxDis": 30000.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Kuxiu'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Kuxiu:BTComposite_Sequence_126'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.13"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_FilterTargetsByLiving",
+    "Name": "BTTask_FilterTargetsByLiving_4",
+    "Outer": "BT_Boss_Kuxiu",
+    "Class": "UScriptClass'BTTask_FilterTargetsByLiving'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TypeOfFilterList": "ETypeOfFilterList::AfterFilter",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Kuxiu'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Kuxiu:BTComposite_Sequence_126'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.13"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_FilterTargetsByType",
+    "Name": "BTTask_FilterTargetsByType_0",
+    "Outer": "BT_Boss_Kuxiu",
+    "Class": "UScriptClass'BTTask_FilterTargetsByType'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TypeOfFilterType": "EHatredTargetType::Player",
+      "TypeOfFilterList": "ETypeOfFilterList::AfterFilter",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Kuxiu'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Kuxiu:BTComposite_Sequence_126'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.13"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_FindSpecifyLocation",
+    "Name": "BTTask_FindSpecifyLocation_0",
+    "Outer": "BT_Boss_Kuxiu",
+    "Class": "UScriptClass'BTTask_FindSpecifyLocation'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "MinAngle": 0,
+      "MaxAngle": 360,
+      "MinRadius": 200,
+      "MaxRadius": 500,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Kuxiu'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Kuxiu:BTComposite_Sequence_2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.15"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_FindSpecifyLocation",
+    "Name": "BTTask_FindSpecifyLocation_1",
+    "Outer": "BT_Boss_Kuxiu",
+    "Class": "UScriptClass'BTTask_FindSpecifyLocation'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "MinAngle": 0,
+      "MaxAngle": 360,
+      "MinRadius": 200,
+      "MaxRadius": 500,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Kuxiu'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Kuxiu:BTComposite_Sequence_3'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.16"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_FindSpecifyLocation",
+    "Name": "BTTask_FindSpecifyLocation_12",
+    "Outer": "BT_Boss_Kuxiu",
+    "Class": "UScriptClass'BTTask_FindSpecifyLocation'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "MinAngle": 0,
+      "MaxAngle": 360,
+      "MinRadius": 200,
+      "MaxRadius": 500,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Kuxiu'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Kuxiu:BTComposite_Sequence_12'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.12"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_FindSpecifyLocation",
+    "Name": "BTTask_FindSpecifyLocation_2",
+    "Outer": "BT_Boss_Kuxiu",
+    "Class": "UScriptClass'BTTask_FindSpecifyLocation'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "MinAngle": 0,
+      "MaxAngle": 360,
+      "MinRadius": 200,
+      "MaxRadius": 500,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Kuxiu'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Kuxiu:BTComposite_Sequence_5'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.18"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_FindSpecifyLocation",
+    "Name": "BTTask_FindSpecifyLocation_3",
+    "Outer": "BT_Boss_Kuxiu",
+    "Class": "UScriptClass'BTTask_FindSpecifyLocation'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "MinAngle": 0,
+      "MaxAngle": 360,
+      "MinRadius": 200,
+      "MaxRadius": 500,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Kuxiu'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Kuxiu:BTComposite_Sequence_6'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.19"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_FindSpecifyLocation",
+    "Name": "BTTask_FindSpecifyLocation_4",
+    "Outer": "BT_Boss_Kuxiu",
+    "Class": "UScriptClass'BTTask_FindSpecifyLocation'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "MinAngle": 0,
+      "MaxAngle": 360,
+      "MinRadius": 200,
+      "MaxRadius": 500,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Kuxiu'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Kuxiu:BTComposite_Sequence_4'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.17"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_FindSpecifyLocation",
+    "Name": "BTTask_FindSpecifyLocation_5",
+    "Outer": "BT_Boss_Kuxiu",
+    "Class": "UScriptClass'BTTask_FindSpecifyLocation'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "MinAngle": 0,
+      "MaxAngle": 360,
+      "MinRadius": 200,
+      "MaxRadius": 500,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Kuxiu'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Kuxiu:BTComposite_Sequence_7'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.20"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_FindSpecifyLocation",
+    "Name": "BTTask_FindSpecifyLocation_6",
+    "Outer": "BT_Boss_Kuxiu",
+    "Class": "UScriptClass'BTTask_FindSpecifyLocation'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "MinAngle": 0,
+      "MaxAngle": 360,
+      "MinRadius": 200,
+      "MaxRadius": 500,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Kuxiu'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Kuxiu:BTComposite_Sequence_8'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.21"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_GetTarget",
+    "Name": "BTTask_GetTarget_9",
+    "Outer": "BT_Boss_Kuxiu",
+    "Class": "UScriptClass'BTTask_GetTarget'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TargetType": "EHatredTargetType::Player",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Kuxiu'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Kuxiu:BTComposite_Selector_52'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.6"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_LastFilterTargets",
+    "Name": "BTTask_LastFilterTargets_4",
+    "Outer": "BT_Boss_Kuxiu",
+    "Class": "UScriptClass'BTTask_LastFilterTargets'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TypeOfFilter": "ELastTargetFilterType::TargetFilterMaxHatredValue",
+      "TypeOfFilterList": "ETypeOfFilterList::AfterFilter",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Kuxiu'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Kuxiu:BTComposite_Sequence_126'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.13"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_NewMoveTo",
+    "Name": "BTTask_NewMoveTo_0",
+    "Outer": "BT_Boss_Kuxiu",
+    "Class": "UScriptClass'BTTask_NewMoveTo'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "bUseControllerRotationYaw": true,
+      "bStareAt": true,
+      "bStopOnOverlapNeedsUpdate": false,
+      "BlackboardKey": {
+        "SelectedKeyName": "NearlyLocation"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Kuxiu'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Kuxiu:BTComposite_Sequence_4'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.17"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_NewMoveTo",
+    "Name": "BTTask_NewMoveTo_1",
+    "Outer": "BT_Boss_Kuxiu",
+    "Class": "UScriptClass'BTTask_NewMoveTo'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "bOrientRotationToMovement": true,
+      "MoveTypeState": "EMoveTypeState::MTS_Run",
+      "bStopOnOverlapNeedsUpdate": false,
+      "BlackboardKey": {
+        "SelectedKeyName": "Target"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Kuxiu'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Kuxiu:BTComposite_Sequence_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.9"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_NewMoveTo",
+    "Name": "BTTask_NewMoveTo_10",
+    "Outer": "BT_Boss_Kuxiu",
+    "Class": "UScriptClass'BTTask_NewMoveTo'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "bUseControllerRotationYaw": true,
+      "bStareAt": true,
+      "bStopOnOverlapNeedsUpdate": false,
+      "BlackboardKey": {
+        "SelectedKeyName": "NearlyLocation"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Kuxiu'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Kuxiu:BTComposite_Sequence_2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.15"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_NewMoveTo",
+    "Name": "BTTask_NewMoveTo_11",
+    "Outer": "BT_Boss_Kuxiu",
+    "Class": "UScriptClass'BTTask_NewMoveTo'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "bUseControllerRotationYaw": true,
+      "bStareAt": true,
+      "bStopOnOverlapNeedsUpdate": false,
+      "BlackboardKey": {
+        "SelectedKeyName": "NearlyLocation"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Kuxiu'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Kuxiu:BTComposite_Sequence_3'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.16"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_NewMoveTo",
+    "Name": "BTTask_NewMoveTo_12",
+    "Outer": "BT_Boss_Kuxiu",
+    "Class": "UScriptClass'BTTask_NewMoveTo'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "bUseControllerRotationYaw": true,
+      "bStareAt": true,
+      "bStopOnOverlapNeedsUpdate": false,
+      "BlackboardKey": {
+        "SelectedKeyName": "NearlyLocation"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Kuxiu'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Kuxiu:BTComposite_Sequence_5'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.18"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_NewMoveTo",
+    "Name": "BTTask_NewMoveTo_13",
+    "Outer": "BT_Boss_Kuxiu",
+    "Class": "UScriptClass'BTTask_NewMoveTo'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "bUseControllerRotationYaw": true,
+      "bStareAt": true,
+      "bStopOnOverlapNeedsUpdate": false,
+      "BlackboardKey": {
+        "SelectedKeyName": "NearlyLocation"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Kuxiu'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Kuxiu:BTComposite_Sequence_6'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.19"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_NewMoveTo",
+    "Name": "BTTask_NewMoveTo_2",
+    "Outer": "BT_Boss_Kuxiu",
+    "Class": "UScriptClass'BTTask_NewMoveTo'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "bOrientRotationToMovement": true,
+      "MoveTypeState": "EMoveTypeState::MTS_Run",
+      "AcceptableRadius": 1000.0,
+      "bStopOnOverlapNeedsUpdate": false,
+      "BlackboardKey": {
+        "SelectedKeyName": "Target"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Kuxiu'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Kuxiu:BTComposite_Selector_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.3"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_NewMoveTo",
+    "Name": "BTTask_NewMoveTo_3",
+    "Outer": "BT_Boss_Kuxiu",
+    "Class": "UScriptClass'BTTask_NewMoveTo'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "bUseControllerRotationYaw": true,
+      "bStareAt": true,
+      "bStopOnOverlapNeedsUpdate": false,
+      "BlackboardKey": {
+        "SelectedKeyName": "NearlyLocation"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Kuxiu'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Kuxiu:BTComposite_Sequence_7'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.20"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_NewMoveTo",
+    "Name": "BTTask_NewMoveTo_4",
+    "Outer": "BT_Boss_Kuxiu",
+    "Class": "UScriptClass'BTTask_NewMoveTo'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "bOrientRotationToMovement": true,
+      "MoveTypeState": "EMoveTypeState::MTS_Run",
+      "bStopOnOverlapNeedsUpdate": false,
+      "BlackboardKey": {
+        "SelectedKeyName": "Target"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Kuxiu'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Kuxiu:BTComposite_Selector_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.3"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_NewMoveTo",
+    "Name": "BTTask_NewMoveTo_46",
+    "Outer": "BT_Boss_Kuxiu",
+    "Class": "UScriptClass'BTTask_NewMoveTo'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "bUseControllerRotationYaw": true,
+      "bStareAt": true,
+      "bStopOnOverlapNeedsUpdate": false,
+      "BlackboardKey": {
+        "SelectedKeyName": "EQSQueryLoc"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Kuxiu'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Kuxiu:BTComposite_Sequence_127'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.14"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_NewMoveTo",
+    "Name": "BTTask_NewMoveTo_5",
+    "Outer": "BT_Boss_Kuxiu",
+    "Class": "UScriptClass'BTTask_NewMoveTo'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "bUseControllerRotationYaw": true,
+      "bStareAt": true,
+      "bStopOnOverlapNeedsUpdate": false,
+      "BlackboardKey": {
+        "SelectedKeyName": "NearlyLocation"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Kuxiu'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Kuxiu:BTComposite_Sequence_8'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.21"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_NewMoveTo",
+    "Name": "BTTask_NewMoveTo_7",
+    "Outer": "BT_Boss_Kuxiu",
+    "Class": "UScriptClass'BTTask_NewMoveTo'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "bUseControllerRotationYaw": true,
+      "bStareAt": true,
+      "bStopOnOverlapNeedsUpdate": false,
+      "BlackboardKey": {
+        "SelectedKeyName": "NearlyLocation"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Kuxiu'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Kuxiu:BTComposite_Sequence_12'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.12"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_NewMoveTo",
+    "Name": "BTTask_NewMoveTo_8",
+    "Outer": "BT_Boss_Kuxiu",
+    "Class": "UScriptClass'BTTask_NewMoveTo'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "bOrientRotationToMovement": true,
+      "MoveTypeState": "EMoveTypeState::MTS_Run",
+      "AcceptableRadius": 1000.0,
+      "bReachTestIncludesAgentRadius": false,
+      "bReachTestIncludesGoalRadius": false,
+      "bStopOnOverlapNeedsUpdate": false,
+      "BlackboardKey": {
+        "SelectedKeyName": "Target"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Kuxiu'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Kuxiu:BTComposite_Selector_6'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.7"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_NewMoveTo",
+    "Name": "BTTask_NewMoveTo_9",
+    "Outer": "BT_Boss_Kuxiu",
+    "Class": "UScriptClass'BTTask_NewMoveTo'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "bOrientRotationToMovement": true,
+      "MoveTypeState": "EMoveTypeState::MTS_Run",
+      "bStopOnOverlapNeedsUpdate": false,
+      "BlackboardKey": {
+        "SelectedKeyName": "Target"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Kuxiu'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Kuxiu:BTComposite_Selector_6'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.7"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_SetTarget",
+    "Name": "BTTask_SetTarget_4",
+    "Outer": "BT_Boss_Kuxiu",
+    "Class": "UScriptClass'BTTask_SetTarget'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Condition": {
+        "ObjectName": "TargetCondition_Distance'BT_Boss_Kuxiu:BTTask_SetTarget_4.TargetCondition_Distance_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.107"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Kuxiu'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Kuxiu:BTComposite_Sequence_127'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.14"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_UseSkill",
+    "Name": "BTTask_UseSkill_0",
+    "Outer": "BT_Boss_Kuxiu",
+    "Class": "UScriptClass'BTTask_UseSkill'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SkillId": 6,
+      "NodeName": "Skill06_Orb",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Kuxiu'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Kuxiu:BTComposite_Sequence_5'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.18"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_UseSkill",
+    "Name": "BTTask_UseSkill_1",
+    "Outer": "BT_Boss_Kuxiu",
+    "Class": "UScriptClass'BTTask_UseSkill'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SkillId": 7,
+      "NodeName": "Skill07_FireOrb",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Kuxiu'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Kuxiu:BTComposite_Sequence_6'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.19"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_UseSkill",
+    "Name": "BTTask_UseSkill_11",
+    "Outer": "BT_Boss_Kuxiu",
+    "Class": "UScriptClass'BTTask_UseSkill'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SkillId": 3,
+      "NodeName": "Skill03_Bullet",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Kuxiu'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Kuxiu:BTComposite_Sequence_8'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.21"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_UseSkill",
+    "Name": "BTTask_UseSkill_13",
+    "Outer": "BT_Boss_Kuxiu",
+    "Class": "UScriptClass'BTTask_UseSkill'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "NodeName": "Skill01_Attack",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Kuxiu'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Kuxiu:BTComposite_Sequence_7'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.20"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_UseSkill",
+    "Name": "BTTask_UseSkill_2",
+    "Outer": "BT_Boss_Kuxiu",
+    "Class": "UScriptClass'BTTask_UseSkill'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SkillId": 5,
+      "NodeName": "Skill05_Bullet&Wave",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Kuxiu'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Kuxiu:BTComposite_Sequence_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.9"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_UseSkill",
+    "Name": "BTTask_UseSkill_3",
+    "Outer": "BT_Boss_Kuxiu",
+    "Class": "UScriptClass'BTTask_UseSkill'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SkillId": 4,
+      "NodeName": "Skill04_Wave",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Kuxiu'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Kuxiu:BTComposite_Sequence_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.8"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_UseSkill",
+    "Name": "BTTask_UseSkill_4",
+    "Outer": "BT_Boss_Kuxiu",
+    "Class": "UScriptClass'BTTask_UseSkill'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SkillId": 3,
+      "NodeName": "Skill03_Bullet",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Kuxiu'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Kuxiu:BTComposite_Sequence_4'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.17"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_UseSkill",
+    "Name": "BTTask_UseSkill_5",
+    "Outer": "BT_Boss_Kuxiu",
+    "Class": "UScriptClass'BTTask_UseSkill'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SkillId": 2,
+      "NodeName": "Skill02_Attack&Wave",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Kuxiu'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Kuxiu:BTComposite_Sequence_2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.15"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_UseSkill",
+    "Name": "BTTask_UseSkill_6",
+    "Outer": "BT_Boss_Kuxiu",
+    "Class": "UScriptClass'BTTask_UseSkill'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "NodeName": "Skill01_Attack",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Kuxiu'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Kuxiu:BTComposite_Sequence_12'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.12"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_51",
+    "Outer": "BT_Boss_Kuxiu",
+    "Class": "UScriptClass'BTTask_Wait'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "WaitTime": 1.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Kuxiu'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Kuxiu:BTComposite_Sequence_107'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.11"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_58",
+    "Outer": "BT_Boss_Kuxiu",
+    "Class": "UScriptClass'BTTask_Wait'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Kuxiu'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Kuxiu:BTComposite_Selector_43'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_13_Kuxiu/BT_Boss_Kuxiu.4"
+      }
+    }
+  },
+  {
+    "Type": "TargetCondition_Distance",
+    "Name": "TargetCondition_Distance_0",
+    "Outer": "BTTask_SetTarget_4",
+    "Class": "UScriptClass'TargetCondition_Distance'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Distance": 10000.0
+    }
+  }
+]

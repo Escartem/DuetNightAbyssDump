@@ -1,0 +1,709 @@
+[
+  {
+    "Type": "BehaviorTree",
+    "Name": "BT_Phantom_Dafu",
+    "Class": "UScriptClass'BehaviorTree'",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "RootNode": {
+        "ObjectName": "BTComposite_Selector'BT_Phantom_Dafu:BTComposite_Selector_4'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/BattleNPC/Dafu/BT_Phantom_Dafu.1"
+      },
+      "BlackboardAsset": {
+        "ObjectName": "BlackboardData'BB_Shadow'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Parent/BB_Shadow.0"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_4",
+    "Outer": "BT_Phantom_Dafu",
+    "Class": "UScriptClass'BTComposite_Selector'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector'BT_Phantom_Dafu:BTComposite_Selector_6'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/BattleNPC/Dafu/BT_Phantom_Dafu.2"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Phantom_Dafu:BTDecorator_Blackboard_2'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Player/BattleNPC/Dafu/BT_Phantom_Dafu.9"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait'BT_Phantom_Dafu:BTTask_Wait_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/BattleNPC/Dafu/BT_Phantom_Dafu.26"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Phantom_Dafu:BTDecorator_Blackboard_13'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Player/BattleNPC/Dafu/BT_Phantom_Dafu.8"
+            }
+          ],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Dafu'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/BattleNPC/Dafu/BT_Phantom_Dafu.0"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_6",
+    "Outer": "BT_Phantom_Dafu",
+    "Class": "UScriptClass'BTComposite_Selector'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_Phantom_Dafu:BTComposite_Sequence_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/BattleNPC/Dafu/BT_Phantom_Dafu.3"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Phantom_Dafu:BTDecorator_Blackboard_5'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Player/BattleNPC/Dafu/BT_Phantom_Dafu.10"
+            },
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Phantom_Dafu:BTDecorator_Blackboard_8'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Player/BattleNPC/Dafu/BT_Phantom_Dafu.11"
+            },
+            {
+              "ObjectName": "BTDecorator_Cooldown'BT_Phantom_Dafu:BTDecorator_Cooldown_0'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Player/BattleNPC/Dafu/BT_Phantom_Dafu.13"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_SimpleParallel'BT_Phantom_Dafu:BTComposite_SimpleParallel_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/BattleNPC/Dafu/BT_Phantom_Dafu.6"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_Phantom_Dafu:BTComposite_Sequence_5'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/BattleNPC/Dafu/BT_Phantom_Dafu.5"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Phantom_Dafu:BTDecorator_Blackboard_9'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Player/BattleNPC/Dafu/BT_Phantom_Dafu.12"
+            }
+          ],
+          "DecoratorOps": []
+        }
+      ],
+      "Services": [
+        {
+          "ObjectName": "BTService_EnemyVision'BT_Phantom_Dafu:BTService_EnemyVision_0'",
+          "ObjectPath": "EM/Content/AssetDesign/AI/Player/BattleNPC/Dafu/BT_Phantom_Dafu.18"
+        },
+        {
+          "ObjectName": "BTService_ClearBTTarget_Player'BT_Phantom_Dafu:BTService_ClearBTTarget_Player_0'",
+          "ObjectPath": "EM/Content/AssetDesign/AI/Player/BattleNPC/Dafu/BT_Phantom_Dafu.17"
+        },
+        {
+          "ObjectName": "BTService_BBValueDis'BT_Phantom_Dafu:BTService_BBValueDis_0'",
+          "ObjectPath": "EM/Content/AssetDesign/AI/Player/BattleNPC/Dafu/BT_Phantom_Dafu.16"
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Dafu'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/BattleNPC/Dafu/BT_Phantom_Dafu.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Phantom_Dafu:BTComposite_Selector_4'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/BattleNPC/Dafu/BT_Phantom_Dafu.1"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_0",
+    "Outer": "BT_Phantom_Dafu",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_UseSkill_Player'BT_Phantom_Dafu:BTTask_UseSkill_Player_4'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/BattleNPC/Dafu/BT_Phantom_Dafu.25"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_CoolDownPlayer'BT_Phantom_Dafu:BTDecorator_CoolDownPlayer_0'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Player/BattleNPC/Dafu/BT_Phantom_Dafu.14"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_UseSkill_Player'BT_Phantom_Dafu:BTTask_UseSkill_Player_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/BattleNPC/Dafu/BT_Phantom_Dafu.24"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_CoolDownPlayer'BT_Phantom_Dafu:BTDecorator_CoolDownPlayer_1'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Player/BattleNPC/Dafu/BT_Phantom_Dafu.15"
+            }
+          ],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Dafu'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/BattleNPC/Dafu/BT_Phantom_Dafu.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Phantom_Dafu:BTComposite_Selector_6'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/BattleNPC/Dafu/BT_Phantom_Dafu.2"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_3",
+    "Outer": "BT_Phantom_Dafu",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_FilterTargetsByDis'BT_Phantom_Dafu:BTTask_FilterTargetsByDis_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/BattleNPC/Dafu/BT_Phantom_Dafu.19"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_LastFilterTargets'BT_Phantom_Dafu:BTTask_LastFilterTargets_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/BattleNPC/Dafu/BT_Phantom_Dafu.21"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Dafu'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/BattleNPC/Dafu/BT_Phantom_Dafu.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_SimpleParallel'BT_Phantom_Dafu:BTComposite_SimpleParallel_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/BattleNPC/Dafu/BT_Phantom_Dafu.6"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_5",
+    "Outer": "BT_Phantom_Dafu",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_FilterTargetsByDis'BT_Phantom_Dafu:BTTask_FilterTargetsByDis_2'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/BattleNPC/Dafu/BT_Phantom_Dafu.20"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_LastFilterTargets'BT_Phantom_Dafu:BTTask_LastFilterTargets_1'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/BattleNPC/Dafu/BT_Phantom_Dafu.22"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Dafu'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/BattleNPC/Dafu/BT_Phantom_Dafu.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Phantom_Dafu:BTComposite_Selector_6'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/BattleNPC/Dafu/BT_Phantom_Dafu.2"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_SimpleParallel",
+    "Name": "BTComposite_SimpleParallel_0",
+    "Outer": "BT_Phantom_Dafu",
+    "Class": "UScriptClass'BTComposite_SimpleParallel'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "FinishMode": "EBTParallelMode::WaitForBackground",
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_PhantomMoveTo'BT_Phantom_Dafu:BTTask_PhantomMoveTo_3'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/BattleNPC/Dafu/BT_Phantom_Dafu.23"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_Phantom_Dafu:BTComposite_Sequence_3'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/BattleNPC/Dafu/BT_Phantom_Dafu.4"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Phantom_Dafu:BTDecorator_Blackboard_11'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Player/BattleNPC/Dafu/BT_Phantom_Dafu.7"
+            }
+          ],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Dafu'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/BattleNPC/Dafu/BT_Phantom_Dafu.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Phantom_Dafu:BTComposite_Selector_6'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/BattleNPC/Dafu/BT_Phantom_Dafu.2"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_11",
+    "Outer": "BT_Phantom_Dafu",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "CachedDescription": "Target is Is Not Set",
+      "OperationType": 1,
+      "BlackboardKey": {
+        "SelectedKeyName": "Target"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Dafu'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/BattleNPC/Dafu/BT_Phantom_Dafu.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_SimpleParallel'BT_Phantom_Dafu:BTComposite_SimpleParallel_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/BattleNPC/Dafu/BT_Phantom_Dafu.6"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_13",
+    "Outer": "BT_Phantom_Dafu",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "IntValue": 1,
+      "CachedDescription": "ActionMode Is Equal To Hitted",
+      "BlackboardKey": {
+        "SelectedKeyName": "ActionMode"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::Self",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Dafu'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/BattleNPC/Dafu/BT_Phantom_Dafu.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Phantom_Dafu:BTComposite_Selector_4'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/BattleNPC/Dafu/BT_Phantom_Dafu.1"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_2",
+    "Outer": "BT_Phantom_Dafu",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "CachedDescription": "ActionMode Is Equal To Active",
+      "BlackboardKey": {
+        "SelectedKeyName": "ActionMode"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::Self",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Dafu'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/BattleNPC/Dafu/BT_Phantom_Dafu.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Phantom_Dafu:BTComposite_Selector_4'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/BattleNPC/Dafu/BT_Phantom_Dafu.1"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_5",
+    "Outer": "BT_Phantom_Dafu",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "CachedDescription": "PhantomOwner is Is Set",
+      "BlackboardKey": {
+        "SelectedKeyName": "PhantomOwner"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Dafu'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/BattleNPC/Dafu/BT_Phantom_Dafu.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Phantom_Dafu:BTComposite_Selector_6'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/BattleNPC/Dafu/BT_Phantom_Dafu.2"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_8",
+    "Outer": "BT_Phantom_Dafu",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "CachedDescription": "Target is Is Set",
+      "BlackboardKey": {
+        "SelectedKeyName": "Target"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Dafu'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/BattleNPC/Dafu/BT_Phantom_Dafu.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Phantom_Dafu:BTComposite_Selector_6'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/BattleNPC/Dafu/BT_Phantom_Dafu.2"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_9",
+    "Outer": "BT_Phantom_Dafu",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "CachedDescription": "Target is Is Not Set",
+      "OperationType": 1,
+      "BlackboardKey": {
+        "SelectedKeyName": "Target"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Dafu'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/BattleNPC/Dafu/BT_Phantom_Dafu.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Phantom_Dafu:BTComposite_Selector_6'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/BattleNPC/Dafu/BT_Phantom_Dafu.2"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Cooldown",
+    "Name": "BTDecorator_Cooldown_0",
+    "Outer": "BT_Phantom_Dafu",
+    "Class": "UScriptClass'BTDecorator_Cooldown'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Dafu'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/BattleNPC/Dafu/BT_Phantom_Dafu.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Phantom_Dafu:BTComposite_Selector_6'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/BattleNPC/Dafu/BT_Phantom_Dafu.2"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_CoolDownPlayer",
+    "Name": "BTDecorator_CoolDownPlayer_0",
+    "Outer": "BT_Phantom_Dafu",
+    "Class": "UScriptClass'BTDecorator_CoolDownPlayer'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "CoolDownTime": 8.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Dafu'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/BattleNPC/Dafu/BT_Phantom_Dafu.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Phantom_Dafu:BTComposite_Sequence_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/BattleNPC/Dafu/BT_Phantom_Dafu.3"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_CoolDownPlayer",
+    "Name": "BTDecorator_CoolDownPlayer_1",
+    "Outer": "BT_Phantom_Dafu",
+    "Class": "UScriptClass'BTDecorator_CoolDownPlayer'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "CoolDownTime": 12.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Dafu'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/BattleNPC/Dafu/BT_Phantom_Dafu.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Phantom_Dafu:BTComposite_Sequence_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/BattleNPC/Dafu/BT_Phantom_Dafu.3"
+      }
+    }
+  },
+  {
+    "Type": "BTService_BBValueDis",
+    "Name": "BTService_BBValueDis_0",
+    "Outer": "BT_Phantom_Dafu",
+    "Class": "UScriptClass'BTService_BBValueDis'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "BBName": "Target",
+      "Interval": 0.1,
+      "RandomDeviation": 0.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Dafu'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/BattleNPC/Dafu/BT_Phantom_Dafu.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Phantom_Dafu:BTComposite_Selector_6'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/BattleNPC/Dafu/BT_Phantom_Dafu.2"
+      }
+    }
+  },
+  {
+    "Type": "BTService_ClearBTTarget_Player",
+    "Name": "BTService_ClearBTTarget_Player_0",
+    "Outer": "BT_Phantom_Dafu",
+    "Class": "UScriptClass'BTService_ClearBTTarget_Player'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Interval": 0.1,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Dafu'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/BattleNPC/Dafu/BT_Phantom_Dafu.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Phantom_Dafu:BTComposite_Selector_6'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/BattleNPC/Dafu/BT_Phantom_Dafu.2"
+      }
+    }
+  },
+  {
+    "Type": "BTService_EnemyVision",
+    "Name": "BTService_EnemyVision_0",
+    "Outer": "BT_Phantom_Dafu",
+    "Class": "UScriptClass'BTService_EnemyVision'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "FVisionDistance": 2000.0,
+      "FVisionAngle": 180.0,
+      "Interval": 0.2,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Dafu'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/BattleNPC/Dafu/BT_Phantom_Dafu.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Phantom_Dafu:BTComposite_Selector_6'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/BattleNPC/Dafu/BT_Phantom_Dafu.2"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_FilterTargetsByDis",
+    "Name": "BTTask_FilterTargetsByDis_0",
+    "Outer": "BT_Phantom_Dafu",
+    "Class": "UScriptClass'BTTask_FilterTargetsByDis'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "MaxDis": 2000.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Dafu'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/BattleNPC/Dafu/BT_Phantom_Dafu.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Phantom_Dafu:BTComposite_Sequence_3'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/BattleNPC/Dafu/BT_Phantom_Dafu.4"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_FilterTargetsByDis",
+    "Name": "BTTask_FilterTargetsByDis_2",
+    "Outer": "BT_Phantom_Dafu",
+    "Class": "UScriptClass'BTTask_FilterTargetsByDis'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "MaxDis": 2000.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Dafu'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/BattleNPC/Dafu/BT_Phantom_Dafu.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Phantom_Dafu:BTComposite_Sequence_5'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/BattleNPC/Dafu/BT_Phantom_Dafu.5"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_LastFilterTargets",
+    "Name": "BTTask_LastFilterTargets_0",
+    "Outer": "BT_Phantom_Dafu",
+    "Class": "UScriptClass'BTTask_LastFilterTargets'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TypeOfFilterList": "ETypeOfFilterList::AfterFilter",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Dafu'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/BattleNPC/Dafu/BT_Phantom_Dafu.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Phantom_Dafu:BTComposite_Sequence_3'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/BattleNPC/Dafu/BT_Phantom_Dafu.4"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_LastFilterTargets",
+    "Name": "BTTask_LastFilterTargets_1",
+    "Outer": "BT_Phantom_Dafu",
+    "Class": "UScriptClass'BTTask_LastFilterTargets'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TypeOfFilterList": "ETypeOfFilterList::AfterFilter",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Dafu'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/BattleNPC/Dafu/BT_Phantom_Dafu.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Phantom_Dafu:BTComposite_Sequence_5'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/BattleNPC/Dafu/BT_Phantom_Dafu.5"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_PhantomMoveTo",
+    "Name": "BTTask_PhantomMoveTo_3",
+    "Outer": "BT_Phantom_Dafu",
+    "Class": "UScriptClass'BTTask_PhantomMoveTo'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "AroundActorType": "EGetAroundActorType::Nearest",
+      "UpdateInterval": 1.0,
+      "AroundActorDis": 300.0,
+      "bAllowBulletJump": true,
+      "BulletJumpDistance": 1200.0,
+      "BulletJumpConditionId": 904,
+      "bOrientRotationToMovement": true,
+      "MoveTypeState": "EMoveTypeState::MTS_Run",
+      "ForceTeleportDistance": 2500.0,
+      "bAllowTeleport": true,
+      "MaxMoveTime": 1.0,
+      "AcceptableRadius": 50.0,
+      "bStopOnOverlapNeedsUpdate": false,
+      "BlackboardKey": {
+        "SelectedKeyName": "PhantomOwner"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Dafu'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/BattleNPC/Dafu/BT_Phantom_Dafu.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_SimpleParallel'BT_Phantom_Dafu:BTComposite_SimpleParallel_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/BattleNPC/Dafu/BT_Phantom_Dafu.6"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_UseSkill_Player",
+    "Name": "BTTask_UseSkill_Player_0",
+    "Outer": "BT_Phantom_Dafu",
+    "Class": "UScriptClass'BTTask_UseSkill_Player'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SkillType": "EUseSkill_SkillType::Skill2",
+      "AutoInput": false,
+      "NodeName": "Skill2",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Dafu'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/BattleNPC/Dafu/BT_Phantom_Dafu.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Phantom_Dafu:BTComposite_Sequence_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/BattleNPC/Dafu/BT_Phantom_Dafu.3"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_UseSkill_Player",
+    "Name": "BTTask_UseSkill_Player_4",
+    "Outer": "BT_Phantom_Dafu",
+    "Class": "UScriptClass'BTTask_UseSkill_Player'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SkillType": "EUseSkill_SkillType::Skill1",
+      "bUseControllerRotationYaw": false,
+      "AutoInput": false,
+      "NodeName": "Skill1",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Dafu'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/BattleNPC/Dafu/BT_Phantom_Dafu.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Phantom_Dafu:BTComposite_Sequence_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/BattleNPC/Dafu/BT_Phantom_Dafu.3"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_0",
+    "Outer": "BT_Phantom_Dafu",
+    "Class": "UScriptClass'BTTask_Wait'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "WaitTime": 3.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Dafu'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/BattleNPC/Dafu/BT_Phantom_Dafu.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Phantom_Dafu:BTComposite_Selector_4'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/BattleNPC/Dafu/BT_Phantom_Dafu.1"
+      }
+    }
+  }
+]

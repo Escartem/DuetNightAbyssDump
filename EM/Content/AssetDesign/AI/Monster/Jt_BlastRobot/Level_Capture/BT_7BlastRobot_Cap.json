@@ -1,0 +1,814 @@
+[
+  {
+    "Type": "BehaviorTree",
+    "Name": "BT_7BlastRobot_Cap",
+    "Class": "UScriptClass'BehaviorTree'",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "RootNode": {
+        "ObjectName": "BTComposite_Selector'BT_7BlastRobot_Cap:BTComposite_Selector_2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_BlastRobot/Level_Capture/BT_7BlastRobot_Cap.4"
+      },
+      "BlackboardAsset": {
+        "ObjectName": "BlackboardData'BB_7BlastRobot'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_BlastRobot/BB_7BlastRobot.0"
+      }
+    }
+  },
+  {
+    "Type": "BPServer_JT_BlastRobot_C",
+    "Name": "BPServer_JT_BlastRobot_C_0",
+    "Outer": "BT_7BlastRobot_Cap",
+    "Class": "BlueprintGeneratedClass'EM/Content/BluePrints/AI/BTServer/BPServer_JT_BlastRobot.BPServer_JT_BlastRobot_C'",
+    "Template": {
+      "ObjectName": "BPServer_JT_BlastRobot_C'Default__BPServer_JT_BlastRobot_C'",
+      "ObjectPath": "EM/Content/BluePrints/AI/BTServer/BPServer_JT_BlastRobot.3"
+    },
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "bShowPropertyDetails": false,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_7BlastRobot_Cap'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_BlastRobot/Level_Capture/BT_7BlastRobot_Cap.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_7BlastRobot_Cap:BTComposite_Selector_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_BlastRobot/Level_Capture/BT_7BlastRobot_Cap.2"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_1",
+    "Outer": "BT_7BlastRobot_Cap",
+    "Class": "UScriptClass'BTComposite_Selector'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector'BT_7BlastRobot_Cap:BTComposite_Selector_3'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_BlastRobot/Level_Capture/BT_7BlastRobot_Cap.5"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_7BlastRobot_Cap:BTDecorator_Blackboard_1'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_BlastRobot/Level_Capture/BT_7BlastRobot_Cap.8"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector'BT_7BlastRobot_Cap:BTComposite_Selector_4'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_BlastRobot/Level_Capture/BT_7BlastRobot_Cap.6"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_7BlastRobot_Cap:BTDecorator_Blackboard_3'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_BlastRobot/Level_Capture/BT_7BlastRobot_Cap.15"
+            }
+          ],
+          "DecoratorOps": []
+        }
+      ],
+      "Services": [
+        {
+          "ObjectName": "BTService_EnemyVision'BT_7BlastRobot_Cap:BTService_EnemyVision_2'",
+          "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_BlastRobot/Level_Capture/BT_7BlastRobot_Cap.21"
+        },
+        {
+          "ObjectName": "BPServer_JT_BlastRobot_C'BT_7BlastRobot_Cap:BPServer_JT_BlastRobot_C_0'",
+          "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_BlastRobot/Level_Capture/BT_7BlastRobot_Cap.1"
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_7BlastRobot_Cap'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_BlastRobot/Level_Capture/BT_7BlastRobot_Cap.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_7BlastRobot_Cap:BTComposite_Selector_2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_BlastRobot/Level_Capture/BT_7BlastRobot_Cap.4"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_14",
+    "Outer": "BT_7BlastRobot_Cap",
+    "Class": "UScriptClass'BTComposite_Selector'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait'BT_7BlastRobot_Cap:BTTask_Wait_1'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_BlastRobot/Level_Capture/BT_7BlastRobot_Cap.28"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_7BlastRobot_Cap'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_BlastRobot/Level_Capture/BT_7BlastRobot_Cap.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_7BlastRobot_Cap:BTComposite_Selector_2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_BlastRobot/Level_Capture/BT_7BlastRobot_Cap.4"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_2",
+    "Outer": "BT_7BlastRobot_Cap",
+    "Class": "UScriptClass'BTComposite_Selector'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector'BT_7BlastRobot_Cap:BTComposite_Selector_1'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_BlastRobot/Level_Capture/BT_7BlastRobot_Cap.2"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_7BlastRobot_Cap:BTDecorator_Blackboard_28'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_BlastRobot/Level_Capture/BT_7BlastRobot_Cap.14"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector'BT_7BlastRobot_Cap:BTComposite_Selector_14'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_BlastRobot/Level_Capture/BT_7BlastRobot_Cap.3"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_7BlastRobot_Cap:BTDecorator_Blackboard_31'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_BlastRobot/Level_Capture/BT_7BlastRobot_Cap.16"
+            }
+          ],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_7BlastRobot_Cap'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_BlastRobot/Level_Capture/BT_7BlastRobot_Cap.0"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_3",
+    "Outer": "BT_7BlastRobot_Cap",
+    "Class": "UScriptClass'BTComposite_Selector'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_GetTarget'BT_7BlastRobot_Cap:BTTask_GetTarget_1'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_BlastRobot/Level_Capture/BT_7BlastRobot_Cap.23"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_7BlastRobot_Cap:BTComposite_Sequence_3'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_BlastRobot/Level_Capture/BT_7BlastRobot_Cap.7"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_7BlastRobot_Cap'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_BlastRobot/Level_Capture/BT_7BlastRobot_Cap.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_7BlastRobot_Cap:BTComposite_Selector_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_BlastRobot/Level_Capture/BT_7BlastRobot_Cap.2"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_4",
+    "Outer": "BT_7BlastRobot_Cap",
+    "Class": "UScriptClass'BTComposite_Selector'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_NewMoveTo'BT_7BlastRobot_Cap:BTTask_NewMoveTo_1'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_BlastRobot/Level_Capture/BT_7BlastRobot_Cap.26"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_TimeLimit'BT_7BlastRobot_Cap:BTDecorator_TimeLimit_0'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_BlastRobot/Level_Capture/BT_7BlastRobot_Cap.19"
+            },
+            {
+              "ObjectName": "BTDecorator_Cooldown'BT_7BlastRobot_Cap:BTDecorator_Cooldown_0'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_BlastRobot/Level_Capture/BT_7BlastRobot_Cap.18"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_UseSkill'BT_7BlastRobot_Cap:BTTask_UseSkill_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_BlastRobot/Level_Capture/BT_7BlastRobot_Cap.27"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_7BlastRobot_Cap:BTDecorator_Blackboard_15'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_BlastRobot/Level_Capture/BT_7BlastRobot_Cap.11"
+            },
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_7BlastRobot_Cap:BTDecorator_Blackboard_5'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_BlastRobot/Level_Capture/BT_7BlastRobot_Cap.17"
+            },
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_7BlastRobot_Cap:BTDecorator_Blackboard_16'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_BlastRobot/Level_Capture/BT_7BlastRobot_Cap.12"
+            }
+          ],
+          "DecoratorOps": [
+            {
+              "Operation": "EBTDecoratorLogic::And",
+              "Number": 2
+            },
+            {
+              "Operation": "EBTDecoratorLogic::Test",
+              "Number": 0
+            },
+            {
+              "Operation": "EBTDecoratorLogic::Or",
+              "Number": 2
+            },
+            {
+              "Operation": "EBTDecoratorLogic::Test",
+              "Number": 1
+            },
+            {
+              "Operation": "EBTDecoratorLogic::Test",
+              "Number": 2
+            }
+          ]
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_NewMoveTo'BT_7BlastRobot_Cap:BTTask_NewMoveTo_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_BlastRobot/Level_Capture/BT_7BlastRobot_Cap.25"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_7BlastRobot_Cap:BTDecorator_Blackboard_17'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_BlastRobot/Level_Capture/BT_7BlastRobot_Cap.13"
+            },
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_7BlastRobot_Cap:BTDecorator_Blackboard_11'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_BlastRobot/Level_Capture/BT_7BlastRobot_Cap.9"
+            },
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_7BlastRobot_Cap:BTDecorator_Blackboard_12'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_BlastRobot/Level_Capture/BT_7BlastRobot_Cap.10"
+            }
+          ],
+          "DecoratorOps": [
+            {
+              "Operation": "EBTDecoratorLogic::And",
+              "Number": 2
+            },
+            {
+              "Operation": "EBTDecoratorLogic::Test",
+              "Number": 0
+            },
+            {
+              "Operation": "EBTDecoratorLogic::And",
+              "Number": 2
+            },
+            {
+              "Operation": "EBTDecoratorLogic::Test",
+              "Number": 1
+            },
+            {
+              "Operation": "EBTDecoratorLogic::Test",
+              "Number": 2
+            }
+          ]
+        }
+      ],
+      "Services": [
+        {
+          "ObjectName": "BTService_BBValueDis'BT_7BlastRobot_Cap:BTService_BBValueDis_0'",
+          "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_BlastRobot/Level_Capture/BT_7BlastRobot_Cap.20"
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_7BlastRobot_Cap'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_BlastRobot/Level_Capture/BT_7BlastRobot_Cap.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_7BlastRobot_Cap:BTComposite_Selector_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_BlastRobot/Level_Capture/BT_7BlastRobot_Cap.2"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_3",
+    "Outer": "BT_7BlastRobot_Cap",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_FilterTargetsByType'BT_7BlastRobot_Cap:BTTask_FilterTargetsByType_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_BlastRobot/Level_Capture/BT_7BlastRobot_Cap.22"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_LastFilterTargets'BT_7BlastRobot_Cap:BTTask_LastFilterTargets_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_BlastRobot/Level_Capture/BT_7BlastRobot_Cap.24"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_7BlastRobot_Cap'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_BlastRobot/Level_Capture/BT_7BlastRobot_Cap.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_7BlastRobot_Cap:BTComposite_Selector_3'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_BlastRobot/Level_Capture/BT_7BlastRobot_Cap.5"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_1",
+    "Outer": "BT_7BlastRobot_Cap",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "IntValue": 2,
+      "FloatValue": 450.0,
+      "CachedDescription": "Target is 未设置",
+      "OperationType": 1,
+      "BlackboardKey": {
+        "SelectedKeyName": "Target"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::Self",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_7BlastRobot_Cap'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_BlastRobot/Level_Capture/BT_7BlastRobot_Cap.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_7BlastRobot_Cap:BTComposite_Selector_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_BlastRobot/Level_Capture/BT_7BlastRobot_Cap.2"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_11",
+    "Outer": "BT_7BlastRobot_Cap",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "FloatValue": 200.0,
+      "CachedDescription": "TickTargetDis 大于 200.000000",
+      "OperationType": 4,
+      "BlackboardKey": {
+        "SelectedKeyName": "TickTargetDis"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::Self",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_7BlastRobot_Cap'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_BlastRobot/Level_Capture/BT_7BlastRobot_Cap.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_7BlastRobot_Cap:BTComposite_Selector_4'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_BlastRobot/Level_Capture/BT_7BlastRobot_Cap.6"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_12",
+    "Outer": "BT_7BlastRobot_Cap",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "FloatValue": 200.0,
+      "CachedDescription": "TickCreatorDis 大于 200.000000",
+      "OperationType": 4,
+      "BlackboardKey": {
+        "SelectedKeyName": "TickCreatorDis"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::Self",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_7BlastRobot_Cap'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_BlastRobot/Level_Capture/BT_7BlastRobot_Cap.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_7BlastRobot_Cap:BTComposite_Selector_4'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_BlastRobot/Level_Capture/BT_7BlastRobot_Cap.6"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_15",
+    "Outer": "BT_7BlastRobot_Cap",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "CachedDescription": "CreatorLoc is 已设置",
+      "BlackboardKey": {
+        "SelectedKeyName": "CreatorLoc"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_7BlastRobot_Cap'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_BlastRobot/Level_Capture/BT_7BlastRobot_Cap.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_7BlastRobot_Cap:BTComposite_Selector_4'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_BlastRobot/Level_Capture/BT_7BlastRobot_Cap.6"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_16",
+    "Outer": "BT_7BlastRobot_Cap",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "FloatValue": 200.0,
+      "CachedDescription": "TickCreatorDis 小于或等于 200.000000",
+      "OperationType": 3,
+      "BlackboardKey": {
+        "SelectedKeyName": "TickCreatorDis"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_7BlastRobot_Cap'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_BlastRobot/Level_Capture/BT_7BlastRobot_Cap.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_7BlastRobot_Cap:BTComposite_Selector_4'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_BlastRobot/Level_Capture/BT_7BlastRobot_Cap.6"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_17",
+    "Outer": "BT_7BlastRobot_Cap",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "CachedDescription": "CreatorLoc is 已设置",
+      "BlackboardKey": {
+        "SelectedKeyName": "CreatorLoc"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_7BlastRobot_Cap'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_BlastRobot/Level_Capture/BT_7BlastRobot_Cap.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_7BlastRobot_Cap:BTComposite_Selector_4'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_BlastRobot/Level_Capture/BT_7BlastRobot_Cap.6"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_28",
+    "Outer": "BT_7BlastRobot_Cap",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "CachedDescription": "ActionMode 等于 Active",
+      "BlackboardKey": {
+        "SelectedKeyName": "ActionMode"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::Self",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_7BlastRobot_Cap'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_BlastRobot/Level_Capture/BT_7BlastRobot_Cap.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_7BlastRobot_Cap:BTComposite_Selector_2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_BlastRobot/Level_Capture/BT_7BlastRobot_Cap.4"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_3",
+    "Outer": "BT_7BlastRobot_Cap",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "IntValue": 2,
+      "FloatValue": 450.0,
+      "CachedDescription": "Target is 已设置",
+      "BlackboardKey": {
+        "SelectedKeyName": "Target"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::Self",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_7BlastRobot_Cap'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_BlastRobot/Level_Capture/BT_7BlastRobot_Cap.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_7BlastRobot_Cap:BTComposite_Selector_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_BlastRobot/Level_Capture/BT_7BlastRobot_Cap.2"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_31",
+    "Outer": "BT_7BlastRobot_Cap",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "IntValue": 1,
+      "CachedDescription": "ActionMode 等于 Hitted",
+      "BlackboardKey": {
+        "SelectedKeyName": "ActionMode"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::Self",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_7BlastRobot_Cap'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_BlastRobot/Level_Capture/BT_7BlastRobot_Cap.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_7BlastRobot_Cap:BTComposite_Selector_2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_BlastRobot/Level_Capture/BT_7BlastRobot_Cap.4"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_5",
+    "Outer": "BT_7BlastRobot_Cap",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "FloatValue": 200.0,
+      "CachedDescription": "TickTargetDis 小于或等于 200.000000",
+      "OperationType": 3,
+      "BlackboardKey": {
+        "SelectedKeyName": "TickTargetDis"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_7BlastRobot_Cap'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_BlastRobot/Level_Capture/BT_7BlastRobot_Cap.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_7BlastRobot_Cap:BTComposite_Selector_4'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_BlastRobot/Level_Capture/BT_7BlastRobot_Cap.6"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Cooldown",
+    "Name": "BTDecorator_Cooldown_0",
+    "Outer": "BT_7BlastRobot_Cap",
+    "Class": "UScriptClass'BTDecorator_Cooldown'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "CoolDownTime": 999.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_7BlastRobot_Cap'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_BlastRobot/Level_Capture/BT_7BlastRobot_Cap.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_7BlastRobot_Cap:BTComposite_Selector_4'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_BlastRobot/Level_Capture/BT_7BlastRobot_Cap.6"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_TimeLimit",
+    "Name": "BTDecorator_TimeLimit_0",
+    "Outer": "BT_7BlastRobot_Cap",
+    "Class": "UScriptClass'BTDecorator_TimeLimit'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TimeLimit": 3.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_7BlastRobot_Cap'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_BlastRobot/Level_Capture/BT_7BlastRobot_Cap.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_7BlastRobot_Cap:BTComposite_Selector_4'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_BlastRobot/Level_Capture/BT_7BlastRobot_Cap.6"
+      }
+    }
+  },
+  {
+    "Type": "BTService_BBValueDis",
+    "Name": "BTService_BBValueDis_0",
+    "Outer": "BT_7BlastRobot_Cap",
+    "Class": "UScriptClass'BTService_BBValueDis'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "BBName": "Target",
+      "Interval": 0.02,
+      "RandomDeviation": 0.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_7BlastRobot_Cap'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_BlastRobot/Level_Capture/BT_7BlastRobot_Cap.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_7BlastRobot_Cap:BTComposite_Selector_4'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_BlastRobot/Level_Capture/BT_7BlastRobot_Cap.6"
+      }
+    }
+  },
+  {
+    "Type": "BTService_EnemyVision",
+    "Name": "BTService_EnemyVision_2",
+    "Outer": "BT_7BlastRobot_Cap",
+    "Class": "UScriptClass'BTService_EnemyVision'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "FVisionDistance": 1000.0,
+      "FVisionAngle": 360.0,
+      "Interval": 0.2,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_7BlastRobot_Cap'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_BlastRobot/Level_Capture/BT_7BlastRobot_Cap.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_7BlastRobot_Cap:BTComposite_Selector_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_BlastRobot/Level_Capture/BT_7BlastRobot_Cap.2"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_FilterTargetsByType",
+    "Name": "BTTask_FilterTargetsByType_0",
+    "Outer": "BT_7BlastRobot_Cap",
+    "Class": "UScriptClass'BTTask_FilterTargetsByType'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_7BlastRobot_Cap'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_BlastRobot/Level_Capture/BT_7BlastRobot_Cap.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_7BlastRobot_Cap:BTComposite_Sequence_3'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_BlastRobot/Level_Capture/BT_7BlastRobot_Cap.7"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_GetTarget",
+    "Name": "BTTask_GetTarget_1",
+    "Outer": "BT_7BlastRobot_Cap",
+    "Class": "UScriptClass'BTTask_GetTarget'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TargetType": "EHatredTargetType::DefCore",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_7BlastRobot_Cap'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_BlastRobot/Level_Capture/BT_7BlastRobot_Cap.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_7BlastRobot_Cap:BTComposite_Selector_3'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_BlastRobot/Level_Capture/BT_7BlastRobot_Cap.5"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_LastFilterTargets",
+    "Name": "BTTask_LastFilterTargets_0",
+    "Outer": "BT_7BlastRobot_Cap",
+    "Class": "UScriptClass'BTTask_LastFilterTargets'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TypeOfFilterList": "ETypeOfFilterList::AfterFilter",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_7BlastRobot_Cap'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_BlastRobot/Level_Capture/BT_7BlastRobot_Cap.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_7BlastRobot_Cap:BTComposite_Sequence_3'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_BlastRobot/Level_Capture/BT_7BlastRobot_Cap.7"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_NewMoveTo",
+    "Name": "BTTask_NewMoveTo_0",
+    "Outer": "BT_7BlastRobot_Cap",
+    "Class": "UScriptClass'BTTask_NewMoveTo'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "bOrientRotationToMovement": true,
+      "MoveTypeState": "EMoveTypeState::MTS_Run",
+      "MaxSpeed": 1200.0,
+      "MaxAcceleration": 1000.0,
+      "bStopOnOverlapNeedsUpdate": false,
+      "BlackboardKey": {
+        "SelectedKeyName": "Target"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_7BlastRobot_Cap'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_BlastRobot/Level_Capture/BT_7BlastRobot_Cap.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_7BlastRobot_Cap:BTComposite_Selector_4'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_BlastRobot/Level_Capture/BT_7BlastRobot_Cap.6"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_NewMoveTo",
+    "Name": "BTTask_NewMoveTo_1",
+    "Outer": "BT_7BlastRobot_Cap",
+    "Class": "UScriptClass'BTTask_NewMoveTo'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "bOrientRotationToMovement": true,
+      "MoveTypeState": "EMoveTypeState::MTS_Run",
+      "MaxSpeed": 1200.0,
+      "MaxAcceleration": 1000.0,
+      "bStopOnOverlapNeedsUpdate": false,
+      "BlackboardKey": {
+        "SelectedKeyName": "Target"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_7BlastRobot_Cap'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_BlastRobot/Level_Capture/BT_7BlastRobot_Cap.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_7BlastRobot_Cap:BTComposite_Selector_4'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_BlastRobot/Level_Capture/BT_7BlastRobot_Cap.6"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_UseSkill",
+    "Name": "BTTask_UseSkill_0",
+    "Outer": "BT_7BlastRobot_Cap",
+    "Class": "UScriptClass'BTTask_UseSkill'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_7BlastRobot_Cap'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_BlastRobot/Level_Capture/BT_7BlastRobot_Cap.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_7BlastRobot_Cap:BTComposite_Selector_4'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_BlastRobot/Level_Capture/BT_7BlastRobot_Cap.6"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_1",
+    "Outer": "BT_7BlastRobot_Cap",
+    "Class": "UScriptClass'BTTask_Wait'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_7BlastRobot_Cap'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_BlastRobot/Level_Capture/BT_7BlastRobot_Cap.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_7BlastRobot_Cap:BTComposite_Selector_14'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_BlastRobot/Level_Capture/BT_7BlastRobot_Cap.3"
+      }
+    }
+  }
+]

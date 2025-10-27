@@ -1,0 +1,958 @@
+[
+  {
+    "Type": "BehaviorTree",
+    "Name": "BT_Phantom_Heitao_Skill02",
+    "Class": "UScriptClass'BehaviorTree'",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "RootNode": {
+        "ObjectName": "BTComposite_Selector'BT_Phantom_Heitao_Skill02:BTComposite_Selector_6'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Heitao/BT_Phantom_Heitao_Skill02.6"
+      },
+      "BlackboardAsset": {
+        "ObjectName": "BlackboardData'BB_Shadow'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Parent/BB_Shadow.0"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Rate",
+    "Name": "BTComposite_Rate_0",
+    "Outer": "BT_Phantom_Heitao_Skill02",
+    "Class": "UScriptClass'BTComposite_Rate'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Rates": [
+        1,
+        2
+      ],
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector'BT_Phantom_Heitao_Skill02:BTComposite_Selector_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Heitao/BT_Phantom_Heitao_Skill02.2"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_NewMoveTo'BT_Phantom_Heitao_Skill02:BTTask_NewMoveTo_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Heitao/BT_Phantom_Heitao_Skill02.26"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Heitao_Skill02'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Heitao/BT_Phantom_Heitao_Skill02.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Phantom_Heitao_Skill02:BTComposite_Selector_5'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Heitao/BT_Phantom_Heitao_Skill02.5"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_0",
+    "Outer": "BT_Phantom_Heitao_Skill02",
+    "Class": "UScriptClass'BTComposite_Selector'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_UseSkill_Player'BT_Phantom_Heitao_Skill02:BTTask_UseSkill_Player_14'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Heitao/BT_Phantom_Heitao_Skill02.31"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Phantom_Heitao_Skill02:BTDecorator_Blackboard_7'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Player/Heitao/BT_Phantom_Heitao_Skill02.14"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_UseSkill_Player'BT_Phantom_Heitao_Skill02:BTTask_UseSkill_Player_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Heitao/BT_Phantom_Heitao_Skill02.29"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_CharAttrCondition'BT_Phantom_Heitao_Skill02:BTDecorator_CharAttrCondition_0'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Player/Heitao/BT_Phantom_Heitao_Skill02.15"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_UseSkill_Player'BT_Phantom_Heitao_Skill02:BTTask_UseSkill_Player_1'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Heitao/BT_Phantom_Heitao_Skill02.30"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Heitao_Skill02'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Heitao/BT_Phantom_Heitao_Skill02.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Rate'BT_Phantom_Heitao_Skill02:BTComposite_Rate_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Heitao/BT_Phantom_Heitao_Skill02.1"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_1",
+    "Outer": "BT_Phantom_Heitao_Skill02",
+    "Class": "UScriptClass'BTComposite_Selector'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_Phantom_Heitao_Skill02:BTComposite_Sequence_1'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Heitao/BT_Phantom_Heitao_Skill02.8"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_CheckBuff'BT_Phantom_Heitao_Skill02:BTDecorator_CheckBuff_1'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Player/Heitao/BT_Phantom_Heitao_Skill02.18"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_Phantom_Heitao_Skill02:BTComposite_Sequence_3'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Heitao/BT_Phantom_Heitao_Skill02.9"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_CheckBuff'BT_Phantom_Heitao_Skill02:BTDecorator_CheckBuff_8'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Player/Heitao/BT_Phantom_Heitao_Skill02.19"
+            },
+            {
+              "ObjectName": "BTDecorator_CharAttrCondition'BT_Phantom_Heitao_Skill02:BTDecorator_CharAttrCondition_1'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Player/Heitao/BT_Phantom_Heitao_Skill02.16"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector'BT_Phantom_Heitao_Skill02:BTComposite_Selector_5'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Heitao/BT_Phantom_Heitao_Skill02.5"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Phantom_Heitao_Skill02:BTDecorator_Blackboard_3'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Player/Heitao/BT_Phantom_Heitao_Skill02.12"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector'BT_Phantom_Heitao_Skill02:BTComposite_Selector_3'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Heitao/BT_Phantom_Heitao_Skill02.4"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Phantom_Heitao_Skill02:BTDecorator_Blackboard_4'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Player/Heitao/BT_Phantom_Heitao_Skill02.13"
+            }
+          ],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Heitao_Skill02'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Heitao/BT_Phantom_Heitao_Skill02.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Phantom_Heitao_Skill02:BTComposite_Selector_6'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Heitao/BT_Phantom_Heitao_Skill02.6"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_3",
+    "Outer": "BT_Phantom_Heitao_Skill02",
+    "Class": "UScriptClass'BTComposite_Selector'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_UseSkill_Player'BT_Phantom_Heitao_Skill02:BTTask_UseSkill_Player_4'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Heitao/BT_Phantom_Heitao_Skill02.33"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Cooldown'BT_Phantom_Heitao_Skill02:BTDecorator_Cooldown_0'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Player/Heitao/BT_Phantom_Heitao_Skill02.20"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_UseSkill_Player'BT_Phantom_Heitao_Skill02:BTTask_UseSkill_Player_3'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Heitao/BT_Phantom_Heitao_Skill02.32"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Heitao_Skill02'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Heitao/BT_Phantom_Heitao_Skill02.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Phantom_Heitao_Skill02:BTComposite_Selector_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Heitao/BT_Phantom_Heitao_Skill02.3"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_5",
+    "Outer": "BT_Phantom_Heitao_Skill02",
+    "Class": "UScriptClass'BTComposite_Selector'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Rate'BT_Phantom_Heitao_Skill02:BTComposite_Rate_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Heitao/BT_Phantom_Heitao_Skill02.1"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_CheckBuff'BT_Phantom_Heitao_Skill02:BTDecorator_CheckBuff_0'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Player/Heitao/BT_Phantom_Heitao_Skill02.17"
+            }
+          ],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Heitao_Skill02'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Heitao/BT_Phantom_Heitao_Skill02.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Phantom_Heitao_Skill02:BTComposite_Selector_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Heitao/BT_Phantom_Heitao_Skill02.3"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_6",
+    "Outer": "BT_Phantom_Heitao_Skill02",
+    "Class": "UScriptClass'BTComposite_Selector'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_Phantom_Heitao_Skill02:BTComposite_Sequence_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Heitao/BT_Phantom_Heitao_Skill02.7"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Phantom_Heitao_Skill02:BTDecorator_Blackboard_0'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Player/Heitao/BT_Phantom_Heitao_Skill02.10"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector'BT_Phantom_Heitao_Skill02:BTComposite_Selector_1'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Heitao/BT_Phantom_Heitao_Skill02.3"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Phantom_Heitao_Skill02:BTDecorator_Blackboard_1'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Player/Heitao/BT_Phantom_Heitao_Skill02.11"
+            }
+          ],
+          "DecoratorOps": []
+        }
+      ],
+      "Services": [
+        {
+          "ObjectName": "BTService_EnemyVision'BT_Phantom_Heitao_Skill02:BTService_EnemyVision_0'",
+          "ObjectPath": "EM/Content/AssetDesign/AI/Player/Heitao/BT_Phantom_Heitao_Skill02.23"
+        },
+        {
+          "ObjectName": "BTService_ClearBTTarget_Player'BT_Phantom_Heitao_Skill02:BTService_ClearBTTarget_Player_0'",
+          "ObjectPath": "EM/Content/AssetDesign/AI/Player/Heitao/BT_Phantom_Heitao_Skill02.22"
+        },
+        {
+          "ObjectName": "BTService_BBValueDis'BT_Phantom_Heitao_Skill02:BTService_BBValueDis_0'",
+          "ObjectPath": "EM/Content/AssetDesign/AI/Player/Heitao/BT_Phantom_Heitao_Skill02.21"
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Heitao_Skill02'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Heitao/BT_Phantom_Heitao_Skill02.0"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_0",
+    "Outer": "BT_Phantom_Heitao_Skill02",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_FilterTargetsByDis'BT_Phantom_Heitao_Skill02:BTTask_FilterTargetsByDis_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Heitao/BT_Phantom_Heitao_Skill02.24"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_LastFilterTargets'BT_Phantom_Heitao_Skill02:BTTask_LastFilterTargets_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Heitao/BT_Phantom_Heitao_Skill02.25"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Heitao_Skill02'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Heitao/BT_Phantom_Heitao_Skill02.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Phantom_Heitao_Skill02:BTComposite_Selector_6'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Heitao/BT_Phantom_Heitao_Skill02.6"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_1",
+    "Outer": "BT_Phantom_Heitao_Skill02",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_StareAt'BT_Phantom_Heitao_Skill02:BTTask_StareAt_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Heitao/BT_Phantom_Heitao_Skill02.27"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_UseSkill_Player'BT_Phantom_Heitao_Skill02:BTTask_UseSkill_Player_6'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Heitao/BT_Phantom_Heitao_Skill02.35"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Heitao_Skill02'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Heitao/BT_Phantom_Heitao_Skill02.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Phantom_Heitao_Skill02:BTComposite_Selector_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Heitao/BT_Phantom_Heitao_Skill02.3"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_3",
+    "Outer": "BT_Phantom_Heitao_Skill02",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_StareAt'BT_Phantom_Heitao_Skill02:BTTask_StareAt_2'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Heitao/BT_Phantom_Heitao_Skill02.28"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_UseSkill_Player'BT_Phantom_Heitao_Skill02:BTTask_UseSkill_Player_5'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Heitao/BT_Phantom_Heitao_Skill02.34"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Heitao_Skill02'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Heitao/BT_Phantom_Heitao_Skill02.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Phantom_Heitao_Skill02:BTComposite_Selector_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Heitao/BT_Phantom_Heitao_Skill02.3"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_0",
+    "Outer": "BT_Phantom_Heitao_Skill02",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "CachedDescription": "Target is 未设置",
+      "OperationType": 1,
+      "BlackboardKey": {
+        "SelectedKeyName": "Target"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Heitao_Skill02'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Heitao/BT_Phantom_Heitao_Skill02.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Phantom_Heitao_Skill02:BTComposite_Selector_6'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Heitao/BT_Phantom_Heitao_Skill02.6"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_1",
+    "Outer": "BT_Phantom_Heitao_Skill02",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "CachedDescription": "Target is 已设置",
+      "BlackboardKey": {
+        "SelectedKeyName": "Target"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Heitao_Skill02'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Heitao/BT_Phantom_Heitao_Skill02.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Phantom_Heitao_Skill02:BTComposite_Selector_6'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Heitao/BT_Phantom_Heitao_Skill02.6"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_3",
+    "Outer": "BT_Phantom_Heitao_Skill02",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "FloatValue": 500.0,
+      "CachedDescription": "TickTargetDis 大于 500.000000",
+      "OperationType": 4,
+      "BlackboardKey": {
+        "SelectedKeyName": "TickTargetDis"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Heitao_Skill02'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Heitao/BT_Phantom_Heitao_Skill02.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Phantom_Heitao_Skill02:BTComposite_Selector_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Heitao/BT_Phantom_Heitao_Skill02.3"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_4",
+    "Outer": "BT_Phantom_Heitao_Skill02",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "FloatValue": 500.0,
+      "CachedDescription": "TickTargetDis 小于或等于 500.000000",
+      "OperationType": 3,
+      "BlackboardKey": {
+        "SelectedKeyName": "TickTargetDis"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Heitao_Skill02'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Heitao/BT_Phantom_Heitao_Skill02.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Phantom_Heitao_Skill02:BTComposite_Selector_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Heitao/BT_Phantom_Heitao_Skill02.3"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_7",
+    "Outer": "BT_Phantom_Heitao_Skill02",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "FloatValue": 600.0,
+      "CachedDescription": "TickTargetDis 小于或等于 600.000000",
+      "OperationType": 3,
+      "BlackboardKey": {
+        "SelectedKeyName": "TickTargetDis"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Heitao_Skill02'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Heitao/BT_Phantom_Heitao_Skill02.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Phantom_Heitao_Skill02:BTComposite_Selector_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Heitao/BT_Phantom_Heitao_Skill02.2"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_CharAttrCondition",
+    "Name": "BTDecorator_CharAttrCondition_0",
+    "Outer": "BT_Phantom_Heitao_Skill02",
+    "Class": "UScriptClass'BTDecorator_CharAttrCondition'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TargetType": "EConditionTargetType::RangedWeapon",
+      "EqualValue": 0.0,
+      "AttrName": "EAttrName::BulletNum",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Heitao_Skill02'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Heitao/BT_Phantom_Heitao_Skill02.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Phantom_Heitao_Skill02:BTComposite_Selector_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Heitao/BT_Phantom_Heitao_Skill02.2"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_CharAttrCondition",
+    "Name": "BTDecorator_CharAttrCondition_1",
+    "Outer": "BT_Phantom_Heitao_Skill02",
+    "Class": "UScriptClass'BTDecorator_CharAttrCondition'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "MinValue": 50.0,
+      "AttrName": "EAttrName::Sp",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Heitao_Skill02'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Heitao/BT_Phantom_Heitao_Skill02.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Phantom_Heitao_Skill02:BTComposite_Selector_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Heitao/BT_Phantom_Heitao_Skill02.3"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_CheckBuff",
+    "Name": "BTDecorator_CheckBuff_0",
+    "Outer": "BT_Phantom_Heitao_Skill02",
+    "Class": "UScriptClass'BTDecorator_CheckBuff'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "HasBuff": false,
+      "BuffId": 110102,
+      "NodeName": "IsNotInSkill02",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Heitao_Skill02'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Heitao/BT_Phantom_Heitao_Skill02.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Phantom_Heitao_Skill02:BTComposite_Selector_5'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Heitao/BT_Phantom_Heitao_Skill02.5"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_CheckBuff",
+    "Name": "BTDecorator_CheckBuff_1",
+    "Outer": "BT_Phantom_Heitao_Skill02",
+    "Class": "UScriptClass'BTDecorator_CheckBuff'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "BuffId": 110102,
+      "NodeName": "IsInSkill02",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Heitao_Skill02'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Heitao/BT_Phantom_Heitao_Skill02.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Phantom_Heitao_Skill02:BTComposite_Selector_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Heitao/BT_Phantom_Heitao_Skill02.3"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_CheckBuff",
+    "Name": "BTDecorator_CheckBuff_8",
+    "Outer": "BT_Phantom_Heitao_Skill02",
+    "Class": "UScriptClass'BTDecorator_CheckBuff'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "HasBuff": false,
+      "BuffId": 110102,
+      "NodeName": "IsNotInSkill02",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Heitao_Skill02'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Heitao/BT_Phantom_Heitao_Skill02.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Phantom_Heitao_Skill02:BTComposite_Selector_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Heitao/BT_Phantom_Heitao_Skill02.3"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Cooldown",
+    "Name": "BTDecorator_Cooldown_0",
+    "Outer": "BT_Phantom_Heitao_Skill02",
+    "Class": "UScriptClass'BTDecorator_Cooldown'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "CoolDownTime": 60.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Heitao_Skill02'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Heitao/BT_Phantom_Heitao_Skill02.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Phantom_Heitao_Skill02:BTComposite_Selector_3'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Heitao/BT_Phantom_Heitao_Skill02.4"
+      }
+    }
+  },
+  {
+    "Type": "BTService_BBValueDis",
+    "Name": "BTService_BBValueDis_0",
+    "Outer": "BT_Phantom_Heitao_Skill02",
+    "Class": "UScriptClass'BTService_BBValueDis'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "BBName": "Target",
+      "Interval": 0.02,
+      "RandomDeviation": 0.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Heitao_Skill02'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Heitao/BT_Phantom_Heitao_Skill02.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Phantom_Heitao_Skill02:BTComposite_Selector_6'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Heitao/BT_Phantom_Heitao_Skill02.6"
+      }
+    }
+  },
+  {
+    "Type": "BTService_ClearBTTarget_Player",
+    "Name": "BTService_ClearBTTarget_Player_0",
+    "Outer": "BT_Phantom_Heitao_Skill02",
+    "Class": "UScriptClass'BTService_ClearBTTarget_Player'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Interval": 0.1,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Heitao_Skill02'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Heitao/BT_Phantom_Heitao_Skill02.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Phantom_Heitao_Skill02:BTComposite_Selector_6'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Heitao/BT_Phantom_Heitao_Skill02.6"
+      }
+    }
+  },
+  {
+    "Type": "BTService_EnemyVision",
+    "Name": "BTService_EnemyVision_0",
+    "Outer": "BT_Phantom_Heitao_Skill02",
+    "Class": "UScriptClass'BTService_EnemyVision'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "FVisionDistance": 2000.0,
+      "FVisionAngle": 180.0,
+      "Interval": 0.2,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Heitao_Skill02'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Heitao/BT_Phantom_Heitao_Skill02.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Phantom_Heitao_Skill02:BTComposite_Selector_6'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Heitao/BT_Phantom_Heitao_Skill02.6"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_FilterTargetsByDis",
+    "Name": "BTTask_FilterTargetsByDis_0",
+    "Outer": "BT_Phantom_Heitao_Skill02",
+    "Class": "UScriptClass'BTTask_FilterTargetsByDis'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "MaxDis": 2000.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Heitao_Skill02'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Heitao/BT_Phantom_Heitao_Skill02.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Phantom_Heitao_Skill02:BTComposite_Sequence_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Heitao/BT_Phantom_Heitao_Skill02.7"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_LastFilterTargets",
+    "Name": "BTTask_LastFilterTargets_0",
+    "Outer": "BT_Phantom_Heitao_Skill02",
+    "Class": "UScriptClass'BTTask_LastFilterTargets'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Heitao_Skill02'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Heitao/BT_Phantom_Heitao_Skill02.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Phantom_Heitao_Skill02:BTComposite_Sequence_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Heitao/BT_Phantom_Heitao_Skill02.7"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_NewMoveTo",
+    "Name": "BTTask_NewMoveTo_0",
+    "Outer": "BT_Phantom_Heitao_Skill02",
+    "Class": "UScriptClass'BTTask_NewMoveTo'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "bOrientRotationToMovement": true,
+      "MaxSpeed": 500.0,
+      "MaxAcceleration": 2048.0,
+      "AcceptableRadius": 300.0,
+      "bStopOnOverlapNeedsUpdate": false,
+      "BlackboardKey": {
+        "SelectedKeyName": "Target"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Heitao_Skill02'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Heitao/BT_Phantom_Heitao_Skill02.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Rate'BT_Phantom_Heitao_Skill02:BTComposite_Rate_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Heitao/BT_Phantom_Heitao_Skill02.1"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_StareAt",
+    "Name": "BTTask_StareAt_0",
+    "Outer": "BT_Phantom_Heitao_Skill02",
+    "Class": "UScriptClass'BTTask_StareAt'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "BBName": "Target",
+      "ContinueTime": 0.1,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Heitao_Skill02'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Heitao/BT_Phantom_Heitao_Skill02.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Phantom_Heitao_Skill02:BTComposite_Sequence_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Heitao/BT_Phantom_Heitao_Skill02.8"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_StareAt",
+    "Name": "BTTask_StareAt_2",
+    "Outer": "BT_Phantom_Heitao_Skill02",
+    "Class": "UScriptClass'BTTask_StareAt'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "BBName": "Target",
+      "ContinueTime": 0.1,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Heitao_Skill02'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Heitao/BT_Phantom_Heitao_Skill02.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Phantom_Heitao_Skill02:BTComposite_Sequence_3'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Heitao/BT_Phantom_Heitao_Skill02.9"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_UseSkill_Player",
+    "Name": "BTTask_UseSkill_Player_0",
+    "Outer": "BT_Phantom_Heitao_Skill02",
+    "Class": "UScriptClass'BTTask_UseSkill_Player'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SkillType": "EUseSkill_SkillType::Reload",
+      "bUseControllerRotationYaw": false,
+      "NodeName": "Reload",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Heitao_Skill02'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Heitao/BT_Phantom_Heitao_Skill02.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Phantom_Heitao_Skill02:BTComposite_Selector_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Heitao/BT_Phantom_Heitao_Skill02.2"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_UseSkill_Player",
+    "Name": "BTTask_UseSkill_Player_1",
+    "Outer": "BT_Phantom_Heitao_Skill02",
+    "Class": "UScriptClass'BTTask_UseSkill_Player'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SkillType": "EUseSkill_SkillType::Shooting",
+      "NodeName": "Shooting",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Heitao_Skill02'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Heitao/BT_Phantom_Heitao_Skill02.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Phantom_Heitao_Skill02:BTComposite_Selector_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Heitao/BT_Phantom_Heitao_Skill02.2"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_UseSkill_Player",
+    "Name": "BTTask_UseSkill_Player_14",
+    "Outer": "BT_Phantom_Heitao_Skill02",
+    "Class": "UScriptClass'BTTask_UseSkill_Player'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SkillType": "EUseSkill_SkillType::Skill1",
+      "bUseControllerRotationYaw": false,
+      "NodeName": "Skill01",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Heitao_Skill02'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Heitao/BT_Phantom_Heitao_Skill02.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Phantom_Heitao_Skill02:BTComposite_Selector_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Heitao/BT_Phantom_Heitao_Skill02.2"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_UseSkill_Player",
+    "Name": "BTTask_UseSkill_Player_3",
+    "Outer": "BT_Phantom_Heitao_Skill02",
+    "Class": "UScriptClass'BTTask_UseSkill_Player'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "bUseControllerRotationYaw": false,
+      "NodeName": "Attack",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Heitao_Skill02'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Heitao/BT_Phantom_Heitao_Skill02.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Phantom_Heitao_Skill02:BTComposite_Selector_3'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Heitao/BT_Phantom_Heitao_Skill02.4"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_UseSkill_Player",
+    "Name": "BTTask_UseSkill_Player_4",
+    "Outer": "BT_Phantom_Heitao_Skill02",
+    "Class": "UScriptClass'BTTask_UseSkill_Player'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SkillType": "EUseSkill_SkillType::HeavyAttack",
+      "bUseControllerRotationYaw": false,
+      "NodeName": "HeavyAttack",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Heitao_Skill02'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Heitao/BT_Phantom_Heitao_Skill02.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Phantom_Heitao_Skill02:BTComposite_Selector_3'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Heitao/BT_Phantom_Heitao_Skill02.4"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_UseSkill_Player",
+    "Name": "BTTask_UseSkill_Player_5",
+    "Outer": "BT_Phantom_Heitao_Skill02",
+    "Class": "UScriptClass'BTTask_UseSkill_Player'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SkillType": "EUseSkill_SkillType::Skill2",
+      "bUseControllerRotationYaw": false,
+      "NodeName": "StartSkill02",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Heitao_Skill02'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Heitao/BT_Phantom_Heitao_Skill02.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Phantom_Heitao_Skill02:BTComposite_Sequence_3'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Heitao/BT_Phantom_Heitao_Skill02.9"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_UseSkill_Player",
+    "Name": "BTTask_UseSkill_Player_6",
+    "Outer": "BT_Phantom_Heitao_Skill02",
+    "Class": "UScriptClass'BTTask_UseSkill_Player'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "bUseControllerRotationYaw": false,
+      "NodeName": "Skill02_Attack",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Heitao_Skill02'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Heitao/BT_Phantom_Heitao_Skill02.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Phantom_Heitao_Skill02:BTComposite_Sequence_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Heitao/BT_Phantom_Heitao_Skill02.8"
+      }
+    }
+  }
+]

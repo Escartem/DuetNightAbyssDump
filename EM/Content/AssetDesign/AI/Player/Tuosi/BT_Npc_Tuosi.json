@@ -1,0 +1,713 @@
+[
+  {
+    "Type": "BehaviorTree",
+    "Name": "BT_Npc_Tuosi",
+    "Class": "UScriptClass'BehaviorTree'",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "RootNode": {
+        "ObjectName": "BTComposite_Selector'BT_Npc_Tuosi:BTComposite_Selector_4'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Tuosi/BT_Npc_Tuosi.3"
+      },
+      "BlackboardAsset": {
+        "ObjectName": "BlackboardData'BB_Shadow'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Parent/BB_Shadow.0"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_1",
+    "Outer": "BT_Npc_Tuosi",
+    "Class": "UScriptClass'BTComposite_Selector'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_PhantomMoveTo'BT_Npc_Tuosi:BTTask_PhantomMoveTo_1'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Tuosi/BT_Npc_Tuosi.19"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Npc_Tuosi:BTDecorator_Blackboard_7'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Player/Tuosi/BT_Npc_Tuosi.10"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_UseSkill_Player'BT_Npc_Tuosi:BTTask_UseSkill_Player_3'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Tuosi/BT_Npc_Tuosi.24"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Npc_Tuosi:BTDecorator_Blackboard_6'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Player/Tuosi/BT_Npc_Tuosi.9"
+            }
+          ],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_Tuosi'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Tuosi/BT_Npc_Tuosi.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Npc_Tuosi:BTComposite_Selector_11'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Tuosi/BT_Npc_Tuosi.2"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_11",
+    "Outer": "BT_Npc_Tuosi",
+    "Class": "UScriptClass'BTComposite_Selector'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector'BT_Npc_Tuosi:BTComposite_Selector_1'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Tuosi/BT_Npc_Tuosi.1"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Npc_Tuosi:BTDecorator_Blackboard_20'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Player/Tuosi/BT_Npc_Tuosi.8"
+            },
+            {
+              "ObjectName": "BTDecorator_TargetIsChar_C'BT_Npc_Tuosi:BTDecorator_TargetIsChar_C_5'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Player/Tuosi/BT_Npc_Tuosi.12"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_RunBehavior'BT_Npc_Tuosi:BTTask_RunBehavior_12'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Tuosi/BT_Npc_Tuosi.22"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_Npc_Tuosi:BTComposite_Sequence_1'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Tuosi/BT_Npc_Tuosi.4"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Npc_Tuosi:BTDecorator_Blackboard_1'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Player/Tuosi/BT_Npc_Tuosi.5"
+            },
+            {
+              "ObjectName": "BTDecorator_CheckCombatCondition'BT_Npc_Tuosi:BTDecorator_CheckCombatCondition_6'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Player/Tuosi/BT_Npc_Tuosi.11"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_RunBehavior'BT_Npc_Tuosi:BTTask_RunBehavior_8'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Tuosi/BT_Npc_Tuosi.23"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_RunBehavior'BT_Npc_Tuosi:BTTask_RunBehavior_10'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Tuosi/BT_Npc_Tuosi.21"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "Services": [
+        {
+          "ObjectName": "BTService_EnemyVision'BT_Npc_Tuosi:BTService_EnemyVision_4'",
+          "ObjectPath": "EM/Content/AssetDesign/AI/Player/Tuosi/BT_Npc_Tuosi.16"
+        },
+        {
+          "ObjectName": "BTService_ClearBTTarget_Player'BT_Npc_Tuosi:BTService_ClearBTTarget_Player_4'",
+          "ObjectPath": "EM/Content/AssetDesign/AI/Player/Tuosi/BT_Npc_Tuosi.15"
+        },
+        {
+          "ObjectName": "BTService_BBValueDis'BT_Npc_Tuosi:BTService_BBValueDis_4'",
+          "ObjectPath": "EM/Content/AssetDesign/AI/Player/Tuosi/BT_Npc_Tuosi.14"
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_Tuosi'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Tuosi/BT_Npc_Tuosi.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Npc_Tuosi:BTComposite_Selector_4'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Tuosi/BT_Npc_Tuosi.3"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_4",
+    "Outer": "BT_Npc_Tuosi",
+    "Class": "UScriptClass'BTComposite_Selector'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector'BT_Npc_Tuosi:BTComposite_Selector_11'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Tuosi/BT_Npc_Tuosi.2"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Npc_Tuosi:BTDecorator_Blackboard_18'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Player/Tuosi/BT_Npc_Tuosi.7"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait'BT_Npc_Tuosi:BTTask_Wait_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Tuosi/BT_Npc_Tuosi.25"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Npc_Tuosi:BTDecorator_Blackboard_13'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Player/Tuosi/BT_Npc_Tuosi.6"
+            }
+          ],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_Tuosi'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Tuosi/BT_Npc_Tuosi.0"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_1",
+    "Outer": "BT_Npc_Tuosi",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_ClearHatredList'BT_Npc_Tuosi:BTTask_ClearHatredList_2'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Tuosi/BT_Npc_Tuosi.17"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_PhantomMoveTo'BT_Npc_Tuosi:BTTask_PhantomMoveTo_2'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Tuosi/BT_Npc_Tuosi.20"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_TimeLimit'BT_Npc_Tuosi:BTDecorator_TimeLimit_0'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Player/Tuosi/BT_Npc_Tuosi.13"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_LookAtTargetForward'BT_Npc_Tuosi:BTTask_LookAtTargetForward_2'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Tuosi/BT_Npc_Tuosi.18"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_Tuosi'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Tuosi/BT_Npc_Tuosi.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Npc_Tuosi:BTComposite_Selector_11'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Tuosi/BT_Npc_Tuosi.2"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_1",
+    "Outer": "BT_Npc_Tuosi",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "CachedDescription": "PhantomOwner is 已设置",
+      "BlackboardKey": {
+        "SelectedKeyName": "PhantomOwner"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_Tuosi'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Tuosi/BT_Npc_Tuosi.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Npc_Tuosi:BTComposite_Selector_11'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Tuosi/BT_Npc_Tuosi.2"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_13",
+    "Outer": "BT_Npc_Tuosi",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "IntValue": 1,
+      "CachedDescription": "ActionMode 等于 Hitted",
+      "BlackboardKey": {
+        "SelectedKeyName": "ActionMode"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::Self",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_Tuosi'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Tuosi/BT_Npc_Tuosi.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Npc_Tuosi:BTComposite_Selector_4'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Tuosi/BT_Npc_Tuosi.3"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_18",
+    "Outer": "BT_Npc_Tuosi",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "CachedDescription": "ActionMode 等于 Active",
+      "BlackboardKey": {
+        "SelectedKeyName": "ActionMode"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::Self",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_Tuosi'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Tuosi/BT_Npc_Tuosi.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Npc_Tuosi:BTComposite_Selector_4'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Tuosi/BT_Npc_Tuosi.3"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_20",
+    "Outer": "BT_Npc_Tuosi",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "CachedDescription": "Target is 已设置",
+      "BlackboardKey": {
+        "SelectedKeyName": "Target"
+      },
+      "NodeName": "Target Is Valid",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_Tuosi'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Tuosi/BT_Npc_Tuosi.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Npc_Tuosi:BTComposite_Selector_11'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Tuosi/BT_Npc_Tuosi.2"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_6",
+    "Outer": "BT_Npc_Tuosi",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "FloatValue": 600.0,
+      "CachedDescription": "TargetCapsuleDisXY 小于 600.000000",
+      "OperationType": 2,
+      "BlackboardKey": {
+        "SelectedKeyName": "TargetCapsuleDisXY"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::Self",
+      "NodeName": "Distance<600",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_Tuosi'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Tuosi/BT_Npc_Tuosi.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Npc_Tuosi:BTComposite_Selector_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Tuosi/BT_Npc_Tuosi.1"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_7",
+    "Outer": "BT_Npc_Tuosi",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "FloatValue": 600.0,
+      "CachedDescription": "TargetCapsuleDisXY 大于或等于 600.000000",
+      "OperationType": 5,
+      "BlackboardKey": {
+        "SelectedKeyName": "TargetCapsuleDisXY"
+      },
+      "NodeName": "Distance>=600",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_Tuosi'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Tuosi/BT_Npc_Tuosi.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Npc_Tuosi:BTComposite_Selector_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Tuosi/BT_Npc_Tuosi.1"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_CheckCombatCondition",
+    "Name": "BTDecorator_CheckCombatCondition_6",
+    "Outer": "BT_Npc_Tuosi",
+    "Class": "UScriptClass'BTDecorator_CheckCombatCondition'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "CombatConditionId": 903,
+      "CacheCalculateResult": true,
+      "CacheTime": 1.0,
+      "FlowAbortMode": "EBTFlowAbortMode::LowerPriority",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_Tuosi'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Tuosi/BT_Npc_Tuosi.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Npc_Tuosi:BTComposite_Selector_11'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Tuosi/BT_Npc_Tuosi.2"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_TargetIsChar_C",
+    "Name": "BTDecorator_TargetIsChar_C_5",
+    "Outer": "BT_Npc_Tuosi",
+    "Class": "BlueprintGeneratedClass'EM/Content/BluePrints/AI/BTDecorator/BTDecorator_TargetIsChar.BTDecorator_TargetIsChar_C'",
+    "Template": {
+      "ObjectName": "BTDecorator_TargetIsChar_C'Default__BTDecorator_TargetIsChar_C'",
+      "ObjectPath": "EM/Content/BluePrints/AI/BTDecorator/BTDecorator_TargetIsChar.2"
+    },
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Target": {
+        "SelectedKeyName": "Target"
+      },
+      "bShowPropertyDetails": false,
+      "bInverseCondition": true,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_Tuosi'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Tuosi/BT_Npc_Tuosi.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Npc_Tuosi:BTComposite_Selector_11'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Tuosi/BT_Npc_Tuosi.2"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_TimeLimit",
+    "Name": "BTDecorator_TimeLimit_0",
+    "Outer": "BT_Npc_Tuosi",
+    "Class": "UScriptClass'BTDecorator_TimeLimit'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TimeLimit": 10.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_Tuosi'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Tuosi/BT_Npc_Tuosi.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Npc_Tuosi:BTComposite_Sequence_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Tuosi/BT_Npc_Tuosi.4"
+      }
+    }
+  },
+  {
+    "Type": "BTService_BBValueDis",
+    "Name": "BTService_BBValueDis_4",
+    "Outer": "BT_Npc_Tuosi",
+    "Class": "UScriptClass'BTService_BBValueDis'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "BBName": "Target",
+      "Interval": 0.1,
+      "RandomDeviation": 0.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_Tuosi'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Tuosi/BT_Npc_Tuosi.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Npc_Tuosi:BTComposite_Selector_11'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Tuosi/BT_Npc_Tuosi.2"
+      }
+    }
+  },
+  {
+    "Type": "BTService_ClearBTTarget_Player",
+    "Name": "BTService_ClearBTTarget_Player_4",
+    "Outer": "BT_Npc_Tuosi",
+    "Class": "UScriptClass'BTService_ClearBTTarget_Player'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Interval": 0.1,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_Tuosi'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Tuosi/BT_Npc_Tuosi.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Npc_Tuosi:BTComposite_Selector_11'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Tuosi/BT_Npc_Tuosi.2"
+      }
+    }
+  },
+  {
+    "Type": "BTService_EnemyVision",
+    "Name": "BTService_EnemyVision_4",
+    "Outer": "BT_Npc_Tuosi",
+    "Class": "UScriptClass'BTService_EnemyVision'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "FVisionDistance": 1500.0,
+      "FVisionAngle": 180.0,
+      "Interval": 0.2,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_Tuosi'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Tuosi/BT_Npc_Tuosi.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Npc_Tuosi:BTComposite_Selector_11'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Tuosi/BT_Npc_Tuosi.2"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_ClearHatredList",
+    "Name": "BTTask_ClearHatredList_2",
+    "Outer": "BT_Npc_Tuosi",
+    "Class": "UScriptClass'BTTask_ClearHatredList'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ClearPreTarget": true,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_Tuosi'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Tuosi/BT_Npc_Tuosi.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Npc_Tuosi:BTComposite_Sequence_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Tuosi/BT_Npc_Tuosi.4"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_LookAtTargetForward",
+    "Name": "BTTask_LookAtTargetForward_2",
+    "Outer": "BT_Npc_Tuosi",
+    "Class": "UScriptClass'BTTask_LookAtTargetForward'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "BBName": "PhantomOwner",
+      "ContinueTime": 1.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_Tuosi'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Tuosi/BT_Npc_Tuosi.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Npc_Tuosi:BTComposite_Sequence_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Tuosi/BT_Npc_Tuosi.4"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_PhantomMoveTo",
+    "Name": "BTTask_PhantomMoveTo_1",
+    "Outer": "BT_Npc_Tuosi",
+    "Class": "UScriptClass'BTTask_PhantomMoveTo'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "UpdateInterval": 0.2,
+      "bOrientRotationToMovement": true,
+      "MoveTypeState": "EMoveTypeState::MTS_Run",
+      "AcceptableRadius": 500.0,
+      "bStopOnOverlapNeedsUpdate": false,
+      "BlackboardKey": {
+        "SelectedKeyName": "Target"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_Tuosi'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Tuosi/BT_Npc_Tuosi.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Npc_Tuosi:BTComposite_Selector_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Tuosi/BT_Npc_Tuosi.1"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_PhantomMoveTo",
+    "Name": "BTTask_PhantomMoveTo_2",
+    "Outer": "BT_Npc_Tuosi",
+    "Class": "UScriptClass'BTTask_PhantomMoveTo'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "AroundActorType": "EGetAroundActorType::Nearest",
+      "UpdateInterval": 0.2,
+      "LimitByOwner": true,
+      "AroundActorDis": 300.0,
+      "BulletJumpDistance": 1200.0,
+      "BulletJumpConditionId": 904,
+      "bOrientRotationToMovement": true,
+      "MoveTypeState": "EMoveTypeState::MTS_Run",
+      "ForceTeleportDistance": 2800.0,
+      "bAllowTeleport": true,
+      "MaxMoveTime": 1.0,
+      "AcceptableRadius": 50.0,
+      "bStopOnOverlapNeedsUpdate": false,
+      "BlackboardKey": {
+        "SelectedKeyName": "PhantomOwner"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_Tuosi'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Tuosi/BT_Npc_Tuosi.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Npc_Tuosi:BTComposite_Sequence_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Tuosi/BT_Npc_Tuosi.4"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_RunBehavior",
+    "Name": "BTTask_RunBehavior_10",
+    "Outer": "BT_Npc_Tuosi",
+    "Class": "UScriptClass'BTTask_RunBehavior'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "BehaviorAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_DetectEnemy'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Parent/BT_Phantom_DetectEnemy.0"
+      },
+      "NodeName": "DetectEnemy",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_Tuosi'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Tuosi/BT_Npc_Tuosi.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Npc_Tuosi:BTComposite_Selector_11'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Tuosi/BT_Npc_Tuosi.2"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_RunBehavior",
+    "Name": "BTTask_RunBehavior_12",
+    "Outer": "BT_Npc_Tuosi",
+    "Class": "UScriptClass'BTTask_RunBehavior'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "BehaviorAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Dodge'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Parent/BT_Phantom_Dodge.0"
+      },
+      "NodeName": "Dodge",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_Tuosi'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Tuosi/BT_Npc_Tuosi.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Npc_Tuosi:BTComposite_Selector_11'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Tuosi/BT_Npc_Tuosi.2"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_RunBehavior",
+    "Name": "BTTask_RunBehavior_8",
+    "Outer": "BT_Npc_Tuosi",
+    "Class": "UScriptClass'BTTask_RunBehavior'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "BehaviorAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Attack_Tuosi'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Tuosi/BT_Phantom_Attack_Tuosi.0"
+      },
+      "NodeName": "TuosiAttack",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_Tuosi'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Tuosi/BT_Npc_Tuosi.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Npc_Tuosi:BTComposite_Selector_11'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Tuosi/BT_Npc_Tuosi.2"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_UseSkill_Player",
+    "Name": "BTTask_UseSkill_Player_3",
+    "Outer": "BT_Npc_Tuosi",
+    "Class": "UScriptClass'BTTask_UseSkill_Player'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "FullComboNum": 5,
+      "NodeName": "Attack",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_Tuosi'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Tuosi/BT_Npc_Tuosi.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Npc_Tuosi:BTComposite_Selector_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Tuosi/BT_Npc_Tuosi.1"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_0",
+    "Outer": "BT_Npc_Tuosi",
+    "Class": "UScriptClass'BTTask_Wait'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "WaitTime": 3.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_Tuosi'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Tuosi/BT_Npc_Tuosi.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Npc_Tuosi:BTComposite_Selector_4'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Tuosi/BT_Npc_Tuosi.3"
+      }
+    }
+  }
+]

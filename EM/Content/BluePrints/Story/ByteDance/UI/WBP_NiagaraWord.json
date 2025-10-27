@@ -1,0 +1,430 @@
+[
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_WBP_NiagaraWord",
+    "Outer": "WBP_NiagaraWord_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_CreateDynamicMaterialInstance_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'MaterialInstanceDynamic'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetNiagaraComponent_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'NiagaraUIComponent'",
+          "ObjectPath": "/Script/NiagaraUIRenderer"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_Event_IsDesignTime",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction"
+  },
+  {
+    "Type": "Function",
+    "Name": "UpdateNiagara_Event",
+    "Outer": "WBP_NiagaraWord_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "PreConstruct",
+    "Outer": "WBP_NiagaraWord_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "SuperStruct": {
+      "ObjectName": "Function'UserWidget:PreConstruct'",
+      "ObjectPath": "/Script/UMG"
+    },
+    "ChildProperties": [
+      {
+        "Type": "BoolProperty",
+        "Name": "IsDesignTime",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCosmetic | FUNC_Event | FUNC_Public | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "WidgetBlueprintGeneratedClass",
+    "Name": "WBP_NiagaraWord_C",
+    "Class": "UScriptClass'WidgetBlueprintGeneratedClass'",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "WidgetTree": {
+        "ObjectName": "WidgetTree'WBP_NiagaraWord_C:WidgetTree'",
+        "ObjectPath": "EM/Content/BluePrints/Story/ByteDance/UI/WBP_NiagaraWord.8"
+      },
+      "UberGraphFunction": {
+        "ObjectName": "Function'WBP_NiagaraWord_C:ExecuteUbergraph_WBP_NiagaraWord'",
+        "ObjectPath": "EM/Content/BluePrints/Story/ByteDance/UI/WBP_NiagaraWord.0"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'UserWidget'",
+      "ObjectPath": "/Script/UMG"
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'WBP_NiagaraWord_C:PreConstruct'",
+        "ObjectPath": "EM/Content/BluePrints/Story/ByteDance/UI/WBP_NiagaraWord.2"
+      },
+      {
+        "ObjectName": "Function'WBP_NiagaraWord_C:UpdateNiagara_Event'",
+        "ObjectPath": "EM/Content/BluePrints/Story/ByteDance/UI/WBP_NiagaraWord.1"
+      },
+      {
+        "ObjectName": "Function'WBP_NiagaraWord_C:ExecuteUbergraph_WBP_NiagaraWord'",
+        "ObjectPath": "EM/Content/BluePrints/Story/ByteDance/UI/WBP_NiagaraWord.0"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient",
+        "Struct": {
+          "ObjectName": "ScriptStruct'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "NiagaraSystemWidget_0",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | ExportObject | InstancedReference | RepSkip | PersistentInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'NiagaraSystemWidget'",
+          "ObjectPath": "/Script/NiagaraUIRenderer"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "RT",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'TextureRenderTarget2D'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "MAT",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'MaterialInterface'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "WordNum",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance"
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "UArray",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "Inner": {
+          "Type": "FloatProperty",
+          "Name": "UArray",
+          "Flags": "RF_Public",
+          "ElementSize": 4
+        }
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "VArray",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "Inner": {
+          "Type": "IntProperty",
+          "Name": "VArray",
+          "Flags": "RF_Public",
+          "ElementSize": 4
+        }
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "CenterOffsetArray",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "Inner": {
+          "Type": "FloatProperty",
+          "Name": "CenterOffsetArray",
+          "Flags": "RF_Public",
+          "ElementSize": 4
+        }
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "Size&AppearMod",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "Inner": {
+          "Type": "StructProperty",
+          "Name": "Size&AppearMod",
+          "Flags": "RF_Public",
+          "ElementSize": 8,
+          "Struct": {
+            "ObjectName": "ScriptStruct'Vector2D'",
+            "ObjectPath": "/Script/CoreUObject"
+          }
+        }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "SubVLine",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance"
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "Group",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance"
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "ScreenPos",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "Inner": {
+          "Type": "StructProperty",
+          "Name": "ScreenPos",
+          "Flags": "RF_Public",
+          "ElementSize": 16,
+          "Struct": {
+            "ObjectName": "ScriptStruct'Vector4'",
+            "ObjectPath": "/Script/CoreUObject"
+          }
+        }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "SubOffset",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance"
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "AniMod",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "Inner": {
+          "Type": "StructProperty",
+          "Name": "AniMod",
+          "Flags": "RF_Public",
+          "ElementSize": 16,
+          "Struct": {
+            "ObjectName": "ScriptStruct'Vector4'",
+            "ObjectPath": "/Script/CoreUObject"
+          }
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "FadeOutTogether",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_WBP_NiagaraWord": {
+        "ObjectName": "Function'WBP_NiagaraWord_C:ExecuteUbergraph_WBP_NiagaraWord'",
+        "ObjectPath": "EM/Content/BluePrints/Story/ByteDance/UI/WBP_NiagaraWord.0"
+      },
+      "UpdateNiagara_Event": {
+        "ObjectName": "Function'WBP_NiagaraWord_C:UpdateNiagara_Event'",
+        "ObjectPath": "EM/Content/BluePrints/Story/ByteDance/UI/WBP_NiagaraWord.1"
+      },
+      "PreConstruct": {
+        "ObjectName": "Function'WBP_NiagaraWord_C:PreConstruct'",
+        "ObjectPath": "EM/Content/BluePrints/Story/ByteDance/UI/WBP_NiagaraWord.2"
+      }
+    },
+    "ClassFlags": "CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_EditInlineNew | CLASS_CompiledFromBlueprint | CLASS_DefaultToInstanced | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "WBP_NiagaraWord_C'Default__WBP_NiagaraWord_C'",
+      "ObjectPath": "EM/Content/BluePrints/Story/ByteDance/UI/WBP_NiagaraWord.4"
+    }
+  },
+  {
+    "Type": "WBP_NiagaraWord_C",
+    "Name": "Default__WBP_NiagaraWord_C",
+    "Class": "WidgetBlueprintGeneratedClass'EM/Content/BluePrints/Story/ByteDance/UI/WBP_NiagaraWord.WBP_NiagaraWord_C'",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "UberGraphFrame": {},
+      "MAT": {
+        "ObjectName": "Material'M_UI_ByteDance'",
+        "ObjectPath": "EM/Content/BluePrints/Story/ByteDance/UI/M_UI_ByteDance.0"
+      },
+      "WordNum": 3,
+      "bHasScriptImplementedTick": false,
+      "bHasScriptImplementedPaint": false
+    }
+  },
+  {
+    "Type": "CanvasPanel",
+    "Name": "CanvasPanel_0",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'CanvasPanel'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Slots": [
+        {
+          "ObjectName": "CanvasPanelSlot'WBP_NiagaraWord_C:WidgetTree.CanvasPanel_0.CanvasPanelSlot_6'",
+          "ObjectPath": "EM/Content/BluePrints/Story/ByteDance/UI/WBP_NiagaraWord.6"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "CanvasPanelSlot",
+    "Name": "CanvasPanelSlot_6",
+    "Outer": "CanvasPanel_0",
+    "Class": "UScriptClass'CanvasPanelSlot'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "LayoutData": {
+        "Offsets": {
+          "Right": 1920.0,
+          "Bottom": 1080.0
+        },
+        "Anchors": {
+          "Minimum": {
+            "X": 0.5,
+            "Y": 0.5
+          },
+          "Maximum": {
+            "X": 0.5,
+            "Y": 0.5
+          }
+        },
+        "Alignment": {
+          "X": 0.5,
+          "Y": 0.5
+        }
+      },
+      "Parent": {
+        "ObjectName": "CanvasPanel'WBP_NiagaraWord_C:WidgetTree.CanvasPanel_0'",
+        "ObjectPath": "EM/Content/BluePrints/Story/ByteDance/UI/WBP_NiagaraWord.5"
+      },
+      "Content": {
+        "ObjectName": "NiagaraSystemWidget'WBP_NiagaraWord_C:WidgetTree.NiagaraSystemWidget_0'",
+        "ObjectPath": "EM/Content/BluePrints/Story/ByteDance/UI/WBP_NiagaraWord.7"
+      }
+    }
+  },
+  {
+    "Type": "NiagaraSystemWidget",
+    "Name": "NiagaraSystemWidget_0",
+    "Outer": "WidgetTree",
+    "Class": "UScriptClass'NiagaraSystemWidget'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "NiagaraSystemReference": {
+        "ObjectName": "NiagaraSystem'NS_ByteDance_UI'",
+        "ObjectPath": "EM/Content/BluePrints/Story/ByteDance/UI/NS_ByteDance_UI.62"
+      },
+      "MaterialRemapList": [
+        {
+          "Key": "Material'Engine/Plugins/FX/Niagara/Content/DefaultAssets/DefaultSpriteMaterial.DefaultSpriteMaterial'",
+          "Value": {
+            "ObjectName": "MaterialInstanceConstant'M_UI_ByteDance_Inst'",
+            "ObjectPath": "EM/Content/BluePrints/Story/ByteDance/UI/M_UI_ByteDance_Inst.0"
+          }
+        }
+      ],
+      "Slot": {
+        "ObjectName": "CanvasPanelSlot'WBP_NiagaraWord_C:WidgetTree.CanvasPanel_0.CanvasPanelSlot_6'",
+        "ObjectPath": "EM/Content/BluePrints/Story/ByteDance/UI/WBP_NiagaraWord.6"
+      }
+    }
+  },
+  {
+    "Type": "WidgetTree",
+    "Name": "WidgetTree",
+    "Outer": "WBP_NiagaraWord_C",
+    "Class": "UScriptClass'WidgetTree'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "RootWidget": {
+        "ObjectName": "CanvasPanel'WBP_NiagaraWord_C:WidgetTree.CanvasPanel_0'",
+        "ObjectPath": "EM/Content/BluePrints/Story/ByteDance/UI/WBP_NiagaraWord.5"
+      }
+    }
+  }
+]

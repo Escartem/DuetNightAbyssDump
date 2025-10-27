@@ -1,0 +1,654 @@
+[
+  {
+    "Type": "BehaviorTree",
+    "Name": "BT_Phantom_Attack_Tuosi",
+    "Class": "UScriptClass'BehaviorTree'",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "RootNode": {
+        "ObjectName": "BTComposite_Selector'BT_Phantom_Attack_Tuosi:BTComposite_Selector_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Tuosi/BT_Phantom_Attack_Tuosi.1"
+      },
+      "BlackboardAsset": {
+        "ObjectName": "BlackboardData'BB_Shadow'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Parent/BB_Shadow.0"
+      },
+      "RootDecorators": [
+        {
+          "ObjectName": "BTDecorator_Blackboard'BT_Phantom_Attack_Tuosi:BTDecorator_Blackboard_1'",
+          "ObjectPath": "EM/Content/AssetDesign/AI/Player/Tuosi/BT_Phantom_Attack_Tuosi.6"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_1",
+    "Outer": "BT_Phantom_Attack_Tuosi",
+    "Class": "UScriptClass'BTComposite_Selector'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_Phantom_Attack_Tuosi:BTComposite_Sequence_1'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Tuosi/BT_Phantom_Attack_Tuosi.3"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_CoolDownPlayer'BT_Phantom_Attack_Tuosi:BTDecorator_CoolDownPlayer_0'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Player/Tuosi/BT_Phantom_Attack_Tuosi.13"
+            },
+            {
+              "ObjectName": "BTDecorator_CheckSpCost'BT_Phantom_Attack_Tuosi:BTDecorator_CheckSpCost_0'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Player/Tuosi/BT_Phantom_Attack_Tuosi.11"
+            },
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Phantom_Attack_Tuosi:BTDecorator_Blackboard_10'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Player/Tuosi/BT_Phantom_Attack_Tuosi.7"
+            },
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Phantom_Attack_Tuosi:BTDecorator_Blackboard_4'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Player/Tuosi/BT_Phantom_Attack_Tuosi.10"
+            },
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Phantom_Attack_Tuosi:BTDecorator_Blackboard_3'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Player/Tuosi/BT_Phantom_Attack_Tuosi.9"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_Phantom_Attack_Tuosi:BTComposite_Sequence_5'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Tuosi/BT_Phantom_Attack_Tuosi.4"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Phantom_Attack_Tuosi:BTDecorator_Blackboard_2'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Player/Tuosi/BT_Phantom_Attack_Tuosi.8"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_Phantom_Attack_Tuosi:BTComposite_Sequence_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Tuosi/BT_Phantom_Attack_Tuosi.2"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Cooldown'BT_Phantom_Attack_Tuosi:BTDecorator_Cooldown_0'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Player/Tuosi/BT_Phantom_Attack_Tuosi.12"
+            },
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Phantom_Attack_Tuosi:BTDecorator_Blackboard_0'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Player/Tuosi/BT_Phantom_Attack_Tuosi.5"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_RunBehavior'BT_Phantom_Attack_Tuosi:BTTask_RunBehavior_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Tuosi/BT_Phantom_Attack_Tuosi.20"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Attack_Tuosi'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Tuosi/BT_Phantom_Attack_Tuosi.0"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_0",
+    "Outer": "BT_Phantom_Attack_Tuosi",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_FilterTargetsByOwnerDis'BT_Phantom_Attack_Tuosi:BTTask_FilterTargetsByOwnerDis_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Tuosi/BT_Phantom_Attack_Tuosi.17"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_LastFilterTargetsByNum_P'BT_Phantom_Attack_Tuosi:BTTask_LastFilterTargetsByNum_P_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Tuosi/BT_Phantom_Attack_Tuosi.18"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_SetPartAsTarget'BT_Phantom_Attack_Tuosi:BTTask_SetPartAsTarget_1'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Tuosi/BT_Phantom_Attack_Tuosi.21"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_ForceSuccess'BT_Phantom_Attack_Tuosi:BTDecorator_ForceSuccess_1'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Player/Tuosi/BT_Phantom_Attack_Tuosi.14"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_PhantomMoveTo'BT_Phantom_Attack_Tuosi:BTTask_PhantomMoveTo_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Tuosi/BT_Phantom_Attack_Tuosi.19"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Attack_Tuosi'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Tuosi/BT_Phantom_Attack_Tuosi.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Phantom_Attack_Tuosi:BTComposite_Selector_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Tuosi/BT_Phantom_Attack_Tuosi.1"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_1",
+    "Outer": "BT_Phantom_Attack_Tuosi",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_CanHitTarget'BT_Phantom_Attack_Tuosi:BTTask_CanHitTarget_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Tuosi/BT_Phantom_Attack_Tuosi.15"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_UseSkill_Player'BT_Phantom_Attack_Tuosi:BTTask_UseSkill_Player_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Tuosi/BT_Phantom_Attack_Tuosi.22"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_UseSkill_Player'BT_Phantom_Attack_Tuosi:BTTask_UseSkill_Player_1'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Tuosi/BT_Phantom_Attack_Tuosi.23"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Attack_Tuosi'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Tuosi/BT_Phantom_Attack_Tuosi.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Phantom_Attack_Tuosi:BTComposite_Selector_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Tuosi/BT_Phantom_Attack_Tuosi.1"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_5",
+    "Outer": "BT_Phantom_Attack_Tuosi",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_CanHitTarget'BT_Phantom_Attack_Tuosi:BTTask_CanHitTarget_1'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Tuosi/BT_Phantom_Attack_Tuosi.16"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_UseSkill_Player'BT_Phantom_Attack_Tuosi:BTTask_UseSkill_Player_3'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Tuosi/BT_Phantom_Attack_Tuosi.24"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Attack_Tuosi'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Tuosi/BT_Phantom_Attack_Tuosi.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Phantom_Attack_Tuosi:BTComposite_Selector_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Tuosi/BT_Phantom_Attack_Tuosi.1"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_0",
+    "Outer": "BT_Phantom_Attack_Tuosi",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "FloatValue": 600.0,
+      "CachedDescription": "TargetCapsuleDisXY 大于或等于 600.000000",
+      "OperationType": 5,
+      "BlackboardKey": {
+        "SelectedKeyName": "TargetCapsuleDisXY"
+      },
+      "NodeName": "Distance>=600",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Attack_Tuosi'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Tuosi/BT_Phantom_Attack_Tuosi.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Phantom_Attack_Tuosi:BTComposite_Selector_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Tuosi/BT_Phantom_Attack_Tuosi.1"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_1",
+    "Outer": "BT_Phantom_Attack_Tuosi",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "CachedDescription": "Target is 已设置",
+      "BlackboardKey": {
+        "SelectedKeyName": "Target"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Attack_Tuosi'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Tuosi/BT_Phantom_Attack_Tuosi.0"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_10",
+    "Outer": "BT_Phantom_Attack_Tuosi",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "FloatValue": 800.0,
+      "CachedDescription": "TargetCapsuleDisXY 大于或等于 800.000000",
+      "OperationType": 5,
+      "BlackboardKey": {
+        "SelectedKeyName": "TargetCapsuleDisXY"
+      },
+      "NodeName": "Distance>=800",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Attack_Tuosi'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Tuosi/BT_Phantom_Attack_Tuosi.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Phantom_Attack_Tuosi:BTComposite_Selector_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Tuosi/BT_Phantom_Attack_Tuosi.1"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_2",
+    "Outer": "BT_Phantom_Attack_Tuosi",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "FloatValue": 600.0,
+      "CachedDescription": "TargetCapsuleDisXY 小于 600.000000",
+      "OperationType": 2,
+      "BlackboardKey": {
+        "SelectedKeyName": "TargetCapsuleDisXY"
+      },
+      "NodeName": "Distance<600",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Attack_Tuosi'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Tuosi/BT_Phantom_Attack_Tuosi.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Phantom_Attack_Tuosi:BTComposite_Selector_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Tuosi/BT_Phantom_Attack_Tuosi.1"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_3",
+    "Outer": "BT_Phantom_Attack_Tuosi",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "FloatValue": 200.0,
+      "CachedDescription": "TargetCapsuleDisZ 小于 200.000000",
+      "OperationType": 2,
+      "BlackboardKey": {
+        "SelectedKeyName": "TargetCapsuleDisZ"
+      },
+      "NodeName": "CheckZ<200",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Attack_Tuosi'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Tuosi/BT_Phantom_Attack_Tuosi.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Phantom_Attack_Tuosi:BTComposite_Selector_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Tuosi/BT_Phantom_Attack_Tuosi.1"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_4",
+    "Outer": "BT_Phantom_Attack_Tuosi",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "FloatValue": 1500.0,
+      "CachedDescription": "TargetCapsuleDisXY 小于 1500.000000",
+      "OperationType": 2,
+      "BlackboardKey": {
+        "SelectedKeyName": "TargetCapsuleDisXY"
+      },
+      "NodeName": "Distance<1500",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Attack_Tuosi'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Tuosi/BT_Phantom_Attack_Tuosi.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Phantom_Attack_Tuosi:BTComposite_Selector_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Tuosi/BT_Phantom_Attack_Tuosi.1"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_CheckSpCost",
+    "Name": "BTDecorator_CheckSpCost_0",
+    "Outer": "BT_Phantom_Attack_Tuosi",
+    "Class": "UScriptClass'BTDecorator_CheckSpCost'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SkillId": 110311,
+      "CostMultiplier": 3.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Attack_Tuosi'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Tuosi/BT_Phantom_Attack_Tuosi.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Phantom_Attack_Tuosi:BTComposite_Selector_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Tuosi/BT_Phantom_Attack_Tuosi.1"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Cooldown",
+    "Name": "BTDecorator_Cooldown_0",
+    "Outer": "BT_Phantom_Attack_Tuosi",
+    "Class": "UScriptClass'BTDecorator_Cooldown'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "CoolDownTime": 3.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Attack_Tuosi'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Tuosi/BT_Phantom_Attack_Tuosi.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Phantom_Attack_Tuosi:BTComposite_Selector_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Tuosi/BT_Phantom_Attack_Tuosi.1"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_CoolDownPlayer",
+    "Name": "BTDecorator_CoolDownPlayer_0",
+    "Outer": "BT_Phantom_Attack_Tuosi",
+    "Class": "UScriptClass'BTDecorator_CoolDownPlayer'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "bModifiedBySkillSustain": true,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Attack_Tuosi'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Tuosi/BT_Phantom_Attack_Tuosi.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Phantom_Attack_Tuosi:BTComposite_Selector_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Tuosi/BT_Phantom_Attack_Tuosi.1"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_ForceSuccess",
+    "Name": "BTDecorator_ForceSuccess_1",
+    "Outer": "BT_Phantom_Attack_Tuosi",
+    "Class": "UScriptClass'BTDecorator_ForceSuccess'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Attack_Tuosi'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Tuosi/BT_Phantom_Attack_Tuosi.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Phantom_Attack_Tuosi:BTComposite_Sequence_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Tuosi/BT_Phantom_Attack_Tuosi.2"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_CanHitTarget",
+    "Name": "BTTask_CanHitTarget_0",
+    "Outer": "BT_Phantom_Attack_Tuosi",
+    "Class": "UScriptClass'BTTask_CanHitTarget'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Attack_Tuosi'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Tuosi/BT_Phantom_Attack_Tuosi.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Phantom_Attack_Tuosi:BTComposite_Sequence_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Tuosi/BT_Phantom_Attack_Tuosi.3"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_CanHitTarget",
+    "Name": "BTTask_CanHitTarget_1",
+    "Outer": "BT_Phantom_Attack_Tuosi",
+    "Class": "UScriptClass'BTTask_CanHitTarget'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Attack_Tuosi'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Tuosi/BT_Phantom_Attack_Tuosi.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Phantom_Attack_Tuosi:BTComposite_Sequence_5'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Tuosi/BT_Phantom_Attack_Tuosi.4"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_FilterTargetsByOwnerDis",
+    "Name": "BTTask_FilterTargetsByOwnerDis_0",
+    "Outer": "BT_Phantom_Attack_Tuosi",
+    "Class": "UScriptClass'BTTask_FilterTargetsByOwnerDis'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "MaxDis": 1500.0,
+      "NodeName": "FilterTargetsByOwner",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Attack_Tuosi'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Tuosi/BT_Phantom_Attack_Tuosi.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Phantom_Attack_Tuosi:BTComposite_Sequence_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Tuosi/BT_Phantom_Attack_Tuosi.2"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_LastFilterTargetsByNum_P",
+    "Name": "BTTask_LastFilterTargetsByNum_P_0",
+    "Outer": "BT_Phantom_Attack_Tuosi",
+    "Class": "UScriptClass'BTTask_LastFilterTargetsByNum_P'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Radius": 100.0,
+      "TypeOfFilterList": "ETypeOfFilterList::AfterFilter",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Attack_Tuosi'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Tuosi/BT_Phantom_Attack_Tuosi.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Phantom_Attack_Tuosi:BTComposite_Sequence_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Tuosi/BT_Phantom_Attack_Tuosi.2"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_PhantomMoveTo",
+    "Name": "BTTask_PhantomMoveTo_0",
+    "Outer": "BT_Phantom_Attack_Tuosi",
+    "Class": "UScriptClass'BTTask_PhantomMoveTo'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "AroundActorType": "EGetAroundActorType::Nearest",
+      "MoveTypeState": "EMoveTypeState::MTS_Run",
+      "AcceptableRadius": 600.0,
+      "bStopOnOverlapNeedsUpdate": false,
+      "BlackboardKey": {
+        "SelectedKeyName": "Target"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Attack_Tuosi'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Tuosi/BT_Phantom_Attack_Tuosi.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Phantom_Attack_Tuosi:BTComposite_Sequence_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Tuosi/BT_Phantom_Attack_Tuosi.2"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_RunBehavior",
+    "Name": "BTTask_RunBehavior_0",
+    "Outer": "BT_Phantom_Attack_Tuosi",
+    "Class": "UScriptClass'BTTask_RunBehavior'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "BehaviorAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_MeleeEQS'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Parent/BT_Phantom_MeleeEQS.0"
+      },
+      "NodeName": "MoveToEqs",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Attack_Tuosi'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Tuosi/BT_Phantom_Attack_Tuosi.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Phantom_Attack_Tuosi:BTComposite_Selector_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Tuosi/BT_Phantom_Attack_Tuosi.1"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_SetPartAsTarget",
+    "Name": "BTTask_SetPartAsTarget_1",
+    "Outer": "BT_Phantom_Attack_Tuosi",
+    "Class": "UScriptClass'BTTask_SetPartAsTarget'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Attack_Tuosi'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Tuosi/BT_Phantom_Attack_Tuosi.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Phantom_Attack_Tuosi:BTComposite_Sequence_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Tuosi/BT_Phantom_Attack_Tuosi.2"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_UseSkill_Player",
+    "Name": "BTTask_UseSkill_Player_0",
+    "Outer": "BT_Phantom_Attack_Tuosi",
+    "Class": "UScriptClass'BTTask_UseSkill_Player'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SkillType": "EUseSkill_SkillType::Skill1",
+      "NodeName": "Skill1",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Attack_Tuosi'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Tuosi/BT_Phantom_Attack_Tuosi.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Phantom_Attack_Tuosi:BTComposite_Sequence_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Tuosi/BT_Phantom_Attack_Tuosi.3"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_UseSkill_Player",
+    "Name": "BTTask_UseSkill_Player_1",
+    "Outer": "BT_Phantom_Attack_Tuosi",
+    "Class": "UScriptClass'BTTask_UseSkill_Player'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SkillType": "EUseSkill_SkillType::FallAttack",
+      "NodeName": "FallAttack",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Attack_Tuosi'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Tuosi/BT_Phantom_Attack_Tuosi.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Phantom_Attack_Tuosi:BTComposite_Sequence_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Tuosi/BT_Phantom_Attack_Tuosi.3"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_UseSkill_Player",
+    "Name": "BTTask_UseSkill_Player_3",
+    "Outer": "BT_Phantom_Attack_Tuosi",
+    "Class": "UScriptClass'BTTask_UseSkill_Player'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "FullComboNum": 7,
+      "NodeName": "Attack",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Attack_Tuosi'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Tuosi/BT_Phantom_Attack_Tuosi.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Phantom_Attack_Tuosi:BTComposite_Sequence_5'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Tuosi/BT_Phantom_Attack_Tuosi.4"
+      }
+    }
+  }
+]

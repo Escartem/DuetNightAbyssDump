@@ -1,0 +1,316 @@
+[
+  {
+    "Type": "BehaviorTree",
+    "Name": "BT_Npc_Mao",
+    "Class": "UScriptClass'BehaviorTree'",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "RootNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Npc_Mao:BTComposite_Sequence_9'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Mao/BT_Npc_Mao.3"
+      },
+      "BlackboardAsset": {
+        "ObjectName": "BlackboardData'BB_Npc_Mao'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Mao/BB_Npc_Mao.0"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_0",
+    "Outer": "BT_Npc_Mao",
+    "Class": "UScriptClass'BTComposite_Selector'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_GetPatrolLoc'BT_Npc_Mao:BTTask_GetPatrolLoc_2'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Mao/BT_Npc_Mao.8"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Npc_Mao:BTDecorator_Blackboard_1'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Mao/BT_Npc_Mao.5"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_Npc_Mao:BTComposite_Sequence_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Mao/BT_Npc_Mao.2"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_Mao'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Mao/BT_Npc_Mao.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Npc_Mao:BTComposite_Sequence_9'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Mao/BT_Npc_Mao.3"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_0",
+    "Outer": "BT_Npc_Mao",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_NewMoveTo'BT_Npc_Mao:BTTask_NewMoveTo_2'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Mao/BT_Npc_Mao.9"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_ClearKey'BT_Npc_Mao:BTTask_ClearKey_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Mao/BT_Npc_Mao.6"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_ClearKey'BT_Npc_Mao:BTTask_ClearKey_1'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Mao/BT_Npc_Mao.7"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_PostBehaviorEvent'BT_Npc_Mao:BTTask_PostBehaviorEvent_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Mao/BT_Npc_Mao.10"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_Mao'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Mao/BT_Npc_Mao.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Npc_Mao:BTComposite_Selector_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Mao/BT_Npc_Mao.1"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_9",
+    "Outer": "BT_Npc_Mao",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector'BT_Npc_Mao:BTComposite_Selector_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Mao/BT_Npc_Mao.1"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Npc_Mao:BTDecorator_Blackboard_0'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Mao/BT_Npc_Mao.4"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait'BT_Npc_Mao:BTTask_Wait_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Mao/BT_Npc_Mao.11"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_Mao'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Mao/BT_Npc_Mao.0"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_0",
+    "Outer": "BT_Npc_Mao",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "StringValue": "Goto",
+      "CachedDescription": "QuestEvent 为相等 [Goto]",
+      "BlackboardKey": {
+        "SelectedKeyName": "QuestEvent"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_Mao'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Mao/BT_Npc_Mao.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Npc_Mao:BTComposite_Sequence_9'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Mao/BT_Npc_Mao.3"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_1",
+    "Outer": "BT_Npc_Mao",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "CachedDescription": "PatrolLoc is 未设置",
+      "OperationType": 1,
+      "BlackboardKey": {
+        "SelectedKeyName": "PatrolLoc"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_Mao'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Mao/BT_Npc_Mao.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Npc_Mao:BTComposite_Selector_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Mao/BT_Npc_Mao.1"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_ClearKey",
+    "Name": "BTTask_ClearKey_0",
+    "Outer": "BT_Npc_Mao",
+    "Class": "UScriptClass'BTTask_ClearKey'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "BlackboadKeyName": "QuestEvent",
+      "BlackboardKey": {
+        "SelectedKeyName": "QuestEvent"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_Mao'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Mao/BT_Npc_Mao.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Npc_Mao:BTComposite_Sequence_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Mao/BT_Npc_Mao.2"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_ClearKey",
+    "Name": "BTTask_ClearKey_1",
+    "Outer": "BT_Npc_Mao",
+    "Class": "UScriptClass'BTTask_ClearKey'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "BlackboardKey": {
+        "SelectedKeyName": "PatrolLoc"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_Mao'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Mao/BT_Npc_Mao.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Npc_Mao:BTComposite_Sequence_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Mao/BT_Npc_Mao.2"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_GetPatrolLoc",
+    "Name": "BTTask_GetPatrolLoc_2",
+    "Outer": "BT_Npc_Mao",
+    "Class": "UScriptClass'BTTask_GetPatrolLoc'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_Mao'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Mao/BT_Npc_Mao.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Npc_Mao:BTComposite_Selector_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Mao/BT_Npc_Mao.1"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_NewMoveTo",
+    "Name": "BTTask_NewMoveTo_2",
+    "Outer": "BT_Npc_Mao",
+    "Class": "UScriptClass'BTTask_NewMoveTo'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "bOrientRotationToMovement": true,
+      "ReplanMoveLineLength": 150.0,
+      "MaxSpeed": 55.0,
+      "MaxAcceleration": 10000.0,
+      "bStopOnOverlapNeedsUpdate": false,
+      "BlackboardKey": {
+        "SelectedKeyName": "PatrolLoc"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_Mao'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Mao/BT_Npc_Mao.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Npc_Mao:BTComposite_Sequence_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Mao/BT_Npc_Mao.2"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_PostBehaviorEvent",
+    "Name": "BTTask_PostBehaviorEvent_0",
+    "Outer": "BT_Npc_Mao",
+    "Class": "UScriptClass'BTTask_PostBehaviorEvent'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "EventName": "End",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_Mao'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Mao/BT_Npc_Mao.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Npc_Mao:BTComposite_Sequence_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Mao/BT_Npc_Mao.2"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_0",
+    "Outer": "BT_Npc_Mao",
+    "Class": "UScriptClass'BTTask_Wait'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "WaitTime": 1.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_Mao'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Mao/BT_Npc_Mao.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Npc_Mao:BTComposite_Sequence_9'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Mao/BT_Npc_Mao.3"
+      }
+    }
+  }
+]

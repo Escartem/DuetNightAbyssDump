@@ -1,0 +1,124 @@
+[
+  {
+    "Type": "EnvQuery",
+    "Name": "TestRecord_GetStaticCreatorAround2",
+    "Class": "UScriptClass'EnvQuery'",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "QueryName": "EQS_SelfDonut_2",
+      "Options": [
+        {
+          "ObjectName": "EnvQueryOption'TestRecord_GetStaticCreatorAround2:EnvQueryOption_0'",
+          "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/Test_Record/TestRecord_GetStaticCreatorAround2.2"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "EnvQueryGenerator_EMDonut",
+    "Name": "EnvQueryGenerator_EMDonut_0",
+    "Outer": "TestRecord_GetStaticCreatorAround2",
+    "Class": "UScriptClass'EnvQueryGenerator_EMDonut'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "InnerRadius": {
+        "DefaultValue": 100.0,
+        "DataField": "FloatValue"
+      },
+      "OuterRadius": {
+        "DefaultValue": 600.0,
+        "DataField": "FloatValue"
+      },
+      "NumberOfRings": {
+        "DefaultValue": 5,
+        "DataField": "IntValue"
+      },
+      "PointsPerRing": {
+        "DefaultValue": 12,
+        "DataField": "IntValue"
+      },
+      "ArcDirection": {
+        "DirMode": "EEnvDirection::Rotation"
+      },
+      "ArcAngle": {
+        "DataField": "FloatValue"
+      },
+      "Center": {
+        "ObjectName": "BlueprintGeneratedClass'TestRecord_GetStaticCreator2_C'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/Test_Record/TestRecord_GetStaticCreator2.1"
+      },
+      "ProjectionData": {
+        "VersionNum": 1,
+        "ProjectDown": 400.0,
+        "ProjectUp": 300.0,
+        "ExtentX": 30.0,
+        "PostProjectionVerticalOffset": 20.0,
+        "SerializedChannel": "ECC_Visibility",
+        "TraceMode": "EEnvQueryTrace::Navigation"
+      },
+      "VerNum": 1
+    }
+  },
+  {
+    "Type": "EnvQueryOption",
+    "Name": "EnvQueryOption_0",
+    "Outer": "TestRecord_GetStaticCreatorAround2",
+    "Class": "UScriptClass'EnvQueryOption'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Generator": {
+        "ObjectName": "EnvQueryGenerator_EMDonut'TestRecord_GetStaticCreatorAround2:EnvQueryGenerator_EMDonut_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/Test_Record/TestRecord_GetStaticCreatorAround2.1"
+      },
+      "Tests": [
+        {
+          "ObjectName": "EnvQueryTest_EMOverlap'TestRecord_GetStaticCreatorAround2:EnvQueryTest_EMOverlap_0'",
+          "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/Test_Record/TestRecord_GetStaticCreatorAround2.3"
+        },
+        {
+          "ObjectName": "EnvQueryTest_EMPathfinding'TestRecord_GetStaticCreatorAround2:EnvQueryTest_EMPathfinding_0'",
+          "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/Test_Record/TestRecord_GetStaticCreatorAround2.4"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "EnvQueryTest_EMOverlap",
+    "Name": "EnvQueryTest_EMOverlap_0",
+    "Outer": "TestRecord_GetStaticCreatorAround2",
+    "Class": "UScriptClass'EnvQueryTest_EMOverlap'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "OverlapData": {
+        "ExtentX": 40.0,
+        "ExtentY": 40.0,
+        "ExtentZ": 40.0,
+        "ShapeOffset": {
+          "X": 0.0,
+          "Y": 0.0,
+          "Z": 90.0
+        },
+        "OverlapChannel": "ECC_GameTraceChannel7",
+        "OverlapShape": "EEnvOverlapShape::Capsule",
+        "bSkipOverlapQuerier": true
+      },
+      "TestPurpose": "EEnvTestPurpose::Filter",
+      "BoolValue": {
+        "DefaultValue": false
+      },
+      "VerNum": 1
+    }
+  },
+  {
+    "Type": "EnvQueryTest_EMPathfinding",
+    "Name": "EnvQueryTest_EMPathfinding_0",
+    "Outer": "TestRecord_GetStaticCreatorAround2",
+    "Class": "UScriptClass'EnvQueryTest_EMPathfinding'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TestOrder": 1,
+      "TestPurpose": "EEnvTestPurpose::Filter",
+      "VerNum": 1
+    }
+  }
+]

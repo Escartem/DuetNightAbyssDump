@@ -1,0 +1,607 @@
+[
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_Explore_MonsterChest",
+    "Outer": "Explore_MonsterChest_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_ComponentBoundEvent_Mechanism",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'CombatItemBase'",
+          "ObjectPath": "/Script/EM"
+        }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "K2Node_ComponentBoundEvent_StateId",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "K2Node_ComponentBoundEvent_LeaveStateId",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_EqualEqual_IntInt_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "K2Node_MakeArray_Array",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "ReferenceParm | ContainsInstancedReference",
+        "Inner": {
+          "Type": "ObjectProperty",
+          "Name": "K2Node_MakeArray_Array",
+          "Flags": "RF_Public",
+          "ElementSize": 8,
+          "PropertyFlags": "InstancedReference",
+          "PropertyClass": {
+            "ObjectName": "Class'StaticCreatorComponent'",
+            "ObjectPath": "/Script/EM"
+          }
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction | FUNC_HasDefaults"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnExploreMonsterAllDead",
+    "Outer": "Explore_MonsterChest_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "SuperStruct": {
+      "ObjectName": "Function'ExploreStaticCreator:OnExploreMonsterAllDead'",
+      "ObjectPath": "/Script/EM"
+    },
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "ReceiveOnExploreGroupActive",
+    "Outer": "Explore_MonsterChest_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "SuperStruct": {
+      "ObjectName": "Function'ExploreStaticCreator:ReceiveOnExploreGroupActive'",
+      "ObjectPath": "/Script/EM"
+    },
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "BndEvt__Common_Shooter_Chest_K2Node_ComponentBoundEvent_2_OnMechanismStateChangeDelegate__DelegateSignature",
+    "Outer": "Explore_MonsterChest_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "Mechanism",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "PropertyClass": {
+          "ObjectName": "Class'CombatItemBase'",
+          "ObjectPath": "/Script/EM"
+        }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "StateId",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "LeaveStateId",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "Explore_MonsterChest_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "DynamicBindingObjects": [
+        {
+          "ObjectName": "ComponentDelegateBinding'Explore_MonsterChest_C:ComponentDelegateBinding_0'",
+          "ObjectPath": "EM/Content/AssetDesign/Level/BluePrints/ExploreGroup/Explore_Common/Explore_MonsterChest.11"
+        }
+      ],
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'Explore_MonsterChest_C:SimpleConstructionScript_0'",
+        "ObjectPath": "EM/Content/AssetDesign/Level/BluePrints/ExploreGroup/Explore_Common/Explore_MonsterChest.19"
+      },
+      "UberGraphFunction": {
+        "ObjectName": "Function'Explore_MonsterChest_C:ExecuteUbergraph_Explore_MonsterChest'",
+        "ObjectPath": "EM/Content/AssetDesign/Level/BluePrints/ExploreGroup/Explore_Common/Explore_MonsterChest.0"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'ExploreStaticCreator'",
+      "ObjectPath": "/Script/EM"
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'Explore_MonsterChest_C:BndEvt__Common_Shooter_Chest_K2Node_ComponentBoundEvent_2_OnMechanismStateChangeDelegate__DelegateSignature'",
+        "ObjectPath": "EM/Content/AssetDesign/Level/BluePrints/ExploreGroup/Explore_Common/Explore_MonsterChest.3"
+      },
+      {
+        "ObjectName": "Function'Explore_MonsterChest_C:ReceiveOnExploreGroupActive'",
+        "ObjectPath": "EM/Content/AssetDesign/Level/BluePrints/ExploreGroup/Explore_Common/Explore_MonsterChest.2"
+      },
+      {
+        "ObjectName": "Function'Explore_MonsterChest_C:OnExploreMonsterAllDead'",
+        "ObjectPath": "EM/Content/AssetDesign/Level/BluePrints/ExploreGroup/Explore_Common/Explore_MonsterChest.1"
+      },
+      {
+        "ObjectName": "Function'Explore_MonsterChest_C:ExecuteUbergraph_Explore_MonsterChest'",
+        "ObjectPath": "EM/Content/AssetDesign/Level/BluePrints/ExploreGroup/Explore_Common/Explore_MonsterChest.0"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient",
+        "Struct": {
+          "ObjectName": "ScriptStruct'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Monster4",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'BP_StaticCreatorComponent_C'",
+          "ObjectPath": "EM/Content/BluePrints/Item/ExploreGroup/BP_StaticCreatorComponent.3"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Monster3",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'BP_StaticCreatorComponent_C'",
+          "ObjectPath": "EM/Content/BluePrints/Item/ExploreGroup/BP_StaticCreatorComponent.3"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Monster2",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'BP_StaticCreatorComponent_C'",
+          "ObjectPath": "EM/Content/BluePrints/Item/ExploreGroup/BP_StaticCreatorComponent.3"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Monster1",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'BP_StaticCreatorComponent_C'",
+          "ObjectPath": "EM/Content/BluePrints/Item/ExploreGroup/BP_StaticCreatorComponent.3"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Chest",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'BP_StaticCreatorComponent_C'",
+          "ObjectPath": "EM/Content/BluePrints/Item/ExploreGroup/BP_StaticCreatorComponent.3"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "DefaultSceneRoot",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'SceneComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CompleteChestState",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "Edit | BlueprintVisible"
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CompleteCanOpenState",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "Edit | BlueprintVisible"
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_Explore_MonsterChest": {
+        "ObjectName": "Function'Explore_MonsterChest_C:ExecuteUbergraph_Explore_MonsterChest'",
+        "ObjectPath": "EM/Content/AssetDesign/Level/BluePrints/ExploreGroup/Explore_Common/Explore_MonsterChest.0"
+      },
+      "OnExploreMonsterAllDead": {
+        "ObjectName": "Function'Explore_MonsterChest_C:OnExploreMonsterAllDead'",
+        "ObjectPath": "EM/Content/AssetDesign/Level/BluePrints/ExploreGroup/Explore_Common/Explore_MonsterChest.1"
+      },
+      "ReceiveOnExploreGroupActive": {
+        "ObjectName": "Function'Explore_MonsterChest_C:ReceiveOnExploreGroupActive'",
+        "ObjectPath": "EM/Content/AssetDesign/Level/BluePrints/ExploreGroup/Explore_Common/Explore_MonsterChest.2"
+      },
+      "BndEvt__Common_Shooter_Chest_K2Node_ComponentBoundEvent_2_OnMechanismStateChangeDelegate__DelegateSignature": {
+        "ObjectName": "Function'Explore_MonsterChest_C:BndEvt__Common_Shooter_Chest_K2Node_ComponentBoundEvent_2_OnMechanismStateChangeDelegate__DelegateSignature'",
+        "ObjectPath": "EM/Content/AssetDesign/Level/BluePrints/ExploreGroup/Explore_Common/Explore_MonsterChest.3"
+      }
+    },
+    "ClassFlags": "CLASS_Config | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "Explore_MonsterChest_C'Default__Explore_MonsterChest_C'",
+      "ObjectPath": "EM/Content/AssetDesign/Level/BluePrints/ExploreGroup/Explore_Common/Explore_MonsterChest.5"
+    }
+  },
+  {
+    "Type": "Explore_MonsterChest_C",
+    "Name": "Default__Explore_MonsterChest_C",
+    "Class": "BlueprintGeneratedClass'EM/Content/AssetDesign/Level/BluePrints/ExploreGroup/Explore_Common/Explore_MonsterChest.Explore_MonsterChest_C'",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "UberGraphFrame": {},
+      "CompleteChestState": 701062,
+      "CompleteCanOpenState": 701061
+    }
+  },
+  {
+    "Type": "BP_StaticCreatorComponent_C",
+    "Name": "Chest_GEN_VARIABLE",
+    "Outer": "Explore_MonsterChest_C",
+    "Class": "BlueprintGeneratedClass'EM/Content/BluePrints/Item/ExploreGroup/BP_StaticCreatorComponent.BP_StaticCreatorComponent_C'",
+    "Template": {
+      "ObjectName": "BP_StaticCreatorComponent_C'Default__BP_StaticCreatorComponent_C'",
+      "ObjectPath": "EM/Content/BluePrints/Item/ExploreGroup/BP_StaticCreatorComponent.4"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "UnitType": "Mechanism",
+      "UnitId": 70107,
+      "RegionDataType": "ERegionDataType::RDT_RarelyData"
+    }
+  },
+  {
+    "Type": "BP_StaticCreatorComponent_C",
+    "Name": "Monster1_GEN_VARIABLE",
+    "Outer": "Explore_MonsterChest_C",
+    "Class": "BlueprintGeneratedClass'EM/Content/BluePrints/Item/ExploreGroup/BP_StaticCreatorComponent.BP_StaticCreatorComponent_C'",
+    "Template": {
+      "ObjectName": "BP_StaticCreatorComponent_C'Default__BP_StaticCreatorComponent_C'",
+      "ObjectPath": "EM/Content/BluePrints/Item/ExploreGroup/BP_StaticCreatorComponent.4"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "UnitType": "Monster",
+      "UnitId": 6001001,
+      "RegionDataType": "ERegionDataType::RDT_RarelyData",
+      "OutBattleBehaviorType": "EOutBattleBehavior::LoopMontage",
+      "OutBattleBornPointDis": 2500.0,
+      "OutBattleTargetBornPointDis": 5000.0,
+      "LoopMontageId": 1
+    }
+  },
+  {
+    "Type": "BP_StaticCreatorComponent_C",
+    "Name": "Monster2_GEN_VARIABLE",
+    "Outer": "Explore_MonsterChest_C",
+    "Class": "BlueprintGeneratedClass'EM/Content/BluePrints/Item/ExploreGroup/BP_StaticCreatorComponent.BP_StaticCreatorComponent_C'",
+    "Template": {
+      "ObjectName": "BP_StaticCreatorComponent_C'Default__BP_StaticCreatorComponent_C'",
+      "ObjectPath": "EM/Content/BluePrints/Item/ExploreGroup/BP_StaticCreatorComponent.4"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "UnitType": "Monster",
+      "UnitId": 6001001,
+      "RegionDataType": "ERegionDataType::RDT_RarelyData",
+      "OutBattleBehaviorType": "EOutBattleBehavior::LoopMontage",
+      "OutBattleBornPointDis": 2500.0,
+      "OutBattleTargetBornPointDis": 5000.0,
+      "LoopMontageId": 1
+    }
+  },
+  {
+    "Type": "BP_StaticCreatorComponent_C",
+    "Name": "Monster3_GEN_VARIABLE",
+    "Outer": "Explore_MonsterChest_C",
+    "Class": "BlueprintGeneratedClass'EM/Content/BluePrints/Item/ExploreGroup/BP_StaticCreatorComponent.BP_StaticCreatorComponent_C'",
+    "Template": {
+      "ObjectName": "BP_StaticCreatorComponent_C'Default__BP_StaticCreatorComponent_C'",
+      "ObjectPath": "EM/Content/BluePrints/Item/ExploreGroup/BP_StaticCreatorComponent.4"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "UnitType": "Monster",
+      "UnitId": 6001001,
+      "RegionDataType": "ERegionDataType::RDT_RarelyData",
+      "OutBattleBehaviorType": "EOutBattleBehavior::LoopMontage",
+      "OutBattleBornPointDis": 2500.0,
+      "OutBattleTargetBornPointDis": 5000.0,
+      "LoopMontageId": 1
+    }
+  },
+  {
+    "Type": "BP_StaticCreatorComponent_C",
+    "Name": "Monster4_GEN_VARIABLE",
+    "Outer": "Explore_MonsterChest_C",
+    "Class": "BlueprintGeneratedClass'EM/Content/BluePrints/Item/ExploreGroup/BP_StaticCreatorComponent.BP_StaticCreatorComponent_C'",
+    "Template": {
+      "ObjectName": "BP_StaticCreatorComponent_C'Default__BP_StaticCreatorComponent_C'",
+      "ObjectPath": "EM/Content/BluePrints/Item/ExploreGroup/BP_StaticCreatorComponent.4"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "UnitType": "Monster",
+      "UnitId": 6001001,
+      "RegionDataType": "ERegionDataType::RDT_RarelyData",
+      "OutBattleBehaviorType": "EOutBattleBehavior::LoopMontage",
+      "OutBattleBornPointDis": 2500.0,
+      "OutBattleTargetBornPointDis": 5000.0,
+      "LoopMontageId": 1
+    }
+  },
+  {
+    "Type": "ComponentDelegateBinding",
+    "Name": "ComponentDelegateBinding_0",
+    "Outer": "Explore_MonsterChest_C",
+    "Class": "UScriptClass'ComponentDelegateBinding'",
+    "Flags": "RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentDelegateBindings": [
+        {
+          "ComponentPropertyName": "Chest",
+          "DelegatePropertyName": "OnMechanismStateChange",
+          "FunctionNameToBind": "BndEvt__Common_Shooter_Chest_K2Node_ComponentBoundEvent_2_OnMechanismStateChangeDelegate__DelegateSignature"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Outer": "Explore_MonsterChest_C",
+    "Class": "UScriptClass'SceneComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'Explore_MonsterChest_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "EM/Content/AssetDesign/Level/BluePrints/ExploreGroup/Explore_Common/Explore_MonsterChest.12"
+      },
+      "ChildNodes": [
+        {
+          "ObjectName": "SCS_Node'Explore_MonsterChest_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "EM/Content/AssetDesign/Level/BluePrints/ExploreGroup/Explore_Common/Explore_MonsterChest.14"
+        },
+        {
+          "ObjectName": "SCS_Node'Explore_MonsterChest_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectPath": "EM/Content/AssetDesign/Level/BluePrints/ExploreGroup/Explore_Common/Explore_MonsterChest.15"
+        },
+        {
+          "ObjectName": "SCS_Node'Explore_MonsterChest_C:SimpleConstructionScript_0.SCS_Node_7'",
+          "ObjectPath": "EM/Content/AssetDesign/Level/BluePrints/ExploreGroup/Explore_Common/Explore_MonsterChest.16"
+        },
+        {
+          "ObjectName": "SCS_Node'Explore_MonsterChest_C:SimpleConstructionScript_0.SCS_Node_8'",
+          "ObjectPath": "EM/Content/AssetDesign/Level/BluePrints/ExploreGroup/Explore_Common/Explore_MonsterChest.17"
+        },
+        {
+          "ObjectName": "SCS_Node'Explore_MonsterChest_C:SimpleConstructionScript_0.SCS_Node_9'",
+          "ObjectPath": "EM/Content/AssetDesign/Level/BluePrints/ExploreGroup/Explore_Common/Explore_MonsterChest.18"
+        }
+      ],
+      "VariableGuid": "1EFF44C5-42B4E0CF-B56B61A3-DEA5F994",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_2",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "BlueprintGeneratedClass'BP_StaticCreatorComponent_C'",
+        "ObjectPath": "EM/Content/BluePrints/Item/ExploreGroup/BP_StaticCreatorComponent.3"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "BP_StaticCreatorComponent_C'Explore_MonsterChest_C:Chest_GEN_VARIABLE'",
+        "ObjectPath": "EM/Content/AssetDesign/Level/BluePrints/ExploreGroup/Explore_Common/Explore_MonsterChest.6"
+      },
+      "VariableGuid": "3135613C-4E161EB2-B16F0E95-B68603C3",
+      "InternalVariableName": "Chest"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_3",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "BlueprintGeneratedClass'BP_StaticCreatorComponent_C'",
+        "ObjectPath": "EM/Content/BluePrints/Item/ExploreGroup/BP_StaticCreatorComponent.3"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "BP_StaticCreatorComponent_C'Explore_MonsterChest_C:Monster1_GEN_VARIABLE'",
+        "ObjectPath": "EM/Content/AssetDesign/Level/BluePrints/ExploreGroup/Explore_Common/Explore_MonsterChest.7"
+      },
+      "VariableGuid": "FF3B93EC-466A2F36-E42F469D-050DA337",
+      "InternalVariableName": "Monster1"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_7",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "BlueprintGeneratedClass'BP_StaticCreatorComponent_C'",
+        "ObjectPath": "EM/Content/BluePrints/Item/ExploreGroup/BP_StaticCreatorComponent.3"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "BP_StaticCreatorComponent_C'Explore_MonsterChest_C:Monster2_GEN_VARIABLE'",
+        "ObjectPath": "EM/Content/AssetDesign/Level/BluePrints/ExploreGroup/Explore_Common/Explore_MonsterChest.8"
+      },
+      "VariableGuid": "6A8DB3E4-40893EE8-CA42A6AF-1714D6CB",
+      "InternalVariableName": "Monster2"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_8",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "BlueprintGeneratedClass'BP_StaticCreatorComponent_C'",
+        "ObjectPath": "EM/Content/BluePrints/Item/ExploreGroup/BP_StaticCreatorComponent.3"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "BP_StaticCreatorComponent_C'Explore_MonsterChest_C:Monster3_GEN_VARIABLE'",
+        "ObjectPath": "EM/Content/AssetDesign/Level/BluePrints/ExploreGroup/Explore_Common/Explore_MonsterChest.9"
+      },
+      "VariableGuid": "02A54183-40BDC5AD-8475B99D-8CB3275A",
+      "InternalVariableName": "Monster3"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_9",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "BlueprintGeneratedClass'BP_StaticCreatorComponent_C'",
+        "ObjectPath": "EM/Content/BluePrints/Item/ExploreGroup/BP_StaticCreatorComponent.3"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "BP_StaticCreatorComponent_C'Explore_MonsterChest_C:Monster4_GEN_VARIABLE'",
+        "ObjectPath": "EM/Content/AssetDesign/Level/BluePrints/ExploreGroup/Explore_Common/Explore_MonsterChest.10"
+      },
+      "VariableGuid": "B56EE960-445073BC-D1EFD485-CFDB41DC",
+      "InternalVariableName": "Monster4"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Outer": "Explore_MonsterChest_C",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node'Explore_MonsterChest_C:SimpleConstructionScript_0.SCS_Node_0'",
+          "ObjectPath": "EM/Content/AssetDesign/Level/BluePrints/ExploreGroup/Explore_Common/Explore_MonsterChest.13"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node'Explore_MonsterChest_C:SimpleConstructionScript_0.SCS_Node_0'",
+          "ObjectPath": "EM/Content/AssetDesign/Level/BluePrints/ExploreGroup/Explore_Common/Explore_MonsterChest.13"
+        },
+        {
+          "ObjectName": "SCS_Node'Explore_MonsterChest_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "EM/Content/AssetDesign/Level/BluePrints/ExploreGroup/Explore_Common/Explore_MonsterChest.14"
+        },
+        {
+          "ObjectName": "SCS_Node'Explore_MonsterChest_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectPath": "EM/Content/AssetDesign/Level/BluePrints/ExploreGroup/Explore_Common/Explore_MonsterChest.15"
+        },
+        {
+          "ObjectName": "SCS_Node'Explore_MonsterChest_C:SimpleConstructionScript_0.SCS_Node_7'",
+          "ObjectPath": "EM/Content/AssetDesign/Level/BluePrints/ExploreGroup/Explore_Common/Explore_MonsterChest.16"
+        },
+        {
+          "ObjectName": "SCS_Node'Explore_MonsterChest_C:SimpleConstructionScript_0.SCS_Node_8'",
+          "ObjectPath": "EM/Content/AssetDesign/Level/BluePrints/ExploreGroup/Explore_Common/Explore_MonsterChest.17"
+        },
+        {
+          "ObjectName": "SCS_Node'Explore_MonsterChest_C:SimpleConstructionScript_0.SCS_Node_9'",
+          "ObjectPath": "EM/Content/AssetDesign/Level/BluePrints/ExploreGroup/Explore_Common/Explore_MonsterChest.18"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'Explore_MonsterChest_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "EM/Content/AssetDesign/Level/BluePrints/ExploreGroup/Explore_Common/Explore_MonsterChest.13"
+      }
+    }
+  }
+]

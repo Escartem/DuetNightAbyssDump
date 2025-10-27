@@ -1,0 +1,254 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "Chapter01_Candao_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Super": {
+      "ObjectName": "BlueprintGeneratedClass'BP_PickupStatic_C'",
+      "ObjectPath": "EM/Content/AssetDesign/Item/Pickups/BP_PickupStatic.3"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'Chapter01_Candao_C:SimpleConstructionScript_0'",
+        "ObjectPath": "EM/Content/AssetDesign/Item/Pickups/Chapter01_Candao.7"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "BlueprintGeneratedClass'BP_PickupStatic_C'",
+      "ObjectPath": "EM/Content/AssetDesign/Item/Pickups/BP_PickupStatic.3"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "SkeletalMesh",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'SkeletalMeshComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "ClassFlags": "CLASS_Config | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "Chapter01_Candao_C'Default__Chapter01_Candao_C'",
+      "ObjectPath": "EM/Content/AssetDesign/Item/Pickups/Chapter01_Candao.1"
+    }
+  },
+  {
+    "Type": "Chapter01_Candao_C",
+    "Name": "Default__Chapter01_Candao_C",
+    "Class": "BlueprintGeneratedClass'EM/Content/AssetDesign/Item/Pickups/Chapter01_Candao.Chapter01_Candao_C'",
+    "Template": {
+      "ObjectName": "BP_PickupStatic_C'Default__BP_PickupStatic_C'",
+      "ObjectPath": "EM/Content/AssetDesign/Item/Pickups/BP_PickupStatic.4"
+    },
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "StaticMeshComponent": {
+        "ObjectName": "StaticMeshComponent'Default__Chapter01_Candao_C:StaticMeshComponent'",
+        "ObjectPath": "EM/Content/AssetDesign/Item/Pickups/Chapter01_Candao.10"
+      },
+      "SphereComponent": {
+        "ObjectName": "SphereComponent'Default__Chapter01_Candao_C:SphereComponent'",
+        "ObjectPath": "EM/Content/AssetDesign/Item/Pickups/Chapter01_Candao.9"
+      },
+      "PickUpInteractiveComponent": {
+        "ObjectName": "BP_PickUpInteractiveComponent_C'Default__Chapter01_Candao_C:UPickUpInteractiveComponent'",
+        "ObjectPath": "EM/Content/AssetDesign/Item/Pickups/Chapter01_Candao.2"
+      },
+      "ProjectileMovementComponent": {
+        "ObjectName": "PickupBaseMovementComponent'Default__Chapter01_Candao_C:ProjectileMovementComponent'",
+        "ObjectPath": "EM/Content/AssetDesign/Item/Pickups/Chapter01_Candao.3"
+      },
+      "RootComponent": {
+        "ObjectName": "SphereComponent'Default__Chapter01_Candao_C:SphereComponent'",
+        "ObjectPath": "EM/Content/AssetDesign/Item/Pickups/Chapter01_Candao.9"
+      }
+    }
+  },
+  {
+    "Type": "BP_PickUpInteractiveComponent_C",
+    "Name": "UPickUpInteractiveComponent",
+    "Outer": "Default__Chapter01_Candao_C",
+    "Class": "BlueprintGeneratedClass'EM/Content/BluePrints/Item/BP_PickUpInteractiveComponent.BP_PickUpInteractiveComponent_C'",
+    "Template": {
+      "ObjectName": "BP_PickUpInteractiveComponent_C'Default__BP_PickupStatic_C:UPickUpInteractiveComponent'",
+      "ObjectPath": "EM/Content/AssetDesign/Item/Pickups/BP_PickupStatic.5"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "SphereComponent'Default__Chapter01_Candao_C:SphereComponent'",
+        "ObjectPath": "EM/Content/AssetDesign/Item/Pickups/Chapter01_Candao.9"
+      }
+    }
+  },
+  {
+    "Type": "PickupBaseMovementComponent",
+    "Name": "ProjectileMovementComponent",
+    "Outer": "Default__Chapter01_Candao_C",
+    "Class": "UScriptClass'PickupBaseMovementComponent'",
+    "Template": {
+      "ObjectName": "PickupBaseMovementComponent'Default__BP_PickupStatic_C:ProjectileMovementComponent'",
+      "ObjectPath": "EM/Content/AssetDesign/Item/Pickups/BP_PickupStatic.6"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "OnProjectileStop": {
+        "InvocationList": [
+          {
+            "Object": {
+              "ObjectName": "Chapter01_Candao_C'Default__Chapter01_Candao_C'",
+              "ObjectPath": "EM/Content/AssetDesign/Item/Pickups/Chapter01_Candao.1"
+            },
+            "FunctionName": "OnProjectileStopEvent"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Outer": "Chapter01_Candao_C",
+    "Class": "UScriptClass'SceneComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'Chapter01_Candao_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "EM/Content/AssetDesign/Item/Pickups/Chapter01_Candao.4"
+      },
+      "VariableGuid": "E51EF17D-4D8C2EE5-7935E292-C599AAAF",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_1",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SkeletalMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SkeletalMeshComponent'Chapter01_Candao_C:SkeletalMesh_GEN_VARIABLE'",
+        "ObjectPath": "EM/Content/AssetDesign/Item/Pickups/Chapter01_Candao.8"
+      },
+      "ParentComponentOrVariableName": "SphereComponent",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "66D5ECF5-44B92586-3F330692-1FFBDEE1",
+      "InternalVariableName": "SkeletalMesh"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Outer": "Chapter01_Candao_C",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node'Chapter01_Candao_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "EM/Content/AssetDesign/Item/Pickups/Chapter01_Candao.6"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node'Chapter01_Candao_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "EM/Content/AssetDesign/Item/Pickups/Chapter01_Candao.6"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'Chapter01_Candao_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "EM/Content/AssetDesign/Item/Pickups/Chapter01_Candao.5"
+      }
+    }
+  },
+  {
+    "Type": "SkeletalMeshComponent",
+    "Name": "SkeletalMesh_GEN_VARIABLE",
+    "Outer": "Chapter01_Candao_C",
+    "Class": "UScriptClass'SkeletalMeshComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ClothingSimulationFactory": {
+        "ObjectName": "Class'ClothingSimulationFactoryNv'",
+        "ObjectPath": "/Script/ClothingSystemRuntimeNv"
+      },
+      "SkeletalMesh": {
+        "ObjectName": "SkeletalMesh'Bar_Canju03_candao_SM'",
+        "ObjectPath": "EM/Content/Asset/Scene/EN002_Haiboliya/Binghucheng/BH_Home/Mesh/Prop/Bar_Canju03_candao_SM.0"
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": 0.0,
+        "Roll": 90.0
+      }
+    }
+  },
+  {
+    "Type": "SphereComponent",
+    "Name": "SphereComponent",
+    "Outer": "Default__Chapter01_Candao_C",
+    "Class": "UScriptClass'SphereComponent'",
+    "Template": {
+      "ObjectName": "SphereComponent'Default__BP_PickupStatic_C:SphereComponent'",
+      "ObjectPath": "EM/Content/AssetDesign/Item/Pickups/BP_PickupStatic.10"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "PhysicsVolumeChangedDelegate": {
+        "InvocationList": [
+          {
+            "Object": {
+              "ObjectName": "PickupBaseMovementComponent'Default__Chapter01_Candao_C:ProjectileMovementComponent'",
+              "ObjectPath": "EM/Content/AssetDesign/Item/Pickups/Chapter01_Candao.3"
+            },
+            "FunctionName": "PhysicsVolumeChanged"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "StaticMeshComponent",
+    "Outer": "Default__Chapter01_Candao_C",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Template": {
+      "ObjectName": "StaticMeshComponent'Default__BP_PickupStatic_C:StaticMeshComponent'",
+      "ObjectPath": "EM/Content/AssetDesign/Item/Pickups/BP_PickupStatic.11"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "SphereComponent'Default__Chapter01_Candao_C:SphereComponent'",
+        "ObjectPath": "EM/Content/AssetDesign/Item/Pickups/Chapter01_Candao.9"
+      }
+    }
+  }
+]

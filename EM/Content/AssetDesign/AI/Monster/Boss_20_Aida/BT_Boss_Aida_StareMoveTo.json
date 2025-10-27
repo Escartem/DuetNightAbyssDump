@@ -1,0 +1,139 @@
+[
+  {
+    "Type": "BehaviorTree",
+    "Name": "BT_Boss_Aida_StareMoveTo",
+    "Class": "UScriptClass'BehaviorTree'",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "RootNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Aida_StareMoveTo:BTComposite_Sequence_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_20_Aida/BT_Boss_Aida_StareMoveTo.1"
+      },
+      "BlackboardAsset": {
+        "ObjectName": "BlackboardData'BB_Boss_Aida'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_20_Aida/BB_Boss_Aida.0"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_0",
+    "Outer": "BT_Boss_Aida_StareMoveTo",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_FindSpecifyLocation'BT_Boss_Aida_StareMoveTo:BTTask_FindSpecifyLocation_13'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_20_Aida/BT_Boss_Aida_StareMoveTo.4"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_NewMoveTo'BT_Boss_Aida_StareMoveTo:BTTask_NewMoveTo_7'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_20_Aida/BT_Boss_Aida_StareMoveTo.5"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_TimeLimit'BT_Boss_Aida_StareMoveTo:BTDecorator_TimeLimit_6'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_20_Aida/BT_Boss_Aida_StareMoveTo.3"
+            },
+            {
+              "ObjectName": "BTDecorator_ForceSuccess'BT_Boss_Aida_StareMoveTo:BTDecorator_ForceSuccess_6'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_20_Aida/BT_Boss_Aida_StareMoveTo.2"
+            }
+          ],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Aida_StareMoveTo'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_20_Aida/BT_Boss_Aida_StareMoveTo.0"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_ForceSuccess",
+    "Name": "BTDecorator_ForceSuccess_6",
+    "Outer": "BT_Boss_Aida_StareMoveTo",
+    "Class": "UScriptClass'BTDecorator_ForceSuccess'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Aida_StareMoveTo'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_20_Aida/BT_Boss_Aida_StareMoveTo.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Aida_StareMoveTo:BTComposite_Sequence_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_20_Aida/BT_Boss_Aida_StareMoveTo.1"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_TimeLimit",
+    "Name": "BTDecorator_TimeLimit_6",
+    "Outer": "BT_Boss_Aida_StareMoveTo",
+    "Class": "UScriptClass'BTDecorator_TimeLimit'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TimeLimit": 4.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Aida_StareMoveTo'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_20_Aida/BT_Boss_Aida_StareMoveTo.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Aida_StareMoveTo:BTComposite_Sequence_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_20_Aida/BT_Boss_Aida_StareMoveTo.1"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_FindSpecifyLocation",
+    "Name": "BTTask_FindSpecifyLocation_13",
+    "Outer": "BT_Boss_Aida_StareMoveTo",
+    "Class": "UScriptClass'BTTask_FindSpecifyLocation'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "MinAngle": 0,
+      "MaxAngle": 360,
+      "MinRadius": 600,
+      "MaxRadius": 900,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Aida_StareMoveTo'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_20_Aida/BT_Boss_Aida_StareMoveTo.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Aida_StareMoveTo:BTComposite_Sequence_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_20_Aida/BT_Boss_Aida_StareMoveTo.1"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_NewMoveTo",
+    "Name": "BTTask_NewMoveTo_7",
+    "Outer": "BT_Boss_Aida_StareMoveTo",
+    "Class": "UScriptClass'BTTask_NewMoveTo'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "bUseControllerRotationYaw": true,
+      "bStareAt": true,
+      "bStopOnOverlapNeedsUpdate": false,
+      "BlackboardKey": {
+        "SelectedKeyName": "NearlyLocation"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Aida_StareMoveTo'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_20_Aida/BT_Boss_Aida_StareMoveTo.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Aida_StareMoveTo:BTComposite_Sequence_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_20_Aida/BT_Boss_Aida_StareMoveTo.1"
+      }
+    }
+  }
+]

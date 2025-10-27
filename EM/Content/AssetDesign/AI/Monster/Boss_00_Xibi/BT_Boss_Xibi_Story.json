@@ -1,0 +1,3690 @@
+[
+  {
+    "Type": "BehaviorTree",
+    "Name": "BT_Boss_Xibi_Story",
+    "Class": "UScriptClass'BehaviorTree'",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "RootNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Xibi_Story:BTComposite_Selector_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.7"
+      },
+      "BlackboardAsset": {
+        "ObjectName": "BlackboardData'BB_Boss_Xibi'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BB_Boss_Xibi.0"
+      }
+    }
+  },
+  {
+    "Type": "BPServer_BossXibi_Story_C",
+    "Name": "BPServer_BossHekadi_C_0",
+    "Outer": "BT_Boss_Xibi_Story",
+    "Class": "BlueprintGeneratedClass'EM/Content/BluePrints/AI/BTServer/BPServer_BossXibi_Story.BPServer_BossXibi_Story_C'",
+    "Template": {
+      "ObjectName": "BPServer_BossXibi_Story_C'Default__BPServer_BossXibi_Story_C'",
+      "ObjectPath": "EM/Content/BluePrints/AI/BTServer/BPServer_BossXibi_Story.3"
+    },
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Interval": 0.1,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Story'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Xibi_Story:BTComposite_Selector_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.7"
+      }
+    }
+  },
+  {
+    "Type": "BPServer_GetAnimSelector_C",
+    "Name": "BPServer_GetAnimSelector_C_2",
+    "Outer": "BT_Boss_Xibi_Story",
+    "Class": "BlueprintGeneratedClass'EM/Content/BluePrints/AI/BTServer/BPServer_GetAnimSelector.BPServer_GetAnimSelector_C'",
+    "Template": {
+      "ObjectName": "BPServer_GetAnimSelector_C'Default__BPServer_GetAnimSelector_C'",
+      "ObjectPath": "EM/Content/BluePrints/AI/BTServer/BPServer_GetAnimSelector.3"
+    },
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Interval": 0.1,
+      "RandomDeviation": 0.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Story'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Xibi_Story:BTComposite_Selector_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.7"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Rate",
+    "Name": "BTComposite_Rate_0",
+    "Outer": "BT_Boss_Xibi_Story",
+    "Class": "UScriptClass'BTComposite_Rate'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Rates": [
+        2,
+        3,
+        1
+      ],
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_UseSkill'BT_Boss_Xibi_Story:BTTask_UseSkill_1'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.96"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_UseSkill'BT_Boss_Xibi_Story:BTTask_UseSkill_7'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.116"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_NewLoop'BT_Boss_Xibi_Story:BTDecorator_NewLoop_0'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.69"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_Boss_Xibi_Story:BTComposite_Sequence_15'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.23"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Story'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Xibi_Story:BTComposite_Selector_2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.10"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Rate",
+    "Name": "BTComposite_Rate_1",
+    "Outer": "BT_Boss_Xibi_Story",
+    "Class": "UScriptClass'BTComposite_Rate'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Rates": [
+        4,
+        1
+      ],
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector'BT_Boss_Xibi_Story:BTComposite_Selector_6'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.13"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_Boss_Xibi_Story:BTComposite_Sequence_2'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.28"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Story'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Xibi_Story:BTComposite_Selector_8'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.15"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Rate",
+    "Name": "BTComposite_Rate_6",
+    "Outer": "BT_Boss_Xibi_Story",
+    "Class": "UScriptClass'BTComposite_Rate'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Rates": [
+        1,
+        4,
+        3
+      ],
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_UseSkill'BT_Boss_Xibi_Story:BTTask_UseSkill_20'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.107"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector'BT_Boss_Xibi_Story:BTComposite_Selector_11'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.9"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_UseSkill'BT_Boss_Xibi_Story:BTTask_UseSkill_21'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.108"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Story'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Xibi_Story:BTComposite_Selector_10'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.8"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_0",
+    "Outer": "BT_Boss_Xibi_Story",
+    "Class": "UScriptClass'BTComposite_Selector'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_Boss_Xibi_Story:BTComposite_Sequence_11'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.19"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Boss_Xibi_Story:BTDecorator_Blackboard_4'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.58"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_Boss_Xibi_Story:BTComposite_Sequence_4'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.32"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Boss_Xibi_Story:BTDecorator_Blackboard_5'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.59"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_Boss_Xibi_Story:BTComposite_Sequence_5'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.33"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Boss_Xibi_Story:BTDecorator_Blackboard_7'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.61"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_Boss_Xibi_Story:BTComposite_Sequence_6'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.34"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Boss_Xibi_Story:BTDecorator_Blackboard_8'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.62"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_Boss_Xibi_Story:BTComposite_Sequence_8'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.36"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Boss_Xibi_Story:BTDecorator_Blackboard_9'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.63"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_Boss_Xibi_Story:BTComposite_Sequence_9'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.37"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Boss_Xibi_Story:BTDecorator_Blackboard_10'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.40"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_Boss_Xibi_Story:BTComposite_Sequence_10'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.18"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Boss_Xibi_Story:BTDecorator_Blackboard_24'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.52"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_Boss_Xibi_Story:BTComposite_Sequence_1'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.17"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Boss_Xibi_Story:BTDecorator_Blackboard_11'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.41"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_Boss_Xibi_Story:BTComposite_Sequence_12'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.20"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Boss_Xibi_Story:BTDecorator_Blackboard_15'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.44"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_Boss_Xibi_Story:BTComposite_Sequence_14'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.22"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Boss_Xibi_Story:BTDecorator_Blackboard_1'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.39"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_Boss_Xibi_Story:BTComposite_Sequence_16'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.24"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Boss_Xibi_Story:BTDecorator_Blackboard_25'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.53"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_Boss_Xibi_Story:BTComposite_Sequence_20'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.29"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Boss_Xibi_Story:BTDecorator_Blackboard_16'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.45"
+            }
+          ],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Story'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Xibi_Story:BTComposite_Sequence_3'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.31"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_1",
+    "Outer": "BT_Boss_Xibi_Story",
+    "Class": "UScriptClass'BTComposite_Selector'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector'BT_Boss_Xibi_Story:BTComposite_Selector_3'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.11"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Boss_Xibi_Story:BTDecorator_Blackboard_20'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.48"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait'BT_Boss_Xibi_Story:BTTask_Wait_1'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.118"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Boss_Xibi_Story:BTDecorator_Blackboard_17'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.46"
+            }
+          ],
+          "DecoratorOps": []
+        }
+      ],
+      "Services": [
+        {
+          "ObjectName": "BPServer_BossXibi_Story_C'BT_Boss_Xibi_Story:BPServer_BossHekadi_C_0'",
+          "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.1"
+        },
+        {
+          "ObjectName": "BPServer_GetAnimSelector_C'BT_Boss_Xibi_Story:BPServer_GetAnimSelector_C_2'",
+          "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.2"
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Story'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.0"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_10",
+    "Outer": "BT_Boss_Xibi_Story",
+    "Class": "UScriptClass'BTComposite_Selector'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_UseSkill'BT_Boss_Xibi_Story:BTTask_UseSkill_22'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.109"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Boss_Xibi_Story:BTDecorator_Blackboard_27'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.55"
+            },
+            {
+              "ObjectName": "BTDecorator_Cooldown'BT_Boss_Xibi_Story:BTDecorator_Cooldown_1'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.65"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Rate'BT_Boss_Xibi_Story:BTComposite_Rate_6'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.5"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Story'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Xibi_Story:BTComposite_Selector_8'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.15"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_11",
+    "Outer": "BT_Boss_Xibi_Story",
+    "Class": "UScriptClass'BTComposite_Selector'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_UseSkill'BT_Boss_Xibi_Story:BTTask_UseSkill_24'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.110"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_UseSkill'BT_Boss_Xibi_Story:BTTask_UseSkill_25'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.111"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Story'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Rate'BT_Boss_Xibi_Story:BTComposite_Rate_6'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.5"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_2",
+    "Outer": "BT_Boss_Xibi_Story",
+    "Class": "UScriptClass'BTComposite_Selector'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_UseSkill'BT_Boss_Xibi_Story:BTTask_UseSkill_17'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.104"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Boss_Xibi_Story:BTDecorator_Blackboard_0'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.38"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Rate'BT_Boss_Xibi_Story:BTComposite_Rate_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.3"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Story'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Xibi_Story:BTComposite_Sequence_13'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.21"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_3",
+    "Outer": "BT_Boss_Xibi_Story",
+    "Class": "UScriptClass'BTComposite_Selector'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector'BT_Boss_Xibi_Story:BTComposite_Selector_7'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.14"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Boss_Xibi_Story:BTDecorator_Blackboard_22'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.50"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_Boss_Xibi_Story:BTComposite_Sequence_3'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.31"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Boss_Xibi_Story:BTDecorator_Blackboard_21'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.49"
+            }
+          ],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Story'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Xibi_Story:BTComposite_Selector_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.7"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_5",
+    "Outer": "BT_Boss_Xibi_Story",
+    "Class": "UScriptClass'BTComposite_Selector'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_Boss_Xibi_Story:BTComposite_Sequence_19'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.27"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait'BT_Boss_Xibi_Story:BTTask_Wait_13'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.122"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Story'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Xibi_Story:BTComposite_Sequence_18'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.26"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_6",
+    "Outer": "BT_Boss_Xibi_Story",
+    "Class": "UScriptClass'BTComposite_Selector'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_UseSkill'BT_Boss_Xibi_Story:BTTask_UseSkill_16'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.103"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_TargetLocCondition'BT_Boss_Xibi_Story:BTDecorator_TargetLocCondition_0'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.70"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_UseSkill'BT_Boss_Xibi_Story:BTTask_UseSkill_11'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.98"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Story'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Rate'BT_Boss_Xibi_Story:BTComposite_Rate_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.4"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_7",
+    "Outer": "BT_Boss_Xibi_Story",
+    "Class": "UScriptClass'BTComposite_Selector'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_Boss_Xibi_Story:BTComposite_Sequence_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.16"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Boss_Xibi_Story:BTDecorator_Blackboard_19'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.47"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_Boss_Xibi_Story:BTComposite_Sequence_21'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.30"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Boss_Xibi_Story:BTDecorator_Blackboard_23'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.51"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_Boss_Xibi_Story:BTComposite_Sequence_7'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.35"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Boss_Xibi_Story:BTDecorator_Blackboard_30'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.56"
+            }
+          ],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Story'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Xibi_Story:BTComposite_Selector_3'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.11"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_8",
+    "Outer": "BT_Boss_Xibi_Story",
+    "Class": "UScriptClass'BTComposite_Selector'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_UseSkill'BT_Boss_Xibi_Story:BTTask_UseSkill_18'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.105"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Boss_Xibi_Story:BTDecorator_Blackboard_6'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.60"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_Boss_Xibi_Story:BTComposite_Sequence_18'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.26"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Boss_Xibi_Story:BTDecorator_Blackboard_26'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.54"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_Boss_Xibi_Story:BTComposite_Sequence_13'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.21"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Boss_Xibi_Story:BTDecorator_Blackboard_12'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.42"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_UseSkill'BT_Boss_Xibi_Story:BTTask_UseSkill_14'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.101"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Cooldown'BT_Boss_Xibi_Story:BTDecorator_Cooldown_0'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.64"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Rate'BT_Boss_Xibi_Story:BTComposite_Rate_1'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.4"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Boss_Xibi_Story:BTDecorator_Blackboard_32'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.57"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector'BT_Boss_Xibi_Story:BTComposite_Selector_10'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.8"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Boss_Xibi_Story:BTDecorator_Blackboard_13'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.43"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_Boss_Xibi_Story:BTComposite_Sequence_17'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.25"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Story'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Xibi_Story:BTComposite_Sequence_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.16"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_0",
+    "Outer": "BT_Boss_Xibi_Story",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_GetTarget'BT_Boss_Xibi_Story:BTTask_GetTarget_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.84"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector'BT_Boss_Xibi_Story:BTComposite_Selector_8'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.15"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "Services": [
+        {
+          "ObjectName": "BTService_EnemyVision'BT_Boss_Xibi_Story:BTService_EnemyVision_1'",
+          "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.76"
+        },
+        {
+          "ObjectName": "BTService_BBValueDis'BT_Boss_Xibi_Story:BTService_BBValueDis_0'",
+          "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.74"
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Story'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Xibi_Story:BTComposite_Selector_7'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.14"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_1",
+    "Outer": "BT_Boss_Xibi_Story",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_UseSkill'BT_Boss_Xibi_Story:BTTask_UseSkill_4'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.113"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait'BT_Boss_Xibi_Story:BTTask_Wait_9'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.131"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Story'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Xibi_Story:BTComposite_Selector_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.6"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_10",
+    "Outer": "BT_Boss_Xibi_Story",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_UseSkill'BT_Boss_Xibi_Story:BTTask_UseSkill_13'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.100"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait'BT_Boss_Xibi_Story:BTTask_Wait_8'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.130"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Story'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Xibi_Story:BTComposite_Selector_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.6"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_11",
+    "Outer": "BT_Boss_Xibi_Story",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_FindSpecifyLocation'BT_Boss_Xibi_Story:BTTask_FindSpecifyLocation_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.79"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_NewMoveTo'BT_Boss_Xibi_Story:BTTask_NewMoveTo_1'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.87"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Story'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Xibi_Story:BTComposite_Selector_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.6"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_12",
+    "Outer": "BT_Boss_Xibi_Story",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_UseSkill'BT_Boss_Xibi_Story:BTTask_UseSkill_15'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.102"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait'BT_Boss_Xibi_Story:BTTask_Wait_10'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.119"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Story'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Xibi_Story:BTComposite_Selector_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.6"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_13",
+    "Outer": "BT_Boss_Xibi_Story",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_UseSkill'BT_Boss_Xibi_Story:BTTask_UseSkill_10'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.97"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector'BT_Boss_Xibi_Story:BTComposite_Selector_2'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.10"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Story'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Xibi_Story:BTComposite_Selector_8'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.15"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_14",
+    "Outer": "BT_Boss_Xibi_Story",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_UseSkill'BT_Boss_Xibi_Story:BTTask_UseSkill_6'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.115"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait'BT_Boss_Xibi_Story:BTTask_Wait_11'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.120"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Story'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Xibi_Story:BTComposite_Selector_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.6"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_15",
+    "Outer": "BT_Boss_Xibi_Story",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_FindSpecifyLocation'BT_Boss_Xibi_Story:BTTask_FindSpecifyLocation_4'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.83"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_NewMoveTo'BT_Boss_Xibi_Story:BTTask_NewMoveTo_5'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.91"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_TimeLimit'BT_Boss_Xibi_Story:BTDecorator_TimeLimit_1'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.72"
+            },
+            {
+              "ObjectName": "BTDecorator_ForceSuccess'BT_Boss_Xibi_Story:BTDecorator_ForceSuccess_3'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.68"
+            }
+          ],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Story'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Rate'BT_Boss_Xibi_Story:BTComposite_Rate_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.3"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_16",
+    "Outer": "BT_Boss_Xibi_Story",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_UseSkill'BT_Boss_Xibi_Story:BTTask_UseSkill_8'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.117"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait'BT_Boss_Xibi_Story:BTTask_Wait_12'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.121"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Story'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Xibi_Story:BTComposite_Selector_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.6"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_17",
+    "Outer": "BT_Boss_Xibi_Story",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_FindSpecifyLocation'BT_Boss_Xibi_Story:BTTask_FindSpecifyLocation_1'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.80"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_NewMoveTo'BT_Boss_Xibi_Story:BTTask_NewMoveTo_2'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.88"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_TimeLimit'BT_Boss_Xibi_Story:BTDecorator_TimeLimit_0'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.71"
+            },
+            {
+              "ObjectName": "BTDecorator_ForceSuccess'BT_Boss_Xibi_Story:BTDecorator_ForceSuccess_1'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.67"
+            }
+          ],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Story'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Xibi_Story:BTComposite_Selector_8'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.15"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_18",
+    "Outer": "BT_Boss_Xibi_Story",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_FindSpecifyLocation'BT_Boss_Xibi_Story:BTTask_FindSpecifyLocation_3'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.82"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector'BT_Boss_Xibi_Story:BTComposite_Selector_5'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.12"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Story'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Xibi_Story:BTComposite_Selector_8'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.15"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_19",
+    "Outer": "BT_Boss_Xibi_Story",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_NewMoveTo'BT_Boss_Xibi_Story:BTTask_NewMoveTo_3'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.89"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait'BT_Boss_Xibi_Story:BTTask_Wait_14'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.123"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Story'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Xibi_Story:BTComposite_Selector_5'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.12"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_2",
+    "Outer": "BT_Boss_Xibi_Story",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_FindSpecifyLocation'BT_Boss_Xibi_Story:BTTask_FindSpecifyLocation_2'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.81"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_NewMoveTo'BT_Boss_Xibi_Story:BTTask_NewMoveTo_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.86"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_TimeLimit'BT_Boss_Xibi_Story:BTDecorator_TimeLimit_2'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.73"
+            },
+            {
+              "ObjectName": "BTDecorator_ForceSuccess'BT_Boss_Xibi_Story:BTDecorator_ForceSuccess_0'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.66"
+            }
+          ],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Story'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Rate'BT_Boss_Xibi_Story:BTComposite_Rate_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.4"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_20",
+    "Outer": "BT_Boss_Xibi_Story",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_NpcGetTarget'BT_Boss_Xibi_Story:BTTask_NpcGetTarget_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.93"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_NewMoveTo'BT_Boss_Xibi_Story:BTTask_NewMoveTo_4'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.90"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Story'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Xibi_Story:BTComposite_Selector_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.6"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_21",
+    "Outer": "BT_Boss_Xibi_Story",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_SetTarget'BT_Boss_Xibi_Story:BTTask_SetTarget_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.94"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_EMRunEQSQuery'BT_Boss_Xibi_Story:BTTask_EMRunEQSQuery_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.78"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_NewMoveTo'BT_Boss_Xibi_Story:BTTask_NewMoveTo_6'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.92"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Story'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Xibi_Story:BTComposite_Selector_7'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.14"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_3",
+    "Outer": "BT_Boss_Xibi_Story",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_GetTarget'BT_Boss_Xibi_Story:BTTask_GetTarget_2'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.85"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector'BT_Boss_Xibi_Story:BTComposite_Selector_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.6"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "Services": [
+        {
+          "ObjectName": "BTService_BBValueDis'BT_Boss_Xibi_Story:BTService_BBValueDis_3'",
+          "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.75"
+        },
+        {
+          "ObjectName": "BTService_EnemyVision'BT_Boss_Xibi_Story:BTService_EnemyVision_2'",
+          "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.77"
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Story'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Xibi_Story:BTComposite_Selector_3'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.11"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_4",
+    "Outer": "BT_Boss_Xibi_Story",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_UseSkill'BT_Boss_Xibi_Story:BTTask_UseSkill_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.95"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait'BT_Boss_Xibi_Story:BTTask_Wait_7'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.129"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Story'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Xibi_Story:BTComposite_Selector_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.6"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_5",
+    "Outer": "BT_Boss_Xibi_Story",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_UseSkill'BT_Boss_Xibi_Story:BTTask_UseSkill_3'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.112"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait'BT_Boss_Xibi_Story:BTTask_Wait_6'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.128"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Story'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Xibi_Story:BTComposite_Selector_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.6"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_6",
+    "Outer": "BT_Boss_Xibi_Story",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_UseSkill'BT_Boss_Xibi_Story:BTTask_UseSkill_2'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.106"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait'BT_Boss_Xibi_Story:BTTask_Wait_5'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.127"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Story'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Xibi_Story:BTComposite_Selector_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.6"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_7",
+    "Outer": "BT_Boss_Xibi_Story",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait'BT_Boss_Xibi_Story:BTTask_Wait_2'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.124"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Story'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Xibi_Story:BTComposite_Selector_7'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.14"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_8",
+    "Outer": "BT_Boss_Xibi_Story",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_UseSkill'BT_Boss_Xibi_Story:BTTask_UseSkill_5'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.114"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait'BT_Boss_Xibi_Story:BTTask_Wait_3'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.125"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Story'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Xibi_Story:BTComposite_Selector_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.6"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_9",
+    "Outer": "BT_Boss_Xibi_Story",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_UseSkill'BT_Boss_Xibi_Story:BTTask_UseSkill_12'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.99"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait'BT_Boss_Xibi_Story:BTTask_Wait_4'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.126"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Story'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Xibi_Story:BTComposite_Selector_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.6"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_0",
+    "Outer": "BT_Boss_Xibi_Story",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "FloatValue": 600.0,
+      "CachedDescription": "TickTargetDis 大于或等于 600.000000",
+      "OperationType": 5,
+      "BlackboardKey": {
+        "SelectedKeyName": "TickTargetDis"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Story'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Xibi_Story:BTComposite_Selector_2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.10"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_1",
+    "Outer": "BT_Boss_Xibi_Story",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "IntValue": 8,
+      "CachedDescription": "TestAnimSelector 等于 Skill09",
+      "BlackboardKey": {
+        "SelectedKeyName": "TestAnimSelector"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Story'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Xibi_Story:BTComposite_Selector_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.6"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_10",
+    "Outer": "BT_Boss_Xibi_Story",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "IntValue": 4,
+      "CachedDescription": "TestAnimSelector 等于 Skill05",
+      "BlackboardKey": {
+        "SelectedKeyName": "TestAnimSelector"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Story'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Xibi_Story:BTComposite_Selector_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.6"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_11",
+    "Outer": "BT_Boss_Xibi_Story",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "IntValue": 6,
+      "CachedDescription": "TestAnimSelector 等于 Skill07",
+      "BlackboardKey": {
+        "SelectedKeyName": "TestAnimSelector"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Story'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Xibi_Story:BTComposite_Selector_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.6"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_12",
+    "Outer": "BT_Boss_Xibi_Story",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "CachedDescription": "CanUseSkill03 is 已设置",
+      "BlackboardKey": {
+        "SelectedKeyName": "CanUseSkill03"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Story'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Xibi_Story:BTComposite_Selector_8'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.15"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_13",
+    "Outer": "BT_Boss_Xibi_Story",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "FloatValue": 600.0,
+      "CachedDescription": "TickTargetDis 大于 600.000000",
+      "OperationType": 4,
+      "BlackboardKey": {
+        "SelectedKeyName": "TickTargetDis"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Story'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Xibi_Story:BTComposite_Selector_8'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.15"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_15",
+    "Outer": "BT_Boss_Xibi_Story",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "IntValue": 7,
+      "CachedDescription": "TestAnimSelector 等于 Skill08",
+      "BlackboardKey": {
+        "SelectedKeyName": "TestAnimSelector"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Story'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Xibi_Story:BTComposite_Selector_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.6"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_16",
+    "Outer": "BT_Boss_Xibi_Story",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "IntValue": 12,
+      "CachedDescription": "TestAnimSelector 等于 测试：跟随首号玩家",
+      "BlackboardKey": {
+        "SelectedKeyName": "TestAnimSelector"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Story'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Xibi_Story:BTComposite_Selector_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.6"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_17",
+    "Outer": "BT_Boss_Xibi_Story",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "IntValue": 1,
+      "CachedDescription": "ActionMode 等于 Hitted",
+      "BlackboardKey": {
+        "SelectedKeyName": "ActionMode"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::Self",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Story'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Xibi_Story:BTComposite_Selector_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.7"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_19",
+    "Outer": "BT_Boss_Xibi_Story",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "IntValue": 2,
+      "CachedDescription": "DecisionState 等于 Battle",
+      "BlackboardKey": {
+        "SelectedKeyName": "DecisionState"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Story'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Xibi_Story:BTComposite_Selector_7'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.14"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_20",
+    "Outer": "BT_Boss_Xibi_Story",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "CachedDescription": "ActionMode 等于 Active",
+      "BlackboardKey": {
+        "SelectedKeyName": "ActionMode"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::Self",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Story'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Xibi_Story:BTComposite_Selector_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.7"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_21",
+    "Outer": "BT_Boss_Xibi_Story",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "IntValue": 11,
+      "CachedDescription": "TestAnimSelector 不等于 AI",
+      "OperationType": 1,
+      "BlackboardKey": {
+        "SelectedKeyName": "TestAnimSelector"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::Both",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Story'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Xibi_Story:BTComposite_Selector_3'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.11"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_22",
+    "Outer": "BT_Boss_Xibi_Story",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "IntValue": 11,
+      "CachedDescription": "TestAnimSelector 等于 AI",
+      "BlackboardKey": {
+        "SelectedKeyName": "TestAnimSelector"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::Both",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Story'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Xibi_Story:BTComposite_Selector_3'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.11"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_23",
+    "Outer": "BT_Boss_Xibi_Story",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "IntValue": 1,
+      "CachedDescription": "DecisionState 等于 Alert",
+      "BlackboardKey": {
+        "SelectedKeyName": "DecisionState"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::Both",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Story'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Xibi_Story:BTComposite_Selector_7'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.14"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_24",
+    "Outer": "BT_Boss_Xibi_Story",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "IntValue": 5,
+      "CachedDescription": "TestAnimSelector 等于 Skill06",
+      "BlackboardKey": {
+        "SelectedKeyName": "TestAnimSelector"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Story'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Xibi_Story:BTComposite_Selector_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.6"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_25",
+    "Outer": "BT_Boss_Xibi_Story",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "IntValue": 8,
+      "CachedDescription": "TestAnimSelector 等于 Skill09",
+      "BlackboardKey": {
+        "SelectedKeyName": "TestAnimSelector"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Story'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Xibi_Story:BTComposite_Selector_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.6"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_26",
+    "Outer": "BT_Boss_Xibi_Story",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "CachedDescription": "TargetPlayerDead is 已设置",
+      "BlackboardKey": {
+        "SelectedKeyName": "TargetPlayerDead"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::Self",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Story'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Xibi_Story:BTComposite_Selector_8'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.15"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_27",
+    "Outer": "BT_Boss_Xibi_Story",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "CachedDescription": "TargetIsInAir is 未设置",
+      "OperationType": 1,
+      "BlackboardKey": {
+        "SelectedKeyName": "TargetIsInAir"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Story'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Xibi_Story:BTComposite_Selector_10'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.8"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_30",
+    "Outer": "BT_Boss_Xibi_Story",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "CachedDescription": "DecisionState 等于 Out Battle",
+      "BlackboardKey": {
+        "SelectedKeyName": "DecisionState"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::Self",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Story'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Xibi_Story:BTComposite_Selector_7'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.14"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_32",
+    "Outer": "BT_Boss_Xibi_Story",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "FloatValue": 600.0,
+      "CachedDescription": "TickTargetDis 小于或等于 600.000000",
+      "OperationType": 3,
+      "BlackboardKey": {
+        "SelectedKeyName": "TickTargetDis"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Story'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Xibi_Story:BTComposite_Selector_8'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.15"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_4",
+    "Outer": "BT_Boss_Xibi_Story",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "IntValue": 10,
+      "CachedDescription": "TestAnimSelector 等于 八向走",
+      "BlackboardKey": {
+        "SelectedKeyName": "TestAnimSelector"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Story'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Xibi_Story:BTComposite_Selector_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.6"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_5",
+    "Outer": "BT_Boss_Xibi_Story",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "CachedDescription": "TestAnimSelector 等于 Skill01",
+      "BlackboardKey": {
+        "SelectedKeyName": "TestAnimSelector"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Story'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Xibi_Story:BTComposite_Selector_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.6"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_6",
+    "Outer": "BT_Boss_Xibi_Story",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "IntValue": 1,
+      "CachedDescription": "CanUseLastSkill 等于 1",
+      "BlackboardKey": {
+        "SelectedKeyName": "CanUseLastSkill"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Story'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Xibi_Story:BTComposite_Selector_8'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.15"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_7",
+    "Outer": "BT_Boss_Xibi_Story",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "IntValue": 1,
+      "CachedDescription": "TestAnimSelector 等于 Skill02",
+      "BlackboardKey": {
+        "SelectedKeyName": "TestAnimSelector"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Story'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Xibi_Story:BTComposite_Selector_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.6"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_8",
+    "Outer": "BT_Boss_Xibi_Story",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "IntValue": 2,
+      "CachedDescription": "TestAnimSelector 等于 Skill03",
+      "BlackboardKey": {
+        "SelectedKeyName": "TestAnimSelector"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Story'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Xibi_Story:BTComposite_Selector_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.6"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_9",
+    "Outer": "BT_Boss_Xibi_Story",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "IntValue": 3,
+      "CachedDescription": "TestAnimSelector 等于 Skill04",
+      "BlackboardKey": {
+        "SelectedKeyName": "TestAnimSelector"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Story'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Xibi_Story:BTComposite_Selector_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.6"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Cooldown",
+    "Name": "BTDecorator_Cooldown_0",
+    "Outer": "BT_Boss_Xibi_Story",
+    "Class": "UScriptClass'BTDecorator_Cooldown'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "CoolDownTime": 40.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Story'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Xibi_Story:BTComposite_Selector_8'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.15"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Cooldown",
+    "Name": "BTDecorator_Cooldown_1",
+    "Outer": "BT_Boss_Xibi_Story",
+    "Class": "UScriptClass'BTDecorator_Cooldown'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "CoolDownTime": 16.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Story'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Xibi_Story:BTComposite_Selector_10'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.8"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_ForceSuccess",
+    "Name": "BTDecorator_ForceSuccess_0",
+    "Outer": "BT_Boss_Xibi_Story",
+    "Class": "UScriptClass'BTDecorator_ForceSuccess'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Story'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Xibi_Story:BTComposite_Sequence_2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.28"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_ForceSuccess",
+    "Name": "BTDecorator_ForceSuccess_1",
+    "Outer": "BT_Boss_Xibi_Story",
+    "Class": "UScriptClass'BTDecorator_ForceSuccess'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Story'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Xibi_Story:BTComposite_Sequence_17'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.25"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_ForceSuccess",
+    "Name": "BTDecorator_ForceSuccess_3",
+    "Outer": "BT_Boss_Xibi_Story",
+    "Class": "UScriptClass'BTDecorator_ForceSuccess'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Story'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Xibi_Story:BTComposite_Sequence_15'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.23"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_NewLoop",
+    "Name": "BTDecorator_NewLoop_0",
+    "Outer": "BT_Boss_Xibi_Story",
+    "Class": "UScriptClass'BTDecorator_NewLoop'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "MinNum": 1,
+      "MaxNum": 2,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Story'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Rate'BT_Boss_Xibi_Story:BTComposite_Rate_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.3"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_TargetLocCondition",
+    "Name": "BTDecorator_TargetLocCondition_0",
+    "Outer": "BT_Boss_Xibi_Story",
+    "Class": "UScriptClass'BTDecorator_TargetLocCondition'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "DecoratorTickEnable": false,
+      "MinAngle": 0.0,
+      "MaxAngle": 75.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Story'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Xibi_Story:BTComposite_Selector_6'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.13"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_TimeLimit",
+    "Name": "BTDecorator_TimeLimit_0",
+    "Outer": "BT_Boss_Xibi_Story",
+    "Class": "UScriptClass'BTDecorator_TimeLimit'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TimeLimit": 4.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Story'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Xibi_Story:BTComposite_Sequence_17'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.25"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_TimeLimit",
+    "Name": "BTDecorator_TimeLimit_1",
+    "Outer": "BT_Boss_Xibi_Story",
+    "Class": "UScriptClass'BTDecorator_TimeLimit'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TimeLimit": 4.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Story'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Xibi_Story:BTComposite_Sequence_15'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.23"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_TimeLimit",
+    "Name": "BTDecorator_TimeLimit_2",
+    "Outer": "BT_Boss_Xibi_Story",
+    "Class": "UScriptClass'BTDecorator_TimeLimit'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TimeLimit": 4.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Story'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Xibi_Story:BTComposite_Sequence_2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.28"
+      }
+    }
+  },
+  {
+    "Type": "BTService_BBValueDis",
+    "Name": "BTService_BBValueDis_0",
+    "Outer": "BT_Boss_Xibi_Story",
+    "Class": "UScriptClass'BTService_BBValueDis'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "BBName": "Target",
+      "Interval": 0.02,
+      "RandomDeviation": 0.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Story'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Xibi_Story:BTComposite_Sequence_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.16"
+      }
+    }
+  },
+  {
+    "Type": "BTService_BBValueDis",
+    "Name": "BTService_BBValueDis_3",
+    "Outer": "BT_Boss_Xibi_Story",
+    "Class": "UScriptClass'BTService_BBValueDis'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "BBName": "Target",
+      "Interval": 0.1,
+      "RandomDeviation": 0.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Story'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Xibi_Story:BTComposite_Sequence_3'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.31"
+      }
+    }
+  },
+  {
+    "Type": "BTService_EnemyVision",
+    "Name": "BTService_EnemyVision_1",
+    "Outer": "BT_Boss_Xibi_Story",
+    "Class": "UScriptClass'BTService_EnemyVision'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "FVisionDistance": 1000.0,
+      "FVisionAngle": 360.0,
+      "Interval": 0.1,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Story'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Xibi_Story:BTComposite_Sequence_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.16"
+      }
+    }
+  },
+  {
+    "Type": "BTService_EnemyVision",
+    "Name": "BTService_EnemyVision_2",
+    "Outer": "BT_Boss_Xibi_Story",
+    "Class": "UScriptClass'BTService_EnemyVision'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "FVisionDistance": 1000.0,
+      "FVisionAngle": 360.0,
+      "Interval": 0.2,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Story'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Xibi_Story:BTComposite_Sequence_3'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.31"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_EMRunEQSQuery",
+    "Name": "BTTask_EMRunEQSQuery_0",
+    "Outer": "BT_Boss_Xibi_Story",
+    "Class": "UScriptClass'BTTask_EMRunEQSQuery'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "EQSRequest": {
+        "QueryTemplate": {
+          "ObjectName": "EnvQuery'EQS_SelfDonut'",
+          "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Z_EnvQuery/EQS_SelfDonut.5"
+        },
+        "QueryConfig": [
+          {
+            "ParamName": "EMDonut.InnerRadius",
+            "ParamType": "EAIParamType::Float",
+            "Value": 200.0,
+            "BBKey": {
+              "SelectedKeyName": "None",
+              "bNoneIsAllowedValue": true
+            }
+          },
+          {
+            "ParamName": "EMDonut.OuterRadius",
+            "ParamType": "EAIParamType::Float",
+            "Value": 500.0,
+            "BBKey": {
+              "SelectedKeyName": "None",
+              "bNoneIsAllowedValue": true
+            }
+          },
+          {
+            "ParamName": "EMDonut.NumberOfRings",
+            "ParamType": "EAIParamType::Int",
+            "Value": 3.0,
+            "BBKey": {
+              "SelectedKeyName": "None",
+              "bNoneIsAllowedValue": true
+            }
+          },
+          {
+            "ParamName": "EMDonut.PointsPerRing",
+            "ParamType": "EAIParamType::Int",
+            "Value": 8.0,
+            "BBKey": {
+              "SelectedKeyName": "None",
+              "bNoneIsAllowedValue": true
+            }
+          },
+          {
+            "ParamName": "EMDonut.ArcAngle",
+            "ParamType": "EAIParamType::Float",
+            "Value": 180.0,
+            "BBKey": {
+              "SelectedKeyName": "None",
+              "bNoneIsAllowedValue": true
+            }
+          }
+        ],
+        "RunMode": "EEnvQueryRunMode::RandomBest25Pct"
+      },
+      "BlackboardKey": {
+        "SelectedKeyName": "EQSQueryLoc"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Story'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Xibi_Story:BTComposite_Sequence_21'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.30"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_FindSpecifyLocation",
+    "Name": "BTTask_FindSpecifyLocation_0",
+    "Outer": "BT_Boss_Xibi_Story",
+    "Class": "UScriptClass'BTTask_FindSpecifyLocation'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "MinAngle": 0,
+      "MaxAngle": 360,
+      "MinRadius": 100,
+      "MaxRadius": 200,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Story'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Xibi_Story:BTComposite_Sequence_11'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.19"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_FindSpecifyLocation",
+    "Name": "BTTask_FindSpecifyLocation_1",
+    "Outer": "BT_Boss_Xibi_Story",
+    "Class": "UScriptClass'BTTask_FindSpecifyLocation'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "MinAngle": -45,
+      "MaxAngle": 45,
+      "MinRadius": 150,
+      "MaxRadius": 300,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Story'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Xibi_Story:BTComposite_Sequence_17'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.25"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_FindSpecifyLocation",
+    "Name": "BTTask_FindSpecifyLocation_2",
+    "Outer": "BT_Boss_Xibi_Story",
+    "Class": "UScriptClass'BTTask_FindSpecifyLocation'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "MinAngle": 0,
+      "MaxAngle": 360,
+      "MinRadius": 150,
+      "MaxRadius": 300,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Story'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Xibi_Story:BTComposite_Sequence_2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.28"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_FindSpecifyLocation",
+    "Name": "BTTask_FindSpecifyLocation_3",
+    "Outer": "BT_Boss_Xibi_Story",
+    "Class": "UScriptClass'BTTask_FindSpecifyLocation'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "MinAngle": 0,
+      "MaxAngle": 360,
+      "MinRadius": 100,
+      "MaxRadius": 300,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Story'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Xibi_Story:BTComposite_Sequence_18'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.26"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_FindSpecifyLocation",
+    "Name": "BTTask_FindSpecifyLocation_4",
+    "Outer": "BT_Boss_Xibi_Story",
+    "Class": "UScriptClass'BTTask_FindSpecifyLocation'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "MinAngle": 0,
+      "MaxAngle": 360,
+      "MinRadius": 150,
+      "MaxRadius": 300,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Story'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Xibi_Story:BTComposite_Sequence_15'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.23"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_GetTarget",
+    "Name": "BTTask_GetTarget_0",
+    "Outer": "BT_Boss_Xibi_Story",
+    "Class": "UScriptClass'BTTask_GetTarget'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Story'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Xibi_Story:BTComposite_Sequence_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.16"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_GetTarget",
+    "Name": "BTTask_GetTarget_2",
+    "Outer": "BT_Boss_Xibi_Story",
+    "Class": "UScriptClass'BTTask_GetTarget'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Story'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Xibi_Story:BTComposite_Sequence_3'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.31"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_NewMoveTo",
+    "Name": "BTTask_NewMoveTo_0",
+    "Outer": "BT_Boss_Xibi_Story",
+    "Class": "UScriptClass'BTTask_NewMoveTo'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "bUseControllerRotationYaw": true,
+      "bStareAt": true,
+      "bStopOnOverlapNeedsUpdate": false,
+      "BlackboardKey": {
+        "SelectedKeyName": "NearlyLocation"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Story'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Xibi_Story:BTComposite_Sequence_2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.28"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_NewMoveTo",
+    "Name": "BTTask_NewMoveTo_1",
+    "Outer": "BT_Boss_Xibi_Story",
+    "Class": "UScriptClass'BTTask_NewMoveTo'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "bUseControllerRotationYaw": true,
+      "bStareAt": true,
+      "bStopOnOverlapNeedsUpdate": false,
+      "BlackboardKey": {
+        "SelectedKeyName": "NearlyLocation"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Story'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Xibi_Story:BTComposite_Sequence_11'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.19"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_NewMoveTo",
+    "Name": "BTTask_NewMoveTo_2",
+    "Outer": "BT_Boss_Xibi_Story",
+    "Class": "UScriptClass'BTTask_NewMoveTo'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "bUseControllerRotationYaw": true,
+      "bStareAt": true,
+      "bStopOnOverlapNeedsUpdate": false,
+      "BlackboardKey": {
+        "SelectedKeyName": "NearlyLocation"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Story'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Xibi_Story:BTComposite_Sequence_17'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.25"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_NewMoveTo",
+    "Name": "BTTask_NewMoveTo_3",
+    "Outer": "BT_Boss_Xibi_Story",
+    "Class": "UScriptClass'BTTask_NewMoveTo'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "bUseControllerRotationYaw": true,
+      "bStareAt": true,
+      "bStopOnOverlapNeedsUpdate": false,
+      "BlackboardKey": {
+        "SelectedKeyName": "NearlyLocation"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Story'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Xibi_Story:BTComposite_Sequence_19'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.27"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_NewMoveTo",
+    "Name": "BTTask_NewMoveTo_4",
+    "Outer": "BT_Boss_Xibi_Story",
+    "Class": "UScriptClass'BTTask_NewMoveTo'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "bOrientRotationToMovement": true,
+      "MoveTypeState": "EMoveTypeState::MTS_Run",
+      "bStopOnOverlapNeedsUpdate": false,
+      "BlackboardKey": {
+        "SelectedKeyName": "Target"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Story'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Xibi_Story:BTComposite_Sequence_20'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.29"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_NewMoveTo",
+    "Name": "BTTask_NewMoveTo_5",
+    "Outer": "BT_Boss_Xibi_Story",
+    "Class": "UScriptClass'BTTask_NewMoveTo'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "bUseControllerRotationYaw": true,
+      "bStareAt": true,
+      "bStopOnOverlapNeedsUpdate": false,
+      "BlackboardKey": {
+        "SelectedKeyName": "NearlyLocation"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Story'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Xibi_Story:BTComposite_Sequence_15'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.23"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_NewMoveTo",
+    "Name": "BTTask_NewMoveTo_6",
+    "Outer": "BT_Boss_Xibi_Story",
+    "Class": "UScriptClass'BTTask_NewMoveTo'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "bUseControllerRotationYaw": true,
+      "bStareAt": true,
+      "bStopOnOverlapNeedsUpdate": false,
+      "BlackboardKey": {
+        "SelectedKeyName": "EQSQueryLoc"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Story'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Xibi_Story:BTComposite_Sequence_21'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.30"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_NpcGetTarget",
+    "Name": "BTTask_NpcGetTarget_0",
+    "Outer": "BT_Boss_Xibi_Story",
+    "Class": "UScriptClass'BTTask_NpcGetTarget'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Story'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Xibi_Story:BTComposite_Sequence_20'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.29"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_SetTarget",
+    "Name": "BTTask_SetTarget_0",
+    "Outer": "BT_Boss_Xibi_Story",
+    "Class": "UScriptClass'BTTask_SetTarget'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Condition": {
+        "ObjectName": "TargetCondition_Distance'BT_Boss_Xibi_Story:BTTask_SetTarget_0.TargetCondition_Distance_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.132"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Story'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Xibi_Story:BTComposite_Sequence_21'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.30"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_UseSkill",
+    "Name": "BTTask_UseSkill_0",
+    "Outer": "BT_Boss_Xibi_Story",
+    "Class": "UScriptClass'BTTask_UseSkill'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ContinueTime": 7.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Story'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Xibi_Story:BTComposite_Sequence_4'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.32"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_UseSkill",
+    "Name": "BTTask_UseSkill_1",
+    "Outer": "BT_Boss_Xibi_Story",
+    "Class": "UScriptClass'BTTask_UseSkill'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SkillId": 7,
+      "NodeName": "7球形炸圈",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Story'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Rate'BT_Boss_Xibi_Story:BTComposite_Rate_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.3"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_UseSkill",
+    "Name": "BTTask_UseSkill_10",
+    "Outer": "BT_Boss_Xibi_Story",
+    "Class": "UScriptClass'BTTask_UseSkill'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SkillId": 3,
+      "ContinueTime": 1.6,
+      "NodeName": "3后跳",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Story'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Xibi_Story:BTComposite_Sequence_13'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.21"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_UseSkill",
+    "Name": "BTTask_UseSkill_11",
+    "Outer": "BT_Boss_Xibi_Story",
+    "Class": "UScriptClass'BTTask_UseSkill'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ContinueTime": 3.8,
+      "NodeName": "1鞭平砍",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Story'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Xibi_Story:BTComposite_Selector_6'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.13"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_UseSkill",
+    "Name": "BTTask_UseSkill_12",
+    "Outer": "BT_Boss_Xibi_Story",
+    "Class": "UScriptClass'BTTask_UseSkill'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SkillId": 5,
+      "ContinueTime": 7.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Story'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Xibi_Story:BTComposite_Sequence_9'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.37"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_UseSkill",
+    "Name": "BTTask_UseSkill_13",
+    "Outer": "BT_Boss_Xibi_Story",
+    "Class": "UScriptClass'BTTask_UseSkill'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SkillId": 6,
+      "ContinueTime": 7.6,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Story'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Xibi_Story:BTComposite_Sequence_10'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.18"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_UseSkill",
+    "Name": "BTTask_UseSkill_14",
+    "Outer": "BT_Boss_Xibi_Story",
+    "Class": "UScriptClass'BTTask_UseSkill'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SkillId": 6,
+      "NodeName": "6中场雷环",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Story'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Xibi_Story:BTComposite_Selector_8'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.15"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_UseSkill",
+    "Name": "BTTask_UseSkill_15",
+    "Outer": "BT_Boss_Xibi_Story",
+    "Class": "UScriptClass'BTTask_UseSkill'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SkillId": 8,
+      "ContinueTime": 7.6,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Story'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Xibi_Story:BTComposite_Sequence_12'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.20"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_UseSkill",
+    "Name": "BTTask_UseSkill_16",
+    "Outer": "BT_Boss_Xibi_Story",
+    "Class": "UScriptClass'BTTask_UseSkill'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SkillId": 2,
+      "ContinueTime": 3.8,
+      "NodeName": "2剑平砍",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Story'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Xibi_Story:BTComposite_Selector_6'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.13"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_UseSkill",
+    "Name": "BTTask_UseSkill_17",
+    "Outer": "BT_Boss_Xibi_Story",
+    "Class": "UScriptClass'BTTask_UseSkill'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SkillId": 5,
+      "NodeName": "5弹幕",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Story'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Xibi_Story:BTComposite_Selector_2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.10"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_UseSkill",
+    "Name": "BTTask_UseSkill_18",
+    "Outer": "BT_Boss_Xibi_Story",
+    "Class": "UScriptClass'BTTask_UseSkill'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SkillId": 9,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Story'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Xibi_Story:BTComposite_Selector_8'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.15"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_UseSkill",
+    "Name": "BTTask_UseSkill_2",
+    "Outer": "BT_Boss_Xibi_Story",
+    "Class": "UScriptClass'BTTask_UseSkill'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SkillId": 3,
+      "ContinueTime": 7.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Story'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Xibi_Story:BTComposite_Sequence_6'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.34"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_UseSkill",
+    "Name": "BTTask_UseSkill_20",
+    "Outer": "BT_Boss_Xibi_Story",
+    "Class": "UScriptClass'BTTask_UseSkill'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SkillId": 7,
+      "ContinueTime": 3.2,
+      "NodeName": "7球形炸圈",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Story'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Rate'BT_Boss_Xibi_Story:BTComposite_Rate_6'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.5"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_UseSkill",
+    "Name": "BTTask_UseSkill_21",
+    "Outer": "BT_Boss_Xibi_Story",
+    "Class": "UScriptClass'BTTask_UseSkill'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SkillId": 4,
+      "ContinueTime": 2.9,
+      "NodeName": "4雷柱",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Story'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Rate'BT_Boss_Xibi_Story:BTComposite_Rate_6'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.5"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_UseSkill",
+    "Name": "BTTask_UseSkill_22",
+    "Outer": "BT_Boss_Xibi_Story",
+    "Class": "UScriptClass'BTTask_UseSkill'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SkillId": 8,
+      "ContinueTime": 2.9,
+      "NodeName": "8突进",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Story'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Xibi_Story:BTComposite_Selector_10'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.8"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_UseSkill",
+    "Name": "BTTask_UseSkill_24",
+    "Outer": "BT_Boss_Xibi_Story",
+    "Class": "UScriptClass'BTTask_UseSkill'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SkillId": 5,
+      "ContinueTime": 2.9,
+      "NodeName": "5弹幕",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Story'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Xibi_Story:BTComposite_Selector_11'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.9"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_UseSkill",
+    "Name": "BTTask_UseSkill_25",
+    "Outer": "BT_Boss_Xibi_Story",
+    "Class": "UScriptClass'BTTask_UseSkill'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SkillId": 4,
+      "ContinueTime": 2.9,
+      "NodeName": "4雷柱",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Story'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Xibi_Story:BTComposite_Selector_11'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.9"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_UseSkill",
+    "Name": "BTTask_UseSkill_3",
+    "Outer": "BT_Boss_Xibi_Story",
+    "Class": "UScriptClass'BTTask_UseSkill'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SkillId": 2,
+      "ContinueTime": 7.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Story'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Xibi_Story:BTComposite_Sequence_5'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.33"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_UseSkill",
+    "Name": "BTTask_UseSkill_4",
+    "Outer": "BT_Boss_Xibi_Story",
+    "Class": "UScriptClass'BTTask_UseSkill'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SkillId": 7,
+      "ContinueTime": 7.6,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Story'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Xibi_Story:BTComposite_Sequence_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.17"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_UseSkill",
+    "Name": "BTTask_UseSkill_5",
+    "Outer": "BT_Boss_Xibi_Story",
+    "Class": "UScriptClass'BTTask_UseSkill'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SkillId": 4,
+      "ContinueTime": 7.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Story'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Xibi_Story:BTComposite_Sequence_8'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.36"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_UseSkill",
+    "Name": "BTTask_UseSkill_6",
+    "Outer": "BT_Boss_Xibi_Story",
+    "Class": "UScriptClass'BTTask_UseSkill'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SkillId": 9,
+      "ContinueTime": 7.6,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Story'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Xibi_Story:BTComposite_Sequence_14'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.22"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_UseSkill",
+    "Name": "BTTask_UseSkill_7",
+    "Outer": "BT_Boss_Xibi_Story",
+    "Class": "UScriptClass'BTTask_UseSkill'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SkillId": 4,
+      "NodeName": "4雷柱",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Story'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Rate'BT_Boss_Xibi_Story:BTComposite_Rate_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.3"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_UseSkill",
+    "Name": "BTTask_UseSkill_8",
+    "Outer": "BT_Boss_Xibi_Story",
+    "Class": "UScriptClass'BTTask_UseSkill'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SkillId": 10,
+      "ContinueTime": 7.6,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Story'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Xibi_Story:BTComposite_Sequence_16'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.24"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_1",
+    "Outer": "BT_Boss_Xibi_Story",
+    "Class": "UScriptClass'BTTask_Wait'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Story'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Xibi_Story:BTComposite_Selector_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.7"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_10",
+    "Outer": "BT_Boss_Xibi_Story",
+    "Class": "UScriptClass'BTTask_Wait'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "WaitTime": 0.5,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Story'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Xibi_Story:BTComposite_Sequence_12'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.20"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_11",
+    "Outer": "BT_Boss_Xibi_Story",
+    "Class": "UScriptClass'BTTask_Wait'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "WaitTime": 0.5,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Story'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Xibi_Story:BTComposite_Sequence_14'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.22"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_12",
+    "Outer": "BT_Boss_Xibi_Story",
+    "Class": "UScriptClass'BTTask_Wait'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "WaitTime": 0.5,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Story'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Xibi_Story:BTComposite_Sequence_16'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.24"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_13",
+    "Outer": "BT_Boss_Xibi_Story",
+    "Class": "UScriptClass'BTTask_Wait'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "WaitTime": 1.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Story'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Xibi_Story:BTComposite_Selector_5'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.12"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_14",
+    "Outer": "BT_Boss_Xibi_Story",
+    "Class": "UScriptClass'BTTask_Wait'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "WaitTime": 1.0,
+      "RandomDeviation": 0.5,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Story'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Xibi_Story:BTComposite_Sequence_19'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.27"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_2",
+    "Outer": "BT_Boss_Xibi_Story",
+    "Class": "UScriptClass'BTTask_Wait'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "WaitTime": 1.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Story'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Xibi_Story:BTComposite_Sequence_7'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.35"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_3",
+    "Outer": "BT_Boss_Xibi_Story",
+    "Class": "UScriptClass'BTTask_Wait'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "WaitTime": 0.5,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Story'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Xibi_Story:BTComposite_Sequence_8'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.36"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_4",
+    "Outer": "BT_Boss_Xibi_Story",
+    "Class": "UScriptClass'BTTask_Wait'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "WaitTime": 0.5,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Story'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Xibi_Story:BTComposite_Sequence_9'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.37"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_5",
+    "Outer": "BT_Boss_Xibi_Story",
+    "Class": "UScriptClass'BTTask_Wait'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "WaitTime": 0.5,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Story'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Xibi_Story:BTComposite_Sequence_6'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.34"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_6",
+    "Outer": "BT_Boss_Xibi_Story",
+    "Class": "UScriptClass'BTTask_Wait'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "WaitTime": 0.5,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Story'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Xibi_Story:BTComposite_Sequence_5'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.33"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_7",
+    "Outer": "BT_Boss_Xibi_Story",
+    "Class": "UScriptClass'BTTask_Wait'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "WaitTime": 0.5,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Story'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Xibi_Story:BTComposite_Sequence_4'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.32"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_8",
+    "Outer": "BT_Boss_Xibi_Story",
+    "Class": "UScriptClass'BTTask_Wait'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "WaitTime": 0.5,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Story'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Xibi_Story:BTComposite_Sequence_10'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.18"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_9",
+    "Outer": "BT_Boss_Xibi_Story",
+    "Class": "UScriptClass'BTTask_Wait'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "WaitTime": 0.5,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Story'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Xibi_Story:BTComposite_Sequence_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Story.17"
+      }
+    }
+  },
+  {
+    "Type": "TargetCondition_Distance",
+    "Name": "TargetCondition_Distance_0",
+    "Outer": "BTTask_SetTarget_0",
+    "Class": "UScriptClass'TargetCondition_Distance'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Distance": 2000.0
+    }
+  }
+]

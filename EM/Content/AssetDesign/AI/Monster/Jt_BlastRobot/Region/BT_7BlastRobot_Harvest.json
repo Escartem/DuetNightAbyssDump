@@ -1,0 +1,250 @@
+[
+  {
+    "Type": "BehaviorTree",
+    "Name": "BT_7BlastRobot_Harvest",
+    "Class": "UScriptClass'BehaviorTree'",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "RootNode": {
+        "ObjectName": "BTComposite_Selector'BT_7BlastRobot_Harvest:BTComposite_Selector_2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_BlastRobot/Region/BT_7BlastRobot_Harvest.2"
+      },
+      "BlackboardAsset": {
+        "ObjectName": "BlackboardData'BB_Mon_Parent_Melee'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Parent/BB_Mon_Parent_Melee.0"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_14",
+    "Outer": "BT_7BlastRobot_Harvest",
+    "Class": "UScriptClass'BTComposite_Selector'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait'BT_7BlastRobot_Harvest:BTTask_Wait_1'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_BlastRobot/Region/BT_7BlastRobot_Harvest.9"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_7BlastRobot_Harvest'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_BlastRobot/Region/BT_7BlastRobot_Harvest.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_7BlastRobot_Harvest:BTComposite_Selector_2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_BlastRobot/Region/BT_7BlastRobot_Harvest.2"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_2",
+    "Outer": "BT_7BlastRobot_Harvest",
+    "Class": "UScriptClass'BTComposite_Selector'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_7BlastRobot_Harvest:BTComposite_Sequence_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_BlastRobot/Region/BT_7BlastRobot_Harvest.3"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_7BlastRobot_Harvest:BTDecorator_Blackboard_7'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_BlastRobot/Region/BT_7BlastRobot_Harvest.5"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector'BT_7BlastRobot_Harvest:BTComposite_Selector_14'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_BlastRobot/Region/BT_7BlastRobot_Harvest.1"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_7BlastRobot_Harvest:BTDecorator_Blackboard_31'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_BlastRobot/Region/BT_7BlastRobot_Harvest.4"
+            }
+          ],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_7BlastRobot_Harvest'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_BlastRobot/Region/BT_7BlastRobot_Harvest.0"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_0",
+    "Outer": "BT_7BlastRobot_Harvest",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait'BT_7BlastRobot_Harvest:BTTask_Wait_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_BlastRobot/Region/BT_7BlastRobot_Harvest.8"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_UseSkill'BT_7BlastRobot_Harvest:BTTask_UseSkill_1'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_BlastRobot/Region/BT_7BlastRobot_Harvest.7"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "Services": [
+        {
+          "ObjectName": "BTService_EnemyVision'BT_7BlastRobot_Harvest:BTService_EnemyVision_1'",
+          "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_BlastRobot/Region/BT_7BlastRobot_Harvest.6"
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_7BlastRobot_Harvest'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_BlastRobot/Region/BT_7BlastRobot_Harvest.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_7BlastRobot_Harvest:BTComposite_Selector_2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_BlastRobot/Region/BT_7BlastRobot_Harvest.2"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_31",
+    "Outer": "BT_7BlastRobot_Harvest",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "IntValue": 1,
+      "CachedDescription": "ActionMode 等于 Hitted",
+      "BlackboardKey": {
+        "SelectedKeyName": "ActionMode"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::Self",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_7BlastRobot_Harvest'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_BlastRobot/Region/BT_7BlastRobot_Harvest.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_7BlastRobot_Harvest:BTComposite_Selector_2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_BlastRobot/Region/BT_7BlastRobot_Harvest.2"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_7",
+    "Outer": "BT_7BlastRobot_Harvest",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "CachedDescription": "ActionMode 等于 Active",
+      "BlackboardKey": {
+        "SelectedKeyName": "ActionMode"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::Self",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_7BlastRobot_Harvest'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_BlastRobot/Region/BT_7BlastRobot_Harvest.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_7BlastRobot_Harvest:BTComposite_Selector_2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_BlastRobot/Region/BT_7BlastRobot_Harvest.2"
+      }
+    }
+  },
+  {
+    "Type": "BTService_EnemyVision",
+    "Name": "BTService_EnemyVision_1",
+    "Outer": "BT_7BlastRobot_Harvest",
+    "Class": "UScriptClass'BTService_EnemyVision'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "FVisionDistance": 4000.0,
+      "FVisionAngle": 360.0,
+      "bConsiderDefCore": true,
+      "Interval": 0.1,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_7BlastRobot_Harvest'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_BlastRobot/Region/BT_7BlastRobot_Harvest.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_7BlastRobot_Harvest:BTComposite_Sequence_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_BlastRobot/Region/BT_7BlastRobot_Harvest.3"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_UseSkill",
+    "Name": "BTTask_UseSkill_1",
+    "Outer": "BT_7BlastRobot_Harvest",
+    "Class": "UScriptClass'BTTask_UseSkill'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_7BlastRobot_Harvest'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_BlastRobot/Region/BT_7BlastRobot_Harvest.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_7BlastRobot_Harvest:BTComposite_Sequence_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_BlastRobot/Region/BT_7BlastRobot_Harvest.3"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_0",
+    "Outer": "BT_7BlastRobot_Harvest",
+    "Class": "UScriptClass'BTTask_Wait'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "WaitTime": 1.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_7BlastRobot_Harvest'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_BlastRobot/Region/BT_7BlastRobot_Harvest.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_7BlastRobot_Harvest:BTComposite_Sequence_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_BlastRobot/Region/BT_7BlastRobot_Harvest.3"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_1",
+    "Outer": "BT_7BlastRobot_Harvest",
+    "Class": "UScriptClass'BTTask_Wait'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_7BlastRobot_Harvest'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_BlastRobot/Region/BT_7BlastRobot_Harvest.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_7BlastRobot_Harvest:BTComposite_Selector_14'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_BlastRobot/Region/BT_7BlastRobot_Harvest.1"
+      }
+    }
+  }
+]

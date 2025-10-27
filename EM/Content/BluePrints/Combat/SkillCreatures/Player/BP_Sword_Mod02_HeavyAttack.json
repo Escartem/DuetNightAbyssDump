@@ -1,0 +1,473 @@
+[
+  {
+    "Type": "Function",
+    "Name": "Explore",
+    "Outer": "BP_Sword_Mod02_HeavyAttack_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_Battle___",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'BP_Battle_C'",
+          "ObjectPath": "EM/Content/BluePrints/Combat/BP_Battle.8"
+        }
+      },
+      {
+        "Type": "InterfaceProperty",
+        "Name": "CallFunc_GetEid_Source_CastInput",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "ConstParm | UObjectWrapper",
+        "InterfaceClass": {
+          "ObjectName": "Class'EffectSourceInterface'",
+          "ObjectPath": "/Script/EM"
+        }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_GetEid_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BP_Sword_Mod02_HeavyAttack_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Super": {
+      "ObjectName": "BlueprintGeneratedClass'BP_SkillCreature_C'",
+      "ObjectPath": "EM/Content/BluePrints/Combat/SkillCreatures/BP_SkillCreature.3"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BP_Sword_Mod02_HeavyAttack_C:SimpleConstructionScript_0'",
+        "ObjectPath": "EM/Content/BluePrints/Combat/SkillCreatures/Player/BP_Sword_Mod02_HeavyAttack.13"
+      },
+      "InheritableComponentHandler": {
+        "ObjectName": "InheritableComponentHandler'BP_Sword_Mod02_HeavyAttack_C:InheritableComponentHandler'",
+        "ObjectPath": "EM/Content/BluePrints/Combat/SkillCreatures/Player/BP_Sword_Mod02_HeavyAttack.4"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "BlueprintGeneratedClass'BP_SkillCreature_C'",
+      "ObjectPath": "EM/Content/BluePrints/Combat/SkillCreatures/BP_SkillCreature.3"
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'BP_Sword_Mod02_HeavyAttack_C:Explore'",
+        "ObjectPath": "EM/Content/BluePrints/Combat/SkillCreatures/Player/BP_Sword_Mod02_HeavyAttack.0"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "WipCharm1",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'SceneComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Weapon",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'SceneComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "StaticMesh",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'StaticMeshComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "Hited",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AimDirection",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 12,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "Struct": {
+          "ObjectName": "ScriptStruct'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AimPosition",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 12,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "Struct": {
+          "ObjectName": "ScriptStruct'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CanRot",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "PauseStoped",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "TempMoveCD",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance"
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "TargetLocation",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 12,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "Struct": {
+          "ObjectName": "ScriptStruct'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      }
+    ],
+    "FuncMap": {
+      "Explore": {
+        "ObjectName": "Function'BP_Sword_Mod02_HeavyAttack_C:Explore'",
+        "ObjectPath": "EM/Content/BluePrints/Combat/SkillCreatures/Player/BP_Sword_Mod02_HeavyAttack.0"
+      }
+    },
+    "ClassFlags": "CLASS_Config | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BP_Sword_Mod02_HeavyAttack_C'Default__BP_Sword_Mod02_HeavyAttack_C'",
+      "ObjectPath": "EM/Content/BluePrints/Combat/SkillCreatures/Player/BP_Sword_Mod02_HeavyAttack.2"
+    }
+  },
+  {
+    "Type": "BP_Sword_Mod02_HeavyAttack_C",
+    "Name": "Default__BP_Sword_Mod02_HeavyAttack_C",
+    "Class": "BlueprintGeneratedClass'EM/Content/BluePrints/Combat/SkillCreatures/Player/BP_Sword_Mod02_HeavyAttack.BP_Sword_Mod02_HeavyAttack_C'",
+    "Template": {
+      "ObjectName": "BP_SkillCreature_C'Default__BP_SkillCreature_C'",
+      "ObjectPath": "EM/Content/BluePrints/Combat/SkillCreatures/BP_SkillCreature.4"
+    },
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "AimDirection": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "AimPosition": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "TargetLocation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "FXComponent": {
+        "ObjectName": "BP_FXComponent_C'Default__BP_Sword_Mod02_HeavyAttack_C:BP_FXComponent'",
+        "ObjectPath": "EM/Content/BluePrints/Combat/SkillCreatures/Player/BP_Sword_Mod02_HeavyAttack.3"
+      },
+      "RemoteRole": "ROLE_SimulatedProxy",
+      "RootComponent": {
+        "ObjectName": "SceneComponent'Default__BP_Sword_Mod02_HeavyAttack_C:RootComponent'",
+        "ObjectPath": "EM/Content/BluePrints/Combat/SkillCreatures/Player/BP_Sword_Mod02_HeavyAttack.8"
+      }
+    }
+  },
+  {
+    "Type": "BP_FXComponent_C",
+    "Name": "BP_FXComponent",
+    "Outer": "Default__BP_Sword_Mod02_HeavyAttack_C",
+    "Class": "BlueprintGeneratedClass'EM/Content/BluePrints/Char/BP_FXComponent.BP_FXComponent_C'",
+    "Template": {
+      "ObjectName": "BP_FXComponent_C'Default__BP_SkillCreature_C:BP_FXComponent'",
+      "ObjectPath": "EM/Content/BluePrints/Combat/SkillCreatures/BP_SkillCreature.5"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "InheritableComponentHandler",
+    "Name": "InheritableComponentHandler",
+    "Outer": "BP_Sword_Mod02_HeavyAttack_C",
+    "Class": "UScriptClass'InheritableComponentHandler'",
+    "Flags": "RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Outer": "BP_Sword_Mod02_HeavyAttack_C",
+    "Class": "UScriptClass'SceneComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "Weapon_GEN_VARIABLE",
+    "Outer": "BP_Sword_Mod02_HeavyAttack_C",
+    "Class": "UScriptClass'SceneComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "RelativeRotation": {
+        "Pitch": -25.658014,
+        "Yaw": 16.103321,
+        "Roll": -33.691116
+      },
+      "RelativeScale3D": {
+        "X": 1.5,
+        "Y": 1.5,
+        "Z": 1.5
+      }
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "WipCharm1_GEN_VARIABLE",
+    "Outer": "BP_Sword_Mod02_HeavyAttack_C",
+    "Class": "UScriptClass'SceneComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "RelativeRotation": {
+        "Pitch": 21.468355,
+        "Yaw": 193.12553,
+        "Roll": -147.49892
+      },
+      "RelativeScale3D": {
+        "X": 1.5,
+        "Y": 1.5,
+        "Z": 1.5
+      }
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "RootComponent",
+    "Outer": "Default__BP_Sword_Mod02_HeavyAttack_C",
+    "Class": "UScriptClass'SceneComponent'",
+    "Template": {
+      "ObjectName": "SceneComponent'Default__BP_SkillCreature_C:RootComponent'",
+      "ObjectPath": "EM/Content/BluePrints/Combat/SkillCreatures/BP_SkillCreature.7"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BP_Sword_Mod02_HeavyAttack_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "EM/Content/BluePrints/Combat/SkillCreatures/Player/BP_Sword_Mod02_HeavyAttack.5"
+      },
+      "VariableGuid": "D3AFF898-4017F8AF-3E9F229F-3F7B6F10",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_2",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'StaticMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "StaticMeshComponent'BP_Sword_Mod02_HeavyAttack_C:StaticMesh_GEN_VARIABLE'",
+        "ObjectPath": "EM/Content/BluePrints/Combat/SkillCreatures/Player/BP_Sword_Mod02_HeavyAttack.14"
+      },
+      "ParentComponentOrVariableName": "RootComponent",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "986D16AE-4D473AE0-43AEF8BF-BDD97A5E",
+      "InternalVariableName": "StaticMesh"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_4",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BP_Sword_Mod02_HeavyAttack_C:Weapon_GEN_VARIABLE'",
+        "ObjectPath": "EM/Content/BluePrints/Combat/SkillCreatures/Player/BP_Sword_Mod02_HeavyAttack.6"
+      },
+      "ParentComponentOrVariableName": "RootComponent",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "B68046C6-4FC35BEF-49CC1AAA-CD1F3D7B",
+      "InternalVariableName": "Weapon"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_5",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BP_Sword_Mod02_HeavyAttack_C:WipCharm1_GEN_VARIABLE'",
+        "ObjectPath": "EM/Content/BluePrints/Combat/SkillCreatures/Player/BP_Sword_Mod02_HeavyAttack.7"
+      },
+      "ParentComponentOrVariableName": "RootComponent",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "673C02DE-4B93ED82-D0937780-FC387158",
+      "InternalVariableName": "WipCharm1"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Outer": "BP_Sword_Mod02_HeavyAttack_C",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_Sword_Mod02_HeavyAttack_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "EM/Content/BluePrints/Combat/SkillCreatures/Player/BP_Sword_Mod02_HeavyAttack.10"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_Sword_Mod02_HeavyAttack_C:SimpleConstructionScript_0.SCS_Node_4'",
+          "ObjectPath": "EM/Content/BluePrints/Combat/SkillCreatures/Player/BP_Sword_Mod02_HeavyAttack.11"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_Sword_Mod02_HeavyAttack_C:SimpleConstructionScript_0.SCS_Node_5'",
+          "ObjectPath": "EM/Content/BluePrints/Combat/SkillCreatures/Player/BP_Sword_Mod02_HeavyAttack.12"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_Sword_Mod02_HeavyAttack_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "EM/Content/BluePrints/Combat/SkillCreatures/Player/BP_Sword_Mod02_HeavyAttack.10"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_Sword_Mod02_HeavyAttack_C:SimpleConstructionScript_0.SCS_Node_4'",
+          "ObjectPath": "EM/Content/BluePrints/Combat/SkillCreatures/Player/BP_Sword_Mod02_HeavyAttack.11"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_Sword_Mod02_HeavyAttack_C:SimpleConstructionScript_0.SCS_Node_5'",
+          "ObjectPath": "EM/Content/BluePrints/Combat/SkillCreatures/Player/BP_Sword_Mod02_HeavyAttack.12"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BP_Sword_Mod02_HeavyAttack_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "EM/Content/BluePrints/Combat/SkillCreatures/Player/BP_Sword_Mod02_HeavyAttack.9"
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "StaticMesh_GEN_VARIABLE",
+    "Outer": "BP_Sword_Mod02_HeavyAttack_C",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "BodyInstance": {
+        "ObjectType": "ECC_WorldStatic",
+        "CollisionEnabled": "ECollisionEnabled::NoCollision",
+        "CollisionProfileName": "NoCollision",
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "Visibility",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Camera",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "TraceExceptChar",
+              "Response": "ECR_Ignore"
+            }
+          ]
+        }
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": 0.0,
+        "Roll": 60.0
+      },
+      "RelativeScale3D": {
+        "X": 4.0,
+        "Y": 4.0,
+        "Z": 4.0
+      }
+    }
+  }
+]

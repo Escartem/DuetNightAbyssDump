@@ -1,0 +1,752 @@
+[
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_Explore_TiaoXiangTing_InOrder",
+    "Outer": "Explore_TiaoXiangTing_InOrder_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "___int_Loop_Counter_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Add_IntInt_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "K2Node_MakeArray_Array",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "ReferenceParm | ContainsInstancedReference",
+        "Inner": {
+          "Type": "ObjectProperty",
+          "Name": "K2Node_MakeArray_Array",
+          "Flags": "RF_Public",
+          "ElementSize": 8,
+          "PropertyFlags": "InstancedReference",
+          "PropertyClass": {
+            "ObjectName": "Class'StaticCreatorComponent'",
+            "ObjectPath": "/Script/EM"
+          }
+        }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "K2Node_Event_CreatorId",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "K2Node_Event_StateId",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "K2Node_Event_LeaveStateId",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_CheckXiangTaiIndex_bSuccess",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_CheckXiangTaiIndex_bError",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_CheckXiangTaiIndex_bWait",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Array_Length_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Less_IntInt_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "___int_Array_Index_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "K2Node_MakeArray_Array_1",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "ReferenceParm | ContainsInstancedReference",
+        "Inner": {
+          "Type": "ObjectProperty",
+          "Name": "K2Node_MakeArray_Array_1",
+          "Flags": "RF_Public",
+          "ElementSize": 8,
+          "PropertyFlags": "InstancedReference",
+          "PropertyClass": {
+            "ObjectName": "Class'StaticCreatorComponent'",
+            "ObjectPath": "/Script/EM"
+          }
+        }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Array_Get_Item",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_Map_Find_Value",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'StaticCreatorComponent'",
+          "ObjectPath": "/Script/EM"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Map_Find_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction | FUNC_HasDefaults"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnExploreMechanismStateChange",
+    "Outer": "Explore_TiaoXiangTing_InOrder_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "SuperStruct": {
+      "ObjectName": "Function'ExploreStaticCreator:OnExploreMechanismStateChange'",
+      "ObjectPath": "/Script/EM"
+    },
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "CreatorId",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "StateId",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "LeaveStateId",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "ReceiveOnExploreGroupComplete",
+    "Outer": "Explore_TiaoXiangTing_InOrder_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "SuperStruct": {
+      "ObjectName": "Function'ExploreStaticCreator:ReceiveOnExploreGroupComplete'",
+      "ObjectPath": "/Script/EM"
+    },
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "ReceiveOnExploreGroupActive",
+    "Outer": "Explore_TiaoXiangTing_InOrder_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "SuperStruct": {
+      "ObjectName": "Function'ExploreStaticCreator:ReceiveOnExploreGroupActive'",
+      "ObjectPath": "/Script/EM"
+    },
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "CheckXiangTaiIndex",
+    "Outer": "Explore_TiaoXiangTing_InOrder_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "CreatorId",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "StateId",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "bSuccess",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "PropertyFlags": "Parm | OutParm",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "bError",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "PropertyFlags": "Parm | OutParm",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "bWait",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "PropertyFlags": "Parm | OutParm",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Array_Length_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_GreaterEqual_IntInt_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Add_IntInt_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_EqualEqual_IntInt_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_EqualEqual_IntInt_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_HasOutParms | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "Explore_TiaoXiangTing_InOrder_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'Explore_TiaoXiangTing_InOrder_C:SimpleConstructionScript_0'",
+        "ObjectPath": "EM/Content/AssetDesign/Level/BluePrints/ExploreGroup/Explore_East01/East01/Explore_TiaoXiangTing_InOrder.17"
+      },
+      "UberGraphFunction": {
+        "ObjectName": "Function'Explore_TiaoXiangTing_InOrder_C:ExecuteUbergraph_Explore_TiaoXiangTing_InOrder'",
+        "ObjectPath": "EM/Content/AssetDesign/Level/BluePrints/ExploreGroup/Explore_East01/East01/Explore_TiaoXiangTing_InOrder.0"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'ExploreStaticCreator'",
+      "ObjectPath": "/Script/EM"
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'Explore_TiaoXiangTing_InOrder_C:CheckXiangTaiIndex'",
+        "ObjectPath": "EM/Content/AssetDesign/Level/BluePrints/ExploreGroup/Explore_East01/East01/Explore_TiaoXiangTing_InOrder.4"
+      },
+      {
+        "ObjectName": "Function'Explore_TiaoXiangTing_InOrder_C:ReceiveOnExploreGroupActive'",
+        "ObjectPath": "EM/Content/AssetDesign/Level/BluePrints/ExploreGroup/Explore_East01/East01/Explore_TiaoXiangTing_InOrder.3"
+      },
+      {
+        "ObjectName": "Function'Explore_TiaoXiangTing_InOrder_C:ReceiveOnExploreGroupComplete'",
+        "ObjectPath": "EM/Content/AssetDesign/Level/BluePrints/ExploreGroup/Explore_East01/East01/Explore_TiaoXiangTing_InOrder.2"
+      },
+      {
+        "ObjectName": "Function'Explore_TiaoXiangTing_InOrder_C:OnExploreMechanismStateChange'",
+        "ObjectPath": "EM/Content/AssetDesign/Level/BluePrints/ExploreGroup/Explore_East01/East01/Explore_TiaoXiangTing_InOrder.1"
+      },
+      {
+        "ObjectName": "Function'Explore_TiaoXiangTing_InOrder_C:ExecuteUbergraph_Explore_TiaoXiangTing_InOrder'",
+        "ObjectPath": "EM/Content/AssetDesign/Level/BluePrints/ExploreGroup/Explore_East01/East01/Explore_TiaoXiangTing_InOrder.0"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient",
+        "Struct": {
+          "ObjectName": "ScriptStruct'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "xiangting",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'BP_StaticCreatorComponent_C'",
+          "ObjectPath": "EM/Content/BluePrints/Item/ExploreGroup/BP_StaticCreatorComponent.3"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Xiangtai3",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'BP_StaticCreatorComponent_C'",
+          "ObjectPath": "EM/Content/BluePrints/Item/ExploreGroup/BP_StaticCreatorComponent.3"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Xiangtai2",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'BP_StaticCreatorComponent_C'",
+          "ObjectPath": "EM/Content/BluePrints/Item/ExploreGroup/BP_StaticCreatorComponent.3"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Xiangtai1",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'BP_StaticCreatorComponent_C'",
+          "ObjectPath": "EM/Content/BluePrints/Item/ExploreGroup/BP_StaticCreatorComponent.3"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "DefaultSceneRoot",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'SceneComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "XiangTaiList",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Edit | BlueprintVisible",
+        "Inner": {
+          "Type": "IntProperty",
+          "Name": "XiangTaiList",
+          "Flags": "RF_Public",
+          "ElementSize": 4
+        }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CurrentXiangTai",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance"
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "ActiveStateId",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "Edit | BlueprintVisible"
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "NewVar_0",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance"
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_Explore_TiaoXiangTing_InOrder": {
+        "ObjectName": "Function'Explore_TiaoXiangTing_InOrder_C:ExecuteUbergraph_Explore_TiaoXiangTing_InOrder'",
+        "ObjectPath": "EM/Content/AssetDesign/Level/BluePrints/ExploreGroup/Explore_East01/East01/Explore_TiaoXiangTing_InOrder.0"
+      },
+      "OnExploreMechanismStateChange": {
+        "ObjectName": "Function'Explore_TiaoXiangTing_InOrder_C:OnExploreMechanismStateChange'",
+        "ObjectPath": "EM/Content/AssetDesign/Level/BluePrints/ExploreGroup/Explore_East01/East01/Explore_TiaoXiangTing_InOrder.1"
+      },
+      "ReceiveOnExploreGroupComplete": {
+        "ObjectName": "Function'Explore_TiaoXiangTing_InOrder_C:ReceiveOnExploreGroupComplete'",
+        "ObjectPath": "EM/Content/AssetDesign/Level/BluePrints/ExploreGroup/Explore_East01/East01/Explore_TiaoXiangTing_InOrder.2"
+      },
+      "ReceiveOnExploreGroupActive": {
+        "ObjectName": "Function'Explore_TiaoXiangTing_InOrder_C:ReceiveOnExploreGroupActive'",
+        "ObjectPath": "EM/Content/AssetDesign/Level/BluePrints/ExploreGroup/Explore_East01/East01/Explore_TiaoXiangTing_InOrder.3"
+      },
+      "CheckXiangTaiIndex": {
+        "ObjectName": "Function'Explore_TiaoXiangTing_InOrder_C:CheckXiangTaiIndex'",
+        "ObjectPath": "EM/Content/AssetDesign/Level/BluePrints/ExploreGroup/Explore_East01/East01/Explore_TiaoXiangTing_InOrder.4"
+      }
+    },
+    "ClassFlags": "CLASS_Config | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "Explore_TiaoXiangTing_InOrder_C'Default__Explore_TiaoXiangTing_InOrder_C'",
+      "ObjectPath": "EM/Content/AssetDesign/Level/BluePrints/ExploreGroup/Explore_East01/East01/Explore_TiaoXiangTing_InOrder.6"
+    }
+  },
+  {
+    "Type": "Explore_TiaoXiangTing_InOrder_C",
+    "Name": "Default__Explore_TiaoXiangTing_InOrder_C",
+    "Class": "BlueprintGeneratedClass'EM/Content/AssetDesign/Level/BluePrints/ExploreGroup/Explore_East01/East01/Explore_TiaoXiangTing_InOrder.Explore_TiaoXiangTing_InOrder_C'",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "UberGraphFrame": {},
+      "ActiveStateId": 1210023
+    }
+  },
+  {
+    "Type": "BP_StaticCreatorComponent_C",
+    "Name": "Xiangtai1_GEN_VARIABLE",
+    "Outer": "Explore_TiaoXiangTing_InOrder_C",
+    "Class": "BlueprintGeneratedClass'EM/Content/BluePrints/Item/ExploreGroup/BP_StaticCreatorComponent.BP_StaticCreatorComponent_C'",
+    "Template": {
+      "ObjectName": "BP_StaticCreatorComponent_C'Default__BP_StaticCreatorComponent_C'",
+      "ObjectPath": "EM/Content/BluePrints/Item/ExploreGroup/BP_StaticCreatorComponent.4"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "UnitType": "Mechanism",
+      "UnitId": 121002
+    }
+  },
+  {
+    "Type": "BP_StaticCreatorComponent_C",
+    "Name": "Xiangtai2_GEN_VARIABLE",
+    "Outer": "Explore_TiaoXiangTing_InOrder_C",
+    "Class": "BlueprintGeneratedClass'EM/Content/BluePrints/Item/ExploreGroup/BP_StaticCreatorComponent.BP_StaticCreatorComponent_C'",
+    "Template": {
+      "ObjectName": "BP_StaticCreatorComponent_C'Default__BP_StaticCreatorComponent_C'",
+      "ObjectPath": "EM/Content/BluePrints/Item/ExploreGroup/BP_StaticCreatorComponent.4"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "UnitType": "Mechanism",
+      "UnitId": 121002
+    }
+  },
+  {
+    "Type": "BP_StaticCreatorComponent_C",
+    "Name": "Xiangtai3_GEN_VARIABLE",
+    "Outer": "Explore_TiaoXiangTing_InOrder_C",
+    "Class": "BlueprintGeneratedClass'EM/Content/BluePrints/Item/ExploreGroup/BP_StaticCreatorComponent.BP_StaticCreatorComponent_C'",
+    "Template": {
+      "ObjectName": "BP_StaticCreatorComponent_C'Default__BP_StaticCreatorComponent_C'",
+      "ObjectPath": "EM/Content/BluePrints/Item/ExploreGroup/BP_StaticCreatorComponent.4"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "UnitType": "Mechanism",
+      "UnitId": 121002
+    }
+  },
+  {
+    "Type": "BP_StaticCreatorComponent_C",
+    "Name": "xiangting_GEN_VARIABLE",
+    "Outer": "Explore_TiaoXiangTing_InOrder_C",
+    "Class": "BlueprintGeneratedClass'EM/Content/BluePrints/Item/ExploreGroup/BP_StaticCreatorComponent.BP_StaticCreatorComponent_C'",
+    "Template": {
+      "ObjectName": "BP_StaticCreatorComponent_C'Default__BP_StaticCreatorComponent_C'",
+      "ObjectPath": "EM/Content/BluePrints/Item/ExploreGroup/BP_StaticCreatorComponent.4"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "UnitType": "Mechanism",
+      "UnitId": 70105
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Outer": "Explore_TiaoXiangTing_InOrder_C",
+    "Class": "UScriptClass'SceneComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'Explore_TiaoXiangTing_InOrder_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "EM/Content/AssetDesign/Level/BluePrints/ExploreGroup/Explore_East01/East01/Explore_TiaoXiangTing_InOrder.11"
+      },
+      "ChildNodes": [
+        {
+          "ObjectName": "SCS_Node'Explore_TiaoXiangTing_InOrder_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "EM/Content/AssetDesign/Level/BluePrints/ExploreGroup/Explore_East01/East01/Explore_TiaoXiangTing_InOrder.13"
+        },
+        {
+          "ObjectName": "SCS_Node'Explore_TiaoXiangTing_InOrder_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "EM/Content/AssetDesign/Level/BluePrints/ExploreGroup/Explore_East01/East01/Explore_TiaoXiangTing_InOrder.14"
+        },
+        {
+          "ObjectName": "SCS_Node'Explore_TiaoXiangTing_InOrder_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectPath": "EM/Content/AssetDesign/Level/BluePrints/ExploreGroup/Explore_East01/East01/Explore_TiaoXiangTing_InOrder.15"
+        },
+        {
+          "ObjectName": "SCS_Node'Explore_TiaoXiangTing_InOrder_C:SimpleConstructionScript_0.SCS_Node_4'",
+          "ObjectPath": "EM/Content/AssetDesign/Level/BluePrints/ExploreGroup/Explore_East01/East01/Explore_TiaoXiangTing_InOrder.16"
+        }
+      ],
+      "VariableGuid": "72ECD67A-4426AA50-BB1E4DAB-768984A9",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_1",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "BlueprintGeneratedClass'BP_StaticCreatorComponent_C'",
+        "ObjectPath": "EM/Content/BluePrints/Item/ExploreGroup/BP_StaticCreatorComponent.3"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "BP_StaticCreatorComponent_C'Explore_TiaoXiangTing_InOrder_C:Xiangtai1_GEN_VARIABLE'",
+        "ObjectPath": "EM/Content/AssetDesign/Level/BluePrints/ExploreGroup/Explore_East01/East01/Explore_TiaoXiangTing_InOrder.7"
+      },
+      "VariableGuid": "56BF32B3-41430A54-B69D6E9F-3887BA52",
+      "InternalVariableName": "Xiangtai1"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_2",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "BlueprintGeneratedClass'BP_StaticCreatorComponent_C'",
+        "ObjectPath": "EM/Content/BluePrints/Item/ExploreGroup/BP_StaticCreatorComponent.3"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "BP_StaticCreatorComponent_C'Explore_TiaoXiangTing_InOrder_C:Xiangtai2_GEN_VARIABLE'",
+        "ObjectPath": "EM/Content/AssetDesign/Level/BluePrints/ExploreGroup/Explore_East01/East01/Explore_TiaoXiangTing_InOrder.8"
+      },
+      "VariableGuid": "EF219CE8-486963FB-CFB9A9A1-C8CA63AB",
+      "InternalVariableName": "Xiangtai2"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_3",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "BlueprintGeneratedClass'BP_StaticCreatorComponent_C'",
+        "ObjectPath": "EM/Content/BluePrints/Item/ExploreGroup/BP_StaticCreatorComponent.3"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "BP_StaticCreatorComponent_C'Explore_TiaoXiangTing_InOrder_C:Xiangtai3_GEN_VARIABLE'",
+        "ObjectPath": "EM/Content/AssetDesign/Level/BluePrints/ExploreGroup/Explore_East01/East01/Explore_TiaoXiangTing_InOrder.9"
+      },
+      "VariableGuid": "7F5D6EA2-464D02D1-306A4787-F34B7F02",
+      "InternalVariableName": "Xiangtai3"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_4",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "BlueprintGeneratedClass'BP_StaticCreatorComponent_C'",
+        "ObjectPath": "EM/Content/BluePrints/Item/ExploreGroup/BP_StaticCreatorComponent.3"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "BP_StaticCreatorComponent_C'Explore_TiaoXiangTing_InOrder_C:xiangting_GEN_VARIABLE'",
+        "ObjectPath": "EM/Content/AssetDesign/Level/BluePrints/ExploreGroup/Explore_East01/East01/Explore_TiaoXiangTing_InOrder.10"
+      },
+      "VariableGuid": "9155150D-417E3317-78A1AB95-2C2E1300",
+      "InternalVariableName": "xiangting"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Outer": "Explore_TiaoXiangTing_InOrder_C",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node'Explore_TiaoXiangTing_InOrder_C:SimpleConstructionScript_0.SCS_Node_0'",
+          "ObjectPath": "EM/Content/AssetDesign/Level/BluePrints/ExploreGroup/Explore_East01/East01/Explore_TiaoXiangTing_InOrder.12"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node'Explore_TiaoXiangTing_InOrder_C:SimpleConstructionScript_0.SCS_Node_0'",
+          "ObjectPath": "EM/Content/AssetDesign/Level/BluePrints/ExploreGroup/Explore_East01/East01/Explore_TiaoXiangTing_InOrder.12"
+        },
+        {
+          "ObjectName": "SCS_Node'Explore_TiaoXiangTing_InOrder_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "EM/Content/AssetDesign/Level/BluePrints/ExploreGroup/Explore_East01/East01/Explore_TiaoXiangTing_InOrder.13"
+        },
+        {
+          "ObjectName": "SCS_Node'Explore_TiaoXiangTing_InOrder_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "EM/Content/AssetDesign/Level/BluePrints/ExploreGroup/Explore_East01/East01/Explore_TiaoXiangTing_InOrder.14"
+        },
+        {
+          "ObjectName": "SCS_Node'Explore_TiaoXiangTing_InOrder_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectPath": "EM/Content/AssetDesign/Level/BluePrints/ExploreGroup/Explore_East01/East01/Explore_TiaoXiangTing_InOrder.15"
+        },
+        {
+          "ObjectName": "SCS_Node'Explore_TiaoXiangTing_InOrder_C:SimpleConstructionScript_0.SCS_Node_4'",
+          "ObjectPath": "EM/Content/AssetDesign/Level/BluePrints/ExploreGroup/Explore_East01/East01/Explore_TiaoXiangTing_InOrder.16"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'Explore_TiaoXiangTing_InOrder_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "EM/Content/AssetDesign/Level/BluePrints/ExploreGroup/Explore_East01/East01/Explore_TiaoXiangTing_InOrder.12"
+      }
+    }
+  }
+]

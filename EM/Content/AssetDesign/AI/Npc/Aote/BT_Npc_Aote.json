@@ -1,0 +1,618 @@
+[
+  {
+    "Type": "BehaviorTree",
+    "Name": "BT_Npc_Aote",
+    "Class": "UScriptClass'BehaviorTree'",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "RootNode": {
+        "ObjectName": "BTComposite_Selector'BT_Npc_Aote:BTComposite_Selector_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Aote/BT_Npc_Aote.1"
+      },
+      "BlackboardAsset": {
+        "ObjectName": "BlackboardData'BB_Npc_Aote'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Aote/BB_Npc_Aote.0"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_0",
+    "Outer": "BT_Npc_Aote",
+    "Class": "UScriptClass'BTComposite_Selector'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_Npc_Aote:BTComposite_Sequence_1'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Aote/BT_Npc_Aote.2"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Npc_Aote:BTDecorator_Blackboard_1'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Aote/BT_Npc_Aote.7"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_Npc_Aote:BTComposite_Sequence_2'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Aote/BT_Npc_Aote.3"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Npc_Aote:BTDecorator_Blackboard_0'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Aote/BT_Npc_Aote.6"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait'BT_Npc_Aote:BTTask_Wait_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Aote/BT_Npc_Aote.18"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_Aote'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Aote/BT_Npc_Aote.0"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_1",
+    "Outer": "BT_Npc_Aote",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_Npc_Aote:BTComposite_Sequence_3'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Aote/BT_Npc_Aote.4"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Loop'BT_Npc_Aote:BTDecorator_Loop_1'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Aote/BT_Npc_Aote.9"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_ClearKey'BT_Npc_Aote:BTTask_ClearKey_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Aote/BT_Npc_Aote.10"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait'BT_Npc_Aote:BTTask_Wait_2'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Aote/BT_Npc_Aote.20"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_PlayNPCPatrolAnim'BT_Npc_Aote:BTTask_PlayNPCPatrolAnim_1'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Aote/BT_Npc_Aote.17"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_Aote'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Aote/BT_Npc_Aote.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Npc_Aote:BTComposite_Selector_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Aote/BT_Npc_Aote.1"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_2",
+    "Outer": "BT_Npc_Aote",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_Npc_Aote:BTComposite_Sequence_4'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Aote/BT_Npc_Aote.5"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Loop'BT_Npc_Aote:BTDecorator_Loop_0'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Aote/BT_Npc_Aote.8"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_ClearKey'BT_Npc_Aote:BTTask_ClearKey_1'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Aote/BT_Npc_Aote.11"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait'BT_Npc_Aote:BTTask_Wait_4'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Aote/BT_Npc_Aote.22"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_PlayNPCPatrolAnim'BT_Npc_Aote:BTTask_PlayNPCPatrolAnim_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Aote/BT_Npc_Aote.16"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_Aote'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Aote/BT_Npc_Aote.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Npc_Aote:BTComposite_Selector_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Aote/BT_Npc_Aote.1"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_3",
+    "Outer": "BT_Npc_Aote",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_GetPatrolLoc'BT_Npc_Aote:BTTask_GetPatrolLoc_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Aote/BT_Npc_Aote.12"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_NewMoveTo'BT_Npc_Aote:BTTask_NewMoveTo_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Aote/BT_Npc_Aote.14"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait'BT_Npc_Aote:BTTask_Wait_1'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Aote/BT_Npc_Aote.19"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_Aote'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Aote/BT_Npc_Aote.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Npc_Aote:BTComposite_Sequence_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Aote/BT_Npc_Aote.2"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_4",
+    "Outer": "BT_Npc_Aote",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_GetPatrolLoc'BT_Npc_Aote:BTTask_GetPatrolLoc_1'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Aote/BT_Npc_Aote.13"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_NewMoveTo'BT_Npc_Aote:BTTask_NewMoveTo_1'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Aote/BT_Npc_Aote.15"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait'BT_Npc_Aote:BTTask_Wait_3'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Aote/BT_Npc_Aote.21"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_Aote'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Aote/BT_Npc_Aote.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Npc_Aote:BTComposite_Sequence_2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Aote/BT_Npc_Aote.3"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_0",
+    "Outer": "BT_Npc_Aote",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "StringValue": "AoteGo1",
+      "CachedDescription": "QuestEvent 为相等 [AoteGo1]",
+      "BlackboardKey": {
+        "SelectedKeyName": "QuestEvent"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_Aote'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Aote/BT_Npc_Aote.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Npc_Aote:BTComposite_Selector_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Aote/BT_Npc_Aote.1"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_1",
+    "Outer": "BT_Npc_Aote",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "StringValue": "AoteGo",
+      "CachedDescription": "QuestEvent 为相等 [AoteGo]",
+      "BlackboardKey": {
+        "SelectedKeyName": "QuestEvent"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_Aote'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Aote/BT_Npc_Aote.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Npc_Aote:BTComposite_Selector_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Aote/BT_Npc_Aote.1"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Loop",
+    "Name": "BTDecorator_Loop_0",
+    "Outer": "BT_Npc_Aote",
+    "Class": "UScriptClass'BTDecorator_Loop'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "NumLoops": 2,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_Aote'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Aote/BT_Npc_Aote.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Npc_Aote:BTComposite_Sequence_2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Aote/BT_Npc_Aote.3"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Loop",
+    "Name": "BTDecorator_Loop_1",
+    "Outer": "BT_Npc_Aote",
+    "Class": "UScriptClass'BTDecorator_Loop'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "NumLoops": 2,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_Aote'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Aote/BT_Npc_Aote.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Npc_Aote:BTComposite_Sequence_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Aote/BT_Npc_Aote.2"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_ClearKey",
+    "Name": "BTTask_ClearKey_0",
+    "Outer": "BT_Npc_Aote",
+    "Class": "UScriptClass'BTTask_ClearKey'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "BlackboadKeyName": "QuestEvent",
+      "BlackboardKey": {
+        "SelectedKeyName": "QuestEvent"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_Aote'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Aote/BT_Npc_Aote.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Npc_Aote:BTComposite_Sequence_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Aote/BT_Npc_Aote.2"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_ClearKey",
+    "Name": "BTTask_ClearKey_1",
+    "Outer": "BT_Npc_Aote",
+    "Class": "UScriptClass'BTTask_ClearKey'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "BlackboadKeyName": "QuestEvent",
+      "BlackboardKey": {
+        "SelectedKeyName": "QuestEvent"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_Aote'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Aote/BT_Npc_Aote.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Npc_Aote:BTComposite_Sequence_2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Aote/BT_Npc_Aote.3"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_GetPatrolLoc",
+    "Name": "BTTask_GetPatrolLoc_0",
+    "Outer": "BT_Npc_Aote",
+    "Class": "UScriptClass'BTTask_GetPatrolLoc'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_Aote'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Aote/BT_Npc_Aote.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Npc_Aote:BTComposite_Sequence_3'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Aote/BT_Npc_Aote.4"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_GetPatrolLoc",
+    "Name": "BTTask_GetPatrolLoc_1",
+    "Outer": "BT_Npc_Aote",
+    "Class": "UScriptClass'BTTask_GetPatrolLoc'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_Aote'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Aote/BT_Npc_Aote.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Npc_Aote:BTComposite_Sequence_4'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Aote/BT_Npc_Aote.5"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_NewMoveTo",
+    "Name": "BTTask_NewMoveTo_0",
+    "Outer": "BT_Npc_Aote",
+    "Class": "UScriptClass'BTTask_NewMoveTo'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "bUseControllerRotationYaw": true,
+      "MoveTypeState": "EMoveTypeState::MTS_Run",
+      "ReplanMoveLineLength": 150.0,
+      "MaxSpeed": 500.0,
+      "MaxAcceleration": 2000.0,
+      "bStopOnOverlapNeedsUpdate": false,
+      "BlackboardKey": {
+        "SelectedKeyName": "PatrolLoc"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_Aote'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Aote/BT_Npc_Aote.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Npc_Aote:BTComposite_Sequence_3'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Aote/BT_Npc_Aote.4"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_NewMoveTo",
+    "Name": "BTTask_NewMoveTo_1",
+    "Outer": "BT_Npc_Aote",
+    "Class": "UScriptClass'BTTask_NewMoveTo'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "bUseControllerRotationYaw": true,
+      "ReplanMoveLineLength": 150.0,
+      "MaxSpeed": 100.0,
+      "MaxAcceleration": 2000.0,
+      "bStopOnOverlapNeedsUpdate": false,
+      "BlackboardKey": {
+        "SelectedKeyName": "PatrolLoc"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_Aote'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Aote/BT_Npc_Aote.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Npc_Aote:BTComposite_Sequence_4'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Aote/BT_Npc_Aote.5"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_PlayNPCPatrolAnim",
+    "Name": "BTTask_PlayNPCPatrolAnim_0",
+    "Outer": "BT_Npc_Aote",
+    "Class": "UScriptClass'BTTask_PlayNPCPatrolAnim'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Mode": "EPlayAnimMode::OverridePatrolMontageID",
+      "MontageID": "Talk03_Start",
+      "ContinueTime": 0.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_Aote'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Aote/BT_Npc_Aote.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Npc_Aote:BTComposite_Sequence_2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Aote/BT_Npc_Aote.3"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_PlayNPCPatrolAnim",
+    "Name": "BTTask_PlayNPCPatrolAnim_1",
+    "Outer": "BT_Npc_Aote",
+    "Class": "UScriptClass'BTTask_PlayNPCPatrolAnim'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Mode": "EPlayAnimMode::OverridePatrolMontageID",
+      "MontageID": "Explain02_Start",
+      "ContinueTime": 0.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_Aote'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Aote/BT_Npc_Aote.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Npc_Aote:BTComposite_Sequence_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Aote/BT_Npc_Aote.2"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_0",
+    "Outer": "BT_Npc_Aote",
+    "Class": "UScriptClass'BTTask_Wait'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_Aote'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Aote/BT_Npc_Aote.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Npc_Aote:BTComposite_Selector_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Aote/BT_Npc_Aote.1"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_1",
+    "Outer": "BT_Npc_Aote",
+    "Class": "UScriptClass'BTTask_Wait'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "WaitTime": 1.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_Aote'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Aote/BT_Npc_Aote.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Npc_Aote:BTComposite_Sequence_3'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Aote/BT_Npc_Aote.4"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_2",
+    "Outer": "BT_Npc_Aote",
+    "Class": "UScriptClass'BTTask_Wait'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "WaitTime": 1.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_Aote'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Aote/BT_Npc_Aote.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Npc_Aote:BTComposite_Sequence_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Aote/BT_Npc_Aote.2"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_3",
+    "Outer": "BT_Npc_Aote",
+    "Class": "UScriptClass'BTTask_Wait'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "WaitTime": 0.2,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_Aote'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Aote/BT_Npc_Aote.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Npc_Aote:BTComposite_Sequence_4'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Aote/BT_Npc_Aote.5"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_4",
+    "Outer": "BT_Npc_Aote",
+    "Class": "UScriptClass'BTTask_Wait'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "WaitTime": 1.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_Aote'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Aote/BT_Npc_Aote.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Npc_Aote:BTComposite_Sequence_2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Aote/BT_Npc_Aote.3"
+      }
+    }
+  }
+]

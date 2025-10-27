@@ -1,0 +1,826 @@
+[
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_BP_Nvzhu_Summon",
+    "Outer": "BP_Nvzhu_Summon_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "NameProperty",
+        "Name": "___name_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "PropertyFlags": "ConstParm"
+      },
+      {
+        "Type": "InterfaceProperty",
+        "Name": "CallFunc_GetCreator_Target_CastInput",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "ConstParm | UObjectWrapper",
+        "InterfaceClass": {
+          "ObjectName": "Class'EffectSourceInterface'",
+          "ObjectPath": "/Script/EM"
+        }
+      },
+      {
+        "Type": "InterfaceProperty",
+        "Name": "CallFunc_GetCreator_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "UObjectWrapper",
+        "InterfaceClass": {
+          "ObjectName": "Class'EffectSourceInterface'",
+          "ObjectPath": "/Script/EM"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_Event_DamageEvent",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'DamageStruct'",
+          "ObjectPath": "/Script/EM"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_CastToCharacterBase_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'CharacterBase'",
+          "ObjectPath": "/Script/EM"
+        }
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "CallFunc_GetDamageTags_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "ReferenceParm",
+        "Inner": {
+          "Type": "NameProperty",
+          "Name": "CallFunc_GetDamageTags_ReturnValue",
+          "Flags": "RF_Public",
+          "ElementSize": 12
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetPassiveEffectById_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'PassiveEffectObject'",
+          "ObjectPath": "/Script/EM"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Array_Contains_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_DynamicCast_AsBP_Nvzhu",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'BP_Nvzhu_C'",
+          "ObjectPath": "EM/Content/BluePrints/Combat/PassiveEffect/DesignerBP/Player/BP_Nvzhu.5"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_DynamicCast_bSuccess",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction | FUNC_HasDefaults"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnDamaged",
+    "Outer": "BP_Nvzhu_Summon_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "SuperStruct": {
+      "ObjectName": "Function'EffectSourceInterface:OnDamaged'",
+      "ObjectPath": "/Script/EM"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "DamageEvent",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "PropertyClass": {
+          "ObjectName": "Class'DamageStruct'",
+          "ObjectPath": "/Script/EM"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "ReceiveBeginPlay",
+    "Outer": "BP_Nvzhu_Summon_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "SuperStruct": {
+      "ObjectName": "Function'Actor:ReceiveBeginPlay'",
+      "ObjectPath": "/Script/Engine"
+    },
+    "FunctionFlags": "FUNC_Event | FUNC_Protected | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "CanBeDestroy",
+    "Outer": "BP_Nvzhu_Summon_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "SkillCreature",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "ConstParm | BlueprintVisible | BlueprintReadOnly | Parm | OutParm | ReferenceParm | UObjectWrapper",
+        "PropertyClass": {
+          "ObjectName": "Class'SkillCreature'",
+          "ObjectPath": "/Script/EM"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "Destroy",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "PropertyFlags": "Parm | OutParm",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "StrProperty",
+        "Name": "___string_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "ConstParm"
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "CallFunc_GetTags_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "ReferenceParm",
+        "Inner": {
+          "Type": "StrProperty",
+          "Name": "CallFunc_GetTags_ReturnValue",
+          "Flags": "RF_Public",
+          "ElementSize": 16
+        }
+      },
+      {
+        "Type": "StrProperty",
+        "Name": "___string_Variable_1",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "ConstParm"
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Array_Contains_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Array_Contains_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_BooleanOR_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_HasOutParms | FUNC_HasDefaults | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "IsForward",
+    "Outer": "BP_Nvzhu_Summon_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "HitLocation",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "Struct": {
+          "ObjectName": "ScriptStruct'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "IsForward",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "PropertyFlags": "Parm | OutParm",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "InterfaceProperty",
+        "Name": "CallFunc_GetCreator_Target_CastInput",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "ConstParm | UObjectWrapper",
+        "InterfaceClass": {
+          "ObjectName": "Class'EffectSourceInterface'",
+          "ObjectPath": "/Script/EM"
+        }
+      },
+      {
+        "Type": "InterfaceProperty",
+        "Name": "CallFunc_GetCreator_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "UObjectWrapper",
+        "InterfaceClass": {
+          "ObjectName": "Class'EffectSourceInterface'",
+          "ObjectPath": "/Script/EM"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_CastToCharacterBase_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'CharacterBase'",
+          "ObjectPath": "/Script/EM"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_GetActorForwardVector_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "Struct": {
+          "ObjectName": "ScriptStruct'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc________",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Greater_FloatFloat_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_HasOutParms | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BP_Nvzhu_Summon_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Super": {
+      "ObjectName": "BlueprintGeneratedClass'BP_MechanismSummon_C'",
+      "ObjectPath": "EM/Content/BluePrints/Combat/MechanismSummon/BP_MechanismSummon.1"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BP_Nvzhu_Summon_C:SimpleConstructionScript_0'",
+        "ObjectPath": "EM/Content/BluePrints/Combat/MechanismSummon/Player/BP_Nvzhu_Summon.15"
+      },
+      "InheritableComponentHandler": {
+        "ObjectName": "InheritableComponentHandler'BP_Nvzhu_Summon_C:InheritableComponentHandler'",
+        "ObjectPath": "EM/Content/BluePrints/Combat/MechanismSummon/Player/BP_Nvzhu_Summon.11"
+      },
+      "UberGraphFunction": {
+        "ObjectName": "Function'BP_Nvzhu_Summon_C:ExecuteUbergraph_BP_Nvzhu_Summon'",
+        "ObjectPath": "EM/Content/BluePrints/Combat/MechanismSummon/Player/BP_Nvzhu_Summon.0"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "BlueprintGeneratedClass'BP_MechanismSummon_C'",
+      "ObjectPath": "EM/Content/BluePrints/Combat/MechanismSummon/BP_MechanismSummon.1"
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'BP_Nvzhu_Summon_C:IsForward'",
+        "ObjectPath": "EM/Content/BluePrints/Combat/MechanismSummon/Player/BP_Nvzhu_Summon.4"
+      },
+      {
+        "ObjectName": "Function'BP_Nvzhu_Summon_C:CanBeDestroy'",
+        "ObjectPath": "EM/Content/BluePrints/Combat/MechanismSummon/Player/BP_Nvzhu_Summon.3"
+      },
+      {
+        "ObjectName": "Function'BP_Nvzhu_Summon_C:ReceiveBeginPlay'",
+        "ObjectPath": "EM/Content/BluePrints/Combat/MechanismSummon/Player/BP_Nvzhu_Summon.2"
+      },
+      {
+        "ObjectName": "Function'BP_Nvzhu_Summon_C:OnDamaged'",
+        "ObjectPath": "EM/Content/BluePrints/Combat/MechanismSummon/Player/BP_Nvzhu_Summon.1"
+      },
+      {
+        "ObjectName": "Function'BP_Nvzhu_Summon_C:ExecuteUbergraph_BP_Nvzhu_Summon'",
+        "ObjectPath": "EM/Content/BluePrints/Combat/MechanismSummon/Player/BP_Nvzhu_Summon.0"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient",
+        "Struct": {
+          "ObjectName": "ScriptStruct'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "MonsterHitedCapsule",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'StaticMeshComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_BP_Nvzhu_Summon": {
+        "ObjectName": "Function'BP_Nvzhu_Summon_C:ExecuteUbergraph_BP_Nvzhu_Summon'",
+        "ObjectPath": "EM/Content/BluePrints/Combat/MechanismSummon/Player/BP_Nvzhu_Summon.0"
+      },
+      "OnDamaged": {
+        "ObjectName": "Function'BP_Nvzhu_Summon_C:OnDamaged'",
+        "ObjectPath": "EM/Content/BluePrints/Combat/MechanismSummon/Player/BP_Nvzhu_Summon.1"
+      },
+      "ReceiveBeginPlay": {
+        "ObjectName": "Function'BP_Nvzhu_Summon_C:ReceiveBeginPlay'",
+        "ObjectPath": "EM/Content/BluePrints/Combat/MechanismSummon/Player/BP_Nvzhu_Summon.2"
+      },
+      "CanBeDestroy": {
+        "ObjectName": "Function'BP_Nvzhu_Summon_C:CanBeDestroy'",
+        "ObjectPath": "EM/Content/BluePrints/Combat/MechanismSummon/Player/BP_Nvzhu_Summon.3"
+      },
+      "IsForward": {
+        "ObjectName": "Function'BP_Nvzhu_Summon_C:IsForward'",
+        "ObjectPath": "EM/Content/BluePrints/Combat/MechanismSummon/Player/BP_Nvzhu_Summon.4"
+      }
+    },
+    "ClassFlags": "CLASS_Config | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BP_Nvzhu_Summon_C'Default__BP_Nvzhu_Summon_C'",
+      "ObjectPath": "EM/Content/BluePrints/Combat/MechanismSummon/Player/BP_Nvzhu_Summon.6"
+    }
+  },
+  {
+    "Type": "BP_Nvzhu_Summon_C",
+    "Name": "Default__BP_Nvzhu_Summon_C",
+    "Class": "BlueprintGeneratedClass'EM/Content/BluePrints/Combat/MechanismSummon/Player/BP_Nvzhu_Summon.BP_Nvzhu_Summon_C'",
+    "Template": {
+      "ObjectName": "BP_MechanismSummon_C'Default__BP_MechanismSummon_C'",
+      "ObjectPath": "EM/Content/BluePrints/Combat/MechanismSummon/BP_MechanismSummon.2"
+    },
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "UberGraphFrame": {},
+      "Mesh": {
+        "ObjectName": "SkeletalMeshComponent'Default__BP_Nvzhu_Summon_C:Mesh'",
+        "ObjectPath": "EM/Content/BluePrints/Combat/MechanismSummon/Player/BP_Nvzhu_Summon.16"
+      },
+      "BuffManager": {
+        "ObjectName": "BP_BuffManager_C'Default__BP_Nvzhu_Summon_C:BP_BuffManager'",
+        "ObjectPath": "EM/Content/BluePrints/Combat/MechanismSummon/Player/BP_Nvzhu_Summon.7"
+      },
+      "JumpWordComponent": {
+        "ObjectName": "BP_JumpWordComponent_C'Default__BP_Nvzhu_Summon_C:BP_JumpWordComponent'",
+        "ObjectPath": "EM/Content/BluePrints/Combat/MechanismSummon/Player/BP_Nvzhu_Summon.9"
+      },
+      "FXComponent": {
+        "ObjectName": "BP_FXComponent_C'Default__BP_Nvzhu_Summon_C:BP_FXComponent'",
+        "ObjectPath": "EM/Content/BluePrints/Combat/MechanismSummon/Player/BP_Nvzhu_Summon.8"
+      },
+      "BattleEvent": {
+        "ObjectName": "DamageEventComponent'Default__BP_Nvzhu_Summon_C:BattleEvent'",
+        "ObjectPath": "EM/Content/BluePrints/Combat/MechanismSummon/Player/BP_Nvzhu_Summon.10"
+      }
+    }
+  },
+  {
+    "Type": "BP_BuffManager_C",
+    "Name": "BP_BuffManager",
+    "Outer": "Default__BP_Nvzhu_Summon_C",
+    "Class": "BlueprintGeneratedClass'EM/Content/BluePrints/Combat/Buff/BP_BuffManager.BP_BuffManager_C'",
+    "Template": {
+      "ObjectName": "BP_BuffManager_C'Default__BP_MechanismSummon_C:BP_BuffManager'",
+      "ObjectPath": "EM/Content/BluePrints/Combat/MechanismSummon/BP_MechanismSummon.3"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "BP_FXComponent_C",
+    "Name": "BP_FXComponent",
+    "Outer": "Default__BP_Nvzhu_Summon_C",
+    "Class": "BlueprintGeneratedClass'EM/Content/BluePrints/Char/BP_FXComponent.BP_FXComponent_C'",
+    "Template": {
+      "ObjectName": "BP_FXComponent_C'Default__BP_MechanismSummon_C:BP_FXComponent'",
+      "ObjectPath": "EM/Content/BluePrints/Combat/MechanismSummon/BP_MechanismSummon.4"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "BP_JumpWordComponent_C",
+    "Name": "BP_JumpWordComponent",
+    "Outer": "Default__BP_Nvzhu_Summon_C",
+    "Class": "BlueprintGeneratedClass'EM/Content/BluePrints/Char/BP_JumpWordComponent.BP_JumpWordComponent_C'",
+    "Template": {
+      "ObjectName": "BP_JumpWordComponent_C'Default__BP_MechanismSummon_C:BP_JumpWordComponent'",
+      "ObjectPath": "EM/Content/BluePrints/Combat/MechanismSummon/BP_MechanismSummon.5"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "DamageEventComponent",
+    "Name": "BattleEvent",
+    "Outer": "Default__BP_Nvzhu_Summon_C",
+    "Class": "UScriptClass'DamageEventComponent'",
+    "Template": {
+      "ObjectName": "DamageEventComponent'Default__BP_MechanismSummon_C:BattleEvent'",
+      "ObjectPath": "EM/Content/BluePrints/Combat/MechanismSummon/BP_MechanismSummon.6"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "InheritableComponentHandler",
+    "Name": "InheritableComponentHandler",
+    "Outer": "BP_Nvzhu_Summon_C",
+    "Class": "UScriptClass'InheritableComponentHandler'",
+    "Flags": "RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Outer": "BP_Nvzhu_Summon_C",
+    "Class": "UScriptClass'SceneComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BP_Nvzhu_Summon_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "EM/Content/BluePrints/Combat/MechanismSummon/Player/BP_Nvzhu_Summon.12"
+      },
+      "VariableGuid": "88F2E2C1-49014D52-24D50185-B9A33032",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_10",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'StaticMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "StaticMeshComponent'BP_Nvzhu_Summon_C:MonsterHitedCapsule_GEN_VARIABLE'",
+        "ObjectPath": "EM/Content/BluePrints/Combat/MechanismSummon/Player/BP_Nvzhu_Summon.17"
+      },
+      "ParentComponentOrVariableName": "Mesh",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "90C20183-4CEED0B3-8D7BC2A2-7C04D97C",
+      "InternalVariableName": "MonsterHitedCapsule"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Outer": "BP_Nvzhu_Summon_C",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_Nvzhu_Summon_C:SimpleConstructionScript_0.SCS_Node_10'",
+          "ObjectPath": "EM/Content/BluePrints/Combat/MechanismSummon/Player/BP_Nvzhu_Summon.14"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_Nvzhu_Summon_C:SimpleConstructionScript_0.SCS_Node_10'",
+          "ObjectPath": "EM/Content/BluePrints/Combat/MechanismSummon/Player/BP_Nvzhu_Summon.14"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BP_Nvzhu_Summon_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "EM/Content/BluePrints/Combat/MechanismSummon/Player/BP_Nvzhu_Summon.13"
+      }
+    }
+  },
+  {
+    "Type": "SkeletalMeshComponent",
+    "Name": "Mesh",
+    "Outer": "Default__BP_Nvzhu_Summon_C",
+    "Class": "UScriptClass'SkeletalMeshComponent'",
+    "Template": {
+      "ObjectName": "SkeletalMeshComponent'Default__BP_MechanismSummon_C:Mesh'",
+      "ObjectPath": "EM/Content/BluePrints/Combat/MechanismSummon/BP_MechanismSummon.10"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "CastShadow": false,
+      "BodyInstance": {
+        "ObjectType": "ECC_GameTraceChannel8",
+        "CollisionEnabled": "ECollisionEnabled::QueryOnly",
+        "CollisionProfileName": "MonsterHitedCapsule",
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "WorldStatic",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "WorldDynamic",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Pawn",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Visibility",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Camera",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "PhysicsBody",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Vehicle",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Destructible",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Item",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "TraceExceptChar",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "TraceOverlap",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "MonsterPawn",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "BreakableItem",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "TraceScene",
+              "Response": "ECR_Overlap"
+            },
+            {
+              "Channel": "TraceCreatureHit",
+              "Response": "ECR_Overlap"
+            },
+            {
+              "Channel": "TraceSkillCreatureBlock",
+              "Response": "ECR_Block"
+            },
+            {
+              "Channel": "TraceThroughWall",
+              "Response": "ECR_Overlap"
+            },
+            {
+              "Channel": "SkillCreature",
+              "Response": "ECR_Overlap"
+            }
+          ]
+        }
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "MonsterHitedCapsule_GEN_VARIABLE",
+    "Outer": "BP_Nvzhu_Summon_C",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'Landi_Skill01_Collision'",
+        "ObjectPath": "EM/Content/BluePrints/Combat/MechanismSummon/Player/Landi_Skill01_Collision.2"
+      },
+      "OverrideMaterials": [
+        {
+          "ObjectName": "Material'BasicShapeMaterial'",
+          "ObjectPath": "Engine/Content/BasicShapes/BasicShapeMaterial.0"
+        },
+        null
+      ],
+      "CastShadow": false,
+      "bHiddenInSceneCapture": true,
+      "CanCharacterStepUpOn": "ECB_Owner",
+      "BodyInstance": {
+        "ObjectType": "ECC_GameTraceChannel8",
+        "CollisionEnabled": "ECollisionEnabled::QueryOnly",
+        "CollisionProfileName": "MonsterHitedCapsule",
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "WorldStatic",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "WorldDynamic",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Pawn",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Visibility",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Camera",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "PhysicsBody",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Vehicle",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Destructible",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Item",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "TraceExceptChar",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "TraceOverlap",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "MonsterPawn",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "BreakableItem",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "TraceScene",
+              "Response": "ECR_Overlap"
+            },
+            {
+              "Channel": "TraceCreatureHit",
+              "Response": "ECR_Overlap"
+            },
+            {
+              "Channel": "TraceSkillCreatureBlock",
+              "Response": "ECR_Block"
+            },
+            {
+              "Channel": "TraceThroughWall",
+              "Response": "ECR_Overlap"
+            },
+            {
+              "Channel": "SkillCreature",
+              "Response": "ECR_Overlap"
+            }
+          ]
+        }
+      },
+      "RelativeLocation": {
+        "X": 200.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "RelativeScale3D": {
+        "X": 2.0,
+        "Y": 1.5,
+        "Z": 1.0
+      },
+      "bVisible": false
+    }
+  }
+]

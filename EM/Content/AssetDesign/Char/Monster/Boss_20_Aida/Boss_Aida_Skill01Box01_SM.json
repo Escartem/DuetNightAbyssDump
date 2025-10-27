@@ -1,0 +1,220 @@
+[
+  {
+    "Type": "BodySetup",
+    "Name": "BodySetup_0",
+    "Outer": "Boss_Aida_Skill01Box01_SM",
+    "Class": "UScriptClass'BodySetup'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "AggGeom": {
+        "BoxElems": [
+          {
+            "Center": {
+              "X": 0.0,
+              "Y": 0.0,
+              "Z": 0.0
+            },
+            "Rotation": {
+              "Pitch": 0.0,
+              "Yaw": 0.0,
+              "Roll": 0.0
+            },
+            "X": 2000.0,
+            "Y": 1400.0,
+            "Z": 2000.0,
+            "RestOffset": 0.0,
+            "Name": "None",
+            "bContributeToMass": true,
+            "CollisionEnabled": "ECollisionEnabled::QueryAndPhysics"
+          }
+        ]
+      },
+      "DefaultInstance": {
+        "ObjectType": "ECC_WorldStatic",
+        "CollisionProfileName": "SceneCollision",
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "WorldDynamic",
+              "Response": "ECR_Overlap"
+            },
+            {
+              "Channel": "TraceEnemyVision",
+              "Response": "ECR_Block"
+            },
+            {
+              "Channel": "TraceScene",
+              "Response": "ECR_Block"
+            },
+            {
+              "Channel": "TraceCreatureHit",
+              "Response": "ECR_Overlap"
+            },
+            {
+              "Channel": "TraceSkillCreatureBlock",
+              "Response": "ECR_Block"
+            },
+            {
+              "Channel": "SkillCreature",
+              "Response": "ECR_Overlap"
+            }
+          ]
+        }
+      }
+    },
+    "BodySetupGuid": "0FD6F2E14B270E4F0973848DCC387825",
+    "CookedFormatData": {
+      "PhysXPC": {
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
+        "ElementCount": 1337,
+        "SizeOnDisk": 1337,
+        "OffsetInFile": "0x30E5"
+      }
+    }
+  },
+  {
+    "Type": "NavCollision",
+    "Name": "NavCollision_0",
+    "Outer": "Boss_Aida_Skill01Box01_SM",
+    "Class": "UScriptClass'NavCollision'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "CookedFormatData": {
+      "NavCollision_X": {
+        "BulkDataFlags": "BULKDATA_SingleUse | BULKDATA_ForceInlinePayload",
+        "ElementCount": 265,
+        "SizeOnDisk": 265,
+        "OffsetInFile": "0x3666"
+      }
+    }
+  },
+  {
+    "Type": "StaticMesh",
+    "Name": "Boss_Aida_Skill01Box01_SM",
+    "Class": "UScriptClass'StaticMesh'",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "StaticMaterials": [
+        {
+          "MaterialInterface": {
+            "ObjectName": "Material'19_-_Default'",
+            "ObjectPath": "EM/Content/Asset/Cinematics/Story/OBT01/OBT0102/OBT0102_SC003/door/19_-_Default.0"
+          },
+          "MaterialSlotName": "19_-_Default",
+          "ImportedMaterialSlotName": "19_-_Default",
+          "UVChannelData": {
+            "bInitialized": true,
+            "bOverrideDensities": false,
+            "LocalUVDensities": 100.06462,
+            "LocalUVDensities[1]": 5107.0815,
+            "LocalUVDensities[2]": 0.0,
+            "LocalUVDensities[3]": 0.0
+          }
+        },
+        {
+          "MaterialInterface": {
+            "ObjectName": "Material'19_-_Default'",
+            "ObjectPath": "EM/Content/Asset/Cinematics/Story/OBT01/OBT0102/OBT0102_SC003/door/19_-_Default.0"
+          },
+          "MaterialSlotName": "WorldGridMaterial",
+          "ImportedMaterialSlotName": "WorldGridMaterial",
+          "UVChannelData": {
+            "bInitialized": true,
+            "bOverrideDensities": false,
+            "LocalUVDensities": 100.06701,
+            "LocalUVDensities[1]": 5104.5044,
+            "LocalUVDensities[2]": 0.0,
+            "LocalUVDensities[3]": 0.0
+          }
+        }
+      ],
+      "LightmapUVDensity": 100.06509,
+      "ExtendedBounds": {
+        "BoxExtent": {
+          "X": 1000.0,
+          "Y": 700.0,
+          "Z": 1000.0
+        },
+        "SphereRadius": 1577.9734
+      }
+    },
+    "BodySetup": {
+      "ObjectName": "BodySetup'Boss_Aida_Skill01Box01_SM:BodySetup_0'",
+      "ObjectPath": "EM/Content/AssetDesign/Char/Monster/Boss_20_Aida/Boss_Aida_Skill01Box01_SM.0"
+    },
+    "NavCollision": {
+      "ObjectName": "NavCollision'Boss_Aida_Skill01Box01_SM:NavCollision_0'",
+      "ObjectPath": "EM/Content/AssetDesign/Char/Monster/Boss_20_Aida/Boss_Aida_Skill01Box01_SM.1"
+    },
+    "LightingGuid": "C7A9CFE3-4909BD1F-2E070891-6DA4F661",
+    "RenderData": {
+      "LODs": [
+        {
+          "Sections": [
+            {
+              "MaterialIndex": 0,
+              "FirstIndex": 0,
+              "NumTriangles": 10,
+              "MinVertexIndex": 0,
+              "MaxVertexIndex": 19,
+              "bEnableCollision": true,
+              "bCastShadow": true,
+              "bForceOpaque": false,
+              "bVisibleInRayTracing": true
+            },
+            {
+              "MaterialIndex": 1,
+              "FirstIndex": 30,
+              "NumTriangles": 2,
+              "MinVertexIndex": 20,
+              "MaxVertexIndex": 23,
+              "bEnableCollision": true,
+              "bCastShadow": true,
+              "bForceOpaque": false,
+              "bVisibleInRayTracing": true
+            }
+          ],
+          "MaxDeviation": 0.0,
+          "PositionVertexBuffer": {
+            "Stride": 12,
+            "NumVertices": 24
+          },
+          "VertexBuffer": {
+            "NumTexCoords": 2,
+            "NumVertices": 24,
+            "Strides": -1,
+            "UseHighPrecisionTangentBasis": false,
+            "UseFullPrecisionUVs": false
+          },
+          "ColorVertexBuffer": {
+            "Stride": 0,
+            "NumVertices": 0
+          }
+        }
+      ],
+      "Bounds": {
+        "Origin": {
+          "X": 0.0,
+          "Y": 0.0,
+          "Z": 0.0
+        },
+        "BoxExtent": {
+          "X": 1000.0,
+          "Y": 700.0,
+          "Z": 1000.0
+        },
+        "SphereRadius": 1577.9734
+      },
+      "bLODsShareStaticLighting": true,
+      "ScreenSize": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  }
+]

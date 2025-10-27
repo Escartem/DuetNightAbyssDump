@@ -1,0 +1,548 @@
+[
+  {
+    "Type": "BehaviorTree",
+    "Name": "BT_Phantom_Test",
+    "Class": "UScriptClass'BehaviorTree'",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "RootNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Phantom_Test:BTComposite_Sequence_3'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/PhantomTest/BT_Phantom_Test.2"
+      },
+      "BlackboardAsset": {
+        "ObjectName": "BlackboardData'BB_Shadow'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Parent/BB_Shadow.0"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_5",
+    "Outer": "BT_Phantom_Test",
+    "Class": "UScriptClass'BTComposite_Selector'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_Phantom_Test:BTComposite_Sequence_4'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/PhantomTest/BT_Phantom_Test.3"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_OnlyOnce_C'BT_Phantom_Test:BTDecorator_OnlyOnce_C_3'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/PhantomTest/BT_Phantom_Test.8"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Empty_C'BT_Phantom_Test:BTTask_Empty_C_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/PhantomTest/BT_Phantom_Test.9"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Test'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/PhantomTest/BT_Phantom_Test.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Phantom_Test:BTComposite_Sequence_3'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/PhantomTest/BT_Phantom_Test.2"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_3",
+    "Outer": "BT_Phantom_Test",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector'BT_Phantom_Test:BTComposite_Selector_5'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/PhantomTest/BT_Phantom_Test.1"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_Phantom_Test:BTComposite_Sequence_5'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/PhantomTest/BT_Phantom_Test.4"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Test'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/PhantomTest/BT_Phantom_Test.0"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_4",
+    "Outer": "BT_Phantom_Test",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_SetSaveLoc_C'BT_Phantom_Test:BTTask_SetSaveLoc_C_2'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/PhantomTest/BT_Phantom_Test.12"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_TargetSelf_C'BT_Phantom_Test:BTTask_TargetSelf_C_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/PhantomTest/BT_Phantom_Test.13"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Test'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/PhantomTest/BT_Phantom_Test.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Phantom_Test:BTComposite_Selector_5'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/PhantomTest/BT_Phantom_Test.1"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_5",
+    "Outer": "BT_Phantom_Test",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_Phantom_Test:BTComposite_Sequence_6'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/PhantomTest/BT_Phantom_Test.5"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_Phantom_Test:BTComposite_Sequence_7'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/PhantomTest/BT_Phantom_Test.6"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_Phantom_Test:BTComposite_Sequence_8'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/PhantomTest/BT_Phantom_Test.7"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Test'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/PhantomTest/BT_Phantom_Test.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Phantom_Test:BTComposite_Sequence_3'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/PhantomTest/BT_Phantom_Test.2"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_6",
+    "Outer": "BT_Phantom_Test",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_UseSkill_Player'BT_Phantom_Test:BTTask_UseSkill_Player_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/PhantomTest/BT_Phantom_Test.17"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_UseSaveLoc_C'BT_Phantom_Test:BTTask_UseSaveLoc_C_1'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/PhantomTest/BT_Phantom_Test.14"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Test'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/PhantomTest/BT_Phantom_Test.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Phantom_Test:BTComposite_Sequence_5'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/PhantomTest/BT_Phantom_Test.4"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_7",
+    "Outer": "BT_Phantom_Test",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_UseSkill_Player'BT_Phantom_Test:BTTask_UseSkill_Player_1'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/PhantomTest/BT_Phantom_Test.18"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_UseSaveLoc_C'BT_Phantom_Test:BTTask_UseSaveLoc_C_2'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/PhantomTest/BT_Phantom_Test.15"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Test'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/PhantomTest/BT_Phantom_Test.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Phantom_Test:BTComposite_Sequence_5'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/PhantomTest/BT_Phantom_Test.4"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_8",
+    "Outer": "BT_Phantom_Test",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_PhantomJump'BT_Phantom_Test:BTTask_PhantomJump_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/PhantomTest/BT_Phantom_Test.10"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_PhantomJump'BT_Phantom_Test:BTTask_PhantomJump_1'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/PhantomTest/BT_Phantom_Test.11"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_UseSkill_Player'BT_Phantom_Test:BTTask_UseSkill_Player_2'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/PhantomTest/BT_Phantom_Test.19"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_UseSaveLoc_C'BT_Phantom_Test:BTTask_UseSaveLoc_C_3'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/PhantomTest/BT_Phantom_Test.16"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Test'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/PhantomTest/BT_Phantom_Test.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Phantom_Test:BTComposite_Sequence_5'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/PhantomTest/BT_Phantom_Test.4"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_OnlyOnce_C",
+    "Name": "BTDecorator_OnlyOnce_C_3",
+    "Outer": "BT_Phantom_Test",
+    "Class": "BlueprintGeneratedClass'EM/Content/AssetDesign/AI/Z_Misc_Test/PhantomTest/BTDecorator_OnlyOnce.BTDecorator_OnlyOnce_C'",
+    "Template": {
+      "ObjectName": "BTDecorator_OnlyOnce_C'Default__BTDecorator_OnlyOnce_C'",
+      "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/PhantomTest/BTDecorator_OnlyOnce.2"
+    },
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Test'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/PhantomTest/BT_Phantom_Test.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Phantom_Test:BTComposite_Selector_5'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/PhantomTest/BT_Phantom_Test.1"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Empty_C",
+    "Name": "BTTask_Empty_C_0",
+    "Outer": "BT_Phantom_Test",
+    "Class": "BlueprintGeneratedClass'EM/Content/AssetDesign/AI/Z_Misc_Test/PhantomTest/BTTask_Empty.BTTask_Empty_C'",
+    "Template": {
+      "ObjectName": "BTTask_Empty_C'Default__BTTask_Empty_C'",
+      "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/PhantomTest/BTTask_Empty.3"
+    },
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Test'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/PhantomTest/BT_Phantom_Test.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Phantom_Test:BTComposite_Selector_5'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/PhantomTest/BT_Phantom_Test.1"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_PhantomJump",
+    "Name": "BTTask_PhantomJump_0",
+    "Outer": "BT_Phantom_Test",
+    "Class": "UScriptClass'BTTask_PhantomJump'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ContinueTime": 0.5,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Test'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/PhantomTest/BT_Phantom_Test.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Phantom_Test:BTComposite_Sequence_8'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/PhantomTest/BT_Phantom_Test.7"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_PhantomJump",
+    "Name": "BTTask_PhantomJump_1",
+    "Outer": "BT_Phantom_Test",
+    "Class": "UScriptClass'BTTask_PhantomJump'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ContinueTime": 0.5,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Test'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/PhantomTest/BT_Phantom_Test.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Phantom_Test:BTComposite_Sequence_8'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/PhantomTest/BT_Phantom_Test.7"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_SetSaveLoc_C",
+    "Name": "BTTask_SetSaveLoc_C_2",
+    "Outer": "BT_Phantom_Test",
+    "Class": "BlueprintGeneratedClass'EM/Content/AssetDesign/AI/Z_Misc_Test/PhantomTest/BTTask_SetSaveLoc.BTTask_SetSaveLoc_C'",
+    "Template": {
+      "ObjectName": "BTTask_SetSaveLoc_C'Default__BTTask_SetSaveLoc_C'",
+      "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/PhantomTest/BTTask_SetSaveLoc.3"
+    },
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SaveLocTag": "PhantomTest",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Test'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/PhantomTest/BT_Phantom_Test.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Phantom_Test:BTComposite_Sequence_4'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/PhantomTest/BT_Phantom_Test.3"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_TargetSelf_C",
+    "Name": "BTTask_TargetSelf_C_0",
+    "Outer": "BT_Phantom_Test",
+    "Class": "BlueprintGeneratedClass'EM/Content/AssetDesign/AI/Z_Misc_Test/PhantomTest/BTTask_TargetSelf.BTTask_TargetSelf_C'",
+    "Template": {
+      "ObjectName": "BTTask_TargetSelf_C'Default__BTTask_TargetSelf_C'",
+      "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/PhantomTest/BTTask_TargetSelf.3"
+    },
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Test'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/PhantomTest/BT_Phantom_Test.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Phantom_Test:BTComposite_Sequence_4'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/PhantomTest/BT_Phantom_Test.3"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_UseSaveLoc_C",
+    "Name": "BTTask_UseSaveLoc_C_1",
+    "Outer": "BT_Phantom_Test",
+    "Class": "BlueprintGeneratedClass'EM/Content/AssetDesign/AI/Z_Misc_Test/PhantomTest/BTTask_UseSaveLoc.BTTask_UseSaveLoc_C'",
+    "Template": {
+      "ObjectName": "BTTask_UseSaveLoc_C'Default__BTTask_UseSaveLoc_C'",
+      "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/PhantomTest/BTTask_UseSaveLoc.3"
+    },
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SaveLocTag": "PhantomTest",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Test'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/PhantomTest/BT_Phantom_Test.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Phantom_Test:BTComposite_Sequence_6'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/PhantomTest/BT_Phantom_Test.5"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_UseSaveLoc_C",
+    "Name": "BTTask_UseSaveLoc_C_2",
+    "Outer": "BT_Phantom_Test",
+    "Class": "BlueprintGeneratedClass'EM/Content/AssetDesign/AI/Z_Misc_Test/PhantomTest/BTTask_UseSaveLoc.BTTask_UseSaveLoc_C'",
+    "Template": {
+      "ObjectName": "BTTask_UseSaveLoc_C'Default__BTTask_UseSaveLoc_C'",
+      "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/PhantomTest/BTTask_UseSaveLoc.3"
+    },
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SaveLocTag": "PhantomTest",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Test'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/PhantomTest/BT_Phantom_Test.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Phantom_Test:BTComposite_Sequence_7'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/PhantomTest/BT_Phantom_Test.6"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_UseSaveLoc_C",
+    "Name": "BTTask_UseSaveLoc_C_3",
+    "Outer": "BT_Phantom_Test",
+    "Class": "BlueprintGeneratedClass'EM/Content/AssetDesign/AI/Z_Misc_Test/PhantomTest/BTTask_UseSaveLoc.BTTask_UseSaveLoc_C'",
+    "Template": {
+      "ObjectName": "BTTask_UseSaveLoc_C'Default__BTTask_UseSaveLoc_C'",
+      "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/PhantomTest/BTTask_UseSaveLoc.3"
+    },
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SaveLocTag": "PhantomTest",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Test'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/PhantomTest/BT_Phantom_Test.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Phantom_Test:BTComposite_Sequence_8'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/PhantomTest/BT_Phantom_Test.7"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_UseSkill_Player",
+    "Name": "BTTask_UseSkill_Player_0",
+    "Outer": "BT_Phantom_Test",
+    "Class": "UScriptClass'BTTask_UseSkill_Player'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "bUseControllerRotationYaw": false,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Test'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/PhantomTest/BT_Phantom_Test.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Phantom_Test:BTComposite_Sequence_6'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/PhantomTest/BT_Phantom_Test.5"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_UseSkill_Player",
+    "Name": "BTTask_UseSkill_Player_1",
+    "Outer": "BT_Phantom_Test",
+    "Class": "UScriptClass'BTTask_UseSkill_Player'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SkillType": "EUseSkill_SkillType::HeavyAttack",
+      "bUseControllerRotationYaw": false,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Test'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/PhantomTest/BT_Phantom_Test.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Phantom_Test:BTComposite_Sequence_7'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/PhantomTest/BT_Phantom_Test.6"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_UseSkill_Player",
+    "Name": "BTTask_UseSkill_Player_2",
+    "Outer": "BT_Phantom_Test",
+    "Class": "UScriptClass'BTTask_UseSkill_Player'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SkillType": "EUseSkill_SkillType::FallAttack",
+      "bUseControllerRotationYaw": false,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Test'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/PhantomTest/BT_Phantom_Test.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Phantom_Test:BTComposite_Sequence_8'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/PhantomTest/BT_Phantom_Test.7"
+      }
+    }
+  }
+]

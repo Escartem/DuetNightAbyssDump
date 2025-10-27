@@ -1,0 +1,1277 @@
+[
+  {
+    "Type": "BehaviorTree",
+    "Name": "BT_TestAI_Xier",
+    "Class": "UScriptClass'BehaviorTree'",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "RootNode": {
+        "ObjectName": "BTComposite_Selector'BT_TestAI_Xier:BTComposite_Selector_4'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Xier/BT_TestAI_Xier.5"
+      },
+      "BlackboardAsset": {
+        "ObjectName": "BlackboardData'BB_Shadow'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Parent/BB_Shadow.0"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_0",
+    "Outer": "BT_TestAI_Xier",
+    "Class": "UScriptClass'BTComposite_Selector'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_UseSkill_Player'BT_TestAI_Xier:BTTask_UseSkill_Player_2'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Xier/BT_TestAI_Xier.43"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_CheckCombatCondition'BT_TestAI_Xier:BTDecorator_CheckCombatCondition_3'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Player/Xier/BT_TestAI_Xier.26"
+            },
+            {
+              "ObjectName": "BTDecorator_CheckBuff'BT_TestAI_Xier:BTDecorator_CheckBuff_1'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Player/Xier/BT_TestAI_Xier.23"
+            },
+            {
+              "ObjectName": "BTDecorator_CheckSpCost'BT_TestAI_Xier:BTDecorator_CheckSpCost_2'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Player/Xier/BT_TestAI_Xier.29"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_TestAI_Xier:BTComposite_Sequence_1'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Xier/BT_TestAI_Xier.10"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_CheckCombatCondition'BT_TestAI_Xier:BTDecorator_CheckCombatCondition_2'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Player/Xier/BT_TestAI_Xier.25"
+            },
+            {
+              "ObjectName": "BTDecorator_CheckSpCost'BT_TestAI_Xier:BTDecorator_CheckSpCost_0'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Player/Xier/BT_TestAI_Xier.28"
+            }
+          ],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_TestAI_Xier'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Xier/BT_TestAI_Xier.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_TestAI_Xier:BTComposite_Sequence_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Xier/BT_TestAI_Xier.9"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_1",
+    "Outer": "BT_TestAI_Xier",
+    "Class": "UScriptClass'BTComposite_Selector'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_TestAI_Xier:BTComposite_Sequence_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Xier/BT_TestAI_Xier.9"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_TestAI_Xier:BTDecorator_Blackboard_8'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Player/Xier/BT_TestAI_Xier.19"
+            },
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_TestAI_Xier:BTDecorator_Blackboard_10'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Player/Xier/BT_TestAI_Xier.13"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector'BT_TestAI_Xier:BTComposite_Selector_7'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Xier/BT_TestAI_Xier.8"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_CheckBuff'BT_TestAI_Xier:BTDecorator_CheckBuff_2'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Player/Xier/BT_TestAI_Xier.24"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector'BT_TestAI_Xier:BTComposite_Selector_3'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Xier/BT_TestAI_Xier.4"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector'BT_TestAI_Xier:BTComposite_Selector_2'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Xier/BT_TestAI_Xier.3"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_TestAI_Xier'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Xier/BT_TestAI_Xier.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_TestAI_Xier:BTComposite_Selector_6'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Xier/BT_TestAI_Xier.7"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_2",
+    "Outer": "BT_TestAI_Xier",
+    "Class": "UScriptClass'BTComposite_Selector'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_PhantomDodge'BT_TestAI_Xier:BTTask_PhantomDodge_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Xier/BT_TestAI_Xier.35"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_CoolDownPlayer'BT_TestAI_Xier:BTDecorator_CoolDownPlayer_1'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Player/Xier/BT_TestAI_Xier.30"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_RunBehavior'BT_TestAI_Xier:BTTask_RunBehavior_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Xier/BT_TestAI_Xier.38"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_TestAI_Xier'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Xier/BT_TestAI_Xier.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_TestAI_Xier:BTComposite_Selector_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Xier/BT_TestAI_Xier.2"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_3",
+    "Outer": "BT_TestAI_Xier",
+    "Class": "UScriptClass'BTComposite_Selector'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_TestAI_Xier:BTComposite_Sequence_2'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Xier/BT_TestAI_Xier.11"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_CharAttrCondition'BT_TestAI_Xier:BTDecorator_CharAttrCondition_5'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Player/Xier/BT_TestAI_Xier.21"
+            },
+            {
+              "ObjectName": "BTDecorator_CharAttrCondition'BT_TestAI_Xier:BTDecorator_CharAttrCondition_6'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Player/Xier/BT_TestAI_Xier.22"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_RunBehavior'BT_TestAI_Xier:BTTask_RunBehavior_1'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Xier/BT_TestAI_Xier.39"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_CharAttrCondition'BT_TestAI_Xier:BTDecorator_CharAttrCondition_1'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Player/Xier/BT_TestAI_Xier.20"
+            }
+          ],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_TestAI_Xier'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Xier/BT_TestAI_Xier.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_TestAI_Xier:BTComposite_Selector_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Xier/BT_TestAI_Xier.2"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_4",
+    "Outer": "BT_TestAI_Xier",
+    "Class": "UScriptClass'BTComposite_Selector'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector'BT_TestAI_Xier:BTComposite_Selector_6'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Xier/BT_TestAI_Xier.7"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_TestAI_Xier:BTDecorator_Blackboard_2'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Player/Xier/BT_TestAI_Xier.16"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait'BT_TestAI_Xier:BTTask_Wait_2'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Xier/BT_TestAI_Xier.47"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_TestAI_Xier:BTDecorator_Blackboard_14'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Player/Xier/BT_TestAI_Xier.15"
+            }
+          ],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_TestAI_Xier'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Xier/BT_TestAI_Xier.0"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_5",
+    "Outer": "BT_TestAI_Xier",
+    "Class": "UScriptClass'BTComposite_Selector'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_PhantomDodge'BT_TestAI_Xier:BTTask_PhantomDodge_1'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Xier/BT_TestAI_Xier.36"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_TestAI_Xier:BTDecorator_Blackboard_6'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Player/Xier/BT_TestAI_Xier.18"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_PhantomDodge'BT_TestAI_Xier:BTTask_PhantomDodge_2'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Xier/BT_TestAI_Xier.37"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_TestAI_Xier:BTDecorator_Blackboard_5'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Player/Xier/BT_TestAI_Xier.17"
+            }
+          ],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_TestAI_Xier'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Xier/BT_TestAI_Xier.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_TestAI_Xier:BTComposite_Sequence_2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Xier/BT_TestAI_Xier.11"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_6",
+    "Outer": "BT_TestAI_Xier",
+    "Class": "UScriptClass'BTComposite_Selector'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector'BT_TestAI_Xier:BTComposite_Selector_1'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Xier/BT_TestAI_Xier.2"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_TestAI_Xier:BTDecorator_Blackboard_1'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Player/Xier/BT_TestAI_Xier.12"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_RunBehavior'BT_TestAI_Xier:BTTask_RunBehavior_2'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Xier/BT_TestAI_Xier.40"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "Services": [
+        {
+          "ObjectName": "BTService_EnemyVision'BT_TestAI_Xier:BTService_EnemyVision_0'",
+          "ObjectPath": "EM/Content/AssetDesign/AI/Player/Xier/BT_TestAI_Xier.33"
+        },
+        {
+          "ObjectName": "BTService_ClearBTTarget_Player'BT_TestAI_Xier:BTService_ClearBTTarget_Player_0'",
+          "ObjectPath": "EM/Content/AssetDesign/AI/Player/Xier/BT_TestAI_Xier.32"
+        },
+        {
+          "ObjectName": "BTService_BBValueDis'BT_TestAI_Xier:BTService_BBValueDis_0'",
+          "ObjectPath": "EM/Content/AssetDesign/AI/Player/Xier/BT_TestAI_Xier.31"
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_TestAI_Xier'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Xier/BT_TestAI_Xier.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_TestAI_Xier:BTComposite_Selector_4'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Xier/BT_TestAI_Xier.5"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_7",
+    "Outer": "BT_TestAI_Xier",
+    "Class": "UScriptClass'BTComposite_Selector'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_UseSkill_Player'BT_TestAI_Xier:BTTask_UseSkill_Player_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Xier/BT_TestAI_Xier.41"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_CheckCombatCondition'BT_TestAI_Xier:BTDecorator_CheckCombatCondition_6'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Player/Xier/BT_TestAI_Xier.27"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_UseSkill_Player'BT_TestAI_Xier:BTTask_UseSkill_Player_3'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Xier/BT_TestAI_Xier.44"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_TestAI_Xier:BTDecorator_Blackboard_12'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Player/Xier/BT_TestAI_Xier.14"
+            }
+          ],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_TestAI_Xier'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Xier/BT_TestAI_Xier.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_TestAI_Xier:BTComposite_Selector_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Xier/BT_TestAI_Xier.2"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_0",
+    "Outer": "BT_TestAI_Xier",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_CanHitTarget'BT_TestAI_Xier:BTTask_CanHitTarget_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Xier/BT_TestAI_Xier.34"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector'BT_TestAI_Xier:BTComposite_Selector_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Xier/BT_TestAI_Xier.1"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_TestAI_Xier'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Xier/BT_TestAI_Xier.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_TestAI_Xier:BTComposite_Selector_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Xier/BT_TestAI_Xier.2"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_1",
+    "Outer": "BT_TestAI_Xier",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_UseSkill_Player'BT_TestAI_Xier:BTTask_UseSkill_Player_1'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Xier/BT_TestAI_Xier.42"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait'BT_TestAI_Xier:BTTask_Wait_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Xier/BT_TestAI_Xier.45"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_TestAI_Xier'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Xier/BT_TestAI_Xier.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_TestAI_Xier:BTComposite_Selector_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Xier/BT_TestAI_Xier.1"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_2",
+    "Outer": "BT_TestAI_Xier",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector'BT_TestAI_Xier:BTComposite_Selector_5'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Xier/BT_TestAI_Xier.6"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait'BT_TestAI_Xier:BTTask_Wait_1'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Xier/BT_TestAI_Xier.46"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_TestAI_Xier'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Xier/BT_TestAI_Xier.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_TestAI_Xier:BTComposite_Selector_3'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Xier/BT_TestAI_Xier.4"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_1",
+    "Outer": "BT_TestAI_Xier",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "CachedDescription": "Target is Is Set",
+      "BlackboardKey": {
+        "SelectedKeyName": "Target"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_TestAI_Xier'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Xier/BT_TestAI_Xier.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_TestAI_Xier:BTComposite_Selector_6'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Xier/BT_TestAI_Xier.7"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_10",
+    "Outer": "BT_TestAI_Xier",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "FloatValue": 200.0,
+      "CachedDescription": "TargetCapsuleDisZ Is Less Than 200.000000",
+      "OperationType": 2,
+      "BlackboardKey": {
+        "SelectedKeyName": "TargetCapsuleDisZ"
+      },
+      "NodeName": "CheckZ<200",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_TestAI_Xier'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Xier/BT_TestAI_Xier.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_TestAI_Xier:BTComposite_Selector_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Xier/BT_TestAI_Xier.2"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_12",
+    "Outer": "BT_TestAI_Xier",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "FloatValue": 1500.0,
+      "CachedDescription": "TargetCapsuleDis Is Greater Than 1500.000000",
+      "OperationType": 4,
+      "BlackboardKey": {
+        "SelectedKeyName": "TargetCapsuleDis"
+      },
+      "NodeName": "Distance>1500",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_TestAI_Xier'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Xier/BT_TestAI_Xier.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_TestAI_Xier:BTComposite_Selector_7'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Xier/BT_TestAI_Xier.8"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_14",
+    "Outer": "BT_TestAI_Xier",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "IntValue": 1,
+      "CachedDescription": "ActionMode Is Equal To Hitted",
+      "BlackboardKey": {
+        "SelectedKeyName": "ActionMode"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::Self",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_TestAI_Xier'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Xier/BT_TestAI_Xier.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_TestAI_Xier:BTComposite_Selector_4'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Xier/BT_TestAI_Xier.5"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_2",
+    "Outer": "BT_TestAI_Xier",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "CachedDescription": "ActionMode Is Equal To Active",
+      "BlackboardKey": {
+        "SelectedKeyName": "ActionMode"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::Self",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_TestAI_Xier'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Xier/BT_TestAI_Xier.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_TestAI_Xier:BTComposite_Selector_4'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Xier/BT_TestAI_Xier.5"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_5",
+    "Outer": "BT_TestAI_Xier",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "FloatValue": 400.0,
+      "CachedDescription": "TargetCapsuleDis Is Greater Than Or Equal To 400.000000",
+      "OperationType": 5,
+      "BlackboardKey": {
+        "SelectedKeyName": "TargetCapsuleDis"
+      },
+      "NodeName": "Distance>400",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_TestAI_Xier'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Xier/BT_TestAI_Xier.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_TestAI_Xier:BTComposite_Selector_5'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Xier/BT_TestAI_Xier.6"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_6",
+    "Outer": "BT_TestAI_Xier",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "FloatValue": 400.0,
+      "CachedDescription": "TargetCapsuleDis Is Less Than 400.000000",
+      "OperationType": 2,
+      "BlackboardKey": {
+        "SelectedKeyName": "TargetCapsuleDis"
+      },
+      "NodeName": "Distance<=400",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_TestAI_Xier'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Xier/BT_TestAI_Xier.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_TestAI_Xier:BTComposite_Selector_5'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Xier/BT_TestAI_Xier.6"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_8",
+    "Outer": "BT_TestAI_Xier",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "FloatValue": 1000.0,
+      "CachedDescription": "TargetCapsuleDisXY Is Less Than 1000.000000",
+      "OperationType": 2,
+      "BlackboardKey": {
+        "SelectedKeyName": "TargetCapsuleDisXY"
+      },
+      "NodeName": "Distance<1000",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_TestAI_Xier'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Xier/BT_TestAI_Xier.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_TestAI_Xier:BTComposite_Selector_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Xier/BT_TestAI_Xier.2"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_CharAttrCondition",
+    "Name": "BTDecorator_CharAttrCondition_1",
+    "Outer": "BT_TestAI_Xier",
+    "Class": "UScriptClass'BTDecorator_CharAttrCondition'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TargetType": "EConditionTargetType::RangedWeapon",
+      "MinValue": 0.0,
+      "AttrName": "EAttrName::MagazineBulletNum",
+      "NodeName": "CheckBulletNum",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_TestAI_Xier'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Xier/BT_TestAI_Xier.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_TestAI_Xier:BTComposite_Selector_3'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Xier/BT_TestAI_Xier.4"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_CharAttrCondition",
+    "Name": "BTDecorator_CharAttrCondition_5",
+    "Outer": "BT_TestAI_Xier",
+    "Class": "UScriptClass'BTDecorator_CharAttrCondition'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TargetType": "EConditionTargetType::RangedWeapon",
+      "MaxValue": 1.0,
+      "AttrName": "EAttrName::MagazineBulletNum",
+      "NodeName": "CheckBulletNum",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_TestAI_Xier'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Xier/BT_TestAI_Xier.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_TestAI_Xier:BTComposite_Selector_3'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Xier/BT_TestAI_Xier.4"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_CharAttrCondition",
+    "Name": "BTDecorator_CharAttrCondition_6",
+    "Outer": "BT_TestAI_Xier",
+    "Class": "UScriptClass'BTDecorator_CharAttrCondition'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TargetType": "EConditionTargetType::RangedWeapon",
+      "MinValue": 0.0,
+      "AttrName": "EAttrName::BulletNum",
+      "NodeName": "CheckBulletNum",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_TestAI_Xier'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Xier/BT_TestAI_Xier.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_TestAI_Xier:BTComposite_Selector_3'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Xier/BT_TestAI_Xier.4"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_CheckBuff",
+    "Name": "BTDecorator_CheckBuff_1",
+    "Outer": "BT_TestAI_Xier",
+    "Class": "UScriptClass'BTDecorator_CheckBuff'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "HasBuff": false,
+      "BuffId": 310204,
+      "NodeName": "NotInSkill1",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_TestAI_Xier'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Xier/BT_TestAI_Xier.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_TestAI_Xier:BTComposite_Selector_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Xier/BT_TestAI_Xier.1"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_CheckBuff",
+    "Name": "BTDecorator_CheckBuff_2",
+    "Outer": "BT_TestAI_Xier",
+    "Class": "UScriptClass'BTDecorator_CheckBuff'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "BuffId": 310204,
+      "NodeName": "InSkill1",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_TestAI_Xier'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Xier/BT_TestAI_Xier.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_TestAI_Xier:BTComposite_Selector_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Xier/BT_TestAI_Xier.2"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_CheckCombatCondition",
+    "Name": "BTDecorator_CheckCombatCondition_2",
+    "Outer": "BT_TestAI_Xier",
+    "Class": "UScriptClass'BTDecorator_CheckCombatCondition'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "CombatConditionId": 310201,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_TestAI_Xier'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Xier/BT_TestAI_Xier.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_TestAI_Xier:BTComposite_Selector_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Xier/BT_TestAI_Xier.1"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_CheckCombatCondition",
+    "Name": "BTDecorator_CheckCombatCondition_3",
+    "Outer": "BT_TestAI_Xier",
+    "Class": "UScriptClass'BTDecorator_CheckCombatCondition'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "CombatConditionId": 310201,
+      "bInverseCondition": true,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_TestAI_Xier'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Xier/BT_TestAI_Xier.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_TestAI_Xier:BTComposite_Selector_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Xier/BT_TestAI_Xier.1"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_CheckCombatCondition",
+    "Name": "BTDecorator_CheckCombatCondition_6",
+    "Outer": "BT_TestAI_Xier",
+    "Class": "UScriptClass'BTDecorator_CheckCombatCondition'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "CombatConditionId": 310201,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_TestAI_Xier'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Xier/BT_TestAI_Xier.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_TestAI_Xier:BTComposite_Selector_7'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Xier/BT_TestAI_Xier.8"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_CheckSpCost",
+    "Name": "BTDecorator_CheckSpCost_0",
+    "Outer": "BT_TestAI_Xier",
+    "Class": "UScriptClass'BTDecorator_CheckSpCost'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SkillId": 310202,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_TestAI_Xier'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Xier/BT_TestAI_Xier.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_TestAI_Xier:BTComposite_Selector_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Xier/BT_TestAI_Xier.1"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_CheckSpCost",
+    "Name": "BTDecorator_CheckSpCost_2",
+    "Outer": "BT_TestAI_Xier",
+    "Class": "UScriptClass'BTDecorator_CheckSpCost'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SkillId": 310202,
+      "CostMultiplier": 2.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_TestAI_Xier'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Xier/BT_TestAI_Xier.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_TestAI_Xier:BTComposite_Selector_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Xier/BT_TestAI_Xier.1"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_CoolDownPlayer",
+    "Name": "BTDecorator_CoolDownPlayer_1",
+    "Outer": "BT_TestAI_Xier",
+    "Class": "UScriptClass'BTDecorator_CoolDownPlayer'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "CoolDownTime": 7.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_TestAI_Xier'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Xier/BT_TestAI_Xier.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_TestAI_Xier:BTComposite_Selector_2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Xier/BT_TestAI_Xier.3"
+      }
+    }
+  },
+  {
+    "Type": "BTService_BBValueDis",
+    "Name": "BTService_BBValueDis_0",
+    "Outer": "BT_TestAI_Xier",
+    "Class": "UScriptClass'BTService_BBValueDis'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "BBName": "Target",
+      "Interval": 0.1,
+      "RandomDeviation": 0.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_TestAI_Xier'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Xier/BT_TestAI_Xier.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_TestAI_Xier:BTComposite_Selector_6'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Xier/BT_TestAI_Xier.7"
+      }
+    }
+  },
+  {
+    "Type": "BTService_ClearBTTarget_Player",
+    "Name": "BTService_ClearBTTarget_Player_0",
+    "Outer": "BT_TestAI_Xier",
+    "Class": "UScriptClass'BTService_ClearBTTarget_Player'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Interval": 0.1,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_TestAI_Xier'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Xier/BT_TestAI_Xier.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_TestAI_Xier:BTComposite_Selector_6'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Xier/BT_TestAI_Xier.7"
+      }
+    }
+  },
+  {
+    "Type": "BTService_EnemyVision",
+    "Name": "BTService_EnemyVision_0",
+    "Outer": "BT_TestAI_Xier",
+    "Class": "UScriptClass'BTService_EnemyVision'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "FVisionDistance": 2000.0,
+      "FVisionAngle": 180.0,
+      "Interval": 0.2,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_TestAI_Xier'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Xier/BT_TestAI_Xier.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_TestAI_Xier:BTComposite_Selector_6'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Xier/BT_TestAI_Xier.7"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_CanHitTarget",
+    "Name": "BTTask_CanHitTarget_0",
+    "Outer": "BT_TestAI_Xier",
+    "Class": "UScriptClass'BTTask_CanHitTarget'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_TestAI_Xier'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Xier/BT_TestAI_Xier.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_TestAI_Xier:BTComposite_Sequence_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Xier/BT_TestAI_Xier.9"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_PhantomDodge",
+    "Name": "BTTask_PhantomDodge_0",
+    "Outer": "BT_TestAI_Xier",
+    "Class": "UScriptClass'BTTask_PhantomDodge'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ContinueTime": 0.2,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_TestAI_Xier'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Xier/BT_TestAI_Xier.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_TestAI_Xier:BTComposite_Selector_2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Xier/BT_TestAI_Xier.3"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_PhantomDodge",
+    "Name": "BTTask_PhantomDodge_1",
+    "Outer": "BT_TestAI_Xier",
+    "Class": "UScriptClass'BTTask_PhantomDodge'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "DodgeBack": true,
+      "ContinueTime": 0.2,
+      "bIgnoreRestartSelf": true,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_TestAI_Xier'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Xier/BT_TestAI_Xier.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_TestAI_Xier:BTComposite_Selector_5'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Xier/BT_TestAI_Xier.6"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_PhantomDodge",
+    "Name": "BTTask_PhantomDodge_2",
+    "Outer": "BT_TestAI_Xier",
+    "Class": "UScriptClass'BTTask_PhantomDodge'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ContinueTime": 0.2,
+      "bIgnoreRestartSelf": true,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_TestAI_Xier'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Xier/BT_TestAI_Xier.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_TestAI_Xier:BTComposite_Selector_5'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Xier/BT_TestAI_Xier.6"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_RunBehavior",
+    "Name": "BTTask_RunBehavior_0",
+    "Outer": "BT_TestAI_Xier",
+    "Class": "UScriptClass'BTTask_RunBehavior'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "BehaviorAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Melee_Common'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Parent/BT_Phantom_Melee_Common.0"
+      },
+      "NodeName": "MeleeAttack",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_TestAI_Xier'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Xier/BT_TestAI_Xier.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_TestAI_Xier:BTComposite_Selector_2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Xier/BT_TestAI_Xier.3"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_RunBehavior",
+    "Name": "BTTask_RunBehavior_1",
+    "Outer": "BT_TestAI_Xier",
+    "Class": "UScriptClass'BTTask_RunBehavior'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "BehaviorAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Ranged_Common'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Parent/BT_Phantom_Ranged_Common.0"
+      },
+      "NodeName": "RangedAttack",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_TestAI_Xier'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Xier/BT_TestAI_Xier.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_TestAI_Xier:BTComposite_Selector_3'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Xier/BT_TestAI_Xier.4"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_RunBehavior",
+    "Name": "BTTask_RunBehavior_2",
+    "Outer": "BT_TestAI_Xier",
+    "Class": "UScriptClass'BTTask_RunBehavior'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "BehaviorAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_DetectEnemy'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Parent/BT_Phantom_DetectEnemy.0"
+      },
+      "NodeName": "DetectEnemy",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_TestAI_Xier'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Xier/BT_TestAI_Xier.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_TestAI_Xier:BTComposite_Selector_6'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Xier/BT_TestAI_Xier.7"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_UseSkill_Player",
+    "Name": "BTTask_UseSkill_Player_0",
+    "Outer": "BT_TestAI_Xier",
+    "Class": "UScriptClass'BTTask_UseSkill_Player'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SkillType": "EUseSkill_SkillType::Skill1",
+      "bUseControllerRotationYaw": false,
+      "AutoInput": false,
+      "NodeName": "Skill01_Off",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_TestAI_Xier'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Xier/BT_TestAI_Xier.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_TestAI_Xier:BTComposite_Selector_7'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Xier/BT_TestAI_Xier.8"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_UseSkill_Player",
+    "Name": "BTTask_UseSkill_Player_1",
+    "Outer": "BT_TestAI_Xier",
+    "Class": "UScriptClass'BTTask_UseSkill_Player'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SkillType": "EUseSkill_SkillType::Skill2",
+      "AutoInput": false,
+      "NodeName": "Skill02",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_TestAI_Xier'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Xier/BT_TestAI_Xier.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_TestAI_Xier:BTComposite_Sequence_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Xier/BT_TestAI_Xier.10"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_UseSkill_Player",
+    "Name": "BTTask_UseSkill_Player_2",
+    "Outer": "BT_TestAI_Xier",
+    "Class": "UScriptClass'BTTask_UseSkill_Player'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SkillType": "EUseSkill_SkillType::Skill1",
+      "bUseControllerRotationYaw": false,
+      "AutoInput": false,
+      "NodeName": "Skill01",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_TestAI_Xier'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Xier/BT_TestAI_Xier.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_TestAI_Xier:BTComposite_Selector_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Xier/BT_TestAI_Xier.1"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_UseSkill_Player",
+    "Name": "BTTask_UseSkill_Player_3",
+    "Outer": "BT_TestAI_Xier",
+    "Class": "UScriptClass'BTTask_UseSkill_Player'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SkillType": "EUseSkill_SkillType::Skill1",
+      "bUseControllerRotationYaw": false,
+      "AutoInput": false,
+      "NodeName": "Skill01_Off",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_TestAI_Xier'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Xier/BT_TestAI_Xier.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_TestAI_Xier:BTComposite_Selector_7'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Xier/BT_TestAI_Xier.8"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_0",
+    "Outer": "BT_TestAI_Xier",
+    "Class": "UScriptClass'BTTask_Wait'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "WaitTime": 0.5,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_TestAI_Xier'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Xier/BT_TestAI_Xier.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_TestAI_Xier:BTComposite_Sequence_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Xier/BT_TestAI_Xier.10"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_1",
+    "Outer": "BT_TestAI_Xier",
+    "Class": "UScriptClass'BTTask_Wait'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "WaitTime": 1.5,
+      "bIgnoreRestartSelf": true,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_TestAI_Xier'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Xier/BT_TestAI_Xier.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_TestAI_Xier:BTComposite_Sequence_2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Xier/BT_TestAI_Xier.11"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_2",
+    "Outer": "BT_TestAI_Xier",
+    "Class": "UScriptClass'BTTask_Wait'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "WaitTime": 3.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_TestAI_Xier'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Xier/BT_TestAI_Xier.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_TestAI_Xier:BTComposite_Selector_4'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Xier/BT_TestAI_Xier.5"
+      }
+    }
+  }
+]

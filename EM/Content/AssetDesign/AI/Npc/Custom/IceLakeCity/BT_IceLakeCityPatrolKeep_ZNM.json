@@ -1,0 +1,93 @@
+[
+  {
+    "Type": "BehaviorTree",
+    "Name": "BT_IceLakeCityPatrolKeep_ZNM",
+    "Class": "UScriptClass'BehaviorTree'",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "RootNode": {
+        "ObjectName": "BTComposite_Sequence'BT_IceLakeCityPatrolKeep_ZNM:BTComposite_Sequence_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Custom/IceLakeCity/BT_IceLakeCityPatrolKeep_ZNM.1"
+      },
+      "BlackboardAsset": {
+        "ObjectName": "BlackboardData'BB_IceLakeCityPatrol'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Custom/IceLakeCity/BB_IceLakeCityPatrol.0"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_0",
+    "Outer": "BT_IceLakeCityPatrolKeep_ZNM",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_GetPatrolLoc'BT_IceLakeCityPatrolKeep_ZNM:BTTask_GetPatrolLoc_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Custom/IceLakeCity/BT_IceLakeCityPatrolKeep_ZNM.2"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_NewMoveTo'BT_IceLakeCityPatrolKeep_ZNM:BTTask_NewMoveTo_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Custom/IceLakeCity/BT_IceLakeCityPatrolKeep_ZNM.3"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_IceLakeCityPatrolKeep_ZNM'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Custom/IceLakeCity/BT_IceLakeCityPatrolKeep_ZNM.0"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_GetPatrolLoc",
+    "Name": "BTTask_GetPatrolLoc_0",
+    "Outer": "BT_IceLakeCityPatrolKeep_ZNM",
+    "Class": "UScriptClass'BTTask_GetPatrolLoc'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_IceLakeCityPatrolKeep_ZNM'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Custom/IceLakeCity/BT_IceLakeCityPatrolKeep_ZNM.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_IceLakeCityPatrolKeep_ZNM:BTComposite_Sequence_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Custom/IceLakeCity/BT_IceLakeCityPatrolKeep_ZNM.1"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_NewMoveTo",
+    "Name": "BTTask_NewMoveTo_0",
+    "Outer": "BT_IceLakeCityPatrolKeep_ZNM",
+    "Class": "UScriptClass'BTTask_NewMoveTo'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "bOrientRotationToMovement": true,
+      "ReplanMoveLineLength": 150.0,
+      "MaxSpeed": 100.0,
+      "MaxAcceleration": 10000.0,
+      "bStopOnOverlapNeedsUpdate": false,
+      "BlackboardKey": {
+        "SelectedKeyName": "PatrolLoc"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_IceLakeCityPatrolKeep_ZNM'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Custom/IceLakeCity/BT_IceLakeCityPatrolKeep_ZNM.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_IceLakeCityPatrolKeep_ZNM:BTComposite_Sequence_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Custom/IceLakeCity/BT_IceLakeCityPatrolKeep_ZNM.1"
+      }
+    }
+  }
+]

@@ -1,0 +1,248 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "Empty_PickupCoin_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Super": {
+      "ObjectName": "BlueprintGeneratedClass'BP_PickupStatic_C'",
+      "ObjectPath": "EM/Content/AssetDesign/Item/Pickups/BP_PickupStatic.3"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'Empty_PickupCoin_C:SimpleConstructionScript_0'",
+        "ObjectPath": "EM/Content/AssetDesign/Item/Pickups/Empty_PickupCoin.7"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "BlueprintGeneratedClass'BP_PickupStatic_C'",
+      "ObjectPath": "EM/Content/AssetDesign/Item/Pickups/BP_PickupStatic.3"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "Mesh",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'StaticMeshComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "ClassFlags": "CLASS_Config | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "Empty_PickupCoin_C'Default__Empty_PickupCoin_C'",
+      "ObjectPath": "EM/Content/AssetDesign/Item/Pickups/Empty_PickupCoin.1"
+    }
+  },
+  {
+    "Type": "Empty_PickupCoin_C",
+    "Name": "Default__Empty_PickupCoin_C",
+    "Class": "BlueprintGeneratedClass'EM/Content/AssetDesign/Item/Pickups/Empty_PickupCoin.Empty_PickupCoin_C'",
+    "Template": {
+      "ObjectName": "BP_PickupStatic_C'Default__BP_PickupStatic_C'",
+      "ObjectPath": "EM/Content/AssetDesign/Item/Pickups/BP_PickupStatic.4"
+    },
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "StaticMeshComponent": {
+        "ObjectName": "StaticMeshComponent'Default__Empty_PickupCoin_C:StaticMeshComponent'",
+        "ObjectPath": "EM/Content/AssetDesign/Item/Pickups/Empty_PickupCoin.9"
+      },
+      "SphereComponent": {
+        "ObjectName": "SphereComponent'Default__Empty_PickupCoin_C:SphereComponent'",
+        "ObjectPath": "EM/Content/AssetDesign/Item/Pickups/Empty_PickupCoin.8"
+      },
+      "PickUpInteractiveComponent": {
+        "ObjectName": "BP_PickUpInteractiveComponent_C'Default__Empty_PickupCoin_C:UPickUpInteractiveComponent'",
+        "ObjectPath": "EM/Content/AssetDesign/Item/Pickups/Empty_PickupCoin.2"
+      },
+      "ProjectileMovementComponent": {
+        "ObjectName": "PickupBaseMovementComponent'Default__Empty_PickupCoin_C:ProjectileMovementComponent'",
+        "ObjectPath": "EM/Content/AssetDesign/Item/Pickups/Empty_PickupCoin.3"
+      },
+      "RootComponent": {
+        "ObjectName": "SphereComponent'Default__Empty_PickupCoin_C:SphereComponent'",
+        "ObjectPath": "EM/Content/AssetDesign/Item/Pickups/Empty_PickupCoin.8"
+      }
+    }
+  },
+  {
+    "Type": "BP_PickUpInteractiveComponent_C",
+    "Name": "UPickUpInteractiveComponent",
+    "Outer": "Default__Empty_PickupCoin_C",
+    "Class": "BlueprintGeneratedClass'EM/Content/BluePrints/Item/BP_PickUpInteractiveComponent.BP_PickUpInteractiveComponent_C'",
+    "Template": {
+      "ObjectName": "BP_PickUpInteractiveComponent_C'Default__BP_PickupStatic_C:UPickUpInteractiveComponent'",
+      "ObjectPath": "EM/Content/AssetDesign/Item/Pickups/BP_PickupStatic.5"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "SphereComponent'Default__Empty_PickupCoin_C:SphereComponent'",
+        "ObjectPath": "EM/Content/AssetDesign/Item/Pickups/Empty_PickupCoin.8"
+      }
+    }
+  },
+  {
+    "Type": "PickupBaseMovementComponent",
+    "Name": "ProjectileMovementComponent",
+    "Outer": "Default__Empty_PickupCoin_C",
+    "Class": "UScriptClass'PickupBaseMovementComponent'",
+    "Template": {
+      "ObjectName": "PickupBaseMovementComponent'Default__BP_PickupStatic_C:ProjectileMovementComponent'",
+      "ObjectPath": "EM/Content/AssetDesign/Item/Pickups/BP_PickupStatic.6"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "OnProjectileStop": {
+        "InvocationList": [
+          {
+            "Object": {
+              "ObjectName": "Empty_PickupCoin_C'Default__Empty_PickupCoin_C'",
+              "ObjectPath": "EM/Content/AssetDesign/Item/Pickups/Empty_PickupCoin.1"
+            },
+            "FunctionName": "OnProjectileStopEvent"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Outer": "Empty_PickupCoin_C",
+    "Class": "UScriptClass'SceneComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'Empty_PickupCoin_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "EM/Content/AssetDesign/Item/Pickups/Empty_PickupCoin.4"
+      },
+      "VariableGuid": "E51EF17D-4D8C2EE5-7935E292-C599AAAF",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_2",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'StaticMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "StaticMeshComponent'Empty_PickupCoin_C:Mesh_GEN_VARIABLE'",
+        "ObjectPath": "EM/Content/AssetDesign/Item/Pickups/Empty_PickupCoin.10"
+      },
+      "ParentComponentOrVariableName": "SphereComponent",
+      "bIsParentComponentNative": true,
+      "VariableGuid": "5C694149-4EAB03BF-06627BAB-661959A0",
+      "InternalVariableName": "Mesh"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Outer": "Empty_PickupCoin_C",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node'Empty_PickupCoin_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "EM/Content/AssetDesign/Item/Pickups/Empty_PickupCoin.6"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node'Empty_PickupCoin_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "EM/Content/AssetDesign/Item/Pickups/Empty_PickupCoin.6"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'Empty_PickupCoin_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "EM/Content/AssetDesign/Item/Pickups/Empty_PickupCoin.5"
+      }
+    }
+  },
+  {
+    "Type": "SphereComponent",
+    "Name": "SphereComponent",
+    "Outer": "Default__Empty_PickupCoin_C",
+    "Class": "UScriptClass'SphereComponent'",
+    "Template": {
+      "ObjectName": "SphereComponent'Default__BP_PickupStatic_C:SphereComponent'",
+      "ObjectPath": "EM/Content/AssetDesign/Item/Pickups/BP_PickupStatic.10"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "PhysicsVolumeChangedDelegate": {
+        "InvocationList": [
+          {
+            "Object": {
+              "ObjectName": "PickupBaseMovementComponent'Default__Empty_PickupCoin_C:ProjectileMovementComponent'",
+              "ObjectPath": "EM/Content/AssetDesign/Item/Pickups/Empty_PickupCoin.3"
+            },
+            "FunctionName": "PhysicsVolumeChanged"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "StaticMeshComponent",
+    "Outer": "Default__Empty_PickupCoin_C",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Template": {
+      "ObjectName": "StaticMeshComponent'Default__BP_PickupStatic_C:StaticMeshComponent'",
+      "ObjectPath": "EM/Content/AssetDesign/Item/Pickups/BP_PickupStatic.11"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "AttachParent": {
+        "ObjectName": "SphereComponent'Default__Empty_PickupCoin_C:SphereComponent'",
+        "ObjectPath": "EM/Content/AssetDesign/Item/Pickups/Empty_PickupCoin.8"
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "Mesh_GEN_VARIABLE",
+    "Outer": "Empty_PickupCoin_C",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'SM_Collect_Golden'",
+        "ObjectPath": "/Game/AssetDesign/Item/Item_Test/SM_Collect_Golden"
+      },
+      "BodyInstance": {
+        "bEnableGravity": false
+      }
+    }
+  }
+]

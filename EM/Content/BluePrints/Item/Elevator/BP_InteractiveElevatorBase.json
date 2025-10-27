@@ -1,0 +1,578 @@
+[
+  {
+    "Type": "Function",
+    "Name": "OnRep_ElevatorBottomChildActor",
+    "Outer": "BP_InteractiveElevatorBase_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnRep_ElevatorTopChildActor",
+    "Outer": "BP_InteractiveElevatorBase_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BP_InteractiveElevatorBase_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "NumReplicatedProperties": 5,
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BP_InteractiveElevatorBase_C:SimpleConstructionScript_0'",
+        "ObjectPath": "EM/Content/BluePrints/Item/Elevator/BP_InteractiveElevatorBase.14"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'ElevatorMechanism'",
+      "ObjectPath": "/Script/EM"
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'BP_InteractiveElevatorBase_C:OnRep_ElevatorTopChildActor'",
+        "ObjectPath": "EM/Content/BluePrints/Item/Elevator/BP_InteractiveElevatorBase.1"
+      },
+      {
+        "ObjectName": "Function'BP_InteractiveElevatorBase_C:OnRep_ElevatorBottomChildActor'",
+        "ObjectPath": "EM/Content/BluePrints/Item/Elevator/BP_InteractiveElevatorBase.0"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "Scene",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'SceneComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "ElevatorInSign",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'StaticMeshComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "ElevatorTopSign",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'StaticMeshComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "ElevatorBottomSign",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'StaticMeshComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "MoveHeight",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "Edit | BlueprintVisible"
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "ElevatorInCharacter",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | Net | DisableEditOnTemplate",
+        "RepIndex": 18,
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'BP_ElevatorInCharacterBase_C'",
+          "ObjectPath": "EM/Content/BluePrints/Item/Elevator/BP_ElevatorInCharacterBase.9"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "ElevatorBottomChildActor",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | Net | DisableEditOnTemplate | RepNotify",
+        "RepIndex": 19,
+        "RepNotifyFunc": "OnRep_ElevatorBottomChildActor",
+        "PropertyClass": {
+          "ObjectName": "Class'Actor'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "ElevatorInChildActor",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | Net | DisableEditOnTemplate",
+        "RepIndex": 20,
+        "PropertyClass": {
+          "ObjectName": "Class'Actor'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "ElevatorTopChildActor",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | Net | DisableEditOnTemplate | RepNotify",
+        "RepIndex": 21,
+        "RepNotifyFunc": "OnRep_ElevatorTopChildActor",
+        "PropertyClass": {
+          "ObjectName": "Class'Actor'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Self Actor",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | Net | DisableEditOnTemplate",
+        "RepIndex": 22,
+        "PropertyClass": {
+          "ObjectName": "Class'Actor'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ClassProperty",
+        "Name": "ElevatorInCharacterClass",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible",
+        "PropertyClass": {
+          "ObjectName": "Class'Class'",
+          "ObjectPath": "/Script/CoreUObject"
+        },
+        "MetaClass": {
+          "ObjectName": "Class'Actor'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "Speed",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "Edit | BlueprintVisible"
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "ElevatorTopCreatorId",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "Edit | BlueprintVisible"
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "ElevatorBottomCreatorId",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "Edit | BlueprintVisible"
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "StateInteractiveId",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "Edit | BlueprintVisible"
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "StateUninteractiveId",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "Edit | BlueprintVisible"
+      }
+    ],
+    "FuncMap": {
+      "OnRep_ElevatorBottomChildActor": {
+        "ObjectName": "Function'BP_InteractiveElevatorBase_C:OnRep_ElevatorBottomChildActor'",
+        "ObjectPath": "EM/Content/BluePrints/Item/Elevator/BP_InteractiveElevatorBase.0"
+      },
+      "OnRep_ElevatorTopChildActor": {
+        "ObjectName": "Function'BP_InteractiveElevatorBase_C:OnRep_ElevatorTopChildActor'",
+        "ObjectPath": "EM/Content/BluePrints/Item/Elevator/BP_InteractiveElevatorBase.1"
+      }
+    },
+    "ClassFlags": "CLASS_Config | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BP_InteractiveElevatorBase_C'Default__BP_InteractiveElevatorBase_C'",
+      "ObjectPath": "EM/Content/BluePrints/Item/Elevator/BP_InteractiveElevatorBase.3"
+    }
+  },
+  {
+    "Type": "BP_InteractiveElevatorBase_C",
+    "Name": "Default__BP_InteractiveElevatorBase_C",
+    "Class": "BlueprintGeneratedClass'EM/Content/BluePrints/Item/Elevator/BP_InteractiveElevatorBase.BP_InteractiveElevatorBase_C'",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "MoveHeight": 5100.0,
+      "Speed": 600.0,
+      "CombatStateChangeComponent": {
+        "ObjectName": "BP_CombatStateChangeComponent_C'Default__BP_InteractiveElevatorBase_C:CombatStateChangeComponent'",
+        "ObjectPath": "EM/Content/BluePrints/Item/Elevator/BP_InteractiveElevatorBase.5"
+      },
+      "CombatClientEffectComponent": {
+        "ObjectName": "BP_CombatClientEffectComponent_C'Default__BP_InteractiveElevatorBase_C:CombatClientEffectComponent'",
+        "ObjectPath": "EM/Content/BluePrints/Item/Elevator/BP_InteractiveElevatorBase.4"
+      },
+      "FXComponent": {
+        "ObjectName": "BP_FXComponent_C'Default__BP_InteractiveElevatorBase_C:BP_FXComponent'",
+        "ObjectPath": "EM/Content/BluePrints/Item/Elevator/BP_InteractiveElevatorBase.6"
+      }
+    }
+  },
+  {
+    "Type": "BP_CombatClientEffectComponent_C",
+    "Name": "CombatClientEffectComponent",
+    "Outer": "Default__BP_InteractiveElevatorBase_C",
+    "Class": "BlueprintGeneratedClass'EM/Content/BluePrints/Item/BP_CombatClientEffectComponent.BP_CombatClientEffectComponent_C'",
+    "Flags": "RF_Public | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "BP_CombatStateChangeComponent_C",
+    "Name": "CombatStateChangeComponent",
+    "Outer": "Default__BP_InteractiveElevatorBase_C",
+    "Class": "BlueprintGeneratedClass'EM/Content/BluePrints/Item/BP_CombatStateChangeComponent.BP_CombatStateChangeComponent_C'",
+    "Flags": "RF_Public | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "BP_FXComponent_C",
+    "Name": "BP_FXComponent",
+    "Outer": "Default__BP_InteractiveElevatorBase_C",
+    "Class": "BlueprintGeneratedClass'EM/Content/BluePrints/Char/BP_FXComponent.BP_FXComponent_C'",
+    "Flags": "RF_Public | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Outer": "BP_InteractiveElevatorBase_C",
+    "Class": "UScriptClass'SceneComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "Scene_GEN_VARIABLE",
+    "Outer": "BP_InteractiveElevatorBase_C",
+    "Class": "UScriptClass'SceneComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BP_InteractiveElevatorBase_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "EM/Content/BluePrints/Item/Elevator/BP_InteractiveElevatorBase.7"
+      },
+      "VariableGuid": "A6966825-4191C987-E39FC7B6-49712285",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_4",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'StaticMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "StaticMeshComponent'BP_InteractiveElevatorBase_C:ElevatorBottomSign_GEN_VARIABLE'",
+        "ObjectPath": "EM/Content/BluePrints/Item/Elevator/BP_InteractiveElevatorBase.15"
+      },
+      "VariableGuid": "54688F1A-465822DB-7CA9BA93-7D4FF5BE",
+      "InternalVariableName": "ElevatorBottomSign"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_5",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'StaticMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "StaticMeshComponent'BP_InteractiveElevatorBase_C:ElevatorInSign_GEN_VARIABLE'",
+        "ObjectPath": "EM/Content/BluePrints/Item/Elevator/BP_InteractiveElevatorBase.16"
+      },
+      "VariableGuid": "189A8417-48E6C39E-C2A209AB-2DB70894",
+      "InternalVariableName": "ElevatorInSign"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_6",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'StaticMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "StaticMeshComponent'BP_InteractiveElevatorBase_C:ElevatorTopSign_GEN_VARIABLE'",
+        "ObjectPath": "EM/Content/BluePrints/Item/Elevator/BP_InteractiveElevatorBase.17"
+      },
+      "VariableGuid": "BE902A60-40BB76BA-22D04794-64DD82E3",
+      "InternalVariableName": "ElevatorTopSign"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_7",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BP_InteractiveElevatorBase_C:Scene_GEN_VARIABLE'",
+        "ObjectPath": "EM/Content/BluePrints/Item/Elevator/BP_InteractiveElevatorBase.8"
+      },
+      "ChildNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_InteractiveElevatorBase_C:SimpleConstructionScript_0.SCS_Node_4'",
+          "ObjectPath": "EM/Content/BluePrints/Item/Elevator/BP_InteractiveElevatorBase.10"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_InteractiveElevatorBase_C:SimpleConstructionScript_0.SCS_Node_6'",
+          "ObjectPath": "EM/Content/BluePrints/Item/Elevator/BP_InteractiveElevatorBase.12"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_InteractiveElevatorBase_C:SimpleConstructionScript_0.SCS_Node_5'",
+          "ObjectPath": "EM/Content/BluePrints/Item/Elevator/BP_InteractiveElevatorBase.11"
+        }
+      ],
+      "VariableGuid": "AD0CE1E6-43ED958B-8A9637A9-B03C4C55",
+      "InternalVariableName": "Scene"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Outer": "BP_InteractiveElevatorBase_C",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_InteractiveElevatorBase_C:SimpleConstructionScript_0.SCS_Node_7'",
+          "ObjectPath": "EM/Content/BluePrints/Item/Elevator/BP_InteractiveElevatorBase.13"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_InteractiveElevatorBase_C:SimpleConstructionScript_0.SCS_Node_4'",
+          "ObjectPath": "EM/Content/BluePrints/Item/Elevator/BP_InteractiveElevatorBase.10"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_InteractiveElevatorBase_C:SimpleConstructionScript_0.SCS_Node_6'",
+          "ObjectPath": "EM/Content/BluePrints/Item/Elevator/BP_InteractiveElevatorBase.12"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_InteractiveElevatorBase_C:SimpleConstructionScript_0.SCS_Node_5'",
+          "ObjectPath": "EM/Content/BluePrints/Item/Elevator/BP_InteractiveElevatorBase.11"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_InteractiveElevatorBase_C:SimpleConstructionScript_0.SCS_Node_7'",
+          "ObjectPath": "EM/Content/BluePrints/Item/Elevator/BP_InteractiveElevatorBase.13"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BP_InteractiveElevatorBase_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "EM/Content/BluePrints/Item/Elevator/BP_InteractiveElevatorBase.9"
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "ElevatorBottomSign_GEN_VARIABLE",
+    "Outer": "BP_InteractiveElevatorBase_C",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'Sphere'",
+        "ObjectPath": "Engine/Content/BasicShapes/Sphere.2"
+      },
+      "OverrideMaterials": [
+        {
+          "ObjectName": "Material'BasicShapeMaterial'",
+          "ObjectPath": "Engine/Content/BasicShapes/BasicShapeMaterial.0"
+        }
+      ],
+      "bGenerateOverlapEvents": false,
+      "CanCharacterStepUpOn": "ECB_No",
+      "BodyInstance": {
+        "ObjectType": "ECC_WorldStatic",
+        "CollisionEnabled": "ECollisionEnabled::NoCollision",
+        "CollisionProfileName": "NoCollision",
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "Visibility",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Camera",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "TraceExceptChar",
+              "Response": "ECR_Ignore"
+            }
+          ]
+        }
+      },
+      "RelativeLocation": {
+        "X": 250.0,
+        "Y": 850.0,
+        "Z": 25.0
+      },
+      "bHiddenInGame": true
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "ElevatorInSign_GEN_VARIABLE",
+    "Outer": "BP_InteractiveElevatorBase_C",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'Sphere'",
+        "ObjectPath": "Engine/Content/BasicShapes/Sphere.2"
+      },
+      "OverrideMaterials": [
+        {
+          "ObjectName": "Material'BasicShapeMaterial'",
+          "ObjectPath": "Engine/Content/BasicShapes/BasicShapeMaterial.0"
+        }
+      ],
+      "bGenerateOverlapEvents": false,
+      "CanCharacterStepUpOn": "ECB_No",
+      "BodyInstance": {
+        "ObjectType": "ECC_WorldStatic",
+        "CollisionEnabled": "ECollisionEnabled::NoCollision",
+        "CollisionProfileName": "NoCollision",
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "Visibility",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Camera",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "TraceExceptChar",
+              "Response": "ECR_Ignore"
+            }
+          ]
+        }
+      },
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 75.0
+      },
+      "bHiddenInGame": true
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "ElevatorTopSign_GEN_VARIABLE",
+    "Outer": "BP_InteractiveElevatorBase_C",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'Sphere'",
+        "ObjectPath": "Engine/Content/BasicShapes/Sphere.2"
+      },
+      "OverrideMaterials": [
+        {
+          "ObjectName": "Material'BasicShapeMaterial'",
+          "ObjectPath": "Engine/Content/BasicShapes/BasicShapeMaterial.0"
+        }
+      ],
+      "bGenerateOverlapEvents": false,
+      "CanCharacterStepUpOn": "ECB_No",
+      "BodyInstance": {
+        "ObjectType": "ECC_WorldStatic",
+        "CollisionEnabled": "ECollisionEnabled::NoCollision",
+        "CollisionProfileName": "NoCollision",
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "Visibility",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Camera",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "TraceExceptChar",
+              "Response": "ECR_Ignore"
+            }
+          ]
+        }
+      },
+      "RelativeLocation": {
+        "X": 250.0,
+        "Y": -850.0,
+        "Z": 5125.0
+      },
+      "bHiddenInGame": true
+    }
+  }
+]

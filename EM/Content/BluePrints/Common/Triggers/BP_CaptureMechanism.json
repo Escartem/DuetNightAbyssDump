@@ -1,0 +1,384 @@
+[
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_BP_CaptureMechanism",
+    "Outer": "BP_CaptureMechanism_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_GetTransform_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 48,
+        "PropertyFlags": "ConstParm",
+        "Struct": {
+          "ObjectName": "ScriptStruct'Transform'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_BreakTransform_Location",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "Struct": {
+          "ObjectName": "ScriptStruct'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_BreakTransform_Rotation",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "Struct": {
+          "ObjectName": "ScriptStruct'Rotator'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_BreakTransform_Scale",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "Struct": {
+          "ObjectName": "ScriptStruct'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_Add_VectorVector_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "Struct": {
+          "ObjectName": "ScriptStruct'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StrProperty",
+        "Name": "CallFunc_SpawnFXAtLocation_Level_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 16
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction | FUNC_HasDefaults"
+  },
+  {
+    "Type": "Function",
+    "Name": "ReceiveBeginPlay",
+    "Outer": "BP_CaptureMechanism_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "SuperStruct": {
+      "ObjectName": "Function'Actor:ReceiveBeginPlay'",
+      "ObjectPath": "/Script/Engine"
+    },
+    "FunctionFlags": "FUNC_Event | FUNC_Protected | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "MonsterCapture",
+    "Outer": "BP_CaptureMechanism_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "FunctionFlags": "FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "GetModuleName",
+    "Outer": "BP_CaptureMechanism_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "ChildProperties": [
+      {
+        "Type": "StrProperty",
+        "Name": "ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "Parm | OutParm | ReturnParm"
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_HasOutParms | FUNC_BlueprintCallable | FUNC_BlueprintEvent | FUNC_Const"
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BP_CaptureMechanism_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BP_CaptureMechanism_C:SimpleConstructionScript_0'",
+        "ObjectPath": "EM/Content/BluePrints/Common/Triggers/BP_CaptureMechanism.11"
+      },
+      "UberGraphFunction": {
+        "ObjectName": "Function'BP_CaptureMechanism_C:ExecuteUbergraph_BP_CaptureMechanism'",
+        "ObjectPath": "EM/Content/BluePrints/Common/Triggers/BP_CaptureMechanism.0"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'AOITriggerBox'",
+      "ObjectPath": "/Script/EM"
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'BP_CaptureMechanism_C:GetModuleName'",
+        "ObjectPath": "EM/Content/BluePrints/Common/Triggers/BP_CaptureMechanism.3"
+      },
+      {
+        "ObjectName": "Function'BP_CaptureMechanism_C:MonsterCapture'",
+        "ObjectPath": "EM/Content/BluePrints/Common/Triggers/BP_CaptureMechanism.2"
+      },
+      {
+        "ObjectName": "Function'BP_CaptureMechanism_C:ReceiveBeginPlay'",
+        "ObjectPath": "EM/Content/BluePrints/Common/Triggers/BP_CaptureMechanism.1"
+      },
+      {
+        "ObjectName": "Function'BP_CaptureMechanism_C:ExecuteUbergraph_BP_CaptureMechanism'",
+        "ObjectPath": "EM/Content/BluePrints/Common/Triggers/BP_CaptureMechanism.0"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient",
+        "Struct": {
+          "ObjectName": "ScriptStruct'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "BP_FXComponent",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'BP_FXComponent_C'",
+          "ObjectPath": "EM/Content/BluePrints/Char/BP_FXComponent.4"
+        }
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_BP_CaptureMechanism": {
+        "ObjectName": "Function'BP_CaptureMechanism_C:ExecuteUbergraph_BP_CaptureMechanism'",
+        "ObjectPath": "EM/Content/BluePrints/Common/Triggers/BP_CaptureMechanism.0"
+      },
+      "ReceiveBeginPlay": {
+        "ObjectName": "Function'BP_CaptureMechanism_C:ReceiveBeginPlay'",
+        "ObjectPath": "EM/Content/BluePrints/Common/Triggers/BP_CaptureMechanism.1"
+      },
+      "MonsterCapture": {
+        "ObjectName": "Function'BP_CaptureMechanism_C:MonsterCapture'",
+        "ObjectPath": "EM/Content/BluePrints/Common/Triggers/BP_CaptureMechanism.2"
+      },
+      "GetModuleName": {
+        "ObjectName": "Function'BP_CaptureMechanism_C:GetModuleName'",
+        "ObjectPath": "EM/Content/BluePrints/Common/Triggers/BP_CaptureMechanism.3"
+      }
+    },
+    "ClassFlags": "CLASS_Config | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "Interfaces": [
+      {
+        "Class": {
+          "ObjectName": "Class'UnLuaInterface'",
+          "ObjectPath": "/Script/UnLua"
+        },
+        "PointerOffset": 0,
+        "bImplementedByK2": true
+      }
+    ],
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BP_CaptureMechanism_C'Default__BP_CaptureMechanism_C'",
+      "ObjectPath": "EM/Content/BluePrints/Common/Triggers/BP_CaptureMechanism.5"
+    }
+  },
+  {
+    "Type": "BP_CaptureMechanism_C",
+    "Name": "Default__BP_CaptureMechanism_C",
+    "Class": "BlueprintGeneratedClass'EM/Content/BluePrints/Common/Triggers/BP_CaptureMechanism.BP_CaptureMechanism_C'",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "UberGraphFrame": {},
+      "CollisionComponent": {
+        "ObjectName": "BoxComponent'Default__BP_CaptureMechanism_C:CollisionComp'",
+        "ObjectPath": "EM/Content/BluePrints/Common/Triggers/BP_CaptureMechanism.6"
+      },
+      "bHidden": false,
+      "RootComponent": {
+        "ObjectName": "BoxComponent'Default__BP_CaptureMechanism_C:CollisionComp'",
+        "ObjectPath": "EM/Content/BluePrints/Common/Triggers/BP_CaptureMechanism.6"
+      }
+    }
+  },
+  {
+    "Type": "BoxComponent",
+    "Name": "CollisionComp",
+    "Outer": "Default__BP_CaptureMechanism_C",
+    "Class": "UScriptClass'BoxComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "BoxExtent": {
+        "X": 100.0,
+        "Y": 100.0,
+        "Z": 100.0
+      },
+      "BodyInstance": {
+        "ObjectType": "ECC_WorldStatic",
+        "CollisionProfileName": "Custom",
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "WorldStatic",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "WorldDynamic",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Pawn",
+              "Response": "ECR_Overlap"
+            },
+            {
+              "Channel": "Visibility",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Camera",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "PhysicsBody",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Vehicle",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Destructible",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Item",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "TraceExceptChar",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "MonsterPawn",
+              "Response": "ECR_Overlap"
+            },
+            {
+              "Channel": "BreakableItem",
+              "Response": "ECR_Ignore"
+            }
+          ]
+        }
+      },
+      "bHiddenInGame": true
+    }
+  },
+  {
+    "Type": "BP_FXComponent_C",
+    "Name": "BP_FXComponent_GEN_VARIABLE",
+    "Outer": "BP_CaptureMechanism_C",
+    "Class": "BlueprintGeneratedClass'EM/Content/BluePrints/Char/BP_FXComponent.BP_FXComponent_C'",
+    "Template": {
+      "ObjectName": "BP_FXComponent_C'Default__BP_FXComponent_C'",
+      "ObjectPath": "EM/Content/BluePrints/Char/BP_FXComponent.5"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Outer": "BP_CaptureMechanism_C",
+    "Class": "UScriptClass'SceneComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BP_CaptureMechanism_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "EM/Content/BluePrints/Common/Triggers/BP_CaptureMechanism.8"
+      },
+      "VariableGuid": "6485476F-4797F66B-08928C9B-0EE4D4F8",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_1",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "BlueprintGeneratedClass'BP_FXComponent_C'",
+        "ObjectPath": "EM/Content/BluePrints/Char/BP_FXComponent.4"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "BP_FXComponent_C'BP_CaptureMechanism_C:BP_FXComponent_GEN_VARIABLE'",
+        "ObjectPath": "EM/Content/BluePrints/Common/Triggers/BP_CaptureMechanism.7"
+      },
+      "VariableGuid": "0E5221D1-48AD477B-61E77FA0-640D6620",
+      "InternalVariableName": "BP_FXComponent"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Outer": "BP_CaptureMechanism_C",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_CaptureMechanism_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "EM/Content/BluePrints/Common/Triggers/BP_CaptureMechanism.10"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_CaptureMechanism_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "EM/Content/BluePrints/Common/Triggers/BP_CaptureMechanism.10"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BP_CaptureMechanism_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "EM/Content/BluePrints/Common/Triggers/BP_CaptureMechanism.9"
+      }
+    }
+  }
+]

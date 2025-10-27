@@ -1,0 +1,4264 @@
+[
+  {
+    "Type": "BehaviorTree",
+    "Name": "BT_Boss_Saiqi02_Stage2",
+    "Class": "UScriptClass'BehaviorTree'",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "RootNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Saiqi02_Stage2:BTComposite_Selector_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.5"
+      },
+      "BlackboardAsset": {
+        "ObjectName": "BlackboardData'BB_Boss_Saiqi02'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BB_Boss_Saiqi02.0"
+      }
+    }
+  },
+  {
+    "Type": "BPServer_BossSaiqi02_C",
+    "Name": "BPServer_BossSaiqi02_C_0",
+    "Outer": "BT_Boss_Saiqi02_Stage2",
+    "Class": "BlueprintGeneratedClass'EM/Content/BluePrints/AI/BTServer/BPServer_BossSaiqi02.BPServer_BossSaiqi02_C'",
+    "Template": {
+      "ObjectName": "BPServer_BossSaiqi02_C'Default__BPServer_BossSaiqi02_C'",
+      "ObjectPath": "EM/Content/BluePrints/AI/BTServer/BPServer_BossSaiqi02.5"
+    },
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Saiqi02_Stage2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Saiqi02_Stage2:BTComposite_Selector_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.5"
+      }
+    }
+  },
+  {
+    "Type": "BPServer_GetAnimSelector_C",
+    "Name": "BPServer_GetAnimSelector_C_1",
+    "Outer": "BT_Boss_Saiqi02_Stage2",
+    "Class": "BlueprintGeneratedClass'EM/Content/BluePrints/AI/BTServer/BPServer_GetAnimSelector.BPServer_GetAnimSelector_C'",
+    "Template": {
+      "ObjectName": "BPServer_GetAnimSelector_C'Default__BPServer_GetAnimSelector_C'",
+      "ObjectPath": "EM/Content/BluePrints/AI/BTServer/BPServer_GetAnimSelector.3"
+    },
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Interval": 0.02,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Saiqi02_Stage2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Saiqi02_Stage2:BTComposite_Selector_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.5"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Rate",
+    "Name": "BTComposite_Rate_3",
+    "Outer": "BT_Boss_Saiqi02_Stage2",
+    "Class": "UScriptClass'BTComposite_Rate'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Rates": [
+        10,
+        10,
+        10
+      ],
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_Boss_Saiqi02_Stage2:BTComposite_Sequence_13'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.19"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_Boss_Saiqi02_Stage2:BTComposite_Sequence_29'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.35"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_Boss_Saiqi02_Stage2:BTComposite_Sequence_30'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.37"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Saiqi02_Stage2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Saiqi02_Stage2:BTComposite_Sequence_28'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.34"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_0",
+    "Outer": "BT_Boss_Saiqi02_Stage2",
+    "Class": "UScriptClass'BTComposite_Selector'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_Boss_Saiqi02_Stage2:BTComposite_Sequence_7'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.42"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Boss_Saiqi02_Stage2:BTDecorator_Blackboard_5'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.64"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_Boss_Saiqi02_Stage2:BTComposite_Sequence_8'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.43"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Boss_Saiqi02_Stage2:BTDecorator_Blackboard_7'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.67"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_Boss_Saiqi02_Stage2:BTComposite_Sequence_10'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.16"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Boss_Saiqi02_Stage2:BTDecorator_Blackboard_9'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.69"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_Boss_Saiqi02_Stage2:BTComposite_Sequence_11'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.17"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Boss_Saiqi02_Stage2:BTDecorator_Blackboard_10'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.46"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_Boss_Saiqi02_Stage2:BTComposite_Sequence_2'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.26"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Boss_Saiqi02_Stage2:BTDecorator_Blackboard_3'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.56"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_Boss_Saiqi02_Stage2:BTComposite_Sequence_15'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.21"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Boss_Saiqi02_Stage2:BTDecorator_Blackboard_13'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.48"
+            }
+          ],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Saiqi02_Stage2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Saiqi02_Stage2:BTComposite_Sequence_6'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.41"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_1",
+    "Outer": "BT_Boss_Saiqi02_Stage2",
+    "Class": "UScriptClass'BTComposite_Selector'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector'BT_Boss_Saiqi02_Stage2:BTComposite_Selector_3'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.9"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Boss_Saiqi02_Stage2:BTDecorator_Blackboard_51'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.65"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_Boss_Saiqi02_Stage2:BTComposite_Sequence_3'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.36"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Boss_Saiqi02_Stage2:BTDecorator_Blackboard_12'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.47"
+            }
+          ],
+          "DecoratorOps": []
+        }
+      ],
+      "Services": [
+        {
+          "ObjectName": "BPServer_GetAnimSelector_C'BT_Boss_Saiqi02_Stage2:BPServer_GetAnimSelector_C_1'",
+          "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.2"
+        },
+        {
+          "ObjectName": "BPServer_BossSaiqi02_C'BT_Boss_Saiqi02_Stage2:BPServer_BossSaiqi02_C_0'",
+          "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.1"
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Saiqi02_Stage2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.0"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_10",
+    "Outer": "BT_Boss_Saiqi02_Stage2",
+    "Class": "UScriptClass'BTComposite_Selector'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_Boss_Saiqi02_Stage2:BTComposite_Sequence_28'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.34"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Boss_Saiqi02_Stage2:BTDecorator_Blackboard_4'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.58"
+            },
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Boss_Saiqi02_Stage2:BTDecorator_Blackboard_6'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.66"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_UseSkill'BT_Boss_Saiqi02_Stage2:BTTask_UseSkill_25'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.116"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Cooldown'BT_Boss_Saiqi02_Stage2:BTDecorator_Cooldown_2'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.76"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_UseSkill'BT_Boss_Saiqi02_Stage2:BTTask_UseSkill_34'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.121"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Cooldown'BT_Boss_Saiqi02_Stage2:BTDecorator_Cooldown_4'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.79"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait'BT_Boss_Saiqi02_Stage2:BTTask_Wait_2'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.137"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Saiqi02_Stage2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Saiqi02_Stage2:BTComposite_Sequence_21'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.28"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_12",
+    "Outer": "BT_Boss_Saiqi02_Stage2",
+    "Class": "UScriptClass'BTComposite_Selector'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_Boss_Saiqi02_Stage2:BTComposite_Sequence_1'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.15"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Boss_Saiqi02_Stage2:BTDecorator_Blackboard_48'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.63"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_Boss_Saiqi02_Stage2:BTComposite_Sequence_18'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.24"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Boss_Saiqi02_Stage2:BTDecorator_Blackboard_26'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.53"
+            },
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Boss_Saiqi02_Stage2:BTDecorator_Blackboard_14'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.49"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_Boss_Saiqi02_Stage2:BTComposite_Sequence_16'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.22"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Boss_Saiqi02_Stage2:BTDecorator_Blackboard_30'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.57"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_Boss_Saiqi02_Stage2:BTComposite_Sequence_17'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.23"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Boss_Saiqi02_Stage2:BTDecorator_Blackboard_22'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.50"
+            },
+            {
+              "ObjectName": "BTDecorator_CharAttrCondition'BT_Boss_Saiqi02_Stage2:BTDecorator_CharAttrCondition_3'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.72"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_Boss_Saiqi02_Stage2:BTComposite_Sequence_14'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.20"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Boss_Saiqi02_Stage2:BTDecorator_Blackboard_43'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.59"
+            },
+            {
+              "ObjectName": "BTDecorator_CharAttrCondition'BT_Boss_Saiqi02_Stage2:BTDecorator_CharAttrCondition_0'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.70"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_Boss_Saiqi02_Stage2:BTComposite_Sequence_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.14"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Boss_Saiqi02_Stage2:BTDecorator_Blackboard_1'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.45"
+            },
+            {
+              "ObjectName": "BTDecorator_CharAttrCondition'BT_Boss_Saiqi02_Stage2:BTDecorator_CharAttrCondition_1'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.71"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_Boss_Saiqi02_Stage2:BTComposite_Sequence_22'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.29"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Boss_Saiqi02_Stage2:BTDecorator_Blackboard_27'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.54"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_Boss_Saiqi02_Stage2:BTComposite_Sequence_21'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.28"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Boss_Saiqi02_Stage2:BTDecorator_Blackboard_28'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.55"
+            }
+          ],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Saiqi02_Stage2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Saiqi02_Stage2:BTComposite_Sequence_26'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.32"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_13",
+    "Outer": "BT_Boss_Saiqi02_Stage2",
+    "Class": "UScriptClass'BTComposite_Selector'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_EMRunEQSQuery'BT_Boss_Saiqi02_Stage2:BTTask_EMRunEQSQuery_2'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.89"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Boss_Saiqi02_Stage2:BTDecorator_Blackboard_44'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.60"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_EMRunEQSQuery'BT_Boss_Saiqi02_Stage2:BTTask_EMRunEQSQuery_1'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.88"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Boss_Saiqi02_Stage2:BTDecorator_Blackboard_45'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.61"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_EMRunEQSQuery'BT_Boss_Saiqi02_Stage2:BTTask_EMRunEQSQuery_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.87"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Boss_Saiqi02_Stage2:BTDecorator_Blackboard_46'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.62"
+            }
+          ],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Saiqi02_Stage2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Saiqi02_Stage2:BTComposite_Sequence_21'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.28"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_3",
+    "Outer": "BT_Boss_Saiqi02_Stage2",
+    "Class": "UScriptClass'BTComposite_Selector'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_Boss_Saiqi02_Stage2:BTComposite_Sequence_6'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.41"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Boss_Saiqi02_Stage2:BTDecorator_Blackboard_23'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.51"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_Boss_Saiqi02_Stage2:BTComposite_Sequence_26'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.32"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Boss_Saiqi02_Stage2:BTDecorator_Blackboard_24'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.52"
+            }
+          ],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Saiqi02_Stage2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Saiqi02_Stage2:BTComposite_Selector_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.5"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_4",
+    "Outer": "BT_Boss_Saiqi02_Stage2",
+    "Class": "UScriptClass'BTComposite_Selector'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_Boss_Saiqi02_Stage2:BTComposite_Sequence_19'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.25"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait'BT_Boss_Saiqi02_Stage2:BTTask_Wait_13'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.134"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Saiqi02_Stage2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Saiqi02_Stage2:BTComposite_Sequence_18'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.24"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_47",
+    "Outer": "BT_Boss_Saiqi02_Stage2",
+    "Class": "UScriptClass'BTComposite_Selector'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_Boss_Saiqi02_Stage2:BTComposite_Sequence_123'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.18"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait'BT_Boss_Saiqi02_Stage2:BTTask_Wait_62'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.142"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Saiqi02_Stage2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Saiqi02_Stage2:BTComposite_Sequence_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.15"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_5",
+    "Outer": "BT_Boss_Saiqi02_Stage2",
+    "Class": "UScriptClass'BTComposite_Selector'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_Boss_Saiqi02_Stage2:BTComposite_Sequence_33'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.38"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Cooldown'BT_Boss_Saiqi02_Stage2:BTDecorator_Cooldown_26'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.78"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_Boss_Saiqi02_Stage2:BTComposite_Sequence_27'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.33"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Cooldown'BT_Boss_Saiqi02_Stage2:BTDecorator_Cooldown_0'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.73"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_Boss_Saiqi02_Stage2:BTComposite_Sequence_34'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.39"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Cooldown'BT_Boss_Saiqi02_Stage2:BTDecorator_Cooldown_25'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.77"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_Boss_Saiqi02_Stage2:BTComposite_Sequence_35'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.40"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Saiqi02_Stage2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Saiqi02_Stage2:BTComposite_Sequence_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.14"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_9",
+    "Outer": "BT_Boss_Saiqi02_Stage2",
+    "Class": "UScriptClass'BTComposite_Selector'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_Boss_Saiqi02_Stage2:BTComposite_Sequence_20'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.27"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Cooldown'BT_Boss_Saiqi02_Stage2:BTDecorator_Cooldown_7'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.80"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_Boss_Saiqi02_Stage2:BTComposite_Sequence_23'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.30"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Cooldown'BT_Boss_Saiqi02_Stage2:BTDecorator_Cooldown_11'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.75"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_Boss_Saiqi02_Stage2:BTComposite_Sequence_24'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.31"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Cooldown'BT_Boss_Saiqi02_Stage2:BTDecorator_Cooldown_10'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.74"
+            }
+          ],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Saiqi02_Stage2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Saiqi02_Stage2:BTComposite_Sequence_22'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.29"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_0",
+    "Outer": "BT_Boss_Saiqi02_Stage2",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector'BT_Boss_Saiqi02_Stage2:BTComposite_Selector_5'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.12"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_FlyMoveTo'BT_Boss_Saiqi02_Stage2:BTTask_FlyMoveTo_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.92"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_TimeLimit'BT_Boss_Saiqi02_Stage2:BTDecorator_TimeLimit_0'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.81"
+            },
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Boss_Saiqi02_Stage2:BTDecorator_Blackboard_0'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.44"
+            }
+          ],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Saiqi02_Stage2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Saiqi02_Stage2:BTComposite_Selector_12'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.7"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_1",
+    "Outer": "BT_Boss_Saiqi02_Stage2",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_FindSpecifyLocation'BT_Boss_Saiqi02_Stage2:BTTask_FindSpecifyLocation_33'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.91"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector'BT_Boss_Saiqi02_Stage2:BTComposite_Selector_47'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.11"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Saiqi02_Stage2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Saiqi02_Stage2:BTComposite_Selector_12'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.7"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_10",
+    "Outer": "BT_Boss_Saiqi02_Stage2",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_UseSkill'BT_Boss_Saiqi02_Stage2:BTTask_UseSkill_10'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.105"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait'BT_Boss_Saiqi02_Stage2:BTTask_Wait_3'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.138"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Saiqi02_Stage2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Saiqi02_Stage2:BTComposite_Selector_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.4"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_11",
+    "Outer": "BT_Boss_Saiqi02_Stage2",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_UseSkill'BT_Boss_Saiqi02_Stage2:BTTask_UseSkill_12'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.106"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait'BT_Boss_Saiqi02_Stage2:BTTask_Wait_4'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.139"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Saiqi02_Stage2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Saiqi02_Stage2:BTComposite_Selector_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.4"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_123",
+    "Outer": "BT_Boss_Saiqi02_Stage2",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_NewMoveTo'BT_Boss_Saiqi02_Stage2:BTTask_NewMoveTo_43'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.96"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait'BT_Boss_Saiqi02_Stage2:BTTask_Wait_63'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.143"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Saiqi02_Stage2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Saiqi02_Stage2:BTComposite_Selector_47'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.11"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_13",
+    "Outer": "BT_Boss_Saiqi02_Stage2",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_UseSkill'BT_Boss_Saiqi02_Stage2:BTTask_UseSkill_23'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.114"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_SetBBValue_C'BT_Boss_Saiqi02_Stage2:BTTask_SetBBValue_C_1'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.101"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Saiqi02_Stage2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Rate'BT_Boss_Saiqi02_Stage2:BTComposite_Rate_3'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.3"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_14",
+    "Outer": "BT_Boss_Saiqi02_Stage2",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_SetBBValue'BT_Boss_Saiqi02_Stage2:BTTask_SetBBValue_3'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.98"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_UseSkill'BT_Boss_Saiqi02_Stage2:BTTask_UseSkill_16'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.110"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Saiqi02_Stage2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Saiqi02_Stage2:BTComposite_Selector_12'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.7"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_15",
+    "Outer": "BT_Boss_Saiqi02_Stage2",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_UseSkill'BT_Boss_Saiqi02_Stage2:BTTask_UseSkill_15'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.109"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait'BT_Boss_Saiqi02_Stage2:BTTask_Wait_10'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.133"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Saiqi02_Stage2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Saiqi02_Stage2:BTComposite_Selector_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.4"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_16",
+    "Outer": "BT_Boss_Saiqi02_Stage2",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_UseSkill'BT_Boss_Saiqi02_Stage2:BTTask_UseSkill_14'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.108"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_SetBBValue'BT_Boss_Saiqi02_Stage2:BTTask_SetBBValue_5'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.100"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Saiqi02_Stage2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Saiqi02_Stage2:BTComposite_Selector_12'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.7"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_17",
+    "Outer": "BT_Boss_Saiqi02_Stage2",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_UseSkill'BT_Boss_Saiqi02_Stage2:BTTask_UseSkill_18'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.111"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_UseSkill'BT_Boss_Saiqi02_Stage2:BTTask_UseSkill_6'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.128"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_SetBBValue'BT_Boss_Saiqi02_Stage2:BTTask_SetBBValue_2'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.97"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Saiqi02_Stage2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Saiqi02_Stage2:BTComposite_Selector_12'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.7"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_18",
+    "Outer": "BT_Boss_Saiqi02_Stage2",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_FindSpecifyLocation'BT_Boss_Saiqi02_Stage2:BTTask_FindSpecifyLocation_3'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.90"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector'BT_Boss_Saiqi02_Stage2:BTComposite_Selector_4'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.10"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Saiqi02_Stage2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Saiqi02_Stage2:BTComposite_Selector_12'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.7"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_19",
+    "Outer": "BT_Boss_Saiqi02_Stage2",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_NewMoveTo'BT_Boss_Saiqi02_Stage2:BTTask_NewMoveTo_3'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.95"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait'BT_Boss_Saiqi02_Stage2:BTTask_Wait_14'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.135"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Saiqi02_Stage2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Saiqi02_Stage2:BTComposite_Selector_4'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.10"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_2",
+    "Outer": "BT_Boss_Saiqi02_Stage2",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_UseSkill'BT_Boss_Saiqi02_Stage2:BTTask_UseSkill_13'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.107"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait'BT_Boss_Saiqi02_Stage2:BTTask_Wait_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.132"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Saiqi02_Stage2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Saiqi02_Stage2:BTComposite_Selector_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.4"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_20",
+    "Outer": "BT_Boss_Saiqi02_Stage2",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_UseSkill'BT_Boss_Saiqi02_Stage2:BTTask_UseSkill_19'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.112"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_UseSkill'BT_Boss_Saiqi02_Stage2:BTTask_UseSkill_9'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.131"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Saiqi02_Stage2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Saiqi02_Stage2:BTComposite_Selector_9'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.13"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_21",
+    "Outer": "BT_Boss_Saiqi02_Stage2",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector'BT_Boss_Saiqi02_Stage2:BTComposite_Selector_10'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.6"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector'BT_Boss_Saiqi02_Stage2:BTComposite_Selector_13'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.8"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_FlyMoveTo'BT_Boss_Saiqi02_Stage2:BTTask_FlyMoveTo_3'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.93"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_TimeLimit'BT_Boss_Saiqi02_Stage2:BTDecorator_TimeLimit_2'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.82"
+            }
+          ],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Saiqi02_Stage2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Saiqi02_Stage2:BTComposite_Selector_12'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.7"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_22",
+    "Outer": "BT_Boss_Saiqi02_Stage2",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector'BT_Boss_Saiqi02_Stage2:BTComposite_Selector_9'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.13"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait'BT_Boss_Saiqi02_Stage2:BTTask_Wait_5'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.140"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Saiqi02_Stage2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Saiqi02_Stage2:BTComposite_Selector_12'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.7"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_23",
+    "Outer": "BT_Boss_Saiqi02_Stage2",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_UseSkill'BT_Boss_Saiqi02_Stage2:BTTask_UseSkill_26'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.117"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_UseSkill'BT_Boss_Saiqi02_Stage2:BTTask_UseSkill_24'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.115"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Saiqi02_Stage2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Saiqi02_Stage2:BTComposite_Selector_9'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.13"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_24",
+    "Outer": "BT_Boss_Saiqi02_Stage2",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_UseSkill'BT_Boss_Saiqi02_Stage2:BTTask_UseSkill_20'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.113"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_UseSkill'BT_Boss_Saiqi02_Stage2:BTTask_UseSkill_27'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.118"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Saiqi02_Stage2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Saiqi02_Stage2:BTComposite_Selector_9'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.13"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_26",
+    "Outer": "BT_Boss_Saiqi02_Stage2",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector'BT_Boss_Saiqi02_Stage2:BTComposite_Selector_12'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.7"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "Services": [
+        {
+          "ObjectName": "BTService_EnemyVision'BT_Boss_Saiqi02_Stage2:BTService_EnemyVision_1'",
+          "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.85"
+        },
+        {
+          "ObjectName": "BTService_BBValueDis'BT_Boss_Saiqi02_Stage2:BTService_BBValueDis_0'",
+          "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.83"
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Saiqi02_Stage2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Saiqi02_Stage2:BTComposite_Selector_3'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.9"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_27",
+    "Outer": "BT_Boss_Saiqi02_Stage2",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_UseSkill'BT_Boss_Saiqi02_Stage2:BTTask_UseSkill_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.104"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Saiqi02_Stage2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Saiqi02_Stage2:BTComposite_Selector_5'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.12"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_28",
+    "Outer": "BT_Boss_Saiqi02_Stage2",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_SetBBValue'BT_Boss_Saiqi02_Stage2:BTTask_SetBBValue_4'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.99"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Rate'BT_Boss_Saiqi02_Stage2:BTComposite_Rate_3'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.3"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Saiqi02_Stage2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Saiqi02_Stage2:BTComposite_Selector_10'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.6"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_29",
+    "Outer": "BT_Boss_Saiqi02_Stage2",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_UseSkill'BT_Boss_Saiqi02_Stage2:BTTask_UseSkill_29'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.120"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_SetBBValue_C'BT_Boss_Saiqi02_Stage2:BTTask_SetBBValue_C_2'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.102"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Saiqi02_Stage2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Rate'BT_Boss_Saiqi02_Stage2:BTComposite_Rate_3'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.3"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_3",
+    "Outer": "BT_Boss_Saiqi02_Stage2",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait'BT_Boss_Saiqi02_Stage2:BTTask_Wait_8'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.145"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Saiqi02_Stage2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Saiqi02_Stage2:BTComposite_Selector_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.5"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_30",
+    "Outer": "BT_Boss_Saiqi02_Stage2",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_UseSkill'BT_Boss_Saiqi02_Stage2:BTTask_UseSkill_28'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.119"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_SetBBValue_C'BT_Boss_Saiqi02_Stage2:BTTask_SetBBValue_C_3'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.103"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Saiqi02_Stage2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Rate'BT_Boss_Saiqi02_Stage2:BTComposite_Rate_3'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.3"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_33",
+    "Outer": "BT_Boss_Saiqi02_Stage2",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_UseSkill'BT_Boss_Saiqi02_Stage2:BTTask_UseSkill_47'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.122"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait'BT_Boss_Saiqi02_Stage2:BTTask_Wait_15'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.136"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_UseSkill'BT_Boss_Saiqi02_Stage2:BTTask_UseSkill_48'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.123"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Saiqi02_Stage2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Saiqi02_Stage2:BTComposite_Selector_5'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.12"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_34",
+    "Outer": "BT_Boss_Saiqi02_Stage2",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_UseSkill'BT_Boss_Saiqi02_Stage2:BTTask_UseSkill_50'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.125"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_UseSkill'BT_Boss_Saiqi02_Stage2:BTTask_UseSkill_49'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.124"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Saiqi02_Stage2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Saiqi02_Stage2:BTComposite_Selector_5'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.12"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_35",
+    "Outer": "BT_Boss_Saiqi02_Stage2",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_UseSkill'BT_Boss_Saiqi02_Stage2:BTTask_UseSkill_52'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.127"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_UseSkill'BT_Boss_Saiqi02_Stage2:BTTask_UseSkill_51'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.126"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Saiqi02_Stage2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Saiqi02_Stage2:BTComposite_Selector_5'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.12"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_6",
+    "Outer": "BT_Boss_Saiqi02_Stage2",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_GetTarget'BT_Boss_Saiqi02_Stage2:BTTask_GetTarget_2'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.94"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector'BT_Boss_Saiqi02_Stage2:BTComposite_Selector_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.4"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Boss_Saiqi02_Stage2:BTDecorator_Blackboard_8'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.68"
+            }
+          ],
+          "DecoratorOps": []
+        }
+      ],
+      "Services": [
+        {
+          "ObjectName": "BTService_BBValueDis'BT_Boss_Saiqi02_Stage2:BTService_BBValueDis_3'",
+          "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.84"
+        },
+        {
+          "ObjectName": "BTService_EnemyVision'BT_Boss_Saiqi02_Stage2:BTService_EnemyVision_2'",
+          "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.86"
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Saiqi02_Stage2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Saiqi02_Stage2:BTComposite_Selector_3'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.9"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_7",
+    "Outer": "BT_Boss_Saiqi02_Stage2",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_UseSkill'BT_Boss_Saiqi02_Stage2:BTTask_UseSkill_7'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.129"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait'BT_Boss_Saiqi02_Stage2:BTTask_Wait_7'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.144"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Saiqi02_Stage2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Saiqi02_Stage2:BTComposite_Selector_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.4"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_8",
+    "Outer": "BT_Boss_Saiqi02_Stage2",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_UseSkill'BT_Boss_Saiqi02_Stage2:BTTask_UseSkill_8'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.130"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait'BT_Boss_Saiqi02_Stage2:BTTask_Wait_6'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.141"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Saiqi02_Stage2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Saiqi02_Stage2:BTComposite_Selector_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.4"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_0",
+    "Outer": "BT_Boss_Saiqi02_Stage2",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "FloatValue": 500.0,
+      "CachedDescription": "TickTargetDis 大于或等于 500.000000",
+      "OperationType": 5,
+      "BlackboardKey": {
+        "SelectedKeyName": "TickTargetDis"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Saiqi02_Stage2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Saiqi02_Stage2:BTComposite_Sequence_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.14"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_1",
+    "Outer": "BT_Boss_Saiqi02_Stage2",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "IntValue": 2,
+      "FloatValue": 200.0,
+      "CachedDescription": "Stage 等于 2",
+      "BlackboardKey": {
+        "SelectedKeyName": "Stage"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Saiqi02_Stage2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Saiqi02_Stage2:BTComposite_Selector_12'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.7"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_10",
+    "Outer": "BT_Boss_Saiqi02_Stage2",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "IntValue": 5,
+      "CachedDescription": "TestAnimSelector 等于 Skill06",
+      "BlackboardKey": {
+        "SelectedKeyName": "TestAnimSelector"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Saiqi02_Stage2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Saiqi02_Stage2:BTComposite_Selector_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.4"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_12",
+    "Outer": "BT_Boss_Saiqi02_Stage2",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "IntValue": 1,
+      "CachedDescription": "ActionMode 等于 Hitted",
+      "BlackboardKey": {
+        "SelectedKeyName": "ActionMode"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::Self",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Saiqi02_Stage2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Saiqi02_Stage2:BTComposite_Selector_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.5"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_13",
+    "Outer": "BT_Boss_Saiqi02_Stage2",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "IntValue": 7,
+      "CachedDescription": "TestAnimSelector 等于 Skill08",
+      "BlackboardKey": {
+        "SelectedKeyName": "TestAnimSelector"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Saiqi02_Stage2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Saiqi02_Stage2:BTComposite_Selector_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.4"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_14",
+    "Outer": "BT_Boss_Saiqi02_Stage2",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "IntValue": 1,
+      "FloatValue": 200.0,
+      "CachedDescription": "Stage 大于 1",
+      "OperationType": 4,
+      "BlackboardKey": {
+        "SelectedKeyName": "Stage"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Saiqi02_Stage2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Saiqi02_Stage2:BTComposite_Selector_12'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.7"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_22",
+    "Outer": "BT_Boss_Saiqi02_Stage2",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "IntValue": 2,
+      "FloatValue": 200.0,
+      "CachedDescription": "Stage 等于 2",
+      "BlackboardKey": {
+        "SelectedKeyName": "Stage"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Saiqi02_Stage2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Saiqi02_Stage2:BTComposite_Selector_12'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.7"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_23",
+    "Outer": "BT_Boss_Saiqi02_Stage2",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "CachedDescription": "ActionMode 等于 Active",
+      "BlackboardKey": {
+        "SelectedKeyName": "ActionMode"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Saiqi02_Stage2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Saiqi02_Stage2:BTComposite_Selector_3'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.9"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_24",
+    "Outer": "BT_Boss_Saiqi02_Stage2",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "IntValue": 11,
+      "CachedDescription": "TestAnimSelector 等于 AI",
+      "BlackboardKey": {
+        "SelectedKeyName": "TestAnimSelector"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::Both",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Saiqi02_Stage2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Saiqi02_Stage2:BTComposite_Selector_3'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.9"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_26",
+    "Outer": "BT_Boss_Saiqi02_Stage2",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "CachedDescription": "TargetPlayerDead is 已设置",
+      "BlackboardKey": {
+        "SelectedKeyName": "TargetPlayerDead"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::Self",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Saiqi02_Stage2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Saiqi02_Stage2:BTComposite_Selector_12'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.7"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_27",
+    "Outer": "BT_Boss_Saiqi02_Stage2",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "IntValue": 3,
+      "FloatValue": 200.0,
+      "CachedDescription": "Stage 等于 3",
+      "BlackboardKey": {
+        "SelectedKeyName": "Stage"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Saiqi02_Stage2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Saiqi02_Stage2:BTComposite_Selector_12'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.7"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_28",
+    "Outer": "BT_Boss_Saiqi02_Stage2",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "IntValue": 4,
+      "FloatValue": 200.0,
+      "CachedDescription": "Stage 等于 4",
+      "BlackboardKey": {
+        "SelectedKeyName": "Stage"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Saiqi02_Stage2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Saiqi02_Stage2:BTComposite_Selector_12'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.7"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_3",
+    "Outer": "BT_Boss_Saiqi02_Stage2",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "IntValue": 6,
+      "CachedDescription": "TestAnimSelector 等于 Skill07",
+      "BlackboardKey": {
+        "SelectedKeyName": "TestAnimSelector"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Saiqi02_Stage2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Saiqi02_Stage2:BTComposite_Selector_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.4"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_30",
+    "Outer": "BT_Boss_Saiqi02_Stage2",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "IntValue": 1,
+      "FloatValue": 200.0,
+      "CachedDescription": "Stage 等于 1",
+      "BlackboardKey": {
+        "SelectedKeyName": "Stage"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Saiqi02_Stage2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Saiqi02_Stage2:BTComposite_Selector_12'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.7"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_4",
+    "Outer": "BT_Boss_Saiqi02_Stage2",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "FloatValue": 500.0,
+      "CachedDescription": "UseSkill 等于 0",
+      "BlackboardKey": {
+        "SelectedKeyName": "UseSkill"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Saiqi02_Stage2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Saiqi02_Stage2:BTComposite_Selector_10'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.6"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_43",
+    "Outer": "BT_Boss_Saiqi02_Stage2",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "IntValue": 3,
+      "FloatValue": 200.0,
+      "CachedDescription": "Stage 等于 3",
+      "BlackboardKey": {
+        "SelectedKeyName": "Stage"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Saiqi02_Stage2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Saiqi02_Stage2:BTComposite_Selector_12'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.7"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_44",
+    "Outer": "BT_Boss_Saiqi02_Stage2",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "IntValue": 6,
+      "FloatValue": 500.0,
+      "CachedDescription": "UseSkill 等于 6",
+      "BlackboardKey": {
+        "SelectedKeyName": "UseSkill"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Saiqi02_Stage2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Saiqi02_Stage2:BTComposite_Selector_13'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.8"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_45",
+    "Outer": "BT_Boss_Saiqi02_Stage2",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "IntValue": 26,
+      "FloatValue": 500.0,
+      "CachedDescription": "UseSkill 等于 26",
+      "BlackboardKey": {
+        "SelectedKeyName": "UseSkill"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Saiqi02_Stage2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Saiqi02_Stage2:BTComposite_Selector_13'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.8"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_46",
+    "Outer": "BT_Boss_Saiqi02_Stage2",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "IntValue": 27,
+      "FloatValue": 500.0,
+      "CachedDescription": "UseSkill 等于 27",
+      "BlackboardKey": {
+        "SelectedKeyName": "UseSkill"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Saiqi02_Stage2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Saiqi02_Stage2:BTComposite_Selector_13'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.8"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_48",
+    "Outer": "BT_Boss_Saiqi02_Stage2",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "CachedDescription": "TargetPlayerInvisible is 已设置",
+      "BlackboardKey": {
+        "SelectedKeyName": "TargetPlayerInvisible"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::Self",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Saiqi02_Stage2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Saiqi02_Stage2:BTComposite_Selector_12'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.7"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_5",
+    "Outer": "BT_Boss_Saiqi02_Stage2",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "CachedDescription": "TestAnimSelector 等于 Skill01",
+      "BlackboardKey": {
+        "SelectedKeyName": "TestAnimSelector"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Saiqi02_Stage2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Saiqi02_Stage2:BTComposite_Selector_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.4"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_51",
+    "Outer": "BT_Boss_Saiqi02_Stage2",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "CachedDescription": "ActionMode 等于 Active",
+      "BlackboardKey": {
+        "SelectedKeyName": "ActionMode"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::Self",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Saiqi02_Stage2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Saiqi02_Stage2:BTComposite_Selector_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.5"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_6",
+    "Outer": "BT_Boss_Saiqi02_Stage2",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "FloatValue": 500.0,
+      "CachedDescription": "CanUseSkill is 已设置",
+      "BlackboardKey": {
+        "SelectedKeyName": "CanUseSkill"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Saiqi02_Stage2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Saiqi02_Stage2:BTComposite_Selector_10'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.6"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_7",
+    "Outer": "BT_Boss_Saiqi02_Stage2",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "IntValue": 1,
+      "CachedDescription": "TestAnimSelector 等于 Skill02",
+      "BlackboardKey": {
+        "SelectedKeyName": "TestAnimSelector"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Saiqi02_Stage2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Saiqi02_Stage2:BTComposite_Selector_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.4"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_8",
+    "Outer": "BT_Boss_Saiqi02_Stage2",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "IntValue": 11,
+      "CachedDescription": "TestAnimSelector 不等于 AI",
+      "OperationType": 1,
+      "BlackboardKey": {
+        "SelectedKeyName": "TestAnimSelector"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::Self",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Saiqi02_Stage2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Saiqi02_Stage2:BTComposite_Sequence_6'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.41"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_9",
+    "Outer": "BT_Boss_Saiqi02_Stage2",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "IntValue": 3,
+      "CachedDescription": "TestAnimSelector 等于 Skill04",
+      "BlackboardKey": {
+        "SelectedKeyName": "TestAnimSelector"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Saiqi02_Stage2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Saiqi02_Stage2:BTComposite_Selector_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.4"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_CharAttrCondition",
+    "Name": "BTDecorator_CharAttrCondition_0",
+    "Outer": "BT_Boss_Saiqi02_Stage2",
+    "Class": "UScriptClass'BTDecorator_CharAttrCondition'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "MaxValue": 0.3,
+      "AttrName": "EAttrName::HpPercent",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Saiqi02_Stage2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Saiqi02_Stage2:BTComposite_Selector_12'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.7"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_CharAttrCondition",
+    "Name": "BTDecorator_CharAttrCondition_1",
+    "Outer": "BT_Boss_Saiqi02_Stage2",
+    "Class": "UScriptClass'BTDecorator_CharAttrCondition'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "MinValue": 0.7,
+      "AttrName": "EAttrName::HpPercent",
+      "FlowAbortMode": "EBTFlowAbortMode::Self",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Saiqi02_Stage2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Saiqi02_Stage2:BTComposite_Selector_12'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.7"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_CharAttrCondition",
+    "Name": "BTDecorator_CharAttrCondition_3",
+    "Outer": "BT_Boss_Saiqi02_Stage2",
+    "Class": "UScriptClass'BTDecorator_CharAttrCondition'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "MaxValue": 0.7,
+      "AttrName": "EAttrName::HpPercent",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Saiqi02_Stage2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Saiqi02_Stage2:BTComposite_Selector_12'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.7"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Cooldown",
+    "Name": "BTDecorator_Cooldown_0",
+    "Outer": "BT_Boss_Saiqi02_Stage2",
+    "Class": "UScriptClass'BTDecorator_Cooldown'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "CoolDownTime": 20.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Saiqi02_Stage2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Saiqi02_Stage2:BTComposite_Selector_5'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.12"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Cooldown",
+    "Name": "BTDecorator_Cooldown_10",
+    "Outer": "BT_Boss_Saiqi02_Stage2",
+    "Class": "UScriptClass'BTDecorator_Cooldown'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "CoolDownTime": 10.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Saiqi02_Stage2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Saiqi02_Stage2:BTComposite_Selector_9'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.13"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Cooldown",
+    "Name": "BTDecorator_Cooldown_11",
+    "Outer": "BT_Boss_Saiqi02_Stage2",
+    "Class": "UScriptClass'BTDecorator_Cooldown'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "CoolDownTime": 10.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Saiqi02_Stage2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Saiqi02_Stage2:BTComposite_Selector_9'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.13"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Cooldown",
+    "Name": "BTDecorator_Cooldown_2",
+    "Outer": "BT_Boss_Saiqi02_Stage2",
+    "Class": "UScriptClass'BTDecorator_Cooldown'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "CoolDownTime": 4.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Saiqi02_Stage2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Saiqi02_Stage2:BTComposite_Selector_10'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.6"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Cooldown",
+    "Name": "BTDecorator_Cooldown_25",
+    "Outer": "BT_Boss_Saiqi02_Stage2",
+    "Class": "UScriptClass'BTDecorator_Cooldown'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "CoolDownTime": 15.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Saiqi02_Stage2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Saiqi02_Stage2:BTComposite_Selector_5'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.12"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Cooldown",
+    "Name": "BTDecorator_Cooldown_26",
+    "Outer": "BT_Boss_Saiqi02_Stage2",
+    "Class": "UScriptClass'BTDecorator_Cooldown'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "CoolDownTime": 20.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Saiqi02_Stage2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Saiqi02_Stage2:BTComposite_Selector_5'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.12"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Cooldown",
+    "Name": "BTDecorator_Cooldown_4",
+    "Outer": "BT_Boss_Saiqi02_Stage2",
+    "Class": "UScriptClass'BTDecorator_Cooldown'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "CoolDownTime": 6.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Saiqi02_Stage2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Saiqi02_Stage2:BTComposite_Selector_10'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.6"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Cooldown",
+    "Name": "BTDecorator_Cooldown_7",
+    "Outer": "BT_Boss_Saiqi02_Stage2",
+    "Class": "UScriptClass'BTDecorator_Cooldown'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "CoolDownTime": 15.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Saiqi02_Stage2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Saiqi02_Stage2:BTComposite_Selector_9'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.13"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_TimeLimit",
+    "Name": "BTDecorator_TimeLimit_0",
+    "Outer": "BT_Boss_Saiqi02_Stage2",
+    "Class": "UScriptClass'BTDecorator_TimeLimit'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TimeLimit": 1.5,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Saiqi02_Stage2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Saiqi02_Stage2:BTComposite_Sequence_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.14"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_TimeLimit",
+    "Name": "BTDecorator_TimeLimit_2",
+    "Outer": "BT_Boss_Saiqi02_Stage2",
+    "Class": "UScriptClass'BTDecorator_TimeLimit'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TimeLimit": 3.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Saiqi02_Stage2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Saiqi02_Stage2:BTComposite_Sequence_21'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.28"
+      }
+    }
+  },
+  {
+    "Type": "BTService_BBValueDis",
+    "Name": "BTService_BBValueDis_0",
+    "Outer": "BT_Boss_Saiqi02_Stage2",
+    "Class": "UScriptClass'BTService_BBValueDis'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "BBName": "Target",
+      "Interval": 0.1,
+      "RandomDeviation": 0.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Saiqi02_Stage2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Saiqi02_Stage2:BTComposite_Sequence_26'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.32"
+      }
+    }
+  },
+  {
+    "Type": "BTService_BBValueDis",
+    "Name": "BTService_BBValueDis_3",
+    "Outer": "BT_Boss_Saiqi02_Stage2",
+    "Class": "UScriptClass'BTService_BBValueDis'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "BBName": "Target",
+      "Interval": 0.1,
+      "RandomDeviation": 0.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Saiqi02_Stage2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Saiqi02_Stage2:BTComposite_Sequence_6'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.41"
+      }
+    }
+  },
+  {
+    "Type": "BTService_EnemyVision",
+    "Name": "BTService_EnemyVision_1",
+    "Outer": "BT_Boss_Saiqi02_Stage2",
+    "Class": "UScriptClass'BTService_EnemyVision'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "FVisionDistance": 1000.0,
+      "FVisionAngle": 360.0,
+      "Interval": 0.2,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Saiqi02_Stage2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Saiqi02_Stage2:BTComposite_Sequence_26'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.32"
+      }
+    }
+  },
+  {
+    "Type": "BTService_EnemyVision",
+    "Name": "BTService_EnemyVision_2",
+    "Outer": "BT_Boss_Saiqi02_Stage2",
+    "Class": "UScriptClass'BTService_EnemyVision'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "FVisionDistance": 1000.0,
+      "FVisionAngle": 360.0,
+      "Interval": 0.2,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Saiqi02_Stage2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Saiqi02_Stage2:BTComposite_Sequence_6'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.41"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_EMRunEQSQuery",
+    "Name": "BTTask_EMRunEQSQuery_0",
+    "Outer": "BT_Boss_Saiqi02_Stage2",
+    "Class": "UScriptClass'BTTask_EMRunEQSQuery'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "EQSRequest": {
+        "QueryTemplate": {
+          "ObjectName": "EnvQuery'EQS_BossSaiqi02_SummonRight'",
+          "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Z_EnvQuery/EQS_BossSaiqi02_SummonRight.10"
+        },
+        "QueryConfig": [
+          {
+            "ParamName": "EMDonut.InnerRadius",
+            "ParamType": "EAIParamType::Float",
+            "Value": 300.0,
+            "BBKey": {
+              "SelectedKeyName": "None",
+              "bNoneIsAllowedValue": true
+            }
+          },
+          {
+            "ParamName": "EMDonut.OuterRadius",
+            "ParamType": "EAIParamType::Float",
+            "Value": 1000.0,
+            "BBKey": {
+              "SelectedKeyName": "None",
+              "bNoneIsAllowedValue": true
+            }
+          },
+          {
+            "ParamName": "EMDonut.NumberOfRings",
+            "ParamType": "EAIParamType::Int",
+            "Value": 8.0,
+            "BBKey": {
+              "SelectedKeyName": "None",
+              "bNoneIsAllowedValue": true
+            }
+          },
+          {
+            "ParamName": "EMDonut.PointsPerRing",
+            "ParamType": "EAIParamType::Int",
+            "Value": 24.0,
+            "BBKey": {
+              "SelectedKeyName": "None",
+              "bNoneIsAllowedValue": true
+            }
+          },
+          {
+            "ParamName": "EMDonut.ArcAngle",
+            "ParamType": "EAIParamType::Float",
+            "Value": 360.0,
+            "BBKey": {
+              "SelectedKeyName": "None",
+              "bNoneIsAllowedValue": true
+            }
+          },
+          {
+            "ParamName": "EMDistance.FloatValueMin",
+            "ParamType": "EAIParamType::Float",
+            "Value": 0.0,
+            "BBKey": {
+              "SelectedKeyName": "None",
+              "bNoneIsAllowedValue": true
+            }
+          },
+          {
+            "ParamName": "EMDistance.FloatValueMax",
+            "ParamType": "EAIParamType::Float",
+            "Value": 0.0,
+            "BBKey": {
+              "SelectedKeyName": "None",
+              "bNoneIsAllowedValue": true
+            }
+          },
+          {
+            "ParamName": "EMDistance.ScoringFactor",
+            "ParamType": "EAIParamType::Float",
+            "Value": 3.0,
+            "BBKey": {
+              "SelectedKeyName": "None",
+              "bNoneIsAllowedValue": true
+            }
+          }
+        ],
+        "RunMode": "EEnvQueryRunMode::RandomBest5Pct"
+      },
+      "BlackboardKey": {
+        "SelectedKeyName": "EQSQueryLoc"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Saiqi02_Stage2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Saiqi02_Stage2:BTComposite_Selector_13'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.8"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_EMRunEQSQuery",
+    "Name": "BTTask_EMRunEQSQuery_1",
+    "Outer": "BT_Boss_Saiqi02_Stage2",
+    "Class": "UScriptClass'BTTask_EMRunEQSQuery'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "EQSRequest": {
+        "QueryTemplate": {
+          "ObjectName": "EnvQuery'EQS_BossSaiqi02_SummonLeft'",
+          "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Z_EnvQuery/EQS_BossSaiqi02_SummonLeft.10"
+        },
+        "QueryConfig": [
+          {
+            "ParamName": "EMDonut.InnerRadius",
+            "ParamType": "EAIParamType::Float",
+            "Value": 300.0,
+            "BBKey": {
+              "SelectedKeyName": "None",
+              "bNoneIsAllowedValue": true
+            }
+          },
+          {
+            "ParamName": "EMDonut.OuterRadius",
+            "ParamType": "EAIParamType::Float",
+            "Value": 1000.0,
+            "BBKey": {
+              "SelectedKeyName": "None",
+              "bNoneIsAllowedValue": true
+            }
+          },
+          {
+            "ParamName": "EMDonut.NumberOfRings",
+            "ParamType": "EAIParamType::Int",
+            "Value": 8.0,
+            "BBKey": {
+              "SelectedKeyName": "None",
+              "bNoneIsAllowedValue": true
+            }
+          },
+          {
+            "ParamName": "EMDonut.PointsPerRing",
+            "ParamType": "EAIParamType::Int",
+            "Value": 24.0,
+            "BBKey": {
+              "SelectedKeyName": "None",
+              "bNoneIsAllowedValue": true
+            }
+          },
+          {
+            "ParamName": "EMDonut.ArcAngle",
+            "ParamType": "EAIParamType::Float",
+            "Value": 360.0,
+            "BBKey": {
+              "SelectedKeyName": "None",
+              "bNoneIsAllowedValue": true
+            }
+          },
+          {
+            "ParamName": "EMDistance.FloatValueMin",
+            "ParamType": "EAIParamType::Float",
+            "Value": 0.0,
+            "BBKey": {
+              "SelectedKeyName": "None",
+              "bNoneIsAllowedValue": true
+            }
+          },
+          {
+            "ParamName": "EMDistance.FloatValueMax",
+            "ParamType": "EAIParamType::Float",
+            "Value": 0.0,
+            "BBKey": {
+              "SelectedKeyName": "None",
+              "bNoneIsAllowedValue": true
+            }
+          },
+          {
+            "ParamName": "EMDistance.ScoringFactor",
+            "ParamType": "EAIParamType::Float",
+            "Value": 3.0,
+            "BBKey": {
+              "SelectedKeyName": "None",
+              "bNoneIsAllowedValue": true
+            }
+          }
+        ],
+        "RunMode": "EEnvQueryRunMode::RandomBest5Pct"
+      },
+      "BlackboardKey": {
+        "SelectedKeyName": "EQSQueryLoc"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Saiqi02_Stage2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Saiqi02_Stage2:BTComposite_Selector_13'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.8"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_EMRunEQSQuery",
+    "Name": "BTTask_EMRunEQSQuery_2",
+    "Outer": "BT_Boss_Saiqi02_Stage2",
+    "Class": "UScriptClass'BTTask_EMRunEQSQuery'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "EQSRequest": {
+        "QueryTemplate": {
+          "ObjectName": "EnvQuery'EQS_BossSaiqi02_Stage4'",
+          "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Z_EnvQuery/EQS_BossSaiqi02_Stage4.10"
+        },
+        "QueryConfig": [
+          {
+            "ParamName": "EMDonut.InnerRadius",
+            "ParamType": "EAIParamType::Float",
+            "Value": 300.0,
+            "BBKey": {
+              "SelectedKeyName": "None",
+              "bNoneIsAllowedValue": true
+            }
+          },
+          {
+            "ParamName": "EMDonut.OuterRadius",
+            "ParamType": "EAIParamType::Float",
+            "Value": 1000.0,
+            "BBKey": {
+              "SelectedKeyName": "None",
+              "bNoneIsAllowedValue": true
+            }
+          },
+          {
+            "ParamName": "EMDonut.NumberOfRings",
+            "ParamType": "EAIParamType::Int",
+            "Value": 8.0,
+            "BBKey": {
+              "SelectedKeyName": "None",
+              "bNoneIsAllowedValue": true
+            }
+          },
+          {
+            "ParamName": "EMDonut.PointsPerRing",
+            "ParamType": "EAIParamType::Int",
+            "Value": 24.0,
+            "BBKey": {
+              "SelectedKeyName": "None",
+              "bNoneIsAllowedValue": true
+            }
+          },
+          {
+            "ParamName": "EMDonut.ArcAngle",
+            "ParamType": "EAIParamType::Float",
+            "Value": 360.0,
+            "BBKey": {
+              "SelectedKeyName": "None",
+              "bNoneIsAllowedValue": true
+            }
+          },
+          {
+            "ParamName": "EMDistance.FloatValueMin",
+            "ParamType": "EAIParamType::Float",
+            "Value": 0.0,
+            "BBKey": {
+              "SelectedKeyName": "None",
+              "bNoneIsAllowedValue": true
+            }
+          },
+          {
+            "ParamName": "EMDistance.FloatValueMax",
+            "ParamType": "EAIParamType::Float",
+            "Value": 0.0,
+            "BBKey": {
+              "SelectedKeyName": "None",
+              "bNoneIsAllowedValue": true
+            }
+          },
+          {
+            "ParamName": "EMDistance.ScoringFactor",
+            "ParamType": "EAIParamType::Float",
+            "Value": 1.0,
+            "BBKey": {
+              "SelectedKeyName": "None",
+              "bNoneIsAllowedValue": true
+            }
+          }
+        ],
+        "RunMode": "EEnvQueryRunMode::RandomBest25Pct"
+      },
+      "BlackboardKey": {
+        "SelectedKeyName": "EQSQueryLoc"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Saiqi02_Stage2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Saiqi02_Stage2:BTComposite_Selector_13'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.8"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_FindSpecifyLocation",
+    "Name": "BTTask_FindSpecifyLocation_3",
+    "Outer": "BT_Boss_Saiqi02_Stage2",
+    "Class": "UScriptClass'BTTask_FindSpecifyLocation'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "MinAngle": 0,
+      "MaxAngle": 360,
+      "MinRadius": 100,
+      "MaxRadius": 300,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Saiqi02_Stage2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Saiqi02_Stage2:BTComposite_Sequence_18'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.24"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_FindSpecifyLocation",
+    "Name": "BTTask_FindSpecifyLocation_33",
+    "Outer": "BT_Boss_Saiqi02_Stage2",
+    "Class": "UScriptClass'BTTask_FindSpecifyLocation'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "MinAngle": 0,
+      "MaxAngle": 360,
+      "MinRadius": 200,
+      "MaxRadius": 500,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Saiqi02_Stage2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Saiqi02_Stage2:BTComposite_Sequence_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.15"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_FlyMoveTo",
+    "Name": "BTTask_FlyMoveTo_0",
+    "Outer": "BT_Boss_Saiqi02_Stage2",
+    "Class": "UScriptClass'BTTask_FlyMoveTo'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "bOrientRotationToMovement": true,
+      "bStareAt": true,
+      "MaxSpeed": 400.0,
+      "BlackboardKey": {
+        "SelectedKeyName": "Target"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Saiqi02_Stage2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Saiqi02_Stage2:BTComposite_Sequence_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.14"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_FlyMoveTo",
+    "Name": "BTTask_FlyMoveTo_3",
+    "Outer": "BT_Boss_Saiqi02_Stage2",
+    "Class": "UScriptClass'BTTask_FlyMoveTo'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "bOrientRotationToMovement": true,
+      "bStareAt": true,
+      "MaxSpeed": 800.0,
+      "BlackboardKey": {
+        "SelectedKeyName": "EQSQueryLoc"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Saiqi02_Stage2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Saiqi02_Stage2:BTComposite_Sequence_21'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.28"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_GetTarget",
+    "Name": "BTTask_GetTarget_2",
+    "Outer": "BT_Boss_Saiqi02_Stage2",
+    "Class": "UScriptClass'BTTask_GetTarget'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Saiqi02_Stage2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Saiqi02_Stage2:BTComposite_Sequence_6'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.41"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_NewMoveTo",
+    "Name": "BTTask_NewMoveTo_3",
+    "Outer": "BT_Boss_Saiqi02_Stage2",
+    "Class": "UScriptClass'BTTask_NewMoveTo'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "bUseControllerRotationYaw": true,
+      "bStareAt": true,
+      "bStopOnOverlapNeedsUpdate": false,
+      "BlackboardKey": {
+        "SelectedKeyName": "NearlyLocation"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Saiqi02_Stage2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Saiqi02_Stage2:BTComposite_Sequence_19'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.25"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_NewMoveTo",
+    "Name": "BTTask_NewMoveTo_43",
+    "Outer": "BT_Boss_Saiqi02_Stage2",
+    "Class": "UScriptClass'BTTask_NewMoveTo'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "bUseControllerRotationYaw": true,
+      "bStareAt": true,
+      "bStopOnOverlapNeedsUpdate": false,
+      "BlackboardKey": {
+        "SelectedKeyName": "NearlyLocation"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Saiqi02_Stage2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Saiqi02_Stage2:BTComposite_Sequence_123'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.18"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_SetBBValue",
+    "Name": "BTTask_SetBBValue_2",
+    "Outer": "BT_Boss_Saiqi02_Stage2",
+    "Class": "UScriptClass'BTTask_SetBBValue'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "KeyName": "Stage",
+      "KeyValueInt": 3,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Saiqi02_Stage2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Saiqi02_Stage2:BTComposite_Sequence_17'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.23"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_SetBBValue",
+    "Name": "BTTask_SetBBValue_3",
+    "Outer": "BT_Boss_Saiqi02_Stage2",
+    "Class": "UScriptClass'BTTask_SetBBValue'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "KeyName": "Stage",
+      "KeyValueInt": 4,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Saiqi02_Stage2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Saiqi02_Stage2:BTComposite_Sequence_14'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.20"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_SetBBValue",
+    "Name": "BTTask_SetBBValue_4",
+    "Outer": "BT_Boss_Saiqi02_Stage2",
+    "Class": "UScriptClass'BTTask_SetBBValue'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "KeyName": "AliveNum",
+      "KeyValueInt": 2,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Saiqi02_Stage2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Saiqi02_Stage2:BTComposite_Sequence_28'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.34"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_SetBBValue",
+    "Name": "BTTask_SetBBValue_5",
+    "Outer": "BT_Boss_Saiqi02_Stage2",
+    "Class": "UScriptClass'BTTask_SetBBValue'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "KeyName": "Stage",
+      "KeyValueInt": 2,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Saiqi02_Stage2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Saiqi02_Stage2:BTComposite_Sequence_16'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.22"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_SetBBValue_C",
+    "Name": "BTTask_SetBBValue_C_1",
+    "Outer": "BT_Boss_Saiqi02_Stage2",
+    "Class": "BlueprintGeneratedClass'EM/Content/BluePrints/AI/BTTask/BTTask_SetBBValue.BTTask_SetBBValue_C'",
+    "Template": {
+      "ObjectName": "BTTask_SetBBValue_C'Default__BTTask_SetBBValue_C'",
+      "ObjectPath": "EM/Content/BluePrints/AI/BTTask/BTTask_SetBBValue.3"
+    },
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "KeyName": "UseSkill",
+      "KeyType": "BTEnum_BBValueType::NewEnumerator2",
+      "IntValue": 6,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Saiqi02_Stage2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Saiqi02_Stage2:BTComposite_Sequence_13'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.19"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_SetBBValue_C",
+    "Name": "BTTask_SetBBValue_C_2",
+    "Outer": "BT_Boss_Saiqi02_Stage2",
+    "Class": "BlueprintGeneratedClass'EM/Content/BluePrints/AI/BTTask/BTTask_SetBBValue.BTTask_SetBBValue_C'",
+    "Template": {
+      "ObjectName": "BTTask_SetBBValue_C'Default__BTTask_SetBBValue_C'",
+      "ObjectPath": "EM/Content/BluePrints/AI/BTTask/BTTask_SetBBValue.3"
+    },
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "KeyName": "UseSkill",
+      "KeyType": "BTEnum_BBValueType::NewEnumerator2",
+      "IntValue": 26,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Saiqi02_Stage2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Saiqi02_Stage2:BTComposite_Sequence_29'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.35"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_SetBBValue_C",
+    "Name": "BTTask_SetBBValue_C_3",
+    "Outer": "BT_Boss_Saiqi02_Stage2",
+    "Class": "BlueprintGeneratedClass'EM/Content/BluePrints/AI/BTTask/BTTask_SetBBValue.BTTask_SetBBValue_C'",
+    "Template": {
+      "ObjectName": "BTTask_SetBBValue_C'Default__BTTask_SetBBValue_C'",
+      "ObjectPath": "EM/Content/BluePrints/AI/BTTask/BTTask_SetBBValue.3"
+    },
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "KeyName": "UseSkill",
+      "KeyType": "BTEnum_BBValueType::NewEnumerator2",
+      "IntValue": 27,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Saiqi02_Stage2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Saiqi02_Stage2:BTComposite_Sequence_30'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.37"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_UseSkill",
+    "Name": "BTTask_UseSkill_0",
+    "Outer": "BT_Boss_Saiqi02_Stage2",
+    "Class": "UScriptClass'BTTask_UseSkill'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ContinueTime": 10.0,
+      "NodeName": "蝴蝶弹幕",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Saiqi02_Stage2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Saiqi02_Stage2:BTComposite_Sequence_27'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.33"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_UseSkill",
+    "Name": "BTTask_UseSkill_10",
+    "Outer": "BT_Boss_Saiqi02_Stage2",
+    "Class": "UScriptClass'BTTask_UseSkill'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SkillId": 8,
+      "ContinueTime": 7.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Saiqi02_Stage2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Saiqi02_Stage2:BTComposite_Sequence_10'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.16"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_UseSkill",
+    "Name": "BTTask_UseSkill_12",
+    "Outer": "BT_Boss_Saiqi02_Stage2",
+    "Class": "UScriptClass'BTTask_UseSkill'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SkillId": 9,
+      "ContinueTime": 7.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Saiqi02_Stage2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Saiqi02_Stage2:BTComposite_Sequence_11'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.17"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_UseSkill",
+    "Name": "BTTask_UseSkill_13",
+    "Outer": "BT_Boss_Saiqi02_Stage2",
+    "Class": "UScriptClass'BTTask_UseSkill'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SkillId": 10,
+      "ContinueTime": 7.6,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Saiqi02_Stage2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Saiqi02_Stage2:BTComposite_Sequence_2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.26"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_UseSkill",
+    "Name": "BTTask_UseSkill_14",
+    "Outer": "BT_Boss_Saiqi02_Stage2",
+    "Class": "UScriptClass'BTTask_UseSkill'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SkillId": 16,
+      "ContinueTime": 6.0,
+      "NodeName": "升空",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Saiqi02_Stage2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Saiqi02_Stage2:BTComposite_Sequence_16'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.22"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_UseSkill",
+    "Name": "BTTask_UseSkill_15",
+    "Outer": "BT_Boss_Saiqi02_Stage2",
+    "Class": "UScriptClass'BTTask_UseSkill'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SkillId": 11,
+      "ContinueTime": 7.6,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Saiqi02_Stage2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Saiqi02_Stage2:BTComposite_Sequence_15'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.21"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_UseSkill",
+    "Name": "BTTask_UseSkill_16",
+    "Outer": "BT_Boss_Saiqi02_Stage2",
+    "Class": "UScriptClass'BTTask_UseSkill'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SkillId": 17,
+      "ContinueTime": 6.0,
+      "NodeName": "生成旋风",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Saiqi02_Stage2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Saiqi02_Stage2:BTComposite_Sequence_14'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.20"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_UseSkill",
+    "Name": "BTTask_UseSkill_18",
+    "Outer": "BT_Boss_Saiqi02_Stage2",
+    "Class": "UScriptClass'BTTask_UseSkill'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SkillId": 7,
+      "ContinueTime": 6.0,
+      "NodeName": "闪至场中",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Saiqi02_Stage2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Saiqi02_Stage2:BTComposite_Sequence_17'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.23"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_UseSkill",
+    "Name": "BTTask_UseSkill_19",
+    "Outer": "BT_Boss_Saiqi02_Stage2",
+    "Class": "UScriptClass'BTTask_UseSkill'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SkillId": 21,
+      "ContinueTime": 10.0,
+      "NodeName": "交错激光",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Saiqi02_Stage2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Saiqi02_Stage2:BTComposite_Sequence_20'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.27"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_UseSkill",
+    "Name": "BTTask_UseSkill_20",
+    "Outer": "BT_Boss_Saiqi02_Stage2",
+    "Class": "UScriptClass'BTTask_UseSkill'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SkillId": 18,
+      "ContinueTime": 10.0,
+      "NodeName": "坠星弹幕",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Saiqi02_Stage2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Saiqi02_Stage2:BTComposite_Sequence_24'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.31"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_UseSkill",
+    "Name": "BTTask_UseSkill_23",
+    "Outer": "BT_Boss_Saiqi02_Stage2",
+    "Class": "UScriptClass'BTTask_UseSkill'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SkillId": 6,
+      "ContinueTime": 6.0,
+      "NodeName": "分身技能",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Saiqi02_Stage2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Saiqi02_Stage2:BTComposite_Sequence_13'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.19"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_UseSkill",
+    "Name": "BTTask_UseSkill_24",
+    "Outer": "BT_Boss_Saiqi02_Stage2",
+    "Class": "UScriptClass'BTTask_UseSkill'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SkillId": 19,
+      "ContinueTime": 10.0,
+      "NodeName": "旋风弹幕",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Saiqi02_Stage2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Saiqi02_Stage2:BTComposite_Sequence_23'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.30"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_UseSkill",
+    "Name": "BTTask_UseSkill_25",
+    "Outer": "BT_Boss_Saiqi02_Stage2",
+    "Class": "UScriptClass'BTTask_UseSkill'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SkillId": 5,
+      "ContinueTime": 6.0,
+      "NodeName": "追踪弹幕",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Saiqi02_Stage2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Saiqi02_Stage2:BTComposite_Selector_10'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.6"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_UseSkill",
+    "Name": "BTTask_UseSkill_26",
+    "Outer": "BT_Boss_Saiqi02_Stage2",
+    "Class": "UScriptClass'BTTask_UseSkill'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SkillId": 18,
+      "ContinueTime": 10.0,
+      "NodeName": "坠星弹幕",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Saiqi02_Stage2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Saiqi02_Stage2:BTComposite_Sequence_23'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.30"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_UseSkill",
+    "Name": "BTTask_UseSkill_27",
+    "Outer": "BT_Boss_Saiqi02_Stage2",
+    "Class": "UScriptClass'BTTask_UseSkill'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SkillId": 21,
+      "ContinueTime": 10.0,
+      "NodeName": "交错激光",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Saiqi02_Stage2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Saiqi02_Stage2:BTComposite_Sequence_24'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.31"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_UseSkill",
+    "Name": "BTTask_UseSkill_28",
+    "Outer": "BT_Boss_Saiqi02_Stage2",
+    "Class": "UScriptClass'BTTask_UseSkill'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SkillId": 27,
+      "ContinueTime": 6.0,
+      "NodeName": "分身技能（右）",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Saiqi02_Stage2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Saiqi02_Stage2:BTComposite_Sequence_30'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.37"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_UseSkill",
+    "Name": "BTTask_UseSkill_29",
+    "Outer": "BT_Boss_Saiqi02_Stage2",
+    "Class": "UScriptClass'BTTask_UseSkill'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SkillId": 26,
+      "ContinueTime": 6.0,
+      "NodeName": "分身技能（左）",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Saiqi02_Stage2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Saiqi02_Stage2:BTComposite_Sequence_29'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.35"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_UseSkill",
+    "Name": "BTTask_UseSkill_34",
+    "Outer": "BT_Boss_Saiqi02_Stage2",
+    "Class": "UScriptClass'BTTask_UseSkill'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SkillId": 14,
+      "ContinueTime": 6.0,
+      "NodeName": "火圈弹幕",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Saiqi02_Stage2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Saiqi02_Stage2:BTComposite_Selector_10'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.6"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_UseSkill",
+    "Name": "BTTask_UseSkill_47",
+    "Outer": "BT_Boss_Saiqi02_Stage2",
+    "Class": "UScriptClass'BTTask_UseSkill'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SkillId": 20,
+      "ContinueTime": 6.0,
+      "NodeName": "交叉弹幕",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Saiqi02_Stage2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Saiqi02_Stage2:BTComposite_Sequence_33'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.38"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_UseSkill",
+    "Name": "BTTask_UseSkill_48",
+    "Outer": "BT_Boss_Saiqi02_Stage2",
+    "Class": "UScriptClass'BTTask_UseSkill'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SkillId": 15,
+      "ContinueTime": 6.0,
+      "NodeName": "纵向弹幕",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Saiqi02_Stage2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Saiqi02_Stage2:BTComposite_Sequence_33'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.38"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_UseSkill",
+    "Name": "BTTask_UseSkill_49",
+    "Outer": "BT_Boss_Saiqi02_Stage2",
+    "Class": "UScriptClass'BTTask_UseSkill'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SkillId": 3,
+      "ContinueTime": 6.0,
+      "NodeName": "横向弹幕",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Saiqi02_Stage2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Saiqi02_Stage2:BTComposite_Sequence_34'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.39"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_UseSkill",
+    "Name": "BTTask_UseSkill_50",
+    "Outer": "BT_Boss_Saiqi02_Stage2",
+    "Class": "UScriptClass'BTTask_UseSkill'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SkillId": 2,
+      "ContinueTime": 6.0,
+      "NodeName": "王之宝库弹幕",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Saiqi02_Stage2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Saiqi02_Stage2:BTComposite_Sequence_34'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.39"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_UseSkill",
+    "Name": "BTTask_UseSkill_51",
+    "Outer": "BT_Boss_Saiqi02_Stage2",
+    "Class": "UScriptClass'BTTask_UseSkill'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SkillId": 15,
+      "ContinueTime": 6.0,
+      "NodeName": "纵向弹幕",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Saiqi02_Stage2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Saiqi02_Stage2:BTComposite_Sequence_35'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.40"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_UseSkill",
+    "Name": "BTTask_UseSkill_52",
+    "Outer": "BT_Boss_Saiqi02_Stage2",
+    "Class": "UScriptClass'BTTask_UseSkill'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SkillId": 3,
+      "ContinueTime": 6.0,
+      "NodeName": "横向弹幕",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Saiqi02_Stage2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Saiqi02_Stage2:BTComposite_Sequence_35'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.40"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_UseSkill",
+    "Name": "BTTask_UseSkill_6",
+    "Outer": "BT_Boss_Saiqi02_Stage2",
+    "Class": "UScriptClass'BTTask_UseSkill'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SkillId": 8,
+      "ContinueTime": 6.0,
+      "NodeName": "生成风盾",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Saiqi02_Stage2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Saiqi02_Stage2:BTComposite_Sequence_17'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.23"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_UseSkill",
+    "Name": "BTTask_UseSkill_7",
+    "Outer": "BT_Boss_Saiqi02_Stage2",
+    "Class": "UScriptClass'BTTask_UseSkill'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SkillId": 6,
+      "ContinueTime": 7.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Saiqi02_Stage2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Saiqi02_Stage2:BTComposite_Sequence_7'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.42"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_UseSkill",
+    "Name": "BTTask_UseSkill_8",
+    "Outer": "BT_Boss_Saiqi02_Stage2",
+    "Class": "UScriptClass'BTTask_UseSkill'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SkillId": 7,
+      "ContinueTime": 7.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Saiqi02_Stage2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Saiqi02_Stage2:BTComposite_Sequence_8'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.43"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_UseSkill",
+    "Name": "BTTask_UseSkill_9",
+    "Outer": "BT_Boss_Saiqi02_Stage2",
+    "Class": "UScriptClass'BTTask_UseSkill'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SkillId": 19,
+      "ContinueTime": 10.0,
+      "NodeName": "旋风弹幕",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Saiqi02_Stage2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Saiqi02_Stage2:BTComposite_Sequence_20'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.27"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_0",
+    "Outer": "BT_Boss_Saiqi02_Stage2",
+    "Class": "UScriptClass'BTTask_Wait'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "WaitTime": 0.5,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Saiqi02_Stage2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Saiqi02_Stage2:BTComposite_Sequence_2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.26"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_10",
+    "Outer": "BT_Boss_Saiqi02_Stage2",
+    "Class": "UScriptClass'BTTask_Wait'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "WaitTime": 0.5,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Saiqi02_Stage2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Saiqi02_Stage2:BTComposite_Sequence_15'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.21"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_13",
+    "Outer": "BT_Boss_Saiqi02_Stage2",
+    "Class": "UScriptClass'BTTask_Wait'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "WaitTime": 1.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Saiqi02_Stage2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Saiqi02_Stage2:BTComposite_Selector_4'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.10"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_14",
+    "Outer": "BT_Boss_Saiqi02_Stage2",
+    "Class": "UScriptClass'BTTask_Wait'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "WaitTime": 1.0,
+      "RandomDeviation": 0.5,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Saiqi02_Stage2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Saiqi02_Stage2:BTComposite_Sequence_19'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.25"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_15",
+    "Outer": "BT_Boss_Saiqi02_Stage2",
+    "Class": "UScriptClass'BTTask_Wait'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "WaitTime": 2.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Saiqi02_Stage2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Saiqi02_Stage2:BTComposite_Sequence_33'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.38"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_2",
+    "Outer": "BT_Boss_Saiqi02_Stage2",
+    "Class": "UScriptClass'BTTask_Wait'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "WaitTime": 1.5,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Saiqi02_Stage2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Saiqi02_Stage2:BTComposite_Selector_10'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.6"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_3",
+    "Outer": "BT_Boss_Saiqi02_Stage2",
+    "Class": "UScriptClass'BTTask_Wait'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "WaitTime": 0.5,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Saiqi02_Stage2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Saiqi02_Stage2:BTComposite_Sequence_10'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.16"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_4",
+    "Outer": "BT_Boss_Saiqi02_Stage2",
+    "Class": "UScriptClass'BTTask_Wait'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "WaitTime": 0.5,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Saiqi02_Stage2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Saiqi02_Stage2:BTComposite_Sequence_11'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.17"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_5",
+    "Outer": "BT_Boss_Saiqi02_Stage2",
+    "Class": "UScriptClass'BTTask_Wait'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "WaitTime": 2.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Saiqi02_Stage2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Saiqi02_Stage2:BTComposite_Sequence_22'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.29"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_6",
+    "Outer": "BT_Boss_Saiqi02_Stage2",
+    "Class": "UScriptClass'BTTask_Wait'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "WaitTime": 0.5,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Saiqi02_Stage2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Saiqi02_Stage2:BTComposite_Sequence_8'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.43"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_62",
+    "Outer": "BT_Boss_Saiqi02_Stage2",
+    "Class": "UScriptClass'BTTask_Wait'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "WaitTime": 1.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Saiqi02_Stage2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Saiqi02_Stage2:BTComposite_Selector_47'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.11"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_63",
+    "Outer": "BT_Boss_Saiqi02_Stage2",
+    "Class": "UScriptClass'BTTask_Wait'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "WaitTime": 1.0,
+      "RandomDeviation": 0.5,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Saiqi02_Stage2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Saiqi02_Stage2:BTComposite_Sequence_123'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.18"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_7",
+    "Outer": "BT_Boss_Saiqi02_Stage2",
+    "Class": "UScriptClass'BTTask_Wait'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "WaitTime": 0.5,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Saiqi02_Stage2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Saiqi02_Stage2:BTComposite_Sequence_7'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.42"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_8",
+    "Outer": "BT_Boss_Saiqi02_Stage2",
+    "Class": "UScriptClass'BTTask_Wait'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "WaitTime": 1.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Saiqi02_Stage2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Saiqi02_Stage2:BTComposite_Sequence_3'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_03_Saiqi02/BT_Boss_Saiqi02_Stage2.36"
+      }
+    }
+  }
+]

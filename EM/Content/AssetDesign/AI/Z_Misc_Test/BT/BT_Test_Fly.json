@@ -1,0 +1,1991 @@
+[
+  {
+    "Type": "BehaviorTree",
+    "Name": "BT_Test_Fly",
+    "Class": "UScriptClass'BehaviorTree'",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "RootNode": {
+        "ObjectName": "BTComposite_Selector'BT_Test_Fly:BTComposite_Selector_9'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/BT_Test_Fly.8"
+      },
+      "BlackboardAsset": {
+        "ObjectName": "BlackboardData'BB_Mon_Parent_Melee'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Parent/BB_Mon_Parent_Melee.0"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Rate",
+    "Name": "BTComposite_Rate_0",
+    "Outer": "BT_Test_Fly",
+    "Class": "UScriptClass'BTComposite_Rate'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Rates": [
+        1,
+        2
+      ],
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_PlayOutBattleMontage'BT_Test_Fly:BTTask_PlayOutBattleMontage_2'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/BT_Test_Fly.57"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait'BT_Test_Fly:BTTask_Wait_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/BT_Test_Fly.60"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Test_Fly'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/BT_Test_Fly.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Test_Fly:BTComposite_Sequence_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/BT_Test_Fly.10"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_0",
+    "Outer": "BT_Test_Fly",
+    "Class": "UScriptClass'BTComposite_Selector'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_RunBehavior'BT_Test_Fly:BTTask_RunBehavior_4'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/BT_Test_Fly.58"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Test_Fly:BTDecorator_Blackboard_8'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/BT_Test_Fly.39"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector'BT_Test_Fly:BTComposite_Selector_5'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/BT_Test_Fly.5"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Test_Fly:BTDecorator_Blackboard_21'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/BT_Test_Fly.29"
+            }
+          ],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Test_Fly'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/BT_Test_Fly.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Test_Fly:BTComposite_Selector_3'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/BT_Test_Fly.3"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_3",
+    "Outer": "BT_Test_Fly",
+    "Class": "UScriptClass'BTComposite_Selector'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector'BT_Test_Fly:BTComposite_Selector_4'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/BT_Test_Fly.4"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Test_Fly:BTDecorator_Blackboard_37'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/BT_Test_Fly.36"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector'BT_Test_Fly:BTComposite_Selector_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/BT_Test_Fly.2"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Test_Fly:BTDecorator_Blackboard_24'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/BT_Test_Fly.32"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector'BT_Test_Fly:BTComposite_Selector_7'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/BT_Test_Fly.7"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Test_Fly:BTDecorator_Blackboard_40'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/BT_Test_Fly.38"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_Test_Fly:BTComposite_Sequence_2'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/BT_Test_Fly.14"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Test_Fly:BTDecorator_Blackboard_19'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/BT_Test_Fly.27"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_Test_Fly:BTComposite_Sequence_3'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/BT_Test_Fly.15"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Test_Fly:BTDecorator_Blackboard_20'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/BT_Test_Fly.28"
+            }
+          ],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Test_Fly'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/BT_Test_Fly.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Test_Fly:BTComposite_Selector_9'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/BT_Test_Fly.8"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_4",
+    "Outer": "BT_Test_Fly",
+    "Class": "UScriptClass'BTComposite_Selector'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_Test_Fly:BTComposite_Sequence_4'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/BT_Test_Fly.16"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "Services": [
+        {
+          "ObjectName": "BTService_EnemyVision'BT_Test_Fly:BTService_EnemyVision_4'",
+          "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/BT_Test_Fly.41"
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Test_Fly'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/BT_Test_Fly.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Test_Fly:BTComposite_Selector_3'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/BT_Test_Fly.3"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_5",
+    "Outer": "BT_Test_Fly",
+    "Class": "UScriptClass'BTComposite_Selector'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_Test_Fly:BTComposite_Sequence_8'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/BT_Test_Fly.19"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Test_Fly:BTDecorator_Blackboard_23'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/BT_Test_Fly.31"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_Test_Fly:BTComposite_Sequence_6'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/BT_Test_Fly.18"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Test_Fly:BTDecorator_Blackboard_16'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/BT_Test_Fly.25"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_Test_Fly:BTComposite_Sequence_5'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/BT_Test_Fly.17"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Test_Fly:BTDecorator_Blackboard_12'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/BT_Test_Fly.23"
+            },
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Test_Fly:BTDecorator_Blackboard_14'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/BT_Test_Fly.24"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_Test_Fly:BTComposite_Sequence_13'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/BT_Test_Fly.13"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Test_Fly:BTDecorator_Blackboard_26'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/BT_Test_Fly.34"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait'BT_Test_Fly:BTTask_Wait_4'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/BT_Test_Fly.64"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Test_Fly:BTDecorator_Blackboard_22'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/BT_Test_Fly.30"
+            },
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Test_Fly:BTDecorator_Blackboard_25'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/BT_Test_Fly.33"
+            }
+          ],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Test_Fly'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/BT_Test_Fly.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Test_Fly:BTComposite_Selector_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/BT_Test_Fly.2"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_6",
+    "Outer": "BT_Test_Fly",
+    "Class": "UScriptClass'BTComposite_Selector'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait'BT_Test_Fly:BTTask_Wait_6'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/BT_Test_Fly.66"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Test_Fly'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/BT_Test_Fly.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Test_Fly:BTComposite_Selector_9'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/BT_Test_Fly.8"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_7",
+    "Outer": "BT_Test_Fly",
+    "Class": "UScriptClass'BTComposite_Selector'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_Test_Fly:BTComposite_Sequence_12'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/BT_Test_Fly.12"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Test_Fly:BTDecorator_Blackboard_39'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/BT_Test_Fly.37"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_Test_Fly:BTComposite_Sequence_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/BT_Test_Fly.9"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Test_Fly:BTDecorator_Blackboard_0'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/BT_Test_Fly.21"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_Test_Fly:BTComposite_Sequence_10'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/BT_Test_Fly.11"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Test_Fly:BTDecorator_Blackboard_18'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/BT_Test_Fly.26"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_Test_Fly:BTComposite_Sequence_1'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/BT_Test_Fly.10"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Test_Fly:BTDecorator_Blackboard_9'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/BT_Test_Fly.40"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_Test_Fly:BTComposite_Sequence_9'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/BT_Test_Fly.20"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Test_Fly'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/BT_Test_Fly.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Test_Fly:BTComposite_Selector_3'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/BT_Test_Fly.3"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_9",
+    "Outer": "BT_Test_Fly",
+    "Class": "UScriptClass'BTComposite_Selector'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector'BT_Test_Fly:BTComposite_Selector_3'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/BT_Test_Fly.3"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Test_Fly:BTDecorator_Blackboard_10'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/BT_Test_Fly.22"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector'BT_Test_Fly:BTComposite_Selector_6'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/BT_Test_Fly.6"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Test_Fly:BTDecorator_Blackboard_35'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/BT_Test_Fly.35"
+            }
+          ],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Test_Fly'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/BT_Test_Fly.0"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_0",
+    "Outer": "BT_Test_Fly",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_PlayOutBattleMontage'BT_Test_Fly:BTTask_PlayOutBattleMontage_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/BT_Test_Fly.55"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait'BT_Test_Fly:BTTask_Wait_2'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/BT_Test_Fly.62"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Test_Fly'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/BT_Test_Fly.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Test_Fly:BTComposite_Selector_7'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/BT_Test_Fly.7"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_1",
+    "Outer": "BT_Test_Fly",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_EMRunEQSQuery'BT_Test_Fly:BTTask_EMRunEQSQuery_2'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/BT_Test_Fly.43"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_NewMoveTo'BT_Test_Fly:BTTask_NewMoveTo_2'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/BT_Test_Fly.50"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Rate'BT_Test_Fly:BTComposite_Rate_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/BT_Test_Fly.1"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Test_Fly'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/BT_Test_Fly.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Test_Fly:BTComposite_Selector_7'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/BT_Test_Fly.7"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_10",
+    "Outer": "BT_Test_Fly",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_PlayOutBattleMontage'BT_Test_Fly:BTTask_PlayOutBattleMontage_1'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/BT_Test_Fly.56"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Test_Fly'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/BT_Test_Fly.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Test_Fly:BTComposite_Selector_7'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/BT_Test_Fly.7"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_12",
+    "Outer": "BT_Test_Fly",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_GetPatrolLoc'BT_Test_Fly:BTTask_GetPatrolLoc_1'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/BT_Test_Fly.46"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_NewMoveTo'BT_Test_Fly:BTTask_NewMoveTo_1'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/BT_Test_Fly.49"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait'BT_Test_Fly:BTTask_Wait_5'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/BT_Test_Fly.65"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "NodeName": "Patrol",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Test_Fly'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/BT_Test_Fly.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Test_Fly:BTComposite_Selector_7'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/BT_Test_Fly.7"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_13",
+    "Outer": "BT_Test_Fly",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_NewMoveTo'BT_Test_Fly:BTTask_NewMoveTo_5'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/BT_Test_Fly.53"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Test_Fly'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/BT_Test_Fly.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Test_Fly:BTComposite_Selector_5'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/BT_Test_Fly.5"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_2",
+    "Outer": "BT_Test_Fly",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait'BT_Test_Fly:BTTask_Wait_1'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/BT_Test_Fly.61"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Test_Fly'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/BT_Test_Fly.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Test_Fly:BTComposite_Selector_3'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/BT_Test_Fly.3"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_3",
+    "Outer": "BT_Test_Fly",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait'BT_Test_Fly:BTTask_Wait_3'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/BT_Test_Fly.63"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Test_Fly'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/BT_Test_Fly.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Test_Fly:BTComposite_Selector_3'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/BT_Test_Fly.3"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_4",
+    "Outer": "BT_Test_Fly",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_GetTarget'BT_Test_Fly:BTTask_GetTarget_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/BT_Test_Fly.47"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_FlyMoveTo'BT_Test_Fly:BTTask_FlyMoveTo_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/BT_Test_Fly.44"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait'BT_Test_Fly:BTTask_Wait_7'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/BT_Test_Fly.67"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Test_Fly'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/BT_Test_Fly.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Test_Fly:BTComposite_Selector_4'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/BT_Test_Fly.4"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_5",
+    "Outer": "BT_Test_Fly",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_StareAt'BT_Test_Fly:BTTask_StareAt_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/BT_Test_Fly.59"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_NewMoveTo'BT_Test_Fly:BTTask_NewMoveTo_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/BT_Test_Fly.48"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Test_Fly'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/BT_Test_Fly.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Test_Fly:BTComposite_Selector_5'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/BT_Test_Fly.5"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_6",
+    "Outer": "BT_Test_Fly",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_NewMoveTo'BT_Test_Fly:BTTask_NewMoveTo_4'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/BT_Test_Fly.52"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Test_Fly'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/BT_Test_Fly.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Test_Fly:BTComposite_Selector_5'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/BT_Test_Fly.5"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_8",
+    "Outer": "BT_Test_Fly",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_GetAlertTarget'BT_Test_Fly:BTTask_GetAlertTarget_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/BT_Test_Fly.45"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_NewMoveTo'BT_Test_Fly:BTTask_NewMoveTo_3'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/BT_Test_Fly.51"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Test_Fly'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/BT_Test_Fly.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Test_Fly:BTComposite_Selector_5'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/BT_Test_Fly.5"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_9",
+    "Outer": "BT_Test_Fly",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_EMRunEQSQuery'BT_Test_Fly:BTTask_EMRunEQSQuery_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/BT_Test_Fly.42"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_NewMoveTo'BT_Test_Fly:BTTask_NewMoveTo_6'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/BT_Test_Fly.54"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Test_Fly'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/BT_Test_Fly.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Test_Fly:BTComposite_Selector_7'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/BT_Test_Fly.7"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_0",
+    "Outer": "BT_Test_Fly",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "IntValue": 1,
+      "CachedDescription": "FreeActionMode 等于 LoopMontage",
+      "BlackboardKey": {
+        "SelectedKeyName": "FreeActionMode"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Test_Fly'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/BT_Test_Fly.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Test_Fly:BTComposite_Selector_7'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/BT_Test_Fly.7"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_10",
+    "Outer": "BT_Test_Fly",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "CachedDescription": "ActionMode 等于 Active",
+      "BlackboardKey": {
+        "SelectedKeyName": "ActionMode"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::Self",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Test_Fly'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/BT_Test_Fly.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Test_Fly:BTComposite_Selector_9'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/BT_Test_Fly.8"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_12",
+    "Outer": "BT_Test_Fly",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "CachedDescription": "AlertTarget is 未设置",
+      "OperationType": 1,
+      "BlackboardKey": {
+        "SelectedKeyName": "AlertTarget"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::Both",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Test_Fly'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/BT_Test_Fly.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Test_Fly:BTComposite_Selector_5'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/BT_Test_Fly.5"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_14",
+    "Outer": "BT_Test_Fly",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "CachedDescription": "AlertSoundLoc is 已设置",
+      "BlackboardKey": {
+        "SelectedKeyName": "AlertSoundLoc"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Test_Fly'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/BT_Test_Fly.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Test_Fly:BTComposite_Selector_5'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/BT_Test_Fly.5"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_16",
+    "Outer": "BT_Test_Fly",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "CachedDescription": "AlertTarget is 已设置",
+      "BlackboardKey": {
+        "SelectedKeyName": "AlertTarget"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::Both",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Test_Fly'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/BT_Test_Fly.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Test_Fly:BTComposite_Selector_5'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/BT_Test_Fly.5"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_18",
+    "Outer": "BT_Test_Fly",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "IntValue": 2,
+      "CachedDescription": "FreeActionMode 等于 MontageList",
+      "BlackboardKey": {
+        "SelectedKeyName": "FreeActionMode"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Test_Fly'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/BT_Test_Fly.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Test_Fly:BTComposite_Selector_7'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/BT_Test_Fly.7"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_19",
+    "Outer": "BT_Test_Fly",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "IntValue": 6,
+      "CachedDescription": "DecisionState 等于 ",
+      "BlackboardKey": {
+        "SelectedKeyName": "DecisionState"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::Self",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Test_Fly'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/BT_Test_Fly.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Test_Fly:BTComposite_Selector_3'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/BT_Test_Fly.3"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_20",
+    "Outer": "BT_Test_Fly",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "IntValue": 3,
+      "CachedDescription": "DecisionState 等于 Escaping",
+      "BlackboardKey": {
+        "SelectedKeyName": "DecisionState"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::Self",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Test_Fly'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/BT_Test_Fly.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Test_Fly:BTComposite_Selector_3'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/BT_Test_Fly.3"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_21",
+    "Outer": "BT_Test_Fly",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "CachedDescription": "AlarmTrigger is 未设置",
+      "OperationType": 1,
+      "BlackboardKey": {
+        "SelectedKeyName": "AlarmTrigger"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::Self",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Test_Fly'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/BT_Test_Fly.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Test_Fly:BTComposite_Selector_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/BT_Test_Fly.2"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_22",
+    "Outer": "BT_Test_Fly",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "CachedDescription": "AlertSoundLoc is 未设置",
+      "OperationType": 1,
+      "BlackboardKey": {
+        "SelectedKeyName": "AlertSoundLoc"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::Self",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Test_Fly'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/BT_Test_Fly.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Test_Fly:BTComposite_Selector_5'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/BT_Test_Fly.5"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_23",
+    "Outer": "BT_Test_Fly",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "CachedDescription": "AlertTarget is 未设置",
+      "OperationType": 1,
+      "BlackboardKey": {
+        "SelectedKeyName": "AlertTarget"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::Both",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Test_Fly'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/BT_Test_Fly.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Test_Fly:BTComposite_Selector_5'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/BT_Test_Fly.5"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_24",
+    "Outer": "BT_Test_Fly",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "IntValue": 1,
+      "CachedDescription": "DecisionState 等于 Alert",
+      "BlackboardKey": {
+        "SelectedKeyName": "DecisionState"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::Both",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Test_Fly'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/BT_Test_Fly.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Test_Fly:BTComposite_Selector_3'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/BT_Test_Fly.3"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_25",
+    "Outer": "BT_Test_Fly",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "CachedDescription": "AlertTarget is 未设置",
+      "OperationType": 1,
+      "BlackboardKey": {
+        "SelectedKeyName": "AlertTarget"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::Self",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Test_Fly'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/BT_Test_Fly.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Test_Fly:BTComposite_Selector_5'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/BT_Test_Fly.5"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_26",
+    "Outer": "BT_Test_Fly",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "CachedDescription": "AlarmTarget is 已设置",
+      "BlackboardKey": {
+        "SelectedKeyName": "AlarmTarget"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::Both",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Test_Fly'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/BT_Test_Fly.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Test_Fly:BTComposite_Selector_5'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/BT_Test_Fly.5"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_35",
+    "Outer": "BT_Test_Fly",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "IntValue": 1,
+      "CachedDescription": "ActionMode 等于 Hitted",
+      "BlackboardKey": {
+        "SelectedKeyName": "ActionMode"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::Self",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Test_Fly'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/BT_Test_Fly.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Test_Fly:BTComposite_Selector_9'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/BT_Test_Fly.8"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_37",
+    "Outer": "BT_Test_Fly",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "IntValue": 2,
+      "CachedDescription": "DecisionState 等于 Battle",
+      "BlackboardKey": {
+        "SelectedKeyName": "DecisionState"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::LowerPriority",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Test_Fly'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/BT_Test_Fly.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Test_Fly:BTComposite_Selector_3'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/BT_Test_Fly.3"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_39",
+    "Outer": "BT_Test_Fly",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "IntValue": 3,
+      "CachedDescription": "FreeActionMode 等于 Patrol",
+      "BlackboardKey": {
+        "SelectedKeyName": "FreeActionMode"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Test_Fly'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/BT_Test_Fly.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Test_Fly:BTComposite_Selector_7'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/BT_Test_Fly.7"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_40",
+    "Outer": "BT_Test_Fly",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "CachedDescription": "DecisionState 等于 Out Battle",
+      "BlackboardKey": {
+        "SelectedKeyName": "DecisionState"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::Self",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Test_Fly'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/BT_Test_Fly.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Test_Fly:BTComposite_Selector_3'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/BT_Test_Fly.3"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_8",
+    "Outer": "BT_Test_Fly",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "CachedDescription": "AlarmTrigger is 已设置",
+      "BlackboardKey": {
+        "SelectedKeyName": "AlarmTrigger"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::Self",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Test_Fly'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/BT_Test_Fly.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Test_Fly:BTComposite_Selector_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/BT_Test_Fly.2"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_9",
+    "Outer": "BT_Test_Fly",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "CachedDescription": "FreeActionMode 等于 Stroll",
+      "BlackboardKey": {
+        "SelectedKeyName": "FreeActionMode"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Test_Fly'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/BT_Test_Fly.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Test_Fly:BTComposite_Selector_7'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/BT_Test_Fly.7"
+      }
+    }
+  },
+  {
+    "Type": "BTService_EnemyVision",
+    "Name": "BTService_EnemyVision_4",
+    "Outer": "BT_Test_Fly",
+    "Class": "UScriptClass'BTService_EnemyVision'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "FVisionDistance": 4000.0,
+      "FVisionAngle": 360.0,
+      "bConsiderDefCore": true,
+      "Interval": 0.1,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Test_Fly'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/BT_Test_Fly.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Test_Fly:BTComposite_Selector_4'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/BT_Test_Fly.4"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_EMRunEQSQuery",
+    "Name": "BTTask_EMRunEQSQuery_0",
+    "Outer": "BT_Test_Fly",
+    "Class": "UScriptClass'BTTask_EMRunEQSQuery'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "EQSRequest": {
+        "QueryTemplate": {
+          "ObjectName": "EnvQuery'EQS_SelfDonut'",
+          "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Z_EnvQuery/EQS_SelfDonut.5"
+        },
+        "QueryConfig": [
+          {
+            "ParamName": "EMDonut.InnerRadius",
+            "ParamType": "EAIParamType::Float",
+            "Value": 100.0,
+            "BBKey": {
+              "SelectedKeyName": "None",
+              "bNoneIsAllowedValue": true
+            }
+          },
+          {
+            "ParamName": "EMDonut.OuterRadius",
+            "ParamType": "EAIParamType::Float",
+            "Value": 300.0,
+            "BBKey": {
+              "SelectedKeyName": "None",
+              "bNoneIsAllowedValue": true
+            }
+          },
+          {
+            "ParamName": "EMDonut.NumberOfRings",
+            "ParamType": "EAIParamType::Int",
+            "Value": 3.0,
+            "BBKey": {
+              "SelectedKeyName": "None",
+              "bNoneIsAllowedValue": true
+            }
+          },
+          {
+            "ParamName": "EMDonut.PointsPerRing",
+            "ParamType": "EAIParamType::Int",
+            "Value": 12.0,
+            "BBKey": {
+              "SelectedKeyName": "None",
+              "bNoneIsAllowedValue": true
+            }
+          },
+          {
+            "ParamName": "EMDonut.ArcAngle",
+            "ParamType": "EAIParamType::Float",
+            "Value": 180.0,
+            "BBKey": {
+              "SelectedKeyName": "None",
+              "bNoneIsAllowedValue": true
+            }
+          }
+        ],
+        "RunMode": "EEnvQueryRunMode::RandomBest25Pct"
+      },
+      "BlackboardKey": {
+        "SelectedKeyName": "EQSQueryLoc"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Test_Fly'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/BT_Test_Fly.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Test_Fly:BTComposite_Sequence_9'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/BT_Test_Fly.20"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_EMRunEQSQuery",
+    "Name": "BTTask_EMRunEQSQuery_2",
+    "Outer": "BT_Test_Fly",
+    "Class": "UScriptClass'BTTask_EMRunEQSQuery'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "EQSRequest": {
+        "QueryTemplate": {
+          "ObjectName": "EnvQuery'EQS_BornPosCircle'",
+          "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Z_EnvQuery/EQS_BornPosCircle.5"
+        },
+        "QueryConfig": [
+          {
+            "ParamName": "Donut.InnerRadius",
+            "ParamType": "EAIParamType::Float",
+            "Value": 300.0,
+            "BBKey": {
+              "SelectedKeyName": "None",
+              "bNoneIsAllowedValue": true
+            }
+          },
+          {
+            "ParamName": "Donut.OuterRadius",
+            "ParamType": "EAIParamType::Float",
+            "Value": 1000.0,
+            "BBKey": {
+              "SelectedKeyName": "RadiusHang",
+              "bNoneIsAllowedValue": true
+            }
+          },
+          {
+            "ParamName": "Donut.NumberOfRings",
+            "ParamType": "EAIParamType::Int",
+            "Value": 3.0,
+            "BBKey": {
+              "SelectedKeyName": "None",
+              "bNoneIsAllowedValue": true
+            }
+          },
+          {
+            "ParamName": "Donut.PointsPerRing",
+            "ParamType": "EAIParamType::Int",
+            "Value": 8.0,
+            "BBKey": {
+              "SelectedKeyName": "None",
+              "bNoneIsAllowedValue": true
+            }
+          },
+          {
+            "ParamName": "Donut.ArcAngle",
+            "ParamType": "EAIParamType::Float",
+            "Value": 360.0,
+            "BBKey": {
+              "SelectedKeyName": "None",
+              "bNoneIsAllowedValue": true
+            }
+          }
+        ],
+        "RunMode": "EEnvQueryRunMode::RandomBest25Pct"
+      },
+      "BlackboardKey": {
+        "SelectedKeyName": "EQSQueryLoc"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Test_Fly'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/BT_Test_Fly.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Test_Fly:BTComposite_Sequence_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/BT_Test_Fly.10"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_FlyMoveTo",
+    "Name": "BTTask_FlyMoveTo_0",
+    "Outer": "BT_Test_Fly",
+    "Class": "UScriptClass'BTTask_FlyMoveTo'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "bOrientRotationToMovement": true,
+      "AcceptableRadius": 100.0,
+      "BlackboardKey": {
+        "SelectedKeyName": "Target"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Test_Fly'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/BT_Test_Fly.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Test_Fly:BTComposite_Sequence_4'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/BT_Test_Fly.16"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_GetAlertTarget",
+    "Name": "BTTask_GetAlertTarget_0",
+    "Outer": "BT_Test_Fly",
+    "Class": "UScriptClass'BTTask_GetAlertTarget'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Test_Fly'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/BT_Test_Fly.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Test_Fly:BTComposite_Sequence_8'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/BT_Test_Fly.19"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_GetPatrolLoc",
+    "Name": "BTTask_GetPatrolLoc_1",
+    "Outer": "BT_Test_Fly",
+    "Class": "UScriptClass'BTTask_GetPatrolLoc'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Test_Fly'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/BT_Test_Fly.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Test_Fly:BTComposite_Sequence_12'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/BT_Test_Fly.12"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_GetTarget",
+    "Name": "BTTask_GetTarget_0",
+    "Outer": "BT_Test_Fly",
+    "Class": "UScriptClass'BTTask_GetTarget'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Test_Fly'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/BT_Test_Fly.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Test_Fly:BTComposite_Sequence_4'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/BT_Test_Fly.16"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_NewMoveTo",
+    "Name": "BTTask_NewMoveTo_0",
+    "Outer": "BT_Test_Fly",
+    "Class": "UScriptClass'BTTask_NewMoveTo'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "bOrientRotationToMovement": true,
+      "MoveTypeState": "EMoveTypeState::MTS_Run",
+      "bObserveBlackboardValue": true,
+      "bStopOnOverlapNeedsUpdate": false,
+      "BlackboardKey": {
+        "SelectedKeyName": "AlertSoundLoc"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Test_Fly'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/BT_Test_Fly.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Test_Fly:BTComposite_Sequence_5'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/BT_Test_Fly.17"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_NewMoveTo",
+    "Name": "BTTask_NewMoveTo_1",
+    "Outer": "BT_Test_Fly",
+    "Class": "UScriptClass'BTTask_NewMoveTo'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "bOrientRotationToMovement": true,
+      "bReachTestIncludesAgentRadius": false,
+      "bReachTestIncludesGoalRadius": false,
+      "bStopOnOverlapNeedsUpdate": false,
+      "BlackboardKey": {
+        "SelectedKeyName": "PatrolLoc"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Test_Fly'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/BT_Test_Fly.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Test_Fly:BTComposite_Sequence_12'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/BT_Test_Fly.12"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_NewMoveTo",
+    "Name": "BTTask_NewMoveTo_2",
+    "Outer": "BT_Test_Fly",
+    "Class": "UScriptClass'BTTask_NewMoveTo'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "bOrientRotationToMovement": true,
+      "bStopOnOverlapNeedsUpdate": false,
+      "BlackboardKey": {
+        "SelectedKeyName": "EQSQueryLoc"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Test_Fly'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/BT_Test_Fly.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Test_Fly:BTComposite_Sequence_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/BT_Test_Fly.10"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_NewMoveTo",
+    "Name": "BTTask_NewMoveTo_3",
+    "Outer": "BT_Test_Fly",
+    "Class": "UScriptClass'BTTask_NewMoveTo'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "bOrientRotationToMovement": true,
+      "MoveTypeState": "EMoveTypeState::MTS_Run",
+      "bStopOnOverlapNeedsUpdate": false,
+      "BlackboardKey": {
+        "SelectedKeyName": "AlertTarget"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Test_Fly'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/BT_Test_Fly.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Test_Fly:BTComposite_Sequence_8'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/BT_Test_Fly.19"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_NewMoveTo",
+    "Name": "BTTask_NewMoveTo_4",
+    "Outer": "BT_Test_Fly",
+    "Class": "UScriptClass'BTTask_NewMoveTo'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "bOrientRotationToMovement": true,
+      "MoveTypeState": "EMoveTypeState::MTS_Run",
+      "bStopOnOverlapNeedsUpdate": false,
+      "BlackboardKey": {
+        "SelectedKeyName": "AlertTarget"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Test_Fly'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/BT_Test_Fly.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Test_Fly:BTComposite_Sequence_6'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/BT_Test_Fly.18"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_NewMoveTo",
+    "Name": "BTTask_NewMoveTo_5",
+    "Outer": "BT_Test_Fly",
+    "Class": "UScriptClass'BTTask_NewMoveTo'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "bOrientRotationToMovement": true,
+      "MoveTypeState": "EMoveTypeState::MTS_Run",
+      "bStopOnOverlapNeedsUpdate": false,
+      "BlackboardKey": {
+        "SelectedKeyName": "AlarmTarget"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Test_Fly'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/BT_Test_Fly.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Test_Fly:BTComposite_Sequence_13'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/BT_Test_Fly.13"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_NewMoveTo",
+    "Name": "BTTask_NewMoveTo_6",
+    "Outer": "BT_Test_Fly",
+    "Class": "UScriptClass'BTTask_NewMoveTo'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "bOrientRotationToMovement": true,
+      "bStopOnOverlapNeedsUpdate": false,
+      "BlackboardKey": {
+        "SelectedKeyName": "EQSQueryLoc"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Test_Fly'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/BT_Test_Fly.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Test_Fly:BTComposite_Sequence_9'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/BT_Test_Fly.20"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_PlayOutBattleMontage",
+    "Name": "BTTask_PlayOutBattleMontage_0",
+    "Outer": "BT_Test_Fly",
+    "Class": "UScriptClass'BTTask_PlayOutBattleMontage'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Test_Fly'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/BT_Test_Fly.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Test_Fly:BTComposite_Sequence_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/BT_Test_Fly.9"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_PlayOutBattleMontage",
+    "Name": "BTTask_PlayOutBattleMontage_1",
+    "Outer": "BT_Test_Fly",
+    "Class": "UScriptClass'BTTask_PlayOutBattleMontage'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Test_Fly'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/BT_Test_Fly.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Test_Fly:BTComposite_Sequence_10'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/BT_Test_Fly.11"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_PlayOutBattleMontage",
+    "Name": "BTTask_PlayOutBattleMontage_2",
+    "Outer": "BT_Test_Fly",
+    "Class": "UScriptClass'BTTask_PlayOutBattleMontage'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Behavior": "EOutBattleMontageBehavior::Random",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Test_Fly'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/BT_Test_Fly.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Rate'BT_Test_Fly:BTComposite_Rate_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/BT_Test_Fly.1"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_RunBehavior",
+    "Name": "BTTask_RunBehavior_4",
+    "Outer": "BT_Test_Fly",
+    "Class": "UScriptClass'BTTask_RunBehavior'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "BehaviorAsset": {
+        "ObjectName": "BehaviorTree'BT_6Piaofu_Alarm'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Gr_Piaofu/BT_6Piaofu_Alarm.0"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Test_Fly'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/BT_Test_Fly.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Test_Fly:BTComposite_Selector_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/BT_Test_Fly.2"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_StareAt",
+    "Name": "BTTask_StareAt_0",
+    "Outer": "BT_Test_Fly",
+    "Class": "UScriptClass'BTTask_StareAt'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "BBName": "AlertSoundLoc",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Test_Fly'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/BT_Test_Fly.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Test_Fly:BTComposite_Sequence_5'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/BT_Test_Fly.17"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_0",
+    "Outer": "BT_Test_Fly",
+    "Class": "UScriptClass'BTTask_Wait'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "WaitTime": 2.0,
+      "RandomDeviation": 1.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Test_Fly'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/BT_Test_Fly.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Rate'BT_Test_Fly:BTComposite_Rate_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/BT_Test_Fly.1"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_1",
+    "Outer": "BT_Test_Fly",
+    "Class": "UScriptClass'BTTask_Wait'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Test_Fly'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/BT_Test_Fly.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Test_Fly:BTComposite_Sequence_2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/BT_Test_Fly.14"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_2",
+    "Outer": "BT_Test_Fly",
+    "Class": "UScriptClass'BTTask_Wait'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "WaitTime": 1.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Test_Fly'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/BT_Test_Fly.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Test_Fly:BTComposite_Sequence_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/BT_Test_Fly.9"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_3",
+    "Outer": "BT_Test_Fly",
+    "Class": "UScriptClass'BTTask_Wait'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Test_Fly'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/BT_Test_Fly.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Test_Fly:BTComposite_Sequence_3'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/BT_Test_Fly.15"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_4",
+    "Outer": "BT_Test_Fly",
+    "Class": "UScriptClass'BTTask_Wait'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Test_Fly'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/BT_Test_Fly.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Test_Fly:BTComposite_Selector_5'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/BT_Test_Fly.5"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_5",
+    "Outer": "BT_Test_Fly",
+    "Class": "UScriptClass'BTTask_Wait'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "WaitTime": 2.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Test_Fly'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/BT_Test_Fly.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Test_Fly:BTComposite_Sequence_12'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/BT_Test_Fly.12"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_6",
+    "Outer": "BT_Test_Fly",
+    "Class": "UScriptClass'BTTask_Wait'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Test_Fly'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/BT_Test_Fly.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Test_Fly:BTComposite_Selector_6'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/BT_Test_Fly.6"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_7",
+    "Outer": "BT_Test_Fly",
+    "Class": "UScriptClass'BTTask_Wait'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "WaitTime": 2.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Test_Fly'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/BT_Test_Fly.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Test_Fly:BTComposite_Sequence_4'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/BT_Test_Fly.16"
+      }
+    }
+  }
+]

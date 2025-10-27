@@ -1,0 +1,1057 @@
+[
+  {
+    "Type": "BehaviorTree",
+    "Name": "BT_9Zhenzhu",
+    "Class": "UScriptClass'BehaviorTree'",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "RootNode": {
+        "ObjectName": "BTComposite_Selector'BT_9Zhenzhu:BTComposite_Selector_9'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Animal_Zhenzhu/BT_9Zhenzhu.6"
+      },
+      "BlackboardAsset": {
+        "ObjectName": "BlackboardData'BB_Mon_Parent_Melee'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Parent/BB_Mon_Parent_Melee.0"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Rate",
+    "Name": "BTComposite_Rate_0",
+    "Outer": "BT_9Zhenzhu",
+    "Class": "UScriptClass'BTComposite_Rate'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Rates": [
+        60,
+        40
+      ],
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_9Zhenzhu:BTComposite_Sequence_12'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Animal_Zhenzhu/BT_9Zhenzhu.9"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_9Zhenzhu:BTComposite_Sequence_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Animal_Zhenzhu/BT_9Zhenzhu.7"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_9Zhenzhu'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Animal_Zhenzhu/BT_9Zhenzhu.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_9Zhenzhu:BTComposite_Selector_8'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Animal_Zhenzhu/BT_9Zhenzhu.5"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_1",
+    "Outer": "BT_9Zhenzhu",
+    "Class": "UScriptClass'BTComposite_Selector'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_RunBehavior'BT_9Zhenzhu:BTTask_RunBehavior_11'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Animal_Zhenzhu/BT_9Zhenzhu.31"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_9Zhenzhu'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Animal_Zhenzhu/BT_9Zhenzhu.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_9Zhenzhu:BTComposite_Selector_10'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Animal_Zhenzhu/BT_9Zhenzhu.3"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_10",
+    "Outer": "BT_9Zhenzhu",
+    "Class": "UScriptClass'BTComposite_Selector'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector'BT_9Zhenzhu:BTComposite_Selector_1'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Animal_Zhenzhu/BT_9Zhenzhu.2"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_9Zhenzhu:BTDecorator_Blackboard_27'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Animal_Zhenzhu/BT_9Zhenzhu.19"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_RunBehavior'BT_9Zhenzhu:BTTask_RunBehavior_1'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Animal_Zhenzhu/BT_9Zhenzhu.30"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_9Zhenzhu:BTDecorator_Blackboard_6'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Animal_Zhenzhu/BT_9Zhenzhu.22"
+            },
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_9Zhenzhu:BTDecorator_Blackboard_1'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Animal_Zhenzhu/BT_9Zhenzhu.12"
+            },
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_9Zhenzhu:BTDecorator_Blackboard_7'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Animal_Zhenzhu/BT_9Zhenzhu.23"
+            }
+          ],
+          "DecoratorOps": [
+            {
+              "Operation": "EBTDecoratorLogic::Or",
+              "Number": 3
+            },
+            {
+              "Operation": "EBTDecoratorLogic::Test",
+              "Number": 0
+            },
+            {
+              "Operation": "EBTDecoratorLogic::Test",
+              "Number": 1
+            },
+            {
+              "Operation": "EBTDecoratorLogic::Test",
+              "Number": 2
+            }
+          ]
+        }
+      ],
+      "Services": [
+        {
+          "ObjectName": "BTService_EnemyVision'BT_9Zhenzhu:BTService_EnemyVision_1'",
+          "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Animal_Zhenzhu/BT_9Zhenzhu.25"
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_9Zhenzhu'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Animal_Zhenzhu/BT_9Zhenzhu.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_9Zhenzhu:BTComposite_Selector_8'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Animal_Zhenzhu/BT_9Zhenzhu.5"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_14",
+    "Outer": "BT_9Zhenzhu",
+    "Class": "UScriptClass'BTComposite_Selector'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait'BT_9Zhenzhu:BTTask_Wait_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Animal_Zhenzhu/BT_9Zhenzhu.34"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_9Zhenzhu'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Animal_Zhenzhu/BT_9Zhenzhu.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_9Zhenzhu:BTComposite_Selector_9'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Animal_Zhenzhu/BT_9Zhenzhu.6"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_8",
+    "Outer": "BT_9Zhenzhu",
+    "Class": "UScriptClass'BTComposite_Selector'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector'BT_9Zhenzhu:BTComposite_Selector_10'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Animal_Zhenzhu/BT_9Zhenzhu.3"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_9Zhenzhu:BTDecorator_Blackboard_10'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Animal_Zhenzhu/BT_9Zhenzhu.13"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_9Zhenzhu:BTComposite_Sequence_2'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Animal_Zhenzhu/BT_9Zhenzhu.10"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_9Zhenzhu:BTDecorator_Blackboard_13'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Animal_Zhenzhu/BT_9Zhenzhu.15"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Rate'BT_9Zhenzhu:BTComposite_Rate_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Animal_Zhenzhu/BT_9Zhenzhu.1"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_9Zhenzhu:BTDecorator_Blackboard_2'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Animal_Zhenzhu/BT_9Zhenzhu.18"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_9Zhenzhu:BTComposite_Sequence_1'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Animal_Zhenzhu/BT_9Zhenzhu.8"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_9Zhenzhu:BTDecorator_Blackboard_18'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Animal_Zhenzhu/BT_9Zhenzhu.17"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_RunBehavior'BT_9Zhenzhu:BTTask_RunBehavior_17'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Animal_Zhenzhu/BT_9Zhenzhu.32"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_9Zhenzhu:BTDecorator_Blackboard_0'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Animal_Zhenzhu/BT_9Zhenzhu.11"
+            },
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_9Zhenzhu:BTDecorator_Blackboard_45'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Animal_Zhenzhu/BT_9Zhenzhu.21"
+            }
+          ],
+          "DecoratorOps": []
+        }
+      ],
+      "Services": [
+        {
+          "ObjectName": "BTService_AlertStateSwitchCheck'BT_9Zhenzhu:BTService_AlertStateSwitchCheck_0'",
+          "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Animal_Zhenzhu/BT_9Zhenzhu.24"
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_9Zhenzhu'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Animal_Zhenzhu/BT_9Zhenzhu.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_9Zhenzhu:BTComposite_Selector_9'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Animal_Zhenzhu/BT_9Zhenzhu.6"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_9",
+    "Outer": "BT_9Zhenzhu",
+    "Class": "UScriptClass'BTComposite_Selector'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector'BT_9Zhenzhu:BTComposite_Selector_8'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Animal_Zhenzhu/BT_9Zhenzhu.5"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_9Zhenzhu:BTDecorator_Blackboard_11'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Animal_Zhenzhu/BT_9Zhenzhu.14"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector'BT_9Zhenzhu:BTComposite_Selector_14'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Animal_Zhenzhu/BT_9Zhenzhu.4"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_9Zhenzhu:BTDecorator_Blackboard_17'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Animal_Zhenzhu/BT_9Zhenzhu.16"
+            }
+          ],
+          "DecoratorOps": []
+        }
+      ],
+      "NodeName": "BattleState",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_9Zhenzhu'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Animal_Zhenzhu/BT_9Zhenzhu.0"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_0",
+    "Outer": "BT_9Zhenzhu",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_UseSkill'BT_9Zhenzhu:BTTask_UseSkill_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Animal_Zhenzhu/BT_9Zhenzhu.33"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait'BT_9Zhenzhu:BTTask_Wait_1'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Animal_Zhenzhu/BT_9Zhenzhu.35"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_9Zhenzhu'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Animal_Zhenzhu/BT_9Zhenzhu.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Rate'BT_9Zhenzhu:BTComposite_Rate_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Animal_Zhenzhu/BT_9Zhenzhu.1"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_1",
+    "Outer": "BT_9Zhenzhu",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait'BT_9Zhenzhu:BTTask_Wait_3'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Animal_Zhenzhu/BT_9Zhenzhu.36"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_9Zhenzhu'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Animal_Zhenzhu/BT_9Zhenzhu.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_9Zhenzhu:BTComposite_Selector_8'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Animal_Zhenzhu/BT_9Zhenzhu.5"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_12",
+    "Outer": "BT_9Zhenzhu",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_GetPatrolLoc'BT_9Zhenzhu:BTTask_GetPatrolLoc_1'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Animal_Zhenzhu/BT_9Zhenzhu.27"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_NewMoveTo'BT_9Zhenzhu:BTTask_NewMoveTo_1'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Animal_Zhenzhu/BT_9Zhenzhu.29"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait'BT_9Zhenzhu:BTTask_Wait_5'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Animal_Zhenzhu/BT_9Zhenzhu.37"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "NodeName": "Patrol",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_9Zhenzhu'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Animal_Zhenzhu/BT_9Zhenzhu.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Rate'BT_9Zhenzhu:BTComposite_Rate_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Animal_Zhenzhu/BT_9Zhenzhu.1"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_2",
+    "Outer": "BT_9Zhenzhu",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_GetAlertTarget'BT_9Zhenzhu:BTTask_GetAlertTarget_3'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Animal_Zhenzhu/BT_9Zhenzhu.26"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_9Zhenzhu:BTDecorator_Blackboard_4'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Animal_Zhenzhu/BT_9Zhenzhu.20"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_NewMoveTo'BT_9Zhenzhu:BTTask_NewMoveTo_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Animal_Zhenzhu/BT_9Zhenzhu.28"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_9Zhenzhu'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Animal_Zhenzhu/BT_9Zhenzhu.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_9Zhenzhu:BTComposite_Selector_8'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Animal_Zhenzhu/BT_9Zhenzhu.5"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_0",
+    "Outer": "BT_9Zhenzhu",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "IntValue": 3,
+      "CachedDescription": "DecisionState 等于 Escaping",
+      "BlackboardKey": {
+        "SelectedKeyName": "DecisionState"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::Both",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_9Zhenzhu'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Animal_Zhenzhu/BT_9Zhenzhu.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_9Zhenzhu:BTComposite_Selector_8'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Animal_Zhenzhu/BT_9Zhenzhu.5"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_1",
+    "Outer": "BT_9Zhenzhu",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "StringValue": "Training",
+      "CachedDescription": "GameModeType 为相等 [Training]",
+      "BlackboardKey": {
+        "SelectedKeyName": "GameModeType"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_9Zhenzhu'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Animal_Zhenzhu/BT_9Zhenzhu.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_9Zhenzhu:BTComposite_Selector_10'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Animal_Zhenzhu/BT_9Zhenzhu.3"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_10",
+    "Outer": "BT_9Zhenzhu",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "IntValue": 2,
+      "CachedDescription": "DecisionState 等于 Battle",
+      "BlackboardKey": {
+        "SelectedKeyName": "DecisionState"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::Both",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_9Zhenzhu'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Animal_Zhenzhu/BT_9Zhenzhu.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_9Zhenzhu:BTComposite_Selector_8'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Animal_Zhenzhu/BT_9Zhenzhu.5"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_11",
+    "Outer": "BT_9Zhenzhu",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "CachedDescription": "ActionMode 等于 Active",
+      "BlackboardKey": {
+        "SelectedKeyName": "ActionMode"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::Self",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_9Zhenzhu'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Animal_Zhenzhu/BT_9Zhenzhu.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_9Zhenzhu:BTComposite_Selector_9'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Animal_Zhenzhu/BT_9Zhenzhu.6"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_13",
+    "Outer": "BT_9Zhenzhu",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "IntValue": 1,
+      "CachedDescription": "DecisionState 等于 Alert",
+      "BlackboardKey": {
+        "SelectedKeyName": "DecisionState"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::Both",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_9Zhenzhu'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Animal_Zhenzhu/BT_9Zhenzhu.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_9Zhenzhu:BTComposite_Selector_8'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Animal_Zhenzhu/BT_9Zhenzhu.5"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_17",
+    "Outer": "BT_9Zhenzhu",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "IntValue": 1,
+      "CachedDescription": "ActionMode 等于 Hitted",
+      "BlackboardKey": {
+        "SelectedKeyName": "ActionMode"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::Self",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_9Zhenzhu'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Animal_Zhenzhu/BT_9Zhenzhu.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_9Zhenzhu:BTComposite_Selector_9'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Animal_Zhenzhu/BT_9Zhenzhu.6"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_18",
+    "Outer": "BT_9Zhenzhu",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "IntValue": 9,
+      "CachedDescription": "DecisionState 等于 ",
+      "BlackboardKey": {
+        "SelectedKeyName": "DecisionState"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::Self",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_9Zhenzhu'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Animal_Zhenzhu/BT_9Zhenzhu.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_9Zhenzhu:BTComposite_Selector_8'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Animal_Zhenzhu/BT_9Zhenzhu.5"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_2",
+    "Outer": "BT_9Zhenzhu",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "CachedDescription": "DecisionState 等于 Out Battle",
+      "BlackboardKey": {
+        "SelectedKeyName": "DecisionState"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::Both",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_9Zhenzhu'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Animal_Zhenzhu/BT_9Zhenzhu.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_9Zhenzhu:BTComposite_Selector_8'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Animal_Zhenzhu/BT_9Zhenzhu.5"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_27",
+    "Outer": "BT_9Zhenzhu",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "StringValue": "Region",
+      "CachedDescription": "GameModeType 为相等 [Region]",
+      "BlackboardKey": {
+        "SelectedKeyName": "GameModeType"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_9Zhenzhu'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Animal_Zhenzhu/BT_9Zhenzhu.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_9Zhenzhu:BTComposite_Selector_10'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Animal_Zhenzhu/BT_9Zhenzhu.3"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_4",
+    "Outer": "BT_9Zhenzhu",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "CachedDescription": "AlertTarget is 未设置",
+      "OperationType": 1,
+      "BlackboardKey": {
+        "SelectedKeyName": "AlertTarget"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::Self",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_9Zhenzhu'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Animal_Zhenzhu/BT_9Zhenzhu.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_9Zhenzhu:BTComposite_Sequence_2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Animal_Zhenzhu/BT_9Zhenzhu.10"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_45",
+    "Outer": "BT_9Zhenzhu",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "CachedDescription": "CanEscapeBattle is 已设置",
+      "BlackboardKey": {
+        "SelectedKeyName": "CanEscapeBattle"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_9Zhenzhu'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Animal_Zhenzhu/BT_9Zhenzhu.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_9Zhenzhu:BTComposite_Selector_8'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Animal_Zhenzhu/BT_9Zhenzhu.5"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_6",
+    "Outer": "BT_9Zhenzhu",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "CachedDescription": "GameModeType 为相等 []",
+      "BlackboardKey": {
+        "SelectedKeyName": "GameModeType"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_9Zhenzhu'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Animal_Zhenzhu/BT_9Zhenzhu.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_9Zhenzhu:BTComposite_Selector_10'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Animal_Zhenzhu/BT_9Zhenzhu.3"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_7",
+    "Outer": "BT_9Zhenzhu",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "StringValue": "Blank",
+      "CachedDescription": "GameModeType 为相等 [Blank]",
+      "BlackboardKey": {
+        "SelectedKeyName": "GameModeType"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_9Zhenzhu'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Animal_Zhenzhu/BT_9Zhenzhu.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_9Zhenzhu:BTComposite_Selector_10'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Animal_Zhenzhu/BT_9Zhenzhu.3"
+      }
+    }
+  },
+  {
+    "Type": "BTService_AlertStateSwitchCheck",
+    "Name": "BTService_AlertStateSwitchCheck_0",
+    "Outer": "BT_9Zhenzhu",
+    "Class": "UScriptClass'BTService_AlertStateSwitchCheck'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "EndBattle_CombatConditionId": 52,
+      "BlackboardKey": {
+        "SelectedKeyName": "SelfActor"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_9Zhenzhu'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Animal_Zhenzhu/BT_9Zhenzhu.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_9Zhenzhu:BTComposite_Selector_8'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Animal_Zhenzhu/BT_9Zhenzhu.5"
+      }
+    }
+  },
+  {
+    "Type": "BTService_EnemyVision",
+    "Name": "BTService_EnemyVision_1",
+    "Outer": "BT_9Zhenzhu",
+    "Class": "UScriptClass'BTService_EnemyVision'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "FVisionDistance": 4000.0,
+      "FVisionAngle": 360.0,
+      "bConsiderDefCore": true,
+      "Interval": 0.1,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_9Zhenzhu'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Animal_Zhenzhu/BT_9Zhenzhu.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_9Zhenzhu:BTComposite_Selector_10'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Animal_Zhenzhu/BT_9Zhenzhu.3"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_GetAlertTarget",
+    "Name": "BTTask_GetAlertTarget_3",
+    "Outer": "BT_9Zhenzhu",
+    "Class": "UScriptClass'BTTask_GetAlertTarget'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_9Zhenzhu'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Animal_Zhenzhu/BT_9Zhenzhu.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_9Zhenzhu:BTComposite_Sequence_2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Animal_Zhenzhu/BT_9Zhenzhu.10"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_GetPatrolLoc",
+    "Name": "BTTask_GetPatrolLoc_1",
+    "Outer": "BT_9Zhenzhu",
+    "Class": "UScriptClass'BTTask_GetPatrolLoc'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_9Zhenzhu'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Animal_Zhenzhu/BT_9Zhenzhu.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_9Zhenzhu:BTComposite_Sequence_12'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Animal_Zhenzhu/BT_9Zhenzhu.9"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_NewMoveTo",
+    "Name": "BTTask_NewMoveTo_0",
+    "Outer": "BT_9Zhenzhu",
+    "Class": "UScriptClass'BTTask_NewMoveTo'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "bOrientRotationToMovement": true,
+      "MoveTypeState": "EMoveTypeState::MTS_Run",
+      "AcceptableRadius": 1000.0,
+      "bStopOnOverlapNeedsUpdate": false,
+      "BlackboardKey": {
+        "SelectedKeyName": "AlertTarget"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_9Zhenzhu'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Animal_Zhenzhu/BT_9Zhenzhu.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_9Zhenzhu:BTComposite_Sequence_2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Animal_Zhenzhu/BT_9Zhenzhu.10"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_NewMoveTo",
+    "Name": "BTTask_NewMoveTo_1",
+    "Outer": "BT_9Zhenzhu",
+    "Class": "UScriptClass'BTTask_NewMoveTo'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "bOrientRotationToMovement": true,
+      "bReachTestIncludesAgentRadius": false,
+      "bReachTestIncludesGoalRadius": false,
+      "bStopOnOverlapNeedsUpdate": false,
+      "BlackboardKey": {
+        "SelectedKeyName": "PatrolLoc"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_9Zhenzhu'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Animal_Zhenzhu/BT_9Zhenzhu.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_9Zhenzhu:BTComposite_Sequence_12'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Animal_Zhenzhu/BT_9Zhenzhu.9"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_RunBehavior",
+    "Name": "BTTask_RunBehavior_1",
+    "Outer": "BT_9Zhenzhu",
+    "Class": "UScriptClass'BTTask_RunBehavior'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "BehaviorAsset": {
+        "ObjectName": "BehaviorTree'BT_9Zhenzhu_Reg'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Animal_Zhenzhu/Region/BT_9Zhenzhu_Reg.0"
+      },
+      "NodeName": "队列行为树（成员）",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_9Zhenzhu'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Animal_Zhenzhu/BT_9Zhenzhu.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_9Zhenzhu:BTComposite_Selector_10'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Animal_Zhenzhu/BT_9Zhenzhu.3"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_RunBehavior",
+    "Name": "BTTask_RunBehavior_11",
+    "Outer": "BT_9Zhenzhu",
+    "Class": "UScriptClass'BTTask_RunBehavior'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "BehaviorAsset": {
+        "ObjectName": "BehaviorTree'BT_9Zhenzhu_Reg'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Animal_Zhenzhu/Region/BT_9Zhenzhu_Reg.0"
+      },
+      "NodeName": "队列行为树（成员）",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_9Zhenzhu'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Animal_Zhenzhu/BT_9Zhenzhu.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_9Zhenzhu:BTComposite_Selector_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Animal_Zhenzhu/BT_9Zhenzhu.2"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_RunBehavior",
+    "Name": "BTTask_RunBehavior_17",
+    "Outer": "BT_9Zhenzhu",
+    "Class": "UScriptClass'BTTask_RunBehavior'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "BehaviorAsset": {
+        "ObjectName": "BehaviorTree'BT_Common_Escaping'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Parent/Parent_Common/BT_Common_Escaping.0"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_9Zhenzhu'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Animal_Zhenzhu/BT_9Zhenzhu.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_9Zhenzhu:BTComposite_Selector_8'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Animal_Zhenzhu/BT_9Zhenzhu.5"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_UseSkill",
+    "Name": "BTTask_UseSkill_0",
+    "Outer": "BT_9Zhenzhu",
+    "Class": "UScriptClass'BTTask_UseSkill'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SkillId": 2,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_9Zhenzhu'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Animal_Zhenzhu/BT_9Zhenzhu.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_9Zhenzhu:BTComposite_Sequence_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Animal_Zhenzhu/BT_9Zhenzhu.7"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_0",
+    "Outer": "BT_9Zhenzhu",
+    "Class": "UScriptClass'BTTask_Wait'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_9Zhenzhu'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Animal_Zhenzhu/BT_9Zhenzhu.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_9Zhenzhu:BTComposite_Selector_14'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Animal_Zhenzhu/BT_9Zhenzhu.4"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_1",
+    "Outer": "BT_9Zhenzhu",
+    "Class": "UScriptClass'BTTask_Wait'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "WaitTime": 2.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_9Zhenzhu'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Animal_Zhenzhu/BT_9Zhenzhu.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_9Zhenzhu:BTComposite_Sequence_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Animal_Zhenzhu/BT_9Zhenzhu.7"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_3",
+    "Outer": "BT_9Zhenzhu",
+    "Class": "UScriptClass'BTTask_Wait'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_9Zhenzhu'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Animal_Zhenzhu/BT_9Zhenzhu.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_9Zhenzhu:BTComposite_Sequence_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Animal_Zhenzhu/BT_9Zhenzhu.8"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_5",
+    "Outer": "BT_9Zhenzhu",
+    "Class": "UScriptClass'BTTask_Wait'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "WaitTime": 2.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_9Zhenzhu'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Animal_Zhenzhu/BT_9Zhenzhu.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_9Zhenzhu:BTComposite_Sequence_12'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Animal_Zhenzhu/BT_9Zhenzhu.9"
+      }
+    }
+  }
+]

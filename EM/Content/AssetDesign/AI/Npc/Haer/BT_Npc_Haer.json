@@ -1,0 +1,569 @@
+[
+  {
+    "Type": "BehaviorTree",
+    "Name": "BT_Npc_Haer",
+    "Class": "UScriptClass'BehaviorTree'",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "RootNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Npc_Haer:BTComposite_Sequence_2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Haer/BT_Npc_Haer.6"
+      },
+      "BlackboardAsset": {
+        "ObjectName": "BlackboardData'BB_Npc_Haer'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Haer/BB_Npc_Haer.0"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_1",
+    "Outer": "BT_Npc_Haer",
+    "Class": "UScriptClass'BTComposite_Selector'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_NewMoveTo'BT_Npc_Haer:BTTask_NewMoveTo_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Haer/BT_Npc_Haer.17"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "Services": [
+        {
+          "ObjectName": "BTService_BBValueDis'BT_Npc_Haer:BTService_BBValueDis_1'",
+          "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Haer/BT_Npc_Haer.14"
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_Haer'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Haer/BT_Npc_Haer.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Npc_Haer:BTComposite_Sequence_11'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Haer/BT_Npc_Haer.4"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_6",
+    "Outer": "BT_Npc_Haer",
+    "Class": "UScriptClass'BTComposite_Selector'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_GetPatrolLoc'BT_Npc_Haer:BTTask_GetPatrolLoc_2'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Haer/BT_Npc_Haer.16"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Npc_Haer:BTDecorator_Blackboard_7'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Haer/BT_Npc_Haer.9"
+            },
+            {
+              "ObjectName": "BTDecorator_IsAtLocation'BT_Npc_Haer:BTDecorator_IsAtLocation_7'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Haer/BT_Npc_Haer.12"
+            }
+          ],
+          "DecoratorOps": [
+            {
+              "Operation": "EBTDecoratorLogic::Or",
+              "Number": 2
+            },
+            {
+              "Operation": "EBTDecoratorLogic::Test",
+              "Number": 0
+            },
+            {
+              "Operation": "EBTDecoratorLogic::Test",
+              "Number": 1
+            }
+          ]
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_Npc_Haer:BTComposite_Sequence_11'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Haer/BT_Npc_Haer.4"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Npc_Haer:BTDecorator_Blackboard_9'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Haer/BT_Npc_Haer.10"
+            },
+            {
+              "ObjectName": "BTDecorator_IsAtLocation'BT_Npc_Haer:BTDecorator_IsAtLocation_9'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Haer/BT_Npc_Haer.13"
+            }
+          ],
+          "DecoratorOps": [
+            {
+              "Operation": "EBTDecoratorLogic::And",
+              "Number": 2
+            },
+            {
+              "Operation": "EBTDecoratorLogic::Test",
+              "Number": 0
+            },
+            {
+              "Operation": "EBTDecoratorLogic::Not",
+              "Number": 1
+            },
+            {
+              "Operation": "EBTDecoratorLogic::Test",
+              "Number": 1
+            }
+          ]
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_Npc_Haer:BTComposite_Sequence_12'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Haer/BT_Npc_Haer.5"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Npc_Haer:BTDecorator_Blackboard_11'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Haer/BT_Npc_Haer.8"
+            },
+            {
+              "ObjectName": "BTDecorator_IsAtLocation'BT_Npc_Haer:BTDecorator_IsAtLocation_11'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Haer/BT_Npc_Haer.11"
+            }
+          ],
+          "DecoratorOps": [
+            {
+              "Operation": "EBTDecoratorLogic::And",
+              "Number": 2
+            },
+            {
+              "Operation": "EBTDecoratorLogic::Test",
+              "Number": 0
+            },
+            {
+              "Operation": "EBTDecoratorLogic::Test",
+              "Number": 1
+            }
+          ]
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_Haer'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Haer/BT_Npc_Haer.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Npc_Haer:BTComposite_Sequence_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Haer/BT_Npc_Haer.3"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_1",
+    "Outer": "BT_Npc_Haer",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_NpcGetTarget'BT_Npc_Haer:BTTask_NpcGetTarget_1'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Haer/BT_Npc_Haer.18"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector'BT_Npc_Haer:BTComposite_Selector_6'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Haer/BT_Npc_Haer.2"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_Haer'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Haer/BT_Npc_Haer.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Npc_Haer:BTComposite_Sequence_2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Haer/BT_Npc_Haer.6"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_11",
+    "Outer": "BT_Npc_Haer",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector'BT_Npc_Haer:BTComposite_Selector_1'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Haer/BT_Npc_Haer.1"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_Haer'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Haer/BT_Npc_Haer.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Npc_Haer:BTComposite_Selector_6'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Haer/BT_Npc_Haer.2"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_12",
+    "Outer": "BT_Npc_Haer",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_ClearKey'BT_Npc_Haer:BTTask_ClearKey_4'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Haer/BT_Npc_Haer.15"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_Haer'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Haer/BT_Npc_Haer.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Npc_Haer:BTComposite_Selector_6'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Haer/BT_Npc_Haer.2"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_2",
+    "Outer": "BT_Npc_Haer",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_Npc_Haer:BTComposite_Sequence_1'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Haer/BT_Npc_Haer.3"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Npc_Haer:BTDecorator_Blackboard_1'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Haer/BT_Npc_Haer.7"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait'BT_Npc_Haer:BTTask_Wait_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Haer/BT_Npc_Haer.19"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_Haer'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Haer/BT_Npc_Haer.0"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_1",
+    "Outer": "BT_Npc_Haer",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "StringValue": "HaerGo",
+      "CachedDescription": "QuestEvent 为相等 [HaerGo]",
+      "NotifyObserver": "EBTBlackboardRestart::ValueChange",
+      "BlackboardKey": {
+        "SelectedKeyName": "QuestEvent"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_Haer'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Haer/BT_Npc_Haer.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Npc_Haer:BTComposite_Sequence_2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Haer/BT_Npc_Haer.6"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_11",
+    "Outer": "BT_Npc_Haer",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "CachedDescription": "PatrolLoc is 已设置",
+      "BlackboardKey": {
+        "SelectedKeyName": "PatrolLoc"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_Haer'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Haer/BT_Npc_Haer.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Npc_Haer:BTComposite_Selector_6'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Haer/BT_Npc_Haer.2"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_7",
+    "Outer": "BT_Npc_Haer",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "CachedDescription": "PatrolLoc is 未设置",
+      "OperationType": 1,
+      "BlackboardKey": {
+        "SelectedKeyName": "PatrolLoc"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_Haer'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Haer/BT_Npc_Haer.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Npc_Haer:BTComposite_Selector_6'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Haer/BT_Npc_Haer.2"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_9",
+    "Outer": "BT_Npc_Haer",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "CachedDescription": "PatrolLoc is 已设置",
+      "BlackboardKey": {
+        "SelectedKeyName": "PatrolLoc"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_Haer'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Haer/BT_Npc_Haer.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Npc_Haer:BTComposite_Selector_6'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Haer/BT_Npc_Haer.2"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_IsAtLocation",
+    "Name": "BTDecorator_IsAtLocation_11",
+    "Outer": "BT_Npc_Haer",
+    "Class": "UScriptClass'BTDecorator_IsAtLocation'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "AcceptableRadius": 70.0,
+      "BlackboardKey": {
+        "SelectedKeyName": "PatrolLoc"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_Haer'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Haer/BT_Npc_Haer.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Npc_Haer:BTComposite_Selector_6'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Haer/BT_Npc_Haer.2"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_IsAtLocation",
+    "Name": "BTDecorator_IsAtLocation_7",
+    "Outer": "BT_Npc_Haer",
+    "Class": "UScriptClass'BTDecorator_IsAtLocation'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "AcceptableRadius": 70.0,
+      "BlackboardKey": {
+        "SelectedKeyName": "PatrolLoc"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_Haer'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Haer/BT_Npc_Haer.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Npc_Haer:BTComposite_Selector_6'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Haer/BT_Npc_Haer.2"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_IsAtLocation",
+    "Name": "BTDecorator_IsAtLocation_9",
+    "Outer": "BT_Npc_Haer",
+    "Class": "UScriptClass'BTDecorator_IsAtLocation'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "AcceptableRadius": 70.0,
+      "BlackboardKey": {
+        "SelectedKeyName": "PatrolLoc"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_Haer'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Haer/BT_Npc_Haer.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Npc_Haer:BTComposite_Selector_6'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Haer/BT_Npc_Haer.2"
+      }
+    }
+  },
+  {
+    "Type": "BTService_BBValueDis",
+    "Name": "BTService_BBValueDis_1",
+    "Outer": "BT_Npc_Haer",
+    "Class": "UScriptClass'BTService_BBValueDis'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "BBName": "Target",
+      "Interval": 0.2,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_Haer'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Haer/BT_Npc_Haer.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Npc_Haer:BTComposite_Selector_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Haer/BT_Npc_Haer.1"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_ClearKey",
+    "Name": "BTTask_ClearKey_4",
+    "Outer": "BT_Npc_Haer",
+    "Class": "UScriptClass'BTTask_ClearKey'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "BlackboadKeyName": "QuestEvent",
+      "BlackboardKey": {
+        "SelectedKeyName": "QuestEvent"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_Haer'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Haer/BT_Npc_Haer.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Npc_Haer:BTComposite_Sequence_12'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Haer/BT_Npc_Haer.5"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_GetPatrolLoc",
+    "Name": "BTTask_GetPatrolLoc_2",
+    "Outer": "BT_Npc_Haer",
+    "Class": "UScriptClass'BTTask_GetPatrolLoc'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_Haer'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Haer/BT_Npc_Haer.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Npc_Haer:BTComposite_Selector_6'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Haer/BT_Npc_Haer.2"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_NewMoveTo",
+    "Name": "BTTask_NewMoveTo_0",
+    "Outer": "BT_Npc_Haer",
+    "Class": "UScriptClass'BTTask_NewMoveTo'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "bUseControllerRotationYaw": true,
+      "bOrientRotationToMovement": true,
+      "MoveTypeState": "EMoveTypeState::MTS_Run",
+      "ReplanMoveLineLength": 200.0,
+      "MaxSpeed": 650.0,
+      "MaxAcceleration": 10000.0,
+      "AcceptableRadius": 50.0,
+      "bStopOnOverlapNeedsUpdate": false,
+      "BlackboardKey": {
+        "SelectedKeyName": "PatrolLoc"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_Haer'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Haer/BT_Npc_Haer.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Npc_Haer:BTComposite_Selector_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Haer/BT_Npc_Haer.1"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_NpcGetTarget",
+    "Name": "BTTask_NpcGetTarget_1",
+    "Outer": "BT_Npc_Haer",
+    "Class": "UScriptClass'BTTask_NpcGetTarget'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_Haer'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Haer/BT_Npc_Haer.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Npc_Haer:BTComposite_Sequence_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Haer/BT_Npc_Haer.3"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_0",
+    "Outer": "BT_Npc_Haer",
+    "Class": "UScriptClass'BTTask_Wait'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "WaitTime": 1.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_Haer'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Haer/BT_Npc_Haer.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Npc_Haer:BTComposite_Sequence_2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Haer/BT_Npc_Haer.6"
+      }
+    }
+  }
+]

@@ -1,0 +1,160 @@
+[
+  {
+    "Type": "DialogueAsset",
+    "Name": "510122",
+    "Class": "UScriptClass'DialogueAsset'",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TalkId": 510122,
+      "SpeakNpcIds": [
+        100001,
+        888888
+      ],
+      "Nodes": null
+    }
+  },
+  {
+    "Type": "FlowNode_CatName",
+    "Name": "FlowNode_CatName_1",
+    "Outer": "510122",
+    "Class": "UScriptClass'FlowNode_CatName'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "GraphNode": null,
+      "NodeGuid": "23FE2C00-42187640-F26D7B8F-4056E8F0",
+      "Connections": [
+        {
+          "Key": "Accept",
+          "Value": {
+            "NodeGuid": "85EFB52A-4465B378-80EA6DB7-EAED0337",
+            "PinName": "Start"
+          }
+        },
+        {
+          "Key": "Cancel",
+          "Value": {
+            "NodeGuid": "185964F9-45009410-E3995FBF-80FA1F25",
+            "PinName": "Fail"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "Type": "FlowNode_Dialogue",
+    "Name": "FlowNode_Dialogue_2",
+    "Outer": "510122",
+    "Class": "UScriptClass'FlowNode_Dialogue'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "DialogueData": [
+        {
+          "DialogueId": 51012201
+        }
+      ],
+      "DialogueSetting": [
+        {
+          "Key": "51012201",
+          "Value": {}
+        }
+      ],
+      "GraphNode": null,
+      "NodeGuid": "7B436A65-40C96F33-EF4B9987-622987B2",
+      "Connections": [
+        {
+          "Key": "End",
+          "Value": {
+            "NodeGuid": "23FE2C00-42187640-F26D7B8F-4056E8F0",
+            "PinName": "Start"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "Type": "FlowNode_Dialogue",
+    "Name": "FlowNode_Dialogue_3",
+    "Outer": "510122",
+    "Class": "UScriptClass'FlowNode_Dialogue'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "DialogueData": [
+        {
+          "DialogueId": 51012202
+        },
+        {
+          "DialogueId": 51012203
+        },
+        {
+          "DialogueId": 51012204
+        }
+      ],
+      "DialogueSetting": [
+        {
+          "Key": "51012202",
+          "Value": {}
+        },
+        {
+          "Key": "51012203",
+          "Value": {}
+        },
+        {
+          "Key": "51012204",
+          "Value": {}
+        }
+      ],
+      "GraphNode": null,
+      "NodeGuid": "85EFB52A-4465B378-80EA6DB7-EAED0337",
+      "Connections": [
+        {
+          "Key": "End",
+          "Value": {
+            "NodeGuid": "185964F9-45009410-E3995FBF-80FA1F25",
+            "PinName": "In"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "Type": "FlowNode_Start",
+    "Name": "FlowNode_Start_0",
+    "Outer": "510122",
+    "Class": "UScriptClass'FlowNode_Start'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "GraphNode": null,
+      "NodeGuid": "170C317D-4D6CA6B2-B9A3C484-5CB27AD5",
+      "Connections": [
+        {
+          "Key": "Out",
+          "Value": {
+            "NodeGuid": "7B436A65-40C96F33-EF4B9987-622987B2",
+            "PinName": "Start"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "Type": "FlowNode_TalkFinish",
+    "Name": "FlowNode_TalkFinish_1",
+    "Outer": "510122",
+    "Class": "UScriptClass'FlowNode_TalkFinish'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "GraphNode": null,
+      "NodeGuid": "185964F9-45009410-E3995FBF-80FA1F25",
+      "InputPins": [
+        {
+          "PinName": "In",
+          "PinToolTip": ""
+        },
+        {
+          "PinName": "Fail",
+          "PinToolTip": ""
+        }
+      ]
+    }
+  }
+]

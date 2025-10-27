@@ -1,0 +1,1667 @@
+[
+  {
+    "Type": "BehaviorTree",
+    "Name": "BT_Eve_Summoned_Replicant",
+    "Class": "UScriptClass'BehaviorTree'",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "RootNode": {
+        "ObjectName": "BTComposite_Selector'BT_Eve_Summoned_Replicant:BTComposite_Selector_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Replicant.3"
+      },
+      "BlackboardAsset": {
+        "ObjectName": "BlackboardData'BB_Eve_Soldier'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BB_Eve_Soldier.0"
+      }
+    }
+  },
+  {
+    "Type": "BPServer_Common_JudgeDisFromKey_C",
+    "Name": "BPServer_Common_JudgeDisFromKey_C_2",
+    "Outer": "BT_Eve_Summoned_Replicant",
+    "Class": "BlueprintGeneratedClass'EM/Content/BluePrints/AI/BTServer/BPServer_Common_JudgeDisFromKey.BPServer_Common_JudgeDisFromKey_C'",
+    "Template": {
+      "ObjectName": "BPServer_Common_JudgeDisFromKey_C'Default__BPServer_Common_JudgeDisFromKey_C'",
+      "ObjectPath": "EM/Content/BluePrints/AI/BTServer/BPServer_Common_JudgeDisFromKey.3"
+    },
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "KeyType": "Actor",
+      "TargetKeyName": "Player",
+      "ReturnKeyName": "PlayerDis",
+      "bShowPropertyDetails": false,
+      "Interval": 0.5,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Eve_Summoned_Replicant'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Replicant.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Eve_Summoned_Replicant:BTComposite_Selector_4'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Replicant.5"
+      }
+    }
+  },
+  {
+    "Type": "BT_AddBuff_C",
+    "Name": "BT_AddBuff_C_1",
+    "Outer": "BT_Eve_Summoned_Replicant",
+    "Class": "BlueprintGeneratedClass'EM/Content/AssetDesign/AI/Player/Parent/BT_AddBuff.BT_AddBuff_C'",
+    "Template": {
+      "ObjectName": "BT_AddBuff_C'Default__BT_AddBuff_C'",
+      "ObjectPath": "EM/Content/AssetDesign/AI/Player/Parent/BT_AddBuff.3"
+    },
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Target": {
+        "SelectedKeyName": "SelfActor"
+      },
+      "BuffID": 901,
+      "LastTime": 5.0,
+      "ConditionId": 38,
+      "bShowPropertyDetails": false,
+      "RandomDeviation": 0.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Eve_Summoned_Replicant'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Replicant.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Eve_Summoned_Replicant:BTComposite_Selector_7'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Replicant.8"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_0",
+    "Outer": "BT_Eve_Summoned_Replicant",
+    "Class": "UScriptClass'BTComposite_Selector'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_UseSkill'BT_Eve_Summoned_Replicant:BTTask_UseSkill_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Replicant.54"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_CheckCombatCondition'BT_Eve_Summoned_Replicant:BTDecorator_CheckCombatCondition_1'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Replicant.30"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_UseSkill'BT_Eve_Summoned_Replicant:BTTask_UseSkill_1'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Replicant.55"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_CheckCombatCondition'BT_Eve_Summoned_Replicant:BTDecorator_CheckCombatCondition_0'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Replicant.29"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_Eve_Summoned_Replicant:BTComposite_Sequence_1'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Replicant.11"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Eve_Summoned_Replicant'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Replicant.0"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_18",
+    "Outer": "BT_Eve_Summoned_Replicant",
+    "Class": "UScriptClass'BTComposite_Selector'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_Eve_Summoned_Replicant:BTComposite_Sequence_5'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Replicant.12"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_CoolDownPlayer'BT_Eve_Summoned_Replicant:BTDecorator_CoolDownPlayer_5'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Replicant.33"
+            },
+            {
+              "ObjectName": "BTDecorator_TargetIsChar_C'BT_Eve_Summoned_Replicant:BTDecorator_TargetIsChar_C_2'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Replicant.36"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector'BT_Eve_Summoned_Replicant:BTComposite_Selector_8'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Replicant.9"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Eve_Summoned_Replicant:BTDecorator_Blackboard_8'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Replicant.23"
+            },
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Eve_Summoned_Replicant:BTDecorator_Blackboard_9'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Replicant.24"
+            },
+            {
+              "ObjectName": "BTDecorator_CanHitTarget'BT_Eve_Summoned_Replicant:BTDecorator_CanHitTarget_3'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Replicant.25"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_NewMoveTo'BT_Eve_Summoned_Replicant:BTTask_NewMoveTo_11'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Replicant.46"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Eve_Summoned_Replicant:BTDecorator_Blackboard_22'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Replicant.21"
+            }
+          ],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Eve_Summoned_Replicant'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Replicant.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Eve_Summoned_Replicant:BTComposite_Selector_7'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Replicant.8"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_4",
+    "Outer": "BT_Eve_Summoned_Replicant",
+    "Class": "UScriptClass'BTComposite_Selector'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector'BT_Eve_Summoned_Replicant:BTComposite_Selector_9'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Replicant.10"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Eve_Summoned_Replicant:BTDecorator_Blackboard_13'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Replicant.17"
+            },
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Eve_Summoned_Replicant:BTDecorator_Blackboard_14'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Replicant.18"
+            }
+          ],
+          "DecoratorOps": [
+            {
+              "Operation": "EBTDecoratorLogic::And",
+              "Number": 2
+            },
+            {
+              "Operation": "EBTDecoratorLogic::Test",
+              "Number": 0
+            },
+            {
+              "Operation": "EBTDecoratorLogic::Test",
+              "Number": 1
+            }
+          ]
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector'BT_Eve_Summoned_Replicant:BTComposite_Selector_5'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Replicant.6"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Eve_Summoned_Replicant:BTDecorator_Blackboard_16'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Replicant.19"
+            },
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Eve_Summoned_Replicant:BTDecorator_Blackboard_17'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Replicant.20"
+            },
+            {
+              "ObjectName": "BTDecorator_TimeLimit'BT_Eve_Summoned_Replicant:BTDecorator_TimeLimit_2'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Replicant.37"
+            }
+          ],
+          "DecoratorOps": [
+            {
+              "Operation": "EBTDecoratorLogic::And",
+              "Number": 2
+            },
+            {
+              "Operation": "EBTDecoratorLogic::Or",
+              "Number": 2
+            },
+            {
+              "Operation": "EBTDecoratorLogic::Test",
+              "Number": 0
+            },
+            {
+              "Operation": "EBTDecoratorLogic::Test",
+              "Number": 1
+            },
+            {
+              "Operation": "EBTDecoratorLogic::Test",
+              "Number": 2
+            }
+          ]
+        }
+      ],
+      "Services": [
+        {
+          "ObjectName": "BPServer_Common_JudgeDisFromKey_C'BT_Eve_Summoned_Replicant:BPServer_Common_JudgeDisFromKey_C_2'",
+          "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Replicant.1"
+        },
+        {
+          "ObjectName": "BTService_BBValueDis'BT_Eve_Summoned_Replicant:BTService_BBValueDis_2'",
+          "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Replicant.38"
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Eve_Summoned_Replicant'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Replicant.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Eve_Summoned_Replicant:BTComposite_Sequence_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Replicant.11"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_5",
+    "Outer": "BT_Eve_Summoned_Replicant",
+    "Class": "UScriptClass'BTComposite_Selector'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_RunBehavior'BT_Eve_Summoned_Replicant:BTTask_RunBehavior_5'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Replicant.51"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_NewMoveTo'BT_Eve_Summoned_Replicant:BTTask_NewMoveTo_3'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Replicant.47"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Eve_Summoned_Replicant'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Replicant.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Eve_Summoned_Replicant:BTComposite_Selector_4'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Replicant.5"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_6",
+    "Outer": "BT_Eve_Summoned_Replicant",
+    "Class": "UScriptClass'BTComposite_Selector'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector'BT_Eve_Summoned_Replicant:BTComposite_Selector_7'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Replicant.8"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_CheckCombatCondition'BT_Eve_Summoned_Replicant:BTDecorator_CheckCombatCondition_14'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Replicant.31"
+            }
+          ],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Eve_Summoned_Replicant'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Replicant.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Eve_Summoned_Replicant:BTComposite_Selector_9'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Replicant.10"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_7",
+    "Outer": "BT_Eve_Summoned_Replicant",
+    "Class": "UScriptClass'BTComposite_Selector'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector'BT_Eve_Summoned_Replicant:BTComposite_Selector_18'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Replicant.4"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_CharAttrCondition'BT_Eve_Summoned_Replicant:BTDecorator_CharAttrCondition_19'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Replicant.28"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_SimpleParallel'BT_Eve_Summoned_Replicant:BTComposite_SimpleParallel_4'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Replicant.16"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_CharAttrCondition'BT_Eve_Summoned_Replicant:BTDecorator_CharAttrCondition_1'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Replicant.26"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_Eve_Summoned_Replicant:BTComposite_Sequence_7'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Replicant.13"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_CoolDownPlayer'BT_Eve_Summoned_Replicant:BTDecorator_CoolDownPlayer_0'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Replicant.32"
+            }
+          ],
+          "DecoratorOps": []
+        }
+      ],
+      "Services": [
+        {
+          "ObjectName": "BT_AddBuff_C'BT_Eve_Summoned_Replicant:BT_AddBuff_C_1'",
+          "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Replicant.2"
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Eve_Summoned_Replicant'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Replicant.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Eve_Summoned_Replicant:BTComposite_Selector_6'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Replicant.7"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_8",
+    "Outer": "BT_Eve_Summoned_Replicant",
+    "Class": "UScriptClass'BTComposite_Selector'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_SimpleParallel'BT_Eve_Summoned_Replicant:BTComposite_SimpleParallel_2'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Replicant.14"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_SimpleParallel'BT_Eve_Summoned_Replicant:BTComposite_SimpleParallel_3'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Replicant.15"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Eve_Summoned_Replicant'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Replicant.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Eve_Summoned_Replicant:BTComposite_Selector_18'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Replicant.4"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_9",
+    "Outer": "BT_Eve_Summoned_Replicant",
+    "Class": "UScriptClass'BTComposite_Selector'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector'BT_Eve_Summoned_Replicant:BTComposite_Selector_6'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Replicant.7"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Eve_Summoned_Replicant:BTDecorator_Blackboard_38'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Replicant.22"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_RunBehavior'BT_Eve_Summoned_Replicant:BTTask_RunBehavior_2'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Replicant.50"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Eve_Summoned_Replicant'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Replicant.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Eve_Summoned_Replicant:BTComposite_Selector_4'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Replicant.5"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_1",
+    "Outer": "BT_Eve_Summoned_Replicant",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_RunBehavior'BT_Eve_Summoned_Replicant:BTTask_RunBehavior_1'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Replicant.49"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_EveSummoned_GetPlayer_C'BT_Eve_Summoned_Replicant:BTTask_EveSummoned_GetPlayer_C_2'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Replicant.40"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector'BT_Eve_Summoned_Replicant:BTComposite_Selector_4'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Replicant.5"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "Services": [
+        {
+          "ObjectName": "BTService_EnemyVision'BT_Eve_Summoned_Replicant:BTService_EnemyVision_0'",
+          "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Replicant.39"
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Eve_Summoned_Replicant'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Replicant.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Eve_Summoned_Replicant:BTComposite_Selector_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Replicant.3"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_5",
+    "Outer": "BT_Eve_Summoned_Replicant",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_FilterTargetsByOwnerDis'BT_Eve_Summoned_Replicant:BTTask_FilterTargetsByOwnerDis_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Replicant.41"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_LastFilterTargetsByNum_P'BT_Eve_Summoned_Replicant:BTTask_LastFilterTargetsByNum_P_2'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Replicant.43"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_SetPartAsTarget'BT_Eve_Summoned_Replicant:BTTask_SetPartAsTarget_2'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Replicant.52"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_ForceSuccess'BT_Eve_Summoned_Replicant:BTDecorator_ForceSuccess_6'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Replicant.34"
+            }
+          ],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Eve_Summoned_Replicant'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Replicant.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Eve_Summoned_Replicant:BTComposite_Selector_18'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Replicant.4"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_7",
+    "Outer": "BT_Eve_Summoned_Replicant",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_FilterTargetsByOwnerDis'BT_Eve_Summoned_Replicant:BTTask_FilterTargetsByOwnerDis_1'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Replicant.42"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_LastFilterTargetsByNum_P'BT_Eve_Summoned_Replicant:BTTask_LastFilterTargetsByNum_P_3'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Replicant.44"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_SetPartAsTarget'BT_Eve_Summoned_Replicant:BTTask_SetPartAsTarget_3'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Replicant.53"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_ForceSuccess'BT_Eve_Summoned_Replicant:BTDecorator_ForceSuccess_7'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Replicant.35"
+            }
+          ],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Eve_Summoned_Replicant'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Replicant.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Eve_Summoned_Replicant:BTComposite_Selector_7'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Replicant.8"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_SimpleParallel",
+    "Name": "BTComposite_SimpleParallel_2",
+    "Outer": "BT_Eve_Summoned_Replicant",
+    "Class": "UScriptClass'BTComposite_SimpleParallel'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_UseSkill_Player'BT_Eve_Summoned_Replicant:BTTask_UseSkill_Player_3'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Replicant.58"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_NewMoveTo'BT_Eve_Summoned_Replicant:BTTask_NewMoveTo_9'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Replicant.48"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Eve_Summoned_Replicant'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Replicant.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Eve_Summoned_Replicant:BTComposite_Selector_8'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Replicant.9"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_SimpleParallel",
+    "Name": "BTComposite_SimpleParallel_3",
+    "Outer": "BT_Eve_Summoned_Replicant",
+    "Class": "UScriptClass'BTComposite_SimpleParallel'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_UseSkill_Player'BT_Eve_Summoned_Replicant:BTTask_UseSkill_Player_1'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Replicant.56"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_CharAttrCondition'BT_Eve_Summoned_Replicant:BTDecorator_CharAttrCondition_16'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Replicant.27"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_NewMoveTo'BT_Eve_Summoned_Replicant:BTTask_NewMoveTo_10'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Replicant.45"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Eve_Summoned_Replicant'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Replicant.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Eve_Summoned_Replicant:BTComposite_Selector_8'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Replicant.9"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_SimpleParallel",
+    "Name": "BTComposite_SimpleParallel_4",
+    "Outer": "BT_Eve_Summoned_Replicant",
+    "Class": "UScriptClass'BTComposite_SimpleParallel'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_UseSkill_Player'BT_Eve_Summoned_Replicant:BTTask_UseSkill_Player_2'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Replicant.57"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait'BT_Eve_Summoned_Replicant:BTTask_Wait_1'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Replicant.59"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Eve_Summoned_Replicant'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Replicant.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Eve_Summoned_Replicant:BTComposite_Selector_7'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Replicant.8"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_13",
+    "Outer": "BT_Eve_Summoned_Replicant",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "CachedDescription": "Target is 已设置",
+      "BlackboardKey": {
+        "SelectedKeyName": "Target"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Eve_Summoned_Replicant'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Replicant.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Eve_Summoned_Replicant:BTComposite_Selector_4'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Replicant.5"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_14",
+    "Outer": "BT_Eve_Summoned_Replicant",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "CachedDescription": "TargetPlayerDead is 未设置",
+      "OperationType": 1,
+      "BlackboardKey": {
+        "SelectedKeyName": "TargetPlayerDead"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Eve_Summoned_Replicant'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Replicant.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Eve_Summoned_Replicant:BTComposite_Selector_4'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Replicant.5"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_16",
+    "Outer": "BT_Eve_Summoned_Replicant",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "CachedDescription": "Target is 未设置",
+      "OperationType": 1,
+      "BlackboardKey": {
+        "SelectedKeyName": "Target"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::Self",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Eve_Summoned_Replicant'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Replicant.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Eve_Summoned_Replicant:BTComposite_Selector_4'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Replicant.5"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_17",
+    "Outer": "BT_Eve_Summoned_Replicant",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "CachedDescription": "TargetPlayerDead is 已设置",
+      "BlackboardKey": {
+        "SelectedKeyName": "TargetPlayerDead"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::Self",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Eve_Summoned_Replicant'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Replicant.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Eve_Summoned_Replicant:BTComposite_Selector_4'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Replicant.5"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_22",
+    "Outer": "BT_Eve_Summoned_Replicant",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "CachedDescription": "Target is 已设置",
+      "BlackboardKey": {
+        "SelectedKeyName": "Target"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Eve_Summoned_Replicant'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Replicant.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Eve_Summoned_Replicant:BTComposite_Selector_18'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Replicant.4"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_38",
+    "Outer": "BT_Eve_Summoned_Replicant",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "FloatValue": 2000.0,
+      "CachedDescription": "PlayerDis 小于或等于 2000.000000",
+      "OperationType": 3,
+      "BlackboardKey": {
+        "SelectedKeyName": "PlayerDis"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Eve_Summoned_Replicant'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Replicant.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Eve_Summoned_Replicant:BTComposite_Selector_9'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Replicant.10"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_8",
+    "Outer": "BT_Eve_Summoned_Replicant",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "FloatValue": 2000.0,
+      "CachedDescription": "TargetCapsuleDis 小于 2000.000000",
+      "OperationType": 2,
+      "BlackboardKey": {
+        "SelectedKeyName": "TargetCapsuleDis"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::Self",
+      "NodeName": "Distance<2000",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Eve_Summoned_Replicant'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Replicant.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Eve_Summoned_Replicant:BTComposite_Selector_18'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Replicant.4"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_9",
+    "Outer": "BT_Eve_Summoned_Replicant",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "CachedDescription": "Target is 已设置",
+      "NotifyObserver": "EBTBlackboardRestart::ValueChange",
+      "BlackboardKey": {
+        "SelectedKeyName": "Target"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::Self",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Eve_Summoned_Replicant'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Replicant.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Eve_Summoned_Replicant:BTComposite_Selector_18'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Replicant.4"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_CanHitTarget",
+    "Name": "BTDecorator_CanHitTarget_3",
+    "Outer": "BT_Eve_Summoned_Replicant",
+    "Class": "UScriptClass'BTDecorator_CanHitTarget'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "CacheCalculateResult": true,
+      "CacheTime": 0.5,
+      "FlowAbortMode": "EBTFlowAbortMode::Self",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Eve_Summoned_Replicant'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Replicant.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Eve_Summoned_Replicant:BTComposite_Selector_18'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Replicant.4"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_CharAttrCondition",
+    "Name": "BTDecorator_CharAttrCondition_1",
+    "Outer": "BT_Eve_Summoned_Replicant",
+    "Class": "UScriptClass'BTDecorator_CharAttrCondition'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TargetType": "EConditionTargetType::RangedWeapon",
+      "MinValue": 0.0,
+      "AttrName": "EAttrName::BulletNum",
+      "NodeName": "CheckBulletNum",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Eve_Summoned_Replicant'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Replicant.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Eve_Summoned_Replicant:BTComposite_Selector_7'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Replicant.8"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_CharAttrCondition",
+    "Name": "BTDecorator_CharAttrCondition_16",
+    "Outer": "BT_Eve_Summoned_Replicant",
+    "Class": "UScriptClass'BTDecorator_CharAttrCondition'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TargetType": "EConditionTargetType::RangedWeapon",
+      "MinValue": 0.0,
+      "AttrName": "EAttrName::MagazineBulletNum",
+      "NodeName": "CheckBulletNum",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Eve_Summoned_Replicant'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Replicant.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_SimpleParallel'BT_Eve_Summoned_Replicant:BTComposite_SimpleParallel_3'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Replicant.15"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_CharAttrCondition",
+    "Name": "BTDecorator_CharAttrCondition_19",
+    "Outer": "BT_Eve_Summoned_Replicant",
+    "Class": "UScriptClass'BTDecorator_CharAttrCondition'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TargetType": "EConditionTargetType::RangedWeapon",
+      "MinValue": 0.0,
+      "AttrName": "EAttrName::MagazineBulletNum",
+      "NodeName": "CheckBulletNum",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Eve_Summoned_Replicant'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Replicant.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Eve_Summoned_Replicant:BTComposite_Selector_7'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Replicant.8"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_CheckCombatCondition",
+    "Name": "BTDecorator_CheckCombatCondition_0",
+    "Outer": "BT_Eve_Summoned_Replicant",
+    "Class": "UScriptClass'BTDecorator_CheckCombatCondition'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "CombatConditionId": 210201,
+      "CacheCalculateResult": true,
+      "FlowAbortMode": "EBTFlowAbortMode::LowerPriority",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Eve_Summoned_Replicant'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Replicant.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Eve_Summoned_Replicant:BTComposite_Selector_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Replicant.3"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_CheckCombatCondition",
+    "Name": "BTDecorator_CheckCombatCondition_1",
+    "Outer": "BT_Eve_Summoned_Replicant",
+    "Class": "UScriptClass'BTDecorator_CheckCombatCondition'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "CombatConditionId": 210202,
+      "CacheCalculateResult": true,
+      "FlowAbortMode": "EBTFlowAbortMode::LowerPriority",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Eve_Summoned_Replicant'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Replicant.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Eve_Summoned_Replicant:BTComposite_Selector_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Replicant.3"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_CheckCombatCondition",
+    "Name": "BTDecorator_CheckCombatCondition_14",
+    "Outer": "BT_Eve_Summoned_Replicant",
+    "Class": "UScriptClass'BTDecorator_CheckCombatCondition'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "CombatConditionId": 21,
+      "CacheCalculateResult": true,
+      "CacheTime": 0.5,
+      "NodeName": "IsOnLand",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Eve_Summoned_Replicant'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Replicant.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Eve_Summoned_Replicant:BTComposite_Selector_6'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Replicant.7"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_CoolDownPlayer",
+    "Name": "BTDecorator_CoolDownPlayer_0",
+    "Outer": "BT_Eve_Summoned_Replicant",
+    "Class": "UScriptClass'BTDecorator_CoolDownPlayer'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Eve_Summoned_Replicant'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Replicant.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Eve_Summoned_Replicant:BTComposite_Selector_7'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Replicant.8"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_CoolDownPlayer",
+    "Name": "BTDecorator_CoolDownPlayer_5",
+    "Outer": "BT_Eve_Summoned_Replicant",
+    "Class": "UScriptClass'BTDecorator_CoolDownPlayer'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "CoolDownTime": 10.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Eve_Summoned_Replicant'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Replicant.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Eve_Summoned_Replicant:BTComposite_Selector_18'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Replicant.4"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_ForceSuccess",
+    "Name": "BTDecorator_ForceSuccess_6",
+    "Outer": "BT_Eve_Summoned_Replicant",
+    "Class": "UScriptClass'BTDecorator_ForceSuccess'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Eve_Summoned_Replicant'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Replicant.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Eve_Summoned_Replicant:BTComposite_Sequence_5'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Replicant.12"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_ForceSuccess",
+    "Name": "BTDecorator_ForceSuccess_7",
+    "Outer": "BT_Eve_Summoned_Replicant",
+    "Class": "UScriptClass'BTDecorator_ForceSuccess'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Eve_Summoned_Replicant'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Replicant.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Eve_Summoned_Replicant:BTComposite_Sequence_7'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Replicant.13"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_TargetIsChar_C",
+    "Name": "BTDecorator_TargetIsChar_C_2",
+    "Outer": "BT_Eve_Summoned_Replicant",
+    "Class": "BlueprintGeneratedClass'EM/Content/BluePrints/AI/BTDecorator/BTDecorator_TargetIsChar.BTDecorator_TargetIsChar_C'",
+    "Template": {
+      "ObjectName": "BTDecorator_TargetIsChar_C'Default__BTDecorator_TargetIsChar_C'",
+      "ObjectPath": "EM/Content/BluePrints/AI/BTDecorator/BTDecorator_TargetIsChar.2"
+    },
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Target": {
+        "SelectedKeyName": "Target"
+      },
+      "bShowPropertyDetails": false,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Eve_Summoned_Replicant'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Replicant.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Eve_Summoned_Replicant:BTComposite_Selector_18'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Replicant.4"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_TimeLimit",
+    "Name": "BTDecorator_TimeLimit_2",
+    "Outer": "BT_Eve_Summoned_Replicant",
+    "Class": "UScriptClass'BTDecorator_TimeLimit'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TimeLimit": 1.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Eve_Summoned_Replicant'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Replicant.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Eve_Summoned_Replicant:BTComposite_Selector_4'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Replicant.5"
+      }
+    }
+  },
+  {
+    "Type": "BTService_BBValueDis",
+    "Name": "BTService_BBValueDis_2",
+    "Outer": "BT_Eve_Summoned_Replicant",
+    "Class": "UScriptClass'BTService_BBValueDis'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "BBName": "Target",
+      "Interval": 0.2,
+      "RandomDeviation": 0.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Eve_Summoned_Replicant'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Replicant.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Eve_Summoned_Replicant:BTComposite_Selector_4'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Replicant.5"
+      }
+    }
+  },
+  {
+    "Type": "BTService_EnemyVision",
+    "Name": "BTService_EnemyVision_0",
+    "Outer": "BT_Eve_Summoned_Replicant",
+    "Class": "UScriptClass'BTService_EnemyVision'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "FVisionDistance": 3000.0,
+      "FVisionAngle": 360.0,
+      "bFilterWithLineTrace": false,
+      "Interval": 1.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Eve_Summoned_Replicant'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Replicant.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Eve_Summoned_Replicant:BTComposite_Sequence_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Replicant.11"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_EveSummoned_GetPlayer_C",
+    "Name": "BTTask_EveSummoned_GetPlayer_C_2",
+    "Outer": "BT_Eve_Summoned_Replicant",
+    "Class": "BlueprintGeneratedClass'EM/Content/AssetDesign/AI/Player/Eve/BTTask_EveSummoned_GetPlayer.BTTask_EveSummoned_GetPlayer_C'",
+    "Template": {
+      "ObjectName": "BTTask_EveSummoned_GetPlayer_C'Default__BTTask_EveSummoned_GetPlayer_C'",
+      "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BTTask_EveSummoned_GetPlayer.3"
+    },
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Eve_Summoned_Replicant'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Replicant.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Eve_Summoned_Replicant:BTComposite_Sequence_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Replicant.11"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_FilterTargetsByOwnerDis",
+    "Name": "BTTask_FilterTargetsByOwnerDis_0",
+    "Outer": "BT_Eve_Summoned_Replicant",
+    "Class": "UScriptClass'BTTask_FilterTargetsByOwnerDis'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "MaxDis": 2500.0,
+      "NodeName": "FilterTargetsByOwner",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Eve_Summoned_Replicant'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Replicant.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Eve_Summoned_Replicant:BTComposite_Sequence_5'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Replicant.12"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_FilterTargetsByOwnerDis",
+    "Name": "BTTask_FilterTargetsByOwnerDis_1",
+    "Outer": "BT_Eve_Summoned_Replicant",
+    "Class": "UScriptClass'BTTask_FilterTargetsByOwnerDis'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "MaxDis": 2000.0,
+      "NodeName": "FilterTargetsByOwner",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Eve_Summoned_Replicant'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Replicant.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Eve_Summoned_Replicant:BTComposite_Sequence_7'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Replicant.13"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_LastFilterTargetsByNum_P",
+    "Name": "BTTask_LastFilterTargetsByNum_P_2",
+    "Outer": "BT_Eve_Summoned_Replicant",
+    "Class": "UScriptClass'BTTask_LastFilterTargetsByNum_P'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Radius": 600.0,
+      "TypeOfFilterList": "ETypeOfFilterList::AfterFilter",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Eve_Summoned_Replicant'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Replicant.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Eve_Summoned_Replicant:BTComposite_Sequence_5'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Replicant.12"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_LastFilterTargetsByNum_P",
+    "Name": "BTTask_LastFilterTargetsByNum_P_3",
+    "Outer": "BT_Eve_Summoned_Replicant",
+    "Class": "UScriptClass'BTTask_LastFilterTargetsByNum_P'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Radius": 100.0,
+      "TypeOfFilterList": "ETypeOfFilterList::AfterFilter",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Eve_Summoned_Replicant'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Replicant.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Eve_Summoned_Replicant:BTComposite_Sequence_7'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Replicant.13"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_NewMoveTo",
+    "Name": "BTTask_NewMoveTo_10",
+    "Outer": "BT_Eve_Summoned_Replicant",
+    "Class": "UScriptClass'BTTask_NewMoveTo'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "bOrientRotationToMovement": true,
+      "MoveTypeState": "EMoveTypeState::MTS_Run",
+      "AcceptableRadius": 500.0,
+      "bStopOnOverlapNeedsUpdate": false,
+      "BlackboardKey": {
+        "SelectedKeyName": "Player"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Eve_Summoned_Replicant'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Replicant.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_SimpleParallel'BT_Eve_Summoned_Replicant:BTComposite_SimpleParallel_3'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Replicant.15"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_NewMoveTo",
+    "Name": "BTTask_NewMoveTo_11",
+    "Outer": "BT_Eve_Summoned_Replicant",
+    "Class": "UScriptClass'BTTask_NewMoveTo'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "bOrientRotationToMovement": true,
+      "MoveTypeState": "EMoveTypeState::MTS_Run",
+      "AcceptableRadius": 500.0,
+      "bStopOnOverlapNeedsUpdate": false,
+      "BlackboardKey": {
+        "SelectedKeyName": "Player"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Eve_Summoned_Replicant'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Replicant.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Eve_Summoned_Replicant:BTComposite_Selector_18'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Replicant.4"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_NewMoveTo",
+    "Name": "BTTask_NewMoveTo_3",
+    "Outer": "BT_Eve_Summoned_Replicant",
+    "Class": "UScriptClass'BTTask_NewMoveTo'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "bOrientRotationToMovement": true,
+      "MoveTypeState": "EMoveTypeState::MTS_Run",
+      "AcceptableRadius": 300.0,
+      "bStopOnOverlapNeedsUpdate": false,
+      "BlackboardKey": {
+        "SelectedKeyName": "Player"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Eve_Summoned_Replicant'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Replicant.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Eve_Summoned_Replicant:BTComposite_Selector_5'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Replicant.6"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_NewMoveTo",
+    "Name": "BTTask_NewMoveTo_9",
+    "Outer": "BT_Eve_Summoned_Replicant",
+    "Class": "UScriptClass'BTTask_NewMoveTo'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "bOrientRotationToMovement": true,
+      "MoveTypeState": "EMoveTypeState::MTS_Run",
+      "AcceptableRadius": 150.0,
+      "bStopOnOverlapNeedsUpdate": false,
+      "BlackboardKey": {
+        "SelectedKeyName": "Player"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Eve_Summoned_Replicant'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Replicant.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_SimpleParallel'BT_Eve_Summoned_Replicant:BTComposite_SimpleParallel_2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Replicant.14"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_RunBehavior",
+    "Name": "BTTask_RunBehavior_1",
+    "Outer": "BT_Eve_Summoned_Replicant",
+    "Class": "UScriptClass'BTTask_RunBehavior'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "BehaviorAsset": {
+        "ObjectName": "BehaviorTree'BT_Eve_Summoned_GetHatred'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_GetHatred.0"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Eve_Summoned_Replicant'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Replicant.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Eve_Summoned_Replicant:BTComposite_Sequence_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Replicant.11"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_RunBehavior",
+    "Name": "BTTask_RunBehavior_2",
+    "Outer": "BT_Eve_Summoned_Replicant",
+    "Class": "UScriptClass'BTTask_RunBehavior'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "BehaviorAsset": {
+        "ObjectName": "BehaviorTree'BT_Eve_Summoned_OutBattleDis'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_OutBattleDis.0"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Eve_Summoned_Replicant'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Replicant.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Eve_Summoned_Replicant:BTComposite_Selector_9'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Replicant.10"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_RunBehavior",
+    "Name": "BTTask_RunBehavior_5",
+    "Outer": "BT_Eve_Summoned_Replicant",
+    "Class": "UScriptClass'BTTask_RunBehavior'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "BehaviorAsset": {
+        "ObjectName": "BehaviorTree'BT_Eve_Summoned_OutBattleDis'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_OutBattleDis.0"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Eve_Summoned_Replicant'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Replicant.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Eve_Summoned_Replicant:BTComposite_Selector_5'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Replicant.6"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_SetPartAsTarget",
+    "Name": "BTTask_SetPartAsTarget_2",
+    "Outer": "BT_Eve_Summoned_Replicant",
+    "Class": "UScriptClass'BTTask_SetPartAsTarget'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Eve_Summoned_Replicant'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Replicant.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Eve_Summoned_Replicant:BTComposite_Sequence_5'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Replicant.12"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_SetPartAsTarget",
+    "Name": "BTTask_SetPartAsTarget_3",
+    "Outer": "BT_Eve_Summoned_Replicant",
+    "Class": "UScriptClass'BTTask_SetPartAsTarget'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Eve_Summoned_Replicant'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Replicant.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Eve_Summoned_Replicant:BTComposite_Sequence_7'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Replicant.13"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_UseSkill",
+    "Name": "BTTask_UseSkill_0",
+    "Outer": "BT_Eve_Summoned_Replicant",
+    "Class": "UScriptClass'BTTask_UseSkill'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SkillId": 2,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Eve_Summoned_Replicant'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Replicant.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Eve_Summoned_Replicant:BTComposite_Selector_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Replicant.3"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_UseSkill",
+    "Name": "BTTask_UseSkill_1",
+    "Outer": "BT_Eve_Summoned_Replicant",
+    "Class": "UScriptClass'BTTask_UseSkill'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Eve_Summoned_Replicant'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Replicant.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Eve_Summoned_Replicant:BTComposite_Selector_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Replicant.3"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_UseSkill_Player",
+    "Name": "BTTask_UseSkill_Player_1",
+    "Outer": "BT_Eve_Summoned_Replicant",
+    "Class": "UScriptClass'BTTask_UseSkill_Player'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SkillType": "EUseSkill_SkillType::Shooting",
+      "NodeName": "Shooting",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Eve_Summoned_Replicant'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Replicant.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_SimpleParallel'BT_Eve_Summoned_Replicant:BTComposite_SimpleParallel_3'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Replicant.15"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_UseSkill_Player",
+    "Name": "BTTask_UseSkill_Player_2",
+    "Outer": "BT_Eve_Summoned_Replicant",
+    "Class": "UScriptClass'BTTask_UseSkill_Player'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SkillType": "EUseSkill_SkillType::Reload",
+      "bUseControllerRotationYaw": false,
+      "AutoInput": false,
+      "NodeName": "Reload",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Eve_Summoned_Replicant'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Replicant.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_SimpleParallel'BT_Eve_Summoned_Replicant:BTComposite_SimpleParallel_4'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Replicant.16"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_UseSkill_Player",
+    "Name": "BTTask_UseSkill_Player_3",
+    "Outer": "BT_Eve_Summoned_Replicant",
+    "Class": "UScriptClass'BTTask_UseSkill_Player'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SkillType": "EUseSkill_SkillType::HeavyShooting",
+      "AutoInput": false,
+      "NodeName": "HeavyShooting",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Eve_Summoned_Replicant'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Replicant.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_SimpleParallel'BT_Eve_Summoned_Replicant:BTComposite_SimpleParallel_2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Replicant.14"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_1",
+    "Outer": "BT_Eve_Summoned_Replicant",
+    "Class": "UScriptClass'BTTask_Wait'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "WaitTime": 60.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Eve_Summoned_Replicant'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Replicant.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_SimpleParallel'BT_Eve_Summoned_Replicant:BTComposite_SimpleParallel_4'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_Replicant.16"
+      }
+    }
+  }
+]

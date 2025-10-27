@@ -1,0 +1,196 @@
+[
+  {
+    "Type": "BehaviorTree",
+    "Name": "BT_9Qizha_Sum02",
+    "Class": "UScriptClass'BehaviorTree'",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "RootNode": {
+        "ObjectName": "BTComposite_Selector'BT_9Qizha_Sum02:BTComposite_Selector_7'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/SQ_Qizha/BT_9Qizha_Sum02.1"
+      },
+      "BlackboardAsset": {
+        "ObjectName": "BlackboardData'BB_9Qizha'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/SQ_Qizha/BB_9Qizha.0"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_7",
+    "Outer": "BT_9Qizha_Sum02",
+    "Class": "UScriptClass'BTComposite_Selector'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector'BT_9Qizha_Sum02:BTComposite_Selector_9'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/SQ_Qizha/BT_9Qizha_Sum02.2"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_9Qizha_Sum02:BTDecorator_Blackboard_1'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/SQ_Qizha/BT_9Qizha_Sum02.4"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_9Qizha_Sum02:BTComposite_Sequence_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/SQ_Qizha/BT_9Qizha_Sum02.3"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_9Qizha_Sum02:BTDecorator_Blackboard_9'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/SQ_Qizha/BT_9Qizha_Sum02.5"
+            }
+          ],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_9Qizha_Sum02'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/SQ_Qizha/BT_9Qizha_Sum02.0"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_9",
+    "Outer": "BT_9Qizha_Sum02",
+    "Class": "UScriptClass'BTComposite_Selector'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait'BT_9Qizha_Sum02:BTTask_Wait_4'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/SQ_Qizha/BT_9Qizha_Sum02.7"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_9Qizha_Sum02'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/SQ_Qizha/BT_9Qizha_Sum02.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_9Qizha_Sum02:BTComposite_Selector_7'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/SQ_Qizha/BT_9Qizha_Sum02.1"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_0",
+    "Outer": "BT_9Qizha_Sum02",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait'BT_9Qizha_Sum02:BTTask_Wait_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/SQ_Qizha/BT_9Qizha_Sum02.6"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_9Qizha_Sum02'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/SQ_Qizha/BT_9Qizha_Sum02.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_9Qizha_Sum02:BTComposite_Selector_7'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/SQ_Qizha/BT_9Qizha_Sum02.1"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_1",
+    "Outer": "BT_9Qizha_Sum02",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "CachedDescription": "ActionMode 等于 Active",
+      "BlackboardKey": {
+        "SelectedKeyName": "ActionMode"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::Self",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_9Qizha_Sum02'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/SQ_Qizha/BT_9Qizha_Sum02.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_9Qizha_Sum02:BTComposite_Selector_7'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/SQ_Qizha/BT_9Qizha_Sum02.1"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_9",
+    "Outer": "BT_9Qizha_Sum02",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "IntValue": 1,
+      "CachedDescription": "ActionMode 等于 Hitted",
+      "BlackboardKey": {
+        "SelectedKeyName": "ActionMode"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::Self",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_9Qizha_Sum02'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/SQ_Qizha/BT_9Qizha_Sum02.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_9Qizha_Sum02:BTComposite_Selector_7'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/SQ_Qizha/BT_9Qizha_Sum02.1"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_0",
+    "Outer": "BT_9Qizha_Sum02",
+    "Class": "UScriptClass'BTTask_Wait'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_9Qizha_Sum02'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/SQ_Qizha/BT_9Qizha_Sum02.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_9Qizha_Sum02:BTComposite_Sequence_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/SQ_Qizha/BT_9Qizha_Sum02.3"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_4",
+    "Outer": "BT_9Qizha_Sum02",
+    "Class": "UScriptClass'BTTask_Wait'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_9Qizha_Sum02'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/SQ_Qizha/BT_9Qizha_Sum02.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_9Qizha_Sum02:BTComposite_Selector_9'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/SQ_Qizha/BT_9Qizha_Sum02.2"
+      }
+    }
+  }
+]

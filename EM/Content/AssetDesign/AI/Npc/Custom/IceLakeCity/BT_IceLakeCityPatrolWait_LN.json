@@ -1,0 +1,121 @@
+[
+  {
+    "Type": "BehaviorTree",
+    "Name": "BT_IceLakeCityPatrolWait_LN",
+    "Class": "UScriptClass'BehaviorTree'",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "RootNode": {
+        "ObjectName": "BTComposite_Sequence'BT_IceLakeCityPatrolWait_LN:BTComposite_Sequence_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Custom/IceLakeCity/BT_IceLakeCityPatrolWait_LN.1"
+      },
+      "BlackboardAsset": {
+        "ObjectName": "BlackboardData'BB_IceLakeCityPatrol'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Custom/IceLakeCity/BB_IceLakeCityPatrol.0"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_0",
+    "Outer": "BT_IceLakeCityPatrolWait_LN",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_GetPatrolLoc'BT_IceLakeCityPatrolWait_LN:BTTask_GetPatrolLoc_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Custom/IceLakeCity/BT_IceLakeCityPatrolWait_LN.2"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_NewMoveTo'BT_IceLakeCityPatrolWait_LN:BTTask_NewMoveTo_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Custom/IceLakeCity/BT_IceLakeCityPatrolWait_LN.3"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait'BT_IceLakeCityPatrolWait_LN:BTTask_Wait_1'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Custom/IceLakeCity/BT_IceLakeCityPatrolWait_LN.4"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_IceLakeCityPatrolWait_LN'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Custom/IceLakeCity/BT_IceLakeCityPatrolWait_LN.0"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_GetPatrolLoc",
+    "Name": "BTTask_GetPatrolLoc_0",
+    "Outer": "BT_IceLakeCityPatrolWait_LN",
+    "Class": "UScriptClass'BTTask_GetPatrolLoc'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_IceLakeCityPatrolWait_LN'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Custom/IceLakeCity/BT_IceLakeCityPatrolWait_LN.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_IceLakeCityPatrolWait_LN:BTComposite_Sequence_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Custom/IceLakeCity/BT_IceLakeCityPatrolWait_LN.1"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_NewMoveTo",
+    "Name": "BTTask_NewMoveTo_0",
+    "Outer": "BT_IceLakeCityPatrolWait_LN",
+    "Class": "UScriptClass'BTTask_NewMoveTo'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "bOrientRotationToMovement": true,
+      "ReplanMoveLineLength": 150.0,
+      "MaxSpeed": 65.0,
+      "MaxAcceleration": 10000.0,
+      "bStopOnOverlapNeedsUpdate": false,
+      "BlackboardKey": {
+        "SelectedKeyName": "PatrolLoc"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_IceLakeCityPatrolWait_LN'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Custom/IceLakeCity/BT_IceLakeCityPatrolWait_LN.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_IceLakeCityPatrolWait_LN:BTComposite_Sequence_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Custom/IceLakeCity/BT_IceLakeCityPatrolWait_LN.1"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_1",
+    "Outer": "BT_IceLakeCityPatrolWait_LN",
+    "Class": "UScriptClass'BTTask_Wait'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "WaitTime": 6.0,
+      "RandomDeviation": 2.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_IceLakeCityPatrolWait_LN'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Custom/IceLakeCity/BT_IceLakeCityPatrolWait_LN.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_IceLakeCityPatrolWait_LN:BTComposite_Sequence_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Custom/IceLakeCity/BT_IceLakeCityPatrolWait_LN.1"
+      }
+    }
+  }
+]

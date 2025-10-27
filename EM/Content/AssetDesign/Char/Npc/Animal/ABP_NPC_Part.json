@@ -1,0 +1,270 @@
+[
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_ABP_NPC_Part",
+    "Outer": "ABP_NPC_Part_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction"
+  },
+  {
+    "Type": "Function",
+    "Name": "AnimGraph",
+    "Outer": "ABP_NPC_Part_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraph",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "PropertyFlags": "Parm | OutParm",
+        "Struct": {
+          "ObjectName": "ScriptStruct'PoseLink'",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_HasOutParms | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "AnimBlueprintGeneratedClass",
+    "Name": "ABP_NPC_Part_C",
+    "Class": "UScriptClass'AnimBlueprintGeneratedClass'",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "BakedStateMachines": [
+        {
+          "MachineName": "Locomotion",
+          "InitialState": 0,
+          "States": [
+            {
+              "StateName": "Idle",
+              "Transitions": [],
+              "StateRootNodeIndex": 1,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [],
+              "LayerNodeIndices": [],
+              "bAlwaysResetOnEntry": false
+            },
+            {
+              "StateName": "Walk",
+              "Transitions": [],
+              "StateRootNodeIndex": 3,
+              "StartNotify": -1,
+              "EndNotify": -1,
+              "FullyBlendedNotify": -1,
+              "bIsAConduit": false,
+              "EntryRuleNodeIndex": -1,
+              "PlayerNodeIndices": [],
+              "LayerNodeIndices": [],
+              "bAlwaysResetOnEntry": false
+            }
+          ],
+          "Transitions": []
+        }
+      ],
+      "TargetSkeleton": {
+        "ObjectName": "Skeleton'Prop_Skeleton'",
+        "ObjectPath": "EM/Content/Asset/Char/Player/Skeleton/Prop_Skeleton.4"
+      },
+      "OrderedSavedPoseIndicesMap": [
+        {
+          "Key": "AnimGraph",
+          "Value": {
+            "OrderedSavedPoseNodeIndices": []
+          }
+        }
+      ],
+      "UberGraphFunction": {
+        "ObjectName": "Function'ABP_NPC_Part_C:ExecuteUbergraph_ABP_NPC_Part'",
+        "ObjectPath": "EM/Content/AssetDesign/Char/Npc/Animal/ABP_NPC_Part.0"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'AnimInstance'",
+      "ObjectPath": "/Script/Engine"
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'ABP_NPC_Part_C:AnimGraph'",
+        "ObjectPath": "EM/Content/AssetDesign/Char/Npc/Animal/ABP_NPC_Part.1"
+      },
+      {
+        "ObjectName": "Function'ABP_NPC_Part_C:ExecuteUbergraph_ABP_NPC_Part'",
+        "ObjectPath": "EM/Content/AssetDesign/Char/Npc/Animal/ABP_NPC_Part.0"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient",
+        "Struct": {
+          "ObjectName": "ScriptStruct'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_Root",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 64,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNode_Root'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_StateResult_1",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 64,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNode_StateResult'",
+          "ObjectPath": "/Script/AnimGraphRuntime"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_RandomPlayer",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 120,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNode_RandomPlayer'",
+          "ObjectPath": "/Script/AnimGraphRuntime"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_StateResult",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 64,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNode_StateResult'",
+          "ObjectPath": "/Script/AnimGraphRuntime"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_StateMachine",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 192,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNode_StateMachine'",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_ABP_NPC_Part": {
+        "ObjectName": "Function'ABP_NPC_Part_C:ExecuteUbergraph_ABP_NPC_Part'",
+        "ObjectPath": "EM/Content/AssetDesign/Char/Npc/Animal/ABP_NPC_Part.0"
+      },
+      "AnimGraph": {
+        "ObjectName": "Function'ABP_NPC_Part_C:AnimGraph'",
+        "ObjectPath": "EM/Content/AssetDesign/Char/Npc/Animal/ABP_NPC_Part.1"
+      }
+    },
+    "ClassFlags": "CLASS_Transient | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'SkeletalMeshComponent'",
+      "ObjectPath": "/Script/Engine"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "ABP_NPC_Part_C'Default__ABP_NPC_Part_C'",
+      "ObjectPath": "EM/Content/AssetDesign/Char/Npc/Animal/ABP_NPC_Part.3"
+    }
+  },
+  {
+    "Type": "ABP_NPC_Part_C",
+    "Name": "Default__ABP_NPC_Part_C",
+    "Class": "AnimBlueprintGeneratedClass'EM/Content/AssetDesign/Char/Npc/Animal/ABP_NPC_Part.ABP_NPC_Part_C'",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "UberGraphFrame": {},
+      "AnimGraphNode_Root": {
+        "Result": {
+          "LinkID": 4
+        },
+        "Name": "AnimGraph",
+        "Group": "None"
+      },
+      "AnimGraphNode_StateResult_1": {
+        "Result": {
+          "LinkID": -1
+        },
+        "Name": "Walk",
+        "Group": "None"
+      },
+      "AnimGraphNode_RandomPlayer": {
+        "Entries": [
+          {
+            "Sequence": {
+              "ObjectName": "AnimSequence'Feina_Part_Idle'",
+              "ObjectPath": "EM/Content/Asset/Char/Player/Char019_Feina/Animation/Part/Feina_Part_Idle.0"
+            },
+            "ChanceToPlay": 1.0,
+            "MinLoopCount": 0,
+            "MaxLoopCount": 0,
+            "MinPlayRate": 1.0,
+            "MaxPlayRate": 1.0,
+            "BlendIn": {
+              "CustomCurve": null,
+              "BlendTime": 0.2,
+              "BlendOption": "EAlphaBlendOption::Linear"
+            }
+          },
+          {
+            "Sequence": null,
+            "ChanceToPlay": 1.0,
+            "MinLoopCount": 0,
+            "MaxLoopCount": 0,
+            "MinPlayRate": 1.0,
+            "MaxPlayRate": 1.0,
+            "BlendIn": {
+              "CustomCurve": null,
+              "BlendTime": 0.2,
+              "BlendOption": "EAlphaBlendOption::Linear"
+            }
+          }
+        ],
+        "bShuffleMode": false
+      },
+      "AnimGraphNode_StateResult": {
+        "Result": {
+          "LinkID": 2
+        },
+        "Name": "Idle",
+        "Group": "None"
+      },
+      "AnimGraphNode_StateMachine": {
+        "StateMachineIndexInClass": 0,
+        "MaxTransitionsPerFrame": 3,
+        "LodMaxTransitionsPerFrame": 1,
+        "LODThreshold": -1,
+        "MobileLODThreshold": -1,
+        "bSkipFirstUpdateTransition": true,
+        "bReinitializeOnBecomingRelevant": true
+      }
+    }
+  }
+]

@@ -1,0 +1,203 @@
+[
+  {
+    "Type": "Function",
+    "Name": "GetModuleName",
+    "Outer": "BP_AOITriggerBox_BreakableItem_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "ChildProperties": [
+      {
+        "Type": "StrProperty",
+        "Name": "ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "Parm | OutParm | ReturnParm"
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_HasOutParms | FUNC_BlueprintCallable | FUNC_BlueprintEvent | FUNC_Const"
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BP_AOITriggerBox_BreakableItem_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BP_AOITriggerBox_BreakableItem_C:SimpleConstructionScript_0'",
+        "ObjectPath": "EM/Content/BluePrints/Common/Triggers/BP_AOITriggerBox_BreakableItem.6"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'AOITriggerBox'",
+      "ObjectPath": "/Script/EM"
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'BP_AOITriggerBox_BreakableItem_C:GetModuleName'",
+        "ObjectPath": "EM/Content/BluePrints/Common/Triggers/BP_AOITriggerBox_BreakableItem.0"
+      }
+    ],
+    "FuncMap": {
+      "GetModuleName": {
+        "ObjectName": "Function'BP_AOITriggerBox_BreakableItem_C:GetModuleName'",
+        "ObjectPath": "EM/Content/BluePrints/Common/Triggers/BP_AOITriggerBox_BreakableItem.0"
+      }
+    },
+    "ClassFlags": "CLASS_Config | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "Interfaces": [
+      {
+        "Class": {
+          "ObjectName": "Class'UnLuaInterface'",
+          "ObjectPath": "/Script/UnLua"
+        },
+        "PointerOffset": 0,
+        "bImplementedByK2": true
+      }
+    ],
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BP_AOITriggerBox_BreakableItem_C'Default__BP_AOITriggerBox_BreakableItem_C'",
+      "ObjectPath": "EM/Content/BluePrints/Common/Triggers/BP_AOITriggerBox_BreakableItem.2"
+    }
+  },
+  {
+    "Type": "BP_AOITriggerBox_BreakableItem_C",
+    "Name": "Default__BP_AOITriggerBox_BreakableItem_C",
+    "Class": "BlueprintGeneratedClass'EM/Content/BluePrints/Common/Triggers/BP_AOITriggerBox_BreakableItem.BP_AOITriggerBox_BreakableItem_C'",
+    "Flags": "RF_Public | RF_Transactional | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TriggerUnitType": "Mechanism",
+      "TriggerUnitId": 49200,
+      "TriggerActorType": "",
+      "CollisionType": "",
+      "MaxTriggerNum": 1,
+      "CollisionComponent": {
+        "ObjectName": "BoxComponent'Default__BP_AOITriggerBox_BreakableItem_C:CollisionComp'",
+        "ObjectPath": "EM/Content/BluePrints/Common/Triggers/BP_AOITriggerBox_BreakableItem.3"
+      },
+      "UnitId": 49203,
+      "UnitType": "Mechanism",
+      "RootComponent": {
+        "ObjectName": "BoxComponent'Default__BP_AOITriggerBox_BreakableItem_C:CollisionComp'",
+        "ObjectPath": "EM/Content/BluePrints/Common/Triggers/BP_AOITriggerBox_BreakableItem.3"
+      }
+    }
+  },
+  {
+    "Type": "BoxComponent",
+    "Name": "CollisionComp",
+    "Outer": "Default__BP_AOITriggerBox_BreakableItem_C",
+    "Class": "UScriptClass'BoxComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "BoxExtent": {
+        "X": 100.0,
+        "Y": 100.0,
+        "Z": 500.0
+      },
+      "BodyInstance": {
+        "CollisionProfileName": "Custom",
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "WorldStatic",
+              "Response": "ECR_Overlap"
+            },
+            {
+              "Channel": "WorldDynamic",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Pawn",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Visibility",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Camera",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "PhysicsBody",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Vehicle",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Destructible",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Item",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "TraceExceptChar",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "MonsterPawn",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "BreakableItem",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "TraceOverlap",
+              "Response": "ECR_Ignore"
+            }
+          ]
+        }
+      }
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Outer": "BP_AOITriggerBox_BreakableItem_C",
+    "Class": "UScriptClass'SceneComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BP_AOITriggerBox_BreakableItem_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "EM/Content/BluePrints/Common/Triggers/BP_AOITriggerBox_BreakableItem.4"
+      },
+      "VariableGuid": "EB6324F5-4C4EFED6-0D853CA0-821C009D",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Outer": "BP_AOITriggerBox_BreakableItem_C",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BP_AOITriggerBox_BreakableItem_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "EM/Content/BluePrints/Common/Triggers/BP_AOITriggerBox_BreakableItem.5"
+      }
+    }
+  }
+]

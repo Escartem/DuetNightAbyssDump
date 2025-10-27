@@ -1,0 +1,216 @@
+[
+  {
+    "Type": "BehaviorTree",
+    "Name": "BT_7Juji_WalkToEQSWithAttack",
+    "Class": "UScriptClass'BehaviorTree'",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "RootNode": {
+        "ObjectName": "BTComposite_Selector'BT_7Juji_WalkToEQSWithAttack:BTComposite_Selector_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_Juji/BT_7Juji_WalkToEQSWithAttack.1"
+      },
+      "BlackboardAsset": {
+        "ObjectName": "BlackboardData'BB_Mon_Parent_Ranged'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Parent/BB_Mon_Parent_Ranged.0"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_0",
+    "Outer": "BT_7Juji_WalkToEQSWithAttack",
+    "Class": "UScriptClass'BTComposite_Selector'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_UseSkill'BT_7Juji_WalkToEQSWithAttack:BTTask_UseSkill_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_Juji/BT_7Juji_WalkToEQSWithAttack.7"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_IsAtLocation'BT_7Juji_WalkToEQSWithAttack:BTDecorator_IsAtLocation_1'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_Juji/BT_7Juji_WalkToEQSWithAttack.3"
+            },
+            {
+              "ObjectName": "BTDecorator_TargetInVision'BT_7Juji_WalkToEQSWithAttack:BTDecorator_TargetInVision_1'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_Juji/BT_7Juji_WalkToEQSWithAttack.5"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_SimpleParallel'BT_7Juji_WalkToEQSWithAttack:BTComposite_SimpleParallel_4'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_Juji/BT_7Juji_WalkToEQSWithAttack.2"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_7Juji_WalkToEQSWithAttack'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_Juji/BT_7Juji_WalkToEQSWithAttack.0"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_SimpleParallel",
+    "Name": "BTComposite_SimpleParallel_4",
+    "Outer": "BT_7Juji_WalkToEQSWithAttack",
+    "Class": "UScriptClass'BTComposite_SimpleParallel'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_NewMoveTo'BT_7Juji_WalkToEQSWithAttack:BTTask_NewMoveTo_4'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_Juji/BT_7Juji_WalkToEQSWithAttack.6"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_UseSkill'BT_7Juji_WalkToEQSWithAttack:BTTask_UseSkill_1'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_Juji/BT_7Juji_WalkToEQSWithAttack.8"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_TargetInVision'BT_7Juji_WalkToEQSWithAttack:BTDecorator_TargetInVision_0'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_Juji/BT_7Juji_WalkToEQSWithAttack.4"
+            }
+          ],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_7Juji_WalkToEQSWithAttack'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_Juji/BT_7Juji_WalkToEQSWithAttack.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_7Juji_WalkToEQSWithAttack:BTComposite_Selector_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_Juji/BT_7Juji_WalkToEQSWithAttack.1"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_IsAtLocation",
+    "Name": "BTDecorator_IsAtLocation_1",
+    "Outer": "BT_7Juji_WalkToEQSWithAttack",
+    "Class": "UScriptClass'BTDecorator_IsAtLocation'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "BlackboardKey": {
+        "SelectedKeyName": "EQSQueryLoc"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_7Juji_WalkToEQSWithAttack'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_Juji/BT_7Juji_WalkToEQSWithAttack.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_7Juji_WalkToEQSWithAttack:BTComposite_Selector_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_Juji/BT_7Juji_WalkToEQSWithAttack.1"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_TargetInVision",
+    "Name": "BTDecorator_TargetInVision_0",
+    "Outer": "BT_7Juji_WalkToEQSWithAttack",
+    "Class": "UScriptClass'BTDecorator_TargetInVision'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_7Juji_WalkToEQSWithAttack'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_Juji/BT_7Juji_WalkToEQSWithAttack.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_SimpleParallel'BT_7Juji_WalkToEQSWithAttack:BTComposite_SimpleParallel_4'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_Juji/BT_7Juji_WalkToEQSWithAttack.2"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_TargetInVision",
+    "Name": "BTDecorator_TargetInVision_1",
+    "Outer": "BT_7Juji_WalkToEQSWithAttack",
+    "Class": "UScriptClass'BTDecorator_TargetInVision'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_7Juji_WalkToEQSWithAttack'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_Juji/BT_7Juji_WalkToEQSWithAttack.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_7Juji_WalkToEQSWithAttack:BTComposite_Selector_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_Juji/BT_7Juji_WalkToEQSWithAttack.1"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_NewMoveTo",
+    "Name": "BTTask_NewMoveTo_4",
+    "Outer": "BT_7Juji_WalkToEQSWithAttack",
+    "Class": "UScriptClass'BTTask_NewMoveTo'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "bUseControllerRotationYaw": true,
+      "bStareAt": true,
+      "AO": true,
+      "bStopOnOverlapNeedsUpdate": false,
+      "BlackboardKey": {
+        "SelectedKeyName": "EQSQueryLoc"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_7Juji_WalkToEQSWithAttack'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_Juji/BT_7Juji_WalkToEQSWithAttack.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_SimpleParallel'BT_7Juji_WalkToEQSWithAttack:BTComposite_SimpleParallel_4'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_Juji/BT_7Juji_WalkToEQSWithAttack.2"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_UseSkill",
+    "Name": "BTTask_UseSkill_0",
+    "Outer": "BT_7Juji_WalkToEQSWithAttack",
+    "Class": "UScriptClass'BTTask_UseSkill'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "EnableAimOffset": true,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_7Juji_WalkToEQSWithAttack'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_Juji/BT_7Juji_WalkToEQSWithAttack.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_7Juji_WalkToEQSWithAttack:BTComposite_Selector_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_Juji/BT_7Juji_WalkToEQSWithAttack.1"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_UseSkill",
+    "Name": "BTTask_UseSkill_1",
+    "Outer": "BT_7Juji_WalkToEQSWithAttack",
+    "Class": "UScriptClass'BTTask_UseSkill'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "EnableAimOffset": true,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_7Juji_WalkToEQSWithAttack'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_Juji/BT_7Juji_WalkToEQSWithAttack.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_SimpleParallel'BT_7Juji_WalkToEQSWithAttack:BTComposite_SimpleParallel_4'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_Juji/BT_7Juji_WalkToEQSWithAttack.2"
+      }
+    }
+  }
+]

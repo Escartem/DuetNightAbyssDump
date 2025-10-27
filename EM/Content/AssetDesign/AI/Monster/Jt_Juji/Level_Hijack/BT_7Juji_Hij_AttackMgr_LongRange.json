@@ -1,0 +1,116 @@
+[
+  {
+    "Type": "BehaviorTree",
+    "Name": "BT_7Juji_Hij_AttackMgr_LongRange",
+    "Class": "UScriptClass'BehaviorTree'",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "RootNode": {
+        "ObjectName": "BTComposite_Selector'BT_7Juji_Hij_AttackMgr_LongRange:BTComposite_Selector_6'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_Juji/Level_Hijack/BT_7Juji_Hij_AttackMgr_LongRange.1"
+      },
+      "BlackboardAsset": {
+        "ObjectName": "BlackboardData'BB_Mon_Parent_Ranged'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Parent/BB_Mon_Parent_Ranged.0"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_6",
+    "Outer": "BT_7Juji_Hij_AttackMgr_LongRange",
+    "Class": "UScriptClass'BTComposite_Selector'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_7Juji_Hij_AttackMgr_LongRange:BTComposite_Sequence_5'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_Juji/Level_Hijack/BT_7Juji_Hij_AttackMgr_LongRange.2"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_TargetLocCondition'BT_7Juji_Hij_AttackMgr_LongRange:BTDecorator_TargetLocCondition_3'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_Juji/Level_Hijack/BT_7Juji_Hij_AttackMgr_LongRange.3"
+            }
+          ],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_7Juji_Hij_AttackMgr_LongRange'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_Juji/Level_Hijack/BT_7Juji_Hij_AttackMgr_LongRange.0"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_5",
+    "Outer": "BT_7Juji_Hij_AttackMgr_LongRange",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_UseSkill'BT_7Juji_Hij_AttackMgr_LongRange:BTTask_UseSkill_1'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_Juji/Level_Hijack/BT_7Juji_Hij_AttackMgr_LongRange.4"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_7Juji_Hij_AttackMgr_LongRange'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_Juji/Level_Hijack/BT_7Juji_Hij_AttackMgr_LongRange.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_7Juji_Hij_AttackMgr_LongRange:BTComposite_Selector_6'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_Juji/Level_Hijack/BT_7Juji_Hij_AttackMgr_LongRange.1"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_TargetLocCondition",
+    "Name": "BTDecorator_TargetLocCondition_3",
+    "Outer": "BT_7Juji_Hij_AttackMgr_LongRange",
+    "Class": "UScriptClass'BTDecorator_TargetLocCondition'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "MaxDisKey": {
+        "SelectedKeyName": "MaxAttackRange"
+      },
+      "MinDis": 0.0,
+      "HitType": "ETypeOfHit::Hit",
+      "TraceStartType": "ELineTraceStartType::Top",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_7Juji_Hij_AttackMgr_LongRange'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_Juji/Level_Hijack/BT_7Juji_Hij_AttackMgr_LongRange.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_7Juji_Hij_AttackMgr_LongRange:BTComposite_Selector_6'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_Juji/Level_Hijack/BT_7Juji_Hij_AttackMgr_LongRange.1"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_UseSkill",
+    "Name": "BTTask_UseSkill_1",
+    "Outer": "BT_7Juji_Hij_AttackMgr_LongRange",
+    "Class": "UScriptClass'BTTask_UseSkill'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "EnableAimOffset": true,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_7Juji_Hij_AttackMgr_LongRange'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_Juji/Level_Hijack/BT_7Juji_Hij_AttackMgr_LongRange.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_7Juji_Hij_AttackMgr_LongRange:BTComposite_Sequence_5'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_Juji/Level_Hijack/BT_7Juji_Hij_AttackMgr_LongRange.2"
+      }
+    }
+  }
+]

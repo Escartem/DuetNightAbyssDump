@@ -1,0 +1,671 @@
+[
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_BP_EffectCreature",
+    "Outer": "BP_EffectCreature_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "___int_Array_Index_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "___int_Loop_Counter_Variable",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Add_IntInt_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "___int_Array_Index_Variable_1",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "___int_Loop_Counter_Variable_1",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Add_IntInt_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "CallFunc_GetMaterials_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "ReferenceParm",
+        "Inner": {
+          "Type": "ObjectProperty",
+          "Name": "CallFunc_GetMaterials_ReturnValue",
+          "Flags": "RF_Public",
+          "ElementSize": 8,
+          "PropertyClass": {
+            "ObjectName": "Class'MaterialInterface'",
+            "ObjectPath": "/Script/Engine"
+          }
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_Array_Get_Item",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'MaterialInterface'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Array_Length_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_CreateDynamicMaterialInstance_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'MaterialInstanceDynamic'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Less_IntInt_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_Array_Get_Item_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'MaterialInstanceDynamic'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Array_Length_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Less_IntInt_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetOwner_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Actor'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_DynamicCast_AsCharacter_Base",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'CharacterBase'",
+          "ObjectPath": "/Script/EM"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_DynamicCast_bSuccess",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_CustomEvent_Niagara",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'NiagaraSystem'",
+          "ObjectPath": "/Script/Niagara"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "K2Node_CustomEvent_Lifespan",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_SpawnSystemAttached_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'NiagaraComponent'",
+          "ObjectPath": "/Script/Niagara"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction | FUNC_HasDefaults"
+  },
+  {
+    "Type": "Function",
+    "Name": "SetAttachFx",
+    "Outer": "BP_EffectCreature_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "Niagara",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "PropertyClass": {
+          "ObjectName": "Class'NiagaraSystem'",
+          "ObjectPath": "/Script/Niagara"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "Lifespan",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "RemoveSelf",
+    "Outer": "BP_EffectCreature_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "WPCreatureAppear",
+    "Outer": "BP_EffectCreature_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "溶解出现__UpdateFunc",
+    "Outer": "BP_EffectCreature_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "溶解出现__FinishedFunc",
+    "Outer": "BP_EffectCreature_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "GetModuleName",
+    "Outer": "BP_EffectCreature_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "ChildProperties": [
+      {
+        "Type": "StrProperty",
+        "Name": "ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "Parm | OutParm | ReturnParm"
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_HasOutParms | FUNC_BlueprintCallable | FUNC_BlueprintEvent | FUNC_Const"
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BP_EffectCreature_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Timelines": [
+        {
+          "ObjectName": "TimelineTemplate'BP_EffectCreature_C:溶解出现_Template'",
+          "ObjectPath": "EM/Content/BluePrints/Combat/SkillCreatures/BP_EffectCreature.17"
+        }
+      ],
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BP_EffectCreature_C:SimpleConstructionScript_0'",
+        "ObjectPath": "EM/Content/BluePrints/Combat/SkillCreatures/BP_EffectCreature.15"
+      },
+      "UberGraphFunction": {
+        "ObjectName": "Function'BP_EffectCreature_C:ExecuteUbergraph_BP_EffectCreature'",
+        "ObjectPath": "EM/Content/BluePrints/Combat/SkillCreatures/BP_EffectCreature.0"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'EffectCreature'",
+      "ObjectPath": "/Script/EM"
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'BP_EffectCreature_C:GetModuleName'",
+        "ObjectPath": "EM/Content/BluePrints/Combat/SkillCreatures/BP_EffectCreature.6"
+      },
+      {
+        "ObjectName": "Function'BP_EffectCreature_C:溶解出现__FinishedFunc'",
+        "ObjectPath": "EM/Content/BluePrints/Combat/SkillCreatures/BP_EffectCreature.5"
+      },
+      {
+        "ObjectName": "Function'BP_EffectCreature_C:溶解出现__UpdateFunc'",
+        "ObjectPath": "EM/Content/BluePrints/Combat/SkillCreatures/BP_EffectCreature.4"
+      },
+      {
+        "ObjectName": "Function'BP_EffectCreature_C:WPCreatureAppear'",
+        "ObjectPath": "EM/Content/BluePrints/Combat/SkillCreatures/BP_EffectCreature.3"
+      },
+      {
+        "ObjectName": "Function'BP_EffectCreature_C:RemoveSelf'",
+        "ObjectPath": "EM/Content/BluePrints/Combat/SkillCreatures/BP_EffectCreature.2"
+      },
+      {
+        "ObjectName": "Function'BP_EffectCreature_C:SetAttachFx'",
+        "ObjectPath": "EM/Content/BluePrints/Combat/SkillCreatures/BP_EffectCreature.1"
+      },
+      {
+        "ObjectName": "Function'BP_EffectCreature_C:ExecuteUbergraph_BP_EffectCreature'",
+        "ObjectPath": "EM/Content/BluePrints/Combat/SkillCreatures/BP_EffectCreature.0"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient",
+        "Struct": {
+          "ObjectName": "ScriptStruct'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "SkeletalMesh",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'SkeletalMeshComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "DefaultSceneRoot",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'SceneComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "__________B812D1EA4933FEC965B66B812D059D20",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4
+      },
+      {
+        "Type": "ByteProperty",
+        "Name": "______Direction_B812D1EA4933FEC965B66B812D059D20",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "Enum": {
+          "ObjectName": "Enum'ETimelineDirection'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "溶解出现",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'TimelineComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "MapProperty",
+        "Name": "EffectCreatureAnims",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 80,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "KeyProp": {
+          "Type": "ObjectProperty",
+          "Name": "EffectCreatureAnims",
+          "Flags": "RF_Public",
+          "ElementSize": 8,
+          "PropertyClass": {
+            "ObjectName": "Class'AnimMontage'",
+            "ObjectPath": "/Script/Engine"
+          }
+        },
+        "ValueProp": {
+          "Type": "StrProperty",
+          "Name": "EffectCreatureAnims_Value",
+          "Flags": "RF_Public",
+          "ElementSize": 16
+        }
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "EffectDMMI",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "Inner": {
+          "Type": "ObjectProperty",
+          "Name": "EffectDMMI",
+          "Flags": "RF_Public",
+          "ElementSize": 8,
+          "PropertyClass": {
+            "ObjectName": "Class'MaterialInstanceDynamic'",
+            "ObjectPath": "/Script/Engine"
+          }
+        }
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_BP_EffectCreature": {
+        "ObjectName": "Function'BP_EffectCreature_C:ExecuteUbergraph_BP_EffectCreature'",
+        "ObjectPath": "EM/Content/BluePrints/Combat/SkillCreatures/BP_EffectCreature.0"
+      },
+      "SetAttachFx": {
+        "ObjectName": "Function'BP_EffectCreature_C:SetAttachFx'",
+        "ObjectPath": "EM/Content/BluePrints/Combat/SkillCreatures/BP_EffectCreature.1"
+      },
+      "RemoveSelf": {
+        "ObjectName": "Function'BP_EffectCreature_C:RemoveSelf'",
+        "ObjectPath": "EM/Content/BluePrints/Combat/SkillCreatures/BP_EffectCreature.2"
+      },
+      "WPCreatureAppear": {
+        "ObjectName": "Function'BP_EffectCreature_C:WPCreatureAppear'",
+        "ObjectPath": "EM/Content/BluePrints/Combat/SkillCreatures/BP_EffectCreature.3"
+      },
+      "溶解出现__UpdateFunc": {
+        "ObjectName": "Function'BP_EffectCreature_C:溶解出现__UpdateFunc'",
+        "ObjectPath": "EM/Content/BluePrints/Combat/SkillCreatures/BP_EffectCreature.4"
+      },
+      "溶解出现__FinishedFunc": {
+        "ObjectName": "Function'BP_EffectCreature_C:溶解出现__FinishedFunc'",
+        "ObjectPath": "EM/Content/BluePrints/Combat/SkillCreatures/BP_EffectCreature.5"
+      },
+      "GetModuleName": {
+        "ObjectName": "Function'BP_EffectCreature_C:GetModuleName'",
+        "ObjectPath": "EM/Content/BluePrints/Combat/SkillCreatures/BP_EffectCreature.6"
+      }
+    },
+    "ClassFlags": "CLASS_Config | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "Interfaces": [
+      {
+        "Class": {
+          "ObjectName": "Class'UnLuaInterface'",
+          "ObjectPath": "/Script/UnLua"
+        },
+        "PointerOffset": 0,
+        "bImplementedByK2": true
+      }
+    ],
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BP_EffectCreature_C'Default__BP_EffectCreature_C'",
+      "ObjectPath": "EM/Content/BluePrints/Combat/SkillCreatures/BP_EffectCreature.8"
+    }
+  },
+  {
+    "Type": "BP_EffectCreature_C",
+    "Name": "Default__BP_EffectCreature_C",
+    "Class": "BlueprintGeneratedClass'EM/Content/BluePrints/Combat/SkillCreatures/BP_EffectCreature.BP_EffectCreature_C'",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "UberGraphFrame": {},
+      "FashionComponent": {
+        "ObjectName": "EffectCreatureFashionComponent'Default__BP_EffectCreature_C:FashionComponent'",
+        "ObjectPath": "EM/Content/BluePrints/Combat/SkillCreatures/BP_EffectCreature.11"
+      },
+      "FXComponent": {
+        "ObjectName": "BP_FXComponent_C'Default__BP_EffectCreature_C:BP_FXComponent'",
+        "ObjectPath": "EM/Content/BluePrints/Combat/SkillCreatures/BP_EffectCreature.9"
+      }
+    }
+  },
+  {
+    "Type": "BP_FXComponent_C",
+    "Name": "BP_FXComponent",
+    "Outer": "Default__BP_EffectCreature_C",
+    "Class": "BlueprintGeneratedClass'EM/Content/BluePrints/Char/BP_FXComponent.BP_FXComponent_C'",
+    "Flags": "RF_Public | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "CurveFloat",
+    "Name": "CurveFloat_0",
+    "Outer": "BP_EffectCreature_C",
+    "Class": "UScriptClass'CurveFloat'",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "FloatCurve": {
+        "Keys": [
+          {
+            "InterpMode": "RCIM_Cubic",
+            "TangentMode": "RCTM_Break",
+            "TangentWeightMode": "RCTWM_WeightedNone",
+            "Time": 0.0,
+            "Value": 0.25,
+            "ArriveTangent": -0.10707384,
+            "ArriveTangentWeight": 0.0,
+            "LeaveTangent": 0.2551235,
+            "LeaveTangentWeight": 0.0
+          },
+          {
+            "InterpMode": "RCIM_Cubic",
+            "TangentMode": "RCTM_User",
+            "TangentWeightMode": "RCTWM_WeightedNone",
+            "Time": 0.75,
+            "Value": 1.0,
+            "ArriveTangent": 1.7423923,
+            "ArriveTangentWeight": 0.0,
+            "LeaveTangent": 1.7423936,
+            "LeaveTangentWeight": 0.0
+          }
+        ]
+      }
+    }
+  },
+  {
+    "Type": "EffectCreatureFashionComponent",
+    "Name": "FashionComponent",
+    "Outer": "Default__BP_EffectCreature_C",
+    "Class": "UScriptClass'EffectCreatureFashionComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Outer": "BP_EffectCreature_C",
+    "Class": "UScriptClass'SceneComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BP_EffectCreature_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "EM/Content/BluePrints/Combat/SkillCreatures/BP_EffectCreature.12"
+      },
+      "ChildNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_EffectCreature_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "EM/Content/BluePrints/Combat/SkillCreatures/BP_EffectCreature.14"
+        }
+      ],
+      "VariableGuid": "CE97A118-4C7143AF-BF5A358A-3919B8C5",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_1",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SkeletalMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SkeletalMeshComponent'BP_EffectCreature_C:SkeletalMesh_GEN_VARIABLE'",
+        "ObjectPath": "EM/Content/BluePrints/Combat/SkillCreatures/BP_EffectCreature.16"
+      },
+      "VariableGuid": "5B0A44B0-48BD0033-2F9431BD-BE3E3FA2",
+      "InternalVariableName": "SkeletalMesh"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Outer": "BP_EffectCreature_C",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_EffectCreature_C:SimpleConstructionScript_0.SCS_Node_0'",
+          "ObjectPath": "EM/Content/BluePrints/Combat/SkillCreatures/BP_EffectCreature.13"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_EffectCreature_C:SimpleConstructionScript_0.SCS_Node_0'",
+          "ObjectPath": "EM/Content/BluePrints/Combat/SkillCreatures/BP_EffectCreature.13"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_EffectCreature_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "EM/Content/BluePrints/Combat/SkillCreatures/BP_EffectCreature.14"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BP_EffectCreature_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "EM/Content/BluePrints/Combat/SkillCreatures/BP_EffectCreature.13"
+      }
+    }
+  },
+  {
+    "Type": "SkeletalMeshComponent",
+    "Name": "SkeletalMesh_GEN_VARIABLE",
+    "Outer": "BP_EffectCreature_C",
+    "Class": "UScriptClass'SkeletalMeshComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "AnimationMode": "EAnimationMode::AnimationSingleNode",
+      "ClothingSimulationFactory": {
+        "ObjectName": "Class'ClothingSimulationFactoryNv'",
+        "ObjectPath": "/Script/ClothingSystemRuntimeNv"
+      },
+      "bReceivesDecals": false,
+      "bCastInsetShadow": true
+    }
+  },
+  {
+    "Type": "TimelineTemplate",
+    "Name": "溶解出现_Template",
+    "Outer": "BP_EffectCreature_C",
+    "Class": "UScriptClass'TimelineTemplate'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TimelineLength": 0.75,
+      "FloatTracks": [
+        {
+          "CurveFloat": {
+            "ObjectName": "CurveFloat'BP_EffectCreature_C:CurveFloat_0'",
+            "ObjectPath": "EM/Content/BluePrints/Combat/SkillCreatures/BP_EffectCreature.10"
+          },
+          "PropertyName": "__________B812D1EA4933FEC965B66B812D059D20",
+          "TrackName": "出现曲线",
+          "bIsExternalCurve": false
+        }
+      ],
+      "TimelineGuid": "B812D1EA-4933FEC9-65B66B81-2D059D20",
+      "VariableName": "溶解出现",
+      "DirectionPropertyName": "______Direction_B812D1EA4933FEC965B66B812D059D20",
+      "UpdateFunctionName": "溶解出现__UpdateFunc",
+      "FinishedFunctionName": "溶解出现__FinishedFunc"
+    }
+  }
+]

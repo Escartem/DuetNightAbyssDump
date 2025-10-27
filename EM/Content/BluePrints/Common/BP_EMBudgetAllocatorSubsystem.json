@@ -1,0 +1,460 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BP_EMBudgetAllocatorSubsystem_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "SuperStruct": {
+      "ObjectName": "Class'EMBudgetAllocatorSubsystem'",
+      "ObjectPath": "/Script/EM"
+    },
+    "ClassFlags": "CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BP_EMBudgetAllocatorSubsystem_C'Default__BP_EMBudgetAllocatorSubsystem_C'",
+      "ObjectPath": "EM/Content/BluePrints/Common/BP_EMBudgetAllocatorSubsystem.1"
+    }
+  },
+  {
+    "Type": "BP_EMBudgetAllocatorSubsystem_C",
+    "Name": "Default__BP_EMBudgetAllocatorSubsystem_C",
+    "Class": "BlueprintGeneratedClass'EM/Content/BluePrints/Common/BP_EMBudgetAllocatorSubsystem.BP_EMBudgetAllocatorSubsystem_C'",
+    "Flags": "RF_Public | RF_Transactional | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "PCParameters": [
+        {
+          "Key": "EEMBudgetType::Billboard",
+          "Value": {
+            "Parameters": [
+              {
+                "Key": "EEMQualityLevel::High",
+                "Value": {
+                  "BudgetInMs": 0.8,
+                  "MinQuality": 0.9,
+                  "MinBudgetInMsThreshold": 0.8,
+                  "MaxTickRate": 10,
+                  "WorkUnitSmoothingSpeed": 5.0,
+                  "AlwaysTickFalloffAggression": 0.8,
+                  "InitialEstimatedWorkUnitTimeMs": 0.08,
+                  "MaxTickedOffsreenObjects": 2,
+                  "StateChangeThrottleInFrames": 120,
+                  "BudgetFactorBeforeReducedWork": 1.2,
+                  "BudgetFactorBeforeReducedWorkEpsilon": 0.25,
+                  "BudgetPressureSmoothingSpeed": 3.0,
+                  "ReducedWorkThrottleMinInFrames": 24,
+                  "ReducedWorkThrottleMaxInFrames": 60,
+                  "BudgetFactorBeforeAggressiveReducedWork": 1.5,
+                  "ReducedWorkThrottleMaxPerFrame": 1,
+                  "BudgetPressureBeforeEmergencyReducedWork": 2.0
+                }
+              },
+              {
+                "Key": "EEMQualityLevel::Medium",
+                "Value": {
+                  "BudgetInMs": 0.8,
+                  "MinQuality": 0.8,
+                  "MinBudgetInMsThreshold": 0.7,
+                  "MaxTickRate": 10,
+                  "WorkUnitSmoothingSpeed": 5.0,
+                  "AlwaysTickFalloffAggression": 0.84,
+                  "InitialEstimatedWorkUnitTimeMs": 0.09,
+                  "MaxTickedOffsreenObjects": 2,
+                  "StateChangeThrottleInFrames": 120,
+                  "BudgetFactorBeforeReducedWork": 1.1,
+                  "BudgetFactorBeforeReducedWorkEpsilon": 0.25,
+                  "BudgetPressureSmoothingSpeed": 3.0,
+                  "ReducedWorkThrottleMinInFrames": 24,
+                  "ReducedWorkThrottleMaxInFrames": 60,
+                  "BudgetFactorBeforeAggressiveReducedWork": 1.5,
+                  "ReducedWorkThrottleMaxPerFrame": 2,
+                  "BudgetPressureBeforeEmergencyReducedWork": 2.0
+                }
+              },
+              {
+                "Key": "EEMQualityLevel::Low",
+                "Value": {
+                  "BudgetInMs": 0.8,
+                  "MinQuality": 0.5,
+                  "MinBudgetInMsThreshold": 0.5,
+                  "MaxTickRate": 10,
+                  "WorkUnitSmoothingSpeed": 5.0,
+                  "AlwaysTickFalloffAggression": 0.8,
+                  "InitialEstimatedWorkUnitTimeMs": 0.1,
+                  "MaxTickedOffsreenObjects": 2,
+                  "StateChangeThrottleInFrames": 120,
+                  "BudgetFactorBeforeReducedWork": 1.1,
+                  "BudgetFactorBeforeReducedWorkEpsilon": 0.25,
+                  "BudgetPressureSmoothingSpeed": 3.0,
+                  "ReducedWorkThrottleMinInFrames": 24,
+                  "ReducedWorkThrottleMaxInFrames": 60,
+                  "BudgetFactorBeforeAggressiveReducedWork": 1.5,
+                  "ReducedWorkThrottleMaxPerFrame": 4,
+                  "BudgetPressureBeforeEmergencyReducedWork": 2.0
+                }
+              },
+              {
+                "Key": "EEMQualityLevel::VeryHigh",
+                "Value": {
+                  "BudgetInMs": 1.0,
+                  "MinQuality": 1.0,
+                  "MinBudgetInMsThreshold": 0.8,
+                  "MaxTickRate": 10,
+                  "WorkUnitSmoothingSpeed": 5.0,
+                  "AlwaysTickFalloffAggression": 0.8,
+                  "InitialEstimatedWorkUnitTimeMs": 0.08,
+                  "MaxTickedOffsreenObjects": 4,
+                  "StateChangeThrottleInFrames": 120,
+                  "BudgetFactorBeforeReducedWork": 1.2,
+                  "BudgetFactorBeforeReducedWorkEpsilon": 0.25,
+                  "BudgetPressureSmoothingSpeed": 3.0,
+                  "ReducedWorkThrottleMinInFrames": 24,
+                  "ReducedWorkThrottleMaxInFrames": 60,
+                  "BudgetFactorBeforeAggressiveReducedWork": 1.5,
+                  "ReducedWorkThrottleMaxPerFrame": 1,
+                  "BudgetPressureBeforeEmergencyReducedWork": 2.0
+                }
+              },
+              {
+                "Key": "EEMQualityLevel::VeryLow",
+                "Value": {
+                  "BudgetInMs": 0.8,
+                  "MinQuality": 0.4,
+                  "MinBudgetInMsThreshold": 0.5,
+                  "MaxTickRate": 10,
+                  "WorkUnitSmoothingSpeed": 5.0,
+                  "AlwaysTickFalloffAggression": 0.8,
+                  "InitialEstimatedWorkUnitTimeMs": 0.1,
+                  "MaxTickedOffsreenObjects": 2,
+                  "StateChangeThrottleInFrames": 120,
+                  "BudgetFactorBeforeReducedWork": 1.1,
+                  "BudgetFactorBeforeReducedWorkEpsilon": 0.25,
+                  "BudgetPressureSmoothingSpeed": 3.0,
+                  "ReducedWorkThrottleMinInFrames": 24,
+                  "ReducedWorkThrottleMaxInFrames": 60,
+                  "BudgetFactorBeforeAggressiveReducedWork": 1.5,
+                  "ReducedWorkThrottleMaxPerFrame": 4,
+                  "BudgetPressureBeforeEmergencyReducedWork": 2.0
+                }
+              }
+            ]
+          }
+        },
+        {
+          "Key": "EEMBudgetType::MoveComp",
+          "Value": {
+            "Parameters": [
+              {
+                "Key": "EEMQualityLevel::High",
+                "Value": {
+                  "BudgetInMs": 1.0,
+                  "MinQuality": 0.4,
+                  "MinBudgetInMsThreshold": 0.5,
+                  "MaxTickRate": 10,
+                  "WorkUnitSmoothingSpeed": 5.0,
+                  "AlwaysTickFalloffAggression": 0.8,
+                  "InitialEstimatedWorkUnitTimeMs": 0.08,
+                  "MaxTickedOffsreenObjects": 4,
+                  "StateChangeThrottleInFrames": 30,
+                  "BudgetFactorBeforeReducedWork": 1.2,
+                  "BudgetFactorBeforeReducedWorkEpsilon": 0.25,
+                  "BudgetPressureSmoothingSpeed": 3.0,
+                  "ReducedWorkThrottleMinInFrames": 6,
+                  "ReducedWorkThrottleMaxInFrames": 20,
+                  "BudgetFactorBeforeAggressiveReducedWork": 1.5,
+                  "ReducedWorkThrottleMaxPerFrame": 4,
+                  "BudgetPressureBeforeEmergencyReducedWork": 2.0
+                }
+              },
+              {
+                "Key": "EEMQualityLevel::Medium",
+                "Value": {
+                  "BudgetInMs": 1.0,
+                  "MinQuality": 0.4,
+                  "MinBudgetInMsThreshold": 0.5,
+                  "MaxTickRate": 10,
+                  "WorkUnitSmoothingSpeed": 5.0,
+                  "AlwaysTickFalloffAggression": 0.8,
+                  "InitialEstimatedWorkUnitTimeMs": 0.08,
+                  "MaxTickedOffsreenObjects": 4,
+                  "StateChangeThrottleInFrames": 30,
+                  "BudgetFactorBeforeReducedWork": 1.2,
+                  "BudgetFactorBeforeReducedWorkEpsilon": 0.25,
+                  "BudgetPressureSmoothingSpeed": 3.0,
+                  "ReducedWorkThrottleMinInFrames": 6,
+                  "ReducedWorkThrottleMaxInFrames": 20,
+                  "BudgetFactorBeforeAggressiveReducedWork": 1.5,
+                  "ReducedWorkThrottleMaxPerFrame": 4,
+                  "BudgetPressureBeforeEmergencyReducedWork": 2.0
+                }
+              },
+              {
+                "Key": "EEMQualityLevel::Low",
+                "Value": {
+                  "BudgetInMs": 1.0,
+                  "MinQuality": 0.4,
+                  "MinBudgetInMsThreshold": 0.5,
+                  "MaxTickRate": 10,
+                  "WorkUnitSmoothingSpeed": 5.0,
+                  "AlwaysTickFalloffAggression": 0.8,
+                  "InitialEstimatedWorkUnitTimeMs": 0.08,
+                  "MaxTickedOffsreenObjects": 4,
+                  "StateChangeThrottleInFrames": 30,
+                  "BudgetFactorBeforeReducedWork": 1.2,
+                  "BudgetFactorBeforeReducedWorkEpsilon": 0.25,
+                  "BudgetPressureSmoothingSpeed": 3.0,
+                  "ReducedWorkThrottleMinInFrames": 6,
+                  "ReducedWorkThrottleMaxInFrames": 20,
+                  "BudgetFactorBeforeAggressiveReducedWork": 1.5,
+                  "ReducedWorkThrottleMaxPerFrame": 4,
+                  "BudgetPressureBeforeEmergencyReducedWork": 2.0
+                }
+              },
+              {
+                "Key": "EEMQualityLevel::VeryHigh",
+                "Value": {
+                  "BudgetInMs": 1.0,
+                  "MinQuality": 0.5,
+                  "MinBudgetInMsThreshold": 0.5,
+                  "MaxTickRate": 10,
+                  "WorkUnitSmoothingSpeed": 5.0,
+                  "AlwaysTickFalloffAggression": 0.8,
+                  "InitialEstimatedWorkUnitTimeMs": 0.08,
+                  "MaxTickedOffsreenObjects": 4,
+                  "StateChangeThrottleInFrames": 30,
+                  "BudgetFactorBeforeReducedWork": 1.2,
+                  "BudgetFactorBeforeReducedWorkEpsilon": 0.25,
+                  "BudgetPressureSmoothingSpeed": 3.0,
+                  "ReducedWorkThrottleMinInFrames": 6,
+                  "ReducedWorkThrottleMaxInFrames": 20,
+                  "BudgetFactorBeforeAggressiveReducedWork": 1.5,
+                  "ReducedWorkThrottleMaxPerFrame": 4,
+                  "BudgetPressureBeforeEmergencyReducedWork": 4.0
+                }
+              },
+              {
+                "Key": "EEMQualityLevel::VeryLow",
+                "Value": {
+                  "BudgetInMs": 1.0,
+                  "MinQuality": 0.0,
+                  "MinBudgetInMsThreshold": 0.5,
+                  "MaxTickRate": 10,
+                  "WorkUnitSmoothingSpeed": 5.0,
+                  "AlwaysTickFalloffAggression": 0.8,
+                  "InitialEstimatedWorkUnitTimeMs": 0.08,
+                  "MaxTickedOffsreenObjects": 4,
+                  "StateChangeThrottleInFrames": 30,
+                  "BudgetFactorBeforeReducedWork": 1.5,
+                  "BudgetFactorBeforeReducedWorkEpsilon": 0.25,
+                  "BudgetPressureSmoothingSpeed": 3.0,
+                  "ReducedWorkThrottleMinInFrames": 2,
+                  "ReducedWorkThrottleMaxInFrames": 20,
+                  "BudgetFactorBeforeAggressiveReducedWork": 2.0,
+                  "ReducedWorkThrottleMaxPerFrame": 4,
+                  "BudgetPressureBeforeEmergencyReducedWork": 2.5
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "MobileParameters": [
+        {
+          "Key": "EEMBudgetType::Billboard",
+          "Value": {
+            "Parameters": [
+              {
+                "Key": "EEMQualityLevel::High",
+                "Value": {
+                  "BudgetInMs": 0.8,
+                  "MinQuality": 0.8,
+                  "MinBudgetInMsThreshold": 0.8,
+                  "MaxTickRate": 10,
+                  "WorkUnitSmoothingSpeed": 5.0,
+                  "AlwaysTickFalloffAggression": 0.8,
+                  "InitialEstimatedWorkUnitTimeMs": 0.09,
+                  "MaxTickedOffsreenObjects": 2,
+                  "StateChangeThrottleInFrames": 60,
+                  "BudgetFactorBeforeReducedWork": 1.1,
+                  "BudgetFactorBeforeReducedWorkEpsilon": 0.25,
+                  "BudgetPressureSmoothingSpeed": 3.0,
+                  "ReducedWorkThrottleMinInFrames": 18,
+                  "ReducedWorkThrottleMaxInFrames": 45,
+                  "BudgetFactorBeforeAggressiveReducedWork": 1.5,
+                  "ReducedWorkThrottleMaxPerFrame": 2,
+                  "BudgetPressureBeforeEmergencyReducedWork": 2.0
+                }
+              },
+              {
+                "Key": "EEMQualityLevel::Medium",
+                "Value": {
+                  "BudgetInMs": 0.8,
+                  "MinQuality": 0.6,
+                  "MinBudgetInMsThreshold": 0.6,
+                  "MaxTickRate": 10,
+                  "WorkUnitSmoothingSpeed": 5.0,
+                  "AlwaysTickFalloffAggression": 0.8,
+                  "InitialEstimatedWorkUnitTimeMs": 0.12,
+                  "MaxTickedOffsreenObjects": 2,
+                  "StateChangeThrottleInFrames": 60,
+                  "BudgetFactorBeforeReducedWork": 1.1,
+                  "BudgetFactorBeforeReducedWorkEpsilon": 0.25,
+                  "BudgetPressureSmoothingSpeed": 3.0,
+                  "ReducedWorkThrottleMinInFrames": 18,
+                  "ReducedWorkThrottleMaxInFrames": 45,
+                  "BudgetFactorBeforeAggressiveReducedWork": 1.5,
+                  "ReducedWorkThrottleMaxPerFrame": 4,
+                  "BudgetPressureBeforeEmergencyReducedWork": 2.0
+                }
+              },
+              {
+                "Key": "EEMQualityLevel::Low",
+                "Value": {
+                  "BudgetInMs": 0.8,
+                  "MinQuality": 0.4,
+                  "MinBudgetInMsThreshold": 0.4,
+                  "MaxTickRate": 10,
+                  "WorkUnitSmoothingSpeed": 5.0,
+                  "AlwaysTickFalloffAggression": 0.8,
+                  "InitialEstimatedWorkUnitTimeMs": 0.15,
+                  "MaxTickedOffsreenObjects": 0,
+                  "StateChangeThrottleInFrames": 60,
+                  "BudgetFactorBeforeReducedWork": 1.1,
+                  "BudgetFactorBeforeReducedWorkEpsilon": 0.25,
+                  "BudgetPressureSmoothingSpeed": 3.0,
+                  "ReducedWorkThrottleMinInFrames": 18,
+                  "ReducedWorkThrottleMaxInFrames": 45,
+                  "BudgetFactorBeforeAggressiveReducedWork": 1.5,
+                  "ReducedWorkThrottleMaxPerFrame": 6,
+                  "BudgetPressureBeforeEmergencyReducedWork": 2.0
+                }
+              },
+              {
+                "Key": "EEMQualityLevel::VeryHigh",
+                "Value": {
+                  "BudgetInMs": 0.8,
+                  "MinQuality": 1.0,
+                  "MinBudgetInMsThreshold": 0.8,
+                  "MaxTickRate": 10,
+                  "WorkUnitSmoothingSpeed": 5.0,
+                  "AlwaysTickFalloffAggression": 0.8,
+                  "InitialEstimatedWorkUnitTimeMs": 0.09,
+                  "MaxTickedOffsreenObjects": 3,
+                  "StateChangeThrottleInFrames": 60,
+                  "BudgetFactorBeforeReducedWork": 1.2,
+                  "BudgetFactorBeforeReducedWorkEpsilon": 0.25,
+                  "BudgetPressureSmoothingSpeed": 3.0,
+                  "ReducedWorkThrottleMinInFrames": 18,
+                  "ReducedWorkThrottleMaxInFrames": 45,
+                  "BudgetFactorBeforeAggressiveReducedWork": 1.5,
+                  "ReducedWorkThrottleMaxPerFrame": 2,
+                  "BudgetPressureBeforeEmergencyReducedWork": 2.0
+                }
+              },
+              {
+                "Key": "EEMQualityLevel::VeryLow",
+                "Value": {
+                  "BudgetInMs": 0.8,
+                  "MinQuality": 0.3,
+                  "MinBudgetInMsThreshold": 0.3,
+                  "MaxTickRate": 10,
+                  "WorkUnitSmoothingSpeed": 5.0,
+                  "AlwaysTickFalloffAggression": 0.8,
+                  "InitialEstimatedWorkUnitTimeMs": 0.18,
+                  "MaxTickedOffsreenObjects": 0,
+                  "StateChangeThrottleInFrames": 60,
+                  "BudgetFactorBeforeReducedWork": 1.1,
+                  "BudgetFactorBeforeReducedWorkEpsilon": 0.25,
+                  "BudgetPressureSmoothingSpeed": 3.0,
+                  "ReducedWorkThrottleMinInFrames": 18,
+                  "ReducedWorkThrottleMaxInFrames": 45,
+                  "BudgetFactorBeforeAggressiveReducedWork": 1.5,
+                  "ReducedWorkThrottleMaxPerFrame": 6,
+                  "BudgetPressureBeforeEmergencyReducedWork": 2.0
+                }
+              }
+            ]
+          }
+        },
+        {
+          "Key": "EEMBudgetType::MoveComp",
+          "Value": {
+            "Parameters": [
+              {
+                "Key": "EEMQualityLevel::High",
+                "Value": {
+                  "BudgetInMs": 1.0,
+                  "MinQuality": 0.4,
+                  "MinBudgetInMsThreshold": 0.5,
+                  "MaxTickRate": 10,
+                  "WorkUnitSmoothingSpeed": 5.0,
+                  "AlwaysTickFalloffAggression": 0.8,
+                  "InitialEstimatedWorkUnitTimeMs": 0.08,
+                  "MaxTickedOffsreenObjects": 4,
+                  "StateChangeThrottleInFrames": 30,
+                  "BudgetFactorBeforeReducedWork": 1.2,
+                  "BudgetFactorBeforeReducedWorkEpsilon": 0.25,
+                  "BudgetPressureSmoothingSpeed": 3.0,
+                  "ReducedWorkThrottleMinInFrames": 6,
+                  "ReducedWorkThrottleMaxInFrames": 20,
+                  "BudgetFactorBeforeAggressiveReducedWork": 1.5,
+                  "ReducedWorkThrottleMaxPerFrame": 4,
+                  "BudgetPressureBeforeEmergencyReducedWork": 2.0
+                }
+              },
+              {
+                "Key": "EEMQualityLevel::Medium",
+                "Value": {
+                  "BudgetInMs": 1.0,
+                  "MinQuality": 0.4,
+                  "MinBudgetInMsThreshold": 0.5,
+                  "MaxTickRate": 10,
+                  "WorkUnitSmoothingSpeed": 5.0,
+                  "AlwaysTickFalloffAggression": 0.8,
+                  "InitialEstimatedWorkUnitTimeMs": 0.08,
+                  "MaxTickedOffsreenObjects": 4,
+                  "StateChangeThrottleInFrames": 30,
+                  "BudgetFactorBeforeReducedWork": 1.2,
+                  "BudgetFactorBeforeReducedWorkEpsilon": 0.25,
+                  "BudgetPressureSmoothingSpeed": 3.0,
+                  "ReducedWorkThrottleMinInFrames": 6,
+                  "ReducedWorkThrottleMaxInFrames": 20,
+                  "BudgetFactorBeforeAggressiveReducedWork": 1.5,
+                  "ReducedWorkThrottleMaxPerFrame": 4,
+                  "BudgetPressureBeforeEmergencyReducedWork": 2.0
+                }
+              },
+              {
+                "Key": "EEMQualityLevel::Low",
+                "Value": {
+                  "BudgetInMs": 1.0,
+                  "MinQuality": 0.4,
+                  "MinBudgetInMsThreshold": 0.5,
+                  "MaxTickRate": 10,
+                  "WorkUnitSmoothingSpeed": 5.0,
+                  "AlwaysTickFalloffAggression": 0.8,
+                  "InitialEstimatedWorkUnitTimeMs": 0.08,
+                  "MaxTickedOffsreenObjects": 4,
+                  "StateChangeThrottleInFrames": 30,
+                  "BudgetFactorBeforeReducedWork": 1.2,
+                  "BudgetFactorBeforeReducedWorkEpsilon": 0.25,
+                  "BudgetPressureSmoothingSpeed": 3.0,
+                  "ReducedWorkThrottleMinInFrames": 6,
+                  "ReducedWorkThrottleMaxInFrames": 20,
+                  "BudgetFactorBeforeAggressiveReducedWork": 1.5,
+                  "ReducedWorkThrottleMaxPerFrame": 4,
+                  "BudgetPressureBeforeEmergencyReducedWork": 2.0
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "DefaultNiagaraInstancePath": "NiagaraSystem'/Game/Asset/Effect/Niagara/Common/NS_Kong.NS_Kong'"
+    }
+  }
+]

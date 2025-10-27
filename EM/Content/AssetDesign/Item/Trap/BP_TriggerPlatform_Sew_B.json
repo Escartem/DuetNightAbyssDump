@@ -1,0 +1,848 @@
+[
+  {
+    "Type": "Function",
+    "Name": "CameraShake",
+    "Outer": "BP_TriggerPlatform_Sew_B_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "Player",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'BP_PlayerCharacter_C'",
+          "ObjectPath": "EM/Content/BluePrints/Char/BP_PlayerCharacter.72"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "ShakeScale",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsValid_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BP_TriggerPlatform_Sew_B_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Super": {
+      "ObjectName": "BlueprintGeneratedClass'BP_CombatItemBase_C'",
+      "ObjectPath": "EM/Content/BluePrints/Item/BP_CombatItemBase.1"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BP_TriggerPlatform_Sew_B_C:SimpleConstructionScript_0'",
+        "ObjectPath": "EM/Content/AssetDesign/Item/Trap/BP_TriggerPlatform_Sew_B.17"
+      },
+      "InheritableComponentHandler": {
+        "ObjectName": "InheritableComponentHandler'BP_TriggerPlatform_Sew_B_C:InheritableComponentHandler'",
+        "ObjectPath": "EM/Content/AssetDesign/Item/Trap/BP_TriggerPlatform_Sew_B.7"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "BlueprintGeneratedClass'BP_CombatItemBase_C'",
+      "ObjectPath": "EM/Content/BluePrints/Item/BP_CombatItemBase.1"
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'BP_TriggerPlatform_Sew_B_C:CameraShake'",
+        "ObjectPath": "EM/Content/AssetDesign/Item/Trap/BP_TriggerPlatform_Sew_B.0"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "SM_Vil_Wood12",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'StaticMeshComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "SM_Sew_Lad01",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'StaticMeshComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "SM_Sew_Wood03",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'StaticMeshComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "SM_Sew_Wood02",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'StaticMeshComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "SM_Sew_Wood01",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'StaticMeshComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "SM_Sew_Wood",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'StaticMeshComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CollisionBox",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'BoxComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "As BP Player Character",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnTemplate | DisableEditOnInstance",
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'BP_PlayerCharacter_C'",
+          "ObjectPath": "EM/Content/BluePrints/Char/BP_PlayerCharacter.72"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "IsInside",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FuncMap": {
+      "CameraShake": {
+        "ObjectName": "Function'BP_TriggerPlatform_Sew_B_C:CameraShake'",
+        "ObjectPath": "EM/Content/AssetDesign/Item/Trap/BP_TriggerPlatform_Sew_B.0"
+      }
+    },
+    "ClassFlags": "CLASS_Config | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BP_TriggerPlatform_Sew_B_C'Default__BP_TriggerPlatform_Sew_B_C'",
+      "ObjectPath": "EM/Content/AssetDesign/Item/Trap/BP_TriggerPlatform_Sew_B.2"
+    }
+  },
+  {
+    "Type": "BP_TriggerPlatform_Sew_B_C",
+    "Name": "Default__BP_TriggerPlatform_Sew_B_C",
+    "Class": "BlueprintGeneratedClass'EM/Content/AssetDesign/Item/Trap/BP_TriggerPlatform_Sew_B.BP_TriggerPlatform_Sew_B_C'",
+    "Template": {
+      "ObjectName": "BP_CombatItemBase_C'Default__BP_CombatItemBase_C'",
+      "ObjectPath": "EM/Content/BluePrints/Item/BP_CombatItemBase.2"
+    },
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "CombatStateChangeComponent": {
+        "ObjectName": "BP_CombatStateChangeComponent_C'Default__BP_TriggerPlatform_Sew_B_C:CombatStateChangeComponent'",
+        "ObjectPath": "EM/Content/AssetDesign/Item/Trap/BP_TriggerPlatform_Sew_B.5"
+      },
+      "CombatClientEffectComponent": {
+        "ObjectName": "BP_CombatClientEffectComponent_C'Default__BP_TriggerPlatform_Sew_B_C:CombatClientEffectComponent'",
+        "ObjectPath": "EM/Content/AssetDesign/Item/Trap/BP_TriggerPlatform_Sew_B.4"
+      },
+      "FXComponent": {
+        "ObjectName": "BP_FXComponent_C'Default__BP_TriggerPlatform_Sew_B_C:BP_FXComponent'",
+        "ObjectPath": "EM/Content/AssetDesign/Item/Trap/BP_TriggerPlatform_Sew_B.6"
+      },
+      "UnitId": 10615,
+      "UnitType": "Mechanism"
+    }
+  },
+  {
+    "Type": "BoxComponent",
+    "Name": "CollisionBox_GEN_VARIABLE",
+    "Outer": "BP_TriggerPlatform_Sew_B_C",
+    "Class": "UScriptClass'BoxComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "BoxExtent": {
+        "X": 200.0,
+        "Y": 400.0,
+        "Z": 50.0
+      },
+      "AreaClass": {
+        "ObjectName": "Class'NavArea_Obstacle'",
+        "ObjectPath": "/Script/NavigationSystem"
+      },
+      "BodyInstance": {
+        "CollisionProfileName": "Trigger",
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "WorldStatic",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "WorldDynamic",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Pawn",
+              "Response": "ECR_Overlap"
+            },
+            {
+              "Channel": "Visibility",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Camera",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "PhysicsBody",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Vehicle",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Destructible",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Item",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "TraceExceptChar",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "MonsterPawn",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "BreakableItem",
+              "Response": "ECR_Ignore"
+            }
+          ]
+        }
+      },
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 50.0
+      }
+    }
+  },
+  {
+    "Type": "BP_CombatClientEffectComponent_C",
+    "Name": "CombatClientEffectComponent",
+    "Outer": "Default__BP_TriggerPlatform_Sew_B_C",
+    "Class": "BlueprintGeneratedClass'EM/Content/BluePrints/Item/BP_CombatClientEffectComponent.BP_CombatClientEffectComponent_C'",
+    "Template": {
+      "ObjectName": "BP_CombatClientEffectComponent_C'Default__BP_CombatItemBase_C:CombatClientEffectComponent'",
+      "ObjectPath": "EM/Content/BluePrints/Item/BP_CombatItemBase.3"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "BP_CombatStateChangeComponent_C",
+    "Name": "CombatStateChangeComponent",
+    "Outer": "Default__BP_TriggerPlatform_Sew_B_C",
+    "Class": "BlueprintGeneratedClass'EM/Content/BluePrints/Item/BP_CombatStateChangeComponent.BP_CombatStateChangeComponent_C'",
+    "Template": {
+      "ObjectName": "BP_CombatStateChangeComponent_C'Default__BP_CombatItemBase_C:CombatStateChangeComponent'",
+      "ObjectPath": "EM/Content/BluePrints/Item/BP_CombatItemBase.4"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "BP_FXComponent_C",
+    "Name": "BP_FXComponent",
+    "Outer": "Default__BP_TriggerPlatform_Sew_B_C",
+    "Class": "BlueprintGeneratedClass'EM/Content/BluePrints/Char/BP_FXComponent.BP_FXComponent_C'",
+    "Template": {
+      "ObjectName": "BP_FXComponent_C'Default__BP_CombatItemBase_C:BP_FXComponent'",
+      "ObjectPath": "EM/Content/BluePrints/Item/BP_CombatItemBase.5"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "InheritableComponentHandler",
+    "Name": "InheritableComponentHandler",
+    "Outer": "BP_TriggerPlatform_Sew_B_C",
+    "Class": "UScriptClass'InheritableComponentHandler'",
+    "Flags": "RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Outer": "BP_TriggerPlatform_Sew_B_C",
+    "Class": "UScriptClass'SceneComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BP_TriggerPlatform_Sew_B_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "EM/Content/AssetDesign/Item/Trap/BP_TriggerPlatform_Sew_B.8"
+      },
+      "VariableGuid": "06FAE75B-41F89802-8CB355B3-3E68E92C",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_2",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'BoxComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "BoxComponent'BP_TriggerPlatform_Sew_B_C:CollisionBox_GEN_VARIABLE'",
+        "ObjectPath": "EM/Content/AssetDesign/Item/Trap/BP_TriggerPlatform_Sew_B.3"
+      },
+      "ParentComponentOrVariableName": "DefaultSceneRoot",
+      "ParentComponentOwnerClassName": "BP_CombatItemBase_C",
+      "VariableGuid": "81EE0657-4B2D52ED-89AECF96-C61B9301",
+      "InternalVariableName": "CollisionBox"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_3",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'StaticMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "StaticMeshComponent'BP_TriggerPlatform_Sew_B_C:SM_Sew_Wood_GEN_VARIABLE'",
+        "ObjectPath": "EM/Content/AssetDesign/Item/Trap/BP_TriggerPlatform_Sew_B.22"
+      },
+      "ParentComponentOrVariableName": "DefaultSceneRoot",
+      "ParentComponentOwnerClassName": "BP_CombatItemBase_C",
+      "VariableGuid": "9AE5345F-400969B0-1B7B7EA2-9D6C18F3",
+      "InternalVariableName": "SM_Sew_Wood"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_4",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'StaticMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "StaticMeshComponent'BP_TriggerPlatform_Sew_B_C:SM_Sew_Wood01_GEN_VARIABLE'",
+        "ObjectPath": "EM/Content/AssetDesign/Item/Trap/BP_TriggerPlatform_Sew_B.19"
+      },
+      "ParentComponentOrVariableName": "DefaultSceneRoot",
+      "ParentComponentOwnerClassName": "BP_CombatItemBase_C",
+      "VariableGuid": "DA506E24-43E6C5B2-83F57BBD-FCFC34E9",
+      "InternalVariableName": "SM_Sew_Wood01"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_5",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'StaticMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "StaticMeshComponent'BP_TriggerPlatform_Sew_B_C:SM_Sew_Wood02_GEN_VARIABLE'",
+        "ObjectPath": "EM/Content/AssetDesign/Item/Trap/BP_TriggerPlatform_Sew_B.20"
+      },
+      "ParentComponentOrVariableName": "DefaultSceneRoot",
+      "ParentComponentOwnerClassName": "BP_CombatItemBase_C",
+      "VariableGuid": "53CE5012-4DF89B92-4884B5A9-B1B08C92",
+      "InternalVariableName": "SM_Sew_Wood02"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_6",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'StaticMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "StaticMeshComponent'BP_TriggerPlatform_Sew_B_C:SM_Sew_Wood03_GEN_VARIABLE'",
+        "ObjectPath": "EM/Content/AssetDesign/Item/Trap/BP_TriggerPlatform_Sew_B.21"
+      },
+      "ParentComponentOrVariableName": "DefaultSceneRoot",
+      "ParentComponentOwnerClassName": "BP_CombatItemBase_C",
+      "VariableGuid": "EF6767E8-44AE7B96-192A4ABE-264D9DAD",
+      "InternalVariableName": "SM_Sew_Wood03"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_7",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'StaticMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "StaticMeshComponent'BP_TriggerPlatform_Sew_B_C:SM_Sew_Lad01_GEN_VARIABLE'",
+        "ObjectPath": "EM/Content/AssetDesign/Item/Trap/BP_TriggerPlatform_Sew_B.18"
+      },
+      "ParentComponentOrVariableName": "DefaultSceneRoot",
+      "ParentComponentOwnerClassName": "BP_CombatItemBase_C",
+      "VariableGuid": "3A2DE345-42D2C0C0-7A2F72B9-22109969",
+      "InternalVariableName": "SM_Sew_Lad01"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_9",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'StaticMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "StaticMeshComponent'BP_TriggerPlatform_Sew_B_C:SM_Vil_Wood12_GEN_VARIABLE'",
+        "ObjectPath": "EM/Content/AssetDesign/Item/Trap/BP_TriggerPlatform_Sew_B.23"
+      },
+      "ParentComponentOrVariableName": "DefaultSceneRoot",
+      "ParentComponentOwnerClassName": "BP_CombatItemBase_C",
+      "VariableGuid": "FDE7AF0D-4B3A5397-3C4FC0A4-BA47BB5B",
+      "InternalVariableName": "SM_Vil_Wood12"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Outer": "BP_TriggerPlatform_Sew_B_C",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_TriggerPlatform_Sew_B_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "EM/Content/AssetDesign/Item/Trap/BP_TriggerPlatform_Sew_B.10"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_TriggerPlatform_Sew_B_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectPath": "EM/Content/AssetDesign/Item/Trap/BP_TriggerPlatform_Sew_B.11"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_TriggerPlatform_Sew_B_C:SimpleConstructionScript_0.SCS_Node_4'",
+          "ObjectPath": "EM/Content/AssetDesign/Item/Trap/BP_TriggerPlatform_Sew_B.12"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_TriggerPlatform_Sew_B_C:SimpleConstructionScript_0.SCS_Node_5'",
+          "ObjectPath": "EM/Content/AssetDesign/Item/Trap/BP_TriggerPlatform_Sew_B.13"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_TriggerPlatform_Sew_B_C:SimpleConstructionScript_0.SCS_Node_6'",
+          "ObjectPath": "EM/Content/AssetDesign/Item/Trap/BP_TriggerPlatform_Sew_B.14"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_TriggerPlatform_Sew_B_C:SimpleConstructionScript_0.SCS_Node_7'",
+          "ObjectPath": "EM/Content/AssetDesign/Item/Trap/BP_TriggerPlatform_Sew_B.15"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_TriggerPlatform_Sew_B_C:SimpleConstructionScript_0.SCS_Node_9'",
+          "ObjectPath": "EM/Content/AssetDesign/Item/Trap/BP_TriggerPlatform_Sew_B.16"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_TriggerPlatform_Sew_B_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "EM/Content/AssetDesign/Item/Trap/BP_TriggerPlatform_Sew_B.10"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_TriggerPlatform_Sew_B_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectPath": "EM/Content/AssetDesign/Item/Trap/BP_TriggerPlatform_Sew_B.11"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_TriggerPlatform_Sew_B_C:SimpleConstructionScript_0.SCS_Node_4'",
+          "ObjectPath": "EM/Content/AssetDesign/Item/Trap/BP_TriggerPlatform_Sew_B.12"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_TriggerPlatform_Sew_B_C:SimpleConstructionScript_0.SCS_Node_5'",
+          "ObjectPath": "EM/Content/AssetDesign/Item/Trap/BP_TriggerPlatform_Sew_B.13"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_TriggerPlatform_Sew_B_C:SimpleConstructionScript_0.SCS_Node_6'",
+          "ObjectPath": "EM/Content/AssetDesign/Item/Trap/BP_TriggerPlatform_Sew_B.14"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_TriggerPlatform_Sew_B_C:SimpleConstructionScript_0.SCS_Node_7'",
+          "ObjectPath": "EM/Content/AssetDesign/Item/Trap/BP_TriggerPlatform_Sew_B.15"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_TriggerPlatform_Sew_B_C:SimpleConstructionScript_0.SCS_Node_9'",
+          "ObjectPath": "EM/Content/AssetDesign/Item/Trap/BP_TriggerPlatform_Sew_B.16"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BP_TriggerPlatform_Sew_B_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "EM/Content/AssetDesign/Item/Trap/BP_TriggerPlatform_Sew_B.9"
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "SM_Sew_Lad01_GEN_VARIABLE",
+    "Outer": "BP_TriggerPlatform_Sew_B_C",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'SM_Sew_Lad01'",
+        "ObjectPath": "EM/Content/Asset/Scene/EN002_Haiboliya/Binghucheng/BH_Sew/Mesh/SM_Sew_Lad01.2"
+      },
+      "BodyInstance": {
+        "ObjectType": "ECC_WorldStatic",
+        "CollisionEnabled": "ECollisionEnabled::NoCollision",
+        "CollisionProfileName": "NoCollision",
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "Visibility",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Camera",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "TraceExceptChar",
+              "Response": "ECR_Ignore"
+            }
+          ]
+        }
+      },
+      "RelativeLocation": {
+        "X": 295.6549,
+        "Y": -266.66293,
+        "Z": -6.6090164
+      },
+      "RelativeRotation": {
+        "Pitch": -4.9999833,
+        "Yaw": 5.000089,
+        "Roll": 87.19548
+      },
+      "RelativeScale3D": {
+        "X": 1.505,
+        "Y": 1.505,
+        "Z": 1.505
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "SM_Sew_Wood01_GEN_VARIABLE",
+    "Outer": "BP_TriggerPlatform_Sew_B_C",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'SM_Sew_Wood01'",
+        "ObjectPath": "EM/Content/Asset/Scene/EN002_Haiboliya/Binghucheng/BH_Sew/Mesh/SM_Sew_Wood01.2"
+      },
+      "BodyInstance": {
+        "ObjectType": "ECC_WorldStatic",
+        "CollisionEnabled": "ECollisionEnabled::NoCollision",
+        "CollisionProfileName": "NoCollision",
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "Visibility",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Camera",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "TraceExceptChar",
+              "Response": "ECR_Ignore"
+            }
+          ]
+        }
+      },
+      "RelativeLocation": {
+        "X": 228.00229,
+        "Y": 260.0,
+        "Z": -6.1035156E-05
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": 15.94664,
+        "Roll": 0.0
+      },
+      "RelativeScale3D": {
+        "X": 1.505,
+        "Y": 1.505,
+        "Z": 1.505
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "SM_Sew_Wood02_GEN_VARIABLE",
+    "Outer": "BP_TriggerPlatform_Sew_B_C",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'SM_Sew_Wood01'",
+        "ObjectPath": "EM/Content/Asset/Scene/EN002_Haiboliya/Binghucheng/BH_Sew/Mesh/SM_Sew_Wood01.2"
+      },
+      "BodyInstance": {
+        "ObjectType": "ECC_WorldStatic",
+        "CollisionEnabled": "ECollisionEnabled::NoCollision",
+        "CollisionProfileName": "NoCollision",
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "Visibility",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Camera",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "TraceExceptChar",
+              "Response": "ECR_Ignore"
+            }
+          ]
+        }
+      },
+      "RelativeLocation": {
+        "X": 66.4877,
+        "Y": -386.41205,
+        "Z": 0.0
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": -197.27342,
+        "Roll": 0.0
+      },
+      "RelativeScale3D": {
+        "X": 1.505,
+        "Y": 1.505,
+        "Z": 1.505
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "SM_Sew_Wood03_GEN_VARIABLE",
+    "Outer": "BP_TriggerPlatform_Sew_B_C",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'SM_Sew_Wood02'",
+        "ObjectPath": "EM/Content/Asset/Scene/EN002_Haiboliya/Binghucheng/BH_Sew/Mesh/SM_Sew_Wood02.2"
+      },
+      "BodyInstance": {
+        "ObjectType": "ECC_WorldStatic",
+        "CollisionEnabled": "ECollisionEnabled::NoCollision",
+        "CollisionProfileName": "NoCollision",
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "Visibility",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Camera",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "TraceExceptChar",
+              "Response": "ECR_Ignore"
+            }
+          ]
+        }
+      },
+      "RelativeLocation": {
+        "X": -180.44719,
+        "Y": 143.828,
+        "Z": -30.0
+      },
+      "RelativeRotation": {
+        "Pitch": 3.4150944E-05,
+        "Yaw": 134.32365,
+        "Roll": -64.99937
+      },
+      "RelativeScale3D": {
+        "X": 1.5,
+        "Y": 1.5,
+        "Z": 1.5
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "SM_Sew_Wood_GEN_VARIABLE",
+    "Outer": "BP_TriggerPlatform_Sew_B_C",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'SM_Sew_Wood03'",
+        "ObjectPath": "EM/Content/Asset/Scene/EN002_Haiboliya/Binghucheng/BH_Sew/Mesh/SM_Sew_Wood03.2"
+      },
+      "OverrideMaterials": [
+        null
+      ],
+      "BodyInstance": {
+        "ObjectType": "ECC_WorldStatic",
+        "CollisionEnabled": "ECollisionEnabled::NoCollision",
+        "CollisionProfileName": "NoCollision",
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "Visibility",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Camera",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "TraceExceptChar",
+              "Response": "ECR_Ignore"
+            }
+          ]
+        }
+      },
+      "RelativeLocation": {
+        "X": -358.52823,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "RelativeScale3D": {
+        "X": 1.5,
+        "Y": 1.5,
+        "Z": 1.5
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "SM_Vil_Wood12_GEN_VARIABLE",
+    "Outer": "BP_TriggerPlatform_Sew_B_C",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'SM_Vil_Wood12'",
+        "ObjectPath": "EM/Content/Asset/Scene/EN001_Ailixian/Jingjiedao/JJD_Village/Mesh/SM_Vil_Wood12.2"
+      },
+      "RelativeLocation": {
+        "X": -111.77358,
+        "Y": -72.37331,
+        "Z": 0.0
+      },
+      "RelativeRotation": {
+        "Pitch": 3.511441,
+        "Yaw": 53.679466,
+        "Roll": -5.497511
+      }
+    }
+  }
+]

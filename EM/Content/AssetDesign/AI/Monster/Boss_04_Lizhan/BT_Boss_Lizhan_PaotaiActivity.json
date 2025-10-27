@@ -1,0 +1,197 @@
+[
+  {
+    "Type": "BehaviorTree",
+    "Name": "BT_Boss_Lizhan_PaotaiActivity",
+    "Class": "UScriptClass'BehaviorTree'",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "RootNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Lizhan_PaotaiActivity:BTComposite_Selector_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_04_Lizhan/BT_Boss_Lizhan_PaotaiActivity.3"
+      },
+      "BlackboardAsset": {
+        "ObjectName": "BlackboardData'BB_Boss_Lizhan'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_04_Lizhan/BB_Boss_Lizhan.0"
+      }
+    }
+  },
+  {
+    "Type": "BPServer_BossLizhan_C",
+    "Name": "BPServer_BossLizhan_C_0",
+    "Outer": "BT_Boss_Lizhan_PaotaiActivity",
+    "Class": "BlueprintGeneratedClass'EM/Content/BluePrints/AI/BTServer/BPServer_BossLizhan.BPServer_BossLizhan_C'",
+    "Template": {
+      "ObjectName": "BPServer_BossLizhan_C'Default__BPServer_BossLizhan_C'",
+      "ObjectPath": "EM/Content/BluePrints/AI/BTServer/BPServer_BossLizhan.4"
+    },
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Lizhan_PaotaiActivity'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_04_Lizhan/BT_Boss_Lizhan_PaotaiActivity.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Lizhan_PaotaiActivity:BTComposite_Selector_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_04_Lizhan/BT_Boss_Lizhan_PaotaiActivity.3"
+      }
+    }
+  },
+  {
+    "Type": "BPServer_GetAnimSelector_C",
+    "Name": "BPServer_GetAnimSelector_C_1",
+    "Outer": "BT_Boss_Lizhan_PaotaiActivity",
+    "Class": "BlueprintGeneratedClass'EM/Content/BluePrints/AI/BTServer/BPServer_GetAnimSelector.BPServer_GetAnimSelector_C'",
+    "Template": {
+      "ObjectName": "BPServer_GetAnimSelector_C'Default__BPServer_GetAnimSelector_C'",
+      "ObjectPath": "EM/Content/BluePrints/AI/BTServer/BPServer_GetAnimSelector.3"
+    },
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Interval": 0.02,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Lizhan_PaotaiActivity'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_04_Lizhan/BT_Boss_Lizhan_PaotaiActivity.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Lizhan_PaotaiActivity:BTComposite_Selector_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_04_Lizhan/BT_Boss_Lizhan_PaotaiActivity.3"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_1",
+    "Outer": "BT_Boss_Lizhan_PaotaiActivity",
+    "Class": "UScriptClass'BTComposite_Selector'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector'BT_Boss_Lizhan_PaotaiActivity:BTComposite_Selector_10'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_04_Lizhan/BT_Boss_Lizhan_PaotaiActivity.4"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Boss_Lizhan_PaotaiActivity:BTDecorator_Blackboard_40'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_04_Lizhan/BT_Boss_Lizhan_PaotaiActivity.5"
+            }
+          ],
+          "DecoratorOps": []
+        }
+      ],
+      "Services": [
+        {
+          "ObjectName": "BPServer_GetAnimSelector_C'BT_Boss_Lizhan_PaotaiActivity:BPServer_GetAnimSelector_C_1'",
+          "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_04_Lizhan/BT_Boss_Lizhan_PaotaiActivity.2"
+        },
+        {
+          "ObjectName": "BPServer_BossLizhan_C'BT_Boss_Lizhan_PaotaiActivity:BPServer_BossLizhan_C_0'",
+          "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_04_Lizhan/BT_Boss_Lizhan_PaotaiActivity.1"
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Lizhan_PaotaiActivity'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_04_Lizhan/BT_Boss_Lizhan_PaotaiActivity.0"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_10",
+    "Outer": "BT_Boss_Lizhan_PaotaiActivity",
+    "Class": "UScriptClass'BTComposite_Selector'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_MoveToNextBattlePoint'BT_Boss_Lizhan_PaotaiActivity:BTTask_MoveToNextBattlePoint_2'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_04_Lizhan/BT_Boss_Lizhan_PaotaiActivity.7"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_KillSelf'BT_Boss_Lizhan_PaotaiActivity:BTTask_KillSelf_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_04_Lizhan/BT_Boss_Lizhan_PaotaiActivity.6"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Lizhan_PaotaiActivity'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_04_Lizhan/BT_Boss_Lizhan_PaotaiActivity.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Lizhan_PaotaiActivity:BTComposite_Selector_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_04_Lizhan/BT_Boss_Lizhan_PaotaiActivity.3"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_40",
+    "Outer": "BT_Boss_Lizhan_PaotaiActivity",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "CachedDescription": "ActionMode 等于 Active",
+      "BlackboardKey": {
+        "SelectedKeyName": "ActionMode"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::Self",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Lizhan_PaotaiActivity'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_04_Lizhan/BT_Boss_Lizhan_PaotaiActivity.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Lizhan_PaotaiActivity:BTComposite_Selector_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_04_Lizhan/BT_Boss_Lizhan_PaotaiActivity.3"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_KillSelf",
+    "Name": "BTTask_KillSelf_0",
+    "Outer": "BT_Boss_Lizhan_PaotaiActivity",
+    "Class": "UScriptClass'BTTask_KillSelf'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "NormalDeath": true,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Lizhan_PaotaiActivity'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_04_Lizhan/BT_Boss_Lizhan_PaotaiActivity.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Lizhan_PaotaiActivity:BTComposite_Selector_10'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_04_Lizhan/BT_Boss_Lizhan_PaotaiActivity.4"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_MoveToNextBattlePoint",
+    "Name": "BTTask_MoveToNextBattlePoint_2",
+    "Outer": "BT_Boss_Lizhan_PaotaiActivity",
+    "Class": "UScriptClass'BTTask_MoveToNextBattlePoint'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "bReachTestIncludesAgentRadius": true,
+      "bOrientRotationToMovement": true,
+      "NodeName": "MoveToNextBattlePoint",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Lizhan_PaotaiActivity'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_04_Lizhan/BT_Boss_Lizhan_PaotaiActivity.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Lizhan_PaotaiActivity:BTComposite_Selector_10'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_04_Lizhan/BT_Boss_Lizhan_PaotaiActivity.4"
+      }
+    }
+  }
+]

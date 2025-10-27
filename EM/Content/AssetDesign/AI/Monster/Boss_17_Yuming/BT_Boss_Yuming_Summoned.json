@@ -1,0 +1,59 @@
+[
+  {
+    "Type": "BehaviorTree",
+    "Name": "BT_Boss_Yuming_Summoned",
+    "Class": "UScriptClass'BehaviorTree'",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "RootNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Yuming_Summoned:BTComposite_Selector_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_17_Yuming/BT_Boss_Yuming_Summoned.1"
+      },
+      "BlackboardAsset": {
+        "ObjectName": "BlackboardData'BB_Shuimu_Summoned'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Shuimu/BB_Shuimu_Summoned.0"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_1",
+    "Outer": "BT_Boss_Yuming_Summoned",
+    "Class": "UScriptClass'BTComposite_Selector'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait'BT_Boss_Yuming_Summoned:BTTask_Wait_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_17_Yuming/BT_Boss_Yuming_Summoned.2"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Yuming_Summoned'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_17_Yuming/BT_Boss_Yuming_Summoned.0"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_0",
+    "Outer": "BT_Boss_Yuming_Summoned",
+    "Class": "UScriptClass'BTTask_Wait'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Yuming_Summoned'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_17_Yuming/BT_Boss_Yuming_Summoned.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Yuming_Summoned:BTComposite_Selector_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_17_Yuming/BT_Boss_Yuming_Summoned.1"
+      }
+    }
+  }
+]

@@ -1,0 +1,84 @@
+[
+  {
+    "Type": "BehaviorTree",
+    "Name": "BT_Block_Test",
+    "Class": "UScriptClass'BehaviorTree'",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "RootNode": {
+        "ObjectName": "BTComposite_Selector'BT_Block_Test:BTComposite_Selector_11'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/BT_Block_Test.1"
+      },
+      "BlackboardAsset": {
+        "ObjectName": "BlackboardData'BB_Mon_Parent_Ranged'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Parent/BB_Mon_Parent_Ranged.0"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_11",
+    "Outer": "BT_Block_Test",
+    "Class": "UScriptClass'BTComposite_Selector'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_UseSkill'BT_Block_Test:BTTask_UseSkill_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/BT_Block_Test.3"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Loop'BT_Block_Test:BTDecorator_Loop_0'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/BT_Block_Test.2"
+            }
+          ],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Block_Test'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/BT_Block_Test.0"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Loop",
+    "Name": "BTDecorator_Loop_0",
+    "Outer": "BT_Block_Test",
+    "Class": "UScriptClass'BTDecorator_Loop'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "bInfiniteLoop": true,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Block_Test'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/BT_Block_Test.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Block_Test:BTComposite_Selector_11'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/BT_Block_Test.1"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_UseSkill",
+    "Name": "BTTask_UseSkill_0",
+    "Outer": "BT_Block_Test",
+    "Class": "UScriptClass'BTTask_UseSkill'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "EnableAimOffset": true,
+      "ContinueTime": 0.47,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Block_Test'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/BT_Block_Test.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Block_Test:BTComposite_Selector_11'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/BT_Block_Test.1"
+      }
+    }
+  }
+]

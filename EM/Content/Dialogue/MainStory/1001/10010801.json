@@ -1,0 +1,162 @@
+[
+  {
+    "Type": "DialogueAsset",
+    "Name": "10010801",
+    "Class": "UScriptClass'DialogueAsset'",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TalkId": 100108,
+      "SpeakNpcIds": [
+        100003,
+        100001
+      ],
+      "Nodes": null
+    }
+  },
+  {
+    "Type": "FlowNode_Dialogue",
+    "Name": "FlowNode_Dialogue_0",
+    "Outer": "10010801",
+    "Class": "UScriptClass'FlowNode_Dialogue'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "DialogueData": [
+        {
+          "DialogueId": 10018901
+        },
+        {
+          "DialogueId": 10018902
+        },
+        {
+          "DialogueId": 10018903
+        },
+        {
+          "DialogueId": 10018904
+        }
+      ],
+      "DialogueSetting": [
+        {
+          "Key": "10018901",
+          "Value": {}
+        },
+        {
+          "Key": "10018902",
+          "Value": {}
+        },
+        {
+          "Key": "10018903",
+          "Value": {}
+        },
+        {
+          "Key": "10018904",
+          "Value": {}
+        }
+      ],
+      "GraphNode": null,
+      "NodeGuid": "F21F654F-4DEA059D-B91614BF-090E7AAB",
+      "Connections": [
+        {
+          "Key": "End",
+          "Value": {
+            "NodeGuid": "88B4F3E1-4D3723D3-090178A7-DEDF4154",
+            "PinName": "In"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "Type": "FlowNode_Dialogue",
+    "Name": "FlowNode_Dialogue_1",
+    "Outer": "10010801",
+    "Class": "UScriptClass'FlowNode_Dialogue'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "DialogueData": [
+        {
+          "DialogueId": 10010801
+        },
+        {
+          "DialogueId": 10010802
+        }
+      ],
+      "DialogueSetting": [
+        {
+          "Key": "10010801",
+          "Value": {}
+        },
+        {
+          "Key": "10010802",
+          "Value": {}
+        }
+      ],
+      "GraphNode": null,
+      "NodeGuid": "0457A82D-4356B345-2D32D59A-5753DE36",
+      "Connections": [
+        {
+          "Key": "End",
+          "Value": {
+            "NodeGuid": "6E3F51CC-4EF11B6E-6719CFA7-4F583B7D",
+            "PinName": "Start"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "Type": "FlowNode_SelectGun",
+    "Name": "FlowNode_SelectGun_0",
+    "Outer": "10010801",
+    "Class": "UScriptClass'FlowNode_SelectGun'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "CameraSequence": {
+        "ObjectName": "LevelSequence'Gun'",
+        "ObjectPath": "EM/Content/AssetDesign/Story/Sequence/1001CunZhuang/Gun.2"
+      },
+      "SelectGunsMark": "SelectGuns",
+      "GraphNode": null,
+      "NodeGuid": "6E3F51CC-4EF11B6E-6719CFA7-4F583B7D",
+      "Connections": [
+        {
+          "Key": "End",
+          "Value": {
+            "NodeGuid": "F21F654F-4DEA059D-B91614BF-090E7AAB",
+            "PinName": "Start"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "Type": "FlowNode_Start",
+    "Name": "FlowNode_Start_0",
+    "Outer": "10010801",
+    "Class": "UScriptClass'FlowNode_Start'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "GraphNode": null,
+      "NodeGuid": "000C6AC3-4A246BED-E06E5586-53D66BF3",
+      "Connections": [
+        {
+          "Key": "Out",
+          "Value": {
+            "NodeGuid": "0457A82D-4356B345-2D32D59A-5753DE36",
+            "PinName": "Start"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "Type": "FlowNode_TalkFinish",
+    "Name": "FlowNode_TalkFinish_0",
+    "Outer": "10010801",
+    "Class": "UScriptClass'FlowNode_TalkFinish'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "GraphNode": null,
+      "NodeGuid": "88B4F3E1-4D3723D3-090178A7-DEDF4154"
+    }
+  }
+]

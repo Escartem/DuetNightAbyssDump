@@ -1,0 +1,123 @@
+[
+  {
+    "Type": "BehaviorTree",
+    "Name": "BT_Npc_Cat_Home_PlayIdle",
+    "Class": "UScriptClass'BehaviorTree'",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "RootNode": {
+        "ObjectName": "BTComposite_Selector'BT_Npc_Cat_Home_PlayIdle:BTComposite_Selector_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Cat_Home/BT_Npc_Cat_Home_PlayIdle.2"
+      },
+      "BlackboardAsset": {
+        "ObjectName": "BlackboardData'BB_Npc_Cat_Home'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Cat_Home/BB_Npc_Cat_Home.0"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Rate",
+    "Name": "BTComposite_Rate_0",
+    "Outer": "BT_Npc_Cat_Home_PlayIdle",
+    "Class": "UScriptClass'BTComposite_Rate'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Rates": [
+        1,
+        1
+      ],
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_PlayNPCPatrolAnim'BT_Npc_Cat_Home_PlayIdle:BTTask_PlayNPCPatrolAnim_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Cat_Home/BT_Npc_Cat_Home_PlayIdle.3"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_PlayNPCPatrolAnim'BT_Npc_Cat_Home_PlayIdle:BTTask_PlayNPCPatrolAnim_1'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Cat_Home/BT_Npc_Cat_Home_PlayIdle.4"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_Cat_Home_PlayIdle'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Cat_Home/BT_Npc_Cat_Home_PlayIdle.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Npc_Cat_Home_PlayIdle:BTComposite_Selector_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Cat_Home/BT_Npc_Cat_Home_PlayIdle.2"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_0",
+    "Outer": "BT_Npc_Cat_Home_PlayIdle",
+    "Class": "UScriptClass'BTComposite_Selector'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Rate'BT_Npc_Cat_Home_PlayIdle:BTComposite_Rate_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Cat_Home/BT_Npc_Cat_Home_PlayIdle.1"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_Cat_Home_PlayIdle'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Cat_Home/BT_Npc_Cat_Home_PlayIdle.0"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_PlayNPCPatrolAnim",
+    "Name": "BTTask_PlayNPCPatrolAnim_0",
+    "Outer": "BT_Npc_Cat_Home_PlayIdle",
+    "Class": "UScriptClass'BTTask_PlayNPCPatrolAnim'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Mode": "EPlayAnimMode::OverridePatrolMontageID",
+      "MontageID": "SpecialIdle01",
+      "ContinueTime": 0.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_Cat_Home_PlayIdle'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Cat_Home/BT_Npc_Cat_Home_PlayIdle.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Rate'BT_Npc_Cat_Home_PlayIdle:BTComposite_Rate_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Cat_Home/BT_Npc_Cat_Home_PlayIdle.1"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_PlayNPCPatrolAnim",
+    "Name": "BTTask_PlayNPCPatrolAnim_1",
+    "Outer": "BT_Npc_Cat_Home_PlayIdle",
+    "Class": "UScriptClass'BTTask_PlayNPCPatrolAnim'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Mode": "EPlayAnimMode::OverridePatrolMontageID",
+      "MontageID": "SpecialIdle02",
+      "ContinueTime": 0.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_Cat_Home_PlayIdle'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Cat_Home/BT_Npc_Cat_Home_PlayIdle.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Rate'BT_Npc_Cat_Home_PlayIdle:BTComposite_Rate_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Cat_Home/BT_Npc_Cat_Home_PlayIdle.1"
+      }
+    }
+  }
+]

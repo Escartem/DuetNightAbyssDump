@@ -1,0 +1,489 @@
+[
+  {
+    "Type": "BehaviorTree",
+    "Name": "BT_Npc_Miner",
+    "Class": "UScriptClass'BehaviorTree'",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "RootNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Npc_Miner:BTComposite_Sequence_9'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Miner/BT_Npc_Miner.6"
+      },
+      "BlackboardAsset": {
+        "ObjectName": "BlackboardData'BB_Npc_Miner'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Miner/BB_Npc_Miner.0"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_4",
+    "Outer": "BT_Npc_Miner",
+    "Class": "UScriptClass'BTComposite_Selector'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_Npc_Miner:BTComposite_Sequence_36'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Miner/BT_Npc_Miner.4"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Npc_Miner:BTDecorator_Blackboard_17'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Miner/BT_Npc_Miner.8"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_Npc_Miner:BTComposite_Sequence_35'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Miner/BT_Npc_Miner.3"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Npc_Miner:BTDecorator_Blackboard_16'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Miner/BT_Npc_Miner.7"
+            }
+          ],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_Miner'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Miner/BT_Npc_Miner.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Npc_Miner:BTComposite_Sequence_9'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Miner/BT_Npc_Miner.6"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_31",
+    "Outer": "BT_Npc_Miner",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_GetPatrolLoc'BT_Npc_Miner:BTTask_GetPatrolLoc_9'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Miner/BT_Npc_Miner.12"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_NewMoveTo'BT_Npc_Miner:BTTask_NewMoveTo_8'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Miner/BT_Npc_Miner.14"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_Miner'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Miner/BT_Npc_Miner.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Npc_Miner:BTComposite_Sequence_35'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Miner/BT_Npc_Miner.3"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_35",
+    "Outer": "BT_Npc_Miner",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_Npc_Miner:BTComposite_Sequence_31'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Miner/BT_Npc_Miner.2"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_ClearKey'BT_Npc_Miner:BTTask_ClearKey_8'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Miner/BT_Npc_Miner.9"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_PostBehaviorEvent'BT_Npc_Miner:BTTask_PostBehaviorEvent_8'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Miner/BT_Npc_Miner.16"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_Miner'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Miner/BT_Npc_Miner.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Npc_Miner:BTComposite_Selector_4'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Miner/BT_Npc_Miner.1"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_36",
+    "Outer": "BT_Npc_Miner",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_Npc_Miner:BTComposite_Sequence_37'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Miner/BT_Npc_Miner.5"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_ClearKey'BT_Npc_Miner:BTTask_ClearKey_9'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Miner/BT_Npc_Miner.10"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_PostBehaviorEvent'BT_Npc_Miner:BTTask_PostBehaviorEvent_9'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Miner/BT_Npc_Miner.17"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_Miner'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Miner/BT_Npc_Miner.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Npc_Miner:BTComposite_Selector_4'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Miner/BT_Npc_Miner.1"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_37",
+    "Outer": "BT_Npc_Miner",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_GetPatrolLoc'BT_Npc_Miner:BTTask_GetPatrolLoc_8'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Miner/BT_Npc_Miner.11"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_NewMoveTo'BT_Npc_Miner:BTTask_NewMoveTo_10'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Miner/BT_Npc_Miner.13"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_Miner'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Miner/BT_Npc_Miner.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Npc_Miner:BTComposite_Sequence_36'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Miner/BT_Npc_Miner.4"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_9",
+    "Outer": "BT_Npc_Miner",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_NpcGetTarget'BT_Npc_Miner:BTTask_NpcGetTarget_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Miner/BT_Npc_Miner.15"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector'BT_Npc_Miner:BTComposite_Selector_4'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Miner/BT_Npc_Miner.1"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_Miner'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Miner/BT_Npc_Miner.0"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_16",
+    "Outer": "BT_Npc_Miner",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "StringValue": "Goto2",
+      "CachedDescription": "QuestEvent 为相等 [Goto2]",
+      "BlackboardKey": {
+        "SelectedKeyName": "QuestEvent"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_Miner'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Miner/BT_Npc_Miner.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Npc_Miner:BTComposite_Selector_4'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Miner/BT_Npc_Miner.1"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_17",
+    "Outer": "BT_Npc_Miner",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "StringValue": "Goto1",
+      "CachedDescription": "QuestEvent 为相等 [Goto1]",
+      "BlackboardKey": {
+        "SelectedKeyName": "QuestEvent"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_Miner'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Miner/BT_Npc_Miner.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Npc_Miner:BTComposite_Selector_4'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Miner/BT_Npc_Miner.1"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_ClearKey",
+    "Name": "BTTask_ClearKey_8",
+    "Outer": "BT_Npc_Miner",
+    "Class": "UScriptClass'BTTask_ClearKey'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "BlackboadKeyName": "QuestEvent",
+      "BlackboardKey": {
+        "SelectedKeyName": "QuestEvent"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_Miner'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Miner/BT_Npc_Miner.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Npc_Miner:BTComposite_Sequence_35'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Miner/BT_Npc_Miner.3"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_ClearKey",
+    "Name": "BTTask_ClearKey_9",
+    "Outer": "BT_Npc_Miner",
+    "Class": "UScriptClass'BTTask_ClearKey'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "BlackboadKeyName": "QuestEvent",
+      "BlackboardKey": {
+        "SelectedKeyName": "QuestEvent"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_Miner'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Miner/BT_Npc_Miner.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Npc_Miner:BTComposite_Sequence_36'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Miner/BT_Npc_Miner.4"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_GetPatrolLoc",
+    "Name": "BTTask_GetPatrolLoc_8",
+    "Outer": "BT_Npc_Miner",
+    "Class": "UScriptClass'BTTask_GetPatrolLoc'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_Miner'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Miner/BT_Npc_Miner.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Npc_Miner:BTComposite_Sequence_37'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Miner/BT_Npc_Miner.5"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_GetPatrolLoc",
+    "Name": "BTTask_GetPatrolLoc_9",
+    "Outer": "BT_Npc_Miner",
+    "Class": "UScriptClass'BTTask_GetPatrolLoc'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_Miner'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Miner/BT_Npc_Miner.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Npc_Miner:BTComposite_Sequence_31'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Miner/BT_Npc_Miner.2"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_NewMoveTo",
+    "Name": "BTTask_NewMoveTo_10",
+    "Outer": "BT_Npc_Miner",
+    "Class": "UScriptClass'BTTask_NewMoveTo'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "bUseControllerRotationYaw": true,
+      "bOrientRotationToMovement": true,
+      "HighPointDistance": 300.0,
+      "MaxSpeed": 500.0,
+      "MaxAcceleration": 99999.0,
+      "bStopOnOverlapNeedsUpdate": false,
+      "BlackboardKey": {
+        "SelectedKeyName": "PatrolLoc"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_Miner'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Miner/BT_Npc_Miner.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Npc_Miner:BTComposite_Sequence_37'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Miner/BT_Npc_Miner.5"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_NewMoveTo",
+    "Name": "BTTask_NewMoveTo_8",
+    "Outer": "BT_Npc_Miner",
+    "Class": "UScriptClass'BTTask_NewMoveTo'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "bUseControllerRotationYaw": true,
+      "bOrientRotationToMovement": true,
+      "HighPointDistance": 300.0,
+      "MaxSpeed": 500.0,
+      "MaxAcceleration": 99999.0,
+      "bStopOnOverlapNeedsUpdate": false,
+      "BlackboardKey": {
+        "SelectedKeyName": "PatrolLoc"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_Miner'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Miner/BT_Npc_Miner.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Npc_Miner:BTComposite_Sequence_31'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Miner/BT_Npc_Miner.2"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_NpcGetTarget",
+    "Name": "BTTask_NpcGetTarget_0",
+    "Outer": "BT_Npc_Miner",
+    "Class": "UScriptClass'BTTask_NpcGetTarget'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_Miner'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Miner/BT_Npc_Miner.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Npc_Miner:BTComposite_Sequence_9'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Miner/BT_Npc_Miner.6"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_PostBehaviorEvent",
+    "Name": "BTTask_PostBehaviorEvent_8",
+    "Outer": "BT_Npc_Miner",
+    "Class": "UScriptClass'BTTask_PostBehaviorEvent'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "EventName": "End2",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_Miner'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Miner/BT_Npc_Miner.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Npc_Miner:BTComposite_Sequence_35'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Miner/BT_Npc_Miner.3"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_PostBehaviorEvent",
+    "Name": "BTTask_PostBehaviorEvent_9",
+    "Outer": "BT_Npc_Miner",
+    "Class": "UScriptClass'BTTask_PostBehaviorEvent'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "EventName": "End1",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_Miner'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Miner/BT_Npc_Miner.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Npc_Miner:BTComposite_Sequence_36'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Miner/BT_Npc_Miner.4"
+      }
+    }
+  }
+]

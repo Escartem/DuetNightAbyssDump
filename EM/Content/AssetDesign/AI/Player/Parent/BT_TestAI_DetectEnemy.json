@@ -1,0 +1,160 @@
+[
+  {
+    "Type": "BehaviorTree",
+    "Name": "BT_TestAI_DetectEnemy",
+    "Class": "UScriptClass'BehaviorTree'",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "RootNode": {
+        "ObjectName": "BTComposite_Sequence'BT_TestAI_DetectEnemy:BTComposite_Sequence_10'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Parent/BT_TestAI_DetectEnemy.1"
+      },
+      "BlackboardAsset": {
+        "ObjectName": "BlackboardData'BB_Shadow'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Parent/BB_Shadow.0"
+      },
+      "RootDecorators": [
+        {
+          "ObjectName": "BTDecorator_Blackboard'BT_TestAI_DetectEnemy:BTDecorator_Blackboard_0'",
+          "ObjectPath": "EM/Content/AssetDesign/AI/Player/Parent/BT_TestAI_DetectEnemy.2"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_10",
+    "Outer": "BT_TestAI_DetectEnemy",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_FilterTargetsByDis'BT_TestAI_DetectEnemy:BTTask_FilterTargetsByDis_1'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Parent/BT_TestAI_DetectEnemy.4"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_LastFilterTargetsByNum_P'BT_TestAI_DetectEnemy:BTTask_LastFilterTargetsByNum_P_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Parent/BT_TestAI_DetectEnemy.5"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_SetPartAsTarget'BT_TestAI_DetectEnemy:BTTask_SetPartAsTarget_2'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Parent/BT_TestAI_DetectEnemy.6"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_ForceSuccess'BT_TestAI_DetectEnemy:BTDecorator_ForceSuccess_0'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Player/Parent/BT_TestAI_DetectEnemy.3"
+            }
+          ],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_TestAI_DetectEnemy'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Parent/BT_TestAI_DetectEnemy.0"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_0",
+    "Outer": "BT_TestAI_DetectEnemy",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "CachedDescription": "Target is Is Not Set",
+      "OperationType": 1,
+      "BlackboardKey": {
+        "SelectedKeyName": "Target"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_TestAI_DetectEnemy'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Parent/BT_TestAI_DetectEnemy.0"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_ForceSuccess",
+    "Name": "BTDecorator_ForceSuccess_0",
+    "Outer": "BT_TestAI_DetectEnemy",
+    "Class": "UScriptClass'BTDecorator_ForceSuccess'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_TestAI_DetectEnemy'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Parent/BT_TestAI_DetectEnemy.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_TestAI_DetectEnemy:BTComposite_Sequence_10'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Parent/BT_TestAI_DetectEnemy.1"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_FilterTargetsByDis",
+    "Name": "BTTask_FilterTargetsByDis_1",
+    "Outer": "BT_TestAI_DetectEnemy",
+    "Class": "UScriptClass'BTTask_FilterTargetsByDis'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "MaxDis": 2000.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_TestAI_DetectEnemy'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Parent/BT_TestAI_DetectEnemy.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_TestAI_DetectEnemy:BTComposite_Sequence_10'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Parent/BT_TestAI_DetectEnemy.1"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_LastFilterTargetsByNum_P",
+    "Name": "BTTask_LastFilterTargetsByNum_P_0",
+    "Outer": "BT_TestAI_DetectEnemy",
+    "Class": "UScriptClass'BTTask_LastFilterTargetsByNum_P'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Radius": 600.0,
+      "TypeOfFilterList": "ETypeOfFilterList::AfterFilter",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_TestAI_DetectEnemy'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Parent/BT_TestAI_DetectEnemy.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_TestAI_DetectEnemy:BTComposite_Sequence_10'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Parent/BT_TestAI_DetectEnemy.1"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_SetPartAsTarget",
+    "Name": "BTTask_SetPartAsTarget_2",
+    "Outer": "BT_TestAI_DetectEnemy",
+    "Class": "UScriptClass'BTTask_SetPartAsTarget'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_TestAI_DetectEnemy'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Parent/BT_TestAI_DetectEnemy.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_TestAI_DetectEnemy:BTComposite_Sequence_10'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Parent/BT_TestAI_DetectEnemy.1"
+      }
+    }
+  }
+]

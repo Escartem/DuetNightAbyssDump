@@ -1,0 +1,4112 @@
+[
+  {
+    "Type": "BehaviorTree",
+    "Name": "BT_Boss_Xibi_Hard_BackUp",
+    "Class": "UScriptClass'BehaviorTree'",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "RootNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Xibi_Hard_BackUp:BTComposite_Selector_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.7"
+      },
+      "BlackboardAsset": {
+        "ObjectName": "BlackboardData'BB_Boss_Xibi'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BB_Boss_Xibi.0"
+      }
+    }
+  },
+  {
+    "Type": "BPServer_BossXibi_Story_C",
+    "Name": "BPServer_BossHekadi_C_0",
+    "Outer": "BT_Boss_Xibi_Hard_BackUp",
+    "Class": "BlueprintGeneratedClass'EM/Content/BluePrints/AI/BTServer/BPServer_BossXibi_Story.BPServer_BossXibi_Story_C'",
+    "Template": {
+      "ObjectName": "BPServer_BossXibi_Story_C'Default__BPServer_BossXibi_Story_C'",
+      "ObjectPath": "EM/Content/BluePrints/AI/BTServer/BPServer_BossXibi_Story.3"
+    },
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Interval": 0.1,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Hard_BackUp'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Xibi_Hard_BackUp:BTComposite_Selector_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.7"
+      }
+    }
+  },
+  {
+    "Type": "BPServer_GetAnimSelector_C",
+    "Name": "BPServer_GetAnimSelector_C_2",
+    "Outer": "BT_Boss_Xibi_Hard_BackUp",
+    "Class": "BlueprintGeneratedClass'EM/Content/BluePrints/AI/BTServer/BPServer_GetAnimSelector.BPServer_GetAnimSelector_C'",
+    "Template": {
+      "ObjectName": "BPServer_GetAnimSelector_C'Default__BPServer_GetAnimSelector_C'",
+      "ObjectPath": "EM/Content/BluePrints/AI/BTServer/BPServer_GetAnimSelector.3"
+    },
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Interval": 0.1,
+      "RandomDeviation": 0.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Hard_BackUp'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Xibi_Hard_BackUp:BTComposite_Selector_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.7"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Rate",
+    "Name": "BTComposite_Rate_0",
+    "Outer": "BT_Boss_Xibi_Hard_BackUp",
+    "Class": "UScriptClass'BTComposite_Rate'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Rates": [
+        2,
+        1
+      ],
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_UseSkill'BT_Boss_Xibi_Hard_BackUp:BTTask_UseSkill_7'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.132"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_Boss_Xibi_Hard_BackUp:BTComposite_Sequence_15'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.23"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Hard_BackUp'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Xibi_Hard_BackUp:BTComposite_Selector_2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.8"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Rate",
+    "Name": "BTComposite_Rate_1",
+    "Outer": "BT_Boss_Xibi_Hard_BackUp",
+    "Class": "UScriptClass'BTComposite_Rate'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Rates": [
+        2,
+        1
+      ],
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector'BT_Boss_Xibi_Hard_BackUp:BTComposite_Selector_6'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.12"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_Boss_Xibi_Hard_BackUp:BTComposite_Sequence_2'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.28"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Hard_BackUp'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Xibi_Hard_BackUp:BTComposite_Selector_4'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.10"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Rate",
+    "Name": "BTComposite_Rate_2",
+    "Outer": "BT_Boss_Xibi_Hard_BackUp",
+    "Class": "UScriptClass'BTComposite_Rate'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Rates": [
+        1,
+        4,
+        3
+      ],
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_UseSkill'BT_Boss_Xibi_Hard_BackUp:BTTask_UseSkill_20'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.124"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_UseSkill'BT_Boss_Xibi_Hard_BackUp:BTTask_UseSkill_25'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.127"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_Boss_Xibi_Hard_BackUp:BTComposite_Sequence_23'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.32"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Hard_BackUp'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Xibi_Hard_BackUp:BTComposite_Selector_7'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.13"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_0",
+    "Outer": "BT_Boss_Xibi_Hard_BackUp",
+    "Class": "UScriptClass'BTComposite_Selector'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_Boss_Xibi_Hard_BackUp:BTComposite_Sequence_11'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.19"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Boss_Xibi_Hard_BackUp:BTDecorator_Blackboard_4'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.64"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_Boss_Xibi_Hard_BackUp:BTComposite_Sequence_4'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.37"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Boss_Xibi_Hard_BackUp:BTDecorator_Blackboard_5'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.65"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_Boss_Xibi_Hard_BackUp:BTComposite_Sequence_5'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.38"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Boss_Xibi_Hard_BackUp:BTDecorator_Blackboard_7'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.66"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_Boss_Xibi_Hard_BackUp:BTComposite_Sequence_6'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.39"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Boss_Xibi_Hard_BackUp:BTDecorator_Blackboard_8'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.67"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_Boss_Xibi_Hard_BackUp:BTComposite_Sequence_8'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.41"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Boss_Xibi_Hard_BackUp:BTDecorator_Blackboard_9'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.68"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_Boss_Xibi_Hard_BackUp:BTComposite_Sequence_9'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.42"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Boss_Xibi_Hard_BackUp:BTDecorator_Blackboard_10'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.45"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_Boss_Xibi_Hard_BackUp:BTComposite_Sequence_10'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.18"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Boss_Xibi_Hard_BackUp:BTDecorator_Blackboard_24'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.56"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_Boss_Xibi_Hard_BackUp:BTComposite_Sequence_1'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.17"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Boss_Xibi_Hard_BackUp:BTDecorator_Blackboard_11'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.46"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_Boss_Xibi_Hard_BackUp:BTComposite_Sequence_12'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.20"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Boss_Xibi_Hard_BackUp:BTDecorator_Blackboard_15'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.48"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_Boss_Xibi_Hard_BackUp:BTComposite_Sequence_14'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.22"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Boss_Xibi_Hard_BackUp:BTDecorator_Blackboard_25'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.57"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_Boss_Xibi_Hard_BackUp:BTComposite_Sequence_20'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.29"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Boss_Xibi_Hard_BackUp:BTDecorator_Blackboard_16'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.49"
+            }
+          ],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Hard_BackUp'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Xibi_Hard_BackUp:BTComposite_Sequence_3'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.36"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_1",
+    "Outer": "BT_Boss_Xibi_Hard_BackUp",
+    "Class": "UScriptClass'BTComposite_Selector'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector'BT_Boss_Xibi_Hard_BackUp:BTComposite_Selector_3'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.9"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Boss_Xibi_Hard_BackUp:BTDecorator_Blackboard_20'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.53"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait'BT_Boss_Xibi_Hard_BackUp:BTTask_Wait_1'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.134"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Boss_Xibi_Hard_BackUp:BTDecorator_Blackboard_17'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.50"
+            }
+          ],
+          "DecoratorOps": []
+        }
+      ],
+      "Services": [
+        {
+          "ObjectName": "BPServer_BossXibi_Story_C'BT_Boss_Xibi_Hard_BackUp:BPServer_BossHekadi_C_0'",
+          "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.1"
+        },
+        {
+          "ObjectName": "BPServer_GetAnimSelector_C'BT_Boss_Xibi_Hard_BackUp:BPServer_GetAnimSelector_C_2'",
+          "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.2"
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Hard_BackUp'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.0"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_2",
+    "Outer": "BT_Boss_Xibi_Hard_BackUp",
+    "Class": "UScriptClass'BTComposite_Selector'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_UseSkill'BT_Boss_Xibi_Hard_BackUp:BTTask_UseSkill_17'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.122"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Boss_Xibi_Hard_BackUp:BTDecorator_Blackboard_0'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.43"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Rate'BT_Boss_Xibi_Hard_BackUp:BTComposite_Rate_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.3"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Hard_BackUp'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Xibi_Hard_BackUp:BTComposite_Sequence_13'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.21"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_3",
+    "Outer": "BT_Boss_Xibi_Hard_BackUp",
+    "Class": "UScriptClass'BTComposite_Selector'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector'BT_Boss_Xibi_Hard_BackUp:BTComposite_Selector_8'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.14"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Boss_Xibi_Hard_BackUp:BTDecorator_Blackboard_22'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.55"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_Boss_Xibi_Hard_BackUp:BTComposite_Sequence_3'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.36"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Boss_Xibi_Hard_BackUp:BTDecorator_Blackboard_21'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.54"
+            }
+          ],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Hard_BackUp'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Xibi_Hard_BackUp:BTComposite_Selector_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.7"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_4",
+    "Outer": "BT_Boss_Xibi_Hard_BackUp",
+    "Class": "UScriptClass'BTComposite_Selector'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_Boss_Xibi_Hard_BackUp:BTComposite_Sequence_18'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.26"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Boss_Xibi_Hard_BackUp:BTDecorator_Blackboard_26'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.58"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_Boss_Xibi_Hard_BackUp:BTComposite_Sequence_24'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.33"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Boss_Xibi_Hard_BackUp:BTDecorator_Blackboard_2'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.52"
+            },
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Boss_Xibi_Hard_BackUp:BTDecorator_Blackboard_3'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.60"
+            }
+          ],
+          "DecoratorOps": [
+            {
+              "Operation": "EBTDecoratorLogic::Or",
+              "Number": 2
+            },
+            {
+              "Operation": "EBTDecoratorLogic::Test",
+              "Number": 0
+            },
+            {
+              "Operation": "EBTDecoratorLogic::Test",
+              "Number": 1
+            }
+          ]
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_Boss_Xibi_Hard_BackUp:BTComposite_Sequence_13'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.21"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Boss_Xibi_Hard_BackUp:BTDecorator_Blackboard_12'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.47"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Rate'BT_Boss_Xibi_Hard_BackUp:BTComposite_Rate_1'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.4"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Boss_Xibi_Hard_BackUp:BTDecorator_Blackboard_32'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.62"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector'BT_Boss_Xibi_Hard_BackUp:BTComposite_Selector_7'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.13"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Boss_Xibi_Hard_BackUp:BTDecorator_Blackboard_33'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.63"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_Boss_Xibi_Hard_BackUp:BTComposite_Sequence_17'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.25"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Hard_BackUp'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Xibi_Hard_BackUp:BTComposite_Sequence_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.16"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_5",
+    "Outer": "BT_Boss_Xibi_Hard_BackUp",
+    "Class": "UScriptClass'BTComposite_Selector'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_Boss_Xibi_Hard_BackUp:BTComposite_Sequence_19'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.27"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait'BT_Boss_Xibi_Hard_BackUp:BTTask_Wait_13'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.137"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Hard_BackUp'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Xibi_Hard_BackUp:BTComposite_Sequence_18'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.26"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_6",
+    "Outer": "BT_Boss_Xibi_Hard_BackUp",
+    "Class": "UScriptClass'BTComposite_Selector'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_UseSkill'BT_Boss_Xibi_Hard_BackUp:BTTask_UseSkill_16'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.121"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_TargetLocCondition'BT_Boss_Xibi_Hard_BackUp:BTDecorator_TargetLocCondition_0'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.76"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_UseSkill'BT_Boss_Xibi_Hard_BackUp:BTTask_UseSkill_11'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.116"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Hard_BackUp'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Rate'BT_Boss_Xibi_Hard_BackUp:BTComposite_Rate_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.4"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_7",
+    "Outer": "BT_Boss_Xibi_Hard_BackUp",
+    "Class": "UScriptClass'BTComposite_Selector'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_Boss_Xibi_Hard_BackUp:BTComposite_Sequence_22'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.31"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Boss_Xibi_Hard_BackUp:BTDecorator_Blackboard_27'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.59"
+            },
+            {
+              "ObjectName": "BTDecorator_Cooldown'BT_Boss_Xibi_Hard_BackUp:BTDecorator_Cooldown_1'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.69"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_UseSkill'BT_Boss_Xibi_Hard_BackUp:BTTask_UseSkill_24'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.126"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Rate'BT_Boss_Xibi_Hard_BackUp:BTComposite_Rate_2'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.5"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Hard_BackUp'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Xibi_Hard_BackUp:BTComposite_Selector_4'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.10"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_8",
+    "Outer": "BT_Boss_Xibi_Hard_BackUp",
+    "Class": "UScriptClass'BTComposite_Selector'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_Boss_Xibi_Hard_BackUp:BTComposite_Sequence_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.16"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Boss_Xibi_Hard_BackUp:BTDecorator_Blackboard_19'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.51"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_Boss_Xibi_Hard_BackUp:BTComposite_Sequence_16'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.24"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Boss_Xibi_Hard_BackUp:BTDecorator_Blackboard_30'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.61"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_Boss_Xibi_Hard_BackUp:BTComposite_Sequence_7'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.40"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Boss_Xibi_Hard_BackUp:BTDecorator_Blackboard_1'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.44"
+            }
+          ],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Hard_BackUp'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Xibi_Hard_BackUp:BTComposite_Selector_3'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.9"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_9",
+    "Outer": "BT_Boss_Xibi_Hard_BackUp",
+    "Class": "UScriptClass'BTComposite_Selector'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_Boss_Xibi_Hard_BackUp:BTComposite_Sequence_21'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.30"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_GetTarget'BT_Boss_Xibi_Hard_BackUp:BTTask_GetTarget_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.98"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Hard_BackUp'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Xibi_Hard_BackUp:BTComposite_Sequence_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.16"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_0",
+    "Outer": "BT_Boss_Xibi_Hard_BackUp",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector'BT_Boss_Xibi_Hard_BackUp:BTComposite_Selector_9'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.15"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector'BT_Boss_Xibi_Hard_BackUp:BTComposite_Selector_4'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.10"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "Services": [
+        {
+          "ObjectName": "BTService_EnemyVision'BT_Boss_Xibi_Hard_BackUp:BTService_EnemyVision_1'",
+          "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.85"
+        },
+        {
+          "ObjectName": "BTService_BBValueDis'BT_Boss_Xibi_Hard_BackUp:BTService_BBValueDis_0'",
+          "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.83"
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Hard_BackUp'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Xibi_Hard_BackUp:BTComposite_Selector_8'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.14"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_1",
+    "Outer": "BT_Boss_Xibi_Hard_BackUp",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_UseSkill'BT_Boss_Xibi_Hard_BackUp:BTTask_UseSkill_4'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.129"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait'BT_Boss_Xibi_Hard_BackUp:BTTask_Wait_9'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.146"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Hard_BackUp'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Xibi_Hard_BackUp:BTComposite_Selector_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.6"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_10",
+    "Outer": "BT_Boss_Xibi_Hard_BackUp",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_UseSkill'BT_Boss_Xibi_Hard_BackUp:BTTask_UseSkill_13'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.118"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait'BT_Boss_Xibi_Hard_BackUp:BTTask_Wait_8'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.145"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Hard_BackUp'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Xibi_Hard_BackUp:BTComposite_Selector_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.6"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_11",
+    "Outer": "BT_Boss_Xibi_Hard_BackUp",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_FindSpecifyLocation'BT_Boss_Xibi_Hard_BackUp:BTTask_FindSpecifyLocation_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.90"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_NewMoveTo'BT_Boss_Xibi_Hard_BackUp:BTTask_NewMoveTo_1'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.102"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Hard_BackUp'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Xibi_Hard_BackUp:BTComposite_Selector_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.6"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_12",
+    "Outer": "BT_Boss_Xibi_Hard_BackUp",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_UseSkill'BT_Boss_Xibi_Hard_BackUp:BTTask_UseSkill_15'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.120"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait'BT_Boss_Xibi_Hard_BackUp:BTTask_Wait_10'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.135"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Hard_BackUp'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Xibi_Hard_BackUp:BTComposite_Selector_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.6"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_13",
+    "Outer": "BT_Boss_Xibi_Hard_BackUp",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_UseSkill'BT_Boss_Xibi_Hard_BackUp:BTTask_UseSkill_10'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.115"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector'BT_Boss_Xibi_Hard_BackUp:BTComposite_Selector_2'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.8"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Hard_BackUp'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Xibi_Hard_BackUp:BTComposite_Selector_4'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.10"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_14",
+    "Outer": "BT_Boss_Xibi_Hard_BackUp",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_UseSkill'BT_Boss_Xibi_Hard_BackUp:BTTask_UseSkill_6'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.131"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait'BT_Boss_Xibi_Hard_BackUp:BTTask_Wait_11'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.136"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Hard_BackUp'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Xibi_Hard_BackUp:BTComposite_Selector_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.6"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_15",
+    "Outer": "BT_Boss_Xibi_Hard_BackUp",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_FindSpecifyLocation'BT_Boss_Xibi_Hard_BackUp:BTTask_FindSpecifyLocation_9'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.97"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_NewMoveTo'BT_Boss_Xibi_Hard_BackUp:BTTask_NewMoveTo_5'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.106"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_TimeLimit'BT_Boss_Xibi_Hard_BackUp:BTDecorator_TimeLimit_4'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.81"
+            },
+            {
+              "ObjectName": "BTDecorator_ForceSuccess'BT_Boss_Xibi_Hard_BackUp:BTDecorator_ForceSuccess_4'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.74"
+            }
+          ],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Hard_BackUp'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Rate'BT_Boss_Xibi_Hard_BackUp:BTComposite_Rate_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.3"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_16",
+    "Outer": "BT_Boss_Xibi_Hard_BackUp",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_SetTarget'BT_Boss_Xibi_Hard_BackUp:BTTask_SetTarget_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.112"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_EMRunEQSQuery'BT_Boss_Xibi_Hard_BackUp:BTTask_EMRunEQSQuery_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.87"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_NewMoveTo'BT_Boss_Xibi_Hard_BackUp:BTTask_NewMoveTo_6'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.107"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Hard_BackUp'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Xibi_Hard_BackUp:BTComposite_Selector_8'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.14"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_17",
+    "Outer": "BT_Boss_Xibi_Hard_BackUp",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_FindSpecifyLocation'BT_Boss_Xibi_Hard_BackUp:BTTask_FindSpecifyLocation_13'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.94"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_NewMoveTo'BT_Boss_Xibi_Hard_BackUp:BTTask_NewMoveTo_2'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.103"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_TimeLimit'BT_Boss_Xibi_Hard_BackUp:BTDecorator_TimeLimit_0'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.77"
+            },
+            {
+              "ObjectName": "BTDecorator_ForceSuccess'BT_Boss_Xibi_Hard_BackUp:BTDecorator_ForceSuccess_1'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.71"
+            }
+          ],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Hard_BackUp'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Xibi_Hard_BackUp:BTComposite_Selector_4'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.10"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_18",
+    "Outer": "BT_Boss_Xibi_Hard_BackUp",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_FindSpecifyLocation'BT_Boss_Xibi_Hard_BackUp:BTTask_FindSpecifyLocation_3'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.95"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector'BT_Boss_Xibi_Hard_BackUp:BTComposite_Selector_5'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.11"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Hard_BackUp'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Xibi_Hard_BackUp:BTComposite_Selector_4'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.10"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_19",
+    "Outer": "BT_Boss_Xibi_Hard_BackUp",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_NewMoveTo'BT_Boss_Xibi_Hard_BackUp:BTTask_NewMoveTo_3'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.104"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait'BT_Boss_Xibi_Hard_BackUp:BTTask_Wait_14'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.138"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Hard_BackUp'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Xibi_Hard_BackUp:BTComposite_Selector_5'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.11"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_2",
+    "Outer": "BT_Boss_Xibi_Hard_BackUp",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_FindSpecifyLocation'BT_Boss_Xibi_Hard_BackUp:BTTask_FindSpecifyLocation_10'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.91"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_NewMoveTo'BT_Boss_Xibi_Hard_BackUp:BTTask_NewMoveTo_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.101"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_TimeLimit'BT_Boss_Xibi_Hard_BackUp:BTDecorator_TimeLimit_3'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.80"
+            },
+            {
+              "ObjectName": "BTDecorator_ForceSuccess'BT_Boss_Xibi_Hard_BackUp:BTDecorator_ForceSuccess_2'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.72"
+            }
+          ],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Hard_BackUp'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Rate'BT_Boss_Xibi_Hard_BackUp:BTComposite_Rate_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.4"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_20",
+    "Outer": "BT_Boss_Xibi_Hard_BackUp",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_NpcGetTarget'BT_Boss_Xibi_Hard_BackUp:BTTask_NpcGetTarget_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.111"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_NewMoveTo'BT_Boss_Xibi_Hard_BackUp:BTTask_NewMoveTo_4'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.105"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Hard_BackUp'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Xibi_Hard_BackUp:BTComposite_Selector_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.6"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_21",
+    "Outer": "BT_Boss_Xibi_Hard_BackUp",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_FilterTargetsByDis'BT_Boss_Xibi_Hard_BackUp:BTTask_FilterTargetsByDis_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.88"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_FilterTargetsByLiving'BT_Boss_Xibi_Hard_BackUp:BTTask_FilterTargetsByLiving_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.89"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_TargetFiltersByBossField'BT_Boss_Xibi_Hard_BackUp:BTTask_TargetFiltersByBossField_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.113"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_LastFilterTargets'BT_Boss_Xibi_Hard_BackUp:BTTask_LastFilterTargets_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.100"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Hard_BackUp'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Xibi_Hard_BackUp:BTComposite_Selector_9'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.15"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_22",
+    "Outer": "BT_Boss_Xibi_Hard_BackUp",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_UseSkill'BT_Boss_Xibi_Hard_BackUp:BTTask_UseSkill_22'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.125"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_UseSkill'BT_Boss_Xibi_Hard_BackUp:BTTask_UseSkill_9'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.133"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_Boss_Xibi_Hard_BackUp:BTComposite_Sequence_26'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.35"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Hard_BackUp'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Xibi_Hard_BackUp:BTComposite_Selector_7'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.13"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_23",
+    "Outer": "BT_Boss_Xibi_Hard_BackUp",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_FindSpecifyLocation'BT_Boss_Xibi_Hard_BackUp:BTTask_FindSpecifyLocation_12'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.93"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_NewMoveTo'BT_Boss_Xibi_Hard_BackUp:BTTask_NewMoveTo_7'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.108"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_TimeLimit'BT_Boss_Xibi_Hard_BackUp:BTDecorator_TimeLimit_2'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.79"
+            },
+            {
+              "ObjectName": "BTDecorator_ForceSuccess'BT_Boss_Xibi_Hard_BackUp:BTDecorator_ForceSuccess_0'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.70"
+            }
+          ],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Hard_BackUp'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Rate'BT_Boss_Xibi_Hard_BackUp:BTComposite_Rate_2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.5"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_24",
+    "Outer": "BT_Boss_Xibi_Hard_BackUp",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_UseSkill'BT_Boss_Xibi_Hard_BackUp:BTTask_UseSkill_14'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.119"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_Boss_Xibi_Hard_BackUp:BTComposite_Sequence_25'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.34"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Hard_BackUp'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Xibi_Hard_BackUp:BTComposite_Selector_4'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.10"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_25",
+    "Outer": "BT_Boss_Xibi_Hard_BackUp",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_FindSpecifyLocation'BT_Boss_Xibi_Hard_BackUp:BTTask_FindSpecifyLocation_8'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.96"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_NewMoveTo'BT_Boss_Xibi_Hard_BackUp:BTTask_NewMoveTo_8'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.109"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_TimeLimit'BT_Boss_Xibi_Hard_BackUp:BTDecorator_TimeLimit_1'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.78"
+            },
+            {
+              "ObjectName": "BTDecorator_ForceSuccess'BT_Boss_Xibi_Hard_BackUp:BTDecorator_ForceSuccess_3'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.73"
+            }
+          ],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Hard_BackUp'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Xibi_Hard_BackUp:BTComposite_Sequence_24'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.33"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_26",
+    "Outer": "BT_Boss_Xibi_Hard_BackUp",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_FindSpecifyLocation'BT_Boss_Xibi_Hard_BackUp:BTTask_FindSpecifyLocation_11'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.92"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_NewMoveTo'BT_Boss_Xibi_Hard_BackUp:BTTask_NewMoveTo_9'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.110"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_TimeLimit'BT_Boss_Xibi_Hard_BackUp:BTDecorator_TimeLimit_5'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.82"
+            },
+            {
+              "ObjectName": "BTDecorator_ForceSuccess'BT_Boss_Xibi_Hard_BackUp:BTDecorator_ForceSuccess_5'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.75"
+            }
+          ],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Hard_BackUp'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Xibi_Hard_BackUp:BTComposite_Sequence_22'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.31"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_3",
+    "Outer": "BT_Boss_Xibi_Hard_BackUp",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_GetTarget'BT_Boss_Xibi_Hard_BackUp:BTTask_GetTarget_2'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.99"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector'BT_Boss_Xibi_Hard_BackUp:BTComposite_Selector_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.6"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "Services": [
+        {
+          "ObjectName": "BTService_BBValueDis'BT_Boss_Xibi_Hard_BackUp:BTService_BBValueDis_3'",
+          "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.84"
+        },
+        {
+          "ObjectName": "BTService_EnemyVision'BT_Boss_Xibi_Hard_BackUp:BTService_EnemyVision_2'",
+          "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.86"
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Hard_BackUp'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Xibi_Hard_BackUp:BTComposite_Selector_3'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.9"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_4",
+    "Outer": "BT_Boss_Xibi_Hard_BackUp",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_UseSkill'BT_Boss_Xibi_Hard_BackUp:BTTask_UseSkill_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.114"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait'BT_Boss_Xibi_Hard_BackUp:BTTask_Wait_7'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.144"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Hard_BackUp'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Xibi_Hard_BackUp:BTComposite_Selector_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.6"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_5",
+    "Outer": "BT_Boss_Xibi_Hard_BackUp",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_UseSkill'BT_Boss_Xibi_Hard_BackUp:BTTask_UseSkill_3'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.128"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait'BT_Boss_Xibi_Hard_BackUp:BTTask_Wait_6'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.143"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Hard_BackUp'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Xibi_Hard_BackUp:BTComposite_Selector_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.6"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_6",
+    "Outer": "BT_Boss_Xibi_Hard_BackUp",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_UseSkill'BT_Boss_Xibi_Hard_BackUp:BTTask_UseSkill_2'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.123"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait'BT_Boss_Xibi_Hard_BackUp:BTTask_Wait_5'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.142"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Hard_BackUp'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Xibi_Hard_BackUp:BTComposite_Selector_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.6"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_7",
+    "Outer": "BT_Boss_Xibi_Hard_BackUp",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait'BT_Boss_Xibi_Hard_BackUp:BTTask_Wait_2'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.139"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Hard_BackUp'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Xibi_Hard_BackUp:BTComposite_Selector_8'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.14"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_8",
+    "Outer": "BT_Boss_Xibi_Hard_BackUp",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_UseSkill'BT_Boss_Xibi_Hard_BackUp:BTTask_UseSkill_5'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.130"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait'BT_Boss_Xibi_Hard_BackUp:BTTask_Wait_3'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.140"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Hard_BackUp'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Xibi_Hard_BackUp:BTComposite_Selector_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.6"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_9",
+    "Outer": "BT_Boss_Xibi_Hard_BackUp",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_UseSkill'BT_Boss_Xibi_Hard_BackUp:BTTask_UseSkill_12'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.117"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait'BT_Boss_Xibi_Hard_BackUp:BTTask_Wait_4'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.141"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Hard_BackUp'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Xibi_Hard_BackUp:BTComposite_Selector_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.6"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_0",
+    "Outer": "BT_Boss_Xibi_Hard_BackUp",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "FloatValue": 600.0,
+      "CachedDescription": "TickTargetDis 大于或等于 600.000000",
+      "OperationType": 5,
+      "BlackboardKey": {
+        "SelectedKeyName": "TickTargetDis"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Hard_BackUp'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Xibi_Hard_BackUp:BTComposite_Selector_2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.8"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_1",
+    "Outer": "BT_Boss_Xibi_Hard_BackUp",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "CachedDescription": "DecisionState 等于 Out Battle",
+      "BlackboardKey": {
+        "SelectedKeyName": "DecisionState"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::Self",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Hard_BackUp'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Xibi_Hard_BackUp:BTComposite_Selector_8'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.14"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_10",
+    "Outer": "BT_Boss_Xibi_Hard_BackUp",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "IntValue": 4,
+      "CachedDescription": "TestAnimSelector 等于 Skill05",
+      "BlackboardKey": {
+        "SelectedKeyName": "TestAnimSelector"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Hard_BackUp'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Xibi_Hard_BackUp:BTComposite_Selector_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.6"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_11",
+    "Outer": "BT_Boss_Xibi_Hard_BackUp",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "IntValue": 6,
+      "CachedDescription": "TestAnimSelector 等于 Skill07",
+      "BlackboardKey": {
+        "SelectedKeyName": "TestAnimSelector"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Hard_BackUp'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Xibi_Hard_BackUp:BTComposite_Selector_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.6"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_12",
+    "Outer": "BT_Boss_Xibi_Hard_BackUp",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "CachedDescription": "CanUseSkill03 is 已设置",
+      "BlackboardKey": {
+        "SelectedKeyName": "CanUseSkill03"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Hard_BackUp'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Xibi_Hard_BackUp:BTComposite_Selector_4'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.10"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_15",
+    "Outer": "BT_Boss_Xibi_Hard_BackUp",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "IntValue": 7,
+      "CachedDescription": "TestAnimSelector 等于 Skill08",
+      "BlackboardKey": {
+        "SelectedKeyName": "TestAnimSelector"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Hard_BackUp'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Xibi_Hard_BackUp:BTComposite_Selector_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.6"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_16",
+    "Outer": "BT_Boss_Xibi_Hard_BackUp",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "IntValue": 12,
+      "CachedDescription": "TestAnimSelector 等于 测试：跟随首号玩家",
+      "BlackboardKey": {
+        "SelectedKeyName": "TestAnimSelector"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Hard_BackUp'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Xibi_Hard_BackUp:BTComposite_Selector_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.6"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_17",
+    "Outer": "BT_Boss_Xibi_Hard_BackUp",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "IntValue": 1,
+      "CachedDescription": "ActionMode 等于 Hitted",
+      "BlackboardKey": {
+        "SelectedKeyName": "ActionMode"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::Self",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Hard_BackUp'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Xibi_Hard_BackUp:BTComposite_Selector_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.7"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_19",
+    "Outer": "BT_Boss_Xibi_Hard_BackUp",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "IntValue": 2,
+      "CachedDescription": "DecisionState 等于 Battle",
+      "BlackboardKey": {
+        "SelectedKeyName": "DecisionState"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::Both",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Hard_BackUp'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Xibi_Hard_BackUp:BTComposite_Selector_8'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.14"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_2",
+    "Outer": "BT_Boss_Xibi_Hard_BackUp",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "IntValue": -1,
+      "CachedDescription": "CanUseLastSkill 等于 -1",
+      "BlackboardKey": {
+        "SelectedKeyName": "CanUseLastSkill"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Hard_BackUp'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Xibi_Hard_BackUp:BTComposite_Selector_4'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.10"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_20",
+    "Outer": "BT_Boss_Xibi_Hard_BackUp",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "CachedDescription": "ActionMode 等于 Active",
+      "BlackboardKey": {
+        "SelectedKeyName": "ActionMode"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::Self",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Hard_BackUp'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Xibi_Hard_BackUp:BTComposite_Selector_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.7"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_21",
+    "Outer": "BT_Boss_Xibi_Hard_BackUp",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "IntValue": 11,
+      "CachedDescription": "TestAnimSelector 不等于 AI",
+      "OperationType": 1,
+      "BlackboardKey": {
+        "SelectedKeyName": "TestAnimSelector"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::Both",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Hard_BackUp'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Xibi_Hard_BackUp:BTComposite_Selector_3'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.9"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_22",
+    "Outer": "BT_Boss_Xibi_Hard_BackUp",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "IntValue": 11,
+      "CachedDescription": "TestAnimSelector 等于 AI",
+      "BlackboardKey": {
+        "SelectedKeyName": "TestAnimSelector"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::Both",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Hard_BackUp'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Xibi_Hard_BackUp:BTComposite_Selector_3'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.9"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_24",
+    "Outer": "BT_Boss_Xibi_Hard_BackUp",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "IntValue": 5,
+      "CachedDescription": "TestAnimSelector 等于 Skill06",
+      "BlackboardKey": {
+        "SelectedKeyName": "TestAnimSelector"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Hard_BackUp'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Xibi_Hard_BackUp:BTComposite_Selector_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.6"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_25",
+    "Outer": "BT_Boss_Xibi_Hard_BackUp",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "IntValue": 8,
+      "CachedDescription": "TestAnimSelector 等于 Skill09",
+      "BlackboardKey": {
+        "SelectedKeyName": "TestAnimSelector"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Hard_BackUp'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Xibi_Hard_BackUp:BTComposite_Selector_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.6"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_26",
+    "Outer": "BT_Boss_Xibi_Hard_BackUp",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "CachedDescription": "TargetPlayerDead is 已设置",
+      "BlackboardKey": {
+        "SelectedKeyName": "TargetPlayerDead"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::Self",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Hard_BackUp'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Xibi_Hard_BackUp:BTComposite_Selector_4'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.10"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_27",
+    "Outer": "BT_Boss_Xibi_Hard_BackUp",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "CachedDescription": "TargetIsInAir is 未设置",
+      "OperationType": 1,
+      "BlackboardKey": {
+        "SelectedKeyName": "TargetIsInAir"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Hard_BackUp'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Xibi_Hard_BackUp:BTComposite_Selector_7'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.13"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_3",
+    "Outer": "BT_Boss_Xibi_Hard_BackUp",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "IntValue": -2,
+      "CachedDescription": "CanUseLastSkill 等于 -2",
+      "BlackboardKey": {
+        "SelectedKeyName": "CanUseLastSkill"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Hard_BackUp'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Xibi_Hard_BackUp:BTComposite_Selector_4'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.10"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_30",
+    "Outer": "BT_Boss_Xibi_Hard_BackUp",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "IntValue": 1,
+      "CachedDescription": "DecisionState 等于 Alert",
+      "BlackboardKey": {
+        "SelectedKeyName": "DecisionState"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::Both",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Hard_BackUp'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Xibi_Hard_BackUp:BTComposite_Selector_8'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.14"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_32",
+    "Outer": "BT_Boss_Xibi_Hard_BackUp",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "FloatValue": 600.0,
+      "CachedDescription": "TickTargetDis 小于或等于 600.000000",
+      "OperationType": 3,
+      "BlackboardKey": {
+        "SelectedKeyName": "TickTargetDis"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Hard_BackUp'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Xibi_Hard_BackUp:BTComposite_Selector_4'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.10"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_33",
+    "Outer": "BT_Boss_Xibi_Hard_BackUp",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "FloatValue": 600.0,
+      "CachedDescription": "TickTargetDis 大于 600.000000",
+      "OperationType": 4,
+      "BlackboardKey": {
+        "SelectedKeyName": "TickTargetDis"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Hard_BackUp'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Xibi_Hard_BackUp:BTComposite_Selector_4'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.10"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_4",
+    "Outer": "BT_Boss_Xibi_Hard_BackUp",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "IntValue": 10,
+      "CachedDescription": "TestAnimSelector 等于 八向走",
+      "BlackboardKey": {
+        "SelectedKeyName": "TestAnimSelector"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Hard_BackUp'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Xibi_Hard_BackUp:BTComposite_Selector_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.6"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_5",
+    "Outer": "BT_Boss_Xibi_Hard_BackUp",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "CachedDescription": "TestAnimSelector 等于 Skill01",
+      "BlackboardKey": {
+        "SelectedKeyName": "TestAnimSelector"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Hard_BackUp'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Xibi_Hard_BackUp:BTComposite_Selector_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.6"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_7",
+    "Outer": "BT_Boss_Xibi_Hard_BackUp",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "IntValue": 1,
+      "CachedDescription": "TestAnimSelector 等于 Skill02",
+      "BlackboardKey": {
+        "SelectedKeyName": "TestAnimSelector"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Hard_BackUp'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Xibi_Hard_BackUp:BTComposite_Selector_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.6"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_8",
+    "Outer": "BT_Boss_Xibi_Hard_BackUp",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "IntValue": 2,
+      "CachedDescription": "TestAnimSelector 等于 Skill03",
+      "BlackboardKey": {
+        "SelectedKeyName": "TestAnimSelector"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Hard_BackUp'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Xibi_Hard_BackUp:BTComposite_Selector_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.6"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_9",
+    "Outer": "BT_Boss_Xibi_Hard_BackUp",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "IntValue": 3,
+      "CachedDescription": "TestAnimSelector 等于 Skill04",
+      "BlackboardKey": {
+        "SelectedKeyName": "TestAnimSelector"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Hard_BackUp'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Xibi_Hard_BackUp:BTComposite_Selector_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.6"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Cooldown",
+    "Name": "BTDecorator_Cooldown_1",
+    "Outer": "BT_Boss_Xibi_Hard_BackUp",
+    "Class": "UScriptClass'BTDecorator_Cooldown'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "CoolDownTime": 8.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Hard_BackUp'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Xibi_Hard_BackUp:BTComposite_Selector_7'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.13"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_ForceSuccess",
+    "Name": "BTDecorator_ForceSuccess_0",
+    "Outer": "BT_Boss_Xibi_Hard_BackUp",
+    "Class": "UScriptClass'BTDecorator_ForceSuccess'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Hard_BackUp'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Xibi_Hard_BackUp:BTComposite_Sequence_23'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.32"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_ForceSuccess",
+    "Name": "BTDecorator_ForceSuccess_1",
+    "Outer": "BT_Boss_Xibi_Hard_BackUp",
+    "Class": "UScriptClass'BTDecorator_ForceSuccess'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Hard_BackUp'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Xibi_Hard_BackUp:BTComposite_Sequence_17'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.25"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_ForceSuccess",
+    "Name": "BTDecorator_ForceSuccess_2",
+    "Outer": "BT_Boss_Xibi_Hard_BackUp",
+    "Class": "UScriptClass'BTDecorator_ForceSuccess'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Hard_BackUp'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Xibi_Hard_BackUp:BTComposite_Sequence_2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.28"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_ForceSuccess",
+    "Name": "BTDecorator_ForceSuccess_3",
+    "Outer": "BT_Boss_Xibi_Hard_BackUp",
+    "Class": "UScriptClass'BTDecorator_ForceSuccess'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Hard_BackUp'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Xibi_Hard_BackUp:BTComposite_Sequence_25'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.34"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_ForceSuccess",
+    "Name": "BTDecorator_ForceSuccess_4",
+    "Outer": "BT_Boss_Xibi_Hard_BackUp",
+    "Class": "UScriptClass'BTDecorator_ForceSuccess'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Hard_BackUp'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Xibi_Hard_BackUp:BTComposite_Sequence_15'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.23"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_ForceSuccess",
+    "Name": "BTDecorator_ForceSuccess_5",
+    "Outer": "BT_Boss_Xibi_Hard_BackUp",
+    "Class": "UScriptClass'BTDecorator_ForceSuccess'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Hard_BackUp'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Xibi_Hard_BackUp:BTComposite_Sequence_26'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.35"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_TargetLocCondition",
+    "Name": "BTDecorator_TargetLocCondition_0",
+    "Outer": "BT_Boss_Xibi_Hard_BackUp",
+    "Class": "UScriptClass'BTDecorator_TargetLocCondition'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "DecoratorTickEnable": false,
+      "MinAngle": 0.0,
+      "MaxAngle": 75.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Hard_BackUp'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Xibi_Hard_BackUp:BTComposite_Selector_6'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.12"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_TimeLimit",
+    "Name": "BTDecorator_TimeLimit_0",
+    "Outer": "BT_Boss_Xibi_Hard_BackUp",
+    "Class": "UScriptClass'BTDecorator_TimeLimit'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TimeLimit": 4.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Hard_BackUp'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Xibi_Hard_BackUp:BTComposite_Sequence_17'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.25"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_TimeLimit",
+    "Name": "BTDecorator_TimeLimit_1",
+    "Outer": "BT_Boss_Xibi_Hard_BackUp",
+    "Class": "UScriptClass'BTDecorator_TimeLimit'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TimeLimit": 4.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Hard_BackUp'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Xibi_Hard_BackUp:BTComposite_Sequence_25'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.34"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_TimeLimit",
+    "Name": "BTDecorator_TimeLimit_2",
+    "Outer": "BT_Boss_Xibi_Hard_BackUp",
+    "Class": "UScriptClass'BTDecorator_TimeLimit'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TimeLimit": 4.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Hard_BackUp'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Xibi_Hard_BackUp:BTComposite_Sequence_23'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.32"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_TimeLimit",
+    "Name": "BTDecorator_TimeLimit_3",
+    "Outer": "BT_Boss_Xibi_Hard_BackUp",
+    "Class": "UScriptClass'BTDecorator_TimeLimit'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TimeLimit": 4.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Hard_BackUp'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Xibi_Hard_BackUp:BTComposite_Sequence_2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.28"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_TimeLimit",
+    "Name": "BTDecorator_TimeLimit_4",
+    "Outer": "BT_Boss_Xibi_Hard_BackUp",
+    "Class": "UScriptClass'BTDecorator_TimeLimit'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TimeLimit": 4.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Hard_BackUp'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Xibi_Hard_BackUp:BTComposite_Sequence_15'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.23"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_TimeLimit",
+    "Name": "BTDecorator_TimeLimit_5",
+    "Outer": "BT_Boss_Xibi_Hard_BackUp",
+    "Class": "UScriptClass'BTDecorator_TimeLimit'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TimeLimit": 4.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Hard_BackUp'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Xibi_Hard_BackUp:BTComposite_Sequence_26'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.35"
+      }
+    }
+  },
+  {
+    "Type": "BTService_BBValueDis",
+    "Name": "BTService_BBValueDis_0",
+    "Outer": "BT_Boss_Xibi_Hard_BackUp",
+    "Class": "UScriptClass'BTService_BBValueDis'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "BBName": "Target",
+      "Interval": 0.02,
+      "RandomDeviation": 0.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Hard_BackUp'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Xibi_Hard_BackUp:BTComposite_Sequence_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.16"
+      }
+    }
+  },
+  {
+    "Type": "BTService_BBValueDis",
+    "Name": "BTService_BBValueDis_3",
+    "Outer": "BT_Boss_Xibi_Hard_BackUp",
+    "Class": "UScriptClass'BTService_BBValueDis'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "BBName": "Target",
+      "Interval": 0.1,
+      "RandomDeviation": 0.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Hard_BackUp'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Xibi_Hard_BackUp:BTComposite_Sequence_3'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.36"
+      }
+    }
+  },
+  {
+    "Type": "BTService_EnemyVision",
+    "Name": "BTService_EnemyVision_1",
+    "Outer": "BT_Boss_Xibi_Hard_BackUp",
+    "Class": "UScriptClass'BTService_EnemyVision'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "FVisionDistance": 1000.0,
+      "FVisionAngle": 360.0,
+      "Interval": 0.1,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Hard_BackUp'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Xibi_Hard_BackUp:BTComposite_Sequence_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.16"
+      }
+    }
+  },
+  {
+    "Type": "BTService_EnemyVision",
+    "Name": "BTService_EnemyVision_2",
+    "Outer": "BT_Boss_Xibi_Hard_BackUp",
+    "Class": "UScriptClass'BTService_EnemyVision'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "FVisionDistance": 1000.0,
+      "FVisionAngle": 360.0,
+      "Interval": 0.2,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Hard_BackUp'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Xibi_Hard_BackUp:BTComposite_Sequence_3'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.36"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_EMRunEQSQuery",
+    "Name": "BTTask_EMRunEQSQuery_0",
+    "Outer": "BT_Boss_Xibi_Hard_BackUp",
+    "Class": "UScriptClass'BTTask_EMRunEQSQuery'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "EQSRequest": {
+        "QueryTemplate": {
+          "ObjectName": "EnvQuery'EQS_SelfDonut'",
+          "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Z_EnvQuery/EQS_SelfDonut.5"
+        },
+        "QueryConfig": [
+          {
+            "ParamName": "EMDonut.InnerRadius",
+            "ParamType": "EAIParamType::Float",
+            "Value": 200.0,
+            "BBKey": {
+              "SelectedKeyName": "None",
+              "bNoneIsAllowedValue": true
+            }
+          },
+          {
+            "ParamName": "EMDonut.OuterRadius",
+            "ParamType": "EAIParamType::Float",
+            "Value": 500.0,
+            "BBKey": {
+              "SelectedKeyName": "None",
+              "bNoneIsAllowedValue": true
+            }
+          },
+          {
+            "ParamName": "EMDonut.NumberOfRings",
+            "ParamType": "EAIParamType::Int",
+            "Value": 3.0,
+            "BBKey": {
+              "SelectedKeyName": "None",
+              "bNoneIsAllowedValue": true
+            }
+          },
+          {
+            "ParamName": "EMDonut.PointsPerRing",
+            "ParamType": "EAIParamType::Int",
+            "Value": 8.0,
+            "BBKey": {
+              "SelectedKeyName": "None",
+              "bNoneIsAllowedValue": true
+            }
+          },
+          {
+            "ParamName": "EMDonut.ArcAngle",
+            "ParamType": "EAIParamType::Float",
+            "Value": 180.0,
+            "BBKey": {
+              "SelectedKeyName": "None",
+              "bNoneIsAllowedValue": true
+            }
+          }
+        ],
+        "RunMode": "EEnvQueryRunMode::RandomBest25Pct"
+      },
+      "BlackboardKey": {
+        "SelectedKeyName": "EQSQueryLoc"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Hard_BackUp'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Xibi_Hard_BackUp:BTComposite_Sequence_16'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.24"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_FilterTargetsByDis",
+    "Name": "BTTask_FilterTargetsByDis_0",
+    "Outer": "BT_Boss_Xibi_Hard_BackUp",
+    "Class": "UScriptClass'BTTask_FilterTargetsByDis'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "MaxDis": 6000.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Hard_BackUp'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Xibi_Hard_BackUp:BTComposite_Sequence_21'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.30"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_FilterTargetsByLiving",
+    "Name": "BTTask_FilterTargetsByLiving_0",
+    "Outer": "BT_Boss_Xibi_Hard_BackUp",
+    "Class": "UScriptClass'BTTask_FilterTargetsByLiving'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TypeOfFilterList": "ETypeOfFilterList::AfterFilter",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Hard_BackUp'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Xibi_Hard_BackUp:BTComposite_Sequence_21'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.30"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_FindSpecifyLocation",
+    "Name": "BTTask_FindSpecifyLocation_0",
+    "Outer": "BT_Boss_Xibi_Hard_BackUp",
+    "Class": "UScriptClass'BTTask_FindSpecifyLocation'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "MinAngle": 0,
+      "MaxAngle": 360,
+      "MinRadius": 100,
+      "MaxRadius": 200,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Hard_BackUp'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Xibi_Hard_BackUp:BTComposite_Sequence_11'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.19"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_FindSpecifyLocation",
+    "Name": "BTTask_FindSpecifyLocation_10",
+    "Outer": "BT_Boss_Xibi_Hard_BackUp",
+    "Class": "UScriptClass'BTTask_FindSpecifyLocation'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "MinAngle": 0,
+      "MaxAngle": 360,
+      "MinRadius": 200,
+      "MaxRadius": 500,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Hard_BackUp'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Xibi_Hard_BackUp:BTComposite_Sequence_2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.28"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_FindSpecifyLocation",
+    "Name": "BTTask_FindSpecifyLocation_11",
+    "Outer": "BT_Boss_Xibi_Hard_BackUp",
+    "Class": "UScriptClass'BTTask_FindSpecifyLocation'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "MinAngle": 0,
+      "MaxAngle": 360,
+      "MinRadius": 200,
+      "MaxRadius": 500,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Hard_BackUp'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Xibi_Hard_BackUp:BTComposite_Sequence_26'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.35"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_FindSpecifyLocation",
+    "Name": "BTTask_FindSpecifyLocation_12",
+    "Outer": "BT_Boss_Xibi_Hard_BackUp",
+    "Class": "UScriptClass'BTTask_FindSpecifyLocation'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "MinAngle": 0,
+      "MaxAngle": 360,
+      "MinRadius": 200,
+      "MaxRadius": 500,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Hard_BackUp'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Xibi_Hard_BackUp:BTComposite_Sequence_23'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.32"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_FindSpecifyLocation",
+    "Name": "BTTask_FindSpecifyLocation_13",
+    "Outer": "BT_Boss_Xibi_Hard_BackUp",
+    "Class": "UScriptClass'BTTask_FindSpecifyLocation'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "MinAngle": 0,
+      "MaxAngle": 360,
+      "MinRadius": 200,
+      "MaxRadius": 500,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Hard_BackUp'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Xibi_Hard_BackUp:BTComposite_Sequence_17'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.25"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_FindSpecifyLocation",
+    "Name": "BTTask_FindSpecifyLocation_3",
+    "Outer": "BT_Boss_Xibi_Hard_BackUp",
+    "Class": "UScriptClass'BTTask_FindSpecifyLocation'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "MinAngle": 0,
+      "MaxAngle": 360,
+      "MinRadius": 200,
+      "MaxRadius": 500,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Hard_BackUp'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Xibi_Hard_BackUp:BTComposite_Sequence_18'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.26"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_FindSpecifyLocation",
+    "Name": "BTTask_FindSpecifyLocation_8",
+    "Outer": "BT_Boss_Xibi_Hard_BackUp",
+    "Class": "UScriptClass'BTTask_FindSpecifyLocation'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "MinAngle": 0,
+      "MaxAngle": 360,
+      "MinRadius": 200,
+      "MaxRadius": 500,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Hard_BackUp'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Xibi_Hard_BackUp:BTComposite_Sequence_25'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.34"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_FindSpecifyLocation",
+    "Name": "BTTask_FindSpecifyLocation_9",
+    "Outer": "BT_Boss_Xibi_Hard_BackUp",
+    "Class": "UScriptClass'BTTask_FindSpecifyLocation'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "MinAngle": 0,
+      "MaxAngle": 360,
+      "MinRadius": 200,
+      "MaxRadius": 500,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Hard_BackUp'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Xibi_Hard_BackUp:BTComposite_Sequence_15'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.23"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_GetTarget",
+    "Name": "BTTask_GetTarget_0",
+    "Outer": "BT_Boss_Xibi_Hard_BackUp",
+    "Class": "UScriptClass'BTTask_GetTarget'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Hard_BackUp'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Xibi_Hard_BackUp:BTComposite_Selector_9'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.15"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_GetTarget",
+    "Name": "BTTask_GetTarget_2",
+    "Outer": "BT_Boss_Xibi_Hard_BackUp",
+    "Class": "UScriptClass'BTTask_GetTarget'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Hard_BackUp'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Xibi_Hard_BackUp:BTComposite_Sequence_3'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.36"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_LastFilterTargets",
+    "Name": "BTTask_LastFilterTargets_0",
+    "Outer": "BT_Boss_Xibi_Hard_BackUp",
+    "Class": "UScriptClass'BTTask_LastFilterTargets'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TypeOfFilter": "ELastTargetFilterType::TargetFilterMaxHatredValue",
+      "TypeOfFilterList": "ETypeOfFilterList::AfterFilter",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Hard_BackUp'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Xibi_Hard_BackUp:BTComposite_Sequence_21'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.30"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_NewMoveTo",
+    "Name": "BTTask_NewMoveTo_0",
+    "Outer": "BT_Boss_Xibi_Hard_BackUp",
+    "Class": "UScriptClass'BTTask_NewMoveTo'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "bUseControllerRotationYaw": true,
+      "bStareAt": true,
+      "bStopOnOverlapNeedsUpdate": false,
+      "BlackboardKey": {
+        "SelectedKeyName": "NearlyLocation"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Hard_BackUp'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Xibi_Hard_BackUp:BTComposite_Sequence_2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.28"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_NewMoveTo",
+    "Name": "BTTask_NewMoveTo_1",
+    "Outer": "BT_Boss_Xibi_Hard_BackUp",
+    "Class": "UScriptClass'BTTask_NewMoveTo'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "bUseControllerRotationYaw": true,
+      "bStareAt": true,
+      "bStopOnOverlapNeedsUpdate": false,
+      "BlackboardKey": {
+        "SelectedKeyName": "NearlyLocation"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Hard_BackUp'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Xibi_Hard_BackUp:BTComposite_Sequence_11'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.19"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_NewMoveTo",
+    "Name": "BTTask_NewMoveTo_2",
+    "Outer": "BT_Boss_Xibi_Hard_BackUp",
+    "Class": "UScriptClass'BTTask_NewMoveTo'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "bUseControllerRotationYaw": true,
+      "bStareAt": true,
+      "bStopOnOverlapNeedsUpdate": false,
+      "BlackboardKey": {
+        "SelectedKeyName": "NearlyLocation"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Hard_BackUp'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Xibi_Hard_BackUp:BTComposite_Sequence_17'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.25"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_NewMoveTo",
+    "Name": "BTTask_NewMoveTo_3",
+    "Outer": "BT_Boss_Xibi_Hard_BackUp",
+    "Class": "UScriptClass'BTTask_NewMoveTo'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "bUseControllerRotationYaw": true,
+      "bStareAt": true,
+      "bStopOnOverlapNeedsUpdate": false,
+      "BlackboardKey": {
+        "SelectedKeyName": "NearlyLocation"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Hard_BackUp'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Xibi_Hard_BackUp:BTComposite_Sequence_19'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.27"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_NewMoveTo",
+    "Name": "BTTask_NewMoveTo_4",
+    "Outer": "BT_Boss_Xibi_Hard_BackUp",
+    "Class": "UScriptClass'BTTask_NewMoveTo'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "bOrientRotationToMovement": true,
+      "MoveTypeState": "EMoveTypeState::MTS_Run",
+      "bStopOnOverlapNeedsUpdate": false,
+      "BlackboardKey": {
+        "SelectedKeyName": "Target"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Hard_BackUp'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Xibi_Hard_BackUp:BTComposite_Sequence_20'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.29"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_NewMoveTo",
+    "Name": "BTTask_NewMoveTo_5",
+    "Outer": "BT_Boss_Xibi_Hard_BackUp",
+    "Class": "UScriptClass'BTTask_NewMoveTo'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "bUseControllerRotationYaw": true,
+      "bStareAt": true,
+      "bStopOnOverlapNeedsUpdate": false,
+      "BlackboardKey": {
+        "SelectedKeyName": "NearlyLocation"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Hard_BackUp'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Xibi_Hard_BackUp:BTComposite_Sequence_15'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.23"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_NewMoveTo",
+    "Name": "BTTask_NewMoveTo_6",
+    "Outer": "BT_Boss_Xibi_Hard_BackUp",
+    "Class": "UScriptClass'BTTask_NewMoveTo'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "bUseControllerRotationYaw": true,
+      "bStareAt": true,
+      "bStopOnOverlapNeedsUpdate": false,
+      "BlackboardKey": {
+        "SelectedKeyName": "EQSQueryLoc"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Hard_BackUp'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Xibi_Hard_BackUp:BTComposite_Sequence_16'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.24"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_NewMoveTo",
+    "Name": "BTTask_NewMoveTo_7",
+    "Outer": "BT_Boss_Xibi_Hard_BackUp",
+    "Class": "UScriptClass'BTTask_NewMoveTo'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "bUseControllerRotationYaw": true,
+      "bStareAt": true,
+      "bStopOnOverlapNeedsUpdate": false,
+      "BlackboardKey": {
+        "SelectedKeyName": "NearlyLocation"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Hard_BackUp'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Xibi_Hard_BackUp:BTComposite_Sequence_23'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.32"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_NewMoveTo",
+    "Name": "BTTask_NewMoveTo_8",
+    "Outer": "BT_Boss_Xibi_Hard_BackUp",
+    "Class": "UScriptClass'BTTask_NewMoveTo'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "bUseControllerRotationYaw": true,
+      "bStareAt": true,
+      "bStopOnOverlapNeedsUpdate": false,
+      "BlackboardKey": {
+        "SelectedKeyName": "NearlyLocation"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Hard_BackUp'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Xibi_Hard_BackUp:BTComposite_Sequence_25'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.34"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_NewMoveTo",
+    "Name": "BTTask_NewMoveTo_9",
+    "Outer": "BT_Boss_Xibi_Hard_BackUp",
+    "Class": "UScriptClass'BTTask_NewMoveTo'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "bUseControllerRotationYaw": true,
+      "bStareAt": true,
+      "bStopOnOverlapNeedsUpdate": false,
+      "BlackboardKey": {
+        "SelectedKeyName": "NearlyLocation"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Hard_BackUp'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Xibi_Hard_BackUp:BTComposite_Sequence_26'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.35"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_NpcGetTarget",
+    "Name": "BTTask_NpcGetTarget_0",
+    "Outer": "BT_Boss_Xibi_Hard_BackUp",
+    "Class": "UScriptClass'BTTask_NpcGetTarget'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Hard_BackUp'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Xibi_Hard_BackUp:BTComposite_Sequence_20'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.29"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_SetTarget",
+    "Name": "BTTask_SetTarget_0",
+    "Outer": "BT_Boss_Xibi_Hard_BackUp",
+    "Class": "UScriptClass'BTTask_SetTarget'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Condition": {
+        "ObjectName": "TargetCondition_Distance'BT_Boss_Xibi_Hard_BackUp:BTTask_SetTarget_0.TargetCondition_Distance_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.147"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Hard_BackUp'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Xibi_Hard_BackUp:BTComposite_Sequence_16'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.24"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_TargetFiltersByBossField",
+    "Name": "BTTask_TargetFiltersByBossField_0",
+    "Outer": "BT_Boss_Xibi_Hard_BackUp",
+    "Class": "UScriptClass'BTTask_TargetFiltersByBossField'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TypeOfFilterList": "ETypeOfFilterList::AfterFilter",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Hard_BackUp'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Xibi_Hard_BackUp:BTComposite_Sequence_21'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.30"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_UseSkill",
+    "Name": "BTTask_UseSkill_0",
+    "Outer": "BT_Boss_Xibi_Hard_BackUp",
+    "Class": "UScriptClass'BTTask_UseSkill'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ContinueTime": 7.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Hard_BackUp'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Xibi_Hard_BackUp:BTComposite_Sequence_4'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.37"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_UseSkill",
+    "Name": "BTTask_UseSkill_10",
+    "Outer": "BT_Boss_Xibi_Hard_BackUp",
+    "Class": "UScriptClass'BTTask_UseSkill'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SkillId": 3,
+      "ContinueTime": 1.6,
+      "NodeName": "3后跳",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Hard_BackUp'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Xibi_Hard_BackUp:BTComposite_Sequence_13'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.21"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_UseSkill",
+    "Name": "BTTask_UseSkill_11",
+    "Outer": "BT_Boss_Xibi_Hard_BackUp",
+    "Class": "UScriptClass'BTTask_UseSkill'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ContinueTime": 3.8,
+      "NodeName": "1鞭平砍",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Hard_BackUp'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Xibi_Hard_BackUp:BTComposite_Selector_6'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.12"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_UseSkill",
+    "Name": "BTTask_UseSkill_12",
+    "Outer": "BT_Boss_Xibi_Hard_BackUp",
+    "Class": "UScriptClass'BTTask_UseSkill'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SkillId": 5,
+      "ContinueTime": 7.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Hard_BackUp'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Xibi_Hard_BackUp:BTComposite_Sequence_9'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.42"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_UseSkill",
+    "Name": "BTTask_UseSkill_13",
+    "Outer": "BT_Boss_Xibi_Hard_BackUp",
+    "Class": "UScriptClass'BTTask_UseSkill'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SkillId": 6,
+      "ContinueTime": 7.6,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Hard_BackUp'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Xibi_Hard_BackUp:BTComposite_Sequence_10'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.18"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_UseSkill",
+    "Name": "BTTask_UseSkill_14",
+    "Outer": "BT_Boss_Xibi_Hard_BackUp",
+    "Class": "UScriptClass'BTTask_UseSkill'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SkillId": 6,
+      "NodeName": "6中场雷环",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Hard_BackUp'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Xibi_Hard_BackUp:BTComposite_Sequence_24'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.33"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_UseSkill",
+    "Name": "BTTask_UseSkill_15",
+    "Outer": "BT_Boss_Xibi_Hard_BackUp",
+    "Class": "UScriptClass'BTTask_UseSkill'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SkillId": 8,
+      "ContinueTime": 7.6,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Hard_BackUp'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Xibi_Hard_BackUp:BTComposite_Sequence_12'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.20"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_UseSkill",
+    "Name": "BTTask_UseSkill_16",
+    "Outer": "BT_Boss_Xibi_Hard_BackUp",
+    "Class": "UScriptClass'BTTask_UseSkill'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SkillId": 2,
+      "ContinueTime": 3.8,
+      "NodeName": "2剑平砍",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Hard_BackUp'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Xibi_Hard_BackUp:BTComposite_Selector_6'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.12"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_UseSkill",
+    "Name": "BTTask_UseSkill_17",
+    "Outer": "BT_Boss_Xibi_Hard_BackUp",
+    "Class": "UScriptClass'BTTask_UseSkill'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SkillId": 5,
+      "NodeName": "5弹幕",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Hard_BackUp'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Xibi_Hard_BackUp:BTComposite_Selector_2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.8"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_UseSkill",
+    "Name": "BTTask_UseSkill_2",
+    "Outer": "BT_Boss_Xibi_Hard_BackUp",
+    "Class": "UScriptClass'BTTask_UseSkill'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SkillId": 3,
+      "ContinueTime": 7.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Hard_BackUp'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Xibi_Hard_BackUp:BTComposite_Sequence_6'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.39"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_UseSkill",
+    "Name": "BTTask_UseSkill_20",
+    "Outer": "BT_Boss_Xibi_Hard_BackUp",
+    "Class": "UScriptClass'BTTask_UseSkill'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SkillId": 7,
+      "ContinueTime": 3.2,
+      "NodeName": "7球形炸圈",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Hard_BackUp'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Rate'BT_Boss_Xibi_Hard_BackUp:BTComposite_Rate_2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.5"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_UseSkill",
+    "Name": "BTTask_UseSkill_22",
+    "Outer": "BT_Boss_Xibi_Hard_BackUp",
+    "Class": "UScriptClass'BTTask_UseSkill'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SkillId": 8,
+      "ContinueTime": 2.9,
+      "NodeName": "8突进",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Hard_BackUp'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Xibi_Hard_BackUp:BTComposite_Sequence_22'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.31"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_UseSkill",
+    "Name": "BTTask_UseSkill_24",
+    "Outer": "BT_Boss_Xibi_Hard_BackUp",
+    "Class": "UScriptClass'BTTask_UseSkill'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SkillId": 5,
+      "ContinueTime": 2.9,
+      "NodeName": "5弹幕",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Hard_BackUp'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Xibi_Hard_BackUp:BTComposite_Selector_7'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.13"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_UseSkill",
+    "Name": "BTTask_UseSkill_25",
+    "Outer": "BT_Boss_Xibi_Hard_BackUp",
+    "Class": "UScriptClass'BTTask_UseSkill'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SkillId": 4,
+      "ContinueTime": 2.9,
+      "NodeName": "4雷柱",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Hard_BackUp'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Rate'BT_Boss_Xibi_Hard_BackUp:BTComposite_Rate_2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.5"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_UseSkill",
+    "Name": "BTTask_UseSkill_3",
+    "Outer": "BT_Boss_Xibi_Hard_BackUp",
+    "Class": "UScriptClass'BTTask_UseSkill'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SkillId": 2,
+      "ContinueTime": 7.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Hard_BackUp'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Xibi_Hard_BackUp:BTComposite_Sequence_5'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.38"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_UseSkill",
+    "Name": "BTTask_UseSkill_4",
+    "Outer": "BT_Boss_Xibi_Hard_BackUp",
+    "Class": "UScriptClass'BTTask_UseSkill'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SkillId": 7,
+      "ContinueTime": 7.6,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Hard_BackUp'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Xibi_Hard_BackUp:BTComposite_Sequence_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.17"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_UseSkill",
+    "Name": "BTTask_UseSkill_5",
+    "Outer": "BT_Boss_Xibi_Hard_BackUp",
+    "Class": "UScriptClass'BTTask_UseSkill'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SkillId": 4,
+      "ContinueTime": 7.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Hard_BackUp'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Xibi_Hard_BackUp:BTComposite_Sequence_8'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.41"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_UseSkill",
+    "Name": "BTTask_UseSkill_6",
+    "Outer": "BT_Boss_Xibi_Hard_BackUp",
+    "Class": "UScriptClass'BTTask_UseSkill'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SkillId": 9,
+      "ContinueTime": 7.6,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Hard_BackUp'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Xibi_Hard_BackUp:BTComposite_Sequence_14'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.22"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_UseSkill",
+    "Name": "BTTask_UseSkill_7",
+    "Outer": "BT_Boss_Xibi_Hard_BackUp",
+    "Class": "UScriptClass'BTTask_UseSkill'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SkillId": 4,
+      "NodeName": "4雷柱",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Hard_BackUp'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Rate'BT_Boss_Xibi_Hard_BackUp:BTComposite_Rate_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.3"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_UseSkill",
+    "Name": "BTTask_UseSkill_9",
+    "Outer": "BT_Boss_Xibi_Hard_BackUp",
+    "Class": "UScriptClass'BTTask_UseSkill'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SkillId": 7,
+      "ContinueTime": 3.2,
+      "NodeName": "7球形炸圈",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Hard_BackUp'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Xibi_Hard_BackUp:BTComposite_Sequence_22'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.31"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_1",
+    "Outer": "BT_Boss_Xibi_Hard_BackUp",
+    "Class": "UScriptClass'BTTask_Wait'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Hard_BackUp'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Xibi_Hard_BackUp:BTComposite_Selector_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.7"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_10",
+    "Outer": "BT_Boss_Xibi_Hard_BackUp",
+    "Class": "UScriptClass'BTTask_Wait'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "WaitTime": 0.5,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Hard_BackUp'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Xibi_Hard_BackUp:BTComposite_Sequence_12'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.20"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_11",
+    "Outer": "BT_Boss_Xibi_Hard_BackUp",
+    "Class": "UScriptClass'BTTask_Wait'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "WaitTime": 0.5,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Hard_BackUp'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Xibi_Hard_BackUp:BTComposite_Sequence_14'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.22"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_13",
+    "Outer": "BT_Boss_Xibi_Hard_BackUp",
+    "Class": "UScriptClass'BTTask_Wait'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "WaitTime": 1.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Hard_BackUp'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_Xibi_Hard_BackUp:BTComposite_Selector_5'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.11"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_14",
+    "Outer": "BT_Boss_Xibi_Hard_BackUp",
+    "Class": "UScriptClass'BTTask_Wait'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "WaitTime": 1.0,
+      "RandomDeviation": 0.5,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Hard_BackUp'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Xibi_Hard_BackUp:BTComposite_Sequence_19'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.27"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_2",
+    "Outer": "BT_Boss_Xibi_Hard_BackUp",
+    "Class": "UScriptClass'BTTask_Wait'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "WaitTime": 1.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Hard_BackUp'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Xibi_Hard_BackUp:BTComposite_Sequence_7'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.40"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_3",
+    "Outer": "BT_Boss_Xibi_Hard_BackUp",
+    "Class": "UScriptClass'BTTask_Wait'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "WaitTime": 0.5,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Hard_BackUp'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Xibi_Hard_BackUp:BTComposite_Sequence_8'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.41"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_4",
+    "Outer": "BT_Boss_Xibi_Hard_BackUp",
+    "Class": "UScriptClass'BTTask_Wait'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "WaitTime": 0.5,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Hard_BackUp'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Xibi_Hard_BackUp:BTComposite_Sequence_9'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.42"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_5",
+    "Outer": "BT_Boss_Xibi_Hard_BackUp",
+    "Class": "UScriptClass'BTTask_Wait'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "WaitTime": 0.5,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Hard_BackUp'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Xibi_Hard_BackUp:BTComposite_Sequence_6'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.39"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_6",
+    "Outer": "BT_Boss_Xibi_Hard_BackUp",
+    "Class": "UScriptClass'BTTask_Wait'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "WaitTime": 0.5,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Hard_BackUp'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Xibi_Hard_BackUp:BTComposite_Sequence_5'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.38"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_7",
+    "Outer": "BT_Boss_Xibi_Hard_BackUp",
+    "Class": "UScriptClass'BTTask_Wait'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "WaitTime": 0.5,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Hard_BackUp'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Xibi_Hard_BackUp:BTComposite_Sequence_4'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.37"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_8",
+    "Outer": "BT_Boss_Xibi_Hard_BackUp",
+    "Class": "UScriptClass'BTTask_Wait'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "WaitTime": 0.5,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Hard_BackUp'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Xibi_Hard_BackUp:BTComposite_Sequence_10'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.18"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_9",
+    "Outer": "BT_Boss_Xibi_Hard_BackUp",
+    "Class": "UScriptClass'BTTask_Wait'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "WaitTime": 0.5,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_Xibi_Hard_BackUp'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_Xibi_Hard_BackUp:BTComposite_Sequence_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_00_Xibi/BT_Boss_Xibi_Hard_BackUp.17"
+      }
+    }
+  },
+  {
+    "Type": "TargetCondition_Distance",
+    "Name": "TargetCondition_Distance_0",
+    "Outer": "BTTask_SetTarget_0",
+    "Class": "UScriptClass'TargetCondition_Distance'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Distance": 2000.0
+    }
+  }
+]

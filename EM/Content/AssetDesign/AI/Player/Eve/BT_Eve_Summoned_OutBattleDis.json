@@ -1,0 +1,177 @@
+[
+  {
+    "Type": "BehaviorTree",
+    "Name": "BT_Eve_Summoned_OutBattleDis",
+    "Class": "UScriptClass'BehaviorTree'",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "RootNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Eve_Summoned_OutBattleDis:BTComposite_Sequence_9'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_OutBattleDis.2"
+      },
+      "BlackboardAsset": {
+        "ObjectName": "BlackboardData'BB_Eve_Soldier'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BB_Eve_Soldier.0"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_9",
+    "Outer": "BT_Eve_Summoned_OutBattleDis",
+    "Class": "UScriptClass'BTComposite_Selector'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_NewMoveTo'BT_Eve_Summoned_OutBattleDis:BTTask_NewMoveTo_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_OutBattleDis.6"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Eve_Summoned_OutBattleDis'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_OutBattleDis.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Eve_Summoned_OutBattleDis:BTComposite_Sequence_9'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_OutBattleDis.2"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_9",
+    "Outer": "BT_Eve_Summoned_OutBattleDis",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_ClearHatredList'BT_Eve_Summoned_OutBattleDis:BTTask_ClearHatredList_1'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_OutBattleDis.5"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector'BT_Eve_Summoned_OutBattleDis:BTComposite_Selector_9'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_OutBattleDis.1"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Eve_Summoned_OutBattleDis:BTDecorator_Blackboard_0'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_OutBattleDis.3"
+            },
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Eve_Summoned_OutBattleDis:BTDecorator_Blackboard_14'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_OutBattleDis.4"
+            }
+          ],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Eve_Summoned_OutBattleDis'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_OutBattleDis.0"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_0",
+    "Outer": "BT_Eve_Summoned_OutBattleDis",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "FloatValue": 2000.0,
+      "CachedDescription": "PlayerDis 大于 2000.000000",
+      "OperationType": 4,
+      "BlackboardKey": {
+        "SelectedKeyName": "PlayerDis"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Eve_Summoned_OutBattleDis'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_OutBattleDis.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Eve_Summoned_OutBattleDis:BTComposite_Sequence_9'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_OutBattleDis.2"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_14",
+    "Outer": "BT_Eve_Summoned_OutBattleDis",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "FloatValue": 3000.0,
+      "CachedDescription": "PlayerDis 小于或等于 3000.000000",
+      "OperationType": 3,
+      "BlackboardKey": {
+        "SelectedKeyName": "PlayerDis"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Eve_Summoned_OutBattleDis'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_OutBattleDis.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Eve_Summoned_OutBattleDis:BTComposite_Sequence_9'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_OutBattleDis.2"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_ClearHatredList",
+    "Name": "BTTask_ClearHatredList_1",
+    "Outer": "BT_Eve_Summoned_OutBattleDis",
+    "Class": "UScriptClass'BTTask_ClearHatredList'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Eve_Summoned_OutBattleDis'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_OutBattleDis.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Eve_Summoned_OutBattleDis:BTComposite_Sequence_9'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_OutBattleDis.2"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_NewMoveTo",
+    "Name": "BTTask_NewMoveTo_0",
+    "Outer": "BT_Eve_Summoned_OutBattleDis",
+    "Class": "UScriptClass'BTTask_NewMoveTo'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "bOrientRotationToMovement": true,
+      "MoveTypeState": "EMoveTypeState::MTS_Run",
+      "ForceTeleportDistance": 2200.0,
+      "bAllowTeleport": true,
+      "AcceptableRadius": 800.0,
+      "bStopOnOverlapNeedsUpdate": false,
+      "BlackboardKey": {
+        "SelectedKeyName": "Player"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Eve_Summoned_OutBattleDis'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_OutBattleDis.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Eve_Summoned_OutBattleDis:BTComposite_Selector_9'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Eve/BT_Eve_Summoned_OutBattleDis.1"
+      }
+    }
+  }
+]

@@ -1,0 +1,172 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "CinemaMoveSpline_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'CinemaMoveSpline_C:SimpleConstructionScript_0'",
+        "ObjectPath": "EM/Content/BluePrints/Item/DefenceCore/CinemaMoveSpline.6"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'CinemaMoveSpline'",
+      "ObjectPath": "/Script/EM"
+    },
+    "ClassFlags": "CLASS_Config | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "CinemaMoveSpline_C'Default__CinemaMoveSpline_C'",
+      "ObjectPath": "EM/Content/BluePrints/Item/DefenceCore/CinemaMoveSpline.1"
+    }
+  },
+  {
+    "Type": "CinemaMoveSpline_C",
+    "Name": "Default__CinemaMoveSpline_C",
+    "Class": "BlueprintGeneratedClass'EM/Content/BluePrints/Item/DefenceCore/CinemaMoveSpline.CinemaMoveSpline_C'",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SplineComponent": {
+        "ObjectName": "ExploreSplineComponent'Default__CinemaMoveSpline_C:Spline'",
+        "ObjectPath": "EM/Content/BluePrints/Item/DefenceCore/CinemaMoveSpline.3"
+      },
+      "EndPointOverlapBox": {
+        "ObjectName": "BoxComponent'Default__CinemaMoveSpline_C:EndPointOverlap'",
+        "ObjectPath": "EM/Content/BluePrints/Item/DefenceCore/CinemaMoveSpline.2"
+      },
+      "RootComponent": {
+        "ObjectName": "ExploreSplineComponent'Default__CinemaMoveSpline_C:Spline'",
+        "ObjectPath": "EM/Content/BluePrints/Item/DefenceCore/CinemaMoveSpline.3"
+      }
+    }
+  },
+  {
+    "Type": "BoxComponent",
+    "Name": "EndPointOverlap",
+    "Outer": "Default__CinemaMoveSpline_C",
+    "Class": "UScriptClass'BoxComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "BodyInstance": {
+        "CollisionProfileName": "Custom",
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "WorldStatic",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "WorldDynamic",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Pawn",
+              "Response": "ECR_Overlap"
+            },
+            {
+              "Channel": "Visibility",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Camera",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "PhysicsBody",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Vehicle",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Destructible",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "TraceExceptChar",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "MonsterPawn",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Item",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "TraceOverlap",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "BreakableItem",
+              "Response": "ECR_Ignore"
+            }
+          ]
+        }
+      },
+      "AttachParent": {
+        "ObjectName": "ExploreSplineComponent'Default__CinemaMoveSpline_C:Spline'",
+        "ObjectPath": "EM/Content/BluePrints/Item/DefenceCore/CinemaMoveSpline.3"
+      },
+      "RelativeLocation": {
+        "X": 25.0,
+        "Y": 0.0,
+        "Z": 0.0
+      }
+    }
+  },
+  {
+    "Type": "ExploreSplineComponent",
+    "Name": "Spline",
+    "Outer": "Default__CinemaMoveSpline_C",
+    "Class": "UScriptClass'ExploreSplineComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Outer": "CinemaMoveSpline_C",
+    "Class": "UScriptClass'SceneComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'CinemaMoveSpline_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "EM/Content/BluePrints/Item/DefenceCore/CinemaMoveSpline.4"
+      },
+      "VariableGuid": "D29E8B46-4803FC38-C681C68A-952FA1A9",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Outer": "CinemaMoveSpline_C",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'CinemaMoveSpline_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "EM/Content/BluePrints/Item/DefenceCore/CinemaMoveSpline.5"
+      }
+    }
+  }
+]

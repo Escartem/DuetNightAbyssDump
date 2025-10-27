@@ -1,0 +1,2374 @@
+[
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BP_FXPriorityManager_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "SuperStruct": {
+      "ObjectName": "Class'FXPriorityManager'",
+      "ObjectPath": "/Script/EM"
+    },
+    "ClassFlags": "CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint",
+    "ClassWithin": {
+      "ObjectName": "Class'GameInstance'",
+      "ObjectPath": "/Script/Engine"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BP_FXPriorityManager_C'Default__BP_FXPriorityManager_C'",
+      "ObjectPath": "EM/Content/BluePrints/Common/BP_FXPriorityManager.1"
+    }
+  },
+  {
+    "Type": "BP_FXPriorityManager_C",
+    "Name": "Default__BP_FXPriorityManager_C",
+    "Class": "BlueprintGeneratedClass'EM/Content/BluePrints/Common/BP_FXPriorityManager.BP_FXPriorityManager_C'",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "PriorityConfigPC": {
+        "QualityLevelConfig": [
+          {
+            "Key": "EEMFXScalabilityLevel::High",
+            "Value": {
+              "GlobalBudgetUseMs": 5.0,
+              "GeneralLODConfig": {
+                "LODConfig": [
+                  {
+                    "Key": "EEMFXScalabilityLevel::High",
+                    "Value": 30
+                  },
+                  {
+                    "Key": "EEMFXScalabilityLevel::Medium",
+                    "Value": 30
+                  },
+                  {
+                    "Key": "EEMFXScalabilityLevel::Low",
+                    "Value": 40
+                  }
+                ]
+              },
+              "CustomConfig": [
+                {
+                  "Key": "EFXPriorityType::MonsterHit",
+                  "Value": {
+                    "bInGeneralCtrl": true,
+                    "bIgnoreGlobalBudget": false,
+                    "CustomLODConfig": {
+                      "LODConfig": [
+                        {
+                          "Key": "EEMFXScalabilityLevel::High",
+                          "Value": 2
+                        },
+                        {
+                          "Key": "EEMFXScalabilityLevel::Medium",
+                          "Value": 3
+                        },
+                        {
+                          "Key": "EEMFXScalabilityLevel::Low",
+                          "Value": 4
+                        }
+                      ]
+                    }
+                  }
+                },
+                {
+                  "Key": "EFXPriorityType::PlayerHit",
+                  "Value": {
+                    "bInGeneralCtrl": true,
+                    "bIgnoreGlobalBudget": false,
+                    "CustomLODConfig": {
+                      "LODConfig": [
+                        {
+                          "Key": "EEMFXScalabilityLevel::High",
+                          "Value": 1
+                        },
+                        {
+                          "Key": "EEMFXScalabilityLevel::Medium",
+                          "Value": 1
+                        },
+                        {
+                          "Key": "EEMFXScalabilityLevel::Low",
+                          "Value": 1
+                        }
+                      ]
+                    }
+                  }
+                },
+                {
+                  "Key": "EFXPriorityType::MonsterBuff",
+                  "Value": {
+                    "bInGeneralCtrl": true,
+                    "bIgnoreGlobalBudget": false,
+                    "CustomLODConfig": {
+                      "LODConfig": [
+                        {
+                          "Key": "EEMFXScalabilityLevel::High",
+                          "Value": 2
+                        },
+                        {
+                          "Key": "EEMFXScalabilityLevel::Medium",
+                          "Value": 3
+                        },
+                        {
+                          "Key": "EEMFXScalabilityLevel::Low",
+                          "Value": 7
+                        }
+                      ]
+                    }
+                  }
+                },
+                {
+                  "Key": "EFXPriorityType::Always",
+                  "Value": {
+                    "bInGeneralCtrl": false,
+                    "bIgnoreGlobalBudget": false,
+                    "CustomLODConfig": {
+                      "LODConfig": [
+                        {
+                          "Key": "EEMFXScalabilityLevel::High",
+                          "Value": 2
+                        },
+                        {
+                          "Key": "EEMFXScalabilityLevel::Medium",
+                          "Value": 3
+                        },
+                        {
+                          "Key": "EEMFXScalabilityLevel::Low",
+                          "Value": 1000
+                        }
+                      ]
+                    }
+                  }
+                },
+                {
+                  "Key": "EFXPriorityType::DropEffect",
+                  "Value": {
+                    "bInGeneralCtrl": false,
+                    "bIgnoreGlobalBudget": false,
+                    "CustomLODConfig": {
+                      "LODConfig": [
+                        {
+                          "Key": "EEMFXScalabilityLevel::High",
+                          "Value": 2
+                        },
+                        {
+                          "Key": "EEMFXScalabilityLevel::Medium",
+                          "Value": 3
+                        },
+                        {
+                          "Key": "EEMFXScalabilityLevel::Low",
+                          "Value": 100
+                        }
+                      ]
+                    }
+                  }
+                },
+                {
+                  "Key": "EFXPriorityType::PlayerBuff",
+                  "Value": {
+                    "bInGeneralCtrl": true,
+                    "bIgnoreGlobalBudget": false,
+                    "CustomLODConfig": {
+                      "LODConfig": [
+                        {
+                          "Key": "EEMFXScalabilityLevel::High",
+                          "Value": 2
+                        },
+                        {
+                          "Key": "EEMFXScalabilityLevel::Medium",
+                          "Value": 3
+                        },
+                        {
+                          "Key": "EEMFXScalabilityLevel::Low",
+                          "Value": 100
+                        }
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "Key": "EEMFXScalabilityLevel::Medium",
+            "Value": {
+              "GlobalBudgetUseMs": 4.0,
+              "GeneralLODConfig": {
+                "LODConfig": [
+                  {
+                    "Key": "EEMFXScalabilityLevel::High",
+                    "Value": 0
+                  },
+                  {
+                    "Key": "EEMFXScalabilityLevel::Medium",
+                    "Value": 50
+                  },
+                  {
+                    "Key": "EEMFXScalabilityLevel::Low",
+                    "Value": 50
+                  }
+                ]
+              },
+              "CustomConfig": [
+                {
+                  "Key": "EFXPriorityType::MonsterHit",
+                  "Value": {
+                    "bInGeneralCtrl": true,
+                    "bIgnoreGlobalBudget": false,
+                    "CustomLODConfig": {
+                      "LODConfig": [
+                        {
+                          "Key": "EEMFXScalabilityLevel::High",
+                          "Value": 0
+                        },
+                        {
+                          "Key": "EEMFXScalabilityLevel::Medium",
+                          "Value": 3
+                        },
+                        {
+                          "Key": "EEMFXScalabilityLevel::Low",
+                          "Value": 4
+                        }
+                      ]
+                    }
+                  }
+                },
+                {
+                  "Key": "EFXPriorityType::PlayerHit",
+                  "Value": {
+                    "bInGeneralCtrl": true,
+                    "bIgnoreGlobalBudget": false,
+                    "CustomLODConfig": {
+                      "LODConfig": [
+                        {
+                          "Key": "EEMFXScalabilityLevel::High",
+                          "Value": 0
+                        },
+                        {
+                          "Key": "EEMFXScalabilityLevel::Medium",
+                          "Value": 1
+                        },
+                        {
+                          "Key": "EEMFXScalabilityLevel::Low",
+                          "Value": 2
+                        }
+                      ]
+                    }
+                  }
+                },
+                {
+                  "Key": "EFXPriorityType::MonsterBuff",
+                  "Value": {
+                    "bInGeneralCtrl": true,
+                    "bIgnoreGlobalBudget": false,
+                    "CustomLODConfig": {
+                      "LODConfig": [
+                        {
+                          "Key": "EEMFXScalabilityLevel::High",
+                          "Value": 0
+                        },
+                        {
+                          "Key": "EEMFXScalabilityLevel::Medium",
+                          "Value": 3
+                        },
+                        {
+                          "Key": "EEMFXScalabilityLevel::Low",
+                          "Value": 7
+                        }
+                      ]
+                    }
+                  }
+                },
+                {
+                  "Key": "EFXPriorityType::Always",
+                  "Value": {
+                    "bInGeneralCtrl": false,
+                    "bIgnoreGlobalBudget": false,
+                    "CustomLODConfig": {
+                      "LODConfig": [
+                        {
+                          "Key": "EEMFXScalabilityLevel::High",
+                          "Value": 0
+                        },
+                        {
+                          "Key": "EEMFXScalabilityLevel::Medium",
+                          "Value": 3
+                        },
+                        {
+                          "Key": "EEMFXScalabilityLevel::Low",
+                          "Value": 1000
+                        }
+                      ]
+                    }
+                  }
+                },
+                {
+                  "Key": "EFXPriorityType::DropEffect",
+                  "Value": {
+                    "bInGeneralCtrl": false,
+                    "bIgnoreGlobalBudget": false,
+                    "CustomLODConfig": {
+                      "LODConfig": [
+                        {
+                          "Key": "EEMFXScalabilityLevel::High",
+                          "Value": 0
+                        },
+                        {
+                          "Key": "EEMFXScalabilityLevel::Medium",
+                          "Value": 3
+                        },
+                        {
+                          "Key": "EEMFXScalabilityLevel::Low",
+                          "Value": 100
+                        }
+                      ]
+                    }
+                  }
+                },
+                {
+                  "Key": "EFXPriorityType::PlayerBuff",
+                  "Value": {
+                    "bInGeneralCtrl": true,
+                    "bIgnoreGlobalBudget": false,
+                    "CustomLODConfig": {
+                      "LODConfig": [
+                        {
+                          "Key": "EEMFXScalabilityLevel::High",
+                          "Value": 0
+                        },
+                        {
+                          "Key": "EEMFXScalabilityLevel::Medium",
+                          "Value": 5
+                        },
+                        {
+                          "Key": "EEMFXScalabilityLevel::Low",
+                          "Value": 100
+                        }
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "Key": "EEMFXScalabilityLevel::Cinematic",
+            "Value": {
+              "GlobalBudgetUseMs": 6.0,
+              "GeneralLODConfig": {
+                "LODConfig": [
+                  {
+                    "Key": "EEMFXScalabilityLevel::Cinematic",
+                    "Value": 50
+                  },
+                  {
+                    "Key": "EEMFXScalabilityLevel::Epic",
+                    "Value": 30
+                  },
+                  {
+                    "Key": "EEMFXScalabilityLevel::High",
+                    "Value": 20
+                  }
+                ]
+              },
+              "CustomConfig": [
+                {
+                  "Key": "EFXPriorityType::MonsterHit",
+                  "Value": {
+                    "bInGeneralCtrl": true,
+                    "bIgnoreGlobalBudget": false,
+                    "CustomLODConfig": {
+                      "LODConfig": [
+                        {
+                          "Key": "EEMFXScalabilityLevel::Cinematic",
+                          "Value": 9
+                        }
+                      ]
+                    }
+                  }
+                },
+                {
+                  "Key": "EFXPriorityType::PlayerHit",
+                  "Value": {
+                    "bInGeneralCtrl": true,
+                    "bIgnoreGlobalBudget": false,
+                    "CustomLODConfig": {
+                      "LODConfig": [
+                        {
+                          "Key": "EEMFXScalabilityLevel::Cinematic",
+                          "Value": 3
+                        }
+                      ]
+                    }
+                  }
+                },
+                {
+                  "Key": "EFXPriorityType::MonsterBuff",
+                  "Value": {
+                    "bInGeneralCtrl": true,
+                    "bIgnoreGlobalBudget": false,
+                    "CustomLODConfig": {
+                      "LODConfig": [
+                        {
+                          "Key": "EEMFXScalabilityLevel::Cinematic",
+                          "Value": 10
+                        },
+                        {
+                          "Key": "EEMFXScalabilityLevel::High",
+                          "Value": 5
+                        }
+                      ]
+                    }
+                  }
+                },
+                {
+                  "Key": "EFXPriorityType::Always",
+                  "Value": {
+                    "bInGeneralCtrl": false,
+                    "bIgnoreGlobalBudget": false,
+                    "CustomLODConfig": {
+                      "LODConfig": [
+                        {
+                          "Key": "EEMFXScalabilityLevel::Cinematic",
+                          "Value": 20
+                        },
+                        {
+                          "Key": "EEMFXScalabilityLevel::High",
+                          "Value": 1000
+                        }
+                      ]
+                    }
+                  }
+                },
+                {
+                  "Key": "EFXPriorityType::DropEffect",
+                  "Value": {
+                    "bInGeneralCtrl": false,
+                    "bIgnoreGlobalBudget": false,
+                    "CustomLODConfig": {
+                      "LODConfig": [
+                        {
+                          "Key": "EEMFXScalabilityLevel::Cinematic",
+                          "Value": 10
+                        },
+                        {
+                          "Key": "EEMFXScalabilityLevel::High",
+                          "Value": 100
+                        }
+                      ]
+                    }
+                  }
+                },
+                {
+                  "Key": "EFXPriorityType::PlayerBuff",
+                  "Value": {
+                    "bInGeneralCtrl": true,
+                    "bIgnoreGlobalBudget": false,
+                    "CustomLODConfig": {
+                      "LODConfig": [
+                        {
+                          "Key": "EEMFXScalabilityLevel::Cinematic",
+                          "Value": 10
+                        },
+                        {
+                          "Key": "EEMFXScalabilityLevel::High",
+                          "Value": 100
+                        }
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "Key": "EEMFXScalabilityLevel::Epic",
+            "Value": {
+              "GlobalBudgetUseMs": 5.0,
+              "GeneralLODConfig": {
+                "LODConfig": [
+                  {
+                    "Key": "EEMFXScalabilityLevel::Epic",
+                    "Value": 30
+                  },
+                  {
+                    "Key": "EEMFXScalabilityLevel::High",
+                    "Value": 30
+                  },
+                  {
+                    "Key": "EEMFXScalabilityLevel::Medium",
+                    "Value": 40
+                  }
+                ]
+              },
+              "CustomConfig": [
+                {
+                  "Key": "EFXPriorityType::MonsterHit",
+                  "Value": {
+                    "bInGeneralCtrl": true,
+                    "bIgnoreGlobalBudget": false,
+                    "CustomLODConfig": {
+                      "LODConfig": [
+                        {
+                          "Key": "EEMFXScalabilityLevel::Epic",
+                          "Value": 2
+                        },
+                        {
+                          "Key": "EEMFXScalabilityLevel::High",
+                          "Value": 3
+                        },
+                        {
+                          "Key": "EEMFXScalabilityLevel::Medium",
+                          "Value": 4
+                        }
+                      ]
+                    }
+                  }
+                },
+                {
+                  "Key": "EFXPriorityType::PlayerHit",
+                  "Value": {
+                    "bInGeneralCtrl": true,
+                    "bIgnoreGlobalBudget": false,
+                    "CustomLODConfig": {
+                      "LODConfig": [
+                        {
+                          "Key": "EEMFXScalabilityLevel::Epic",
+                          "Value": 1
+                        },
+                        {
+                          "Key": "EEMFXScalabilityLevel::High",
+                          "Value": 1
+                        },
+                        {
+                          "Key": "EEMFXScalabilityLevel::Medium",
+                          "Value": 1
+                        }
+                      ]
+                    }
+                  }
+                },
+                {
+                  "Key": "EFXPriorityType::MonsterBuff",
+                  "Value": {
+                    "bInGeneralCtrl": true,
+                    "bIgnoreGlobalBudget": false,
+                    "CustomLODConfig": {
+                      "LODConfig": [
+                        {
+                          "Key": "EEMFXScalabilityLevel::Epic",
+                          "Value": 2
+                        },
+                        {
+                          "Key": "EEMFXScalabilityLevel::High",
+                          "Value": 3
+                        },
+                        {
+                          "Key": "EEMFXScalabilityLevel::Medium",
+                          "Value": 7
+                        }
+                      ]
+                    }
+                  }
+                },
+                {
+                  "Key": "EFXPriorityType::Always",
+                  "Value": {
+                    "bInGeneralCtrl": false,
+                    "bIgnoreGlobalBudget": false,
+                    "CustomLODConfig": {
+                      "LODConfig": [
+                        {
+                          "Key": "EEMFXScalabilityLevel::Epic",
+                          "Value": 2
+                        },
+                        {
+                          "Key": "EEMFXScalabilityLevel::High",
+                          "Value": 3
+                        },
+                        {
+                          "Key": "EEMFXScalabilityLevel::Medium",
+                          "Value": 1000
+                        }
+                      ]
+                    }
+                  }
+                },
+                {
+                  "Key": "EFXPriorityType::DropEffect",
+                  "Value": {
+                    "bInGeneralCtrl": false,
+                    "bIgnoreGlobalBudget": false,
+                    "CustomLODConfig": {
+                      "LODConfig": [
+                        {
+                          "Key": "EEMFXScalabilityLevel::Epic",
+                          "Value": 2
+                        },
+                        {
+                          "Key": "EEMFXScalabilityLevel::High",
+                          "Value": 3
+                        },
+                        {
+                          "Key": "EEMFXScalabilityLevel::Medium",
+                          "Value": 100
+                        }
+                      ]
+                    }
+                  }
+                },
+                {
+                  "Key": "EFXPriorityType::PlayerBuff",
+                  "Value": {
+                    "bInGeneralCtrl": true,
+                    "bIgnoreGlobalBudget": false,
+                    "CustomLODConfig": {
+                      "LODConfig": [
+                        {
+                          "Key": "EEMFXScalabilityLevel::Epic",
+                          "Value": 2
+                        },
+                        {
+                          "Key": "EEMFXScalabilityLevel::High",
+                          "Value": 3
+                        },
+                        {
+                          "Key": "EEMFXScalabilityLevel::Medium",
+                          "Value": 100
+                        }
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "Key": "EEMFXScalabilityLevel::Low",
+            "Value": {
+              "GlobalBudgetUseMs": 3.5,
+              "GeneralLODConfig": {
+                "LODConfig": [
+                  {
+                    "Key": "EEMFXScalabilityLevel::High",
+                    "Value": 0
+                  },
+                  {
+                    "Key": "EEMFXScalabilityLevel::Medium",
+                    "Value": 0
+                  },
+                  {
+                    "Key": "EEMFXScalabilityLevel::Low",
+                    "Value": 100
+                  }
+                ]
+              },
+              "CustomConfig": [
+                {
+                  "Key": "EFXPriorityType::MonsterHit",
+                  "Value": {
+                    "bInGeneralCtrl": true,
+                    "bIgnoreGlobalBudget": false,
+                    "CustomLODConfig": {
+                      "LODConfig": [
+                        {
+                          "Key": "EEMFXScalabilityLevel::High",
+                          "Value": 0
+                        },
+                        {
+                          "Key": "EEMFXScalabilityLevel::Medium",
+                          "Value": 0
+                        },
+                        {
+                          "Key": "EEMFXScalabilityLevel::Low",
+                          "Value": 4
+                        }
+                      ]
+                    }
+                  }
+                },
+                {
+                  "Key": "EFXPriorityType::PlayerHit",
+                  "Value": {
+                    "bInGeneralCtrl": true,
+                    "bIgnoreGlobalBudget": false,
+                    "CustomLODConfig": {
+                      "LODConfig": [
+                        {
+                          "Key": "EEMFXScalabilityLevel::High",
+                          "Value": 0
+                        },
+                        {
+                          "Key": "EEMFXScalabilityLevel::Medium",
+                          "Value": 0
+                        },
+                        {
+                          "Key": "EEMFXScalabilityLevel::Low",
+                          "Value": 3
+                        }
+                      ]
+                    }
+                  }
+                },
+                {
+                  "Key": "EFXPriorityType::MonsterBuff",
+                  "Value": {
+                    "bInGeneralCtrl": true,
+                    "bIgnoreGlobalBudget": false,
+                    "CustomLODConfig": {
+                      "LODConfig": [
+                        {
+                          "Key": "EEMFXScalabilityLevel::High",
+                          "Value": 0
+                        },
+                        {
+                          "Key": "EEMFXScalabilityLevel::Medium",
+                          "Value": 0
+                        },
+                        {
+                          "Key": "EEMFXScalabilityLevel::Low",
+                          "Value": 7
+                        }
+                      ]
+                    }
+                  }
+                },
+                {
+                  "Key": "EFXPriorityType::Always",
+                  "Value": {
+                    "bInGeneralCtrl": false,
+                    "bIgnoreGlobalBudget": false,
+                    "CustomLODConfig": {
+                      "LODConfig": [
+                        {
+                          "Key": "EEMFXScalabilityLevel::High",
+                          "Value": 0
+                        },
+                        {
+                          "Key": "EEMFXScalabilityLevel::Medium",
+                          "Value": 0
+                        },
+                        {
+                          "Key": "EEMFXScalabilityLevel::Low",
+                          "Value": 1000
+                        }
+                      ]
+                    }
+                  }
+                },
+                {
+                  "Key": "EFXPriorityType::DropEffect",
+                  "Value": {
+                    "bInGeneralCtrl": false,
+                    "bIgnoreGlobalBudget": false,
+                    "CustomLODConfig": {
+                      "LODConfig": [
+                        {
+                          "Key": "EEMFXScalabilityLevel::High",
+                          "Value": 0
+                        },
+                        {
+                          "Key": "EEMFXScalabilityLevel::Medium",
+                          "Value": 0
+                        },
+                        {
+                          "Key": "EEMFXScalabilityLevel::Low",
+                          "Value": 100
+                        }
+                      ]
+                    }
+                  }
+                },
+                {
+                  "Key": "EFXPriorityType::PlayerBuff",
+                  "Value": {
+                    "bInGeneralCtrl": true,
+                    "bIgnoreGlobalBudget": false,
+                    "CustomLODConfig": {
+                      "LODConfig": [
+                        {
+                          "Key": "EEMFXScalabilityLevel::High",
+                          "Value": 0
+                        },
+                        {
+                          "Key": "EEMFXScalabilityLevel::Medium",
+                          "Value": 0
+                        },
+                        {
+                          "Key": "EEMFXScalabilityLevel::Low",
+                          "Value": 100
+                        }
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "PriorityConfigIOS": {
+        "QualityLevelConfig": [
+          {
+            "Key": "EEMFXScalabilityLevel::High",
+            "Value": {
+              "GlobalBudgetUseMs": 4.5,
+              "GeneralLODConfig": {
+                "LODConfig": [
+                  {
+                    "Key": "EEMFXScalabilityLevel::High",
+                    "Value": 30
+                  },
+                  {
+                    "Key": "EEMFXScalabilityLevel::Medium",
+                    "Value": 30
+                  },
+                  {
+                    "Key": "EEMFXScalabilityLevel::Low",
+                    "Value": 40
+                  }
+                ]
+              },
+              "CustomConfig": [
+                {
+                  "Key": "EFXPriorityType::MonsterHit",
+                  "Value": {
+                    "bInGeneralCtrl": true,
+                    "bIgnoreGlobalBudget": false,
+                    "CustomLODConfig": {
+                      "LODConfig": [
+                        {
+                          "Key": "EEMFXScalabilityLevel::High",
+                          "Value": 2
+                        },
+                        {
+                          "Key": "EEMFXScalabilityLevel::Medium",
+                          "Value": 3
+                        },
+                        {
+                          "Key": "EEMFXScalabilityLevel::Low",
+                          "Value": 4
+                        }
+                      ]
+                    }
+                  }
+                },
+                {
+                  "Key": "EFXPriorityType::PlayerHit",
+                  "Value": {
+                    "bInGeneralCtrl": true,
+                    "bIgnoreGlobalBudget": false,
+                    "CustomLODConfig": {
+                      "LODConfig": [
+                        {
+                          "Key": "EEMFXScalabilityLevel::High",
+                          "Value": 1
+                        },
+                        {
+                          "Key": "EEMFXScalabilityLevel::Medium",
+                          "Value": 1
+                        },
+                        {
+                          "Key": "EEMFXScalabilityLevel::Low",
+                          "Value": 1
+                        }
+                      ]
+                    }
+                  }
+                },
+                {
+                  "Key": "EFXPriorityType::MonsterBuff",
+                  "Value": {
+                    "bInGeneralCtrl": true,
+                    "bIgnoreGlobalBudget": false,
+                    "CustomLODConfig": {
+                      "LODConfig": [
+                        {
+                          "Key": "EEMFXScalabilityLevel::High",
+                          "Value": 2
+                        },
+                        {
+                          "Key": "EEMFXScalabilityLevel::Medium",
+                          "Value": 3
+                        },
+                        {
+                          "Key": "EEMFXScalabilityLevel::Low",
+                          "Value": 7
+                        }
+                      ]
+                    }
+                  }
+                },
+                {
+                  "Key": "EFXPriorityType::Always",
+                  "Value": {
+                    "bInGeneralCtrl": false,
+                    "bIgnoreGlobalBudget": false,
+                    "CustomLODConfig": {
+                      "LODConfig": [
+                        {
+                          "Key": "EEMFXScalabilityLevel::High",
+                          "Value": 2
+                        },
+                        {
+                          "Key": "EEMFXScalabilityLevel::Medium",
+                          "Value": 3
+                        },
+                        {
+                          "Key": "EEMFXScalabilityLevel::Low",
+                          "Value": 1000
+                        }
+                      ]
+                    }
+                  }
+                },
+                {
+                  "Key": "EFXPriorityType::DropEffect",
+                  "Value": {
+                    "bInGeneralCtrl": false,
+                    "bIgnoreGlobalBudget": false,
+                    "CustomLODConfig": {
+                      "LODConfig": [
+                        {
+                          "Key": "EEMFXScalabilityLevel::High",
+                          "Value": 2
+                        },
+                        {
+                          "Key": "EEMFXScalabilityLevel::Medium",
+                          "Value": 3
+                        },
+                        {
+                          "Key": "EEMFXScalabilityLevel::Low",
+                          "Value": 100
+                        }
+                      ]
+                    }
+                  }
+                },
+                {
+                  "Key": "EFXPriorityType::PlayerBuff",
+                  "Value": {
+                    "bInGeneralCtrl": true,
+                    "bIgnoreGlobalBudget": false,
+                    "CustomLODConfig": {
+                      "LODConfig": [
+                        {
+                          "Key": "EEMFXScalabilityLevel::High",
+                          "Value": 2
+                        },
+                        {
+                          "Key": "EEMFXScalabilityLevel::Medium",
+                          "Value": 3
+                        },
+                        {
+                          "Key": "EEMFXScalabilityLevel::Low",
+                          "Value": 100
+                        }
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "Key": "EEMFXScalabilityLevel::Medium",
+            "Value": {
+              "GlobalBudgetUseMs": 4.0,
+              "GeneralLODConfig": {
+                "LODConfig": [
+                  {
+                    "Key": "EEMFXScalabilityLevel::High",
+                    "Value": 0
+                  },
+                  {
+                    "Key": "EEMFXScalabilityLevel::Medium",
+                    "Value": 50
+                  },
+                  {
+                    "Key": "EEMFXScalabilityLevel::Low",
+                    "Value": 50
+                  }
+                ]
+              },
+              "CustomConfig": [
+                {
+                  "Key": "EFXPriorityType::MonsterHit",
+                  "Value": {
+                    "bInGeneralCtrl": true,
+                    "bIgnoreGlobalBudget": false,
+                    "CustomLODConfig": {
+                      "LODConfig": [
+                        {
+                          "Key": "EEMFXScalabilityLevel::High",
+                          "Value": 0
+                        },
+                        {
+                          "Key": "EEMFXScalabilityLevel::Medium",
+                          "Value": 3
+                        },
+                        {
+                          "Key": "EEMFXScalabilityLevel::Low",
+                          "Value": 4
+                        }
+                      ]
+                    }
+                  }
+                },
+                {
+                  "Key": "EFXPriorityType::PlayerHit",
+                  "Value": {
+                    "bInGeneralCtrl": true,
+                    "bIgnoreGlobalBudget": false,
+                    "CustomLODConfig": {
+                      "LODConfig": [
+                        {
+                          "Key": "EEMFXScalabilityLevel::High",
+                          "Value": 0
+                        },
+                        {
+                          "Key": "EEMFXScalabilityLevel::Medium",
+                          "Value": 1
+                        },
+                        {
+                          "Key": "EEMFXScalabilityLevel::Low",
+                          "Value": 2
+                        }
+                      ]
+                    }
+                  }
+                },
+                {
+                  "Key": "EFXPriorityType::MonsterBuff",
+                  "Value": {
+                    "bInGeneralCtrl": true,
+                    "bIgnoreGlobalBudget": false,
+                    "CustomLODConfig": {
+                      "LODConfig": [
+                        {
+                          "Key": "EEMFXScalabilityLevel::High",
+                          "Value": 0
+                        },
+                        {
+                          "Key": "EEMFXScalabilityLevel::Medium",
+                          "Value": 3
+                        },
+                        {
+                          "Key": "EEMFXScalabilityLevel::Low",
+                          "Value": 7
+                        }
+                      ]
+                    }
+                  }
+                },
+                {
+                  "Key": "EFXPriorityType::Always",
+                  "Value": {
+                    "bInGeneralCtrl": false,
+                    "bIgnoreGlobalBudget": false,
+                    "CustomLODConfig": {
+                      "LODConfig": [
+                        {
+                          "Key": "EEMFXScalabilityLevel::High",
+                          "Value": 0
+                        },
+                        {
+                          "Key": "EEMFXScalabilityLevel::Medium",
+                          "Value": 3
+                        },
+                        {
+                          "Key": "EEMFXScalabilityLevel::Low",
+                          "Value": 1000
+                        }
+                      ]
+                    }
+                  }
+                },
+                {
+                  "Key": "EFXPriorityType::DropEffect",
+                  "Value": {
+                    "bInGeneralCtrl": false,
+                    "bIgnoreGlobalBudget": false,
+                    "CustomLODConfig": {
+                      "LODConfig": [
+                        {
+                          "Key": "EEMFXScalabilityLevel::High",
+                          "Value": 0
+                        },
+                        {
+                          "Key": "EEMFXScalabilityLevel::Medium",
+                          "Value": 3
+                        },
+                        {
+                          "Key": "EEMFXScalabilityLevel::Low",
+                          "Value": 100
+                        }
+                      ]
+                    }
+                  }
+                },
+                {
+                  "Key": "EFXPriorityType::PlayerBuff",
+                  "Value": {
+                    "bInGeneralCtrl": true,
+                    "bIgnoreGlobalBudget": false,
+                    "CustomLODConfig": {
+                      "LODConfig": [
+                        {
+                          "Key": "EEMFXScalabilityLevel::High",
+                          "Value": 0
+                        },
+                        {
+                          "Key": "EEMFXScalabilityLevel::Medium",
+                          "Value": 5
+                        },
+                        {
+                          "Key": "EEMFXScalabilityLevel::Low",
+                          "Value": 100
+                        }
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "Key": "EEMFXScalabilityLevel::Epic",
+            "Value": {
+              "GlobalBudgetUseMs": 5.0,
+              "GeneralLODConfig": {
+                "LODConfig": [
+                  {
+                    "Key": "EEMFXScalabilityLevel::Epic",
+                    "Value": 30
+                  },
+                  {
+                    "Key": "EEMFXScalabilityLevel::High",
+                    "Value": 30
+                  },
+                  {
+                    "Key": "EEMFXScalabilityLevel::Medium",
+                    "Value": 40
+                  }
+                ]
+              },
+              "CustomConfig": [
+                {
+                  "Key": "EFXPriorityType::MonsterHit",
+                  "Value": {
+                    "bInGeneralCtrl": true,
+                    "bIgnoreGlobalBudget": false,
+                    "CustomLODConfig": {
+                      "LODConfig": [
+                        {
+                          "Key": "EEMFXScalabilityLevel::Epic",
+                          "Value": 2
+                        },
+                        {
+                          "Key": "EEMFXScalabilityLevel::High",
+                          "Value": 3
+                        },
+                        {
+                          "Key": "EEMFXScalabilityLevel::Medium",
+                          "Value": 4
+                        }
+                      ]
+                    }
+                  }
+                },
+                {
+                  "Key": "EFXPriorityType::PlayerHit",
+                  "Value": {
+                    "bInGeneralCtrl": true,
+                    "bIgnoreGlobalBudget": false,
+                    "CustomLODConfig": {
+                      "LODConfig": [
+                        {
+                          "Key": "EEMFXScalabilityLevel::Epic",
+                          "Value": 1
+                        },
+                        {
+                          "Key": "EEMFXScalabilityLevel::High",
+                          "Value": 1
+                        },
+                        {
+                          "Key": "EEMFXScalabilityLevel::Medium",
+                          "Value": 1
+                        }
+                      ]
+                    }
+                  }
+                },
+                {
+                  "Key": "EFXPriorityType::MonsterBuff",
+                  "Value": {
+                    "bInGeneralCtrl": true,
+                    "bIgnoreGlobalBudget": false,
+                    "CustomLODConfig": {
+                      "LODConfig": [
+                        {
+                          "Key": "EEMFXScalabilityLevel::Epic",
+                          "Value": 2
+                        },
+                        {
+                          "Key": "EEMFXScalabilityLevel::High",
+                          "Value": 3
+                        },
+                        {
+                          "Key": "EEMFXScalabilityLevel::Medium",
+                          "Value": 7
+                        }
+                      ]
+                    }
+                  }
+                },
+                {
+                  "Key": "EFXPriorityType::Always",
+                  "Value": {
+                    "bInGeneralCtrl": false,
+                    "bIgnoreGlobalBudget": false,
+                    "CustomLODConfig": {
+                      "LODConfig": [
+                        {
+                          "Key": "EEMFXScalabilityLevel::Epic",
+                          "Value": 2
+                        },
+                        {
+                          "Key": "EEMFXScalabilityLevel::High",
+                          "Value": 3
+                        },
+                        {
+                          "Key": "EEMFXScalabilityLevel::Medium",
+                          "Value": 1000
+                        }
+                      ]
+                    }
+                  }
+                },
+                {
+                  "Key": "EFXPriorityType::DropEffect",
+                  "Value": {
+                    "bInGeneralCtrl": false,
+                    "bIgnoreGlobalBudget": false,
+                    "CustomLODConfig": {
+                      "LODConfig": [
+                        {
+                          "Key": "EEMFXScalabilityLevel::Epic",
+                          "Value": 2
+                        },
+                        {
+                          "Key": "EEMFXScalabilityLevel::High",
+                          "Value": 3
+                        },
+                        {
+                          "Key": "EEMFXScalabilityLevel::Medium",
+                          "Value": 100
+                        }
+                      ]
+                    }
+                  }
+                },
+                {
+                  "Key": "EFXPriorityType::PlayerBuff",
+                  "Value": {
+                    "bInGeneralCtrl": true,
+                    "bIgnoreGlobalBudget": false,
+                    "CustomLODConfig": {
+                      "LODConfig": [
+                        {
+                          "Key": "EEMFXScalabilityLevel::Epic",
+                          "Value": 2
+                        },
+                        {
+                          "Key": "EEMFXScalabilityLevel::High",
+                          "Value": 3
+                        },
+                        {
+                          "Key": "EEMFXScalabilityLevel::Medium",
+                          "Value": 100
+                        }
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "Key": "EEMFXScalabilityLevel::Cinematic",
+            "Value": {
+              "GlobalBudgetUseMs": 5.5,
+              "GeneralLODConfig": {
+                "LODConfig": [
+                  {
+                    "Key": "EEMFXScalabilityLevel::Cinematic",
+                    "Value": 30
+                  },
+                  {
+                    "Key": "EEMFXScalabilityLevel::Epic",
+                    "Value": 30
+                  },
+                  {
+                    "Key": "EEMFXScalabilityLevel::High",
+                    "Value": 40
+                  }
+                ]
+              },
+              "CustomConfig": [
+                {
+                  "Key": "EFXPriorityType::MonsterHit",
+                  "Value": {
+                    "bInGeneralCtrl": true,
+                    "bIgnoreGlobalBudget": false,
+                    "CustomLODConfig": {
+                      "LODConfig": [
+                        {
+                          "Key": "EEMFXScalabilityLevel::Cinematic",
+                          "Value": 9
+                        }
+                      ]
+                    }
+                  }
+                },
+                {
+                  "Key": "EFXPriorityType::PlayerHit",
+                  "Value": {
+                    "bInGeneralCtrl": true,
+                    "bIgnoreGlobalBudget": false,
+                    "CustomLODConfig": {
+                      "LODConfig": [
+                        {
+                          "Key": "EEMFXScalabilityLevel::Cinematic",
+                          "Value": 3
+                        }
+                      ]
+                    }
+                  }
+                },
+                {
+                  "Key": "EFXPriorityType::MonsterBuff",
+                  "Value": {
+                    "bInGeneralCtrl": true,
+                    "bIgnoreGlobalBudget": false,
+                    "CustomLODConfig": {
+                      "LODConfig": [
+                        {
+                          "Key": "EEMFXScalabilityLevel::Cinematic",
+                          "Value": 12
+                        }
+                      ]
+                    }
+                  }
+                },
+                {
+                  "Key": "EFXPriorityType::Always",
+                  "Value": {
+                    "bInGeneralCtrl": false,
+                    "bIgnoreGlobalBudget": false,
+                    "CustomLODConfig": {
+                      "LODConfig": [
+                        {
+                          "Key": "EEMFXScalabilityLevel::Cinematic",
+                          "Value": 20
+                        },
+                        {
+                          "Key": "EEMFXScalabilityLevel::High",
+                          "Value": 1000
+                        }
+                      ]
+                    }
+                  }
+                },
+                {
+                  "Key": "EFXPriorityType::DropEffect",
+                  "Value": {
+                    "bInGeneralCtrl": false,
+                    "bIgnoreGlobalBudget": false,
+                    "CustomLODConfig": {
+                      "LODConfig": [
+                        {
+                          "Key": "EEMFXScalabilityLevel::Cinematic",
+                          "Value": 10
+                        },
+                        {
+                          "Key": "EEMFXScalabilityLevel::High",
+                          "Value": 1000
+                        }
+                      ]
+                    }
+                  }
+                },
+                {
+                  "Key": "EFXPriorityType::PlayerBuff",
+                  "Value": {
+                    "bInGeneralCtrl": true,
+                    "bIgnoreGlobalBudget": false,
+                    "CustomLODConfig": {
+                      "LODConfig": [
+                        {
+                          "Key": "EEMFXScalabilityLevel::Cinematic",
+                          "Value": 10
+                        },
+                        {
+                          "Key": "EEMFXScalabilityLevel::High",
+                          "Value": 1000
+                        }
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "Key": "EEMFXScalabilityLevel::Low",
+            "Value": {
+              "GlobalBudgetUseMs": 3.5,
+              "GeneralLODConfig": {
+                "LODConfig": [
+                  {
+                    "Key": "EEMFXScalabilityLevel::High",
+                    "Value": 0
+                  },
+                  {
+                    "Key": "EEMFXScalabilityLevel::Medium",
+                    "Value": 0
+                  },
+                  {
+                    "Key": "EEMFXScalabilityLevel::Low",
+                    "Value": 100
+                  }
+                ]
+              },
+              "CustomConfig": [
+                {
+                  "Key": "EFXPriorityType::MonsterHit",
+                  "Value": {
+                    "bInGeneralCtrl": true,
+                    "bIgnoreGlobalBudget": false,
+                    "CustomLODConfig": {
+                      "LODConfig": [
+                        {
+                          "Key": "EEMFXScalabilityLevel::High",
+                          "Value": 0
+                        },
+                        {
+                          "Key": "EEMFXScalabilityLevel::Medium",
+                          "Value": 0
+                        },
+                        {
+                          "Key": "EEMFXScalabilityLevel::Low",
+                          "Value": 4
+                        }
+                      ]
+                    }
+                  }
+                },
+                {
+                  "Key": "EFXPriorityType::PlayerHit",
+                  "Value": {
+                    "bInGeneralCtrl": true,
+                    "bIgnoreGlobalBudget": false,
+                    "CustomLODConfig": {
+                      "LODConfig": [
+                        {
+                          "Key": "EEMFXScalabilityLevel::High",
+                          "Value": 0
+                        },
+                        {
+                          "Key": "EEMFXScalabilityLevel::Medium",
+                          "Value": 0
+                        },
+                        {
+                          "Key": "EEMFXScalabilityLevel::Low",
+                          "Value": 3
+                        }
+                      ]
+                    }
+                  }
+                },
+                {
+                  "Key": "EFXPriorityType::MonsterBuff",
+                  "Value": {
+                    "bInGeneralCtrl": true,
+                    "bIgnoreGlobalBudget": false,
+                    "CustomLODConfig": {
+                      "LODConfig": [
+                        {
+                          "Key": "EEMFXScalabilityLevel::High",
+                          "Value": 0
+                        },
+                        {
+                          "Key": "EEMFXScalabilityLevel::Medium",
+                          "Value": 0
+                        },
+                        {
+                          "Key": "EEMFXScalabilityLevel::Low",
+                          "Value": 7
+                        }
+                      ]
+                    }
+                  }
+                },
+                {
+                  "Key": "EFXPriorityType::Always",
+                  "Value": {
+                    "bInGeneralCtrl": false,
+                    "bIgnoreGlobalBudget": false,
+                    "CustomLODConfig": {
+                      "LODConfig": [
+                        {
+                          "Key": "EEMFXScalabilityLevel::High",
+                          "Value": 0
+                        },
+                        {
+                          "Key": "EEMFXScalabilityLevel::Medium",
+                          "Value": 0
+                        },
+                        {
+                          "Key": "EEMFXScalabilityLevel::Low",
+                          "Value": 1000
+                        }
+                      ]
+                    }
+                  }
+                },
+                {
+                  "Key": "EFXPriorityType::DropEffect",
+                  "Value": {
+                    "bInGeneralCtrl": false,
+                    "bIgnoreGlobalBudget": false,
+                    "CustomLODConfig": {
+                      "LODConfig": [
+                        {
+                          "Key": "EEMFXScalabilityLevel::High",
+                          "Value": 0
+                        },
+                        {
+                          "Key": "EEMFXScalabilityLevel::Medium",
+                          "Value": 0
+                        },
+                        {
+                          "Key": "EEMFXScalabilityLevel::Low",
+                          "Value": 100
+                        }
+                      ]
+                    }
+                  }
+                },
+                {
+                  "Key": "EFXPriorityType::PlayerBuff",
+                  "Value": {
+                    "bInGeneralCtrl": true,
+                    "bIgnoreGlobalBudget": false,
+                    "CustomLODConfig": {
+                      "LODConfig": [
+                        {
+                          "Key": "EEMFXScalabilityLevel::High",
+                          "Value": 0
+                        },
+                        {
+                          "Key": "EEMFXScalabilityLevel::Medium",
+                          "Value": 0
+                        },
+                        {
+                          "Key": "EEMFXScalabilityLevel::Low",
+                          "Value": 100
+                        }
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "PriorityConfigAndroid": {
+        "QualityLevelConfig": [
+          {
+            "Key": "EEMFXScalabilityLevel::High",
+            "Value": {
+              "GlobalBudgetUseMs": 3.5,
+              "GeneralLODConfig": {
+                "LODConfig": [
+                  {
+                    "Key": "EEMFXScalabilityLevel::High",
+                    "Value": 30
+                  },
+                  {
+                    "Key": "EEMFXScalabilityLevel::Medium",
+                    "Value": 30
+                  },
+                  {
+                    "Key": "EEMFXScalabilityLevel::Low",
+                    "Value": 40
+                  }
+                ]
+              },
+              "CustomConfig": [
+                {
+                  "Key": "EFXPriorityType::MonsterHit",
+                  "Value": {
+                    "bInGeneralCtrl": true,
+                    "bIgnoreGlobalBudget": false,
+                    "CustomLODConfig": {
+                      "LODConfig": [
+                        {
+                          "Key": "EEMFXScalabilityLevel::High",
+                          "Value": 2
+                        },
+                        {
+                          "Key": "EEMFXScalabilityLevel::Medium",
+                          "Value": 3
+                        },
+                        {
+                          "Key": "EEMFXScalabilityLevel::Low",
+                          "Value": 4
+                        }
+                      ]
+                    }
+                  }
+                },
+                {
+                  "Key": "EFXPriorityType::PlayerHit",
+                  "Value": {
+                    "bInGeneralCtrl": true,
+                    "bIgnoreGlobalBudget": false,
+                    "CustomLODConfig": {
+                      "LODConfig": [
+                        {
+                          "Key": "EEMFXScalabilityLevel::High",
+                          "Value": 1
+                        },
+                        {
+                          "Key": "EEMFXScalabilityLevel::Medium",
+                          "Value": 1
+                        },
+                        {
+                          "Key": "EEMFXScalabilityLevel::Low",
+                          "Value": 1
+                        }
+                      ]
+                    }
+                  }
+                },
+                {
+                  "Key": "EFXPriorityType::MonsterBuff",
+                  "Value": {
+                    "bInGeneralCtrl": true,
+                    "bIgnoreGlobalBudget": false,
+                    "CustomLODConfig": {
+                      "LODConfig": [
+                        {
+                          "Key": "EEMFXScalabilityLevel::High",
+                          "Value": 2
+                        },
+                        {
+                          "Key": "EEMFXScalabilityLevel::Medium",
+                          "Value": 3
+                        },
+                        {
+                          "Key": "EEMFXScalabilityLevel::Low",
+                          "Value": 7
+                        }
+                      ]
+                    }
+                  }
+                },
+                {
+                  "Key": "EFXPriorityType::Always",
+                  "Value": {
+                    "bInGeneralCtrl": false,
+                    "bIgnoreGlobalBudget": false,
+                    "CustomLODConfig": {
+                      "LODConfig": [
+                        {
+                          "Key": "EEMFXScalabilityLevel::High",
+                          "Value": 2
+                        },
+                        {
+                          "Key": "EEMFXScalabilityLevel::Medium",
+                          "Value": 3
+                        },
+                        {
+                          "Key": "EEMFXScalabilityLevel::Low",
+                          "Value": 1000
+                        }
+                      ]
+                    }
+                  }
+                },
+                {
+                  "Key": "EFXPriorityType::DropEffect",
+                  "Value": {
+                    "bInGeneralCtrl": false,
+                    "bIgnoreGlobalBudget": false,
+                    "CustomLODConfig": {
+                      "LODConfig": [
+                        {
+                          "Key": "EEMFXScalabilityLevel::High",
+                          "Value": 2
+                        },
+                        {
+                          "Key": "EEMFXScalabilityLevel::Medium",
+                          "Value": 3
+                        },
+                        {
+                          "Key": "EEMFXScalabilityLevel::Low",
+                          "Value": 100
+                        }
+                      ]
+                    }
+                  }
+                },
+                {
+                  "Key": "EFXPriorityType::PlayerBuff",
+                  "Value": {
+                    "bInGeneralCtrl": true,
+                    "bIgnoreGlobalBudget": false,
+                    "CustomLODConfig": {
+                      "LODConfig": [
+                        {
+                          "Key": "EEMFXScalabilityLevel::High",
+                          "Value": 2
+                        },
+                        {
+                          "Key": "EEMFXScalabilityLevel::Medium",
+                          "Value": 3
+                        },
+                        {
+                          "Key": "EEMFXScalabilityLevel::Low",
+                          "Value": 100
+                        }
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "Key": "EEMFXScalabilityLevel::Medium",
+            "Value": {
+              "GlobalBudgetUseMs": 3.0,
+              "GeneralLODConfig": {
+                "LODConfig": [
+                  {
+                    "Key": "EEMFXScalabilityLevel::High",
+                    "Value": 0
+                  },
+                  {
+                    "Key": "EEMFXScalabilityLevel::Medium",
+                    "Value": 40
+                  },
+                  {
+                    "Key": "EEMFXScalabilityLevel::Low",
+                    "Value": 60
+                  }
+                ]
+              },
+              "CustomConfig": [
+                {
+                  "Key": "EFXPriorityType::MonsterHit",
+                  "Value": {
+                    "bInGeneralCtrl": true,
+                    "bIgnoreGlobalBudget": false,
+                    "CustomLODConfig": {
+                      "LODConfig": [
+                        {
+                          "Key": "EEMFXScalabilityLevel::High",
+                          "Value": 0
+                        },
+                        {
+                          "Key": "EEMFXScalabilityLevel::Medium",
+                          "Value": 3
+                        },
+                        {
+                          "Key": "EEMFXScalabilityLevel::Low",
+                          "Value": 4
+                        }
+                      ]
+                    }
+                  }
+                },
+                {
+                  "Key": "EFXPriorityType::PlayerHit",
+                  "Value": {
+                    "bInGeneralCtrl": true,
+                    "bIgnoreGlobalBudget": false,
+                    "CustomLODConfig": {
+                      "LODConfig": [
+                        {
+                          "Key": "EEMFXScalabilityLevel::High",
+                          "Value": 0
+                        },
+                        {
+                          "Key": "EEMFXScalabilityLevel::Medium",
+                          "Value": 1
+                        },
+                        {
+                          "Key": "EEMFXScalabilityLevel::Low",
+                          "Value": 2
+                        }
+                      ]
+                    }
+                  }
+                },
+                {
+                  "Key": "EFXPriorityType::MonsterBuff",
+                  "Value": {
+                    "bInGeneralCtrl": true,
+                    "bIgnoreGlobalBudget": false,
+                    "CustomLODConfig": {
+                      "LODConfig": [
+                        {
+                          "Key": "EEMFXScalabilityLevel::High",
+                          "Value": 0
+                        },
+                        {
+                          "Key": "EEMFXScalabilityLevel::Medium",
+                          "Value": 3
+                        },
+                        {
+                          "Key": "EEMFXScalabilityLevel::Low",
+                          "Value": 7
+                        }
+                      ]
+                    }
+                  }
+                },
+                {
+                  "Key": "EFXPriorityType::Always",
+                  "Value": {
+                    "bInGeneralCtrl": false,
+                    "bIgnoreGlobalBudget": false,
+                    "CustomLODConfig": {
+                      "LODConfig": [
+                        {
+                          "Key": "EEMFXScalabilityLevel::High",
+                          "Value": 0
+                        },
+                        {
+                          "Key": "EEMFXScalabilityLevel::Medium",
+                          "Value": 3
+                        },
+                        {
+                          "Key": "EEMFXScalabilityLevel::Low",
+                          "Value": 1000
+                        }
+                      ]
+                    }
+                  }
+                },
+                {
+                  "Key": "EFXPriorityType::DropEffect",
+                  "Value": {
+                    "bInGeneralCtrl": false,
+                    "bIgnoreGlobalBudget": false,
+                    "CustomLODConfig": {
+                      "LODConfig": [
+                        {
+                          "Key": "EEMFXScalabilityLevel::High",
+                          "Value": 0
+                        },
+                        {
+                          "Key": "EEMFXScalabilityLevel::Medium",
+                          "Value": 3
+                        },
+                        {
+                          "Key": "EEMFXScalabilityLevel::Low",
+                          "Value": 100
+                        }
+                      ]
+                    }
+                  }
+                },
+                {
+                  "Key": "EFXPriorityType::PlayerBuff",
+                  "Value": {
+                    "bInGeneralCtrl": true,
+                    "bIgnoreGlobalBudget": false,
+                    "CustomLODConfig": {
+                      "LODConfig": [
+                        {
+                          "Key": "EEMFXScalabilityLevel::High",
+                          "Value": 0
+                        },
+                        {
+                          "Key": "EEMFXScalabilityLevel::Medium",
+                          "Value": 5
+                        },
+                        {
+                          "Key": "EEMFXScalabilityLevel::Low",
+                          "Value": 100
+                        }
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "Key": "EEMFXScalabilityLevel::Epic",
+            "Value": {
+              "GlobalBudgetUseMs": 4.0,
+              "GeneralLODConfig": {
+                "LODConfig": [
+                  {
+                    "Key": "EEMFXScalabilityLevel::Epic",
+                    "Value": 30
+                  },
+                  {
+                    "Key": "EEMFXScalabilityLevel::High",
+                    "Value": 30
+                  },
+                  {
+                    "Key": "EEMFXScalabilityLevel::Medium",
+                    "Value": 40
+                  }
+                ]
+              },
+              "CustomConfig": [
+                {
+                  "Key": "EFXPriorityType::MonsterHit",
+                  "Value": {
+                    "bInGeneralCtrl": true,
+                    "bIgnoreGlobalBudget": false,
+                    "CustomLODConfig": {
+                      "LODConfig": [
+                        {
+                          "Key": "EEMFXScalabilityLevel::Epic",
+                          "Value": 2
+                        },
+                        {
+                          "Key": "EEMFXScalabilityLevel::High",
+                          "Value": 3
+                        },
+                        {
+                          "Key": "EEMFXScalabilityLevel::Medium",
+                          "Value": 4
+                        }
+                      ]
+                    }
+                  }
+                },
+                {
+                  "Key": "EFXPriorityType::PlayerHit",
+                  "Value": {
+                    "bInGeneralCtrl": true,
+                    "bIgnoreGlobalBudget": false,
+                    "CustomLODConfig": {
+                      "LODConfig": [
+                        {
+                          "Key": "EEMFXScalabilityLevel::Epic",
+                          "Value": 1
+                        },
+                        {
+                          "Key": "EEMFXScalabilityLevel::High",
+                          "Value": 1
+                        },
+                        {
+                          "Key": "EEMFXScalabilityLevel::Medium",
+                          "Value": 1
+                        }
+                      ]
+                    }
+                  }
+                },
+                {
+                  "Key": "EFXPriorityType::MonsterBuff",
+                  "Value": {
+                    "bInGeneralCtrl": true,
+                    "bIgnoreGlobalBudget": false,
+                    "CustomLODConfig": {
+                      "LODConfig": [
+                        {
+                          "Key": "EEMFXScalabilityLevel::Epic",
+                          "Value": 2
+                        },
+                        {
+                          "Key": "EEMFXScalabilityLevel::High",
+                          "Value": 3
+                        },
+                        {
+                          "Key": "EEMFXScalabilityLevel::Medium",
+                          "Value": 7
+                        }
+                      ]
+                    }
+                  }
+                },
+                {
+                  "Key": "EFXPriorityType::Always",
+                  "Value": {
+                    "bInGeneralCtrl": false,
+                    "bIgnoreGlobalBudget": false,
+                    "CustomLODConfig": {
+                      "LODConfig": [
+                        {
+                          "Key": "EEMFXScalabilityLevel::Epic",
+                          "Value": 2
+                        },
+                        {
+                          "Key": "EEMFXScalabilityLevel::High",
+                          "Value": 3
+                        },
+                        {
+                          "Key": "EEMFXScalabilityLevel::Medium",
+                          "Value": 1000
+                        }
+                      ]
+                    }
+                  }
+                },
+                {
+                  "Key": "EFXPriorityType::DropEffect",
+                  "Value": {
+                    "bInGeneralCtrl": false,
+                    "bIgnoreGlobalBudget": false,
+                    "CustomLODConfig": {
+                      "LODConfig": [
+                        {
+                          "Key": "EEMFXScalabilityLevel::Epic",
+                          "Value": 2
+                        },
+                        {
+                          "Key": "EEMFXScalabilityLevel::High",
+                          "Value": 3
+                        },
+                        {
+                          "Key": "EEMFXScalabilityLevel::Medium",
+                          "Value": 100
+                        }
+                      ]
+                    }
+                  }
+                },
+                {
+                  "Key": "EFXPriorityType::PlayerBuff",
+                  "Value": {
+                    "bInGeneralCtrl": true,
+                    "bIgnoreGlobalBudget": false,
+                    "CustomLODConfig": {
+                      "LODConfig": [
+                        {
+                          "Key": "EEMFXScalabilityLevel::Epic",
+                          "Value": 2
+                        },
+                        {
+                          "Key": "EEMFXScalabilityLevel::High",
+                          "Value": 3
+                        },
+                        {
+                          "Key": "EEMFXScalabilityLevel::Medium",
+                          "Value": 100
+                        }
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "Key": "EEMFXScalabilityLevel::Cinematic",
+            "Value": {
+              "GlobalBudgetUseMs": 4.5,
+              "GeneralLODConfig": {
+                "LODConfig": [
+                  {
+                    "Key": "EEMFXScalabilityLevel::Cinematic",
+                    "Value": 30
+                  },
+                  {
+                    "Key": "EEMFXScalabilityLevel::Epic",
+                    "Value": 30
+                  },
+                  {
+                    "Key": "EEMFXScalabilityLevel::High",
+                    "Value": 40
+                  }
+                ]
+              },
+              "CustomConfig": [
+                {
+                  "Key": "EFXPriorityType::MonsterHit",
+                  "Value": {
+                    "bInGeneralCtrl": true,
+                    "bIgnoreGlobalBudget": false,
+                    "CustomLODConfig": {
+                      "LODConfig": [
+                        {
+                          "Key": "EEMFXScalabilityLevel::Cinematic",
+                          "Value": 9
+                        }
+                      ]
+                    }
+                  }
+                },
+                {
+                  "Key": "EFXPriorityType::PlayerHit",
+                  "Value": {
+                    "bInGeneralCtrl": true,
+                    "bIgnoreGlobalBudget": false,
+                    "CustomLODConfig": {
+                      "LODConfig": [
+                        {
+                          "Key": "EEMFXScalabilityLevel::Cinematic",
+                          "Value": 3
+                        }
+                      ]
+                    }
+                  }
+                },
+                {
+                  "Key": "EFXPriorityType::MonsterBuff",
+                  "Value": {
+                    "bInGeneralCtrl": true,
+                    "bIgnoreGlobalBudget": false,
+                    "CustomLODConfig": {
+                      "LODConfig": [
+                        {
+                          "Key": "EEMFXScalabilityLevel::Cinematic",
+                          "Value": 12
+                        }
+                      ]
+                    }
+                  }
+                },
+                {
+                  "Key": "EFXPriorityType::Always",
+                  "Value": {
+                    "bInGeneralCtrl": false,
+                    "bIgnoreGlobalBudget": false,
+                    "CustomLODConfig": {
+                      "LODConfig": [
+                        {
+                          "Key": "EEMFXScalabilityLevel::Cinematic",
+                          "Value": 20
+                        },
+                        {
+                          "Key": "EEMFXScalabilityLevel::High",
+                          "Value": 1000
+                        }
+                      ]
+                    }
+                  }
+                },
+                {
+                  "Key": "EFXPriorityType::DropEffect",
+                  "Value": {
+                    "bInGeneralCtrl": false,
+                    "bIgnoreGlobalBudget": false,
+                    "CustomLODConfig": {
+                      "LODConfig": [
+                        {
+                          "Key": "EEMFXScalabilityLevel::Cinematic",
+                          "Value": 10
+                        },
+                        {
+                          "Key": "EEMFXScalabilityLevel::High",
+                          "Value": 1000
+                        }
+                      ]
+                    }
+                  }
+                },
+                {
+                  "Key": "EFXPriorityType::PlayerBuff",
+                  "Value": {
+                    "bInGeneralCtrl": true,
+                    "bIgnoreGlobalBudget": false,
+                    "CustomLODConfig": {
+                      "LODConfig": [
+                        {
+                          "Key": "EEMFXScalabilityLevel::Cinematic",
+                          "Value": 10
+                        },
+                        {
+                          "Key": "EEMFXScalabilityLevel::High",
+                          "Value": 1000
+                        }
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "Key": "EEMFXScalabilityLevel::Low",
+            "Value": {
+              "GlobalBudgetUseMs": 2.5,
+              "GeneralLODConfig": {
+                "LODConfig": [
+                  {
+                    "Key": "EEMFXScalabilityLevel::High",
+                    "Value": 0
+                  },
+                  {
+                    "Key": "EEMFXScalabilityLevel::Medium",
+                    "Value": 0
+                  },
+                  {
+                    "Key": "EEMFXScalabilityLevel::Low",
+                    "Value": 100
+                  }
+                ]
+              },
+              "CustomConfig": [
+                {
+                  "Key": "EFXPriorityType::MonsterHit",
+                  "Value": {
+                    "bInGeneralCtrl": true,
+                    "bIgnoreGlobalBudget": false,
+                    "CustomLODConfig": {
+                      "LODConfig": [
+                        {
+                          "Key": "EEMFXScalabilityLevel::High",
+                          "Value": 0
+                        },
+                        {
+                          "Key": "EEMFXScalabilityLevel::Medium",
+                          "Value": 0
+                        },
+                        {
+                          "Key": "EEMFXScalabilityLevel::Low",
+                          "Value": 4
+                        }
+                      ]
+                    }
+                  }
+                },
+                {
+                  "Key": "EFXPriorityType::PlayerHit",
+                  "Value": {
+                    "bInGeneralCtrl": true,
+                    "bIgnoreGlobalBudget": false,
+                    "CustomLODConfig": {
+                      "LODConfig": [
+                        {
+                          "Key": "EEMFXScalabilityLevel::High",
+                          "Value": 0
+                        },
+                        {
+                          "Key": "EEMFXScalabilityLevel::Medium",
+                          "Value": 0
+                        },
+                        {
+                          "Key": "EEMFXScalabilityLevel::Low",
+                          "Value": 3
+                        }
+                      ]
+                    }
+                  }
+                },
+                {
+                  "Key": "EFXPriorityType::MonsterBuff",
+                  "Value": {
+                    "bInGeneralCtrl": true,
+                    "bIgnoreGlobalBudget": false,
+                    "CustomLODConfig": {
+                      "LODConfig": [
+                        {
+                          "Key": "EEMFXScalabilityLevel::High",
+                          "Value": 0
+                        },
+                        {
+                          "Key": "EEMFXScalabilityLevel::Medium",
+                          "Value": 0
+                        },
+                        {
+                          "Key": "EEMFXScalabilityLevel::Low",
+                          "Value": 7
+                        }
+                      ]
+                    }
+                  }
+                },
+                {
+                  "Key": "EFXPriorityType::Always",
+                  "Value": {
+                    "bInGeneralCtrl": false,
+                    "bIgnoreGlobalBudget": false,
+                    "CustomLODConfig": {
+                      "LODConfig": [
+                        {
+                          "Key": "EEMFXScalabilityLevel::High",
+                          "Value": 0
+                        },
+                        {
+                          "Key": "EEMFXScalabilityLevel::Medium",
+                          "Value": 0
+                        },
+                        {
+                          "Key": "EEMFXScalabilityLevel::Low",
+                          "Value": 1000
+                        }
+                      ]
+                    }
+                  }
+                },
+                {
+                  "Key": "EFXPriorityType::DropEffect",
+                  "Value": {
+                    "bInGeneralCtrl": false,
+                    "bIgnoreGlobalBudget": false,
+                    "CustomLODConfig": {
+                      "LODConfig": [
+                        {
+                          "Key": "EEMFXScalabilityLevel::High",
+                          "Value": 0
+                        },
+                        {
+                          "Key": "EEMFXScalabilityLevel::Medium",
+                          "Value": 0
+                        },
+                        {
+                          "Key": "EEMFXScalabilityLevel::Low",
+                          "Value": 100
+                        }
+                      ]
+                    }
+                  }
+                },
+                {
+                  "Key": "EFXPriorityType::PlayerBuff",
+                  "Value": {
+                    "bInGeneralCtrl": true,
+                    "bIgnoreGlobalBudget": false,
+                    "CustomLODConfig": {
+                      "LODConfig": [
+                        {
+                          "Key": "EEMFXScalabilityLevel::High",
+                          "Value": 0
+                        },
+                        {
+                          "Key": "EEMFXScalabilityLevel::Medium",
+                          "Value": 0
+                        },
+                        {
+                          "Key": "EEMFXScalabilityLevel::Low",
+                          "Value": 100
+                        }
+                      ]
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "ConvertSummonToOwnerConfig": [
+        3102,
+        2401,
+        5101
+      ]
+    }
+  }
+]

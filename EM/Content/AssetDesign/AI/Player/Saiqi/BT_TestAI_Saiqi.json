@@ -1,0 +1,1065 @@
+[
+  {
+    "Type": "BehaviorTree",
+    "Name": "BT_TestAI_Saiqi",
+    "Class": "UScriptClass'BehaviorTree'",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "RootNode": {
+        "ObjectName": "BTComposite_Selector'BT_TestAI_Saiqi:BTComposite_Selector_4'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Saiqi/BT_TestAI_Saiqi.4"
+      },
+      "BlackboardAsset": {
+        "ObjectName": "BlackboardData'BB_Shadow'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Parent/BB_Shadow.0"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_0",
+    "Outer": "BT_TestAI_Saiqi",
+    "Class": "UScriptClass'BTComposite_Selector'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_PhantomMoveTo'BT_TestAI_Saiqi:BTTask_PhantomMoveTo_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Saiqi/BT_TestAI_Saiqi.29"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_TestAI_Saiqi:BTDecorator_Blackboard_54'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Player/Saiqi/BT_TestAI_Saiqi.12"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_UseSkill_Player'BT_TestAI_Saiqi:BTTask_UseSkill_Player_15'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Saiqi/BT_TestAI_Saiqi.36"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_TestAI_Saiqi'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Saiqi/BT_TestAI_Saiqi.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_TestAI_Saiqi:BTComposite_Selector_2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Saiqi/BT_TestAI_Saiqi.3"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_1",
+    "Outer": "BT_TestAI_Saiqi",
+    "Class": "UScriptClass'BTComposite_Selector'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector'BT_TestAI_Saiqi:BTComposite_Selector_2'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Saiqi/BT_TestAI_Saiqi.3"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_TestAI_Saiqi:BTDecorator_Blackboard_50'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Player/Saiqi/BT_TestAI_Saiqi.10"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_RunBehavior'BT_TestAI_Saiqi:BTTask_RunBehavior_2'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Saiqi/BT_TestAI_Saiqi.32"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_TestAI_Saiqi'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Saiqi/BT_TestAI_Saiqi.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_TestAI_Saiqi:BTComposite_Selector_6'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Saiqi/BT_TestAI_Saiqi.6"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_2",
+    "Outer": "BT_TestAI_Saiqi",
+    "Class": "UScriptClass'BTComposite_Selector'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector'BT_TestAI_Saiqi:BTComposite_Selector_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Saiqi/BT_TestAI_Saiqi.1"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_CheckSpCost'BT_TestAI_Saiqi:BTDecorator_CheckSpCost_21'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Player/Saiqi/BT_TestAI_Saiqi.22"
+            },
+            {
+              "ObjectName": "BTDecorator_CheckBuff'BT_TestAI_Saiqi:BTDecorator_CheckBuff_3'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Player/Saiqi/BT_TestAI_Saiqi.18"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_RunBehavior'BT_TestAI_Saiqi:BTTask_RunBehavior_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Saiqi/BT_TestAI_Saiqi.30"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_TestAI_Saiqi:BTDecorator_Blackboard_19'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Player/Saiqi/BT_TestAI_Saiqi.8"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_RunBehavior'BT_TestAI_Saiqi:BTTask_RunBehavior_1'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Saiqi/BT_TestAI_Saiqi.31"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_TestAI_Saiqi'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Saiqi/BT_TestAI_Saiqi.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_TestAI_Saiqi:BTComposite_Selector_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Saiqi/BT_TestAI_Saiqi.2"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_4",
+    "Outer": "BT_TestAI_Saiqi",
+    "Class": "UScriptClass'BTComposite_Selector'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector'BT_TestAI_Saiqi:BTComposite_Selector_6'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Saiqi/BT_TestAI_Saiqi.6"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_TestAI_Saiqi:BTDecorator_Blackboard_2'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Player/Saiqi/BT_TestAI_Saiqi.9"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait'BT_TestAI_Saiqi:BTTask_Wait_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Saiqi/BT_TestAI_Saiqi.39"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_TestAI_Saiqi:BTDecorator_Blackboard_7'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Player/Saiqi/BT_TestAI_Saiqi.14"
+            }
+          ],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_TestAI_Saiqi'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Saiqi/BT_TestAI_Saiqi.0"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_5",
+    "Outer": "BT_TestAI_Saiqi",
+    "Class": "UScriptClass'BTComposite_Selector'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_UseSkill_Player'BT_TestAI_Saiqi:BTTask_UseSkill_Player_1'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Saiqi/BT_TestAI_Saiqi.35"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_CheckCombatCondition'BT_TestAI_Saiqi:BTDecorator_CheckCombatCondition_39'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Player/Saiqi/BT_TestAI_Saiqi.19"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_UseSkill_Player'BT_TestAI_Saiqi:BTTask_UseSkill_Player_9'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Saiqi/BT_TestAI_Saiqi.38"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_CheckSpCost'BT_TestAI_Saiqi:BTDecorator_CheckSpCost_19'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Player/Saiqi/BT_TestAI_Saiqi.20"
+            },
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_TestAI_Saiqi:BTDecorator_Blackboard_51'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Player/Saiqi/BT_TestAI_Saiqi.11"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_UseSkill_Player'BT_TestAI_Saiqi:BTTask_UseSkill_Player_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Saiqi/BT_TestAI_Saiqi.34"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_CheckSpCost'BT_TestAI_Saiqi:BTDecorator_CheckSpCost_20'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Player/Saiqi/BT_TestAI_Saiqi.21"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_TestAI_Saiqi:BTComposite_Sequence_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Saiqi/BT_TestAI_Saiqi.7"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_TestAI_Saiqi'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Saiqi/BT_TestAI_Saiqi.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_TestAI_Saiqi:BTComposite_Selector_6'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Saiqi/BT_TestAI_Saiqi.6"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_6",
+    "Outer": "BT_TestAI_Saiqi",
+    "Class": "UScriptClass'BTComposite_Selector'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector'BT_TestAI_Saiqi:BTComposite_Selector_5'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Saiqi/BT_TestAI_Saiqi.5"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_CheckBuff'BT_TestAI_Saiqi:BTDecorator_CheckBuff_0'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Player/Saiqi/BT_TestAI_Saiqi.15"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector'BT_TestAI_Saiqi:BTComposite_Selector_1'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Saiqi/BT_TestAI_Saiqi.2"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_CheckBuff'BT_TestAI_Saiqi:BTDecorator_CheckBuff_2'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Player/Saiqi/BT_TestAI_Saiqi.17"
+            }
+          ],
+          "DecoratorOps": []
+        }
+      ],
+      "Services": [
+        {
+          "ObjectName": "BTService_EnemyVision'BT_TestAI_Saiqi:BTService_EnemyVision_0'",
+          "ObjectPath": "EM/Content/AssetDesign/AI/Player/Saiqi/BT_TestAI_Saiqi.26"
+        },
+        {
+          "ObjectName": "BTService_ClearBTTarget_Player'BT_TestAI_Saiqi:BTService_ClearBTTarget_Player_0'",
+          "ObjectPath": "EM/Content/AssetDesign/AI/Player/Saiqi/BT_TestAI_Saiqi.25"
+        },
+        {
+          "ObjectName": "BTService_BBValueDis'BT_TestAI_Saiqi:BTService_BBValueDis_0'",
+          "ObjectPath": "EM/Content/AssetDesign/AI/Player/Saiqi/BT_TestAI_Saiqi.24"
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_TestAI_Saiqi'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Saiqi/BT_TestAI_Saiqi.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_TestAI_Saiqi:BTComposite_Selector_4'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Saiqi/BT_TestAI_Saiqi.4"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_0",
+    "Outer": "BT_TestAI_Saiqi",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_FilterTargetsByDis'BT_TestAI_Saiqi:BTTask_FilterTargetsByDis_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Saiqi/BT_TestAI_Saiqi.27"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_LastFilterTargetsByNum_P'BT_TestAI_Saiqi:BTTask_LastFilterTargetsByNum_P_1'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Saiqi/BT_TestAI_Saiqi.28"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_SetPartAsTarget'BT_TestAI_Saiqi:BTTask_SetPartAsTarget_1'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Saiqi/BT_TestAI_Saiqi.33"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_ForceSuccess'BT_TestAI_Saiqi:BTDecorator_ForceSuccess_2'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Player/Saiqi/BT_TestAI_Saiqi.23"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_UseSkill_Player'BT_TestAI_Saiqi:BTTask_UseSkill_Player_3'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Saiqi/BT_TestAI_Saiqi.37"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_CheckBuff'BT_TestAI_Saiqi:BTDecorator_CheckBuff_1'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Player/Saiqi/BT_TestAI_Saiqi.16"
+            },
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_TestAI_Saiqi:BTDecorator_Blackboard_56'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Player/Saiqi/BT_TestAI_Saiqi.13"
+            }
+          ],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_TestAI_Saiqi'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Saiqi/BT_TestAI_Saiqi.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_TestAI_Saiqi:BTComposite_Selector_5'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Saiqi/BT_TestAI_Saiqi.5"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_19",
+    "Outer": "BT_TestAI_Saiqi",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "FloatValue": 1000.0,
+      "CachedDescription": "TargetCapsuleDis Is Less Than 1000.000000",
+      "OperationType": 2,
+      "BlackboardKey": {
+        "SelectedKeyName": "TargetCapsuleDis"
+      },
+      "NodeName": "Distance<1000",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_TestAI_Saiqi'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Saiqi/BT_TestAI_Saiqi.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_TestAI_Saiqi:BTComposite_Selector_2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Saiqi/BT_TestAI_Saiqi.3"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_2",
+    "Outer": "BT_TestAI_Saiqi",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "CachedDescription": "ActionMode Is Equal To Active",
+      "BlackboardKey": {
+        "SelectedKeyName": "ActionMode"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::Self",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_TestAI_Saiqi'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Saiqi/BT_TestAI_Saiqi.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_TestAI_Saiqi:BTComposite_Selector_4'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Saiqi/BT_TestAI_Saiqi.4"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_50",
+    "Outer": "BT_TestAI_Saiqi",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "CachedDescription": "Target is Is Set",
+      "BlackboardKey": {
+        "SelectedKeyName": "Target"
+      },
+      "NodeName": "HasTarget",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_TestAI_Saiqi'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Saiqi/BT_TestAI_Saiqi.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_TestAI_Saiqi:BTComposite_Selector_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Saiqi/BT_TestAI_Saiqi.2"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_51",
+    "Outer": "BT_TestAI_Saiqi",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "CachedDescription": "Target is Is Set",
+      "BlackboardKey": {
+        "SelectedKeyName": "Target"
+      },
+      "NodeName": "HasTarget",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_TestAI_Saiqi'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Saiqi/BT_TestAI_Saiqi.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_TestAI_Saiqi:BTComposite_Selector_5'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Saiqi/BT_TestAI_Saiqi.5"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_54",
+    "Outer": "BT_TestAI_Saiqi",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "FloatValue": 1500.0,
+      "CachedDescription": "TargetCapsuleDis Is Greater Than 1500.000000",
+      "OperationType": 4,
+      "BlackboardKey": {
+        "SelectedKeyName": "TargetCapsuleDis"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::Self",
+      "NodeName": "Distanc>1500",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_TestAI_Saiqi'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Saiqi/BT_TestAI_Saiqi.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_TestAI_Saiqi:BTComposite_Selector_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Saiqi/BT_TestAI_Saiqi.1"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_56",
+    "Outer": "BT_TestAI_Saiqi",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "CachedDescription": "Target is Is Not Set",
+      "OperationType": 1,
+      "BlackboardKey": {
+        "SelectedKeyName": "Target"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_TestAI_Saiqi'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Saiqi/BT_TestAI_Saiqi.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_TestAI_Saiqi:BTComposite_Sequence_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Saiqi/BT_TestAI_Saiqi.7"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_7",
+    "Outer": "BT_TestAI_Saiqi",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "IntValue": 1,
+      "CachedDescription": "ActionMode Is Equal To Hitted",
+      "BlackboardKey": {
+        "SelectedKeyName": "ActionMode"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::Self",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_TestAI_Saiqi'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Saiqi/BT_TestAI_Saiqi.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_TestAI_Saiqi:BTComposite_Selector_4'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Saiqi/BT_TestAI_Saiqi.4"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_CheckBuff",
+    "Name": "BTDecorator_CheckBuff_0",
+    "Outer": "BT_TestAI_Saiqi",
+    "Class": "UScriptClass'BTDecorator_CheckBuff'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "BuffId": 530101,
+      "NodeName": "IsInSkill2",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_TestAI_Saiqi'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Saiqi/BT_TestAI_Saiqi.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_TestAI_Saiqi:BTComposite_Selector_6'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Saiqi/BT_TestAI_Saiqi.6"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_CheckBuff",
+    "Name": "BTDecorator_CheckBuff_1",
+    "Outer": "BT_TestAI_Saiqi",
+    "Class": "UScriptClass'BTDecorator_CheckBuff'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "BuffId": 530101,
+      "NodeName": "IsInSkill2",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_TestAI_Saiqi'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Saiqi/BT_TestAI_Saiqi.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_TestAI_Saiqi:BTComposite_Sequence_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Saiqi/BT_TestAI_Saiqi.7"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_CheckBuff",
+    "Name": "BTDecorator_CheckBuff_2",
+    "Outer": "BT_TestAI_Saiqi",
+    "Class": "UScriptClass'BTDecorator_CheckBuff'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "HasBuff": false,
+      "BuffId": 530101,
+      "NodeName": "NotInSkill2",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_TestAI_Saiqi'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Saiqi/BT_TestAI_Saiqi.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_TestAI_Saiqi:BTComposite_Selector_6'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Saiqi/BT_TestAI_Saiqi.6"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_CheckBuff",
+    "Name": "BTDecorator_CheckBuff_3",
+    "Outer": "BT_TestAI_Saiqi",
+    "Class": "UScriptClass'BTDecorator_CheckBuff'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "HasBuff": false,
+      "BuffId": 530101,
+      "NodeName": "NotInSkill2",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_TestAI_Saiqi'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Saiqi/BT_TestAI_Saiqi.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_TestAI_Saiqi:BTComposite_Selector_2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Saiqi/BT_TestAI_Saiqi.3"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_CheckCombatCondition",
+    "Name": "BTDecorator_CheckCombatCondition_39",
+    "Outer": "BT_TestAI_Saiqi",
+    "Class": "UScriptClass'BTDecorator_CheckCombatCondition'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "CombatConditionId": 900,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_TestAI_Saiqi'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Saiqi/BT_TestAI_Saiqi.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_TestAI_Saiqi:BTComposite_Selector_5'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Saiqi/BT_TestAI_Saiqi.5"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_CheckSpCost",
+    "Name": "BTDecorator_CheckSpCost_19",
+    "Outer": "BT_TestAI_Saiqi",
+    "Class": "UScriptClass'BTDecorator_CheckSpCost'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SkillId": 530111,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_TestAI_Saiqi'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Saiqi/BT_TestAI_Saiqi.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_TestAI_Saiqi:BTComposite_Selector_5'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Saiqi/BT_TestAI_Saiqi.5"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_CheckSpCost",
+    "Name": "BTDecorator_CheckSpCost_20",
+    "Outer": "BT_TestAI_Saiqi",
+    "Class": "UScriptClass'BTDecorator_CheckSpCost'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SkillId": 530111,
+      "bInverseCondition": true,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_TestAI_Saiqi'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Saiqi/BT_TestAI_Saiqi.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_TestAI_Saiqi:BTComposite_Selector_5'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Saiqi/BT_TestAI_Saiqi.5"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_CheckSpCost",
+    "Name": "BTDecorator_CheckSpCost_21",
+    "Outer": "BT_TestAI_Saiqi",
+    "Class": "UScriptClass'BTDecorator_CheckSpCost'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SkillId": 530111,
+      "CostMultiplier": 1.5,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_TestAI_Saiqi'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Saiqi/BT_TestAI_Saiqi.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_TestAI_Saiqi:BTComposite_Selector_2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Saiqi/BT_TestAI_Saiqi.3"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_ForceSuccess",
+    "Name": "BTDecorator_ForceSuccess_2",
+    "Outer": "BT_TestAI_Saiqi",
+    "Class": "UScriptClass'BTDecorator_ForceSuccess'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_TestAI_Saiqi'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Saiqi/BT_TestAI_Saiqi.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_TestAI_Saiqi:BTComposite_Sequence_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Saiqi/BT_TestAI_Saiqi.7"
+      }
+    }
+  },
+  {
+    "Type": "BTService_BBValueDis",
+    "Name": "BTService_BBValueDis_0",
+    "Outer": "BT_TestAI_Saiqi",
+    "Class": "UScriptClass'BTService_BBValueDis'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "BBName": "Target",
+      "Interval": 0.1,
+      "RandomDeviation": 0.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_TestAI_Saiqi'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Saiqi/BT_TestAI_Saiqi.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_TestAI_Saiqi:BTComposite_Selector_6'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Saiqi/BT_TestAI_Saiqi.6"
+      }
+    }
+  },
+  {
+    "Type": "BTService_ClearBTTarget_Player",
+    "Name": "BTService_ClearBTTarget_Player_0",
+    "Outer": "BT_TestAI_Saiqi",
+    "Class": "UScriptClass'BTService_ClearBTTarget_Player'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Interval": 0.1,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_TestAI_Saiqi'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Saiqi/BT_TestAI_Saiqi.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_TestAI_Saiqi:BTComposite_Selector_6'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Saiqi/BT_TestAI_Saiqi.6"
+      }
+    }
+  },
+  {
+    "Type": "BTService_EnemyVision",
+    "Name": "BTService_EnemyVision_0",
+    "Outer": "BT_TestAI_Saiqi",
+    "Class": "UScriptClass'BTService_EnemyVision'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "FVisionDistance": 2000.0,
+      "FVisionAngle": 180.0,
+      "Interval": 0.2,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_TestAI_Saiqi'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Saiqi/BT_TestAI_Saiqi.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_TestAI_Saiqi:BTComposite_Selector_6'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Saiqi/BT_TestAI_Saiqi.6"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_FilterTargetsByDis",
+    "Name": "BTTask_FilterTargetsByDis_0",
+    "Outer": "BT_TestAI_Saiqi",
+    "Class": "UScriptClass'BTTask_FilterTargetsByDis'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "MaxDis": 2000.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_TestAI_Saiqi'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Saiqi/BT_TestAI_Saiqi.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_TestAI_Saiqi:BTComposite_Sequence_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Saiqi/BT_TestAI_Saiqi.7"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_LastFilterTargetsByNum_P",
+    "Name": "BTTask_LastFilterTargetsByNum_P_1",
+    "Outer": "BT_TestAI_Saiqi",
+    "Class": "UScriptClass'BTTask_LastFilterTargetsByNum_P'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Radius": 600.0,
+      "TypeOfFilterList": "ETypeOfFilterList::AfterFilter",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_TestAI_Saiqi'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Saiqi/BT_TestAI_Saiqi.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_TestAI_Saiqi:BTComposite_Sequence_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Saiqi/BT_TestAI_Saiqi.7"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_PhantomMoveTo",
+    "Name": "BTTask_PhantomMoveTo_0",
+    "Outer": "BT_TestAI_Saiqi",
+    "Class": "UScriptClass'BTTask_PhantomMoveTo'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "AroundActorType": "EGetAroundActorType::Nearest",
+      "AroundActorDis": 1200.0,
+      "bOrientRotationToMovement": true,
+      "MoveTypeState": "EMoveTypeState::MTS_Run",
+      "MaxMoveTime": 1.0,
+      "AcceptableRadius": 50.0,
+      "bStopOnOverlapNeedsUpdate": false,
+      "BlackboardKey": {
+        "SelectedKeyName": "Target"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_TestAI_Saiqi'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Saiqi/BT_TestAI_Saiqi.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_TestAI_Saiqi:BTComposite_Selector_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Saiqi/BT_TestAI_Saiqi.1"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_RunBehavior",
+    "Name": "BTTask_RunBehavior_0",
+    "Outer": "BT_TestAI_Saiqi",
+    "Class": "UScriptClass'BTTask_RunBehavior'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "BehaviorAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Melee_Common'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Parent/BT_Phantom_Melee_Common.0"
+      },
+      "NodeName": "MeleeAttack",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_TestAI_Saiqi'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Saiqi/BT_TestAI_Saiqi.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_TestAI_Saiqi:BTComposite_Selector_2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Saiqi/BT_TestAI_Saiqi.3"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_RunBehavior",
+    "Name": "BTTask_RunBehavior_1",
+    "Outer": "BT_TestAI_Saiqi",
+    "Class": "UScriptClass'BTTask_RunBehavior'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "BehaviorAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_Ranged_Common'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Parent/BT_Phantom_Ranged_Common.0"
+      },
+      "NodeName": "RangedAttack",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_TestAI_Saiqi'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Saiqi/BT_TestAI_Saiqi.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_TestAI_Saiqi:BTComposite_Selector_2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Saiqi/BT_TestAI_Saiqi.3"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_RunBehavior",
+    "Name": "BTTask_RunBehavior_2",
+    "Outer": "BT_TestAI_Saiqi",
+    "Class": "UScriptClass'BTTask_RunBehavior'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "BehaviorAsset": {
+        "ObjectName": "BehaviorTree'BT_Phantom_DetectEnemy'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Parent/BT_Phantom_DetectEnemy.0"
+      },
+      "NodeName": "DetectEnemy",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_TestAI_Saiqi'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Saiqi/BT_TestAI_Saiqi.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_TestAI_Saiqi:BTComposite_Selector_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Saiqi/BT_TestAI_Saiqi.2"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_SetPartAsTarget",
+    "Name": "BTTask_SetPartAsTarget_1",
+    "Outer": "BT_TestAI_Saiqi",
+    "Class": "UScriptClass'BTTask_SetPartAsTarget'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_TestAI_Saiqi'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Saiqi/BT_TestAI_Saiqi.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_TestAI_Saiqi:BTComposite_Sequence_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Saiqi/BT_TestAI_Saiqi.7"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_UseSkill_Player",
+    "Name": "BTTask_UseSkill_Player_0",
+    "Outer": "BT_TestAI_Saiqi",
+    "Class": "UScriptClass'BTTask_UseSkill_Player'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SkillType": "EUseSkill_SkillType::Skill2",
+      "bUseControllerRotationYaw": false,
+      "AutoInput": false,
+      "NodeName": "Skill02_Off",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_TestAI_Saiqi'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Saiqi/BT_TestAI_Saiqi.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_TestAI_Saiqi:BTComposite_Selector_5'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Saiqi/BT_TestAI_Saiqi.5"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_UseSkill_Player",
+    "Name": "BTTask_UseSkill_Player_1",
+    "Outer": "BT_TestAI_Saiqi",
+    "Class": "UScriptClass'BTTask_UseSkill_Player'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SkillType": "EUseSkill_SkillType::Skill2",
+      "bUseControllerRotationYaw": false,
+      "AutoInput": false,
+      "NodeName": "Skill02_Off",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_TestAI_Saiqi'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Saiqi/BT_TestAI_Saiqi.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_TestAI_Saiqi:BTComposite_Selector_5'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Saiqi/BT_TestAI_Saiqi.5"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_UseSkill_Player",
+    "Name": "BTTask_UseSkill_Player_15",
+    "Outer": "BT_TestAI_Saiqi",
+    "Class": "UScriptClass'BTTask_UseSkill_Player'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SkillType": "EUseSkill_SkillType::Skill2",
+      "AutoInput": false,
+      "NodeName": "Skill02",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_TestAI_Saiqi'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Saiqi/BT_TestAI_Saiqi.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_TestAI_Saiqi:BTComposite_Selector_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Saiqi/BT_TestAI_Saiqi.1"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_UseSkill_Player",
+    "Name": "BTTask_UseSkill_Player_3",
+    "Outer": "BT_TestAI_Saiqi",
+    "Class": "UScriptClass'BTTask_UseSkill_Player'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SkillType": "EUseSkill_SkillType::Skill2",
+      "bUseControllerRotationYaw": false,
+      "AutoInput": false,
+      "NodeName": "Skill02_Off",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_TestAI_Saiqi'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Saiqi/BT_TestAI_Saiqi.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_TestAI_Saiqi:BTComposite_Sequence_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Saiqi/BT_TestAI_Saiqi.7"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_UseSkill_Player",
+    "Name": "BTTask_UseSkill_Player_9",
+    "Outer": "BT_TestAI_Saiqi",
+    "Class": "UScriptClass'BTTask_UseSkill_Player'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SkillType": "EUseSkill_SkillType::Skill1",
+      "bUseControllerRotationYaw": false,
+      "AutoInput": false,
+      "NodeName": "Skill01",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_TestAI_Saiqi'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Saiqi/BT_TestAI_Saiqi.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_TestAI_Saiqi:BTComposite_Selector_5'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Saiqi/BT_TestAI_Saiqi.5"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_0",
+    "Outer": "BT_TestAI_Saiqi",
+    "Class": "UScriptClass'BTTask_Wait'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "WaitTime": 3.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_TestAI_Saiqi'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Saiqi/BT_TestAI_Saiqi.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_TestAI_Saiqi:BTComposite_Selector_4'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Saiqi/BT_TestAI_Saiqi.4"
+      }
+    }
+  }
+]

@@ -1,0 +1,175 @@
+[
+  {
+    "Type": "BehaviorTree",
+    "Name": "BT_9BaiBiAn_Reg",
+    "Class": "UScriptClass'BehaviorTree'",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "RootNode": {
+        "ObjectName": "BTComposite_Sequence'BT_9BaiBiAn_Reg:BTComposite_Sequence_4'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Animal_BaiBIAn/Region/BT_9BaiBiAn_Reg.1"
+      },
+      "BlackboardAsset": {
+        "ObjectName": "BlackboardData'BB_9BaiBiAn'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Animal_BaiBIAn/BB_9BaiBiAn.0"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_4",
+    "Outer": "BT_9BaiBiAn_Reg",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_GetTarget'BT_9BaiBiAn_Reg:BTTask_GetTarget_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Animal_BaiBIAn/Region/BT_9BaiBiAn_Reg.3"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_UseSkill'BT_9BaiBiAn_Reg:BTTask_UseSkill_5'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Animal_BaiBIAn/Region/BT_9BaiBiAn_Reg.5"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_FindSpecifyLocation'BT_9BaiBiAn_Reg:BTTask_FindSpecifyLocation_2'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Animal_BaiBIAn/Region/BT_9BaiBiAn_Reg.2"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_NewMoveTo'BT_9BaiBiAn_Reg:BTTask_NewMoveTo_4'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Animal_BaiBIAn/Region/BT_9BaiBiAn_Reg.4"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait'BT_9BaiBiAn_Reg:BTTask_Wait_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Animal_BaiBIAn/Region/BT_9BaiBiAn_Reg.6"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_9BaiBiAn_Reg'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Animal_BaiBIAn/Region/BT_9BaiBiAn_Reg.0"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_FindSpecifyLocation",
+    "Name": "BTTask_FindSpecifyLocation_2",
+    "Outer": "BT_9BaiBiAn_Reg",
+    "Class": "UScriptClass'BTTask_FindSpecifyLocation'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "MinAngle": -90,
+      "MinRadius": 400,
+      "MaxRadius": 800,
+      "TargetFilterType": "ETargetFilterType::FilterTarget",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_9BaiBiAn_Reg'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Animal_BaiBIAn/Region/BT_9BaiBiAn_Reg.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_9BaiBiAn_Reg:BTComposite_Sequence_4'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Animal_BaiBIAn/Region/BT_9BaiBiAn_Reg.1"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_GetTarget",
+    "Name": "BTTask_GetTarget_0",
+    "Outer": "BT_9BaiBiAn_Reg",
+    "Class": "UScriptClass'BTTask_GetTarget'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_9BaiBiAn_Reg'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Animal_BaiBIAn/Region/BT_9BaiBiAn_Reg.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_9BaiBiAn_Reg:BTComposite_Sequence_4'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Animal_BaiBIAn/Region/BT_9BaiBiAn_Reg.1"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_NewMoveTo",
+    "Name": "BTTask_NewMoveTo_4",
+    "Outer": "BT_9BaiBiAn_Reg",
+    "Class": "UScriptClass'BTTask_NewMoveTo'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "bUseControllerRotationYaw": true,
+      "bStareAt": true,
+      "bStopOnOverlapNeedsUpdate": false,
+      "BlackboardKey": {
+        "SelectedKeyName": "NearlyLocation"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_9BaiBiAn_Reg'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Animal_BaiBIAn/Region/BT_9BaiBiAn_Reg.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_9BaiBiAn_Reg:BTComposite_Sequence_4'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Animal_BaiBIAn/Region/BT_9BaiBiAn_Reg.1"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_UseSkill",
+    "Name": "BTTask_UseSkill_5",
+    "Outer": "BT_9BaiBiAn_Reg",
+    "Class": "UScriptClass'BTTask_UseSkill'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SkillId": 6,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_9BaiBiAn_Reg'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Animal_BaiBIAn/Region/BT_9BaiBiAn_Reg.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_9BaiBiAn_Reg:BTComposite_Sequence_4'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Animal_BaiBIAn/Region/BT_9BaiBiAn_Reg.1"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_0",
+    "Outer": "BT_9BaiBiAn_Reg",
+    "Class": "UScriptClass'BTTask_Wait'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "WaitTime": 2.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_9BaiBiAn_Reg'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Animal_BaiBIAn/Region/BT_9BaiBiAn_Reg.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_9BaiBiAn_Reg:BTComposite_Sequence_4'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Animal_BaiBIAn/Region/BT_9BaiBiAn_Reg.1"
+      }
+    }
+  }
+]

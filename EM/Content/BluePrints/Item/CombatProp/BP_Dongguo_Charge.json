@@ -1,0 +1,654 @@
+[
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_BP_Dongguo_Charge",
+    "Outer": "BP_Dongguo_Charge_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "K2Node_Event_DeltaSeconds",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "K2Node_Event_KillMineRoleEid",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "K2Node_Event_KillMineSkillId",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "EnumProperty",
+        "Name": "K2Node_Event_DeathReason",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "Enum": {
+          "ObjectName": "Enum'EDeathReason'",
+          "ObjectPath": "/Script/EM"
+        },
+        "UnderlyingProp": {
+          "Type": "ByteProperty",
+          "Name": "UnderlyingType",
+          "Flags": "RF_Public",
+          "ElementSize": 1,
+          "Enum": null
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnTalked",
+    "Outer": "BP_Dongguo_Charge_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "SuperStruct": {
+      "ObjectName": "Function'DongguoCharge:OnTalked'",
+      "ObjectPath": "/Script/EM"
+    },
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnDead",
+    "Outer": "BP_Dongguo_Charge_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "SuperStruct": {
+      "ObjectName": "Function'CombatPropBase:OnDead'",
+      "ObjectPath": "/Script/EM"
+    },
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "KillMineRoleEid",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "KillMineSkillId",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "EnumProperty",
+        "Name": "DeathReason",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "Enum": {
+          "ObjectName": "Enum'EDeathReason'",
+          "ObjectPath": "/Script/EM"
+        },
+        "UnderlyingProp": {
+          "Type": "ByteProperty",
+          "Name": "UnderlyingType",
+          "Flags": "RF_Public",
+          "ElementSize": 1,
+          "Enum": null
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnChargeMax",
+    "Outer": "BP_Dongguo_Charge_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "SuperStruct": {
+      "ObjectName": "Function'DongguoCharge:OnChargeMax'",
+      "ObjectPath": "/Script/EM"
+    },
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnChargeStop",
+    "Outer": "BP_Dongguo_Charge_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "SuperStruct": {
+      "ObjectName": "Function'DongguoCharge:OnChargeStop'",
+      "ObjectPath": "/Script/EM"
+    },
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnChargeStart",
+    "Outer": "BP_Dongguo_Charge_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "SuperStruct": {
+      "ObjectName": "Function'DongguoCharge:OnChargeStart'",
+      "ObjectPath": "/Script/EM"
+    },
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "ReceiveTick",
+    "Outer": "BP_Dongguo_Charge_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "SuperStruct": {
+      "ObjectName": "Function'Actor:ReceiveTick'",
+      "ObjectPath": "/Script/Engine"
+    },
+    "ChildProperties": [
+      {
+        "Type": "FloatProperty",
+        "Name": "DeltaSeconds",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "GetModuleName",
+    "Outer": "BP_Dongguo_Charge_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "ChildProperties": [
+      {
+        "Type": "StrProperty",
+        "Name": "ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "Parm | OutParm | ReturnParm"
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_HasOutParms | FUNC_BlueprintCallable | FUNC_BlueprintEvent | FUNC_Const"
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BP_Dongguo_Charge_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BP_Dongguo_Charge_C:SimpleConstructionScript_0'",
+        "ObjectPath": "EM/Content/BluePrints/Item/CombatProp/BP_Dongguo_Charge.22"
+      },
+      "InheritableComponentHandler": {
+        "ObjectName": "InheritableComponentHandler'BP_Dongguo_Charge_C:InheritableComponentHandler'",
+        "ObjectPath": "EM/Content/BluePrints/Item/CombatProp/BP_Dongguo_Charge.17"
+      },
+      "UberGraphFunction": {
+        "ObjectName": "Function'BP_Dongguo_Charge_C:ExecuteUbergraph_BP_Dongguo_Charge'",
+        "ObjectPath": "EM/Content/BluePrints/Item/CombatProp/BP_Dongguo_Charge.0"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'DongguoCharge'",
+      "ObjectPath": "/Script/EM"
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'BP_Dongguo_Charge_C:GetModuleName'",
+        "ObjectPath": "EM/Content/BluePrints/Item/CombatProp/BP_Dongguo_Charge.7"
+      },
+      {
+        "ObjectName": "Function'BP_Dongguo_Charge_C:ReceiveTick'",
+        "ObjectPath": "EM/Content/BluePrints/Item/CombatProp/BP_Dongguo_Charge.6"
+      },
+      {
+        "ObjectName": "Function'BP_Dongguo_Charge_C:OnChargeStart'",
+        "ObjectPath": "EM/Content/BluePrints/Item/CombatProp/BP_Dongguo_Charge.5"
+      },
+      {
+        "ObjectName": "Function'BP_Dongguo_Charge_C:OnChargeStop'",
+        "ObjectPath": "EM/Content/BluePrints/Item/CombatProp/BP_Dongguo_Charge.4"
+      },
+      {
+        "ObjectName": "Function'BP_Dongguo_Charge_C:OnChargeMax'",
+        "ObjectPath": "EM/Content/BluePrints/Item/CombatProp/BP_Dongguo_Charge.3"
+      },
+      {
+        "ObjectName": "Function'BP_Dongguo_Charge_C:OnDead'",
+        "ObjectPath": "EM/Content/BluePrints/Item/CombatProp/BP_Dongguo_Charge.2"
+      },
+      {
+        "ObjectName": "Function'BP_Dongguo_Charge_C:OnTalked'",
+        "ObjectPath": "EM/Content/BluePrints/Item/CombatProp/BP_Dongguo_Charge.1"
+      },
+      {
+        "ObjectName": "Function'BP_Dongguo_Charge_C:ExecuteUbergraph_BP_Dongguo_Charge'",
+        "ObjectPath": "EM/Content/BluePrints/Item/CombatProp/BP_Dongguo_Charge.0"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient",
+        "Struct": {
+          "ObjectName": "ScriptStruct'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Box",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'BoxComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Cube",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'StaticMeshComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "DefaultSceneRoot",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'SceneComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_BP_Dongguo_Charge": {
+        "ObjectName": "Function'BP_Dongguo_Charge_C:ExecuteUbergraph_BP_Dongguo_Charge'",
+        "ObjectPath": "EM/Content/BluePrints/Item/CombatProp/BP_Dongguo_Charge.0"
+      },
+      "OnTalked": {
+        "ObjectName": "Function'BP_Dongguo_Charge_C:OnTalked'",
+        "ObjectPath": "EM/Content/BluePrints/Item/CombatProp/BP_Dongguo_Charge.1"
+      },
+      "OnDead": {
+        "ObjectName": "Function'BP_Dongguo_Charge_C:OnDead'",
+        "ObjectPath": "EM/Content/BluePrints/Item/CombatProp/BP_Dongguo_Charge.2"
+      },
+      "OnChargeMax": {
+        "ObjectName": "Function'BP_Dongguo_Charge_C:OnChargeMax'",
+        "ObjectPath": "EM/Content/BluePrints/Item/CombatProp/BP_Dongguo_Charge.3"
+      },
+      "OnChargeStop": {
+        "ObjectName": "Function'BP_Dongguo_Charge_C:OnChargeStop'",
+        "ObjectPath": "EM/Content/BluePrints/Item/CombatProp/BP_Dongguo_Charge.4"
+      },
+      "OnChargeStart": {
+        "ObjectName": "Function'BP_Dongguo_Charge_C:OnChargeStart'",
+        "ObjectPath": "EM/Content/BluePrints/Item/CombatProp/BP_Dongguo_Charge.5"
+      },
+      "ReceiveTick": {
+        "ObjectName": "Function'BP_Dongguo_Charge_C:ReceiveTick'",
+        "ObjectPath": "EM/Content/BluePrints/Item/CombatProp/BP_Dongguo_Charge.6"
+      },
+      "GetModuleName": {
+        "ObjectName": "Function'BP_Dongguo_Charge_C:GetModuleName'",
+        "ObjectPath": "EM/Content/BluePrints/Item/CombatProp/BP_Dongguo_Charge.7"
+      }
+    },
+    "ClassFlags": "CLASS_Config | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "Interfaces": [
+      {
+        "Class": {
+          "ObjectName": "Class'UnLuaInterface'",
+          "ObjectPath": "/Script/UnLua"
+        },
+        "PointerOffset": 0,
+        "bImplementedByK2": true
+      }
+    ],
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BP_Dongguo_Charge_C'Default__BP_Dongguo_Charge_C'",
+      "ObjectPath": "EM/Content/BluePrints/Item/CombatProp/BP_Dongguo_Charge.9"
+    }
+  },
+  {
+    "Type": "BP_Dongguo_Charge_C",
+    "Name": "Default__BP_Dongguo_Charge_C",
+    "Class": "BlueprintGeneratedClass'EM/Content/BluePrints/Item/CombatProp/BP_Dongguo_Charge.BP_Dongguo_Charge_C'",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "UberGraphFrame": {},
+      "BattleEvent": {
+        "ObjectName": "BP_BattleEventComponent_C'Default__BP_Dongguo_Charge_C:BP_BattleEventComponent'",
+        "ObjectPath": "EM/Content/BluePrints/Item/CombatProp/BP_Dongguo_Charge.12"
+      },
+      "JumpWordComponent": {
+        "ObjectName": "BP_JumpWordComponent_C'Default__BP_Dongguo_Charge_C:BP_JumpWordComponent'",
+        "ObjectPath": "EM/Content/BluePrints/Item/CombatProp/BP_Dongguo_Charge.16"
+      },
+      "CombatStateChangeComponent": {
+        "ObjectName": "BP_CombatStateChangeComponent_C'Default__BP_Dongguo_Charge_C:CombatStateChangeComponent'",
+        "ObjectPath": "EM/Content/BluePrints/Item/CombatProp/BP_Dongguo_Charge.14"
+      },
+      "CombatClientEffectComponent": {
+        "ObjectName": "BP_CombatClientEffectComponent_C'Default__BP_Dongguo_Charge_C:CombatClientEffectComponent'",
+        "ObjectPath": "EM/Content/BluePrints/Item/CombatProp/BP_Dongguo_Charge.13"
+      },
+      "FXComponent": {
+        "ObjectName": "BP_FXComponent_C'Default__BP_Dongguo_Charge_C:BP_FXComponent'",
+        "ObjectPath": "EM/Content/BluePrints/Item/CombatProp/BP_Dongguo_Charge.15"
+      },
+      "PrimaryActorTick": {
+        "bCanEverTick": true
+      }
+    }
+  },
+  {
+    "Type": "BoxComponent",
+    "Name": "Box_GEN_VARIABLE",
+    "Outer": "BP_Dongguo_Charge_C",
+    "Class": "UScriptClass'BoxComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "BoxExtent": {
+        "X": 50.0,
+        "Y": 50.0,
+        "Z": 50.0
+      },
+      "AreaClass": {
+        "ObjectName": "Class'NavArea_Obstacle'",
+        "ObjectPath": "/Script/NavigationSystem"
+      },
+      "BodyInstance": {
+        "ObjectType": "ECC_GameTraceChannel8",
+        "CollisionProfileName": "MonsterHitedCapsule",
+        "CollisionResponses": {
+          "ResponseArray": [
+            {
+              "Channel": "WorldStatic",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "WorldDynamic",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Pawn",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Visibility",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Camera",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "PhysicsBody",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Vehicle",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Destructible",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Item",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "TraceExceptChar",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "TraceOverlap",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "MonsterPawn",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "BreakableItem",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "TraceScene",
+              "Response": "ECR_Overlap"
+            },
+            {
+              "Channel": "TraceCreatureHit",
+              "Response": "ECR_Overlap"
+            },
+            {
+              "Channel": "TraceSkillCreatureBlock",
+              "Response": "ECR_Block"
+            },
+            {
+              "Channel": "TraceThroughWall",
+              "Response": "ECR_Overlap"
+            },
+            {
+              "Channel": "SkillCreature",
+              "Response": "ECR_Overlap"
+            }
+          ]
+        }
+      }
+    }
+  },
+  {
+    "Type": "BP_AroundLocationComponent_C",
+    "Name": "BP_AroundLocation",
+    "Outer": "Default__BP_Dongguo_Charge_C",
+    "Class": "BlueprintGeneratedClass'EM/Content/BluePrints/Char/BP_AroundLocationComponent.BP_AroundLocationComponent_C'",
+    "Template": {
+      "ObjectName": "BP_AroundLocationComponent_C'Default__BP_AroundLocationComponent_C'",
+      "ObjectPath": "EM/Content/BluePrints/Char/BP_AroundLocationComponent.2"
+    },
+    "Flags": "RF_Public | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "BP_BattleEventComponent_C",
+    "Name": "BP_BattleEventComponent",
+    "Outer": "Default__BP_Dongguo_Charge_C",
+    "Class": "BlueprintGeneratedClass'EM/Content/BluePrints/Combat/BP_BattleEventComponent.BP_BattleEventComponent_C'",
+    "Flags": "RF_Public | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "BP_CombatClientEffectComponent_C",
+    "Name": "CombatClientEffectComponent",
+    "Outer": "Default__BP_Dongguo_Charge_C",
+    "Class": "BlueprintGeneratedClass'EM/Content/BluePrints/Item/BP_CombatClientEffectComponent.BP_CombatClientEffectComponent_C'",
+    "Flags": "RF_Public | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "BP_CombatStateChangeComponent_C",
+    "Name": "CombatStateChangeComponent",
+    "Outer": "Default__BP_Dongguo_Charge_C",
+    "Class": "BlueprintGeneratedClass'EM/Content/BluePrints/Item/BP_CombatStateChangeComponent.BP_CombatStateChangeComponent_C'",
+    "Flags": "RF_Public | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "BP_FXComponent_C",
+    "Name": "BP_FXComponent",
+    "Outer": "Default__BP_Dongguo_Charge_C",
+    "Class": "BlueprintGeneratedClass'EM/Content/BluePrints/Char/BP_FXComponent.BP_FXComponent_C'",
+    "Flags": "RF_Public | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "BP_JumpWordComponent_C",
+    "Name": "BP_JumpWordComponent",
+    "Outer": "Default__BP_Dongguo_Charge_C",
+    "Class": "BlueprintGeneratedClass'EM/Content/BluePrints/Char/BP_JumpWordComponent.BP_JumpWordComponent_C'",
+    "Flags": "RF_Public | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "InheritableComponentHandler",
+    "Name": "InheritableComponentHandler",
+    "Outer": "BP_Dongguo_Charge_C",
+    "Class": "UScriptClass'InheritableComponentHandler'",
+    "Flags": "RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Outer": "BP_Dongguo_Charge_C",
+    "Class": "UScriptClass'SceneComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BP_Dongguo_Charge_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "EM/Content/BluePrints/Item/CombatProp/BP_Dongguo_Charge.18"
+      },
+      "ChildNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_Dongguo_Charge_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "EM/Content/BluePrints/Item/CombatProp/BP_Dongguo_Charge.20"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_Dongguo_Charge_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "EM/Content/BluePrints/Item/CombatProp/BP_Dongguo_Charge.21"
+        }
+      ],
+      "VariableGuid": "72464500-479C76AC-9427C0BA-F9B17DE5",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_1",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'StaticMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "StaticMeshComponent'BP_Dongguo_Charge_C:Cube_GEN_VARIABLE'",
+        "ObjectPath": "EM/Content/BluePrints/Item/CombatProp/BP_Dongguo_Charge.23"
+      },
+      "VariableGuid": "4178F557-47426C78-D019DF85-C437BFEB",
+      "InternalVariableName": "Cube"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_2",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'BoxComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "BoxComponent'BP_Dongguo_Charge_C:Box_GEN_VARIABLE'",
+        "ObjectPath": "EM/Content/BluePrints/Item/CombatProp/BP_Dongguo_Charge.10"
+      },
+      "VariableGuid": "EBB59258-49D5166B-0B120397-0C8EB676",
+      "InternalVariableName": "Box"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Outer": "BP_Dongguo_Charge_C",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_Dongguo_Charge_C:SimpleConstructionScript_0.SCS_Node_0'",
+          "ObjectPath": "EM/Content/BluePrints/Item/CombatProp/BP_Dongguo_Charge.19"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_Dongguo_Charge_C:SimpleConstructionScript_0.SCS_Node_0'",
+          "ObjectPath": "EM/Content/BluePrints/Item/CombatProp/BP_Dongguo_Charge.19"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_Dongguo_Charge_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "EM/Content/BluePrints/Item/CombatProp/BP_Dongguo_Charge.20"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_Dongguo_Charge_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "EM/Content/BluePrints/Item/CombatProp/BP_Dongguo_Charge.21"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BP_Dongguo_Charge_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "EM/Content/BluePrints/Item/CombatProp/BP_Dongguo_Charge.19"
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "Cube_GEN_VARIABLE",
+    "Outer": "BP_Dongguo_Charge_C",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'Cube'",
+        "ObjectPath": "Engine/Content/BasicShapes/Cube.2"
+      },
+      "OverrideMaterials": [
+        {
+          "ObjectName": "Material'BasicShapeMaterial'",
+          "ObjectPath": "Engine/Content/BasicShapes/BasicShapeMaterial.0"
+        }
+      ]
+    }
+  }
+]

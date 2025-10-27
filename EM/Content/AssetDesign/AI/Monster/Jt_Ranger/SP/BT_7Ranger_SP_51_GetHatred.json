@@ -1,0 +1,333 @@
+[
+  {
+    "Type": "BehaviorTree",
+    "Name": "BT_7Ranger_SP_51_GetHatred",
+    "Class": "UScriptClass'BehaviorTree'",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "RootNode": {
+        "ObjectName": "BTComposite_Selector'BT_7Ranger_SP_51_GetHatred:BTComposite_Selector_5'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_Ranger/SP/BT_7Ranger_SP_51_GetHatred.1"
+      },
+      "BlackboardAsset": {
+        "ObjectName": "BlackboardData'BB_Mon_Parent'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Parent/BB_Mon_Parent.0"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_5",
+    "Outer": "BT_7Ranger_SP_51_GetHatred",
+    "Class": "UScriptClass'BTComposite_Selector'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_7Ranger_SP_51_GetHatred:BTComposite_Sequence_13'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_Ranger/SP/BT_7Ranger_SP_51_GetHatred.3"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_7Ranger_SP_51_GetHatred:BTComposite_Sequence_12'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_Ranger/SP/BT_7Ranger_SP_51_GetHatred.2"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_GetTarget'BT_7Ranger_SP_51_GetHatred:BTTask_GetTarget_2'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_Ranger/SP/BT_7Ranger_SP_51_GetHatred.10"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_7Ranger_SP_51_GetHatred'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_Ranger/SP/BT_7Ranger_SP_51_GetHatred.0"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_12",
+    "Outer": "BT_7Ranger_SP_51_GetHatred",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_FilterTargetsByDis'BT_7Ranger_SP_51_GetHatred:BTTask_FilterTargetsByDis_4'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_Ranger/SP/BT_7Ranger_SP_51_GetHatred.4"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_FilterTargetsByType'BT_7Ranger_SP_51_GetHatred:BTTask_FilterTargetsByType_4'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_Ranger/SP/BT_7Ranger_SP_51_GetHatred.8"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_FilterTargetsByLiving'BT_7Ranger_SP_51_GetHatred:BTTask_FilterTargetsByLiving_4'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_Ranger/SP/BT_7Ranger_SP_51_GetHatred.6"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_LastFilterTargets'BT_7Ranger_SP_51_GetHatred:BTTask_LastFilterTargets_4'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_Ranger/SP/BT_7Ranger_SP_51_GetHatred.11"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_7Ranger_SP_51_GetHatred'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_Ranger/SP/BT_7Ranger_SP_51_GetHatred.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_7Ranger_SP_51_GetHatred:BTComposite_Selector_5'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_Ranger/SP/BT_7Ranger_SP_51_GetHatred.1"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_13",
+    "Outer": "BT_7Ranger_SP_51_GetHatred",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_FilterTargetsByDis'BT_7Ranger_SP_51_GetHatred:BTTask_FilterTargetsByDis_5'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_Ranger/SP/BT_7Ranger_SP_51_GetHatred.5"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_FilterTargetsByType'BT_7Ranger_SP_51_GetHatred:BTTask_FilterTargetsByType_5'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_Ranger/SP/BT_7Ranger_SP_51_GetHatred.9"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_FilterTargetsByLiving'BT_7Ranger_SP_51_GetHatred:BTTask_FilterTargetsByLiving_5'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_Ranger/SP/BT_7Ranger_SP_51_GetHatred.7"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_LastFilterTargets'BT_7Ranger_SP_51_GetHatred:BTTask_LastFilterTargets_5'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_Ranger/SP/BT_7Ranger_SP_51_GetHatred.12"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_7Ranger_SP_51_GetHatred'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_Ranger/SP/BT_7Ranger_SP_51_GetHatred.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_7Ranger_SP_51_GetHatred:BTComposite_Selector_5'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_Ranger/SP/BT_7Ranger_SP_51_GetHatred.1"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_FilterTargetsByDis",
+    "Name": "BTTask_FilterTargetsByDis_4",
+    "Outer": "BT_7Ranger_SP_51_GetHatred",
+    "Class": "UScriptClass'BTTask_FilterTargetsByDis'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "MaxDis": 1000.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_7Ranger_SP_51_GetHatred'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_Ranger/SP/BT_7Ranger_SP_51_GetHatred.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_7Ranger_SP_51_GetHatred:BTComposite_Sequence_12'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_Ranger/SP/BT_7Ranger_SP_51_GetHatred.2"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_FilterTargetsByDis",
+    "Name": "BTTask_FilterTargetsByDis_5",
+    "Outer": "BT_7Ranger_SP_51_GetHatred",
+    "Class": "UScriptClass'BTTask_FilterTargetsByDis'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "MaxDis": 1000.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_7Ranger_SP_51_GetHatred'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_Ranger/SP/BT_7Ranger_SP_51_GetHatred.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_7Ranger_SP_51_GetHatred:BTComposite_Sequence_13'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_Ranger/SP/BT_7Ranger_SP_51_GetHatred.3"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_FilterTargetsByLiving",
+    "Name": "BTTask_FilterTargetsByLiving_4",
+    "Outer": "BT_7Ranger_SP_51_GetHatred",
+    "Class": "UScriptClass'BTTask_FilterTargetsByLiving'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TypeOfFilterList": "ETypeOfFilterList::AfterFilter",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_7Ranger_SP_51_GetHatred'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_Ranger/SP/BT_7Ranger_SP_51_GetHatred.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_7Ranger_SP_51_GetHatred:BTComposite_Sequence_12'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_Ranger/SP/BT_7Ranger_SP_51_GetHatred.2"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_FilterTargetsByLiving",
+    "Name": "BTTask_FilterTargetsByLiving_5",
+    "Outer": "BT_7Ranger_SP_51_GetHatred",
+    "Class": "UScriptClass'BTTask_FilterTargetsByLiving'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TypeOfFilterList": "ETypeOfFilterList::AfterFilter",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_7Ranger_SP_51_GetHatred'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_Ranger/SP/BT_7Ranger_SP_51_GetHatred.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_7Ranger_SP_51_GetHatred:BTComposite_Sequence_13'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_Ranger/SP/BT_7Ranger_SP_51_GetHatred.3"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_FilterTargetsByType",
+    "Name": "BTTask_FilterTargetsByType_4",
+    "Outer": "BT_7Ranger_SP_51_GetHatred",
+    "Class": "UScriptClass'BTTask_FilterTargetsByType'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TypeOfFilterType": "EHatredTargetType::DefCore",
+      "TypeOfFilterList": "ETypeOfFilterList::AfterFilter",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_7Ranger_SP_51_GetHatred'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_Ranger/SP/BT_7Ranger_SP_51_GetHatred.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_7Ranger_SP_51_GetHatred:BTComposite_Sequence_12'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_Ranger/SP/BT_7Ranger_SP_51_GetHatred.2"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_FilterTargetsByType",
+    "Name": "BTTask_FilterTargetsByType_5",
+    "Outer": "BT_7Ranger_SP_51_GetHatred",
+    "Class": "UScriptClass'BTTask_FilterTargetsByType'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TypeOfFilterType": "EHatredTargetType::Player",
+      "TypeOfFilterList": "ETypeOfFilterList::AfterFilter",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_7Ranger_SP_51_GetHatred'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_Ranger/SP/BT_7Ranger_SP_51_GetHatred.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_7Ranger_SP_51_GetHatred:BTComposite_Sequence_13'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_Ranger/SP/BT_7Ranger_SP_51_GetHatred.3"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_GetTarget",
+    "Name": "BTTask_GetTarget_2",
+    "Outer": "BT_7Ranger_SP_51_GetHatred",
+    "Class": "UScriptClass'BTTask_GetTarget'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_7Ranger_SP_51_GetHatred'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_Ranger/SP/BT_7Ranger_SP_51_GetHatred.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_7Ranger_SP_51_GetHatred:BTComposite_Selector_5'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_Ranger/SP/BT_7Ranger_SP_51_GetHatred.1"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_LastFilterTargets",
+    "Name": "BTTask_LastFilterTargets_4",
+    "Outer": "BT_7Ranger_SP_51_GetHatred",
+    "Class": "UScriptClass'BTTask_LastFilterTargets'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TypeOfFilterList": "ETypeOfFilterList::AfterFilter",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_7Ranger_SP_51_GetHatred'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_Ranger/SP/BT_7Ranger_SP_51_GetHatred.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_7Ranger_SP_51_GetHatred:BTComposite_Sequence_12'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_Ranger/SP/BT_7Ranger_SP_51_GetHatred.2"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_LastFilterTargets",
+    "Name": "BTTask_LastFilterTargets_5",
+    "Outer": "BT_7Ranger_SP_51_GetHatred",
+    "Class": "UScriptClass'BTTask_LastFilterTargets'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TypeOfFilterList": "ETypeOfFilterList::AfterFilter",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_7Ranger_SP_51_GetHatred'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_Ranger/SP/BT_7Ranger_SP_51_GetHatred.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_7Ranger_SP_51_GetHatred:BTComposite_Sequence_13'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_Ranger/SP/BT_7Ranger_SP_51_GetHatred.3"
+      }
+    }
+  }
+]

@@ -1,0 +1,171 @@
+[
+  {
+    "Type": "Function",
+    "Name": "ShowBossSkillToast",
+    "Outer": "BP_AnimNotify_Mon_BossSkillToast_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "ChildProperties": [
+      {
+        "Type": "Int64Property",
+        "Name": "BossSkillToastId",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetBattleCpp_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Battle'",
+          "ObjectPath": "/Script/EM"
+        }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Conv_Int64ToInt_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetUIManager_CPP_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'UIManagerComponent'",
+          "ObjectPath": "/Script/EM"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_LoadBossSkillTipsUI_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'UIState'",
+          "ObjectPath": "/Script/EM"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent | FUNC_Const"
+  },
+  {
+    "Type": "Function",
+    "Name": "通知时",
+    "Outer": "BP_AnimNotify_Mon_BossSkillToast_C",
+    "Class": "UScriptClass'Function'",
+    "Super": {
+      "ObjectName": "Function'BP_AnimNotifyBase_C:通知时'",
+      "ObjectPath": "EM/Content/BluePrints/AnimNotifiers/BP_AnimNotifyBase.1"
+    },
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "SuperStruct": {
+      "ObjectName": "Function'BP_AnimNotifyBase_C:通知时'",
+      "ObjectPath": "EM/Content/BluePrints/AnimNotifiers/BP_AnimNotifyBase.1"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "角色",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "PropertyClass": {
+          "ObjectName": "Class'CharacterBase'",
+          "ObjectPath": "/Script/EM"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "动画序列",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "PropertyClass": {
+          "ObjectName": "Class'AnimSequenceBase'",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent | FUNC_Const"
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BP_AnimNotify_Mon_BossSkillToast_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Super": {
+      "ObjectName": "BlueprintGeneratedClass'BP_AnimNotifyBase_C'",
+      "ObjectPath": "EM/Content/BluePrints/AnimNotifiers/BP_AnimNotifyBase.5"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "SuperStruct": {
+      "ObjectName": "BlueprintGeneratedClass'BP_AnimNotifyBase_C'",
+      "ObjectPath": "EM/Content/BluePrints/AnimNotifiers/BP_AnimNotifyBase.5"
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'BP_AnimNotify_Mon_BossSkillToast_C:通知时'",
+        "ObjectPath": "EM/Content/BluePrints/AnimNotifiers/Monster/BP_AnimNotify_Mon_BossSkillToast.1"
+      },
+      {
+        "ObjectName": "Function'BP_AnimNotify_Mon_BossSkillToast_C:ShowBossSkillToast'",
+        "ObjectPath": "EM/Content/BluePrints/AnimNotifiers/Monster/BP_AnimNotify_Mon_BossSkillToast.0"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "NameProperty",
+        "Name": "BossSkillTipsName",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 12,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance"
+      },
+      {
+        "Type": "Int64Property",
+        "Name": "BossSkillToastId",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible"
+      }
+    ],
+    "FuncMap": {
+      "ShowBossSkillToast": {
+        "ObjectName": "Function'BP_AnimNotify_Mon_BossSkillToast_C:ShowBossSkillToast'",
+        "ObjectPath": "EM/Content/BluePrints/AnimNotifiers/Monster/BP_AnimNotify_Mon_BossSkillToast.0"
+      },
+      "通知时": {
+        "ObjectName": "Function'BP_AnimNotify_Mon_BossSkillToast_C:通知时'",
+        "ObjectPath": "EM/Content/BluePrints/AnimNotifiers/Monster/BP_AnimNotify_Mon_BossSkillToast.1"
+      }
+    },
+    "ClassFlags": "CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CollapseCategories | CLASS_Const | CLASS_CompiledFromBlueprint",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BP_AnimNotify_Mon_BossSkillToast_C'Default__BP_AnimNotify_Mon_BossSkillToast_C'",
+      "ObjectPath": "EM/Content/BluePrints/AnimNotifiers/Monster/BP_AnimNotify_Mon_BossSkillToast.3"
+    }
+  },
+  {
+    "Type": "BP_AnimNotify_Mon_BossSkillToast_C",
+    "Name": "Default__BP_AnimNotify_Mon_BossSkillToast_C",
+    "Class": "BlueprintGeneratedClass'EM/Content/BluePrints/AnimNotifiers/Monster/BP_AnimNotify_Mon_BossSkillToast.BP_AnimNotify_Mon_BossSkillToast_C'",
+    "Template": {
+      "ObjectName": "BP_AnimNotifyBase_C'Default__BP_AnimNotifyBase_C'",
+      "ObjectPath": "EM/Content/BluePrints/AnimNotifiers/BP_AnimNotifyBase.6"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "NotifyNetType": "ENotifyNetType::OnlyClient"
+    }
+  }
+]

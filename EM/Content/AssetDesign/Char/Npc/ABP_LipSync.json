@@ -1,0 +1,2243 @@
+[
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_ABP_LipSync",
+    "Outer": "ABP_LipSync_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "K2Node_Event_DeltaTimeX",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetOwningComponent_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'SkeletalMeshComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_GetSocketTransform_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 48,
+        "Struct": {
+          "ObjectName": "ScriptStruct'Transform'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_BreakTransform_Location",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "Struct": {
+          "ObjectName": "ScriptStruct'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_BreakTransform_Rotation",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "Struct": {
+          "ObjectName": "ScriptStruct'Rotator'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_BreakTransform_Scale",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "Struct": {
+          "ObjectName": "ScriptStruct'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_BreakRotator_Roll",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_BreakRotator_Pitch",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_BreakRotator_Yaw",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Greater_FloatFloat_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_GetFloatValue_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_Abs_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_Greater_FloatFloat_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_GetFloatValue_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_Abs_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction | FUNC_HasDefaults"
+  },
+  {
+    "Type": "Function",
+    "Name": "BlueprintUpdateAnimation",
+    "Outer": "ABP_LipSync_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "SuperStruct": {
+      "ObjectName": "Function'AnimInstance:BlueprintUpdateAnimation'",
+      "ObjectPath": "/Script/Engine"
+    },
+    "ChildProperties": [
+      {
+        "Type": "FloatProperty",
+        "Name": "DeltaTimeX",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "AnimGraph",
+    "Outer": "ABP_LipSync_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "InPose",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "Struct": {
+          "ObjectName": "ScriptStruct'PoseLink'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraph",
+        "Flags": "RF_Public",
+        "ElementSize": 24,
+        "PropertyFlags": "Parm | OutParm",
+        "Struct": {
+          "ObjectName": "ScriptStruct'PoseLink'",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_HasOutParms | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "AnimBlueprintGeneratedClass",
+    "Name": "ABP_LipSync_C",
+    "Class": "UScriptClass'AnimBlueprintGeneratedClass'",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TargetSkeleton": {
+        "ObjectName": "Skeleton'Biped_Skeleton'",
+        "ObjectPath": "EM/Content/Asset/Char/Player/Skeleton/Biped_Skeleton.104"
+      },
+      "OrderedSavedPoseIndicesMap": [
+        {
+          "Key": "AnimGraph",
+          "Value": {
+            "OrderedSavedPoseNodeIndices": []
+          }
+        }
+      ],
+      "EvaluateGraphExposedInputs": [
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "CopyIndex": 0,
+              "PostCopyOperation": "EPostCopyOperation::None"
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "Path": [
+              "AnimGraphNode_ModifyCurve"
+            ],
+            "ResolvedOwner": {
+              "ObjectName": "AnimBlueprintGeneratedClass'ABP_LipSync_C'",
+              "ObjectPath": "EM/Content/AssetDesign/Char/Npc/ABP_LipSync.3"
+            }
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "CopyIndex": 1,
+              "PostCopyOperation": "EPostCopyOperation::None"
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "Path": [
+              "AnimGraphNode_CopyBoneDelta"
+            ],
+            "ResolvedOwner": {
+              "ObjectName": "AnimBlueprintGeneratedClass'ABP_LipSync_C'",
+              "ObjectPath": "EM/Content/AssetDesign/Char/Npc/ABP_LipSync.3"
+            }
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "CopyIndex": 2,
+              "PostCopyOperation": "EPostCopyOperation::None"
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "Path": [
+              "AnimGraphNode_CopyBoneDelta_1"
+            ],
+            "ResolvedOwner": {
+              "ObjectName": "AnimBlueprintGeneratedClass'ABP_LipSync_C'",
+              "ObjectPath": "EM/Content/AssetDesign/Char/Npc/ABP_LipSync.3"
+            }
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "CopyIndex": 3,
+              "PostCopyOperation": "EPostCopyOperation::None"
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "Path": [
+              "AnimGraphNode_CopyBoneDelta_2"
+            ],
+            "ResolvedOwner": {
+              "ObjectName": "AnimBlueprintGeneratedClass'ABP_LipSync_C'",
+              "ObjectPath": "EM/Content/AssetDesign/Char/Npc/ABP_LipSync.3"
+            }
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "CopyIndex": 4,
+              "PostCopyOperation": "EPostCopyOperation::None"
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "Path": [
+              "AnimGraphNode_CopyBoneDelta_3"
+            ],
+            "ResolvedOwner": {
+              "ObjectName": "AnimBlueprintGeneratedClass'ABP_LipSync_C'",
+              "ObjectPath": "EM/Content/AssetDesign/Char/Npc/ABP_LipSync.3"
+            }
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "CopyIndex": 5,
+              "PostCopyOperation": "EPostCopyOperation::None"
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "Path": [
+              "AnimGraphNode_CopyBoneDelta_4"
+            ],
+            "ResolvedOwner": {
+              "ObjectName": "AnimBlueprintGeneratedClass'ABP_LipSync_C'",
+              "ObjectPath": "EM/Content/AssetDesign/Char/Npc/ABP_LipSync.3"
+            }
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "CopyIndex": 6,
+              "PostCopyOperation": "EPostCopyOperation::None"
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "Path": [
+              "AnimGraphNode_CopyBoneDelta_5"
+            ],
+            "ResolvedOwner": {
+              "ObjectName": "AnimBlueprintGeneratedClass'ABP_LipSync_C'",
+              "ObjectPath": "EM/Content/AssetDesign/Char/Npc/ABP_LipSync.3"
+            }
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "CopyIndex": 7,
+              "PostCopyOperation": "EPostCopyOperation::None"
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "Path": [
+              "AnimGraphNode_PoseBlendNode"
+            ],
+            "ResolvedOwner": {
+              "ObjectName": "AnimBlueprintGeneratedClass'ABP_LipSync_C'",
+              "ObjectPath": "EM/Content/AssetDesign/Char/Npc/ABP_LipSync.3"
+            }
+          }
+        },
+        {
+          "BoundFunction": "None",
+          "CopyRecords": [
+            {
+              "CopyIndex": 8,
+              "PostCopyOperation": "EPostCopyOperation::None"
+            },
+            {
+              "CopyIndex": 9,
+              "PostCopyOperation": "EPostCopyOperation::None"
+            },
+            {
+              "CopyIndex": 10,
+              "PostCopyOperation": "EPostCopyOperation::None"
+            },
+            {
+              "CopyIndex": 11,
+              "PostCopyOperation": "EPostCopyOperation::None"
+            },
+            {
+              "CopyIndex": 12,
+              "PostCopyOperation": "EPostCopyOperation::None"
+            },
+            {
+              "CopyIndex": 13,
+              "PostCopyOperation": "EPostCopyOperation::None"
+            }
+          ],
+          "Function": null,
+          "ValueHandlerNodeProperty": {
+            "Path": [
+              "AnimGraphNode_ModifyCurve_1"
+            ],
+            "ResolvedOwner": {
+              "ObjectName": "AnimBlueprintGeneratedClass'ABP_LipSync_C'",
+              "ObjectPath": "EM/Content/AssetDesign/Char/Npc/ABP_LipSync.3"
+            }
+          }
+        }
+      ],
+      "PropertyAccessLibrary": {
+        "PathSegments": [
+          {
+            "Name": "LipSyncWeight",
+            "Struct": null,
+            "Property": {
+              "Path": [
+                "LipSyncWeight"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "AnimBlueprintGeneratedClass'ABP_LipSync_C'",
+                "ObjectPath": "EM/Content/AssetDesign/Char/Npc/ABP_LipSync.3"
+              }
+            },
+            "Function": null,
+            "ArrayIndex": -1,
+            "Flags": 2
+          },
+          {
+            "Name": "AnimGraphNode_ModifyCurve",
+            "Struct": {
+              "ObjectName": "ScriptStruct'AnimNode_ModifyCurve'",
+              "ObjectPath": "/Script/AnimGraphRuntime"
+            },
+            "Property": {
+              "Path": [
+                "AnimGraphNode_ModifyCurve"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "AnimBlueprintGeneratedClass'ABP_LipSync_C'",
+                "ObjectPath": "EM/Content/AssetDesign/Char/Npc/ABP_LipSync.3"
+              }
+            },
+            "Function": null,
+            "ArrayIndex": -1,
+            "Flags": 1
+          },
+          {
+            "Name": "CurveValues",
+            "Struct": null,
+            "Property": {
+              "Path": [
+                "CurveValues"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "ScriptStruct'AnimNode_ModifyCurve'",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              }
+            },
+            "Function": null,
+            "ArrayIndex": 0,
+            "Flags": 6
+          },
+          {
+            "Name": "Cloak_Alpha_Forward",
+            "Struct": null,
+            "Property": {
+              "Path": [
+                "Cloak_Alpha_Forward"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "AnimBlueprintGeneratedClass'ABP_LipSync_C'",
+                "ObjectPath": "EM/Content/AssetDesign/Char/Npc/ABP_LipSync.3"
+              }
+            },
+            "Function": null,
+            "ArrayIndex": -1,
+            "Flags": 2
+          },
+          {
+            "Name": "AnimGraphNode_CopyBoneDelta",
+            "Struct": {
+              "ObjectName": "ScriptStruct'AnimNode_CopyBoneDelta'",
+              "ObjectPath": "/Script/AnimGraphRuntime"
+            },
+            "Property": {
+              "Path": [
+                "AnimGraphNode_CopyBoneDelta"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "AnimBlueprintGeneratedClass'ABP_LipSync_C'",
+                "ObjectPath": "EM/Content/AssetDesign/Char/Npc/ABP_LipSync.3"
+              }
+            },
+            "Function": null,
+            "ArrayIndex": -1,
+            "Flags": 1
+          },
+          {
+            "Name": "Alpha",
+            "Struct": null,
+            "Property": {
+              "Path": [
+                "Alpha"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "ScriptStruct'AnimNode_SkeletalControlBase'",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              }
+            },
+            "Function": null,
+            "ArrayIndex": -1,
+            "Flags": 2
+          },
+          {
+            "Name": "Cloak_Alpha_Back",
+            "Struct": null,
+            "Property": {
+              "Path": [
+                "Cloak_Alpha_Back"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "AnimBlueprintGeneratedClass'ABP_LipSync_C'",
+                "ObjectPath": "EM/Content/AssetDesign/Char/Npc/ABP_LipSync.3"
+              }
+            },
+            "Function": null,
+            "ArrayIndex": -1,
+            "Flags": 2
+          },
+          {
+            "Name": "AnimGraphNode_CopyBoneDelta_1",
+            "Struct": {
+              "ObjectName": "ScriptStruct'AnimNode_CopyBoneDelta'",
+              "ObjectPath": "/Script/AnimGraphRuntime"
+            },
+            "Property": {
+              "Path": [
+                "AnimGraphNode_CopyBoneDelta_1"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "AnimBlueprintGeneratedClass'ABP_LipSync_C'",
+                "ObjectPath": "EM/Content/AssetDesign/Char/Npc/ABP_LipSync.3"
+              }
+            },
+            "Function": null,
+            "ArrayIndex": -1,
+            "Flags": 1
+          },
+          {
+            "Name": "Alpha",
+            "Struct": null,
+            "Property": {
+              "Path": [
+                "Alpha"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "ScriptStruct'AnimNode_SkeletalControlBase'",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              }
+            },
+            "Function": null,
+            "ArrayIndex": -1,
+            "Flags": 2
+          },
+          {
+            "Name": "Cloak_Alpha_Left",
+            "Struct": null,
+            "Property": {
+              "Path": [
+                "Cloak_Alpha_Left"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "AnimBlueprintGeneratedClass'ABP_LipSync_C'",
+                "ObjectPath": "EM/Content/AssetDesign/Char/Npc/ABP_LipSync.3"
+              }
+            },
+            "Function": null,
+            "ArrayIndex": -1,
+            "Flags": 2
+          },
+          {
+            "Name": "AnimGraphNode_CopyBoneDelta_2",
+            "Struct": {
+              "ObjectName": "ScriptStruct'AnimNode_CopyBoneDelta'",
+              "ObjectPath": "/Script/AnimGraphRuntime"
+            },
+            "Property": {
+              "Path": [
+                "AnimGraphNode_CopyBoneDelta_2"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "AnimBlueprintGeneratedClass'ABP_LipSync_C'",
+                "ObjectPath": "EM/Content/AssetDesign/Char/Npc/ABP_LipSync.3"
+              }
+            },
+            "Function": null,
+            "ArrayIndex": -1,
+            "Flags": 1
+          },
+          {
+            "Name": "Alpha",
+            "Struct": null,
+            "Property": {
+              "Path": [
+                "Alpha"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "ScriptStruct'AnimNode_SkeletalControlBase'",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              }
+            },
+            "Function": null,
+            "ArrayIndex": -1,
+            "Flags": 2
+          },
+          {
+            "Name": "Cloak_Alpha_Right",
+            "Struct": null,
+            "Property": {
+              "Path": [
+                "Cloak_Alpha_Right"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "AnimBlueprintGeneratedClass'ABP_LipSync_C'",
+                "ObjectPath": "EM/Content/AssetDesign/Char/Npc/ABP_LipSync.3"
+              }
+            },
+            "Function": null,
+            "ArrayIndex": -1,
+            "Flags": 2
+          },
+          {
+            "Name": "AnimGraphNode_CopyBoneDelta_3",
+            "Struct": {
+              "ObjectName": "ScriptStruct'AnimNode_CopyBoneDelta'",
+              "ObjectPath": "/Script/AnimGraphRuntime"
+            },
+            "Property": {
+              "Path": [
+                "AnimGraphNode_CopyBoneDelta_3"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "AnimBlueprintGeneratedClass'ABP_LipSync_C'",
+                "ObjectPath": "EM/Content/AssetDesign/Char/Npc/ABP_LipSync.3"
+              }
+            },
+            "Function": null,
+            "ArrayIndex": -1,
+            "Flags": 1
+          },
+          {
+            "Name": "Alpha",
+            "Struct": null,
+            "Property": {
+              "Path": [
+                "Alpha"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "ScriptStruct'AnimNode_SkeletalControlBase'",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              }
+            },
+            "Function": null,
+            "ArrayIndex": -1,
+            "Flags": 2
+          },
+          {
+            "Name": "Cloak_Alpha_Left",
+            "Struct": null,
+            "Property": {
+              "Path": [
+                "Cloak_Alpha_Left"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "AnimBlueprintGeneratedClass'ABP_LipSync_C'",
+                "ObjectPath": "EM/Content/AssetDesign/Char/Npc/ABP_LipSync.3"
+              }
+            },
+            "Function": null,
+            "ArrayIndex": -1,
+            "Flags": 2
+          },
+          {
+            "Name": "AnimGraphNode_CopyBoneDelta_4",
+            "Struct": {
+              "ObjectName": "ScriptStruct'AnimNode_CopyBoneDelta'",
+              "ObjectPath": "/Script/AnimGraphRuntime"
+            },
+            "Property": {
+              "Path": [
+                "AnimGraphNode_CopyBoneDelta_4"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "AnimBlueprintGeneratedClass'ABP_LipSync_C'",
+                "ObjectPath": "EM/Content/AssetDesign/Char/Npc/ABP_LipSync.3"
+              }
+            },
+            "Function": null,
+            "ArrayIndex": -1,
+            "Flags": 1
+          },
+          {
+            "Name": "Alpha",
+            "Struct": null,
+            "Property": {
+              "Path": [
+                "Alpha"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "ScriptStruct'AnimNode_SkeletalControlBase'",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              }
+            },
+            "Function": null,
+            "ArrayIndex": -1,
+            "Flags": 2
+          },
+          {
+            "Name": "Cloak_Alpha_Right",
+            "Struct": null,
+            "Property": {
+              "Path": [
+                "Cloak_Alpha_Right"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "AnimBlueprintGeneratedClass'ABP_LipSync_C'",
+                "ObjectPath": "EM/Content/AssetDesign/Char/Npc/ABP_LipSync.3"
+              }
+            },
+            "Function": null,
+            "ArrayIndex": -1,
+            "Flags": 2
+          },
+          {
+            "Name": "AnimGraphNode_CopyBoneDelta_5",
+            "Struct": {
+              "ObjectName": "ScriptStruct'AnimNode_CopyBoneDelta'",
+              "ObjectPath": "/Script/AnimGraphRuntime"
+            },
+            "Property": {
+              "Path": [
+                "AnimGraphNode_CopyBoneDelta_5"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "AnimBlueprintGeneratedClass'ABP_LipSync_C'",
+                "ObjectPath": "EM/Content/AssetDesign/Char/Npc/ABP_LipSync.3"
+              }
+            },
+            "Function": null,
+            "ArrayIndex": -1,
+            "Flags": 1
+          },
+          {
+            "Name": "Alpha",
+            "Struct": null,
+            "Property": {
+              "Path": [
+                "Alpha"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "ScriptStruct'AnimNode_SkeletalControlBase'",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              }
+            },
+            "Function": null,
+            "ArrayIndex": -1,
+            "Flags": 2
+          },
+          {
+            "Name": "Pose Asset",
+            "Struct": null,
+            "Property": {
+              "Path": [
+                "Pose Asset"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "AnimBlueprintGeneratedClass'ABP_LipSync_C'",
+                "ObjectPath": "EM/Content/AssetDesign/Char/Npc/ABP_LipSync.3"
+              }
+            },
+            "Function": null,
+            "ArrayIndex": -1,
+            "Flags": 2
+          },
+          {
+            "Name": "AnimGraphNode_PoseBlendNode",
+            "Struct": {
+              "ObjectName": "ScriptStruct'AnimNode_PoseBlendNode'",
+              "ObjectPath": "/Script/AnimGraphRuntime"
+            },
+            "Property": {
+              "Path": [
+                "AnimGraphNode_PoseBlendNode"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "AnimBlueprintGeneratedClass'ABP_LipSync_C'",
+                "ObjectPath": "EM/Content/AssetDesign/Char/Npc/ABP_LipSync.3"
+              }
+            },
+            "Function": null,
+            "ArrayIndex": -1,
+            "Flags": 1
+          },
+          {
+            "Name": "PoseAsset",
+            "Struct": null,
+            "Property": {
+              "Path": [
+                "PoseAsset"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "ScriptStruct'AnimNode_PoseHandler'",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              }
+            },
+            "Function": null,
+            "ArrayIndex": -1,
+            "Flags": 2
+          },
+          {
+            "Name": "LipSyncPercents",
+            "Struct": {
+              "ObjectName": "ScriptStruct'LipSyncPercents'",
+              "ObjectPath": "/Script/EM"
+            },
+            "Property": {
+              "Path": [
+                "LipSyncPercents"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "AnimBlueprintGeneratedClass'ABP_LipSync_C'",
+                "ObjectPath": "EM/Content/AssetDesign/Char/Npc/ABP_LipSync.3"
+              }
+            },
+            "Function": null,
+            "ArrayIndex": -1,
+            "Flags": 1
+          },
+          {
+            "Name": "A",
+            "Struct": null,
+            "Property": {
+              "Path": [
+                "A"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "ScriptStruct'LipSyncPercents'",
+                "ObjectPath": "/Script/EM"
+              }
+            },
+            "Function": null,
+            "ArrayIndex": -1,
+            "Flags": 2
+          },
+          {
+            "Name": "AnimGraphNode_ModifyCurve_1",
+            "Struct": {
+              "ObjectName": "ScriptStruct'AnimNode_ModifyCurve'",
+              "ObjectPath": "/Script/AnimGraphRuntime"
+            },
+            "Property": {
+              "Path": [
+                "AnimGraphNode_ModifyCurve_1"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "AnimBlueprintGeneratedClass'ABP_LipSync_C'",
+                "ObjectPath": "EM/Content/AssetDesign/Char/Npc/ABP_LipSync.3"
+              }
+            },
+            "Function": null,
+            "ArrayIndex": -1,
+            "Flags": 1
+          },
+          {
+            "Name": "CurveValues",
+            "Struct": null,
+            "Property": {
+              "Path": [
+                "CurveValues"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "ScriptStruct'AnimNode_ModifyCurve'",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              }
+            },
+            "Function": null,
+            "ArrayIndex": 0,
+            "Flags": 6
+          },
+          {
+            "Name": "LipSyncPercents",
+            "Struct": {
+              "ObjectName": "ScriptStruct'LipSyncPercents'",
+              "ObjectPath": "/Script/EM"
+            },
+            "Property": {
+              "Path": [
+                "LipSyncPercents"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "AnimBlueprintGeneratedClass'ABP_LipSync_C'",
+                "ObjectPath": "EM/Content/AssetDesign/Char/Npc/ABP_LipSync.3"
+              }
+            },
+            "Function": null,
+            "ArrayIndex": -1,
+            "Flags": 1
+          },
+          {
+            "Name": "E",
+            "Struct": null,
+            "Property": {
+              "Path": [
+                "E"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "ScriptStruct'LipSyncPercents'",
+                "ObjectPath": "/Script/EM"
+              }
+            },
+            "Function": null,
+            "ArrayIndex": -1,
+            "Flags": 2
+          },
+          {
+            "Name": "AnimGraphNode_ModifyCurve_1",
+            "Struct": {
+              "ObjectName": "ScriptStruct'AnimNode_ModifyCurve'",
+              "ObjectPath": "/Script/AnimGraphRuntime"
+            },
+            "Property": {
+              "Path": [
+                "AnimGraphNode_ModifyCurve_1"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "AnimBlueprintGeneratedClass'ABP_LipSync_C'",
+                "ObjectPath": "EM/Content/AssetDesign/Char/Npc/ABP_LipSync.3"
+              }
+            },
+            "Function": null,
+            "ArrayIndex": -1,
+            "Flags": 1
+          },
+          {
+            "Name": "CurveValues",
+            "Struct": null,
+            "Property": {
+              "Path": [
+                "CurveValues"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "ScriptStruct'AnimNode_ModifyCurve'",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              }
+            },
+            "Function": null,
+            "ArrayIndex": 1,
+            "Flags": 6
+          },
+          {
+            "Name": "LipSyncPercents",
+            "Struct": {
+              "ObjectName": "ScriptStruct'LipSyncPercents'",
+              "ObjectPath": "/Script/EM"
+            },
+            "Property": {
+              "Path": [
+                "LipSyncPercents"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "AnimBlueprintGeneratedClass'ABP_LipSync_C'",
+                "ObjectPath": "EM/Content/AssetDesign/Char/Npc/ABP_LipSync.3"
+              }
+            },
+            "Function": null,
+            "ArrayIndex": -1,
+            "Flags": 1
+          },
+          {
+            "Name": "I",
+            "Struct": null,
+            "Property": {
+              "Path": [
+                "I"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "ScriptStruct'LipSyncPercents'",
+                "ObjectPath": "/Script/EM"
+              }
+            },
+            "Function": null,
+            "ArrayIndex": -1,
+            "Flags": 2
+          },
+          {
+            "Name": "AnimGraphNode_ModifyCurve_1",
+            "Struct": {
+              "ObjectName": "ScriptStruct'AnimNode_ModifyCurve'",
+              "ObjectPath": "/Script/AnimGraphRuntime"
+            },
+            "Property": {
+              "Path": [
+                "AnimGraphNode_ModifyCurve_1"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "AnimBlueprintGeneratedClass'ABP_LipSync_C'",
+                "ObjectPath": "EM/Content/AssetDesign/Char/Npc/ABP_LipSync.3"
+              }
+            },
+            "Function": null,
+            "ArrayIndex": -1,
+            "Flags": 1
+          },
+          {
+            "Name": "CurveValues",
+            "Struct": null,
+            "Property": {
+              "Path": [
+                "CurveValues"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "ScriptStruct'AnimNode_ModifyCurve'",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              }
+            },
+            "Function": null,
+            "ArrayIndex": 2,
+            "Flags": 6
+          },
+          {
+            "Name": "LipSyncPercents",
+            "Struct": {
+              "ObjectName": "ScriptStruct'LipSyncPercents'",
+              "ObjectPath": "/Script/EM"
+            },
+            "Property": {
+              "Path": [
+                "LipSyncPercents"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "AnimBlueprintGeneratedClass'ABP_LipSync_C'",
+                "ObjectPath": "EM/Content/AssetDesign/Char/Npc/ABP_LipSync.3"
+              }
+            },
+            "Function": null,
+            "ArrayIndex": -1,
+            "Flags": 1
+          },
+          {
+            "Name": "O",
+            "Struct": null,
+            "Property": {
+              "Path": [
+                "O"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "ScriptStruct'LipSyncPercents'",
+                "ObjectPath": "/Script/EM"
+              }
+            },
+            "Function": null,
+            "ArrayIndex": -1,
+            "Flags": 2
+          },
+          {
+            "Name": "AnimGraphNode_ModifyCurve_1",
+            "Struct": {
+              "ObjectName": "ScriptStruct'AnimNode_ModifyCurve'",
+              "ObjectPath": "/Script/AnimGraphRuntime"
+            },
+            "Property": {
+              "Path": [
+                "AnimGraphNode_ModifyCurve_1"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "AnimBlueprintGeneratedClass'ABP_LipSync_C'",
+                "ObjectPath": "EM/Content/AssetDesign/Char/Npc/ABP_LipSync.3"
+              }
+            },
+            "Function": null,
+            "ArrayIndex": -1,
+            "Flags": 1
+          },
+          {
+            "Name": "CurveValues",
+            "Struct": null,
+            "Property": {
+              "Path": [
+                "CurveValues"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "ScriptStruct'AnimNode_ModifyCurve'",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              }
+            },
+            "Function": null,
+            "ArrayIndex": 3,
+            "Flags": 6
+          },
+          {
+            "Name": "LipSyncPercents",
+            "Struct": {
+              "ObjectName": "ScriptStruct'LipSyncPercents'",
+              "ObjectPath": "/Script/EM"
+            },
+            "Property": {
+              "Path": [
+                "LipSyncPercents"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "AnimBlueprintGeneratedClass'ABP_LipSync_C'",
+                "ObjectPath": "EM/Content/AssetDesign/Char/Npc/ABP_LipSync.3"
+              }
+            },
+            "Function": null,
+            "ArrayIndex": -1,
+            "Flags": 1
+          },
+          {
+            "Name": "U",
+            "Struct": null,
+            "Property": {
+              "Path": [
+                "U"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "ScriptStruct'LipSyncPercents'",
+                "ObjectPath": "/Script/EM"
+              }
+            },
+            "Function": null,
+            "ArrayIndex": -1,
+            "Flags": 2
+          },
+          {
+            "Name": "AnimGraphNode_ModifyCurve_1",
+            "Struct": {
+              "ObjectName": "ScriptStruct'AnimNode_ModifyCurve'",
+              "ObjectPath": "/Script/AnimGraphRuntime"
+            },
+            "Property": {
+              "Path": [
+                "AnimGraphNode_ModifyCurve_1"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "AnimBlueprintGeneratedClass'ABP_LipSync_C'",
+                "ObjectPath": "EM/Content/AssetDesign/Char/Npc/ABP_LipSync.3"
+              }
+            },
+            "Function": null,
+            "ArrayIndex": -1,
+            "Flags": 1
+          },
+          {
+            "Name": "CurveValues",
+            "Struct": null,
+            "Property": {
+              "Path": [
+                "CurveValues"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "ScriptStruct'AnimNode_ModifyCurve'",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              }
+            },
+            "Function": null,
+            "ArrayIndex": 4,
+            "Flags": 6
+          },
+          {
+            "Name": "LipSyncWeight",
+            "Struct": null,
+            "Property": {
+              "Path": [
+                "LipSyncWeight"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "AnimBlueprintGeneratedClass'ABP_LipSync_C'",
+                "ObjectPath": "EM/Content/AssetDesign/Char/Npc/ABP_LipSync.3"
+              }
+            },
+            "Function": null,
+            "ArrayIndex": -1,
+            "Flags": 2
+          },
+          {
+            "Name": "AnimGraphNode_ModifyCurve_1",
+            "Struct": {
+              "ObjectName": "ScriptStruct'AnimNode_ModifyCurve'",
+              "ObjectPath": "/Script/AnimGraphRuntime"
+            },
+            "Property": {
+              "Path": [
+                "AnimGraphNode_ModifyCurve_1"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "AnimBlueprintGeneratedClass'ABP_LipSync_C'",
+                "ObjectPath": "EM/Content/AssetDesign/Char/Npc/ABP_LipSync.3"
+              }
+            },
+            "Function": null,
+            "ArrayIndex": -1,
+            "Flags": 1
+          },
+          {
+            "Name": "Alpha",
+            "Struct": null,
+            "Property": {
+              "Path": [
+                "Alpha"
+              ],
+              "ResolvedOwner": {
+                "ObjectName": "ScriptStruct'AnimNode_ModifyCurve'",
+                "ObjectPath": "/Script/AnimGraphRuntime"
+              }
+            },
+            "Function": null,
+            "ArrayIndex": -1,
+            "Flags": 2
+          }
+        ],
+        "SrcPaths": [
+          {
+            "PathSegmentStartIndex": 0,
+            "PathSegmentCount": 1,
+            "bHasEvents": false
+          },
+          {
+            "PathSegmentStartIndex": 3,
+            "PathSegmentCount": 1,
+            "bHasEvents": false
+          },
+          {
+            "PathSegmentStartIndex": 6,
+            "PathSegmentCount": 1,
+            "bHasEvents": false
+          },
+          {
+            "PathSegmentStartIndex": 9,
+            "PathSegmentCount": 1,
+            "bHasEvents": false
+          },
+          {
+            "PathSegmentStartIndex": 12,
+            "PathSegmentCount": 1,
+            "bHasEvents": false
+          },
+          {
+            "PathSegmentStartIndex": 15,
+            "PathSegmentCount": 1,
+            "bHasEvents": false
+          },
+          {
+            "PathSegmentStartIndex": 18,
+            "PathSegmentCount": 1,
+            "bHasEvents": false
+          },
+          {
+            "PathSegmentStartIndex": 21,
+            "PathSegmentCount": 1,
+            "bHasEvents": false
+          },
+          {
+            "PathSegmentStartIndex": 24,
+            "PathSegmentCount": 2,
+            "bHasEvents": false
+          },
+          {
+            "PathSegmentStartIndex": 28,
+            "PathSegmentCount": 2,
+            "bHasEvents": false
+          },
+          {
+            "PathSegmentStartIndex": 32,
+            "PathSegmentCount": 2,
+            "bHasEvents": false
+          },
+          {
+            "PathSegmentStartIndex": 36,
+            "PathSegmentCount": 2,
+            "bHasEvents": false
+          },
+          {
+            "PathSegmentStartIndex": 40,
+            "PathSegmentCount": 2,
+            "bHasEvents": false
+          },
+          {
+            "PathSegmentStartIndex": 44,
+            "PathSegmentCount": 1,
+            "bHasEvents": false
+          }
+        ],
+        "DestPaths": [
+          {
+            "PathSegmentStartIndex": 1,
+            "PathSegmentCount": 2,
+            "bHasEvents": false
+          },
+          {
+            "PathSegmentStartIndex": 4,
+            "PathSegmentCount": 2,
+            "bHasEvents": false
+          },
+          {
+            "PathSegmentStartIndex": 7,
+            "PathSegmentCount": 2,
+            "bHasEvents": false
+          },
+          {
+            "PathSegmentStartIndex": 10,
+            "PathSegmentCount": 2,
+            "bHasEvents": false
+          },
+          {
+            "PathSegmentStartIndex": 13,
+            "PathSegmentCount": 2,
+            "bHasEvents": false
+          },
+          {
+            "PathSegmentStartIndex": 16,
+            "PathSegmentCount": 2,
+            "bHasEvents": false
+          },
+          {
+            "PathSegmentStartIndex": 19,
+            "PathSegmentCount": 2,
+            "bHasEvents": false
+          },
+          {
+            "PathSegmentStartIndex": 22,
+            "PathSegmentCount": 2,
+            "bHasEvents": false
+          },
+          {
+            "PathSegmentStartIndex": 26,
+            "PathSegmentCount": 2,
+            "bHasEvents": false
+          },
+          {
+            "PathSegmentStartIndex": 30,
+            "PathSegmentCount": 2,
+            "bHasEvents": false
+          },
+          {
+            "PathSegmentStartIndex": 34,
+            "PathSegmentCount": 2,
+            "bHasEvents": false
+          },
+          {
+            "PathSegmentStartIndex": 38,
+            "PathSegmentCount": 2,
+            "bHasEvents": false
+          },
+          {
+            "PathSegmentStartIndex": 42,
+            "PathSegmentCount": 2,
+            "bHasEvents": false
+          },
+          {
+            "PathSegmentStartIndex": 45,
+            "PathSegmentCount": 2,
+            "bHasEvents": false
+          }
+        ],
+        "CopyBatches": {
+          "Copies": [
+            {
+              "AccessIndex": 0,
+              "DestAccessStartIndex": 0,
+              "DestAccessEndIndex": 1,
+              "Type": "EPropertyAccessCopyType::Plain"
+            },
+            {
+              "AccessIndex": 1,
+              "DestAccessStartIndex": 1,
+              "DestAccessEndIndex": 2,
+              "Type": "EPropertyAccessCopyType::Plain"
+            },
+            {
+              "AccessIndex": 2,
+              "DestAccessStartIndex": 2,
+              "DestAccessEndIndex": 3,
+              "Type": "EPropertyAccessCopyType::Plain"
+            },
+            {
+              "AccessIndex": 3,
+              "DestAccessStartIndex": 3,
+              "DestAccessEndIndex": 4,
+              "Type": "EPropertyAccessCopyType::Plain"
+            },
+            {
+              "AccessIndex": 4,
+              "DestAccessStartIndex": 4,
+              "DestAccessEndIndex": 5,
+              "Type": "EPropertyAccessCopyType::Plain"
+            },
+            {
+              "AccessIndex": 5,
+              "DestAccessStartIndex": 5,
+              "DestAccessEndIndex": 6,
+              "Type": "EPropertyAccessCopyType::Plain"
+            },
+            {
+              "AccessIndex": 6,
+              "DestAccessStartIndex": 6,
+              "DestAccessEndIndex": 7,
+              "Type": "EPropertyAccessCopyType::Plain"
+            },
+            {
+              "AccessIndex": 7,
+              "DestAccessStartIndex": 7,
+              "DestAccessEndIndex": 8,
+              "Type": "EPropertyAccessCopyType::Object"
+            },
+            {
+              "AccessIndex": 8,
+              "DestAccessStartIndex": 8,
+              "DestAccessEndIndex": 9,
+              "Type": "EPropertyAccessCopyType::Plain"
+            },
+            {
+              "AccessIndex": 9,
+              "DestAccessStartIndex": 9,
+              "DestAccessEndIndex": 10,
+              "Type": "EPropertyAccessCopyType::Plain"
+            },
+            {
+              "AccessIndex": 10,
+              "DestAccessStartIndex": 10,
+              "DestAccessEndIndex": 11,
+              "Type": "EPropertyAccessCopyType::Plain"
+            },
+            {
+              "AccessIndex": 11,
+              "DestAccessStartIndex": 11,
+              "DestAccessEndIndex": 12,
+              "Type": "EPropertyAccessCopyType::Plain"
+            },
+            {
+              "AccessIndex": 12,
+              "DestAccessStartIndex": 12,
+              "DestAccessEndIndex": 13,
+              "Type": "EPropertyAccessCopyType::Plain"
+            },
+            {
+              "AccessIndex": 13,
+              "DestAccessStartIndex": 13,
+              "DestAccessEndIndex": 14,
+              "Type": "EPropertyAccessCopyType::Plain"
+            }
+          ]
+        }
+      },
+      "UberGraphFunction": {
+        "ObjectName": "Function'ABP_LipSync_C:ExecuteUbergraph_ABP_LipSync'",
+        "ObjectPath": "EM/Content/AssetDesign/Char/Npc/ABP_LipSync.0"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'AnimInstance'",
+      "ObjectPath": "/Script/Engine"
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'ABP_LipSync_C:AnimGraph'",
+        "ObjectPath": "EM/Content/AssetDesign/Char/Npc/ABP_LipSync.2"
+      },
+      {
+        "ObjectName": "Function'ABP_LipSync_C:BlueprintUpdateAnimation'",
+        "ObjectPath": "EM/Content/AssetDesign/Char/Npc/ABP_LipSync.1"
+      },
+      {
+        "ObjectName": "Function'ABP_LipSync_C:ExecuteUbergraph_ABP_LipSync'",
+        "ObjectPath": "EM/Content/AssetDesign/Char/Npc/ABP_LipSync.0"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient",
+        "Struct": {
+          "ObjectName": "ScriptStruct'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_ModifyCurve_1",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 96,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNode_ModifyCurve'",
+          "ObjectPath": "/Script/AnimGraphRuntime"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_LinkedInputPose",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 296,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNode_LinkedInputPose'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_PoseBlendNode",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 176,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNode_PoseBlendNode'",
+          "ObjectPath": "/Script/AnimGraphRuntime"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_BoneDrivenController",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 384,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNode_BoneDrivenController'",
+          "ObjectPath": "/Script/AnimGraphRuntime"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_CopyBoneDelta_5",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 344,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNode_CopyBoneDelta'",
+          "ObjectPath": "/Script/AnimGraphRuntime"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_CopyBoneDelta_4",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 344,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNode_CopyBoneDelta'",
+          "ObjectPath": "/Script/AnimGraphRuntime"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_ComponentToLocalSpace",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 40,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNode_ConvertComponentToLocalSpace'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_Root",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 64,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNode_Root'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_CopyBoneDelta_3",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 344,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNode_CopyBoneDelta'",
+          "ObjectPath": "/Script/AnimGraphRuntime"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_CopyBoneDelta_2",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 344,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNode_CopyBoneDelta'",
+          "ObjectPath": "/Script/AnimGraphRuntime"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_CopyBoneDelta_1",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 344,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNode_CopyBoneDelta'",
+          "ObjectPath": "/Script/AnimGraphRuntime"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_CopyBoneDelta",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 344,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNode_CopyBoneDelta'",
+          "ObjectPath": "/Script/AnimGraphRuntime"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_LocalToComponentSpace",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 40,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNode_ConvertLocalToComponentSpace'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "AnimGraphNode_ModifyCurve",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 96,
+        "Struct": {
+          "ObjectName": "ScriptStruct'AnimNode_ModifyCurve'",
+          "ObjectPath": "/Script/AnimGraphRuntime"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "LipSyncWeight",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance"
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "LipSyncPercents",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 20,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "Struct": {
+          "ObjectName": "ScriptStruct'LipSyncPercents'",
+          "ObjectPath": "/Script/EM"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Pose Asset",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'PoseAsset'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "Cloak_Alpha_Right",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance"
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "Cloak_Alpha_Left",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance"
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Cloak_Alpha",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "PropertyClass": {
+          "ObjectName": "Class'CurveFloat'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "Cloak_Alpha_Back",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance"
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "Cloak_Alpha_Forward",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance"
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_ABP_LipSync": {
+        "ObjectName": "Function'ABP_LipSync_C:ExecuteUbergraph_ABP_LipSync'",
+        "ObjectPath": "EM/Content/AssetDesign/Char/Npc/ABP_LipSync.0"
+      },
+      "BlueprintUpdateAnimation": {
+        "ObjectName": "Function'ABP_LipSync_C:BlueprintUpdateAnimation'",
+        "ObjectPath": "EM/Content/AssetDesign/Char/Npc/ABP_LipSync.1"
+      },
+      "AnimGraph": {
+        "ObjectName": "Function'ABP_LipSync_C:AnimGraph'",
+        "ObjectPath": "EM/Content/AssetDesign/Char/Npc/ABP_LipSync.2"
+      }
+    },
+    "ClassFlags": "CLASS_Transient | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'SkeletalMeshComponent'",
+      "ObjectPath": "/Script/Engine"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "ABP_LipSync_C'Default__ABP_LipSync_C'",
+      "ObjectPath": "EM/Content/AssetDesign/Char/Npc/ABP_LipSync.4"
+    }
+  },
+  {
+    "Type": "ABP_LipSync_C",
+    "Name": "Default__ABP_LipSync_C",
+    "Class": "AnimBlueprintGeneratedClass'EM/Content/AssetDesign/Char/Npc/ABP_LipSync.ABP_LipSync_C'",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "UberGraphFrame": {},
+      "AnimGraphNode_ModifyCurve_1": {
+        "SourcePose": {
+          "LinkID": 6
+        },
+        "CurveValues": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "CurveNames": [
+          "Mouth_A",
+          "Mouth_E",
+          "Mouth_I",
+          "Mouth_O",
+          "Mouth_U"
+        ],
+        "Alpha": 1.0,
+        "ApplyMode": "EModifyCurveApplyMode::Blend"
+      },
+      "AnimGraphNode_LinkedInputPose": {
+        "Name": "InPose",
+        "Graph": "AnimGraph",
+        "InputPose": {
+          "LinkID": -1
+        }
+      },
+      "AnimGraphNode_PoseBlendNode": {
+        "SourcePose": {
+          "LinkID": 0
+        },
+        "BlendOption": "EAlphaBlendOption::Linear",
+        "CustomCurve": null,
+        "PoseAsset": null,
+        "GroupName": "None",
+        "GroupRole": "EAnimGroupRole::CanBeLeader",
+        "GroupScope": "EAnimSyncGroupScope::Local",
+        "bIgnoreForRelevancyTest": false,
+        "BlendWeight": 0.0,
+        "InternalTimeAccumulator": 0.0
+      },
+      "AnimGraphNode_BoneDrivenController": {
+        "SourceBone": {
+          "BoneName": "head"
+        },
+        "DrivingCurve": null,
+        "Multiplier": -1.0,
+        "RangeMin": -1.0,
+        "RangeMax": 1.0,
+        "RemappedMin": 0.0,
+        "RemappedMax": 1.0,
+        "ParameterName": "None",
+        "TargetBone": {
+          "BoneName": "Collar01"
+        },
+        "DestinationMode": "EDrivenDestinationMode::Bone",
+        "ModificationMode": "EDrivenBoneModificationMode::AddToInput",
+        "SourceComponent": "EComponentType::RotationZ",
+        "bUseRange": false,
+        "bAffectTargetTranslationX": false,
+        "bAffectTargetTranslationY": false,
+        "bAffectTargetTranslationZ": false,
+        "bAffectTargetRotationX": false,
+        "bAffectTargetRotationY": true,
+        "bAffectTargetRotationZ": false,
+        "bAffectTargetScaleX": false,
+        "bAffectTargetScaleY": false,
+        "bAffectTargetScaleZ": false,
+        "ComponentPose": {
+          "LinkID": 10
+        },
+        "LODThreshold": -1,
+        "ActualAlpha": 0.0,
+        "AlphaInputType": "EAnimAlphaInputType::Float",
+        "bAlphaBoolEnabled": true,
+        "Alpha": 1.0,
+        "AlphaScaleBias": {
+          "Scale": 1.0,
+          "Bias": 0.0
+        },
+        "AlphaBoolBlend": {
+          "BlendInTime": 0.0,
+          "BlendOutTime": 0.0,
+          "BlendOption": "EAlphaBlendOption::Linear",
+          "bInitialized": false,
+          "CustomCurve": null,
+          "AlphaBlend": {
+            "CustomCurve": null,
+            "BlendTime": 0.2,
+            "BlendOption": "EAlphaBlendOption::Linear"
+          }
+        },
+        "AlphaCurveName": "None",
+        "AlphaScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 0.6,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0
+        }
+      },
+      "AnimGraphNode_CopyBoneDelta_5": {
+        "SourceBone": {
+          "BoneName": "head"
+        },
+        "TargetBone": {
+          "BoneName": "cloak_right01_a"
+        },
+        "bCopyTranslation": false,
+        "bCopyRotation": true,
+        "bCopyScale": false,
+        "CopyMode": "CopyBoneDeltaMode::Accumulate",
+        "TranslationMultiplier": 1.0,
+        "RotationMultiplier": 1.0,
+        "ScaleMultiplier": 1.0,
+        "ComponentPose": {
+          "LinkID": 5
+        },
+        "LODThreshold": -1,
+        "ActualAlpha": 0.0,
+        "AlphaInputType": "EAnimAlphaInputType::Float",
+        "bAlphaBoolEnabled": true,
+        "Alpha": 1.0,
+        "AlphaScaleBias": {
+          "Scale": 1.0,
+          "Bias": 0.0
+        },
+        "AlphaBoolBlend": {
+          "BlendInTime": 0.0,
+          "BlendOutTime": 0.0,
+          "BlendOption": "EAlphaBlendOption::Linear",
+          "bInitialized": false,
+          "CustomCurve": null,
+          "AlphaBlend": {
+            "CustomCurve": null,
+            "BlendTime": 0.2,
+            "BlendOption": "EAlphaBlendOption::Linear"
+          }
+        },
+        "AlphaCurveName": "None",
+        "AlphaScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 0.4,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0
+        }
+      },
+      "AnimGraphNode_CopyBoneDelta_4": {
+        "SourceBone": {
+          "BoneName": "head"
+        },
+        "TargetBone": {
+          "BoneName": "cloak_left01_a"
+        },
+        "bCopyTranslation": false,
+        "bCopyRotation": true,
+        "bCopyScale": false,
+        "CopyMode": "CopyBoneDeltaMode::Accumulate",
+        "TranslationMultiplier": 1.0,
+        "RotationMultiplier": 1.0,
+        "ScaleMultiplier": 1.0,
+        "ComponentPose": {
+          "LinkID": 3
+        },
+        "LODThreshold": -1,
+        "ActualAlpha": 0.0,
+        "AlphaInputType": "EAnimAlphaInputType::Float",
+        "bAlphaBoolEnabled": true,
+        "Alpha": 1.0,
+        "AlphaScaleBias": {
+          "Scale": 1.0,
+          "Bias": 0.0
+        },
+        "AlphaBoolBlend": {
+          "BlendInTime": 0.0,
+          "BlendOutTime": 0.0,
+          "BlendOption": "EAlphaBlendOption::Linear",
+          "bInitialized": false,
+          "CustomCurve": null,
+          "AlphaBlend": {
+            "CustomCurve": null,
+            "BlendTime": 0.2,
+            "BlendOption": "EAlphaBlendOption::Linear"
+          }
+        },
+        "AlphaCurveName": "None",
+        "AlphaScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 0.3,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0
+        }
+      },
+      "AnimGraphNode_ComponentToLocalSpace": {
+        "ComponentPose": {
+          "LinkID": 4
+        }
+      },
+      "AnimGraphNode_Root": {
+        "Result": {
+          "LinkID": 13
+        },
+        "Name": "AnimGraph",
+        "Group": "None"
+      },
+      "AnimGraphNode_CopyBoneDelta_3": {
+        "SourceBone": {
+          "BoneName": "head"
+        },
+        "TargetBone": {
+          "BoneName": "riband_right_b"
+        },
+        "bCopyTranslation": false,
+        "bCopyRotation": true,
+        "bCopyScale": false,
+        "CopyMode": "CopyBoneDeltaMode::Accumulate",
+        "TranslationMultiplier": 1.0,
+        "RotationMultiplier": -1.0,
+        "ScaleMultiplier": 1.0,
+        "ComponentPose": {
+          "LinkID": 9
+        },
+        "LODThreshold": -1,
+        "ActualAlpha": 0.0,
+        "AlphaInputType": "EAnimAlphaInputType::Float",
+        "bAlphaBoolEnabled": true,
+        "Alpha": 1.0,
+        "AlphaScaleBias": {
+          "Scale": 1.0,
+          "Bias": 0.0
+        },
+        "AlphaBoolBlend": {
+          "BlendInTime": 0.0,
+          "BlendOutTime": 0.0,
+          "BlendOption": "EAlphaBlendOption::Linear",
+          "bInitialized": false,
+          "CustomCurve": null,
+          "AlphaBlend": {
+            "CustomCurve": null,
+            "BlendTime": 0.2,
+            "BlendOption": "EAlphaBlendOption::Linear"
+          }
+        },
+        "AlphaCurveName": "None",
+        "AlphaScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 0.5,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0
+        }
+      },
+      "AnimGraphNode_CopyBoneDelta_2": {
+        "SourceBone": {
+          "BoneName": "head"
+        },
+        "TargetBone": {
+          "BoneName": "riband_left_b"
+        },
+        "bCopyTranslation": false,
+        "bCopyRotation": true,
+        "bCopyScale": false,
+        "CopyMode": "CopyBoneDeltaMode::Accumulate",
+        "TranslationMultiplier": 1.0,
+        "RotationMultiplier": 1.0,
+        "ScaleMultiplier": 1.0,
+        "ComponentPose": {
+          "LinkID": 12
+        },
+        "LODThreshold": -1,
+        "ActualAlpha": 0.0,
+        "AlphaInputType": "EAnimAlphaInputType::Float",
+        "bAlphaBoolEnabled": true,
+        "Alpha": 1.0,
+        "AlphaScaleBias": {
+          "Scale": 1.0,
+          "Bias": 0.0
+        },
+        "AlphaBoolBlend": {
+          "BlendInTime": 0.0,
+          "BlendOutTime": 0.0,
+          "BlendOption": "EAlphaBlendOption::Linear",
+          "bInitialized": false,
+          "CustomCurve": null,
+          "AlphaBlend": {
+            "CustomCurve": null,
+            "BlendTime": 0.2,
+            "BlendOption": "EAlphaBlendOption::Linear"
+          }
+        },
+        "AlphaCurveName": "None",
+        "AlphaScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 0.5,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0
+        }
+      },
+      "AnimGraphNode_CopyBoneDelta_1": {
+        "SourceBone": {
+          "BoneName": "head"
+        },
+        "TargetBone": {
+          "BoneName": "collar_back01_a"
+        },
+        "bCopyTranslation": false,
+        "bCopyRotation": true,
+        "bCopyScale": false,
+        "CopyMode": "CopyBoneDeltaMode::Accumulate",
+        "TranslationMultiplier": 1.0,
+        "RotationMultiplier": 1.0,
+        "ScaleMultiplier": 1.0,
+        "ComponentPose": {
+          "LinkID": 11
+        },
+        "LODThreshold": -1,
+        "ActualAlpha": 0.0,
+        "AlphaInputType": "EAnimAlphaInputType::Float",
+        "bAlphaBoolEnabled": true,
+        "Alpha": 1.0,
+        "AlphaScaleBias": {
+          "Scale": 1.0,
+          "Bias": 0.0
+        },
+        "AlphaBoolBlend": {
+          "BlendInTime": 0.0,
+          "BlendOutTime": 0.0,
+          "BlendOption": "EAlphaBlendOption::Linear",
+          "bInitialized": false,
+          "CustomCurve": null,
+          "AlphaBlend": {
+            "CustomCurve": null,
+            "BlendTime": 0.2,
+            "BlendOption": "EAlphaBlendOption::Linear"
+          }
+        },
+        "AlphaCurveName": "None",
+        "AlphaScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 0.6,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0
+        }
+      },
+      "AnimGraphNode_CopyBoneDelta": {
+        "SourceBone": {
+          "BoneName": "head"
+        },
+        "TargetBone": {
+          "BoneName": "Collar_front_a"
+        },
+        "bCopyTranslation": false,
+        "bCopyRotation": true,
+        "bCopyScale": false,
+        "CopyMode": "CopyBoneDeltaMode::Accumulate",
+        "TranslationMultiplier": 1.0,
+        "RotationMultiplier": 1.0,
+        "ScaleMultiplier": 1.0,
+        "ComponentPose": {
+          "LinkID": 8
+        },
+        "LODThreshold": -1,
+        "ActualAlpha": 0.0,
+        "AlphaInputType": "EAnimAlphaInputType::Float",
+        "bAlphaBoolEnabled": true,
+        "Alpha": 1.0,
+        "AlphaScaleBias": {
+          "Scale": 1.0,
+          "Bias": 0.0
+        },
+        "AlphaBoolBlend": {
+          "BlendInTime": 0.0,
+          "BlendOutTime": 0.0,
+          "BlendOption": "EAlphaBlendOption::Linear",
+          "bInitialized": false,
+          "CustomCurve": null,
+          "AlphaBlend": {
+            "CustomCurve": null,
+            "BlendTime": 0.2,
+            "BlendOption": "EAlphaBlendOption::Linear"
+          }
+        },
+        "AlphaCurveName": "None",
+        "AlphaScaleBiasClamp": {
+          "bMapRange": false,
+          "bClampResult": false,
+          "bInterpResult": false,
+          "InRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "OutRange": {
+            "Min": 0.0,
+            "Max": 1.0
+          },
+          "Scale": 0.8,
+          "Bias": 0.0,
+          "ClampMin": 0.0,
+          "ClampMax": 1.0,
+          "InterpSpeedIncreasing": 10.0,
+          "InterpSpeedDecreasing": 10.0
+        }
+      },
+      "AnimGraphNode_LocalToComponentSpace": {
+        "LocalPose": {
+          "LinkID": 1
+        }
+      },
+      "AnimGraphNode_ModifyCurve": {
+        "SourcePose": {
+          "LinkID": 2
+        },
+        "CurveValues": [
+          0.0
+        ],
+        "CurveNames": [
+          "LipSyncWeightAlph"
+        ],
+        "Alpha": 1.0,
+        "ApplyMode": "EModifyCurveApplyMode::Blend"
+      },
+      "LipSyncPercents": {
+        "A": 0.0,
+        "E": 0.0,
+        "I": 0.0,
+        "O": 0.0,
+        "U": 0.0
+      },
+      "Pose Asset": {
+        "ObjectName": "PoseAsset'Heitao_PS_LipSync'",
+        "ObjectPath": "EM/Content/Asset/Char/Player/Char001_Heitao_J/Animation/Sequence/Facial/Heitao_PS_LipSync.0"
+      },
+      "Cloak_Alpha": {
+        "ObjectName": "CurveFloat'Cloak_Alpha'",
+        "ObjectPath": "EM/Content/Asset/Char/Common/Kawaii/Player/Female/Girl/Nvzhu/Cloak_Alpha.0"
+      }
+    }
+  }
+]

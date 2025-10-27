@@ -1,0 +1,861 @@
+[
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_BP_Sew_Purifier",
+    "Outer": "BP_Sew_Purifier_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_MakeRotator_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "Struct": {
+          "ObjectName": "ScriptStruct'Rotator'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_MakeVector_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "Struct": {
+          "ObjectName": "ScriptStruct'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_MakeVector_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "Struct": {
+          "ObjectName": "ScriptStruct'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "K2Node_Event_NowStateId",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_SwitchInteger_CmpSuccess",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_K2_SetRelativeLocation_SweepHitResult",
+        "Flags": "RF_Public",
+        "ElementSize": 144,
+        "PropertyFlags": "ContainsInstancedReference",
+        "Struct": {
+          "ObjectName": "ScriptStruct'HitResult'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_K2_SetRelativeLocation_SweepHitResult_1",
+        "Flags": "RF_Public",
+        "ElementSize": 144,
+        "PropertyFlags": "ContainsInstancedReference",
+        "Struct": {
+          "ObjectName": "ScriptStruct'HitResult'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_K2_SetWorldRotation_SweepHitResult",
+        "Flags": "RF_Public",
+        "ElementSize": 144,
+        "PropertyFlags": "ContainsInstancedReference",
+        "Struct": {
+          "ObjectName": "ScriptStruct'HitResult'",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction | FUNC_HasDefaults"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnEnterState",
+    "Outer": "BP_Sew_Purifier_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "SuperStruct": {
+      "ObjectName": "Function'CombatItemBase:OnEnterState'",
+      "ObjectPath": "/Script/EM"
+    },
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "NowStateId",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "Down__UpdateFunc",
+    "Outer": "BP_Sew_Purifier_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "Down__FinishedFunc",
+    "Outer": "BP_Sew_Purifier_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "UP__UpdateFunc",
+    "Outer": "BP_Sew_Purifier_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "UP__FinishedFunc",
+    "Outer": "BP_Sew_Purifier_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "Rotate__UpdateFunc",
+    "Outer": "BP_Sew_Purifier_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "Rotate__FinishedFunc",
+    "Outer": "BP_Sew_Purifier_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BP_Sew_Purifier_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Super": {
+      "ObjectName": "BlueprintGeneratedClass'BP_CombatItemBase_C'",
+      "ObjectPath": "EM/Content/BluePrints/Item/BP_CombatItemBase.1"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Timelines": [
+        {
+          "ObjectName": "TimelineTemplate'BP_Sew_Purifier_C:Rotate_Template'",
+          "ObjectPath": "EM/Content/AssetDesign/Level/Prop/BP_Sew_Purifier.27"
+        },
+        {
+          "ObjectName": "TimelineTemplate'BP_Sew_Purifier_C:Up_Template'",
+          "ObjectPath": "EM/Content/AssetDesign/Level/Prop/BP_Sew_Purifier.28"
+        },
+        {
+          "ObjectName": "TimelineTemplate'BP_Sew_Purifier_C:Down_Template'",
+          "ObjectPath": "EM/Content/AssetDesign/Level/Prop/BP_Sew_Purifier.26"
+        }
+      ],
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BP_Sew_Purifier_C:SimpleConstructionScript_0'",
+        "ObjectPath": "EM/Content/AssetDesign/Level/Prop/BP_Sew_Purifier.22"
+      },
+      "InheritableComponentHandler": {
+        "ObjectName": "InheritableComponentHandler'BP_Sew_Purifier_C:InheritableComponentHandler'",
+        "ObjectPath": "EM/Content/AssetDesign/Level/Prop/BP_Sew_Purifier.16"
+      },
+      "UberGraphFunction": {
+        "ObjectName": "Function'BP_Sew_Purifier_C:ExecuteUbergraph_BP_Sew_Purifier'",
+        "ObjectPath": "EM/Content/AssetDesign/Level/Prop/BP_Sew_Purifier.0"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "BlueprintGeneratedClass'BP_CombatItemBase_C'",
+      "ObjectPath": "EM/Content/BluePrints/Item/BP_CombatItemBase.1"
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'BP_Sew_Purifier_C:Rotate__FinishedFunc'",
+        "ObjectPath": "EM/Content/AssetDesign/Level/Prop/BP_Sew_Purifier.7"
+      },
+      {
+        "ObjectName": "Function'BP_Sew_Purifier_C:Rotate__UpdateFunc'",
+        "ObjectPath": "EM/Content/AssetDesign/Level/Prop/BP_Sew_Purifier.6"
+      },
+      {
+        "ObjectName": "Function'BP_Sew_Purifier_C:UP__FinishedFunc'",
+        "ObjectPath": "EM/Content/AssetDesign/Level/Prop/BP_Sew_Purifier.5"
+      },
+      {
+        "ObjectName": "Function'BP_Sew_Purifier_C:UP__UpdateFunc'",
+        "ObjectPath": "EM/Content/AssetDesign/Level/Prop/BP_Sew_Purifier.4"
+      },
+      {
+        "ObjectName": "Function'BP_Sew_Purifier_C:Down__FinishedFunc'",
+        "ObjectPath": "EM/Content/AssetDesign/Level/Prop/BP_Sew_Purifier.3"
+      },
+      {
+        "ObjectName": "Function'BP_Sew_Purifier_C:Down__UpdateFunc'",
+        "ObjectPath": "EM/Content/AssetDesign/Level/Prop/BP_Sew_Purifier.2"
+      },
+      {
+        "ObjectName": "Function'BP_Sew_Purifier_C:OnEnterState'",
+        "ObjectPath": "EM/Content/AssetDesign/Level/Prop/BP_Sew_Purifier.1"
+      },
+      {
+        "ObjectName": "Function'BP_Sew_Purifier_C:ExecuteUbergraph_BP_Sew_Purifier'",
+        "ObjectPath": "EM/Content/AssetDesign/Level/Prop/BP_Sew_Purifier.0"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient",
+        "Struct": {
+          "ObjectName": "ScriptStruct'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "StaticMesh2",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'StaticMeshComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "StaticMesh1",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'StaticMeshComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "StaticMesh",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'StaticMeshComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "Down______2_34CCC20D4902330FA06D409A649876A1",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4
+      },
+      {
+        "Type": "ByteProperty",
+        "Name": "Down__Direction_34CCC20D4902330FA06D409A649876A1",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "Enum": {
+          "ObjectName": "Enum'ETimelineDirection'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Down",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'TimelineComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "UP_Z_89BBD1D64B325E75125565863599F312",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4
+      },
+      {
+        "Type": "ByteProperty",
+        "Name": "UP__Direction_89BBD1D64B325E75125565863599F312",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "Enum": {
+          "ObjectName": "Enum'ETimelineDirection'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "UP",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'TimelineComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "Rotate______0_B6BD316A4946FDA475EFE9BC0E642998",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4
+      },
+      {
+        "Type": "ByteProperty",
+        "Name": "Rotate__Direction_B6BD316A4946FDA475EFE9BC0E642998",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "Enum": {
+          "ObjectName": "Enum'ETimelineDirection'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Rotate",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'TimelineComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_BP_Sew_Purifier": {
+        "ObjectName": "Function'BP_Sew_Purifier_C:ExecuteUbergraph_BP_Sew_Purifier'",
+        "ObjectPath": "EM/Content/AssetDesign/Level/Prop/BP_Sew_Purifier.0"
+      },
+      "OnEnterState": {
+        "ObjectName": "Function'BP_Sew_Purifier_C:OnEnterState'",
+        "ObjectPath": "EM/Content/AssetDesign/Level/Prop/BP_Sew_Purifier.1"
+      },
+      "Down__UpdateFunc": {
+        "ObjectName": "Function'BP_Sew_Purifier_C:Down__UpdateFunc'",
+        "ObjectPath": "EM/Content/AssetDesign/Level/Prop/BP_Sew_Purifier.2"
+      },
+      "Down__FinishedFunc": {
+        "ObjectName": "Function'BP_Sew_Purifier_C:Down__FinishedFunc'",
+        "ObjectPath": "EM/Content/AssetDesign/Level/Prop/BP_Sew_Purifier.3"
+      },
+      "UP__UpdateFunc": {
+        "ObjectName": "Function'BP_Sew_Purifier_C:UP__UpdateFunc'",
+        "ObjectPath": "EM/Content/AssetDesign/Level/Prop/BP_Sew_Purifier.4"
+      },
+      "UP__FinishedFunc": {
+        "ObjectName": "Function'BP_Sew_Purifier_C:UP__FinishedFunc'",
+        "ObjectPath": "EM/Content/AssetDesign/Level/Prop/BP_Sew_Purifier.5"
+      },
+      "Rotate__UpdateFunc": {
+        "ObjectName": "Function'BP_Sew_Purifier_C:Rotate__UpdateFunc'",
+        "ObjectPath": "EM/Content/AssetDesign/Level/Prop/BP_Sew_Purifier.6"
+      },
+      "Rotate__FinishedFunc": {
+        "ObjectName": "Function'BP_Sew_Purifier_C:Rotate__FinishedFunc'",
+        "ObjectPath": "EM/Content/AssetDesign/Level/Prop/BP_Sew_Purifier.7"
+      }
+    },
+    "ClassFlags": "CLASS_Config | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BP_Sew_Purifier_C'Default__BP_Sew_Purifier_C'",
+      "ObjectPath": "EM/Content/AssetDesign/Level/Prop/BP_Sew_Purifier.9"
+    }
+  },
+  {
+    "Type": "BP_Sew_Purifier_C",
+    "Name": "Default__BP_Sew_Purifier_C",
+    "Class": "BlueprintGeneratedClass'EM/Content/AssetDesign/Level/Prop/BP_Sew_Purifier.BP_Sew_Purifier_C'",
+    "Template": {
+      "ObjectName": "BP_CombatItemBase_C'Default__BP_CombatItemBase_C'",
+      "ObjectPath": "EM/Content/BluePrints/Item/BP_CombatItemBase.2"
+    },
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "UberGraphFrame": {},
+      "CombatStateChangeComponent": {
+        "ObjectName": "BP_CombatStateChangeComponent_C'Default__BP_Sew_Purifier_C:CombatStateChangeComponent'",
+        "ObjectPath": "EM/Content/AssetDesign/Level/Prop/BP_Sew_Purifier.11"
+      },
+      "CombatClientEffectComponent": {
+        "ObjectName": "BP_CombatClientEffectComponent_C'Default__BP_Sew_Purifier_C:CombatClientEffectComponent'",
+        "ObjectPath": "EM/Content/AssetDesign/Level/Prop/BP_Sew_Purifier.10"
+      },
+      "FXComponent": {
+        "ObjectName": "BP_FXComponent_C'Default__BP_Sew_Purifier_C:BP_FXComponent'",
+        "ObjectPath": "EM/Content/AssetDesign/Level/Prop/BP_Sew_Purifier.12"
+      }
+    }
+  },
+  {
+    "Type": "BP_CombatClientEffectComponent_C",
+    "Name": "CombatClientEffectComponent",
+    "Outer": "Default__BP_Sew_Purifier_C",
+    "Class": "BlueprintGeneratedClass'EM/Content/BluePrints/Item/BP_CombatClientEffectComponent.BP_CombatClientEffectComponent_C'",
+    "Template": {
+      "ObjectName": "BP_CombatClientEffectComponent_C'Default__BP_CombatItemBase_C:CombatClientEffectComponent'",
+      "ObjectPath": "EM/Content/BluePrints/Item/BP_CombatItemBase.3"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "BP_CombatStateChangeComponent_C",
+    "Name": "CombatStateChangeComponent",
+    "Outer": "Default__BP_Sew_Purifier_C",
+    "Class": "BlueprintGeneratedClass'EM/Content/BluePrints/Item/BP_CombatStateChangeComponent.BP_CombatStateChangeComponent_C'",
+    "Template": {
+      "ObjectName": "BP_CombatStateChangeComponent_C'Default__BP_CombatItemBase_C:CombatStateChangeComponent'",
+      "ObjectPath": "EM/Content/BluePrints/Item/BP_CombatItemBase.4"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "BP_FXComponent_C",
+    "Name": "BP_FXComponent",
+    "Outer": "Default__BP_Sew_Purifier_C",
+    "Class": "BlueprintGeneratedClass'EM/Content/BluePrints/Char/BP_FXComponent.BP_FXComponent_C'",
+    "Template": {
+      "ObjectName": "BP_FXComponent_C'Default__BP_CombatItemBase_C:BP_FXComponent'",
+      "ObjectPath": "EM/Content/BluePrints/Item/BP_CombatItemBase.5"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "CurveFloat",
+    "Name": "CurveFloat_0",
+    "Outer": "BP_Sew_Purifier_C",
+    "Class": "UScriptClass'CurveFloat'",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "FloatCurve": {
+        "Keys": [
+          {
+            "InterpMode": "RCIM_Linear",
+            "TangentMode": "RCTM_Auto",
+            "TangentWeightMode": "RCTWM_WeightedNone",
+            "Time": 0.0,
+            "Value": 0.0,
+            "ArriveTangent": 0.0,
+            "ArriveTangentWeight": 0.0,
+            "LeaveTangent": 0.0,
+            "LeaveTangentWeight": 0.0
+          },
+          {
+            "InterpMode": "RCIM_Linear",
+            "TangentMode": "RCTM_Auto",
+            "TangentWeightMode": "RCTWM_WeightedNone",
+            "Time": 20.0,
+            "Value": -90.0,
+            "ArriveTangent": 0.0,
+            "ArriveTangentWeight": 0.0,
+            "LeaveTangent": 0.0,
+            "LeaveTangentWeight": 0.0
+          }
+        ]
+      }
+    }
+  },
+  {
+    "Type": "CurveFloat",
+    "Name": "CurveFloat_3",
+    "Outer": "BP_Sew_Purifier_C",
+    "Class": "UScriptClass'CurveFloat'",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "FloatCurve": {
+        "Keys": [
+          {
+            "InterpMode": "RCIM_Linear",
+            "TangentMode": "RCTM_Auto",
+            "TangentWeightMode": "RCTWM_WeightedNone",
+            "Time": 0.0,
+            "Value": 0.0,
+            "ArriveTangent": 0.0,
+            "ArriveTangentWeight": 0.0,
+            "LeaveTangent": 0.0,
+            "LeaveTangentWeight": 0.0
+          },
+          {
+            "InterpMode": "RCIM_Linear",
+            "TangentMode": "RCTM_Auto",
+            "TangentWeightMode": "RCTWM_WeightedNone",
+            "Time": 10.0,
+            "Value": 421.0,
+            "ArriveTangent": 0.0,
+            "ArriveTangentWeight": 0.0,
+            "LeaveTangent": 0.0,
+            "LeaveTangentWeight": 0.0
+          }
+        ]
+      }
+    }
+  },
+  {
+    "Type": "CurveFloat",
+    "Name": "CurveFloat_8",
+    "Outer": "BP_Sew_Purifier_C",
+    "Class": "UScriptClass'CurveFloat'",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "FloatCurve": {
+        "Keys": [
+          {
+            "InterpMode": "RCIM_Linear",
+            "TangentMode": "RCTM_Auto",
+            "TangentWeightMode": "RCTWM_WeightedNone",
+            "Time": 0.0,
+            "Value": 421.0,
+            "ArriveTangent": 0.0,
+            "ArriveTangentWeight": 0.0,
+            "LeaveTangent": 0.0,
+            "LeaveTangentWeight": 0.0
+          },
+          {
+            "InterpMode": "RCIM_Linear",
+            "TangentMode": "RCTM_Auto",
+            "TangentWeightMode": "RCTWM_WeightedNone",
+            "Time": 5.0,
+            "Value": -1054.0,
+            "ArriveTangent": 0.0,
+            "ArriveTangentWeight": 0.0,
+            "LeaveTangent": 0.0,
+            "LeaveTangentWeight": 0.0
+          }
+        ]
+      }
+    }
+  },
+  {
+    "Type": "InheritableComponentHandler",
+    "Name": "InheritableComponentHandler",
+    "Outer": "BP_Sew_Purifier_C",
+    "Class": "UScriptClass'InheritableComponentHandler'",
+    "Flags": "RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Outer": "BP_Sew_Purifier_C",
+    "Class": "UScriptClass'SceneComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BP_Sew_Purifier_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "EM/Content/AssetDesign/Level/Prop/BP_Sew_Purifier.17"
+      },
+      "VariableGuid": "0807E8BB-47F98776-04FD1191-FC914442",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_10",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'StaticMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "StaticMeshComponent'BP_Sew_Purifier_C:StaticMesh_GEN_VARIABLE'",
+        "ObjectPath": "EM/Content/AssetDesign/Level/Prop/BP_Sew_Purifier.25"
+      },
+      "ParentComponentOrVariableName": "DefaultSceneRoot",
+      "ParentComponentOwnerClassName": "BP_CombatItemBase_C",
+      "ChildNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_Sew_Purifier_C:SimpleConstructionScript_0.SCS_Node_11'",
+          "ObjectPath": "EM/Content/AssetDesign/Level/Prop/BP_Sew_Purifier.20"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_Sew_Purifier_C:SimpleConstructionScript_0.SCS_Node_12'",
+          "ObjectPath": "EM/Content/AssetDesign/Level/Prop/BP_Sew_Purifier.21"
+        }
+      ],
+      "VariableGuid": "02607037-4808AD39-F9AF37AD-6717DBEE",
+      "InternalVariableName": "StaticMesh"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_11",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'StaticMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "StaticMeshComponent'BP_Sew_Purifier_C:StaticMesh1_GEN_VARIABLE'",
+        "ObjectPath": "EM/Content/AssetDesign/Level/Prop/BP_Sew_Purifier.23"
+      },
+      "VariableGuid": "3B5EA7FC-466B2FDA-9DB8D3AF-FE51CA19",
+      "InternalVariableName": "StaticMesh1"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_12",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'StaticMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "StaticMeshComponent'BP_Sew_Purifier_C:StaticMesh2_GEN_VARIABLE'",
+        "ObjectPath": "EM/Content/AssetDesign/Level/Prop/BP_Sew_Purifier.24"
+      },
+      "VariableGuid": "34B0810D-4F836C71-B90B8794-2BEF9D7C",
+      "InternalVariableName": "StaticMesh2"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Outer": "BP_Sew_Purifier_C",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_Sew_Purifier_C:SimpleConstructionScript_0.SCS_Node_10'",
+          "ObjectPath": "EM/Content/AssetDesign/Level/Prop/BP_Sew_Purifier.19"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_Sew_Purifier_C:SimpleConstructionScript_0.SCS_Node_10'",
+          "ObjectPath": "EM/Content/AssetDesign/Level/Prop/BP_Sew_Purifier.19"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_Sew_Purifier_C:SimpleConstructionScript_0.SCS_Node_11'",
+          "ObjectPath": "EM/Content/AssetDesign/Level/Prop/BP_Sew_Purifier.20"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_Sew_Purifier_C:SimpleConstructionScript_0.SCS_Node_12'",
+          "ObjectPath": "EM/Content/AssetDesign/Level/Prop/BP_Sew_Purifier.21"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BP_Sew_Purifier_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "EM/Content/AssetDesign/Level/Prop/BP_Sew_Purifier.18"
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "StaticMesh1_GEN_VARIABLE",
+    "Outer": "BP_Sew_Purifier_C",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'SM_Sew_M_Tube01B'",
+        "ObjectPath": "EM/Content/Asset/Scene/EN002_Haiboliya/Binghucheng/BH_Sew/Mesh/SM_Sew_M_Tube01B.2"
+      },
+      "RelativeLocation": {
+        "X": -2575.339,
+        "Y": 1.5728163E-17,
+        "Z": 418.19626
+      },
+      "RelativeScale3D": {
+        "X": 1.0,
+        "Y": 2.09055,
+        "Z": 2.09055
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "StaticMesh2_GEN_VARIABLE",
+    "Outer": "BP_Sew_Purifier_C",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'SM_Sew_M_Tube01B'",
+        "ObjectPath": "EM/Content/Asset/Scene/EN002_Haiboliya/Binghucheng/BH_Sew/Mesh/SM_Sew_M_Tube01B.2"
+      },
+      "RelativeLocation": {
+        "X": 0.00023216606,
+        "Y": 2585.162,
+        "Z": 424.77307
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": -90.0,
+        "Roll": 0.0
+      },
+      "RelativeScale3D": {
+        "X": 1.0,
+        "Y": 2.062747,
+        "Z": 2.062747
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "StaticMesh_GEN_VARIABLE",
+    "Outer": "BP_Sew_Purifier_C",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'SM_Sew_Dev04A'",
+        "ObjectPath": "EM/Content/Asset/Scene/EN002_Haiboliya/Binghucheng/BH_Sew/Mesh/SM_Sew_Dev04A.2"
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": 1.1444095E-05,
+        "Roll": 0.0
+      }
+    }
+  },
+  {
+    "Type": "TimelineTemplate",
+    "Name": "Down_Template",
+    "Outer": "BP_Sew_Purifier_C",
+    "Class": "UScriptClass'TimelineTemplate'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "FloatTracks": [
+        {
+          "CurveFloat": {
+            "ObjectName": "CurveFloat'BP_Sew_Purifier_C:CurveFloat_8'",
+            "ObjectPath": "EM/Content/AssetDesign/Level/Prop/BP_Sew_Purifier.15"
+          },
+          "PropertyName": "Down______2_34CCC20D4902330FA06D409A649876A1",
+          "TrackName": "新建轨道_2",
+          "bIsExternalCurve": false
+        }
+      ],
+      "TimelineGuid": "34CCC20D-4902330F-A06D409A-649876A1",
+      "VariableName": "Down",
+      "DirectionPropertyName": "Down__Direction_34CCC20D4902330FA06D409A649876A1",
+      "UpdateFunctionName": "Down__UpdateFunc",
+      "FinishedFunctionName": "Down__FinishedFunc"
+    }
+  },
+  {
+    "Type": "TimelineTemplate",
+    "Name": "Rotate_Template",
+    "Outer": "BP_Sew_Purifier_C",
+    "Class": "UScriptClass'TimelineTemplate'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TimelineLength": 20.0,
+      "FloatTracks": [
+        {
+          "CurveFloat": {
+            "ObjectName": "CurveFloat'BP_Sew_Purifier_C:CurveFloat_0'",
+            "ObjectPath": "EM/Content/AssetDesign/Level/Prop/BP_Sew_Purifier.13"
+          },
+          "PropertyName": "Rotate______0_B6BD316A4946FDA475EFE9BC0E642998",
+          "TrackName": "新建轨道_0",
+          "bIsExternalCurve": false
+        }
+      ],
+      "TimelineGuid": "B6BD316A-4946FDA4-75EFE9BC-0E642998",
+      "VariableName": "Rotate",
+      "DirectionPropertyName": "Rotate__Direction_B6BD316A4946FDA475EFE9BC0E642998",
+      "UpdateFunctionName": "Rotate__UpdateFunc",
+      "FinishedFunctionName": "Rotate__FinishedFunc"
+    }
+  },
+  {
+    "Type": "TimelineTemplate",
+    "Name": "Up_Template",
+    "Outer": "BP_Sew_Purifier_C",
+    "Class": "UScriptClass'TimelineTemplate'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TimelineLength": 10.0,
+      "FloatTracks": [
+        {
+          "CurveFloat": {
+            "ObjectName": "CurveFloat'BP_Sew_Purifier_C:CurveFloat_3'",
+            "ObjectPath": "EM/Content/AssetDesign/Level/Prop/BP_Sew_Purifier.14"
+          },
+          "PropertyName": "UP_Z_89BBD1D64B325E75125565863599F312",
+          "TrackName": "Z",
+          "bIsExternalCurve": false
+        }
+      ],
+      "TimelineGuid": "89BBD1D6-4B325E75-12556586-3599F312",
+      "VariableName": "UP",
+      "DirectionPropertyName": "UP__Direction_89BBD1D64B325E75125565863599F312",
+      "UpdateFunctionName": "UP__UpdateFunc",
+      "FinishedFunctionName": "UP__FinishedFunc"
+    }
+  }
+]

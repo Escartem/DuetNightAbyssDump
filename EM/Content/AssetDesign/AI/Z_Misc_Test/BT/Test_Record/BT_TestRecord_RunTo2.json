@@ -1,0 +1,264 @@
+[
+  {
+    "Type": "BehaviorTree",
+    "Name": "BT_TestRecord_RunTo2",
+    "Class": "UScriptClass'BehaviorTree'",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "RootNode": {
+        "ObjectName": "BTComposite_Selector'BT_TestRecord_RunTo2:BTComposite_Selector_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/Test_Record/BT_TestRecord_RunTo2.1"
+      },
+      "BlackboardAsset": {
+        "ObjectName": "BlackboardData'BB_Mon_Parent_Melee'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Parent/BB_Mon_Parent_Melee.0"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_0",
+    "Outer": "BT_TestRecord_RunTo2",
+    "Class": "UScriptClass'BTComposite_Selector'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_TestRecord_RunTo2:BTComposite_Sequence_3'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/Test_Record/BT_TestRecord_RunTo2.3"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_TestRecord_RunTo2:BTDecorator_Blackboard_0'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/Test_Record/BT_TestRecord_RunTo2.4"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector'BT_TestRecord_RunTo2:BTComposite_Selector_14'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/Test_Record/BT_TestRecord_RunTo2.2"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_TestRecord_RunTo2:BTDecorator_Blackboard_1'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/Test_Record/BT_TestRecord_RunTo2.5"
+            }
+          ],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_TestRecord_RunTo2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/Test_Record/BT_TestRecord_RunTo2.0"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_14",
+    "Outer": "BT_TestRecord_RunTo2",
+    "Class": "UScriptClass'BTComposite_Selector'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait'BT_TestRecord_RunTo2:BTTask_Wait_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/Test_Record/BT_TestRecord_RunTo2.8"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_TestRecord_RunTo2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/Test_Record/BT_TestRecord_RunTo2.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_TestRecord_RunTo2:BTComposite_Selector_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/Test_Record/BT_TestRecord_RunTo2.1"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_3",
+    "Outer": "BT_TestRecord_RunTo2",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "TestRecord_SetStaticCreatorAsTarget_C'BT_TestRecord_RunTo2:TestRecord_SetStaticCreatorAsTarget_C_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/Test_Record/BT_TestRecord_RunTo2.9"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_NewMoveTo'BT_TestRecord_RunTo2:BTTask_NewMoveTo_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/Test_Record/BT_TestRecord_RunTo2.6"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_RunBehavior'BT_TestRecord_RunTo2:BTTask_RunBehavior_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/Test_Record/BT_TestRecord_RunTo2.7"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_TestRecord_RunTo2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/Test_Record/BT_TestRecord_RunTo2.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_TestRecord_RunTo2:BTComposite_Selector_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/Test_Record/BT_TestRecord_RunTo2.1"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_0",
+    "Outer": "BT_TestRecord_RunTo2",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "CachedDescription": "ActionMode 等于 Active",
+      "BlackboardKey": {
+        "SelectedKeyName": "ActionMode"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::Self",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_TestRecord_RunTo2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/Test_Record/BT_TestRecord_RunTo2.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_TestRecord_RunTo2:BTComposite_Selector_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/Test_Record/BT_TestRecord_RunTo2.1"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_1",
+    "Outer": "BT_TestRecord_RunTo2",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "IntValue": 1,
+      "CachedDescription": "ActionMode 等于 Hitted",
+      "BlackboardKey": {
+        "SelectedKeyName": "ActionMode"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::Self",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_TestRecord_RunTo2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/Test_Record/BT_TestRecord_RunTo2.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_TestRecord_RunTo2:BTComposite_Selector_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/Test_Record/BT_TestRecord_RunTo2.1"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_NewMoveTo",
+    "Name": "BTTask_NewMoveTo_0",
+    "Outer": "BT_TestRecord_RunTo2",
+    "Class": "UScriptClass'BTTask_NewMoveTo'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "bOrientRotationToMovement": true,
+      "MoveTypeState": "EMoveTypeState::MTS_Run",
+      "AcceptableRadius": 300.0,
+      "bStopOnOverlapNeedsUpdate": false,
+      "BlackboardKey": {
+        "SelectedKeyName": "Target"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_TestRecord_RunTo2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/Test_Record/BT_TestRecord_RunTo2.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_TestRecord_RunTo2:BTComposite_Sequence_3'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/Test_Record/BT_TestRecord_RunTo2.3"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_RunBehavior",
+    "Name": "BTTask_RunBehavior_0",
+    "Outer": "BT_TestRecord_RunTo2",
+    "Class": "UScriptClass'BTTask_RunBehavior'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "BehaviorAsset": {
+        "ObjectName": "BehaviorTree'BT_TestRecord_WalkAround2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/Test_Record/BT_TestRecord_WalkAround2.0"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_TestRecord_RunTo2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/Test_Record/BT_TestRecord_RunTo2.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_TestRecord_RunTo2:BTComposite_Sequence_3'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/Test_Record/BT_TestRecord_RunTo2.3"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_0",
+    "Outer": "BT_TestRecord_RunTo2",
+    "Class": "UScriptClass'BTTask_Wait'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_TestRecord_RunTo2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/Test_Record/BT_TestRecord_RunTo2.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_TestRecord_RunTo2:BTComposite_Selector_14'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/Test_Record/BT_TestRecord_RunTo2.2"
+      }
+    }
+  },
+  {
+    "Type": "TestRecord_SetStaticCreatorAsTarget_C",
+    "Name": "TestRecord_SetStaticCreatorAsTarget_C_0",
+    "Outer": "BT_TestRecord_RunTo2",
+    "Class": "BlueprintGeneratedClass'EM/Content/AssetDesign/AI/Z_Misc_Test/BT/Test_Record/TestRecord_SetStaticCreatorAsTarget.TestRecord_SetStaticCreatorAsTarget_C'",
+    "Template": {
+      "ObjectName": "TestRecord_SetStaticCreatorAsTarget_C'Default__TestRecord_SetStaticCreatorAsTarget_C'",
+      "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/Test_Record/TestRecord_SetStaticCreatorAsTarget.3"
+    },
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "StaticCreatorId": 10002,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_TestRecord_RunTo2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/Test_Record/BT_TestRecord_RunTo2.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_TestRecord_RunTo2:BTComposite_Sequence_3'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/Test_Record/BT_TestRecord_RunTo2.3"
+      }
+    }
+  }
+]

@@ -1,0 +1,82 @@
+[
+  {
+    "Type": "DialogueAsset",
+    "Name": "10106012",
+    "Class": "UScriptClass'DialogueAsset'",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TalkId": 101060,
+      "SpeakNpcIds": [
+        200020,
+        200021
+      ],
+      "Nodes": null
+    }
+  },
+  {
+    "Type": "FlowNode_Dialogue",
+    "Name": "FlowNode_Dialogue_0",
+    "Outer": "10106012",
+    "Class": "UScriptClass'FlowNode_Dialogue'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "DialogueData": [
+        {
+          "DialogueId": 10106012
+        }
+      ],
+      "DialogueSetting": [
+        {
+          "Key": "10106012",
+          "Value": {}
+        }
+      ],
+      "LevelSequence": {
+        "ObjectName": "LevelSequence'SQ_TASK_101060_01'",
+        "ObjectPath": "EM/Content/AssetDesign/Story/DialogueSequence/MainStory/1002/SQ_TASK_101060_01.15"
+      },
+      "GraphNode": null,
+      "NodeGuid": "DAF00404-4AA8AFE9-B7EF928F-51B1C247",
+      "Connections": [
+        {
+          "Key": "End",
+          "Value": {
+            "NodeGuid": "7761EF8E-44C8697E-997571AB-1DD115B1",
+            "PinName": "In"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "Type": "FlowNode_Start",
+    "Name": "FlowNode_Start_0",
+    "Outer": "10106012",
+    "Class": "UScriptClass'FlowNode_Start'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "GraphNode": null,
+      "NodeGuid": "DC8B70E4-4E80FD62-0C2BB990-6CFAA0F7",
+      "Connections": [
+        {
+          "Key": "Out",
+          "Value": {
+            "NodeGuid": "DAF00404-4AA8AFE9-B7EF928F-51B1C247",
+            "PinName": "Start"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "Type": "FlowNode_TalkFinish",
+    "Name": "FlowNode_TalkFinish_0",
+    "Outer": "10106012",
+    "Class": "UScriptClass'FlowNode_TalkFinish'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "GraphNode": null,
+      "NodeGuid": "7761EF8E-44C8697E-997571AB-1DD115B1"
+    }
+  }
+]

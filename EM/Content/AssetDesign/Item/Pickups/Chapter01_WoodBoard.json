@@ -1,0 +1,995 @@
+[
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_Chapter01_WoodBoard",
+    "Outer": "Chapter01_WoodBoard_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_Lerp_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "K2Node_Event_NowStateId",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "K2Node_Event_NextStateId",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_K2_GetComponentToWorld_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 48,
+        "Struct": {
+          "ObjectName": "ScriptStruct'Transform'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_BreakTransform_Location",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "Struct": {
+          "ObjectName": "ScriptStruct'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_BreakTransform_Rotation",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "Struct": {
+          "ObjectName": "ScriptStruct'Rotator'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_BreakTransform_Scale",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "Struct": {
+          "ObjectName": "ScriptStruct'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_BreakRotator_Roll",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_BreakRotator_Pitch",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_BreakRotator_Yaw",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_MakeRotator_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "Struct": {
+          "ObjectName": "ScriptStruct'Rotator'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_K2_SetWorldRotation_SweepHitResult",
+        "Flags": "RF_Public",
+        "ElementSize": 144,
+        "PropertyFlags": "ContainsInstancedReference",
+        "Struct": {
+          "ObjectName": "ScriptStruct'HitResult'",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction | FUNC_HasDefaults"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnLeaveState",
+    "Outer": "Chapter01_WoodBoard_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "SuperStruct": {
+      "ObjectName": "Function'CombatItemBase:OnLeaveState'",
+      "ObjectPath": "/Script/EM"
+    },
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "NowStateId",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "NextStateId",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "旋转__UpdateFunc",
+    "Outer": "Chapter01_WoodBoard_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "旋转__FinishedFunc",
+    "Outer": "Chapter01_WoodBoard_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "Chapter01_WoodBoard_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Super": {
+      "ObjectName": "BlueprintGeneratedClass'BP_MechanismBase_C'",
+      "ObjectPath": "EM/Content/BluePrints/Item/BP_MechanismBase.2"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Timelines": [
+        {
+          "ObjectName": "TimelineTemplate'Chapter01_WoodBoard_C:旋转_Template'",
+          "ObjectPath": "EM/Content/AssetDesign/Item/Pickups/Chapter01_WoodBoard.26"
+        }
+      ],
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'Chapter01_WoodBoard_C:SimpleConstructionScript_0'",
+        "ObjectPath": "EM/Content/AssetDesign/Item/Pickups/Chapter01_WoodBoard.22"
+      },
+      "InheritableComponentHandler": {
+        "ObjectName": "InheritableComponentHandler'Chapter01_WoodBoard_C:InheritableComponentHandler'",
+        "ObjectPath": "EM/Content/AssetDesign/Item/Pickups/Chapter01_WoodBoard.13"
+      },
+      "UberGraphFunction": {
+        "ObjectName": "Function'Chapter01_WoodBoard_C:ExecuteUbergraph_Chapter01_WoodBoard'",
+        "ObjectPath": "EM/Content/AssetDesign/Item/Pickups/Chapter01_WoodBoard.0"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "BlueprintGeneratedClass'BP_MechanismBase_C'",
+      "ObjectPath": "EM/Content/BluePrints/Item/BP_MechanismBase.2"
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'Chapter01_WoodBoard_C:旋转__FinishedFunc'",
+        "ObjectPath": "EM/Content/AssetDesign/Item/Pickups/Chapter01_WoodBoard.3"
+      },
+      {
+        "ObjectName": "Function'Chapter01_WoodBoard_C:旋转__UpdateFunc'",
+        "ObjectPath": "EM/Content/AssetDesign/Item/Pickups/Chapter01_WoodBoard.2"
+      },
+      {
+        "ObjectName": "Function'Chapter01_WoodBoard_C:OnLeaveState'",
+        "ObjectPath": "EM/Content/AssetDesign/Item/Pickups/Chapter01_WoodBoard.1"
+      },
+      {
+        "ObjectName": "Function'Chapter01_WoodBoard_C:ExecuteUbergraph_Chapter01_WoodBoard'",
+        "ObjectPath": "EM/Content/AssetDesign/Item/Pickups/Chapter01_WoodBoard.0"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient",
+        "Struct": {
+          "ObjectName": "ScriptStruct'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "BP_Sound_3d_Component",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'BP_Sound_3d_Component_C'",
+          "ObjectPath": "EM/Content/BluePrints/Managers/AudioManagerComponent/BP_Sound_3d_Component.1"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "NS_Harvest_BlingRare",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'NiagaraComponent'",
+          "ObjectPath": "/Script/Niagara"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "StaticMesh",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'StaticMeshComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "StaticMesh1",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'StaticMeshComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Mesh",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'StaticMeshComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "______D8159A184C4CBF0110E08EAD8F1368E1",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4
+      },
+      {
+        "Type": "ByteProperty",
+        "Name": "____Direction_D8159A184C4CBF0110E08EAD8F1368E1",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "Enum": {
+          "ObjectName": "Enum'ETimelineDirection'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "旋转",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference",
+        "PropertyClass": {
+          "ObjectName": "Class'TimelineComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "NewVar_0",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 12,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "Struct": {
+          "ObjectName": "ScriptStruct'Rotator'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "NewVar_1",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 12,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "Struct": {
+          "ObjectName": "ScriptStruct'Vector'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "NewVar_2",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 12,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "Struct": {
+          "ObjectName": "ScriptStruct'Rotator'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_Chapter01_WoodBoard": {
+        "ObjectName": "Function'Chapter01_WoodBoard_C:ExecuteUbergraph_Chapter01_WoodBoard'",
+        "ObjectPath": "EM/Content/AssetDesign/Item/Pickups/Chapter01_WoodBoard.0"
+      },
+      "OnLeaveState": {
+        "ObjectName": "Function'Chapter01_WoodBoard_C:OnLeaveState'",
+        "ObjectPath": "EM/Content/AssetDesign/Item/Pickups/Chapter01_WoodBoard.1"
+      },
+      "旋转__UpdateFunc": {
+        "ObjectName": "Function'Chapter01_WoodBoard_C:旋转__UpdateFunc'",
+        "ObjectPath": "EM/Content/AssetDesign/Item/Pickups/Chapter01_WoodBoard.2"
+      },
+      "旋转__FinishedFunc": {
+        "ObjectName": "Function'Chapter01_WoodBoard_C:旋转__FinishedFunc'",
+        "ObjectPath": "EM/Content/AssetDesign/Item/Pickups/Chapter01_WoodBoard.3"
+      }
+    },
+    "ClassFlags": "CLASS_Config | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "Chapter01_WoodBoard_C'Default__Chapter01_WoodBoard_C'",
+      "ObjectPath": "EM/Content/AssetDesign/Item/Pickups/Chapter01_WoodBoard.5"
+    }
+  },
+  {
+    "Type": "Chapter01_WoodBoard_C",
+    "Name": "Default__Chapter01_WoodBoard_C",
+    "Class": "BlueprintGeneratedClass'EM/Content/AssetDesign/Item/Pickups/Chapter01_WoodBoard.Chapter01_WoodBoard_C'",
+    "Template": {
+      "ObjectName": "BP_MechanismBase_C'Default__BP_MechanismBase_C'",
+      "ObjectPath": "EM/Content/BluePrints/Item/BP_MechanismBase.3"
+    },
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "UberGraphFrame": {},
+      "NewVar_0": {
+        "Pitch": 0.0,
+        "Yaw": 0.0,
+        "Roll": 0.0
+      },
+      "NewVar_1": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "NewVar_2": {
+        "Pitch": 0.0,
+        "Yaw": 0.0,
+        "Roll": 0.0
+      },
+      "CombatStateChangeComponent": {
+        "ObjectName": "BP_CombatStateChangeComponent_C'Default__Chapter01_WoodBoard_C:CombatStateChangeComponent'",
+        "ObjectPath": "EM/Content/AssetDesign/Item/Pickups/Chapter01_WoodBoard.9"
+      },
+      "CombatClientEffectComponent": {
+        "ObjectName": "BP_CombatClientEffectComponent_C'Default__Chapter01_WoodBoard_C:CombatClientEffectComponent'",
+        "ObjectPath": "EM/Content/AssetDesign/Item/Pickups/Chapter01_WoodBoard.8"
+      },
+      "FXComponent": {
+        "ObjectName": "BP_FXComponent_C'Default__Chapter01_WoodBoard_C:BP_FXComponent'",
+        "ObjectPath": "EM/Content/AssetDesign/Item/Pickups/Chapter01_WoodBoard.10"
+      }
+    }
+  },
+  {
+    "Type": "AuPlayConditionComponent",
+    "Name": "ConditionComp",
+    "Outer": "BP_Sound_3d_Component_GEN_VARIABLE",
+    "Class": "UScriptClass'AuPlayConditionComponent'",
+    "Template": {
+      "ObjectName": "AuPlayConditionComponent'Default__BP_Sound_3d_Component_C:ConditionComp'",
+      "ObjectPath": "EM/Content/BluePrints/Managers/AudioManagerComponent/BP_Sound_3d_Component.3"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "BP_ChestInteractiveComponent_C",
+    "Name": "DefaultInteractiveComponent_GEN_VARIABLE",
+    "Outer": "Chapter01_WoodBoard_C",
+    "Class": "BlueprintGeneratedClass'EM/Content/BluePrints/Item/Chest/BP_ChestInteractiveComponent.BP_ChestInteractiveComponent_C'",
+    "Template": {
+      "ObjectName": "BP_ChestInteractiveComponent_C'BP_MechanismBase_C:DefaultInteractiveComponent_GEN_VARIABLE'",
+      "ObjectPath": "EM/Content/BluePrints/Item/BP_MechanismBase.4"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted | RF_InheritableComponentTemplate",
+    "Properties": {
+      "RelativeRotation": {
+        "Pitch": 11.364785,
+        "Yaw": 0.0,
+        "Roll": 0.0
+      }
+    }
+  },
+  {
+    "Type": "BP_CombatClientEffectComponent_C",
+    "Name": "CombatClientEffectComponent",
+    "Outer": "Default__Chapter01_WoodBoard_C",
+    "Class": "BlueprintGeneratedClass'EM/Content/BluePrints/Item/BP_CombatClientEffectComponent.BP_CombatClientEffectComponent_C'",
+    "Template": {
+      "ObjectName": "BP_CombatClientEffectComponent_C'Default__BP_MechanismBase_C:CombatClientEffectComponent'",
+      "ObjectPath": "EM/Content/BluePrints/Item/BP_MechanismBase.5"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "BP_CombatStateChangeComponent_C",
+    "Name": "CombatStateChangeComponent",
+    "Outer": "Default__Chapter01_WoodBoard_C",
+    "Class": "BlueprintGeneratedClass'EM/Content/BluePrints/Item/BP_CombatStateChangeComponent.BP_CombatStateChangeComponent_C'",
+    "Template": {
+      "ObjectName": "BP_CombatStateChangeComponent_C'Default__BP_MechanismBase_C:CombatStateChangeComponent'",
+      "ObjectPath": "EM/Content/BluePrints/Item/BP_MechanismBase.6"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "BP_FXComponent_C",
+    "Name": "BP_FXComponent",
+    "Outer": "Default__Chapter01_WoodBoard_C",
+    "Class": "BlueprintGeneratedClass'EM/Content/BluePrints/Char/BP_FXComponent.BP_FXComponent_C'",
+    "Template": {
+      "ObjectName": "BP_FXComponent_C'Default__BP_MechanismBase_C:BP_FXComponent'",
+      "ObjectPath": "EM/Content/BluePrints/Item/BP_MechanismBase.7"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "BP_Sound_3d_Component_C",
+    "Name": "BP_Sound_3d_Component_GEN_VARIABLE",
+    "Outer": "Chapter01_WoodBoard_C",
+    "Class": "BlueprintGeneratedClass'EM/Content/BluePrints/Managers/AudioManagerComponent/BP_Sound_3d_Component.BP_Sound_3d_Component_C'",
+    "Template": {
+      "ObjectName": "BP_Sound_3d_Component_C'Default__BP_Sound_3d_Component_C'",
+      "ObjectPath": "EM/Content/BluePrints/Managers/AudioManagerComponent/BP_Sound_3d_Component.2"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ConditionComp": {
+        "ObjectName": "AuPlayConditionComponent'Chapter01_WoodBoard_C:BP_Sound_3d_Component_GEN_VARIABLE.ConditionComp'",
+        "ObjectPath": "EM/Content/AssetDesign/Item/Pickups/Chapter01_WoodBoard.6"
+      },
+      "RelativeLocation": {
+        "X": -49.7402,
+        "Y": -3.0517578E-05,
+        "Z": 166.48248
+      }
+    }
+  },
+  {
+    "Type": "CurveFloat",
+    "Name": "CurveFloat_0",
+    "Outer": "Chapter01_WoodBoard_C",
+    "Class": "UScriptClass'CurveFloat'",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "FloatCurve": {
+        "Keys": [
+          {
+            "InterpMode": "RCIM_Linear",
+            "TangentMode": "RCTM_Auto",
+            "TangentWeightMode": "RCTWM_WeightedNone",
+            "Time": 0.0,
+            "Value": 1.0,
+            "ArriveTangent": 0.0,
+            "ArriveTangentWeight": 0.0,
+            "LeaveTangent": 0.0,
+            "LeaveTangentWeight": 0.0
+          },
+          {
+            "InterpMode": "RCIM_Cubic",
+            "TangentMode": "RCTM_User",
+            "TangentWeightMode": "RCTWM_WeightedNone",
+            "Time": 0.74979186,
+            "Value": 1.0024039,
+            "ArriveTangent": -0.15126923,
+            "ArriveTangentWeight": 0.0,
+            "LeaveTangent": -0.1512693,
+            "LeaveTangentWeight": 0.0
+          },
+          {
+            "InterpMode": "RCIM_Cubic",
+            "TangentMode": "RCTM_User",
+            "TangentWeightMode": "RCTWM_WeightedNone",
+            "Time": 1.5475681,
+            "Value": 0.52709734,
+            "ArriveTangent": -1.5869358,
+            "ArriveTangentWeight": 0.0,
+            "LeaveTangent": -1.5869277,
+            "LeaveTangentWeight": 0.0
+          },
+          {
+            "InterpMode": "RCIM_Linear",
+            "TangentMode": "RCTM_Auto",
+            "TangentWeightMode": "RCTWM_WeightedNone",
+            "Time": 2.0,
+            "Value": 0.0,
+            "ArriveTangent": 0.0,
+            "ArriveTangentWeight": 0.0,
+            "LeaveTangent": 0.0,
+            "LeaveTangentWeight": 0.0
+          }
+        ]
+      }
+    }
+  },
+  {
+    "Type": "InheritableComponentHandler",
+    "Name": "InheritableComponentHandler",
+    "Outer": "Chapter01_WoodBoard_C",
+    "Class": "UScriptClass'InheritableComponentHandler'",
+    "Flags": "RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Records": [
+        {
+          "ComponentClass": {
+            "ObjectName": "BlueprintGeneratedClass'BP_ChestInteractiveComponent_C'",
+            "ObjectPath": "EM/Content/BluePrints/Item/Chest/BP_ChestInteractiveComponent.1"
+          },
+          "ComponentTemplate": {
+            "ObjectName": "BP_ChestInteractiveComponent_C'Chapter01_WoodBoard_C:DefaultInteractiveComponent_GEN_VARIABLE'",
+            "ObjectPath": "EM/Content/AssetDesign/Item/Pickups/Chapter01_WoodBoard.7"
+          },
+          "ComponentKey": {
+            "OwnerClass": {
+              "ObjectName": "BlueprintGeneratedClass'BP_MechanismBase_C'",
+              "ObjectPath": "EM/Content/BluePrints/Item/BP_MechanismBase.2"
+            },
+            "SCSVariableName": "DefaultInteractiveComponent",
+            "AssociatedGuid": "8D5CA8E6-4721C821-AD7602BE-360D76F6"
+          },
+          "CookedComponentInstancingData": {
+            "ChangedPropertyList": [],
+            "bHasValidCookedData": false
+          }
+        }
+      ]
+    }
+  },
+  {
+    "Type": "NiagaraComponent",
+    "Name": "NS_Harvest_BlingRare_GEN_VARIABLE",
+    "Outer": "Chapter01_WoodBoard_C",
+    "Class": "UScriptClass'NiagaraComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Asset": {
+        "ObjectName": "NiagaraSystem'NS_Common_Exclamation'",
+        "ObjectPath": "EM/Content/Asset/Effect/Niagara/Monster/A_Common/NS_Common_Exclamation.14"
+      },
+      "OverrideParameters": {
+        "UserParameterRedirects": [
+          {
+            "Key": {
+              "VarData": "",
+              "Name": "IgnoreGamePause",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2
+              }
+            },
+            "Value": {
+              "VarData": "",
+              "Name": "User.IgnoreGamePause",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'NiagaraFloat'",
+                  "ObjectPath": "/Script/Niagara"
+                },
+                "UnderlyingType": 2
+              }
+            }
+          },
+          {
+            "Key": {
+              "VarData": "",
+              "Name": "Color",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'LinearColor'",
+                  "ObjectPath": "/Script/CoreUObject"
+                },
+                "UnderlyingType": 2
+              }
+            },
+            "Value": {
+              "VarData": "",
+              "Name": "User.Color",
+              "TypeDef": {
+                "ClassStructOrEnum": {
+                  "ObjectName": "ScriptStruct'LinearColor'",
+                  "ObjectPath": "/Script/CoreUObject"
+                },
+                "UnderlyingType": 2
+              }
+            }
+          }
+        ],
+        "SortedParameterOffsets": [
+          {
+            "Offset": 4,
+            "Name": "User.Color",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "ScriptStruct'LinearColor'",
+                "ObjectPath": "/Script/CoreUObject"
+              },
+              "UnderlyingType": 2
+            }
+          },
+          {
+            "Offset": 0,
+            "Name": "User.IgnoreGamePause",
+            "TypeDef": {
+              "ClassStructOrEnum": {
+                "ObjectName": "ScriptStruct'NiagaraFloat'",
+                "ObjectPath": "/Script/Niagara"
+              },
+              "UnderlyingType": 2
+            }
+          }
+        ],
+        "ParameterData": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          128,
+          63,
+          0,
+          0,
+          128,
+          63,
+          0,
+          0,
+          128,
+          63,
+          0,
+          0,
+          128,
+          63
+        ]
+      },
+      "RelativeLocation": {
+        "X": -59.267803,
+        "Y": 31.20401,
+        "Z": 212.36809
+      },
+      "RelativeRotation": {
+        "Pitch": 19.172237,
+        "Yaw": 0.0,
+        "Roll": 0.0
+      }
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Outer": "Chapter01_WoodBoard_C",
+    "Class": "UScriptClass'SceneComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'Chapter01_WoodBoard_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "EM/Content/AssetDesign/Item/Pickups/Chapter01_WoodBoard.15"
+      },
+      "VariableGuid": "2A8CD7EE-43651CB4-924EA685-79E4D62F",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_1",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "BlueprintGeneratedClass'BP_Sound_3d_Component_C'",
+        "ObjectPath": "EM/Content/BluePrints/Managers/AudioManagerComponent/BP_Sound_3d_Component.1"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "BP_Sound_3d_Component_C'Chapter01_WoodBoard_C:BP_Sound_3d_Component_GEN_VARIABLE'",
+        "ObjectPath": "EM/Content/AssetDesign/Item/Pickups/Chapter01_WoodBoard.11"
+      },
+      "ParentComponentOrVariableName": "DefaultSceneRoot",
+      "ParentComponentOwnerClassName": "BP_MechanismBase_C",
+      "VariableGuid": "83F322E9-4686CA47-01B627B5-BA87698C",
+      "InternalVariableName": "BP_Sound_3d_Component"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_2",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'NiagaraComponent'",
+        "ObjectPath": "/Script/Niagara"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "NiagaraComponent'Chapter01_WoodBoard_C:NS_Harvest_BlingRare_GEN_VARIABLE'",
+        "ObjectPath": "EM/Content/AssetDesign/Item/Pickups/Chapter01_WoodBoard.14"
+      },
+      "ParentComponentOrVariableName": "DefaultSceneRoot",
+      "ParentComponentOwnerClassName": "BP_MechanismBase_C",
+      "VariableGuid": "FDBCA05F-4DEB28E7-D674C7B1-6F006CA8",
+      "InternalVariableName": "NS_Harvest_BlingRare"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_3",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'StaticMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "StaticMeshComponent'Chapter01_WoodBoard_C:StaticMesh_GEN_VARIABLE'",
+        "ObjectPath": "EM/Content/AssetDesign/Item/Pickups/Chapter01_WoodBoard.25"
+      },
+      "VariableGuid": "40075B4D-47E35908-852058A9-18146B98",
+      "InternalVariableName": "StaticMesh"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_4",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'StaticMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "StaticMeshComponent'Chapter01_WoodBoard_C:StaticMesh1_GEN_VARIABLE'",
+        "ObjectPath": "EM/Content/AssetDesign/Item/Pickups/Chapter01_WoodBoard.24"
+      },
+      "VariableGuid": "3AEAA39F-40F621F9-7372779F-6D7360F7",
+      "InternalVariableName": "StaticMesh1"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_5",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'StaticMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "StaticMeshComponent'Chapter01_WoodBoard_C:Mesh_GEN_VARIABLE'",
+        "ObjectPath": "EM/Content/AssetDesign/Item/Pickups/Chapter01_WoodBoard.23"
+      },
+      "ParentComponentOrVariableName": "DefaultSceneRoot",
+      "ParentComponentOwnerClassName": "BP_MechanismBase_C",
+      "ChildNodes": [
+        {
+          "ObjectName": "SCS_Node'Chapter01_WoodBoard_C:SimpleConstructionScript_0.SCS_Node_4'",
+          "ObjectPath": "EM/Content/AssetDesign/Item/Pickups/Chapter01_WoodBoard.20"
+        },
+        {
+          "ObjectName": "SCS_Node'Chapter01_WoodBoard_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectPath": "EM/Content/AssetDesign/Item/Pickups/Chapter01_WoodBoard.19"
+        }
+      ],
+      "VariableGuid": "7F1CB7ED-4FBA5B73-D5EA4196-6CB28FEB",
+      "InternalVariableName": "Mesh"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Outer": "Chapter01_WoodBoard_C",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node'Chapter01_WoodBoard_C:SimpleConstructionScript_0.SCS_Node_5'",
+          "ObjectPath": "EM/Content/AssetDesign/Item/Pickups/Chapter01_WoodBoard.21"
+        },
+        {
+          "ObjectName": "SCS_Node'Chapter01_WoodBoard_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "EM/Content/AssetDesign/Item/Pickups/Chapter01_WoodBoard.18"
+        },
+        {
+          "ObjectName": "SCS_Node'Chapter01_WoodBoard_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "EM/Content/AssetDesign/Item/Pickups/Chapter01_WoodBoard.17"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node'Chapter01_WoodBoard_C:SimpleConstructionScript_0.SCS_Node_5'",
+          "ObjectPath": "EM/Content/AssetDesign/Item/Pickups/Chapter01_WoodBoard.21"
+        },
+        {
+          "ObjectName": "SCS_Node'Chapter01_WoodBoard_C:SimpleConstructionScript_0.SCS_Node_4'",
+          "ObjectPath": "EM/Content/AssetDesign/Item/Pickups/Chapter01_WoodBoard.20"
+        },
+        {
+          "ObjectName": "SCS_Node'Chapter01_WoodBoard_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectPath": "EM/Content/AssetDesign/Item/Pickups/Chapter01_WoodBoard.19"
+        },
+        {
+          "ObjectName": "SCS_Node'Chapter01_WoodBoard_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "EM/Content/AssetDesign/Item/Pickups/Chapter01_WoodBoard.18"
+        },
+        {
+          "ObjectName": "SCS_Node'Chapter01_WoodBoard_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "EM/Content/AssetDesign/Item/Pickups/Chapter01_WoodBoard.17"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'Chapter01_WoodBoard_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "EM/Content/AssetDesign/Item/Pickups/Chapter01_WoodBoard.16"
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "Mesh_GEN_VARIABLE",
+    "Outer": "Chapter01_WoodBoard_C",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'SM_Vil_Wood14'",
+        "ObjectPath": "EM/Content/Asset/Scene/EN001_Ailixian/Jingjiedao/JJD_Village/Mesh/SM_Vil_Wood14.2"
+      },
+      "RelativeRotation": {
+        "Pitch": 16.0,
+        "Yaw": 0.0,
+        "Roll": 0.0
+      },
+      "RelativeScale3D": {
+        "X": 1.0,
+        "Y": 1.0,
+        "Z": 0.5
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "StaticMesh1_GEN_VARIABLE",
+    "Outer": "Chapter01_WoodBoard_C",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'SM_Vil_Wood04'",
+        "ObjectPath": "EM/Content/Asset/Scene/EN001_Ailixian/Jingjiedao/JJD_Village/Mesh/SM_Vil_Wood04.2"
+      },
+      "RelativeLocation": {
+        "X": -5.7742367,
+        "Y": -12.078751,
+        "Z": 432.0
+      },
+      "RelativeRotation": {
+        "Pitch": 12.262088,
+        "Yaw": 0.0,
+        "Roll": 0.0
+      },
+      "RelativeScale3D": {
+        "X": 1.0,
+        "Y": 1.0,
+        "Z": 2.0
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "StaticMesh_GEN_VARIABLE",
+    "Outer": "Chapter01_WoodBoard_C",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'SM_Vil_Wood04'",
+        "ObjectPath": "EM/Content/Asset/Scene/EN001_Ailixian/Jingjiedao/JJD_Village/Mesh/SM_Vil_Wood04.2"
+      },
+      "RelativeLocation": {
+        "X": -5.7742367,
+        "Y": -12.078751,
+        "Z": 432.0
+      },
+      "RelativeRotation": {
+        "Pitch": -25.11347,
+        "Yaw": 0.0,
+        "Roll": 0.0
+      },
+      "RelativeScale3D": {
+        "X": 1.0,
+        "Y": 1.0,
+        "Z": 2.0
+      }
+    }
+  },
+  {
+    "Type": "TimelineTemplate",
+    "Name": "旋转_Template",
+    "Outer": "Chapter01_WoodBoard_C",
+    "Class": "UScriptClass'TimelineTemplate'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TimelineLength": 2.0,
+      "FloatTracks": [
+        {
+          "CurveFloat": {
+            "ObjectName": "CurveFloat'Chapter01_WoodBoard_C:CurveFloat_0'",
+            "ObjectPath": "EM/Content/AssetDesign/Item/Pickups/Chapter01_WoodBoard.12"
+          },
+          "PropertyName": "______D8159A184C4CBF0110E08EAD8F1368E1",
+          "TrackName": "旋转",
+          "bIsExternalCurve": false
+        }
+      ],
+      "TimelineGuid": "D8159A18-4C4CBF01-10E08EAD-8F1368E1",
+      "VariableName": "旋转",
+      "DirectionPropertyName": "____Direction_D8159A184C4CBF0110E08EAD8F1368E1",
+      "UpdateFunctionName": "旋转__UpdateFunc",
+      "FinishedFunctionName": "旋转__FinishedFunc"
+    }
+  }
+]

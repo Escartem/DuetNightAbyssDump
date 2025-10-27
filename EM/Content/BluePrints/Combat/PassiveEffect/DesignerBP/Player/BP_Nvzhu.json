@@ -1,0 +1,655 @@
+[
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_BP_Nvzhu",
+    "Outer": "BP_Nvzhu_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetClientAudioManager_AudioManager",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'BP_AudioManager_C'",
+          "ObjectPath": "EM/Content/BluePrints/Managers/BP_AudioManager.10"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_MakeStruct_PlayFXParams",
+        "Flags": "RF_Public",
+        "ElementSize": 28,
+        "Struct": {
+          "ObjectName": "ScriptStruct'PlayFXParams'",
+          "ObjectPath": "/Script/EM"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "K2Node_MakeStruct_PlayFXParams_1",
+        "Flags": "RF_Public",
+        "ElementSize": 28,
+        "Struct": {
+          "ObjectName": "ScriptStruct'PlayFXParams'",
+          "ObjectPath": "/Script/EM"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_DynamicCast_AsPlayer_Character",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'PlayerCharacter'",
+          "ObjectPath": "/Script/EM"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_DynamicCast_bSuccess",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "InterfaceProperty",
+        "Name": "CallFunc_IsMainPlayer_Target_CastInput",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "ConstParm | UObjectWrapper",
+        "InterfaceClass": {
+          "ObjectName": "Class'EffectSourceInterface'",
+          "ObjectPath": "/Script/EM"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsMainPlayer_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "K2Node_MakeArray_Array",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "ConstParm | ReferenceParm",
+        "Inner": {
+          "Type": "IntProperty",
+          "Name": "K2Node_MakeArray_Array",
+          "Flags": "RF_Public",
+          "ElementSize": 4
+        }
+      },
+      {
+        "Type": "InterfaceProperty",
+        "Name": "CallFunc_ExecuteSkillEffects_SkillLevelSource_CastInput",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "ConstParm | UObjectWrapper",
+        "InterfaceClass": {
+          "ObjectName": "Class'SkillLevelInterface'",
+          "ObjectPath": "/Script/EM"
+        }
+      },
+      {
+        "Type": "InterfaceProperty",
+        "Name": "CallFunc_AddBuffToTarget_SkillLevelSource_CastInput",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "ConstParm | UObjectWrapper",
+        "InterfaceClass": {
+          "ObjectName": "Class'SkillLevelInterface'",
+          "ObjectPath": "/Script/EM"
+        }
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "CallFunc_AddBuffToTarget_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "ReferenceParm",
+        "Inner": {
+          "Type": "ObjectProperty",
+          "Name": "CallFunc_AddBuffToTarget_ReturnValue",
+          "Flags": "RF_Public",
+          "ElementSize": 8,
+          "PropertyClass": {
+            "ObjectName": "Class'Buff'",
+            "ObjectPath": "/Script/EM"
+          }
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_RemoveBuffFromTarget_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_IsStandAlone_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "PropertyFlags": "ConstParm",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_BooleanAND_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_GetEid_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_Battle___",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'BP_Battle_C'",
+          "ObjectPath": "EM/Content/BluePrints/Combat/BP_Battle.8"
+        }
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "K2Node_MakeArray_Array_1",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "ConstParm | ReferenceParm",
+        "Inner": {
+          "Type": "IntProperty",
+          "Name": "K2Node_MakeArray_Array_1",
+          "Flags": "RF_Public",
+          "ElementSize": 4
+        }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_GetEid_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "K2Node_MakeArray_Array_2",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "ConstParm | ReferenceParm",
+        "Inner": {
+          "Type": "IntProperty",
+          "Name": "K2Node_MakeArray_Array_2",
+          "Flags": "RF_Public",
+          "ElementSize": 4
+        }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_GetEid_ReturnValue_2",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "K2Node_MakeArray_Array_3",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "ConstParm | ReferenceParm",
+        "Inner": {
+          "Type": "IntProperty",
+          "Name": "K2Node_MakeArray_Array_3",
+          "Flags": "RF_Public",
+          "ElementSize": 4
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_Battle____1",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'BP_Battle_C'",
+          "ObjectPath": "EM/Content/BluePrints/Combat/BP_Battle.8"
+        }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_GetEid_ReturnValue_3",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "K2Node_MakeArray_Array_4",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "ConstParm | ReferenceParm",
+        "Inner": {
+          "Type": "IntProperty",
+          "Name": "K2Node_MakeArray_Array_4",
+          "Flags": "RF_Public",
+          "ElementSize": 4
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_Conv_InterfaceToObject_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Object'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_ComponentBoundEvent_Character",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'CharacterBase'",
+          "ObjectPath": "/Script/EM"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_ComponentBoundEvent_IsDodgeBack",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "PropertyFlags": "ConstParm",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_AudioManager_AudioManager",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'AudioManagerBase'",
+          "ObjectPath": "/Script/EM"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetClientAudioManager_AudioManager_1",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'BP_AudioManager_C'",
+          "ObjectPath": "EM/Content/BluePrints/Managers/BP_AudioManager.10"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetClientAudioManager_AudioManager_2",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'BP_AudioManager_C'",
+          "ObjectPath": "EM/Content/BluePrints/Managers/BP_AudioManager.10"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_Multiply_FloatFloat_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetClientAudioManager_AudioManager_3",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'BP_AudioManager_C'",
+          "ObjectPath": "EM/Content/BluePrints/Managers/BP_AudioManager.10"
+        }
+      },
+      {
+        "Type": "ByteProperty",
+        "Name": "K2Node_Event_EndPlayReason",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "Enum": {
+          "ObjectName": "Enum'EEndPlayReason'",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction | FUNC_HasDefaults"
+  },
+  {
+    "Type": "Function",
+    "Name": "ReceiveEndPlay",
+    "Outer": "BP_Nvzhu_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "SuperStruct": {
+      "ObjectName": "Function'PassiveEffectObject:ReceiveEndPlay'",
+      "ObjectPath": "/Script/EM"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ByteProperty",
+        "Name": "EndPlayReason",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "Enum": {
+          "ObjectName": "Enum'EEndPlayReason'",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "BndEvt__BP_Nvzhu_BattleEvent_K2Node_ComponentBoundEvent_0_EnterDodging__DelegateSignature",
+    "Outer": "BP_Nvzhu_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "Character",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "PropertyClass": {
+          "ObjectName": "Class'CharacterBase'",
+          "ObjectPath": "/Script/EM"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "IsDodgeBack",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "PropertyFlags": "ConstParm | BlueprintVisible | BlueprintReadOnly | Parm",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "ReceiveBeginPlay",
+    "Outer": "BP_Nvzhu_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "SuperStruct": {
+      "ObjectName": "Function'PassiveEffectObject:ReceiveBeginPlay'",
+      "ObjectPath": "/Script/EM"
+    },
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "OnShadowDamaged",
+    "Outer": "BP_Nvzhu_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BP_Nvzhu_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Super": {
+      "ObjectName": "BlueprintGeneratedClass'BP_PassiveEffectBase_C'",
+      "ObjectPath": "EM/Content/BluePrints/Combat/PassiveEffect/BP_PassiveEffectBase.0"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "DynamicBindingObjects": [
+        {
+          "ObjectName": "ComponentDelegateBinding'BP_Nvzhu_C:ComponentDelegateBinding_0'",
+          "ObjectPath": "EM/Content/BluePrints/Combat/PassiveEffect/DesignerBP/Player/BP_Nvzhu.9"
+        }
+      ],
+      "InheritableComponentHandler": {
+        "ObjectName": "InheritableComponentHandler'BP_Nvzhu_C:InheritableComponentHandler'",
+        "ObjectPath": "EM/Content/BluePrints/Combat/PassiveEffect/DesignerBP/Player/BP_Nvzhu.10"
+      },
+      "UberGraphFunction": {
+        "ObjectName": "Function'BP_Nvzhu_C:ExecuteUbergraph_BP_Nvzhu'",
+        "ObjectPath": "EM/Content/BluePrints/Combat/PassiveEffect/DesignerBP/Player/BP_Nvzhu.0"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "BlueprintGeneratedClass'BP_PassiveEffectBase_C'",
+      "ObjectPath": "EM/Content/BluePrints/Combat/PassiveEffect/BP_PassiveEffectBase.0"
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'BP_Nvzhu_C:OnShadowDamaged'",
+        "ObjectPath": "EM/Content/BluePrints/Combat/PassiveEffect/DesignerBP/Player/BP_Nvzhu.4"
+      },
+      {
+        "ObjectName": "Function'BP_Nvzhu_C:ReceiveBeginPlay'",
+        "ObjectPath": "EM/Content/BluePrints/Combat/PassiveEffect/DesignerBP/Player/BP_Nvzhu.3"
+      },
+      {
+        "ObjectName": "Function'BP_Nvzhu_C:BndEvt__BP_Nvzhu_BattleEvent_K2Node_ComponentBoundEvent_0_EnterDodging__DelegateSignature'",
+        "ObjectPath": "EM/Content/BluePrints/Combat/PassiveEffect/DesignerBP/Player/BP_Nvzhu.2"
+      },
+      {
+        "ObjectName": "Function'BP_Nvzhu_C:ReceiveEndPlay'",
+        "ObjectPath": "EM/Content/BluePrints/Combat/PassiveEffect/DesignerBP/Player/BP_Nvzhu.1"
+      },
+      {
+        "ObjectName": "Function'BP_Nvzhu_C:ExecuteUbergraph_BP_Nvzhu'",
+        "ObjectPath": "EM/Content/BluePrints/Combat/PassiveEffect/DesignerBP/Player/BP_Nvzhu.0"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient",
+        "Struct": {
+          "ObjectName": "ScriptStruct'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "LastTime",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance"
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "TimeDilation",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance"
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Shadow",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnTemplate | DisableEditOnInstance",
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'BP_Nvzhu_Summon_C'",
+          "ObjectPath": "EM/Content/BluePrints/Combat/MechanismSummon/Player/BP_Nvzhu_Summon.5"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "MajoTime",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance"
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "IsDodgeBack",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_BP_Nvzhu": {
+        "ObjectName": "Function'BP_Nvzhu_C:ExecuteUbergraph_BP_Nvzhu'",
+        "ObjectPath": "EM/Content/BluePrints/Combat/PassiveEffect/DesignerBP/Player/BP_Nvzhu.0"
+      },
+      "ReceiveEndPlay": {
+        "ObjectName": "Function'BP_Nvzhu_C:ReceiveEndPlay'",
+        "ObjectPath": "EM/Content/BluePrints/Combat/PassiveEffect/DesignerBP/Player/BP_Nvzhu.1"
+      },
+      "BndEvt__BP_Nvzhu_BattleEvent_K2Node_ComponentBoundEvent_0_EnterDodging__DelegateSignature": {
+        "ObjectName": "Function'BP_Nvzhu_C:BndEvt__BP_Nvzhu_BattleEvent_K2Node_ComponentBoundEvent_0_EnterDodging__DelegateSignature'",
+        "ObjectPath": "EM/Content/BluePrints/Combat/PassiveEffect/DesignerBP/Player/BP_Nvzhu.2"
+      },
+      "ReceiveBeginPlay": {
+        "ObjectName": "Function'BP_Nvzhu_C:ReceiveBeginPlay'",
+        "ObjectPath": "EM/Content/BluePrints/Combat/PassiveEffect/DesignerBP/Player/BP_Nvzhu.3"
+      },
+      "OnShadowDamaged": {
+        "ObjectName": "Function'BP_Nvzhu_C:OnShadowDamaged'",
+        "ObjectPath": "EM/Content/BluePrints/Combat/PassiveEffect/DesignerBP/Player/BP_Nvzhu.4"
+      }
+    },
+    "ClassFlags": "CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BP_Nvzhu_C'Default__BP_Nvzhu_C'",
+      "ObjectPath": "EM/Content/BluePrints/Combat/PassiveEffect/DesignerBP/Player/BP_Nvzhu.6"
+    }
+  },
+  {
+    "Type": "BP_Nvzhu_C",
+    "Name": "Default__BP_Nvzhu_C",
+    "Class": "BlueprintGeneratedClass'EM/Content/BluePrints/Combat/PassiveEffect/DesignerBP/Player/BP_Nvzhu.BP_Nvzhu_C'",
+    "Template": {
+      "ObjectName": "BP_PassiveEffectBase_C'Default__BP_PassiveEffectBase_C'",
+      "ObjectPath": "EM/Content/BluePrints/Combat/PassiveEffect/BP_PassiveEffectBase.1"
+    },
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "UberGraphFrame": {},
+      "LastTime": 0.2,
+      "TimeDilation": 0.02,
+      "MajoTime": 2.0,
+      "BattleEvent": {
+        "ObjectName": "BP_BattleEventComponent_C'Default__BP_Nvzhu_C:BP_BattleEventComponent'",
+        "ObjectPath": "EM/Content/BluePrints/Combat/PassiveEffect/DesignerBP/Player/BP_Nvzhu.8"
+      }
+    }
+  },
+  {
+    "Type": "BattleEventComponent",
+    "Name": "BattleEventComponent",
+    "Outer": "Default__BP_Nvzhu_C",
+    "Class": "UScriptClass'BattleEventComponent'",
+    "Template": {
+      "ObjectName": "BattleEventComponent'Default__BP_PassiveEffectBase_C:BattleEventComponent'",
+      "ObjectPath": "EM/Content/BluePrints/Combat/PassiveEffect/BP_PassiveEffectBase.2"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_DefaultSubObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "BP_BattleEventComponent_C",
+    "Name": "BP_BattleEventComponent",
+    "Outer": "Default__BP_Nvzhu_C",
+    "Class": "BlueprintGeneratedClass'EM/Content/BluePrints/Combat/BP_BattleEventComponent.BP_BattleEventComponent_C'",
+    "Template": {
+      "ObjectName": "BP_BattleEventComponent_C'Default__BP_PassiveEffectBase_C:BP_BattleEventComponent'",
+      "ObjectPath": "EM/Content/BluePrints/Combat/PassiveEffect/BP_PassiveEffectBase.3"
+    },
+    "Flags": "RF_Public | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "ComponentDelegateBinding",
+    "Name": "ComponentDelegateBinding_0",
+    "Outer": "BP_Nvzhu_C",
+    "Class": "UScriptClass'ComponentDelegateBinding'",
+    "Flags": "RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentDelegateBindings": [
+        {
+          "ComponentPropertyName": "BattleEvent",
+          "DelegatePropertyName": "EnterDodging",
+          "FunctionNameToBind": "BndEvt__BP_Nvzhu_BattleEvent_K2Node_ComponentBoundEvent_0_EnterDodging__DelegateSignature"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "InheritableComponentHandler",
+    "Name": "InheritableComponentHandler",
+    "Outer": "BP_Nvzhu_C",
+    "Class": "UScriptClass'InheritableComponentHandler'",
+    "Flags": "RF_WasLoaded | RF_LoadCompleted"
+  }
+]

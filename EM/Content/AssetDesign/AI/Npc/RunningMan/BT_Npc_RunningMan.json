@@ -1,0 +1,488 @@
+[
+  {
+    "Type": "BehaviorTree",
+    "Name": "BT_Npc_RunningMan",
+    "Class": "UScriptClass'BehaviorTree'",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "RootNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Npc_RunningMan:BTComposite_Sequence_9'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/RunningMan/BT_Npc_RunningMan.6"
+      },
+      "BlackboardAsset": {
+        "ObjectName": "BlackboardData'BB_Npc_RunningMan'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/RunningMan/BB_Npc_RunningMan.0"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_0",
+    "Outer": "BT_Npc_RunningMan",
+    "Class": "UScriptClass'BTComposite_Selector'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_Npc_RunningMan:BTComposite_Sequence_8'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Npc/RunningMan/BT_Npc_RunningMan.5"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Npc_RunningMan:BTDecorator_Blackboard_7'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Npc/RunningMan/BT_Npc_RunningMan.8"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_Npc_RunningMan:BTComposite_Sequence_12'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Npc/RunningMan/BT_Npc_RunningMan.3"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Npc_RunningMan:BTDecorator_Blackboard_10'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Npc/RunningMan/BT_Npc_RunningMan.7"
+            }
+          ],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_RunningMan'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/RunningMan/BT_Npc_RunningMan.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Npc_RunningMan:BTComposite_Sequence_9'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/RunningMan/BT_Npc_RunningMan.6"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_10",
+    "Outer": "BT_Npc_RunningMan",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_GetPatrolLoc'BT_Npc_RunningMan:BTTask_GetPatrolLoc_1'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Npc/RunningMan/BT_Npc_RunningMan.11"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_NewMoveTo'BT_Npc_RunningMan:BTTask_NewMoveTo_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Npc/RunningMan/BT_Npc_RunningMan.13"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_RunningMan'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/RunningMan/BT_Npc_RunningMan.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Npc_RunningMan:BTComposite_Sequence_8'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/RunningMan/BT_Npc_RunningMan.5"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_12",
+    "Outer": "BT_Npc_RunningMan",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_Npc_RunningMan:BTComposite_Sequence_13'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Npc/RunningMan/BT_Npc_RunningMan.4"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_ClearKey'BT_Npc_RunningMan:BTTask_ClearKey_4'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Npc/RunningMan/BT_Npc_RunningMan.10"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_PostBehaviorEvent'BT_Npc_RunningMan:BTTask_PostBehaviorEvent_5'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Npc/RunningMan/BT_Npc_RunningMan.17"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_RunningMan'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/RunningMan/BT_Npc_RunningMan.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Npc_RunningMan:BTComposite_Selector_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/RunningMan/BT_Npc_RunningMan.1"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_13",
+    "Outer": "BT_Npc_RunningMan",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_GetPatrolLoc'BT_Npc_RunningMan:BTTask_GetPatrolLoc_2'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Npc/RunningMan/BT_Npc_RunningMan.12"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_NewMoveTo'BT_Npc_RunningMan:BTTask_NewMoveTo_1'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Npc/RunningMan/BT_Npc_RunningMan.14"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_RunningMan'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/RunningMan/BT_Npc_RunningMan.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Npc_RunningMan:BTComposite_Sequence_12'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/RunningMan/BT_Npc_RunningMan.3"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_8",
+    "Outer": "BT_Npc_RunningMan",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_Npc_RunningMan:BTComposite_Sequence_10'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Npc/RunningMan/BT_Npc_RunningMan.2"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_ClearKey'BT_Npc_RunningMan:BTTask_ClearKey_2'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Npc/RunningMan/BT_Npc_RunningMan.9"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_PostBehaviorEvent'BT_Npc_RunningMan:BTTask_PostBehaviorEvent_3'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Npc/RunningMan/BT_Npc_RunningMan.16"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_RunningMan'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/RunningMan/BT_Npc_RunningMan.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Npc_RunningMan:BTComposite_Selector_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/RunningMan/BT_Npc_RunningMan.1"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_9",
+    "Outer": "BT_Npc_RunningMan",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_NpcGetTarget'BT_Npc_RunningMan:BTTask_NpcGetTarget_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Npc/RunningMan/BT_Npc_RunningMan.15"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector'BT_Npc_RunningMan:BTComposite_Selector_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Npc/RunningMan/BT_Npc_RunningMan.1"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_RunningMan'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/RunningMan/BT_Npc_RunningMan.0"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_10",
+    "Outer": "BT_Npc_RunningMan",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "StringValue": "Goto2",
+      "CachedDescription": "QuestEvent 为相等 [Goto2]",
+      "BlackboardKey": {
+        "SelectedKeyName": "QuestEvent"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_RunningMan'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/RunningMan/BT_Npc_RunningMan.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Npc_RunningMan:BTComposite_Selector_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/RunningMan/BT_Npc_RunningMan.1"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_7",
+    "Outer": "BT_Npc_RunningMan",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "StringValue": "Goto1",
+      "CachedDescription": "QuestEvent 为相等 [Goto1]",
+      "BlackboardKey": {
+        "SelectedKeyName": "QuestEvent"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_RunningMan'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/RunningMan/BT_Npc_RunningMan.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Npc_RunningMan:BTComposite_Selector_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/RunningMan/BT_Npc_RunningMan.1"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_ClearKey",
+    "Name": "BTTask_ClearKey_2",
+    "Outer": "BT_Npc_RunningMan",
+    "Class": "UScriptClass'BTTask_ClearKey'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "BlackboadKeyName": "QuestEvent",
+      "BlackboardKey": {
+        "SelectedKeyName": "QuestEvent"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_RunningMan'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/RunningMan/BT_Npc_RunningMan.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Npc_RunningMan:BTComposite_Sequence_8'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/RunningMan/BT_Npc_RunningMan.5"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_ClearKey",
+    "Name": "BTTask_ClearKey_4",
+    "Outer": "BT_Npc_RunningMan",
+    "Class": "UScriptClass'BTTask_ClearKey'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "BlackboadKeyName": "QuestEvent",
+      "BlackboardKey": {
+        "SelectedKeyName": "QuestEvent"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_RunningMan'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/RunningMan/BT_Npc_RunningMan.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Npc_RunningMan:BTComposite_Sequence_12'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/RunningMan/BT_Npc_RunningMan.3"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_GetPatrolLoc",
+    "Name": "BTTask_GetPatrolLoc_1",
+    "Outer": "BT_Npc_RunningMan",
+    "Class": "UScriptClass'BTTask_GetPatrolLoc'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_RunningMan'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/RunningMan/BT_Npc_RunningMan.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Npc_RunningMan:BTComposite_Sequence_10'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/RunningMan/BT_Npc_RunningMan.2"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_GetPatrolLoc",
+    "Name": "BTTask_GetPatrolLoc_2",
+    "Outer": "BT_Npc_RunningMan",
+    "Class": "UScriptClass'BTTask_GetPatrolLoc'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_RunningMan'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/RunningMan/BT_Npc_RunningMan.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Npc_RunningMan:BTComposite_Sequence_13'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/RunningMan/BT_Npc_RunningMan.4"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_NewMoveTo",
+    "Name": "BTTask_NewMoveTo_0",
+    "Outer": "BT_Npc_RunningMan",
+    "Class": "UScriptClass'BTTask_NewMoveTo'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "bUseControllerRotationYaw": true,
+      "bOrientRotationToMovement": true,
+      "MaxSpeed": 100.0,
+      "MaxAcceleration": 99999.0,
+      "bStopOnOverlapNeedsUpdate": false,
+      "BlackboardKey": {
+        "SelectedKeyName": "PatrolLoc"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_RunningMan'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/RunningMan/BT_Npc_RunningMan.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Npc_RunningMan:BTComposite_Sequence_10'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/RunningMan/BT_Npc_RunningMan.2"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_NewMoveTo",
+    "Name": "BTTask_NewMoveTo_1",
+    "Outer": "BT_Npc_RunningMan",
+    "Class": "UScriptClass'BTTask_NewMoveTo'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "bUseControllerRotationYaw": true,
+      "bOrientRotationToMovement": true,
+      "MoveTypeState": "EMoveTypeState::MTS_Run",
+      "MaxSpeed": 500.0,
+      "MaxAcceleration": 99999.0,
+      "bStopOnOverlapNeedsUpdate": false,
+      "BlackboardKey": {
+        "SelectedKeyName": "PatrolLoc"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_RunningMan'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/RunningMan/BT_Npc_RunningMan.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Npc_RunningMan:BTComposite_Sequence_13'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/RunningMan/BT_Npc_RunningMan.4"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_NpcGetTarget",
+    "Name": "BTTask_NpcGetTarget_0",
+    "Outer": "BT_Npc_RunningMan",
+    "Class": "UScriptClass'BTTask_NpcGetTarget'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_RunningMan'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/RunningMan/BT_Npc_RunningMan.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Npc_RunningMan:BTComposite_Sequence_9'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/RunningMan/BT_Npc_RunningMan.6"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_PostBehaviorEvent",
+    "Name": "BTTask_PostBehaviorEvent_3",
+    "Outer": "BT_Npc_RunningMan",
+    "Class": "UScriptClass'BTTask_PostBehaviorEvent'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "EventName": "End1",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_RunningMan'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/RunningMan/BT_Npc_RunningMan.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Npc_RunningMan:BTComposite_Sequence_8'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/RunningMan/BT_Npc_RunningMan.5"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_PostBehaviorEvent",
+    "Name": "BTTask_PostBehaviorEvent_5",
+    "Outer": "BT_Npc_RunningMan",
+    "Class": "UScriptClass'BTTask_PostBehaviorEvent'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "EventName": "End2",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_RunningMan'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/RunningMan/BT_Npc_RunningMan.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Npc_RunningMan:BTComposite_Sequence_12'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/RunningMan/BT_Npc_RunningMan.3"
+      }
+    }
+  }
+]

@@ -1,0 +1,143 @@
+[
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_BP_CoverPointComponent",
+    "Outer": "BP_CoverPointComponent_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction"
+  },
+  {
+    "Type": "Function",
+    "Name": "ReceiveBeginPlay",
+    "Outer": "BP_CoverPointComponent_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "SuperStruct": {
+      "ObjectName": "Function'ActorComponent:ReceiveBeginPlay'",
+      "ObjectPath": "/Script/Engine"
+    },
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BP_CoverPointComponent_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "UberGraphFunction": {
+        "ObjectName": "Function'BP_CoverPointComponent_C:ExecuteUbergraph_BP_CoverPointComponent'",
+        "ObjectPath": "EM/Content/BluePrints/Char/BP_Covers/BP_CoverPointComponent.0"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'CoverPointComponent'",
+      "ObjectPath": "/Script/EM"
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'BP_CoverPointComponent_C:ReceiveBeginPlay'",
+        "ObjectPath": "EM/Content/BluePrints/Char/BP_Covers/BP_CoverPointComponent.1"
+      },
+      {
+        "ObjectName": "Function'BP_CoverPointComponent_C:ExecuteUbergraph_BP_CoverPointComponent'",
+        "ObjectPath": "EM/Content/BluePrints/Char/BP_Covers/BP_CoverPointComponent.0"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient",
+        "Struct": {
+          "ObjectName": "ScriptStruct'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_BP_CoverPointComponent": {
+        "ObjectName": "Function'BP_CoverPointComponent_C:ExecuteUbergraph_BP_CoverPointComponent'",
+        "ObjectPath": "EM/Content/BluePrints/Char/BP_Covers/BP_CoverPointComponent.0"
+      },
+      "ReceiveBeginPlay": {
+        "ObjectName": "Function'BP_CoverPointComponent_C:ReceiveBeginPlay'",
+        "ObjectPath": "EM/Content/BluePrints/Char/BP_Covers/BP_CoverPointComponent.1"
+      }
+    },
+    "ClassFlags": "CLASS_Config | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_EditInlineNew | CLASS_CompiledFromBlueprint | CLASS_DefaultToInstanced | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BP_CoverPointComponent_C'Default__BP_CoverPointComponent_C'",
+      "ObjectPath": "EM/Content/BluePrints/Char/BP_Covers/BP_CoverPointComponent.3"
+    }
+  },
+  {
+    "Type": "BP_CoverPointComponent_C",
+    "Name": "Default__BP_CoverPointComponent_C",
+    "Class": "BlueprintGeneratedClass'EM/Content/BluePrints/Char/BP_Covers/BP_CoverPointComponent.BP_CoverPointComponent_C'",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "UberGraphFrame": {},
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'Sphere'",
+        "ObjectPath": "Engine/Content/BasicShapes/Sphere.2"
+      },
+      "OverrideMaterials": [
+        {
+          "ObjectName": "Material'BasicShapeMaterial'",
+          "ObjectPath": "Engine/Content/BasicShapes/BasicShapeMaterial.0"
+        }
+      ],
+      "BodyInstance": {
+        "ObjectType": "ECC_WorldStatic",
+        "CollisionEnabled": "ECollisionEnabled::NoCollision",
+        "CollisionProfileName": "NoCollision",
+        "CollisionResponses": {
+          "ResponseToChannels": {
+            "Visibility": "ECR_Ignore",
+            "Camera": "ECR_Ignore",
+            "GameTraceChannel3": "ECR_Ignore"
+          },
+          "ResponseArray": [
+            {
+              "Channel": "Visibility",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "Camera",
+              "Response": "ECR_Ignore"
+            },
+            {
+              "Channel": "TraceExceptChar",
+              "Response": "ECR_Ignore"
+            }
+          ]
+        }
+      },
+      "RelativeScale3D": {
+        "X": 0.3,
+        "Y": 0.3,
+        "Z": 0.3
+      },
+      "bComponentToWorldUpdated": true,
+      "bCanEverAffectNavigation": false
+    }
+  }
+]

@@ -1,0 +1,557 @@
+[
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_Explore_RotateDoor",
+    "Outer": "Explore_RotateDoor_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "K2Node_MakeArray_Array",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "ReferenceParm | ContainsInstancedReference",
+        "Inner": {
+          "Type": "ObjectProperty",
+          "Name": "K2Node_MakeArray_Array",
+          "Flags": "RF_Public",
+          "ElementSize": 8,
+          "PropertyFlags": "InstancedReference",
+          "PropertyClass": {
+            "ObjectName": "Class'StaticCreatorComponent'",
+            "ObjectPath": "/Script/EM"
+          }
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_ComponentBoundEvent_Mechanism",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'CombatItemBase'",
+          "ObjectPath": "/Script/EM"
+        }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "K2Node_ComponentBoundEvent_StateId",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "K2Node_ComponentBoundEvent_LeaveStateId",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_EqualEqual_IntInt_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_EqualEqual_IntInt_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction | FUNC_HasDefaults"
+  },
+  {
+    "Type": "Function",
+    "Name": "BndEvt__Explore_RotateDoor_Interactive_K2Node_ComponentBoundEvent_0_OnMechanismStateChangeDelegate__DelegateSignature",
+    "Outer": "Explore_RotateDoor_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "Mechanism",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "PropertyClass": {
+          "ObjectName": "Class'CombatItemBase'",
+          "ObjectPath": "/Script/EM"
+        }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "StateId",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "LeaveStateId",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      }
+    ],
+    "FunctionFlags": "FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "ReceiveOnExploreGroupActive",
+    "Outer": "Explore_RotateDoor_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "SuperStruct": {
+      "ObjectName": "Function'ExploreStaticCreator:ReceiveOnExploreGroupActive'",
+      "ObjectPath": "/Script/EM"
+    },
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "CheckXiangTaiIndex",
+    "Outer": "Explore_RotateDoor_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "CreatorId",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "StateId",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "bSuccess",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "PropertyFlags": "Parm | OutParm",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "bError",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "PropertyFlags": "Parm | OutParm",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "bWait",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "PropertyFlags": "Parm | OutParm",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Array_Length_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_GreaterEqual_IntInt_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CallFunc_Add_IntInt_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_EqualEqual_IntInt_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_EqualEqual_IntInt_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_Public | FUNC_HasOutParms | FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "Explore_RotateDoor_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "DynamicBindingObjects": [
+        {
+          "ObjectName": "ComponentDelegateBinding'Explore_RotateDoor_C:ComponentDelegateBinding_0'",
+          "ObjectPath": "EM/Content/AssetDesign/Level/BluePrints/ExploreGroup/Explore_East01/East01/Explore_RotateDoor.8"
+        }
+      ],
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'Explore_RotateDoor_C:SimpleConstructionScript_0'",
+        "ObjectPath": "EM/Content/AssetDesign/Level/BluePrints/ExploreGroup/Explore_East01/East01/Explore_RotateDoor.13"
+      },
+      "UberGraphFunction": {
+        "ObjectName": "Function'Explore_RotateDoor_C:ExecuteUbergraph_Explore_RotateDoor'",
+        "ObjectPath": "EM/Content/AssetDesign/Level/BluePrints/ExploreGroup/Explore_East01/East01/Explore_RotateDoor.0"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'ExploreStaticCreator'",
+      "ObjectPath": "/Script/EM"
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'Explore_RotateDoor_C:CheckXiangTaiIndex'",
+        "ObjectPath": "EM/Content/AssetDesign/Level/BluePrints/ExploreGroup/Explore_East01/East01/Explore_RotateDoor.3"
+      },
+      {
+        "ObjectName": "Function'Explore_RotateDoor_C:ReceiveOnExploreGroupActive'",
+        "ObjectPath": "EM/Content/AssetDesign/Level/BluePrints/ExploreGroup/Explore_East01/East01/Explore_RotateDoor.2"
+      },
+      {
+        "ObjectName": "Function'Explore_RotateDoor_C:BndEvt__Explore_RotateDoor_Interactive_K2Node_ComponentBoundEvent_0_OnMechanismStateChangeDelegate__DelegateSignature'",
+        "ObjectPath": "EM/Content/AssetDesign/Level/BluePrints/ExploreGroup/Explore_East01/East01/Explore_RotateDoor.1"
+      },
+      {
+        "ObjectName": "Function'Explore_RotateDoor_C:ExecuteUbergraph_Explore_RotateDoor'",
+        "ObjectPath": "EM/Content/AssetDesign/Level/BluePrints/ExploreGroup/Explore_East01/East01/Explore_RotateDoor.0"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient",
+        "Struct": {
+          "ObjectName": "ScriptStruct'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Door",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'BP_StaticCreatorComponent_C'",
+          "ObjectPath": "EM/Content/BluePrints/Item/ExploreGroup/BP_StaticCreatorComponent.3"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "Interactive",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'BP_StaticCreatorComponent_C'",
+          "ObjectPath": "EM/Content/BluePrints/Item/ExploreGroup/BP_StaticCreatorComponent.3"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "DefaultSceneRoot",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'SceneComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ArrayProperty",
+        "Name": "XiangTaiList",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Edit | BlueprintVisible",
+        "Inner": {
+          "Type": "IntProperty",
+          "Name": "XiangTaiList",
+          "Flags": "RF_Public",
+          "ElementSize": 4
+        }
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "CurrentXiangTai",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance"
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "ActiveStateId",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "Edit | BlueprintVisible"
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "NewVar_0",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance"
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_Explore_RotateDoor": {
+        "ObjectName": "Function'Explore_RotateDoor_C:ExecuteUbergraph_Explore_RotateDoor'",
+        "ObjectPath": "EM/Content/AssetDesign/Level/BluePrints/ExploreGroup/Explore_East01/East01/Explore_RotateDoor.0"
+      },
+      "BndEvt__Explore_RotateDoor_Interactive_K2Node_ComponentBoundEvent_0_OnMechanismStateChangeDelegate__DelegateSignature": {
+        "ObjectName": "Function'Explore_RotateDoor_C:BndEvt__Explore_RotateDoor_Interactive_K2Node_ComponentBoundEvent_0_OnMechanismStateChangeDelegate__DelegateSignature'",
+        "ObjectPath": "EM/Content/AssetDesign/Level/BluePrints/ExploreGroup/Explore_East01/East01/Explore_RotateDoor.1"
+      },
+      "ReceiveOnExploreGroupActive": {
+        "ObjectName": "Function'Explore_RotateDoor_C:ReceiveOnExploreGroupActive'",
+        "ObjectPath": "EM/Content/AssetDesign/Level/BluePrints/ExploreGroup/Explore_East01/East01/Explore_RotateDoor.2"
+      },
+      "CheckXiangTaiIndex": {
+        "ObjectName": "Function'Explore_RotateDoor_C:CheckXiangTaiIndex'",
+        "ObjectPath": "EM/Content/AssetDesign/Level/BluePrints/ExploreGroup/Explore_East01/East01/Explore_RotateDoor.3"
+      }
+    },
+    "ClassFlags": "CLASS_Config | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "Explore_RotateDoor_C'Default__Explore_RotateDoor_C'",
+      "ObjectPath": "EM/Content/AssetDesign/Level/BluePrints/ExploreGroup/Explore_East01/East01/Explore_RotateDoor.5"
+    }
+  },
+  {
+    "Type": "Explore_RotateDoor_C",
+    "Name": "Default__Explore_RotateDoor_C",
+    "Class": "BlueprintGeneratedClass'EM/Content/AssetDesign/Level/BluePrints/ExploreGroup/Explore_East01/East01/Explore_RotateDoor.Explore_RotateDoor_C'",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "UberGraphFrame": {},
+      "ActiveStateId": 1210023
+    }
+  },
+  {
+    "Type": "BP_StaticCreatorComponent_C",
+    "Name": "Door_GEN_VARIABLE",
+    "Outer": "Explore_RotateDoor_C",
+    "Class": "BlueprintGeneratedClass'EM/Content/BluePrints/Item/ExploreGroup/BP_StaticCreatorComponent.BP_StaticCreatorComponent_C'",
+    "Template": {
+      "ObjectName": "BP_StaticCreatorComponent_C'Default__BP_StaticCreatorComponent_C'",
+      "ObjectPath": "EM/Content/BluePrints/Item/ExploreGroup/BP_StaticCreatorComponent.4"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "UnitType": "Mechanism",
+      "UnitId": 131023
+    }
+  },
+  {
+    "Type": "BP_StaticCreatorComponent_C",
+    "Name": "Interactive_GEN_VARIABLE",
+    "Outer": "Explore_RotateDoor_C",
+    "Class": "BlueprintGeneratedClass'EM/Content/BluePrints/Item/ExploreGroup/BP_StaticCreatorComponent.BP_StaticCreatorComponent_C'",
+    "Template": {
+      "ObjectName": "BP_StaticCreatorComponent_C'Default__BP_StaticCreatorComponent_C'",
+      "ObjectPath": "EM/Content/BluePrints/Item/ExploreGroup/BP_StaticCreatorComponent.4"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "UnitType": "Mechanism",
+      "UnitId": 131024
+    }
+  },
+  {
+    "Type": "ComponentDelegateBinding",
+    "Name": "ComponentDelegateBinding_0",
+    "Outer": "Explore_RotateDoor_C",
+    "Class": "UScriptClass'ComponentDelegateBinding'",
+    "Flags": "RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentDelegateBindings": [
+        {
+          "ComponentPropertyName": "Interactive",
+          "DelegatePropertyName": "OnMechanismStateChange",
+          "FunctionNameToBind": "BndEvt__Explore_RotateDoor_Interactive_K2Node_ComponentBoundEvent_0_OnMechanismStateChangeDelegate__DelegateSignature"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Outer": "Explore_RotateDoor_C",
+    "Class": "UScriptClass'SceneComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'Explore_RotateDoor_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "EM/Content/AssetDesign/Level/BluePrints/ExploreGroup/Explore_East01/East01/Explore_RotateDoor.9"
+      },
+      "ChildNodes": [
+        {
+          "ObjectName": "SCS_Node'Explore_RotateDoor_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "EM/Content/AssetDesign/Level/BluePrints/ExploreGroup/Explore_East01/East01/Explore_RotateDoor.11"
+        },
+        {
+          "ObjectName": "SCS_Node'Explore_RotateDoor_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "EM/Content/AssetDesign/Level/BluePrints/ExploreGroup/Explore_East01/East01/Explore_RotateDoor.12"
+        }
+      ],
+      "VariableGuid": "72ECD67A-4426AA50-BB1E4DAB-768984A9",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_1",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "BlueprintGeneratedClass'BP_StaticCreatorComponent_C'",
+        "ObjectPath": "EM/Content/BluePrints/Item/ExploreGroup/BP_StaticCreatorComponent.3"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "BP_StaticCreatorComponent_C'Explore_RotateDoor_C:Interactive_GEN_VARIABLE'",
+        "ObjectPath": "EM/Content/AssetDesign/Level/BluePrints/ExploreGroup/Explore_East01/East01/Explore_RotateDoor.7"
+      },
+      "VariableGuid": "56BF32B3-41430A54-B69D6E9F-3887BA52",
+      "InternalVariableName": "Interactive"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_2",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "BlueprintGeneratedClass'BP_StaticCreatorComponent_C'",
+        "ObjectPath": "EM/Content/BluePrints/Item/ExploreGroup/BP_StaticCreatorComponent.3"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "BP_StaticCreatorComponent_C'Explore_RotateDoor_C:Door_GEN_VARIABLE'",
+        "ObjectPath": "EM/Content/AssetDesign/Level/BluePrints/ExploreGroup/Explore_East01/East01/Explore_RotateDoor.6"
+      },
+      "VariableGuid": "EF219CE8-486963FB-CFB9A9A1-C8CA63AB",
+      "InternalVariableName": "Door"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Outer": "Explore_RotateDoor_C",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node'Explore_RotateDoor_C:SimpleConstructionScript_0.SCS_Node_0'",
+          "ObjectPath": "EM/Content/AssetDesign/Level/BluePrints/ExploreGroup/Explore_East01/East01/Explore_RotateDoor.10"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node'Explore_RotateDoor_C:SimpleConstructionScript_0.SCS_Node_0'",
+          "ObjectPath": "EM/Content/AssetDesign/Level/BluePrints/ExploreGroup/Explore_East01/East01/Explore_RotateDoor.10"
+        },
+        {
+          "ObjectName": "SCS_Node'Explore_RotateDoor_C:SimpleConstructionScript_0.SCS_Node_1'",
+          "ObjectPath": "EM/Content/AssetDesign/Level/BluePrints/ExploreGroup/Explore_East01/East01/Explore_RotateDoor.11"
+        },
+        {
+          "ObjectName": "SCS_Node'Explore_RotateDoor_C:SimpleConstructionScript_0.SCS_Node_2'",
+          "ObjectPath": "EM/Content/AssetDesign/Level/BluePrints/ExploreGroup/Explore_East01/East01/Explore_RotateDoor.12"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'Explore_RotateDoor_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "EM/Content/AssetDesign/Level/BluePrints/ExploreGroup/Explore_East01/East01/Explore_RotateDoor.10"
+      }
+    }
+  }
+]

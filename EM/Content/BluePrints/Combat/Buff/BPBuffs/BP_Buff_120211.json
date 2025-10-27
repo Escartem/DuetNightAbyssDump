@@ -1,0 +1,187 @@
+[
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_BP_Buff_120211",
+    "Outer": "BP_Buff_120211_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_CastToCharacterBase_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'CharacterBase'",
+          "ObjectPath": "/Script/EM"
+        }
+      },
+      {
+        "Type": "EnumProperty",
+        "Name": "K2Node_Event_Reason",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "Enum": {
+          "ObjectName": "Enum'EBuffRemovedReason'",
+          "ObjectPath": "/Script/EM"
+        },
+        "UnderlyingProp": {
+          "Type": "ByteProperty",
+          "Name": "UnderlyingType",
+          "Flags": "RF_Public",
+          "ElementSize": 1,
+          "Enum": null
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "CallFunc_GetPassiveEffectById_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'PassiveEffectObject'",
+          "ObjectPath": "/Script/EM"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_DynamicCast_AsBP_Falu_Passive",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "BlueprintGeneratedClass'BP_Falu_Passive_C'",
+          "ObjectPath": "EM/Content/BluePrints/Combat/PassiveEffect/DesignerBP/Player/BP_Falu_Passive.8"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_DynamicCast_bSuccess",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction"
+  },
+  {
+    "Type": "Function",
+    "Name": "BP_BeforeDestroy",
+    "Outer": "BP_Buff_120211_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "SuperStruct": {
+      "ObjectName": "Function'Buff:BP_BeforeDestroy'",
+      "ObjectPath": "/Script/EM"
+    },
+    "ChildProperties": [
+      {
+        "Type": "EnumProperty",
+        "Name": "Reason",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "Enum": {
+          "ObjectName": "Enum'EBuffRemovedReason'",
+          "ObjectPath": "/Script/EM"
+        },
+        "UnderlyingProp": {
+          "Type": "ByteProperty",
+          "Name": "UnderlyingType",
+          "Flags": "RF_Public",
+          "ElementSize": 1,
+          "Enum": null
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BP_Buff_120211_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Super": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Buff_C'",
+      "ObjectPath": "EM/Content/BluePrints/Combat/Buff/BPBuffs/BP_Buff.1"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "UberGraphFunction": {
+        "ObjectName": "Function'BP_Buff_120211_C:ExecuteUbergraph_BP_Buff_120211'",
+        "ObjectPath": "EM/Content/BluePrints/Combat/Buff/BPBuffs/BP_Buff_120211.0"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "BlueprintGeneratedClass'BP_Buff_C'",
+      "ObjectPath": "EM/Content/BluePrints/Combat/Buff/BPBuffs/BP_Buff.1"
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'BP_Buff_120211_C:BP_BeforeDestroy'",
+        "ObjectPath": "EM/Content/BluePrints/Combat/Buff/BPBuffs/BP_Buff_120211.1"
+      },
+      {
+        "ObjectName": "Function'BP_Buff_120211_C:ExecuteUbergraph_BP_Buff_120211'",
+        "ObjectPath": "EM/Content/BluePrints/Combat/Buff/BPBuffs/BP_Buff_120211.0"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient",
+        "Struct": {
+          "ObjectName": "ScriptStruct'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_BP_Buff_120211": {
+        "ObjectName": "Function'BP_Buff_120211_C:ExecuteUbergraph_BP_Buff_120211'",
+        "ObjectPath": "EM/Content/BluePrints/Combat/Buff/BPBuffs/BP_Buff_120211.0"
+      },
+      "BP_BeforeDestroy": {
+        "ObjectName": "Function'BP_Buff_120211_C:BP_BeforeDestroy'",
+        "ObjectPath": "EM/Content/BluePrints/Combat/Buff/BPBuffs/BP_Buff_120211.1"
+      }
+    },
+    "ClassFlags": "CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BP_Buff_120211_C'Default__BP_Buff_120211_C'",
+      "ObjectPath": "EM/Content/BluePrints/Combat/Buff/BPBuffs/BP_Buff_120211.3"
+    }
+  },
+  {
+    "Type": "BP_Buff_120211_C",
+    "Name": "Default__BP_Buff_120211_C",
+    "Class": "BlueprintGeneratedClass'EM/Content/BluePrints/Combat/Buff/BPBuffs/BP_Buff_120211.BP_Buff_120211_C'",
+    "Template": {
+      "ObjectName": "BP_Buff_C'Default__BP_Buff_C'",
+      "ObjectPath": "EM/Content/BluePrints/Combat/Buff/BPBuffs/BP_Buff.2"
+    },
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "UberGraphFrame": {}
+    }
+  }
+]

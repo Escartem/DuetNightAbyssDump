@@ -1,0 +1,591 @@
+[
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_BP_AutoVentilator",
+    "Outer": "BP_AutoVentilator_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "DelegateProperty",
+        "Name": "K2Node_CreateDelegate_OutputDelegate",
+        "Flags": "RF_Public",
+        "ElementSize": 20,
+        "SignatureFunction": {
+          "ObjectName": "DelegateFunction'TimerDynamicDelegate__DelegateSignature'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "K2Node_Event_DeltaSeconds",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_K2_SetTimerDelegate_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "Struct": {
+          "ObjectName": "ScriptStruct'TimerHandle'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_Divide_FloatFloat_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "CallFunc_Divide_FloatFloat_ReturnValue_1",
+        "Flags": "RF_Public",
+        "ElementSize": 4
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_MakeRotator_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 12,
+        "Struct": {
+          "ObjectName": "ScriptStruct'Rotator'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "CallFunc_K2_AddLocalRotation_SweepHitResult",
+        "Flags": "RF_Public",
+        "ElementSize": 144,
+        "PropertyFlags": "ContainsInstancedReference",
+        "Struct": {
+          "ObjectName": "ScriptStruct'HitResult'",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction | FUNC_HasDefaults"
+  },
+  {
+    "Type": "Function",
+    "Name": "Rotate",
+    "Outer": "BP_AutoVentilator_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "FunctionFlags": "FUNC_BlueprintCallable | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "ReceiveBeginPlay",
+    "Outer": "BP_AutoVentilator_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "SuperStruct": {
+      "ObjectName": "Function'Actor:ReceiveBeginPlay'",
+      "ObjectPath": "/Script/Engine"
+    },
+    "FunctionFlags": "FUNC_Event | FUNC_Protected | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "ReceiveTick",
+    "Outer": "BP_AutoVentilator_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "SuperStruct": {
+      "ObjectName": "Function'Actor:ReceiveTick'",
+      "ObjectPath": "/Script/Engine"
+    },
+    "ChildProperties": [
+      {
+        "Type": "FloatProperty",
+        "Name": "DeltaSeconds",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "Function",
+    "Name": "GetModuleName",
+    "Outer": "BP_AutoVentilator_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "ChildProperties": [
+      {
+        "Type": "StrProperty",
+        "Name": "ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 16,
+        "PropertyFlags": "Parm | OutParm | ReturnParm"
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Public | FUNC_HasOutParms | FUNC_BlueprintCallable | FUNC_BlueprintEvent | FUNC_Const"
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BP_AutoVentilator_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SimpleConstructionScript": {
+        "ObjectName": "SimpleConstructionScript'BP_AutoVentilator_C:SimpleConstructionScript_0'",
+        "ObjectPath": "EM/Content/BluePrints/Item/Temple/BP_AutoVentilator.15"
+      },
+      "UberGraphFunction": {
+        "ObjectName": "Function'BP_AutoVentilator_C:ExecuteUbergraph_BP_AutoVentilator'",
+        "ObjectPath": "EM/Content/BluePrints/Item/Temple/BP_AutoVentilator.0"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "Class'CombatItemBase'",
+      "ObjectPath": "/Script/EM"
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'BP_AutoVentilator_C:GetModuleName'",
+        "ObjectPath": "EM/Content/BluePrints/Item/Temple/BP_AutoVentilator.4"
+      },
+      {
+        "ObjectName": "Function'BP_AutoVentilator_C:ReceiveTick'",
+        "ObjectPath": "EM/Content/BluePrints/Item/Temple/BP_AutoVentilator.3"
+      },
+      {
+        "ObjectName": "Function'BP_AutoVentilator_C:ReceiveBeginPlay'",
+        "ObjectPath": "EM/Content/BluePrints/Item/Temple/BP_AutoVentilator.2"
+      },
+      {
+        "ObjectName": "Function'BP_AutoVentilator_C:Rotate'",
+        "ObjectPath": "EM/Content/BluePrints/Item/Temple/BP_AutoVentilator.1"
+      },
+      {
+        "ObjectName": "Function'BP_AutoVentilator_C:ExecuteUbergraph_BP_AutoVentilator'",
+        "ObjectPath": "EM/Content/BluePrints/Item/Temple/BP_AutoVentilator.0"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient",
+        "Struct": {
+          "ObjectName": "ScriptStruct'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "SM_TempleVentilator_01",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'StaticMeshComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "SM_Ventilator_Cover_02",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'StaticMeshComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "SM_Ventilator_Cover_01",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'StaticMeshComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "DefaultSceneRoot",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | InstancedReference | NonTransactional",
+        "PropertyClass": {
+          "ObjectName": "Class'SceneComponent'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "speed",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "Edit | BlueprintVisible"
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "IsOpen",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 1,
+        "PropertyFlags": "Edit | BlueprintVisible",
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "IntProperty",
+        "Name": "LinkArchiveID",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "Edit | BlueprintVisible"
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "UpdateTimer",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "Edit | BlueprintVisible"
+      },
+      {
+        "Type": "FloatProperty",
+        "Name": "Rotate360Time",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 4,
+        "PropertyFlags": "Edit | BlueprintVisible"
+      },
+      {
+        "Type": "StructProperty",
+        "Name": "Delta Rotation",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 12,
+        "PropertyFlags": "Edit | BlueprintVisible | DisableEditOnInstance",
+        "Struct": {
+          "ObjectName": "ScriptStruct'Rotator'",
+          "ObjectPath": "/Script/CoreUObject"
+        }
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_BP_AutoVentilator": {
+        "ObjectName": "Function'BP_AutoVentilator_C:ExecuteUbergraph_BP_AutoVentilator'",
+        "ObjectPath": "EM/Content/BluePrints/Item/Temple/BP_AutoVentilator.0"
+      },
+      "Rotate": {
+        "ObjectName": "Function'BP_AutoVentilator_C:Rotate'",
+        "ObjectPath": "EM/Content/BluePrints/Item/Temple/BP_AutoVentilator.1"
+      },
+      "ReceiveBeginPlay": {
+        "ObjectName": "Function'BP_AutoVentilator_C:ReceiveBeginPlay'",
+        "ObjectPath": "EM/Content/BluePrints/Item/Temple/BP_AutoVentilator.2"
+      },
+      "ReceiveTick": {
+        "ObjectName": "Function'BP_AutoVentilator_C:ReceiveTick'",
+        "ObjectPath": "EM/Content/BluePrints/Item/Temple/BP_AutoVentilator.3"
+      },
+      "GetModuleName": {
+        "ObjectName": "Function'BP_AutoVentilator_C:GetModuleName'",
+        "ObjectPath": "EM/Content/BluePrints/Item/Temple/BP_AutoVentilator.4"
+      }
+    },
+    "ClassFlags": "CLASS_Config | CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint | CLASS_HasInstancedReference",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Engine",
+    "Interfaces": [
+      {
+        "Class": {
+          "ObjectName": "Class'UnLuaInterface'",
+          "ObjectPath": "/Script/UnLua"
+        },
+        "PointerOffset": 0,
+        "bImplementedByK2": true
+      }
+    ],
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BP_AutoVentilator_C'Default__BP_AutoVentilator_C'",
+      "ObjectPath": "EM/Content/BluePrints/Item/Temple/BP_AutoVentilator.6"
+    }
+  },
+  {
+    "Type": "BP_AutoVentilator_C",
+    "Name": "Default__BP_AutoVentilator_C",
+    "Class": "BlueprintGeneratedClass'EM/Content/BluePrints/Item/Temple/BP_AutoVentilator.BP_AutoVentilator_C'",
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "UberGraphFrame": {},
+      "speed": 1.0,
+      "IsOpen": true,
+      "UpdateTimer": 0.01,
+      "Rotate360Time": 5.0,
+      "Delta Rotation": {
+        "Pitch": 0.0,
+        "Yaw": 0.0,
+        "Roll": 0.0
+      },
+      "CombatStateChangeComponent": {
+        "ObjectName": "BP_CombatStateChangeComponent_C'Default__BP_AutoVentilator_C:CombatStateChangeComponent'",
+        "ObjectPath": "EM/Content/BluePrints/Item/Temple/BP_AutoVentilator.8"
+      },
+      "CombatClientEffectComponent": {
+        "ObjectName": "BP_CombatClientEffectComponent_C'Default__BP_AutoVentilator_C:CombatClientEffectComponent'",
+        "ObjectPath": "EM/Content/BluePrints/Item/Temple/BP_AutoVentilator.7"
+      },
+      "FXComponent": {
+        "ObjectName": "BP_FXComponent_C'Default__BP_AutoVentilator_C:BP_FXComponent'",
+        "ObjectPath": "EM/Content/BluePrints/Item/Temple/BP_AutoVentilator.9"
+      },
+      "BpBorn": true,
+      "UnitId": 80104,
+      "UnitType": "Mechanism",
+      "bAddTickLod": false,
+      "PrimaryActorTick": {
+        "bCanEverTick": true
+      }
+    }
+  },
+  {
+    "Type": "BP_CombatClientEffectComponent_C",
+    "Name": "CombatClientEffectComponent",
+    "Outer": "Default__BP_AutoVentilator_C",
+    "Class": "BlueprintGeneratedClass'EM/Content/BluePrints/Item/BP_CombatClientEffectComponent.BP_CombatClientEffectComponent_C'",
+    "Flags": "RF_Public | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "BP_CombatStateChangeComponent_C",
+    "Name": "CombatStateChangeComponent",
+    "Outer": "Default__BP_AutoVentilator_C",
+    "Class": "BlueprintGeneratedClass'EM/Content/BluePrints/Item/BP_CombatStateChangeComponent.BP_CombatStateChangeComponent_C'",
+    "Flags": "RF_Public | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "BP_FXComponent_C",
+    "Name": "BP_FXComponent",
+    "Outer": "Default__BP_AutoVentilator_C",
+    "Class": "BlueprintGeneratedClass'EM/Content/BluePrints/Char/BP_FXComponent.BP_FXComponent_C'",
+    "Flags": "RF_Public | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "SceneComponent",
+    "Name": "DefaultSceneRoot_GEN_VARIABLE",
+    "Outer": "BP_AutoVentilator_C",
+    "Class": "UScriptClass'SceneComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Mobility": "EComponentMobility::Static"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_0",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'SceneComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "SceneComponent'BP_AutoVentilator_C:DefaultSceneRoot_GEN_VARIABLE'",
+        "ObjectPath": "EM/Content/BluePrints/Item/Temple/BP_AutoVentilator.10"
+      },
+      "ChildNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_AutoVentilator_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectPath": "EM/Content/BluePrints/Item/Temple/BP_AutoVentilator.12"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_AutoVentilator_C:SimpleConstructionScript_0.SCS_Node_4'",
+          "ObjectPath": "EM/Content/BluePrints/Item/Temple/BP_AutoVentilator.13"
+        }
+      ],
+      "VariableGuid": "B722A093-44A8B27D-DC306A89-3287CE58",
+      "InternalVariableName": "DefaultSceneRoot"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_3",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'StaticMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "StaticMeshComponent'BP_AutoVentilator_C:SM_Ventilator_Cover_01_GEN_VARIABLE'",
+        "ObjectPath": "EM/Content/BluePrints/Item/Temple/BP_AutoVentilator.17"
+      },
+      "VariableGuid": "3C9EC799-49FD9313-22EC958D-46454B3D",
+      "InternalVariableName": "SM_Ventilator_Cover_01"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_4",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'StaticMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "StaticMeshComponent'BP_AutoVentilator_C:SM_Ventilator_Cover_02_GEN_VARIABLE'",
+        "ObjectPath": "EM/Content/BluePrints/Item/Temple/BP_AutoVentilator.18"
+      },
+      "ChildNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_AutoVentilator_C:SimpleConstructionScript_0.SCS_Node_6'",
+          "ObjectPath": "EM/Content/BluePrints/Item/Temple/BP_AutoVentilator.14"
+        }
+      ],
+      "VariableGuid": "45934E67-472F558E-894CA3A3-E925E556",
+      "InternalVariableName": "SM_Ventilator_Cover_02"
+    }
+  },
+  {
+    "Type": "SCS_Node",
+    "Name": "SCS_Node_6",
+    "Outer": "SimpleConstructionScript_0",
+    "Class": "UScriptClass'SCS_Node'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ComponentClass": {
+        "ObjectName": "Class'StaticMeshComponent'",
+        "ObjectPath": "/Script/Engine"
+      },
+      "ComponentTemplate": {
+        "ObjectName": "StaticMeshComponent'BP_AutoVentilator_C:SM_TempleVentilator_01_GEN_VARIABLE'",
+        "ObjectPath": "EM/Content/BluePrints/Item/Temple/BP_AutoVentilator.16"
+      },
+      "VariableGuid": "32BD46CD-438A9E12-0BC148A1-4E84EB5C",
+      "InternalVariableName": "SM_TempleVentilator_01"
+    }
+  },
+  {
+    "Type": "SimpleConstructionScript",
+    "Name": "SimpleConstructionScript_0",
+    "Outer": "BP_AutoVentilator_C",
+    "Class": "UScriptClass'SimpleConstructionScript'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "RootNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_AutoVentilator_C:SimpleConstructionScript_0.SCS_Node_0'",
+          "ObjectPath": "EM/Content/BluePrints/Item/Temple/BP_AutoVentilator.11"
+        }
+      ],
+      "AllNodes": [
+        {
+          "ObjectName": "SCS_Node'BP_AutoVentilator_C:SimpleConstructionScript_0.SCS_Node_0'",
+          "ObjectPath": "EM/Content/BluePrints/Item/Temple/BP_AutoVentilator.11"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_AutoVentilator_C:SimpleConstructionScript_0.SCS_Node_3'",
+          "ObjectPath": "EM/Content/BluePrints/Item/Temple/BP_AutoVentilator.12"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_AutoVentilator_C:SimpleConstructionScript_0.SCS_Node_4'",
+          "ObjectPath": "EM/Content/BluePrints/Item/Temple/BP_AutoVentilator.13"
+        },
+        {
+          "ObjectName": "SCS_Node'BP_AutoVentilator_C:SimpleConstructionScript_0.SCS_Node_6'",
+          "ObjectPath": "EM/Content/BluePrints/Item/Temple/BP_AutoVentilator.14"
+        }
+      ],
+      "DefaultSceneRootNode": {
+        "ObjectName": "SCS_Node'BP_AutoVentilator_C:SimpleConstructionScript_0.SCS_Node_0'",
+        "ObjectPath": "EM/Content/BluePrints/Item/Temple/BP_AutoVentilator.11"
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "SM_TempleVentilator_01_GEN_VARIABLE",
+    "Outer": "BP_AutoVentilator_C",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'SM_TempleVentilator_01'",
+        "ObjectPath": "EM/Content/Asset/Scene/EN000_Special/Temple/Mesh/SM_TempleVentilator_01.2"
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": -5.197525E-05,
+        "Roll": 0.0
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "SM_Ventilator_Cover_01_GEN_VARIABLE",
+    "Outer": "BP_AutoVentilator_C",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'SM_Ventilator_Cover_01'",
+        "ObjectPath": "EM/Content/Asset/Scene/EN000_Special/Temple/Mesh/SM_Ventilator_Cover_01.2"
+      },
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": -205.0,
+        "Z": 400.0
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": 90.00005,
+        "Roll": 0.0
+      }
+    }
+  },
+  {
+    "Type": "StaticMeshComponent",
+    "Name": "SM_Ventilator_Cover_02_GEN_VARIABLE",
+    "Outer": "BP_AutoVentilator_C",
+    "Class": "UScriptClass'StaticMeshComponent'",
+    "Flags": "RF_Public | RF_Transactional | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "StaticMesh": {
+        "ObjectName": "StaticMesh'SM_Ventilator_Cover_02'",
+        "ObjectPath": "EM/Content/Asset/Scene/EN000_Special/Temple/Mesh/SM_Ventilator_Cover_02.2"
+      },
+      "RelativeLocation": {
+        "X": 0.0,
+        "Y": -205.0,
+        "Z": 400.0
+      },
+      "RelativeRotation": {
+        "Pitch": 0.0,
+        "Yaw": 90.000114,
+        "Roll": 0.0
+      }
+    }
+  }
+]

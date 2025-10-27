@@ -1,0 +1,186 @@
+[
+  {
+    "Type": "Function",
+    "Name": "ExecuteUbergraph_BTTask_TargetSelf",
+    "Outer": "BTTask_TargetSelf_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "ChildProperties": [
+      {
+        "Type": "IntProperty",
+        "Name": "EntryPoint",
+        "Flags": "RF_Public",
+        "ElementSize": 4,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm"
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_Event_OwnerController",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'AIController'",
+          "ObjectPath": "/Script/AIModule"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_Event_ControlledPawn",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'Pawn'",
+          "ObjectPath": "/Script/Engine"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "K2Node_DynamicCast_AsMonster_Character",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyClass": {
+          "ObjectName": "Class'MonsterCharacter'",
+          "ObjectPath": "/Script/EM"
+        }
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "K2Node_DynamicCast_bSuccess",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      },
+      {
+        "Type": "BoolProperty",
+        "Name": "CallFunc_BBSetTarget_ReturnValue",
+        "Flags": "RF_Public",
+        "ElementSize": 1,
+        "FieldSize": 1,
+        "ByteOffset": 0,
+        "ByteMask": 1,
+        "FieldMask": 255,
+        "BoolSize": 1,
+        "bIsNativeBool": true
+      }
+    ],
+    "FunctionFlags": "FUNC_Final | FUNC_UbergraphFunction"
+  },
+  {
+    "Type": "Function",
+    "Name": "ReceiveExecuteAI",
+    "Outer": "BTTask_TargetSelf_C",
+    "Class": "UScriptClass'Function'",
+    "Flags": "RF_Public | RF_WasLoaded | RF_LoadCompleted",
+    "SuperStruct": {
+      "ObjectName": "Function'BTTask_BlueprintBase:ReceiveExecuteAI'",
+      "ObjectPath": "/Script/AIModule"
+    },
+    "ChildProperties": [
+      {
+        "Type": "ObjectProperty",
+        "Name": "OwnerController",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "PropertyClass": {
+          "ObjectName": "Class'AIController'",
+          "ObjectPath": "/Script/AIModule"
+        }
+      },
+      {
+        "Type": "ObjectProperty",
+        "Name": "ControlledPawn",
+        "Flags": "RF_Public",
+        "ElementSize": 8,
+        "PropertyFlags": "BlueprintVisible | BlueprintReadOnly | Parm",
+        "PropertyClass": {
+          "ObjectName": "Class'Pawn'",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "FunctionFlags": "FUNC_Event | FUNC_Protected | FUNC_BlueprintEvent"
+  },
+  {
+    "Type": "BlueprintGeneratedClass",
+    "Name": "BTTask_TargetSelf_C",
+    "Class": "UScriptClass'BlueprintGeneratedClass'",
+    "Super": {
+      "ObjectName": "BlueprintGeneratedClass'BTTask_PhantomTestBase_C'",
+      "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/PhantomTest/BTTask_PhantomTestBase.0"
+    },
+    "Flags": "RF_Public | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "UberGraphFunction": {
+        "ObjectName": "Function'BTTask_TargetSelf_C:ExecuteUbergraph_BTTask_TargetSelf'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/PhantomTest/BTTask_TargetSelf.0"
+      }
+    },
+    "SuperStruct": {
+      "ObjectName": "BlueprintGeneratedClass'BTTask_PhantomTestBase_C'",
+      "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/PhantomTest/BTTask_PhantomTestBase.0"
+    },
+    "Children": [
+      {
+        "ObjectName": "Function'BTTask_TargetSelf_C:ReceiveExecuteAI'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/PhantomTest/BTTask_TargetSelf.1"
+      },
+      {
+        "ObjectName": "Function'BTTask_TargetSelf_C:ExecuteUbergraph_BTTask_TargetSelf'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/PhantomTest/BTTask_TargetSelf.0"
+      }
+    ],
+    "ChildProperties": [
+      {
+        "Type": "StructProperty",
+        "Name": "UberGraphFrame",
+        "Flags": "RF_Public | RF_LoadCompleted",
+        "ElementSize": 16,
+        "PropertyFlags": "Transient | DuplicateTransient",
+        "Struct": {
+          "ObjectName": "ScriptStruct'PointerToUberGraphFrame'",
+          "ObjectPath": "/Script/Engine"
+        }
+      }
+    ],
+    "FuncMap": {
+      "ExecuteUbergraph_BTTask_TargetSelf": {
+        "ObjectName": "Function'BTTask_TargetSelf_C:ExecuteUbergraph_BTTask_TargetSelf'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/PhantomTest/BTTask_TargetSelf.0"
+      },
+      "ReceiveExecuteAI": {
+        "ObjectName": "Function'BTTask_TargetSelf_C:ReceiveExecuteAI'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/PhantomTest/BTTask_TargetSelf.1"
+      }
+    },
+    "ClassFlags": "CLASS_Optional | CLASS_ReplicationDataIsSetUp | CLASS_CompiledFromBlueprint",
+    "ClassWithin": {
+      "ObjectName": "Class'Object'",
+      "ObjectPath": "/Script/CoreUObject"
+    },
+    "ClassConfigName": "Game",
+    "bCooked": true,
+    "ClassDefaultObject": {
+      "ObjectName": "BTTask_TargetSelf_C'Default__BTTask_TargetSelf_C'",
+      "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/PhantomTest/BTTask_TargetSelf.3"
+    }
+  },
+  {
+    "Type": "BTTask_TargetSelf_C",
+    "Name": "Default__BTTask_TargetSelf_C",
+    "Class": "BlueprintGeneratedClass'EM/Content/AssetDesign/AI/Z_Misc_Test/PhantomTest/BTTask_TargetSelf.BTTask_TargetSelf_C'",
+    "Template": {
+      "ObjectName": "BTTask_PhantomTestBase_C'Default__BTTask_PhantomTestBase_C'",
+      "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/PhantomTest/BTTask_PhantomTestBase.1"
+    },
+    "Flags": "RF_Public | RF_ClassDefaultObject | RF_ArchetypeObject | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "UberGraphFrame": {}
+    }
+  }
+]

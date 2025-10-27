@@ -1,0 +1,218 @@
+[
+  {
+    "Type": "AIDataProvider_QueryParams",
+    "Name": "AIDataProvider_QueryParams_0",
+    "Outer": "EnvQueryTest_EMDistance_13",
+    "Class": "UScriptClass'AIDataProvider_QueryParams'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "ParamName": "EMDistance.ScoringFactor"
+    }
+  },
+  {
+    "Type": "EnvQuery",
+    "Name": "EQS_BossTuosiSkill03_F",
+    "Class": "UScriptClass'EnvQuery'",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "QueryName": "EQS_BossTuosiSkill03_B_2",
+      "Options": [
+        {
+          "ObjectName": "EnvQueryOption'EQS_BossTuosiSkill03_F:EnvQueryOption_1'",
+          "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Z_EnvQuery/EQS_BossTuosiSkill03_F.3"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "EnvQueryGenerator_EMOnCircle",
+    "Name": "EnvQueryGenerator_EMOnCircle_0",
+    "Outer": "EQS_BossTuosiSkill03_F",
+    "Class": "UScriptClass'EnvQueryGenerator_EMOnCircle'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "CircleRadius": {
+        "DataField": "FloatValue"
+      },
+      "SpaceBetween": {
+        "DefaultValue": 25.0
+      },
+      "NumberOfPoints": {
+        "DefaultValue": 100
+      },
+      "PointOnCircleSpacingMethod": "EEMPointOnCircleSpacingMethod::ByNumberOfPoints",
+      "TraceData": {
+        "VersionNum": 1,
+        "SerializedChannel": "ECC_Visibility",
+        "TraceMode": "EEnvQueryTrace::None"
+      },
+      "ProjectionData": {
+        "VersionNum": 1,
+        "ProjectDown": 500.0,
+        "ProjectUp": 10.0,
+        "SerializedChannel": "ECC_Visibility",
+        "TraceMode": "EEnvQueryTrace::Navigation"
+      },
+      "VerNum": 1
+    }
+  },
+  {
+    "Type": "EnvQueryOption",
+    "Name": "EnvQueryOption_1",
+    "Outer": "EQS_BossTuosiSkill03_F",
+    "Class": "UScriptClass'EnvQueryOption'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Generator": {
+        "ObjectName": "EnvQueryGenerator_EMOnCircle'EQS_BossTuosiSkill03_F:EnvQueryGenerator_EMOnCircle_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Z_EnvQuery/EQS_BossTuosiSkill03_F.2"
+      },
+      "Tests": [
+        {
+          "ObjectName": "EnvQueryTest_EMDistance'EQS_BossTuosiSkill03_F:EnvQueryTest_EMDistance_13'",
+          "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Z_EnvQuery/EQS_BossTuosiSkill03_F.5"
+        },
+        {
+          "ObjectName": "EnvQueryTest_EMDot'EQS_BossTuosiSkill03_F:EnvQueryTest_EMDot_0'",
+          "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Z_EnvQuery/EQS_BossTuosiSkill03_F.6"
+        },
+        {
+          "ObjectName": "EnvQueryTest_EMOverlap'EQS_BossTuosiSkill03_F:EnvQueryTest_EMOverlap_0'",
+          "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Z_EnvQuery/EQS_BossTuosiSkill03_F.7"
+        },
+        {
+          "ObjectName": "EnvQueryTest_EMDistance'EQS_BossTuosiSkill03_F:EnvQueryTest_EMDistance_0'",
+          "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Z_EnvQuery/EQS_BossTuosiSkill03_F.4"
+        },
+        {
+          "ObjectName": "EnvQueryTest_EMPathfinding'EQS_BossTuosiSkill03_F:EnvQueryTest_EMPathfinding_0'",
+          "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Z_EnvQuery/EQS_BossTuosiSkill03_F.8"
+        }
+      ]
+    }
+  },
+  {
+    "Type": "EnvQueryTest_EMDistance",
+    "Name": "EnvQueryTest_EMDistance_0",
+    "Outer": "EQS_BossTuosiSkill03_F",
+    "Class": "UScriptClass'EnvQueryTest_EMDistance'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TestMode": "EEMEnvTestDistance::Distance2D",
+      "TestOrder": 3,
+      "TestPurpose": "EEnvTestPurpose::Score",
+      "FloatValueMin": {
+        "DataField": "FloatValue"
+      },
+      "FloatValueMax": {
+        "DataField": "FloatValue"
+      },
+      "ScoringFactor": {
+        "DataField": "FloatValue"
+      },
+      "VerNum": 1
+    }
+  },
+  {
+    "Type": "EnvQueryTest_EMDistance",
+    "Name": "EnvQueryTest_EMDistance_13",
+    "Outer": "EQS_BossTuosiSkill03_F",
+    "Class": "UScriptClass'EnvQueryTest_EMDistance'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TestMode": "EEMEnvTestDistance::Distance2D",
+      "DistanceTo": {
+        "ObjectName": "BlueprintGeneratedClass'MonBornLocEQS_CurrentBoss0_C'",
+        "ObjectPath": "EM/Content/BluePrints/AI/EQSContext/MonBornLocEQS_CurrentBoss0.1"
+      },
+      "TestPurpose": "EEnvTestPurpose::Filter",
+      "FloatValueMax": {
+        "DefaultValue": 1900.0
+      },
+      "ScoringFactor": {
+        "DataBinding": {
+          "ObjectName": "AIDataProvider_QueryParams'EQS_BossTuosiSkill03_F:EnvQueryTest_EMDistance_13.AIDataProvider_QueryParams_0'",
+          "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Z_EnvQuery/EQS_BossTuosiSkill03_F.0"
+        },
+        "DataField": "FloatValue"
+      },
+      "VerNum": 1
+    }
+  },
+  {
+    "Type": "EnvQueryTest_EMDot",
+    "Name": "EnvQueryTest_EMDot_0",
+    "Outer": "EQS_BossTuosiSkill03_F",
+    "Class": "UScriptClass'EnvQueryTest_EMDot'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "LineA": {
+        "LineFrom": {
+          "ObjectName": "Class'EnvQueryContext_Querier'",
+          "ObjectPath": "/Script/AIModule"
+        },
+        "LineTo": {
+          "ObjectName": "Class'EnvQueryContext_Item'",
+          "ObjectPath": "/Script/AIModule"
+        },
+        "DirMode": "EEnvDirection::TwoPoints"
+      },
+      "LineB": {
+        "LineTo": {
+          "ObjectName": "BlueprintGeneratedClass'MonsterSelfForwardEQS_C'",
+          "ObjectPath": "EM/Content/BluePrints/AI/EQSContext/MonsterSelfForwardEQS.1"
+        }
+      },
+      "TestMode": "EEnvTestDot::Dot2D",
+      "TestOrder": 1,
+      "TestPurpose": "EEnvTestPurpose::Filter",
+      "FloatValueMin": {
+        "DefaultValue": 0.99
+      },
+      "FloatValueMax": {
+        "DefaultValue": 1.0
+      },
+      "VerNum": 1
+    }
+  },
+  {
+    "Type": "EnvQueryTest_EMOverlap",
+    "Name": "EnvQueryTest_EMOverlap_0",
+    "Outer": "EQS_BossTuosiSkill03_F",
+    "Class": "UScriptClass'EnvQueryTest_EMOverlap'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "OverlapData": {
+        "ExtentX": 40.0,
+        "ExtentY": 40.0,
+        "ExtentZ": 40.0,
+        "ShapeOffset": {
+          "X": 0.0,
+          "Y": 0.0,
+          "Z": 90.0
+        },
+        "OverlapChannel": "ECC_GameTraceChannel6",
+        "OverlapShape": "EEnvOverlapShape::Capsule",
+        "bSkipOverlapQuerier": true
+      },
+      "TestOrder": 2,
+      "TestPurpose": "EEnvTestPurpose::Filter",
+      "BoolValue": {
+        "DefaultValue": false
+      },
+      "VerNum": 1
+    }
+  },
+  {
+    "Type": "EnvQueryTest_EMPathfinding",
+    "Name": "EnvQueryTest_EMPathfinding_0",
+    "Outer": "EQS_BossTuosiSkill03_F",
+    "Class": "UScriptClass'EnvQueryTest_EMPathfinding'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TestOrder": 4,
+      "TestPurpose": "EEnvTestPurpose::Filter",
+      "VerNum": 1
+    }
+  }
+]

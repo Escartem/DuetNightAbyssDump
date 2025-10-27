@@ -1,0 +1,1229 @@
+[
+  {
+    "Type": "BehaviorTree",
+    "Name": "BT_Boss_LiecheHand",
+    "Class": "UScriptClass'BehaviorTree'",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "RootNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_LiecheHand:BTComposite_Selector_3'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_19_Lieche/BT_Boss_LiecheHand.5"
+      },
+      "BlackboardAsset": {
+        "ObjectName": "BlackboardData'BB_Boss_Lieche'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_19_Lieche/BB_Boss_Lieche.0"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Rate",
+    "Name": "BTComposite_Rate_0",
+    "Outer": "BT_Boss_LiecheHand",
+    "Class": "UScriptClass'BTComposite_Rate'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Rates": [
+        1,
+        1
+      ],
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_Boss_LiecheHand:BTComposite_Sequence_1'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_19_Lieche/BT_Boss_LiecheHand.10"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_Boss_LiecheHand:BTComposite_Sequence_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_19_Lieche/BT_Boss_LiecheHand.9"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_LiecheHand'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_19_Lieche/BT_Boss_LiecheHand.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_LiecheHand:BTComposite_Selector_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_19_Lieche/BT_Boss_LiecheHand.2"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_0",
+    "Outer": "BT_Boss_LiecheHand",
+    "Class": "UScriptClass'BTComposite_Selector'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Rate'BT_Boss_LiecheHand:BTComposite_Rate_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_19_Lieche/BT_Boss_LiecheHand.1"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Boss_LiecheHand:BTDecorator_Blackboard_5'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_19_Lieche/BT_Boss_LiecheHand.23"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_Boss_LiecheHand:BTComposite_Sequence_2'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_19_Lieche/BT_Boss_LiecheHand.14"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Boss_LiecheHand:BTDecorator_Blackboard_1'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_19_Lieche/BT_Boss_LiecheHand.17"
+            }
+          ],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_LiecheHand'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_19_Lieche/BT_Boss_LiecheHand.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_LiecheHand:BTComposite_Sequence_4'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_19_Lieche/BT_Boss_LiecheHand.15"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_1",
+    "Outer": "BT_Boss_LiecheHand",
+    "Class": "UScriptClass'BTComposite_Selector'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_UseSkill'BT_Boss_LiecheHand:BTTask_UseSkill_2'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_19_Lieche/BT_Boss_LiecheHand.36"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_LiecheHand'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_19_Lieche/BT_Boss_LiecheHand.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_LiecheHand:BTComposite_Selector_45'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_19_Lieche/BT_Boss_LiecheHand.7"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_2",
+    "Outer": "BT_Boss_LiecheHand",
+    "Class": "UScriptClass'BTComposite_Selector'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_UseSkill'BT_Boss_LiecheHand:BTTask_UseSkill_1'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_19_Lieche/BT_Boss_LiecheHand.35"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_LiecheHand'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_19_Lieche/BT_Boss_LiecheHand.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_LiecheHand:BTComposite_Selector_45'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_19_Lieche/BT_Boss_LiecheHand.7"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_3",
+    "Outer": "BT_Boss_LiecheHand",
+    "Class": "UScriptClass'BTComposite_Selector'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector'BT_Boss_LiecheHand:BTComposite_Selector_45'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_19_Lieche/BT_Boss_LiecheHand.7"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Boss_LiecheHand:BTDecorator_Blackboard_7'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_19_Lieche/BT_Boss_LiecheHand.24"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait'BT_Boss_LiecheHand:BTTask_Wait_1'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_19_Lieche/BT_Boss_LiecheHand.41"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Boss_LiecheHand:BTDecorator_Blackboard_3'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_19_Lieche/BT_Boss_LiecheHand.21"
+            }
+          ],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_LiecheHand'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_19_Lieche/BT_Boss_LiecheHand.0"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_43",
+    "Outer": "BT_Boss_LiecheHand",
+    "Class": "UScriptClass'BTComposite_Selector'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_Boss_LiecheHand:BTComposite_Sequence_4'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_19_Lieche/BT_Boss_LiecheHand.15"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Boss_LiecheHand:BTDecorator_Blackboard_8'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_19_Lieche/BT_Boss_LiecheHand.25"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_Boss_LiecheHand:BTComposite_Sequence_127'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_19_Lieche/BT_Boss_LiecheHand.13"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Boss_LiecheHand:BTDecorator_Blackboard_129'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_19_Lieche/BT_Boss_LiecheHand.19"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_Boss_LiecheHand:BTComposite_Sequence_107'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_19_Lieche/BT_Boss_LiecheHand.11"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Boss_LiecheHand:BTDecorator_Blackboard_110'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_19_Lieche/BT_Boss_LiecheHand.18"
+            }
+          ],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_LiecheHand'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_19_Lieche/BT_Boss_LiecheHand.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_LiecheHand:BTComposite_Selector_45'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_19_Lieche/BT_Boss_LiecheHand.7"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_45",
+    "Outer": "BT_Boss_LiecheHand",
+    "Class": "UScriptClass'BTComposite_Selector'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector'BT_Boss_LiecheHand:BTComposite_Selector_2'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_19_Lieche/BT_Boss_LiecheHand.4"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Boss_LiecheHand:BTDecorator_Blackboard_0'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_19_Lieche/BT_Boss_LiecheHand.16"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector'BT_Boss_LiecheHand:BTComposite_Selector_1'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_19_Lieche/BT_Boss_LiecheHand.3"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Boss_LiecheHand:BTDecorator_Blackboard_2'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_19_Lieche/BT_Boss_LiecheHand.20"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector'BT_Boss_LiecheHand:BTComposite_Selector_43'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_19_Lieche/BT_Boss_LiecheHand.6"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Boss_LiecheHand:BTDecorator_Blackboard_4'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_19_Lieche/BT_Boss_LiecheHand.22"
+            }
+          ],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_LiecheHand'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_19_Lieche/BT_Boss_LiecheHand.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_LiecheHand:BTComposite_Selector_3'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_19_Lieche/BT_Boss_LiecheHand.5"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_52",
+    "Outer": "BT_Boss_LiecheHand",
+    "Class": "UScriptClass'BTComposite_Selector'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_Boss_LiecheHand:BTComposite_Sequence_126'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_19_Lieche/BT_Boss_LiecheHand.12"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_GetTarget'BT_Boss_LiecheHand:BTTask_GetTarget_9'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_19_Lieche/BT_Boss_LiecheHand.31"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_LiecheHand'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_19_Lieche/BT_Boss_LiecheHand.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_LiecheHand:BTComposite_Sequence_4'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_19_Lieche/BT_Boss_LiecheHand.15"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_0",
+    "Outer": "BT_Boss_LiecheHand",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_UseSkill'BT_Boss_LiecheHand:BTTask_UseSkill_3'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_19_Lieche/BT_Boss_LiecheHand.37"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_UseSkill'BT_Boss_LiecheHand:BTTask_UseSkill_4'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_19_Lieche/BT_Boss_LiecheHand.38"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait'BT_Boss_LiecheHand:BTTask_Wait_2'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_19_Lieche/BT_Boss_LiecheHand.42"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_LiecheHand'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_19_Lieche/BT_Boss_LiecheHand.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Rate'BT_Boss_LiecheHand:BTComposite_Rate_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_19_Lieche/BT_Boss_LiecheHand.1"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_1",
+    "Outer": "BT_Boss_LiecheHand",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_UseSkill'BT_Boss_LiecheHand:BTTask_UseSkill_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_19_Lieche/BT_Boss_LiecheHand.34"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait'BT_Boss_LiecheHand:BTTask_Wait_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_19_Lieche/BT_Boss_LiecheHand.40"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_LiecheHand'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_19_Lieche/BT_Boss_LiecheHand.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Rate'BT_Boss_LiecheHand:BTComposite_Rate_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_19_Lieche/BT_Boss_LiecheHand.1"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_107",
+    "Outer": "BT_Boss_LiecheHand",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait'BT_Boss_LiecheHand:BTTask_Wait_51'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_19_Lieche/BT_Boss_LiecheHand.44"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_LiecheHand'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_19_Lieche/BT_Boss_LiecheHand.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_LiecheHand:BTComposite_Selector_43'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_19_Lieche/BT_Boss_LiecheHand.6"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_126",
+    "Outer": "BT_Boss_LiecheHand",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_FilterTargetsByDis'BT_Boss_LiecheHand:BTTask_FilterTargetsByDis_4'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_19_Lieche/BT_Boss_LiecheHand.28"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_FilterTargetsByType'BT_Boss_LiecheHand:BTTask_FilterTargetsByType_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_19_Lieche/BT_Boss_LiecheHand.30"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_FilterTargetsByLiving'BT_Boss_LiecheHand:BTTask_FilterTargetsByLiving_4'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_19_Lieche/BT_Boss_LiecheHand.29"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_LastFilterTargets'BT_Boss_LiecheHand:BTTask_LastFilterTargets_4'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_19_Lieche/BT_Boss_LiecheHand.32"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_LiecheHand'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_19_Lieche/BT_Boss_LiecheHand.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_LiecheHand:BTComposite_Selector_52'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_19_Lieche/BT_Boss_LiecheHand.8"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_127",
+    "Outer": "BT_Boss_LiecheHand",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_SetTarget'BT_Boss_LiecheHand:BTTask_SetTarget_4'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_19_Lieche/BT_Boss_LiecheHand.33"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_LiecheHand'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_19_Lieche/BT_Boss_LiecheHand.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_LiecheHand:BTComposite_Selector_43'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_19_Lieche/BT_Boss_LiecheHand.6"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_2",
+    "Outer": "BT_Boss_LiecheHand",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_UseSkill'BT_Boss_LiecheHand:BTTask_UseSkill_5'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_19_Lieche/BT_Boss_LiecheHand.39"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait'BT_Boss_LiecheHand:BTTask_Wait_3'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_19_Lieche/BT_Boss_LiecheHand.43"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_LiecheHand'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_19_Lieche/BT_Boss_LiecheHand.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_LiecheHand:BTComposite_Selector_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_19_Lieche/BT_Boss_LiecheHand.2"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_4",
+    "Outer": "BT_Boss_LiecheHand",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector'BT_Boss_LiecheHand:BTComposite_Selector_52'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_19_Lieche/BT_Boss_LiecheHand.8"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector'BT_Boss_LiecheHand:BTComposite_Selector_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_19_Lieche/BT_Boss_LiecheHand.2"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "Services": [
+        {
+          "ObjectName": "BTService_EnemyVision'BT_Boss_LiecheHand:BTService_EnemyVision_1'",
+          "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_19_Lieche/BT_Boss_LiecheHand.27"
+        },
+        {
+          "ObjectName": "BTService_BBValueDis'BT_Boss_LiecheHand:BTService_BBValueDis_1'",
+          "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_19_Lieche/BT_Boss_LiecheHand.26"
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_LiecheHand'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_19_Lieche/BT_Boss_LiecheHand.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_LiecheHand:BTComposite_Selector_43'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_19_Lieche/BT_Boss_LiecheHand.6"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_0",
+    "Outer": "BT_Boss_LiecheHand",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "IntValue": 2,
+      "CachedDescription": "FixState 等于 InBeingFixedState",
+      "BlackboardKey": {
+        "SelectedKeyName": "FixState"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_LiecheHand'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_19_Lieche/BT_Boss_LiecheHand.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_LiecheHand:BTComposite_Selector_45'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_19_Lieche/BT_Boss_LiecheHand.7"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_1",
+    "Outer": "BT_Boss_LiecheHand",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "FloatValue": 1200.0,
+      "CachedDescription": "TickTargetDis 大于 1200.000000",
+      "OperationType": 4,
+      "BlackboardKey": {
+        "SelectedKeyName": "TickTargetDis"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_LiecheHand'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_19_Lieche/BT_Boss_LiecheHand.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_LiecheHand:BTComposite_Selector_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_19_Lieche/BT_Boss_LiecheHand.2"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_110",
+    "Outer": "BT_Boss_LiecheHand",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "CachedDescription": "DecisionState 等于 Out Battle",
+      "BlackboardKey": {
+        "SelectedKeyName": "DecisionState"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::Self",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_LiecheHand'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_19_Lieche/BT_Boss_LiecheHand.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_LiecheHand:BTComposite_Selector_43'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_19_Lieche/BT_Boss_LiecheHand.6"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_129",
+    "Outer": "BT_Boss_LiecheHand",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "IntValue": 1,
+      "CachedDescription": "DecisionState 等于 Alert",
+      "BlackboardKey": {
+        "SelectedKeyName": "DecisionState"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::Both",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_LiecheHand'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_19_Lieche/BT_Boss_LiecheHand.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_LiecheHand:BTComposite_Selector_43'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_19_Lieche/BT_Boss_LiecheHand.6"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_2",
+    "Outer": "BT_Boss_LiecheHand",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "IntValue": 1,
+      "CachedDescription": "FixState 等于 InFixState",
+      "BlackboardKey": {
+        "SelectedKeyName": "FixState"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::Self",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_LiecheHand'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_19_Lieche/BT_Boss_LiecheHand.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_LiecheHand:BTComposite_Selector_45'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_19_Lieche/BT_Boss_LiecheHand.7"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_3",
+    "Outer": "BT_Boss_LiecheHand",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "IntValue": 1,
+      "CachedDescription": "ActionMode 等于 Hitted",
+      "BlackboardKey": {
+        "SelectedKeyName": "ActionMode"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::Self",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_LiecheHand'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_19_Lieche/BT_Boss_LiecheHand.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_LiecheHand:BTComposite_Selector_3'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_19_Lieche/BT_Boss_LiecheHand.5"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_4",
+    "Outer": "BT_Boss_LiecheHand",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "CachedDescription": "FixState 等于 InNormalState",
+      "BlackboardKey": {
+        "SelectedKeyName": "FixState"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::Self",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_LiecheHand'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_19_Lieche/BT_Boss_LiecheHand.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_LiecheHand:BTComposite_Selector_45'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_19_Lieche/BT_Boss_LiecheHand.7"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_5",
+    "Outer": "BT_Boss_LiecheHand",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "FloatValue": 1200.0,
+      "CachedDescription": "TickTargetDis 小于或等于 1200.000000",
+      "OperationType": 3,
+      "BlackboardKey": {
+        "SelectedKeyName": "TickTargetDis"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_LiecheHand'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_19_Lieche/BT_Boss_LiecheHand.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_LiecheHand:BTComposite_Selector_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_19_Lieche/BT_Boss_LiecheHand.2"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_7",
+    "Outer": "BT_Boss_LiecheHand",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "CachedDescription": "ActionMode 等于 Active",
+      "BlackboardKey": {
+        "SelectedKeyName": "ActionMode"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::Self",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_LiecheHand'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_19_Lieche/BT_Boss_LiecheHand.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_LiecheHand:BTComposite_Selector_3'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_19_Lieche/BT_Boss_LiecheHand.5"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_8",
+    "Outer": "BT_Boss_LiecheHand",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "IntValue": 2,
+      "CachedDescription": "DecisionState 等于 Battle",
+      "BlackboardKey": {
+        "SelectedKeyName": "DecisionState"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::Both",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_LiecheHand'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_19_Lieche/BT_Boss_LiecheHand.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_LiecheHand:BTComposite_Selector_43'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_19_Lieche/BT_Boss_LiecheHand.6"
+      }
+    }
+  },
+  {
+    "Type": "BTService_BBValueDis",
+    "Name": "BTService_BBValueDis_1",
+    "Outer": "BT_Boss_LiecheHand",
+    "Class": "UScriptClass'BTService_BBValueDis'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "BBName": "Target",
+      "Interval": 0.2,
+      "RandomDeviation": 0.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_LiecheHand'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_19_Lieche/BT_Boss_LiecheHand.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_LiecheHand:BTComposite_Sequence_4'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_19_Lieche/BT_Boss_LiecheHand.15"
+      }
+    }
+  },
+  {
+    "Type": "BTService_EnemyVision",
+    "Name": "BTService_EnemyVision_1",
+    "Outer": "BT_Boss_LiecheHand",
+    "Class": "UScriptClass'BTService_EnemyVision'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "FVisionDistance": 1000.0,
+      "FVisionAngle": 360.0,
+      "Interval": 0.2,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_LiecheHand'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_19_Lieche/BT_Boss_LiecheHand.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_LiecheHand:BTComposite_Sequence_4'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_19_Lieche/BT_Boss_LiecheHand.15"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_FilterTargetsByDis",
+    "Name": "BTTask_FilterTargetsByDis_4",
+    "Outer": "BT_Boss_LiecheHand",
+    "Class": "UScriptClass'BTTask_FilterTargetsByDis'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "MaxDis": 10000.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_LiecheHand'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_19_Lieche/BT_Boss_LiecheHand.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_LiecheHand:BTComposite_Sequence_126'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_19_Lieche/BT_Boss_LiecheHand.12"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_FilterTargetsByLiving",
+    "Name": "BTTask_FilterTargetsByLiving_4",
+    "Outer": "BT_Boss_LiecheHand",
+    "Class": "UScriptClass'BTTask_FilterTargetsByLiving'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TypeOfFilterList": "ETypeOfFilterList::AfterFilter",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_LiecheHand'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_19_Lieche/BT_Boss_LiecheHand.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_LiecheHand:BTComposite_Sequence_126'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_19_Lieche/BT_Boss_LiecheHand.12"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_FilterTargetsByType",
+    "Name": "BTTask_FilterTargetsByType_0",
+    "Outer": "BT_Boss_LiecheHand",
+    "Class": "UScriptClass'BTTask_FilterTargetsByType'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TypeOfFilterType": "EHatredTargetType::Player",
+      "TypeOfFilterList": "ETypeOfFilterList::AfterFilter",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_LiecheHand'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_19_Lieche/BT_Boss_LiecheHand.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_LiecheHand:BTComposite_Sequence_126'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_19_Lieche/BT_Boss_LiecheHand.12"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_GetTarget",
+    "Name": "BTTask_GetTarget_9",
+    "Outer": "BT_Boss_LiecheHand",
+    "Class": "UScriptClass'BTTask_GetTarget'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TargetType": "EHatredTargetType::Player",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_LiecheHand'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_19_Lieche/BT_Boss_LiecheHand.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_LiecheHand:BTComposite_Selector_52'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_19_Lieche/BT_Boss_LiecheHand.8"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_LastFilterTargets",
+    "Name": "BTTask_LastFilterTargets_4",
+    "Outer": "BT_Boss_LiecheHand",
+    "Class": "UScriptClass'BTTask_LastFilterTargets'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TypeOfFilter": "ELastTargetFilterType::TargetFilterMaxHatredValue",
+      "TypeOfFilterList": "ETypeOfFilterList::AfterFilter",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_LiecheHand'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_19_Lieche/BT_Boss_LiecheHand.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_LiecheHand:BTComposite_Sequence_126'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_19_Lieche/BT_Boss_LiecheHand.12"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_SetTarget",
+    "Name": "BTTask_SetTarget_4",
+    "Outer": "BT_Boss_LiecheHand",
+    "Class": "UScriptClass'BTTask_SetTarget'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Condition": {
+        "ObjectName": "TargetCondition_Distance'BT_Boss_LiecheHand:BTTask_SetTarget_4.TargetCondition_Distance_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_19_Lieche/BT_Boss_LiecheHand.45"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_LiecheHand'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_19_Lieche/BT_Boss_LiecheHand.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_LiecheHand:BTComposite_Sequence_127'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_19_Lieche/BT_Boss_LiecheHand.13"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_UseSkill",
+    "Name": "BTTask_UseSkill_0",
+    "Outer": "BT_Boss_LiecheHand",
+    "Class": "UScriptClass'BTTask_UseSkill'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_LiecheHand'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_19_Lieche/BT_Boss_LiecheHand.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_LiecheHand:BTComposite_Sequence_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_19_Lieche/BT_Boss_LiecheHand.10"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_UseSkill",
+    "Name": "BTTask_UseSkill_1",
+    "Outer": "BT_Boss_LiecheHand",
+    "Class": "UScriptClass'BTTask_UseSkill'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SkillId": 3,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_LiecheHand'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_19_Lieche/BT_Boss_LiecheHand.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_LiecheHand:BTComposite_Selector_2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_19_Lieche/BT_Boss_LiecheHand.4"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_UseSkill",
+    "Name": "BTTask_UseSkill_2",
+    "Outer": "BT_Boss_LiecheHand",
+    "Class": "UScriptClass'BTTask_UseSkill'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SkillId": 4,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_LiecheHand'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_19_Lieche/BT_Boss_LiecheHand.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_LiecheHand:BTComposite_Selector_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_19_Lieche/BT_Boss_LiecheHand.3"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_UseSkill",
+    "Name": "BTTask_UseSkill_3",
+    "Outer": "BT_Boss_LiecheHand",
+    "Class": "UScriptClass'BTTask_UseSkill'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_LiecheHand'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_19_Lieche/BT_Boss_LiecheHand.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_LiecheHand:BTComposite_Sequence_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_19_Lieche/BT_Boss_LiecheHand.9"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_UseSkill",
+    "Name": "BTTask_UseSkill_4",
+    "Outer": "BT_Boss_LiecheHand",
+    "Class": "UScriptClass'BTTask_UseSkill'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SkillId": 2,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_LiecheHand'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_19_Lieche/BT_Boss_LiecheHand.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_LiecheHand:BTComposite_Sequence_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_19_Lieche/BT_Boss_LiecheHand.9"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_UseSkill",
+    "Name": "BTTask_UseSkill_5",
+    "Outer": "BT_Boss_LiecheHand",
+    "Class": "UScriptClass'BTTask_UseSkill'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SkillId": 2,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_LiecheHand'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_19_Lieche/BT_Boss_LiecheHand.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_LiecheHand:BTComposite_Sequence_2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_19_Lieche/BT_Boss_LiecheHand.14"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_0",
+    "Outer": "BT_Boss_LiecheHand",
+    "Class": "UScriptClass'BTTask_Wait'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "WaitTime": 4.0,
+      "RandomDeviation": 2.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_LiecheHand'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_19_Lieche/BT_Boss_LiecheHand.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_LiecheHand:BTComposite_Sequence_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_19_Lieche/BT_Boss_LiecheHand.10"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_1",
+    "Outer": "BT_Boss_LiecheHand",
+    "Class": "UScriptClass'BTTask_Wait'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_LiecheHand'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_19_Lieche/BT_Boss_LiecheHand.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Boss_LiecheHand:BTComposite_Selector_3'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_19_Lieche/BT_Boss_LiecheHand.5"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_2",
+    "Outer": "BT_Boss_LiecheHand",
+    "Class": "UScriptClass'BTTask_Wait'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "WaitTime": 4.0,
+      "RandomDeviation": 2.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_LiecheHand'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_19_Lieche/BT_Boss_LiecheHand.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_LiecheHand:BTComposite_Sequence_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_19_Lieche/BT_Boss_LiecheHand.9"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_3",
+    "Outer": "BT_Boss_LiecheHand",
+    "Class": "UScriptClass'BTTask_Wait'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "WaitTime": 4.0,
+      "RandomDeviation": 2.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_LiecheHand'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_19_Lieche/BT_Boss_LiecheHand.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_LiecheHand:BTComposite_Sequence_2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_19_Lieche/BT_Boss_LiecheHand.14"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_51",
+    "Outer": "BT_Boss_LiecheHand",
+    "Class": "UScriptClass'BTTask_Wait'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "WaitTime": 1.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Boss_LiecheHand'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_19_Lieche/BT_Boss_LiecheHand.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Boss_LiecheHand:BTComposite_Sequence_107'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Boss_19_Lieche/BT_Boss_LiecheHand.11"
+      }
+    }
+  },
+  {
+    "Type": "TargetCondition_Distance",
+    "Name": "TargetCondition_Distance_0",
+    "Outer": "BTTask_SetTarget_4",
+    "Class": "UScriptClass'TargetCondition_Distance'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Distance": 10000.0
+    }
+  }
+]

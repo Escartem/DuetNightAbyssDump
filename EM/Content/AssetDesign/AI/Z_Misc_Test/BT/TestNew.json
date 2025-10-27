@@ -1,0 +1,59 @@
+[
+  {
+    "Type": "BehaviorTree",
+    "Name": "TestNew",
+    "Class": "UScriptClass'BehaviorTree'",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "RootNode": {
+        "ObjectName": "BTComposite_Sequence'TestNew:BTComposite_Sequence_13'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/TestNew.1"
+      },
+      "BlackboardAsset": {
+        "ObjectName": "BlackboardData'TestNewBlackBoard'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/TestNewBlackBoard.0"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_13",
+    "Outer": "TestNew",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait'TestNew:BTTask_Wait_13'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/TestNew.2"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'TestNew'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/TestNew.0"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_13",
+    "Outer": "TestNew",
+    "Class": "UScriptClass'BTTask_Wait'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'TestNew'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/TestNew.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'TestNew:BTComposite_Sequence_13'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Z_Misc_Test/BT/TestNew.1"
+      }
+    }
+  }
+]

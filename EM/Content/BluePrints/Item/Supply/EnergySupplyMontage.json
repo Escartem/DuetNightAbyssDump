@@ -1,0 +1,220 @@
+[
+  {
+    "Type": "AnimMontage",
+    "Name": "EnergySupplyMontage",
+    "Class": "UScriptClass'AnimMontage'",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "CompositeSections": [
+        {
+          "SectionName": "Start",
+          "NextSectionName": "Idle",
+          "MetaData": [],
+          "LinkedMontage": {
+            "ObjectName": "AnimMontage'EnergySupplyMontage'",
+            "ObjectPath": "EM/Content/BluePrints/Item/Supply/EnergySupplyMontage.0"
+          },
+          "SlotIndex": 0,
+          "SegmentIndex": 0,
+          "LinkMethod": "EAnimLinkMethod::Absolute",
+          "CachedLinkMethod": "EAnimLinkMethod::Absolute",
+          "SegmentBeginTime": 0.0,
+          "SegmentLength": 2.0,
+          "LinkValue": 0.0,
+          "LinkedSequence": {
+            "ObjectName": "AnimSequence'Med01_Start'",
+            "ObjectPath": "EM/Content/Asset/Scene/EN001_Ailixian/Common/Porp/Common_Med01/Animation/Med01_Start.0"
+          }
+        },
+        {
+          "SectionName": "Idle",
+          "NextSectionName": "Idle",
+          "MetaData": [],
+          "LinkedMontage": {
+            "ObjectName": "AnimMontage'EnergySupplyMontage'",
+            "ObjectPath": "EM/Content/BluePrints/Item/Supply/EnergySupplyMontage.0"
+          },
+          "SlotIndex": 0,
+          "SegmentIndex": 1,
+          "LinkMethod": "EAnimLinkMethod::Absolute",
+          "CachedLinkMethod": "EAnimLinkMethod::Absolute",
+          "SegmentBeginTime": 2.0,
+          "SegmentLength": 4.0,
+          "LinkValue": 2.0,
+          "LinkedSequence": {
+            "ObjectName": "AnimSequence'Med01_Idle'",
+            "ObjectPath": "EM/Content/Asset/Scene/EN001_Ailixian/Common/Porp/Common_Med01/Animation/Med01_Idle.0"
+          }
+        },
+        {
+          "SectionName": "Stop",
+          "NextSectionName": "StopIdle",
+          "MetaData": [],
+          "LinkedMontage": {
+            "ObjectName": "AnimMontage'EnergySupplyMontage'",
+            "ObjectPath": "EM/Content/BluePrints/Item/Supply/EnergySupplyMontage.0"
+          },
+          "SlotIndex": 0,
+          "SegmentIndex": 2,
+          "LinkMethod": "EAnimLinkMethod::Absolute",
+          "CachedLinkMethod": "EAnimLinkMethod::Absolute",
+          "SegmentBeginTime": 6.0,
+          "SegmentLength": 2.0,
+          "LinkValue": 6.0,
+          "LinkedSequence": {
+            "ObjectName": "AnimSequence'Med01_Stop'",
+            "ObjectPath": "EM/Content/Asset/Scene/EN001_Ailixian/Common/Porp/Common_Med01/Animation/Med01_Stop.0"
+          }
+        },
+        {
+          "SectionName": "StopIdle",
+          "NextSectionName": "StopIdle",
+          "MetaData": [],
+          "LinkedMontage": {
+            "ObjectName": "AnimMontage'EnergySupplyMontage'",
+            "ObjectPath": "EM/Content/BluePrints/Item/Supply/EnergySupplyMontage.0"
+          },
+          "SlotIndex": 0,
+          "SegmentIndex": 3,
+          "LinkMethod": "EAnimLinkMethod::Absolute",
+          "CachedLinkMethod": "EAnimLinkMethod::Absolute",
+          "SegmentBeginTime": 8.0,
+          "SegmentLength": 0.032786883,
+          "LinkValue": 8.0,
+          "LinkedSequence": {
+            "ObjectName": "AnimSequence'Med01_Stop_Idle'",
+            "ObjectPath": "EM/Content/Asset/Scene/EN001_Ailixian/Common/Porp/Common_Med01/Animation/Med01_Stop_Idle.0"
+          }
+        }
+      ],
+      "SlotAnimTracks": [
+        {
+          "SlotName": "DefaultSlot",
+          "AnimTrack": {
+            "AnimSegments": [
+              {
+                "AnimReference": {
+                  "ObjectName": "AnimSequence'Med01_Start'",
+                  "ObjectPath": "EM/Content/Asset/Scene/EN001_Ailixian/Common/Porp/Common_Med01/Animation/Med01_Start.0"
+                },
+                "StartPos": 0.0,
+                "AnimStartTime": 0.0,
+                "AnimEndTime": 2.0,
+                "AnimPlayRate": 1.0,
+                "LoopingCount": 1
+              },
+              {
+                "AnimReference": {
+                  "ObjectName": "AnimSequence'Med01_Idle'",
+                  "ObjectPath": "EM/Content/Asset/Scene/EN001_Ailixian/Common/Porp/Common_Med01/Animation/Med01_Idle.0"
+                },
+                "StartPos": 2.0,
+                "AnimStartTime": 0.0,
+                "AnimEndTime": 4.0,
+                "AnimPlayRate": 1.0,
+                "LoopingCount": 1
+              },
+              {
+                "AnimReference": {
+                  "ObjectName": "AnimSequence'Med01_Stop'",
+                  "ObjectPath": "EM/Content/Asset/Scene/EN001_Ailixian/Common/Porp/Common_Med01/Animation/Med01_Stop.0"
+                },
+                "StartPos": 6.0,
+                "AnimStartTime": 0.0,
+                "AnimEndTime": 2.0,
+                "AnimPlayRate": 1.0,
+                "LoopingCount": 1
+              },
+              {
+                "AnimReference": {
+                  "ObjectName": "AnimSequence'Med01_Stop_Idle'",
+                  "ObjectPath": "EM/Content/Asset/Scene/EN001_Ailixian/Common/Porp/Common_Med01/Animation/Med01_Stop_Idle.0"
+                },
+                "StartPos": 8.0,
+                "AnimStartTime": 0.0,
+                "AnimEndTime": 0.032786883,
+                "AnimPlayRate": 1.0,
+                "LoopingCount": 1
+              }
+            ]
+          }
+        }
+      ],
+      "Notifies": [
+        {
+          "TriggerTimeOffset": -0.0001,
+          "EndTriggerTimeOffset": -0.0001,
+          "TriggerWeightThreshold": 1E-05,
+          "NotifyName": "TimedNiagaraEffect",
+          "Notify": null,
+          "NotifyStateClass": {
+            "ObjectName": "AnimNotifyState_TimedNiagaraEffect'EnergySupplyMontage:AnimNotifyState_TimedNiagaraEffect_0'",
+            "ObjectPath": "EM/Content/BluePrints/Item/Supply/EnergySupplyMontage.1"
+          },
+          "Duration": 4.0,
+          "EndLink": {
+            "LinkedMontage": {
+              "ObjectName": "AnimMontage'EnergySupplyMontage'",
+              "ObjectPath": "EM/Content/BluePrints/Item/Supply/EnergySupplyMontage.0"
+            },
+            "SlotIndex": 0,
+            "SegmentIndex": 2,
+            "LinkMethod": "EAnimLinkMethod::Absolute",
+            "CachedLinkMethod": "EAnimLinkMethod::Absolute",
+            "SegmentBeginTime": 6.0,
+            "SegmentLength": 2.0,
+            "LinkValue": 6.0,
+            "LinkedSequence": {
+              "ObjectName": "AnimSequence'Med01_Stop'",
+              "ObjectPath": "EM/Content/Asset/Scene/EN001_Ailixian/Common/Porp/Common_Med01/Animation/Med01_Stop.0"
+            }
+          },
+          "bConvertedFromBranchingPoint": false,
+          "MontageTickType": "EMontageNotifyTickType::Queued",
+          "NotifyTriggerChance": 1.0,
+          "NotifyFilterType": "ENotifyFilterType::NoFiltering",
+          "NotifyFilterLOD": 0,
+          "bTriggerOnDedicatedServer": true,
+          "bTriggerOnFollower": false,
+          "TrackIndex": 0,
+          "LinkedMontage": {
+            "ObjectName": "AnimMontage'EnergySupplyMontage'",
+            "ObjectPath": "EM/Content/BluePrints/Item/Supply/EnergySupplyMontage.0"
+          },
+          "SlotIndex": 0,
+          "SegmentIndex": 1,
+          "LinkMethod": "EAnimLinkMethod::Absolute",
+          "CachedLinkMethod": "EAnimLinkMethod::Absolute",
+          "SegmentBeginTime": 2.0,
+          "SegmentLength": 4.0,
+          "LinkValue": 2.0,
+          "LinkedSequence": {
+            "ObjectName": "AnimSequence'Med01_Idle'",
+            "ObjectPath": "EM/Content/Asset/Scene/EN001_Ailixian/Common/Porp/Common_Med01/Animation/Med01_Idle.0"
+          }
+        }
+      ],
+      "SequenceLength": 8.032787,
+      "Skeleton": {
+        "ObjectName": "Skeleton'Common_Med01_SM_Skeleton'",
+        "ObjectPath": "EM/Content/Asset/Scene/EN001_Ailixian/Common/Porp/Common_Med01/Mesh/Common_Med01_SM_Skeleton.5"
+      }
+    },
+    "SkeletonGuid": "B7E63DD1-479D8944-E9F09B9E-1E2D2FE0"
+  },
+  {
+    "Type": "AnimNotifyState_TimedNiagaraEffect",
+    "Name": "AnimNotifyState_TimedNiagaraEffect_0",
+    "Outer": "EnergySupplyMontage",
+    "Class": "UScriptClass'AnimNotifyState_TimedNiagaraEffect'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Template": {
+        "ObjectName": "NiagaraSystem'NS_Med_Working_01'",
+        "ObjectPath": "EM/Content/Asset/Effect/Niagara/Scene/Common/NS_Med_Working_01.19"
+      },
+      "SocketName": "Root",
+      "bDestroyAtEnd": true
+    }
+  }
+]

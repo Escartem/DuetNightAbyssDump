@@ -1,0 +1,303 @@
+[
+  {
+    "Type": "BehaviorTree",
+    "Name": "BT_NE_HaerA_Disappear",
+    "Class": "UScriptClass'BehaviorTree'",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "RootNode": {
+        "ObjectName": "BTComposite_Selector'BT_NE_HaerA_Disappear:BTComposite_Selector_4'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/NE_Haer/BT_NE_HaerA_Disappear.2"
+      },
+      "BlackboardAsset": {
+        "ObjectName": "BlackboardData'BB_Mon_Parent_Ranged'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Parent/BB_Mon_Parent_Ranged.0"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_0",
+    "Outer": "BT_NE_HaerA_Disappear",
+    "Class": "UScriptClass'BTComposite_Selector'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait'BT_NE_HaerA_Disappear:BTTask_Wait_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/NE_Haer/BT_NE_HaerA_Disappear.11"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_NE_HaerA_Disappear'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/NE_Haer/BT_NE_HaerA_Disappear.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_NE_HaerA_Disappear:BTComposite_Selector_4'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/NE_Haer/BT_NE_HaerA_Disappear.2"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_4",
+    "Outer": "BT_NE_HaerA_Disappear",
+    "Class": "UScriptClass'BTComposite_Selector'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_NE_HaerA_Disappear:BTComposite_Sequence_5'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/NE_Haer/BT_NE_HaerA_Disappear.3"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_NE_HaerA_Disappear:BTDecorator_Blackboard_3'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/NE_Haer/BT_NE_HaerA_Disappear.5"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector'BT_NE_HaerA_Disappear:BTComposite_Selector_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/NE_Haer/BT_NE_HaerA_Disappear.1"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_NE_HaerA_Disappear:BTDecorator_Blackboard_0'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/NE_Haer/BT_NE_HaerA_Disappear.4"
+            }
+          ],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_NE_HaerA_Disappear'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/NE_Haer/BT_NE_HaerA_Disappear.0"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_5",
+    "Outer": "BT_NE_HaerA_Disappear",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_GetTarget'BT_NE_HaerA_Disappear:BTTask_GetTarget_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/NE_Haer/BT_NE_HaerA_Disappear.8"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_UseSkill'BT_NE_HaerA_Disappear:BTTask_UseSkill_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/NE_Haer/BT_NE_HaerA_Disappear.10"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_KillSelf'BT_NE_HaerA_Disappear:BTTask_KillSelf_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/NE_Haer/BT_NE_HaerA_Disappear.9"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "Services": [
+        {
+          "ObjectName": "BTService_EnemyVision'BT_NE_HaerA_Disappear:BTService_EnemyVision_1'",
+          "ObjectPath": "EM/Content/AssetDesign/AI/Monster/NE_Haer/BT_NE_HaerA_Disappear.7"
+        },
+        {
+          "ObjectName": "BTService_BBValueDis'BT_NE_HaerA_Disappear:BTService_BBValueDis_1'",
+          "ObjectPath": "EM/Content/AssetDesign/AI/Monster/NE_Haer/BT_NE_HaerA_Disappear.6"
+        }
+      ],
+      "NodeName": "InBattle",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_NE_HaerA_Disappear'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/NE_Haer/BT_NE_HaerA_Disappear.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_NE_HaerA_Disappear:BTComposite_Selector_4'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/NE_Haer/BT_NE_HaerA_Disappear.2"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_0",
+    "Outer": "BT_NE_HaerA_Disappear",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "IntValue": 1,
+      "CachedDescription": "ActionMode 等于 Hitted",
+      "BlackboardKey": {
+        "SelectedKeyName": "ActionMode"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::Self",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_NE_HaerA_Disappear'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/NE_Haer/BT_NE_HaerA_Disappear.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_NE_HaerA_Disappear:BTComposite_Selector_4'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/NE_Haer/BT_NE_HaerA_Disappear.2"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_3",
+    "Outer": "BT_NE_HaerA_Disappear",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "CachedDescription": "ActionMode 等于 Active",
+      "BlackboardKey": {
+        "SelectedKeyName": "ActionMode"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::Self",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_NE_HaerA_Disappear'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/NE_Haer/BT_NE_HaerA_Disappear.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_NE_HaerA_Disappear:BTComposite_Selector_4'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/NE_Haer/BT_NE_HaerA_Disappear.2"
+      }
+    }
+  },
+  {
+    "Type": "BTService_BBValueDis",
+    "Name": "BTService_BBValueDis_1",
+    "Outer": "BT_NE_HaerA_Disappear",
+    "Class": "UScriptClass'BTService_BBValueDis'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "BBName": "Target",
+      "Interval": 0.02,
+      "RandomDeviation": 0.0,
+      "bCallTickOnSearchStart": true,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_NE_HaerA_Disappear'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/NE_Haer/BT_NE_HaerA_Disappear.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_NE_HaerA_Disappear:BTComposite_Sequence_5'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/NE_Haer/BT_NE_HaerA_Disappear.3"
+      }
+    }
+  },
+  {
+    "Type": "BTService_EnemyVision",
+    "Name": "BTService_EnemyVision_1",
+    "Outer": "BT_NE_HaerA_Disappear",
+    "Class": "UScriptClass'BTService_EnemyVision'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "FVisionDistance": 1000.0,
+      "FVisionAngle": 360.0,
+      "Interval": 0.1,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_NE_HaerA_Disappear'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/NE_Haer/BT_NE_HaerA_Disappear.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_NE_HaerA_Disappear:BTComposite_Sequence_5'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/NE_Haer/BT_NE_HaerA_Disappear.3"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_GetTarget",
+    "Name": "BTTask_GetTarget_0",
+    "Outer": "BT_NE_HaerA_Disappear",
+    "Class": "UScriptClass'BTTask_GetTarget'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_NE_HaerA_Disappear'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/NE_Haer/BT_NE_HaerA_Disappear.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_NE_HaerA_Disappear:BTComposite_Sequence_5'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/NE_Haer/BT_NE_HaerA_Disappear.3"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_KillSelf",
+    "Name": "BTTask_KillSelf_0",
+    "Outer": "BT_NE_HaerA_Disappear",
+    "Class": "UScriptClass'BTTask_KillSelf'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "NormalDeath": true,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_NE_HaerA_Disappear'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/NE_Haer/BT_NE_HaerA_Disappear.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_NE_HaerA_Disappear:BTComposite_Sequence_5'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/NE_Haer/BT_NE_HaerA_Disappear.3"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_UseSkill",
+    "Name": "BTTask_UseSkill_0",
+    "Outer": "BT_NE_HaerA_Disappear",
+    "Class": "UScriptClass'BTTask_UseSkill'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "SkillId": 5,
+      "NodeName": "UseSkill5",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_NE_HaerA_Disappear'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/NE_Haer/BT_NE_HaerA_Disappear.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_NE_HaerA_Disappear:BTComposite_Sequence_5'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/NE_Haer/BT_NE_HaerA_Disappear.3"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_0",
+    "Outer": "BT_NE_HaerA_Disappear",
+    "Class": "UScriptClass'BTTask_Wait'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_NE_HaerA_Disappear'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/NE_Haer/BT_NE_HaerA_Disappear.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_NE_HaerA_Disappear:BTComposite_Selector_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/NE_Haer/BT_NE_HaerA_Disappear.1"
+      }
+    }
+  }
+]

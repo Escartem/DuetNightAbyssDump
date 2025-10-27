@@ -1,0 +1,385 @@
+[
+  {
+    "Type": "BehaviorTree",
+    "Name": "BT_7Juji_Hij_GetHatred",
+    "Class": "UScriptClass'BehaviorTree'",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "RootNode": {
+        "ObjectName": "BTComposite_Selector'BT_7Juji_Hij_GetHatred:BTComposite_Selector_15'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_Juji/Level_Hijack/BT_7Juji_Hij_GetHatred.1"
+      },
+      "BlackboardAsset": {
+        "ObjectName": "BlackboardData'BB_Mon_Parent_Ranged'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Parent/BB_Mon_Parent_Ranged.0"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_15",
+    "Outer": "BT_7Juji_Hij_GetHatred",
+    "Class": "UScriptClass'BTComposite_Selector'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_GetTeamLeaderTarget'BT_7Juji_Hij_GetHatred:BTTask_GetTeamLeaderTarget_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_Juji/Level_Hijack/BT_7Juji_Hij_GetHatred.12"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_7Juji_Hij_GetHatred:BTDecorator_Blackboard_4'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_Juji/Level_Hijack/BT_7Juji_Hij_GetHatred.5"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_7Juji_Hij_GetHatred:BTComposite_Sequence_7'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_Juji/Level_Hijack/BT_7Juji_Hij_GetHatred.3"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_7Juji_Hij_GetHatred:BTComposite_Sequence_1'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_Juji/Level_Hijack/BT_7Juji_Hij_GetHatred.2"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_GetTarget'BT_7Juji_Hij_GetHatred:BTTask_GetTarget_8'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_Juji/Level_Hijack/BT_7Juji_Hij_GetHatred.10"
+          },
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_7Juji_Hij_GetHatred:BTDecorator_Blackboard_1'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_Juji/Level_Hijack/BT_7Juji_Hij_GetHatred.4"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_GetTargetbyPreset'BT_7Juji_Hij_GetHatred:BTTask_GetTargetbyPreset_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_Juji/Level_Hijack/BT_7Juji_Hij_GetHatred.11"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_7Juji_Hij_GetHatred'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_Juji/Level_Hijack/BT_7Juji_Hij_GetHatred.0"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_1",
+    "Outer": "BT_7Juji_Hij_GetHatred",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_FilterTargetsByDis'BT_7Juji_Hij_GetHatred:BTTask_FilterTargetsByDis_2'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_Juji/Level_Hijack/BT_7Juji_Hij_GetHatred.6"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_FilterTargetsByLiving'BT_7Juji_Hij_GetHatred:BTTask_FilterTargetsByLiving_1'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_Juji/Level_Hijack/BT_7Juji_Hij_GetHatred.9"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_LastFilterTargets'BT_7Juji_Hij_GetHatred:BTTask_LastFilterTargets_2'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_Juji/Level_Hijack/BT_7Juji_Hij_GetHatred.13"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_7Juji_Hij_GetHatred'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_Juji/Level_Hijack/BT_7Juji_Hij_GetHatred.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_7Juji_Hij_GetHatred:BTComposite_Selector_15'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_Juji/Level_Hijack/BT_7Juji_Hij_GetHatred.1"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_7",
+    "Outer": "BT_7Juji_Hij_GetHatred",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_FilterTargetsByDis'BT_7Juji_Hij_GetHatred:BTTask_FilterTargetsByDis_6'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_Juji/Level_Hijack/BT_7Juji_Hij_GetHatred.7"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_FilterTargetsByLiving'BT_7Juji_Hij_GetHatred:BTTask_FilterTargetsByLiving_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_Juji/Level_Hijack/BT_7Juji_Hij_GetHatred.8"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_LastFilterTargets'BT_7Juji_Hij_GetHatred:BTTask_LastFilterTargets_6'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_Juji/Level_Hijack/BT_7Juji_Hij_GetHatred.14"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_7Juji_Hij_GetHatred'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_Juji/Level_Hijack/BT_7Juji_Hij_GetHatred.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_7Juji_Hij_GetHatred:BTComposite_Selector_15'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_Juji/Level_Hijack/BT_7Juji_Hij_GetHatred.1"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_1",
+    "Outer": "BT_7Juji_Hij_GetHatred",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "CachedDescription": "Target is 未设置",
+      "OperationType": 1,
+      "BlackboardKey": {
+        "SelectedKeyName": "Target"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_7Juji_Hij_GetHatred'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_Juji/Level_Hijack/BT_7Juji_Hij_GetHatred.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_7Juji_Hij_GetHatred:BTComposite_Selector_15'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_Juji/Level_Hijack/BT_7Juji_Hij_GetHatred.1"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_4",
+    "Outer": "BT_7Juji_Hij_GetHatred",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "IntValue": 1,
+      "CachedDescription": "EliteTeamState 等于 已入队",
+      "BlackboardKey": {
+        "SelectedKeyName": "EliteTeamState"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_7Juji_Hij_GetHatred'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_Juji/Level_Hijack/BT_7Juji_Hij_GetHatred.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_7Juji_Hij_GetHatred:BTComposite_Selector_15'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_Juji/Level_Hijack/BT_7Juji_Hij_GetHatred.1"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_FilterTargetsByDis",
+    "Name": "BTTask_FilterTargetsByDis_2",
+    "Outer": "BT_7Juji_Hij_GetHatred",
+    "Class": "UScriptClass'BTTask_FilterTargetsByDis'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "MaxDis": 10000.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_7Juji_Hij_GetHatred'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_Juji/Level_Hijack/BT_7Juji_Hij_GetHatred.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_7Juji_Hij_GetHatred:BTComposite_Sequence_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_Juji/Level_Hijack/BT_7Juji_Hij_GetHatred.2"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_FilterTargetsByDis",
+    "Name": "BTTask_FilterTargetsByDis_6",
+    "Outer": "BT_7Juji_Hij_GetHatred",
+    "Class": "UScriptClass'BTTask_FilterTargetsByDis'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "MaxDisKey": {
+        "SelectedKeyName": "MaxAttackRange"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_7Juji_Hij_GetHatred'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_Juji/Level_Hijack/BT_7Juji_Hij_GetHatred.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_7Juji_Hij_GetHatred:BTComposite_Sequence_7'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_Juji/Level_Hijack/BT_7Juji_Hij_GetHatred.3"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_FilterTargetsByLiving",
+    "Name": "BTTask_FilterTargetsByLiving_0",
+    "Outer": "BT_7Juji_Hij_GetHatred",
+    "Class": "UScriptClass'BTTask_FilterTargetsByLiving'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TypeOfFilterList": "ETypeOfFilterList::AfterFilter",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_7Juji_Hij_GetHatred'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_Juji/Level_Hijack/BT_7Juji_Hij_GetHatred.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_7Juji_Hij_GetHatred:BTComposite_Sequence_7'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_Juji/Level_Hijack/BT_7Juji_Hij_GetHatred.3"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_FilterTargetsByLiving",
+    "Name": "BTTask_FilterTargetsByLiving_1",
+    "Outer": "BT_7Juji_Hij_GetHatred",
+    "Class": "UScriptClass'BTTask_FilterTargetsByLiving'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TypeOfFilterList": "ETypeOfFilterList::AfterFilter",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_7Juji_Hij_GetHatred'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_Juji/Level_Hijack/BT_7Juji_Hij_GetHatred.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_7Juji_Hij_GetHatred:BTComposite_Sequence_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_Juji/Level_Hijack/BT_7Juji_Hij_GetHatred.2"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_GetTarget",
+    "Name": "BTTask_GetTarget_8",
+    "Outer": "BT_7Juji_Hij_GetHatred",
+    "Class": "UScriptClass'BTTask_GetTarget'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_7Juji_Hij_GetHatred'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_Juji/Level_Hijack/BT_7Juji_Hij_GetHatred.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_7Juji_Hij_GetHatred:BTComposite_Selector_15'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_Juji/Level_Hijack/BT_7Juji_Hij_GetHatred.1"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_GetTargetbyPreset",
+    "Name": "BTTask_GetTargetbyPreset_0",
+    "Outer": "BT_7Juji_Hij_GetHatred",
+    "Class": "UScriptClass'BTTask_GetTargetbyPreset'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_7Juji_Hij_GetHatred'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_Juji/Level_Hijack/BT_7Juji_Hij_GetHatred.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_7Juji_Hij_GetHatred:BTComposite_Selector_15'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_Juji/Level_Hijack/BT_7Juji_Hij_GetHatred.1"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_GetTeamLeaderTarget",
+    "Name": "BTTask_GetTeamLeaderTarget_0",
+    "Outer": "BT_7Juji_Hij_GetHatred",
+    "Class": "UScriptClass'BTTask_GetTeamLeaderTarget'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_7Juji_Hij_GetHatred'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_Juji/Level_Hijack/BT_7Juji_Hij_GetHatred.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_7Juji_Hij_GetHatred:BTComposite_Selector_15'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_Juji/Level_Hijack/BT_7Juji_Hij_GetHatred.1"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_LastFilterTargets",
+    "Name": "BTTask_LastFilterTargets_2",
+    "Outer": "BT_7Juji_Hij_GetHatred",
+    "Class": "UScriptClass'BTTask_LastFilterTargets'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TypeOfFilterList": "ETypeOfFilterList::AfterFilter",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_7Juji_Hij_GetHatred'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_Juji/Level_Hijack/BT_7Juji_Hij_GetHatred.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_7Juji_Hij_GetHatred:BTComposite_Sequence_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_Juji/Level_Hijack/BT_7Juji_Hij_GetHatred.2"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_LastFilterTargets",
+    "Name": "BTTask_LastFilterTargets_6",
+    "Outer": "BT_7Juji_Hij_GetHatred",
+    "Class": "UScriptClass'BTTask_LastFilterTargets'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TypeOfFilterList": "ETypeOfFilterList::AfterFilter",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_7Juji_Hij_GetHatred'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_Juji/Level_Hijack/BT_7Juji_Hij_GetHatred.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_7Juji_Hij_GetHatred:BTComposite_Sequence_7'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Jt_Juji/Level_Hijack/BT_7Juji_Hij_GetHatred.3"
+      }
+    }
+  }
+]

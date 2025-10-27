@@ -1,0 +1,251 @@
+[
+  {
+    "Type": "BehaviorTree",
+    "Name": "BT_Npc_Pet_Patrol",
+    "Class": "UScriptClass'BehaviorTree'",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "RootNode": {
+        "ObjectName": "BTComposite_Selector'BT_Npc_Pet_Patrol:BTComposite_Selector_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Pet/BT_Npc_Pet_Patrol.1"
+      },
+      "BlackboardAsset": {
+        "ObjectName": "BlackboardData'BB_Npc_Pet'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Pet/BB_Npc_Pet.0"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_1",
+    "Outer": "BT_Npc_Pet_Patrol",
+    "Class": "UScriptClass'BTComposite_Selector'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_Npc_Pet_Patrol:BTComposite_Sequence_8'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Pet/BT_Npc_Pet_Patrol.2"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Npc_Pet_Patrol:BTDecorator_Blackboard_1'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Pet/BT_Npc_Pet_Patrol.3"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait'BT_Npc_Pet_Patrol:BTTask_Wait_1'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Pet/BT_Npc_Pet_Patrol.7"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_Pet_Patrol'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Pet/BT_Npc_Pet_Patrol.0"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_8",
+    "Outer": "BT_Npc_Pet_Patrol",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_EMRunEQSQuery'BT_Npc_Pet_Patrol:BTTask_EMRunEQSQuery_2'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Pet/BT_Npc_Pet_Patrol.4"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_NewMoveTo'BT_Npc_Pet_Patrol:BTTask_NewMoveTo_6'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Pet/BT_Npc_Pet_Patrol.5"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait'BT_Npc_Pet_Patrol:BTTask_Wait_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Pet/BT_Npc_Pet_Patrol.6"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_Pet_Patrol'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Pet/BT_Npc_Pet_Patrol.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Npc_Pet_Patrol:BTComposite_Selector_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Pet/BT_Npc_Pet_Patrol.1"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_1",
+    "Outer": "BT_Npc_Pet_Patrol",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "StringValue": "Region",
+      "CachedDescription": "GameModeType 为相等 [Region]",
+      "BlackboardKey": {
+        "SelectedKeyName": "GameModeType"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_Pet_Patrol'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Pet/BT_Npc_Pet_Patrol.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Npc_Pet_Patrol:BTComposite_Selector_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Pet/BT_Npc_Pet_Patrol.1"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_EMRunEQSQuery",
+    "Name": "BTTask_EMRunEQSQuery_2",
+    "Outer": "BT_Npc_Pet_Patrol",
+    "Class": "UScriptClass'BTTask_EMRunEQSQuery'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "EQSRequest": {
+        "QueryTemplate": {
+          "ObjectName": "EnvQuery'EQS_NPCBornPosCircle'",
+          "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Z_EnvQuery/EQS_NPCBornPosCircle.5"
+        },
+        "QueryConfig": [
+          {
+            "ParamName": "Donut.InnerRadius",
+            "ParamType": "EAIParamType::Float",
+            "Value": 50.0,
+            "BBKey": {
+              "SelectedKeyName": "None",
+              "bNoneIsAllowedValue": true
+            }
+          },
+          {
+            "ParamName": "Donut.OuterRadius",
+            "ParamType": "EAIParamType::Float",
+            "Value": 200.0,
+            "BBKey": {
+              "SelectedKeyName": "RadiusHang",
+              "bNoneIsAllowedValue": true
+            }
+          },
+          {
+            "ParamName": "Donut.NumberOfRings",
+            "ParamType": "EAIParamType::Int",
+            "Value": 3.0,
+            "BBKey": {
+              "SelectedKeyName": "None",
+              "bNoneIsAllowedValue": true
+            }
+          },
+          {
+            "ParamName": "Donut.PointsPerRing",
+            "ParamType": "EAIParamType::Int",
+            "Value": 8.0,
+            "BBKey": {
+              "SelectedKeyName": "None",
+              "bNoneIsAllowedValue": true
+            }
+          }
+        ],
+        "RunMode": "EEnvQueryRunMode::RandomBest25Pct"
+      },
+      "BlackboardKey": {
+        "SelectedKeyName": "EQSQueryLoc"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_Pet_Patrol'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Pet/BT_Npc_Pet_Patrol.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Npc_Pet_Patrol:BTComposite_Sequence_8'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Pet/BT_Npc_Pet_Patrol.2"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_NewMoveTo",
+    "Name": "BTTask_NewMoveTo_6",
+    "Outer": "BT_Npc_Pet_Patrol",
+    "Class": "UScriptClass'BTTask_NewMoveTo'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "bOrientRotationToMovement": true,
+      "MoveTypeState": "EMoveTypeState::MTS_Fly",
+      "MaxSpeed": 80.0,
+      "bStopOnOverlapNeedsUpdate": false,
+      "BlackboardKey": {
+        "SelectedKeyName": "EQSQueryLoc"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_Pet_Patrol'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Pet/BT_Npc_Pet_Patrol.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Npc_Pet_Patrol:BTComposite_Sequence_8'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Pet/BT_Npc_Pet_Patrol.2"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_0",
+    "Outer": "BT_Npc_Pet_Patrol",
+    "Class": "UScriptClass'BTTask_Wait'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "WaitTime": 2.0,
+      "RandomDeviation": 1.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_Pet_Patrol'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Pet/BT_Npc_Pet_Patrol.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Npc_Pet_Patrol:BTComposite_Sequence_8'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Pet/BT_Npc_Pet_Patrol.2"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_1",
+    "Outer": "BT_Npc_Pet_Patrol",
+    "Class": "UScriptClass'BTTask_Wait'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "WaitTime": 2.0,
+      "RandomDeviation": 1.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_Pet_Patrol'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Pet/BT_Npc_Pet_Patrol.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Npc_Pet_Patrol:BTComposite_Selector_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/Pet/BT_Npc_Pet_Patrol.1"
+      }
+    }
+  }
+]

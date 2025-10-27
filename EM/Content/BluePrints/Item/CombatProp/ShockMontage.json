@@ -1,0 +1,338 @@
+[
+  {
+    "Type": "AnimMontage",
+    "Name": "ShockMontage",
+    "Class": "UScriptClass'AnimMontage'",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "CompositeSections": [
+        {
+          "SectionName": "Rise",
+          "NextSectionName": "Shock",
+          "MetaData": [],
+          "LinkedMontage": {
+            "ObjectName": "AnimMontage'ShockMontage'",
+            "ObjectPath": "EM/Content/BluePrints/Item/CombatProp/ShockMontage.0"
+          },
+          "SlotIndex": 0,
+          "SegmentIndex": 0,
+          "LinkMethod": "EAnimLinkMethod::Absolute",
+          "CachedLinkMethod": "EAnimLinkMethod::Absolute",
+          "SegmentBeginTime": 0.0,
+          "SegmentLength": 1.0,
+          "LinkValue": 0.0,
+          "LinkedSequence": {
+            "ObjectName": "AnimSequence'Magic_Cube_Rise'",
+            "ObjectPath": "EM/Content/Asset/Scene/EN001_Ailixian/Common/Porp/MagicCube/Animation/Magic_Cube_Rise.0"
+          }
+        },
+        {
+          "SectionName": "Shock",
+          "NextSectionName": "Shock",
+          "MetaData": [],
+          "LinkedMontage": {
+            "ObjectName": "AnimMontage'ShockMontage'",
+            "ObjectPath": "EM/Content/BluePrints/Item/CombatProp/ShockMontage.0"
+          },
+          "SlotIndex": 0,
+          "SegmentIndex": 1,
+          "LinkMethod": "EAnimLinkMethod::Absolute",
+          "CachedLinkMethod": "EAnimLinkMethod::Absolute",
+          "SegmentBeginTime": 1.0,
+          "SegmentLength": 2.4955435,
+          "LinkValue": 1.0,
+          "LinkedSequence": {
+            "ObjectName": "AnimSequence'Magic_Cube_Shock'",
+            "ObjectPath": "EM/Content/Asset/Scene/EN001_Ailixian/Common/Porp/MagicCube/Animation/Magic_Cube_Shock.0"
+          }
+        },
+        {
+          "SectionName": "Dead",
+          "NextSectionName": "None",
+          "MetaData": [],
+          "LinkedMontage": {
+            "ObjectName": "AnimMontage'ShockMontage'",
+            "ObjectPath": "EM/Content/BluePrints/Item/CombatProp/ShockMontage.0"
+          },
+          "SlotIndex": 0,
+          "SegmentIndex": 2,
+          "LinkMethod": "EAnimLinkMethod::Absolute",
+          "CachedLinkMethod": "EAnimLinkMethod::Absolute",
+          "SegmentBeginTime": 3.4955435,
+          "SegmentLength": 5.0,
+          "LinkValue": 3.4955435,
+          "LinkedSequence": {
+            "ObjectName": "AnimSequence'Magic_Cube_Die'",
+            "ObjectPath": "EM/Content/Asset/Scene/EN001_Ailixian/Common/Porp/MagicCube/Animation/Magic_Cube_Die.0"
+          }
+        },
+        {
+          "SectionName": "DeActive",
+          "NextSectionName": "None",
+          "MetaData": [],
+          "LinkedMontage": {
+            "ObjectName": "AnimMontage'ShockMontage'",
+            "ObjectPath": "EM/Content/BluePrints/Item/CombatProp/ShockMontage.0"
+          },
+          "SlotIndex": 0,
+          "SegmentIndex": 3,
+          "LinkMethod": "EAnimLinkMethod::Absolute",
+          "CachedLinkMethod": "EAnimLinkMethod::Absolute",
+          "SegmentBeginTime": 8.4955435,
+          "SegmentLength": 1.0,
+          "LinkValue": 8.52098,
+          "LinkedSequence": {
+            "ObjectName": "AnimSequence'Magic_Cube_Rise'",
+            "ObjectPath": "EM/Content/Asset/Scene/EN001_Ailixian/Common/Porp/MagicCube/Animation/Magic_Cube_Rise.0"
+          }
+        }
+      ],
+      "SlotAnimTracks": [
+        {
+          "SlotName": "DefaultSlot",
+          "AnimTrack": {
+            "AnimSegments": [
+              {
+                "AnimReference": {
+                  "ObjectName": "AnimSequence'Magic_Cube_Rise'",
+                  "ObjectPath": "EM/Content/Asset/Scene/EN001_Ailixian/Common/Porp/MagicCube/Animation/Magic_Cube_Rise.0"
+                },
+                "StartPos": 0.0,
+                "AnimStartTime": 0.0,
+                "AnimEndTime": 1.0,
+                "AnimPlayRate": 1.0,
+                "LoopingCount": 1
+              },
+              {
+                "AnimReference": {
+                  "ObjectName": "AnimSequence'Magic_Cube_Shock'",
+                  "ObjectPath": "EM/Content/Asset/Scene/EN001_Ailixian/Common/Porp/MagicCube/Animation/Magic_Cube_Shock.0"
+                },
+                "StartPos": 1.0,
+                "AnimStartTime": 0.0,
+                "AnimEndTime": 1.8666667,
+                "AnimPlayRate": 0.748,
+                "LoopingCount": 1
+              },
+              {
+                "AnimReference": {
+                  "ObjectName": "AnimSequence'Magic_Cube_Die'",
+                  "ObjectPath": "EM/Content/Asset/Scene/EN001_Ailixian/Common/Porp/MagicCube/Animation/Magic_Cube_Die.0"
+                },
+                "StartPos": 3.4955435,
+                "AnimStartTime": 0.0,
+                "AnimEndTime": 5.0,
+                "AnimPlayRate": 1.0,
+                "LoopingCount": 1
+              },
+              {
+                "AnimReference": {
+                  "ObjectName": "AnimSequence'Magic_Cube_Rise'",
+                  "ObjectPath": "EM/Content/Asset/Scene/EN001_Ailixian/Common/Porp/MagicCube/Animation/Magic_Cube_Rise.0"
+                },
+                "StartPos": 8.4955435,
+                "AnimStartTime": 0.0,
+                "AnimEndTime": 1.0,
+                "AnimPlayRate": -1.0,
+                "LoopingCount": 1
+              }
+            ]
+          }
+        }
+      ],
+      "BranchingPointMarkers": [
+        {
+          "NotifyIndex": 1,
+          "TriggerTime": 1.0853487,
+          "NotifyEventType": "EAnimNotifyEventType::Begin"
+        },
+        {
+          "NotifyIndex": 2,
+          "TriggerTime": 4.188317,
+          "NotifyEventType": "EAnimNotifyEventType::Begin"
+        }
+      ],
+      "Notifies": [
+        {
+          "TriggerTimeOffset": 0.0,
+          "EndTriggerTimeOffset": -0.0001,
+          "TriggerWeightThreshold": 1E-05,
+          "NotifyName": "TimedNiagaraEffect",
+          "Notify": null,
+          "NotifyStateClass": {
+            "ObjectName": "AnimNotifyState_TimedNiagaraEffect'ShockMontage:AnimNotifyState_TimedNiagaraEffect_0'",
+            "ObjectPath": "EM/Content/BluePrints/Item/CombatProp/ShockMontage.3"
+          },
+          "Duration": 3.393031,
+          "EndLink": {
+            "LinkedMontage": {
+              "ObjectName": "AnimMontage'ShockMontage'",
+              "ObjectPath": "EM/Content/BluePrints/Item/CombatProp/ShockMontage.0"
+            },
+            "SlotIndex": 0,
+            "SegmentIndex": 2,
+            "LinkMethod": "EAnimLinkMethod::Absolute",
+            "CachedLinkMethod": "EAnimLinkMethod::Absolute",
+            "SegmentBeginTime": 3.4955435,
+            "SegmentLength": 5.0,
+            "LinkValue": 3.4955435,
+            "LinkedSequence": {
+              "ObjectName": "AnimSequence'Magic_Cube_Die'",
+              "ObjectPath": "EM/Content/Asset/Scene/EN001_Ailixian/Common/Porp/MagicCube/Animation/Magic_Cube_Die.0"
+            }
+          },
+          "bConvertedFromBranchingPoint": false,
+          "MontageTickType": "EMontageNotifyTickType::Queued",
+          "NotifyTriggerChance": 1.0,
+          "NotifyFilterType": "ENotifyFilterType::NoFiltering",
+          "NotifyFilterLOD": 0,
+          "bTriggerOnDedicatedServer": true,
+          "bTriggerOnFollower": false,
+          "TrackIndex": 0,
+          "LinkedMontage": {
+            "ObjectName": "AnimMontage'ShockMontage'",
+            "ObjectPath": "EM/Content/BluePrints/Item/CombatProp/ShockMontage.0"
+          },
+          "SlotIndex": 0,
+          "SegmentIndex": 0,
+          "LinkMethod": "EAnimLinkMethod::Absolute",
+          "CachedLinkMethod": "EAnimLinkMethod::Absolute",
+          "SegmentBeginTime": 0.0,
+          "SegmentLength": 1.0,
+          "LinkValue": 0.1025126,
+          "LinkedSequence": {
+            "ObjectName": "AnimSequence'Magic_Cube_Rise'",
+            "ObjectPath": "EM/Content/Asset/Scene/EN001_Ailixian/Common/Porp/MagicCube/Animation/Magic_Cube_Rise.0"
+          }
+        },
+        {
+          "TriggerTimeOffset": 0.0,
+          "EndTriggerTimeOffset": 0.0001,
+          "TriggerWeightThreshold": 1E-05,
+          "NotifyName": "PlayMontageNotify",
+          "Notify": {
+            "ObjectName": "AnimNotify_PlayMontageNotify'ShockMontage:AnimNotify_PlayMontageNotify_0'",
+            "ObjectPath": "EM/Content/BluePrints/Item/CombatProp/ShockMontage.1"
+          },
+          "NotifyStateClass": null,
+          "Duration": 0.0,
+          "EndLink": {
+            "LinkedMontage": null,
+            "SlotIndex": 0,
+            "SegmentIndex": -1,
+            "LinkMethod": "EAnimLinkMethod::Absolute",
+            "CachedLinkMethod": "EAnimLinkMethod::Absolute",
+            "SegmentBeginTime": 0.0,
+            "SegmentLength": 0.0,
+            "LinkValue": 0.0,
+            "LinkedSequence": null
+          },
+          "bConvertedFromBranchingPoint": false,
+          "MontageTickType": "EMontageNotifyTickType::Queued",
+          "NotifyTriggerChance": 1.0,
+          "NotifyFilterType": "ENotifyFilterType::NoFiltering",
+          "NotifyFilterLOD": 0,
+          "bTriggerOnDedicatedServer": true,
+          "bTriggerOnFollower": false,
+          "TrackIndex": 1,
+          "LinkedMontage": {
+            "ObjectName": "AnimMontage'ShockMontage'",
+            "ObjectPath": "EM/Content/BluePrints/Item/CombatProp/ShockMontage.0"
+          },
+          "SlotIndex": 0,
+          "SegmentIndex": 1,
+          "LinkMethod": "EAnimLinkMethod::Absolute",
+          "CachedLinkMethod": "EAnimLinkMethod::Absolute",
+          "SegmentBeginTime": 1.0,
+          "SegmentLength": 2.4955435,
+          "LinkValue": 1.0853487,
+          "LinkedSequence": {
+            "ObjectName": "AnimSequence'Magic_Cube_Shock'",
+            "ObjectPath": "EM/Content/Asset/Scene/EN001_Ailixian/Common/Porp/MagicCube/Animation/Magic_Cube_Shock.0"
+          }
+        },
+        {
+          "TriggerTimeOffset": 0.0,
+          "EndTriggerTimeOffset": 0.0,
+          "TriggerWeightThreshold": 1E-05,
+          "NotifyName": "PlayMontageNotify",
+          "Notify": {
+            "ObjectName": "AnimNotify_PlayMontageNotify'ShockMontage:AnimNotify_PlayMontageNotify_1'",
+            "ObjectPath": "EM/Content/BluePrints/Item/CombatProp/ShockMontage.2"
+          },
+          "NotifyStateClass": null,
+          "Duration": 0.0,
+          "EndLink": {
+            "LinkedMontage": null,
+            "SlotIndex": 0,
+            "SegmentIndex": -1,
+            "LinkMethod": "EAnimLinkMethod::Absolute",
+            "CachedLinkMethod": "EAnimLinkMethod::Absolute",
+            "SegmentBeginTime": 0.0,
+            "SegmentLength": 0.0,
+            "LinkValue": 5.0212975,
+            "LinkedSequence": null
+          },
+          "bConvertedFromBranchingPoint": false,
+          "MontageTickType": "EMontageNotifyTickType::Queued",
+          "NotifyTriggerChance": 1.0,
+          "NotifyFilterType": "ENotifyFilterType::NoFiltering",
+          "NotifyFilterLOD": 0,
+          "bTriggerOnDedicatedServer": true,
+          "bTriggerOnFollower": false,
+          "TrackIndex": 1,
+          "LinkedMontage": {
+            "ObjectName": "AnimMontage'ShockMontage'",
+            "ObjectPath": "EM/Content/BluePrints/Item/CombatProp/ShockMontage.0"
+          },
+          "SlotIndex": 0,
+          "SegmentIndex": 2,
+          "LinkMethod": "EAnimLinkMethod::Absolute",
+          "CachedLinkMethod": "EAnimLinkMethod::Absolute",
+          "SegmentBeginTime": 3.4955435,
+          "SegmentLength": 5.0,
+          "LinkValue": 4.188317,
+          "LinkedSequence": {
+            "ObjectName": "AnimSequence'Magic_Cube_Die'",
+            "ObjectPath": "EM/Content/Asset/Scene/EN001_Ailixian/Common/Porp/MagicCube/Animation/Magic_Cube_Die.0"
+          }
+        }
+      ],
+      "SequenceLength": 9.4955435,
+      "Skeleton": {
+        "ObjectName": "Skeleton'MagicCube_Skeleton'",
+        "ObjectPath": "EM/Content/Asset/Scene/EN001_Ailixian/Common/Porp/MagicCube/Mesh/MagicCube_Skeleton.7"
+      }
+    },
+    "SkeletonGuid": "89B3CE30-4438236C-FE1044B1-87A0D2A1"
+  },
+  {
+    "Type": "AnimNotify_PlayMontageNotify",
+    "Name": "AnimNotify_PlayMontageNotify_0",
+    "Outer": "ShockMontage",
+    "Class": "UScriptClass'AnimNotify_PlayMontageNotify'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "AnimNotify_PlayMontageNotify",
+    "Name": "AnimNotify_PlayMontageNotify_1",
+    "Outer": "ShockMontage",
+    "Class": "UScriptClass'AnimNotify_PlayMontageNotify'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted"
+  },
+  {
+    "Type": "AnimNotifyState_TimedNiagaraEffect",
+    "Name": "AnimNotifyState_TimedNiagaraEffect_0",
+    "Outer": "ShockMontage",
+    "Class": "UScriptClass'AnimNotifyState_TimedNiagaraEffect'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Template": {
+        "ObjectName": "NiagaraSystem'NS_MagicCube_LaserCenter_Birth'",
+        "ObjectPath": "EM/Content/Asset/Effect/Niagara/Monster/A_Common/NS_MagicCube_LaserCenter_Birth.250"
+      },
+      "SocketName": "Bone002",
+      "bDestroyAtEnd": true
+    }
+  }
+]

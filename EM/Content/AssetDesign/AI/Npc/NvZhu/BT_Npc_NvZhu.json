@@ -1,0 +1,737 @@
+[
+  {
+    "Type": "BehaviorTree",
+    "Name": "BT_Npc_NvZhu",
+    "Class": "UScriptClass'BehaviorTree'",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "RootNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Npc_NvZhu:BTComposite_Sequence_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/NvZhu/BT_Npc_NvZhu.4"
+      },
+      "BlackboardAsset": {
+        "ObjectName": "BlackboardData'BB_Npc_NvZhu'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/NvZhu/BB_Npc_NvZhu.0"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_1",
+    "Outer": "BT_Npc_NvZhu",
+    "Class": "UScriptClass'BTComposite_Selector'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_Npc_NvZhu:BTComposite_Sequence_2'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Npc/NvZhu/BT_Npc_NvZhu.7"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Npc_NvZhu:BTDecorator_Blackboard_9'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Npc/NvZhu/BT_Npc_NvZhu.15"
+            },
+            null
+          ],
+          "DecoratorOps": [
+            {
+              "Operation": "EBTDecoratorLogic::Or",
+              "Number": 2
+            },
+            {
+              "Operation": "EBTDecoratorLogic::Test",
+              "Number": 0
+            },
+            {
+              "Operation": "EBTDecoratorLogic::Test",
+              "Number": 1
+            }
+          ]
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_Npc_NvZhu:BTComposite_Sequence_4'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Npc/NvZhu/BT_Npc_NvZhu.9"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Npc_NvZhu:BTDecorator_Blackboard_4'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Npc/NvZhu/BT_Npc_NvZhu.13"
+            },
+            {
+              "ObjectName": "BTDecorator_IsAtLocation'BT_Npc_NvZhu:BTDecorator_IsAtLocation_2'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Npc/NvZhu/BT_Npc_NvZhu.17"
+            }
+          ],
+          "DecoratorOps": [
+            {
+              "Operation": "EBTDecoratorLogic::And",
+              "Number": 2
+            },
+            {
+              "Operation": "EBTDecoratorLogic::Test",
+              "Number": 0
+            },
+            {
+              "Operation": "EBTDecoratorLogic::Not",
+              "Number": 1
+            },
+            {
+              "Operation": "EBTDecoratorLogic::Test",
+              "Number": 1
+            }
+          ]
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_Npc_NvZhu:BTComposite_Sequence_3'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Npc/NvZhu/BT_Npc_NvZhu.8"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Npc_NvZhu:BTDecorator_Blackboard_3'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Npc/NvZhu/BT_Npc_NvZhu.12"
+            },
+            {
+              "ObjectName": "BTDecorator_IsAtLocation'BT_Npc_NvZhu:BTDecorator_IsAtLocation_0'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Npc/NvZhu/BT_Npc_NvZhu.16"
+            }
+          ],
+          "DecoratorOps": [
+            {
+              "Operation": "EBTDecoratorLogic::And",
+              "Number": 2
+            },
+            {
+              "Operation": "EBTDecoratorLogic::Test",
+              "Number": 0
+            },
+            {
+              "Operation": "EBTDecoratorLogic::Test",
+              "Number": 1
+            }
+          ]
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_NvZhu'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/NvZhu/BT_Npc_NvZhu.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Npc_NvZhu:BTComposite_Sequence_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/NvZhu/BT_Npc_NvZhu.3"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Selector",
+    "Name": "BTComposite_Selector_2",
+    "Outer": "BT_Npc_NvZhu",
+    "Class": "UScriptClass'BTComposite_Selector'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_Npc_NvZhu:BTComposite_Sequence_17'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Npc/NvZhu/BT_Npc_NvZhu.5"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Npc_NvZhu:BTDecorator_Blackboard_0'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Npc/NvZhu/BT_Npc_NvZhu.10"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_Npc_NvZhu:BTComposite_Sequence_19'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Npc/NvZhu/BT_Npc_NvZhu.6"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Npc_NvZhu:BTDecorator_Blackboard_8'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Npc/NvZhu/BT_Npc_NvZhu.14"
+            }
+          ],
+          "DecoratorOps": []
+        }
+      ],
+      "Services": [
+        {
+          "ObjectName": "BTService_BBValueDis'BT_Npc_NvZhu:BTService_BBValueDis_0'",
+          "ObjectPath": "EM/Content/AssetDesign/AI/Npc/NvZhu/BT_Npc_NvZhu.18"
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_NvZhu'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/NvZhu/BT_Npc_NvZhu.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Npc_NvZhu:BTComposite_Sequence_4'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/NvZhu/BT_Npc_NvZhu.9"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_0",
+    "Outer": "BT_Npc_NvZhu",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_NpcGetTarget'BT_Npc_NvZhu:BTTask_NpcGetTarget_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Npc/NvZhu/BT_Npc_NvZhu.22"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector'BT_Npc_NvZhu:BTComposite_Selector_1'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Npc/NvZhu/BT_Npc_NvZhu.1"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_NvZhu'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/NvZhu/BT_Npc_NvZhu.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Npc_NvZhu:BTComposite_Sequence_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/NvZhu/BT_Npc_NvZhu.4"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_1",
+    "Outer": "BT_Npc_NvZhu",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Sequence'BT_Npc_NvZhu:BTComposite_Sequence_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Npc/NvZhu/BT_Npc_NvZhu.3"
+          },
+          "ChildTask": null,
+          "Decorators": [
+            {
+              "ObjectName": "BTDecorator_Blackboard'BT_Npc_NvZhu:BTDecorator_Blackboard_1'",
+              "ObjectPath": "EM/Content/AssetDesign/AI/Npc/NvZhu/BT_Npc_NvZhu.11"
+            }
+          ],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait'BT_Npc_NvZhu:BTTask_Wait_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Npc/NvZhu/BT_Npc_NvZhu.24"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_NvZhu'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/NvZhu/BT_Npc_NvZhu.0"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_17",
+    "Outer": "BT_Npc_NvZhu",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_Wait'BT_Npc_NvZhu:BTTask_Wait_2'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Npc/NvZhu/BT_Npc_NvZhu.25"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_NvZhu'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/NvZhu/BT_Npc_NvZhu.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Npc_NvZhu:BTComposite_Selector_2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/NvZhu/BT_Npc_NvZhu.2"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_19",
+    "Outer": "BT_Npc_NvZhu",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_NewMoveTo'BT_Npc_NvZhu:BTTask_NewMoveTo_6'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Npc/NvZhu/BT_Npc_NvZhu.21"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_NvZhu'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/NvZhu/BT_Npc_NvZhu.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Npc_NvZhu:BTComposite_Selector_2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/NvZhu/BT_Npc_NvZhu.2"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_2",
+    "Outer": "BT_Npc_NvZhu",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_GetPatrolLoc'BT_Npc_NvZhu:BTTask_GetPatrolLoc_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Npc/NvZhu/BT_Npc_NvZhu.20"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_NvZhu'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/NvZhu/BT_Npc_NvZhu.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Npc_NvZhu:BTComposite_Selector_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/NvZhu/BT_Npc_NvZhu.1"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_3",
+    "Outer": "BT_Npc_NvZhu",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_ClearKey'BT_Npc_NvZhu:BTTask_ClearKey_1'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Npc/NvZhu/BT_Npc_NvZhu.19"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_PostBehaviorEvent'BT_Npc_NvZhu:BTTask_PostBehaviorEvent_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Npc/NvZhu/BT_Npc_NvZhu.23"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_NvZhu'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/NvZhu/BT_Npc_NvZhu.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Npc_NvZhu:BTComposite_Selector_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/NvZhu/BT_Npc_NvZhu.1"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_4",
+    "Outer": "BT_Npc_NvZhu",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": {
+            "ObjectName": "BTComposite_Selector'BT_Npc_NvZhu:BTComposite_Selector_2'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Npc/NvZhu/BT_Npc_NvZhu.2"
+          },
+          "ChildTask": null,
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_NvZhu'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/NvZhu/BT_Npc_NvZhu.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Npc_NvZhu:BTComposite_Selector_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/NvZhu/BT_Npc_NvZhu.1"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_0",
+    "Outer": "BT_Npc_NvZhu",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "FloatValue": 500.0,
+      "StringValue": "Quest100102",
+      "CachedDescription": "TickTargetDis 大于或等于 500.000000",
+      "OperationType": 5,
+      "BlackboardKey": {
+        "SelectedKeyName": "TickTargetDis"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_NvZhu'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/NvZhu/BT_Npc_NvZhu.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Npc_NvZhu:BTComposite_Selector_2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/NvZhu/BT_Npc_NvZhu.2"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_1",
+    "Outer": "BT_Npc_NvZhu",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "StringValue": "Quest100102",
+      "CachedDescription": "QuestEvent 为相等 [Quest100102]",
+      "BlackboardKey": {
+        "SelectedKeyName": "QuestEvent"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_NvZhu'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/NvZhu/BT_Npc_NvZhu.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Npc_NvZhu:BTComposite_Sequence_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/NvZhu/BT_Npc_NvZhu.4"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_3",
+    "Outer": "BT_Npc_NvZhu",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "CachedDescription": "PatrolLoc is 已设置",
+      "BlackboardKey": {
+        "SelectedKeyName": "PatrolLoc"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_NvZhu'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/NvZhu/BT_Npc_NvZhu.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Npc_NvZhu:BTComposite_Selector_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/NvZhu/BT_Npc_NvZhu.1"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_4",
+    "Outer": "BT_Npc_NvZhu",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "CachedDescription": "PatrolLoc is 已设置",
+      "BlackboardKey": {
+        "SelectedKeyName": "PatrolLoc"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_NvZhu'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/NvZhu/BT_Npc_NvZhu.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Npc_NvZhu:BTComposite_Selector_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/NvZhu/BT_Npc_NvZhu.1"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_8",
+    "Outer": "BT_Npc_NvZhu",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "FloatValue": 500.0,
+      "StringValue": "Quest100102",
+      "CachedDescription": "TickTargetDis 小于 500.000000",
+      "OperationType": 2,
+      "BlackboardKey": {
+        "SelectedKeyName": "TickTargetDis"
+      },
+      "FlowAbortMode": "EBTFlowAbortMode::Self",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_NvZhu'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/NvZhu/BT_Npc_NvZhu.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Npc_NvZhu:BTComposite_Selector_2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/NvZhu/BT_Npc_NvZhu.2"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_Blackboard",
+    "Name": "BTDecorator_Blackboard_9",
+    "Outer": "BT_Npc_NvZhu",
+    "Class": "UScriptClass'BTDecorator_Blackboard'",
+    "Flags": "RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "CachedDescription": "PatrolLoc is 未设置",
+      "OperationType": 1,
+      "BlackboardKey": {
+        "SelectedKeyName": "PatrolLoc"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_NvZhu'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/NvZhu/BT_Npc_NvZhu.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Npc_NvZhu:BTComposite_Selector_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/NvZhu/BT_Npc_NvZhu.1"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_IsAtLocation",
+    "Name": "BTDecorator_IsAtLocation_0",
+    "Outer": "BT_Npc_NvZhu",
+    "Class": "UScriptClass'BTDecorator_IsAtLocation'",
+    "Flags": "RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "BlackboardKey": {
+        "SelectedKeyName": "PatrolLoc"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_NvZhu'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/NvZhu/BT_Npc_NvZhu.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Npc_NvZhu:BTComposite_Selector_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/NvZhu/BT_Npc_NvZhu.1"
+      }
+    }
+  },
+  {
+    "Type": "BTDecorator_IsAtLocation",
+    "Name": "BTDecorator_IsAtLocation_2",
+    "Outer": "BT_Npc_NvZhu",
+    "Class": "UScriptClass'BTDecorator_IsAtLocation'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "BlackboardKey": {
+        "SelectedKeyName": "PatrolLoc"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_NvZhu'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/NvZhu/BT_Npc_NvZhu.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Npc_NvZhu:BTComposite_Selector_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/NvZhu/BT_Npc_NvZhu.1"
+      }
+    }
+  },
+  {
+    "Type": "BTService_BBValueDis",
+    "Name": "BTService_BBValueDis_0",
+    "Outer": "BT_Npc_NvZhu",
+    "Class": "UScriptClass'BTService_BBValueDis'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "BBName": "Target",
+      "Interval": 0.2,
+      "bCallTickOnSearchStart": true,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_NvZhu'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/NvZhu/BT_Npc_NvZhu.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Selector'BT_Npc_NvZhu:BTComposite_Selector_2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/NvZhu/BT_Npc_NvZhu.2"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_ClearKey",
+    "Name": "BTTask_ClearKey_1",
+    "Outer": "BT_Npc_NvZhu",
+    "Class": "UScriptClass'BTTask_ClearKey'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "BlackboadKeyName": "QuestEvent",
+      "BlackboardKey": {
+        "SelectedKeyName": "SelfActor"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_NvZhu'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/NvZhu/BT_Npc_NvZhu.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Npc_NvZhu:BTComposite_Sequence_3'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/NvZhu/BT_Npc_NvZhu.8"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_GetPatrolLoc",
+    "Name": "BTTask_GetPatrolLoc_0",
+    "Outer": "BT_Npc_NvZhu",
+    "Class": "UScriptClass'BTTask_GetPatrolLoc'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_NvZhu'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/NvZhu/BT_Npc_NvZhu.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Npc_NvZhu:BTComposite_Sequence_2'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/NvZhu/BT_Npc_NvZhu.7"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_NewMoveTo",
+    "Name": "BTTask_NewMoveTo_6",
+    "Outer": "BT_Npc_NvZhu",
+    "Class": "UScriptClass'BTTask_NewMoveTo'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "bUseControllerRotationYaw": true,
+      "bOrientRotationToMovement": true,
+      "MaxSpeed": 150.0,
+      "MaxAcceleration": 99999.0,
+      "bStopOnOverlapNeedsUpdate": false,
+      "BlackboardKey": {
+        "SelectedKeyName": "PatrolLoc"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_NvZhu'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/NvZhu/BT_Npc_NvZhu.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Npc_NvZhu:BTComposite_Sequence_19'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/NvZhu/BT_Npc_NvZhu.6"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_NpcGetTarget",
+    "Name": "BTTask_NpcGetTarget_0",
+    "Outer": "BT_Npc_NvZhu",
+    "Class": "UScriptClass'BTTask_NpcGetTarget'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_NvZhu'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/NvZhu/BT_Npc_NvZhu.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Npc_NvZhu:BTComposite_Sequence_0'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/NvZhu/BT_Npc_NvZhu.3"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_PostBehaviorEvent",
+    "Name": "BTTask_PostBehaviorEvent_0",
+    "Outer": "BT_Npc_NvZhu",
+    "Class": "UScriptClass'BTTask_PostBehaviorEvent'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "EventName": "Test",
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_NvZhu'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/NvZhu/BT_Npc_NvZhu.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Npc_NvZhu:BTComposite_Sequence_3'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/NvZhu/BT_Npc_NvZhu.8"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_0",
+    "Outer": "BT_Npc_NvZhu",
+    "Class": "UScriptClass'BTTask_Wait'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "WaitTime": 2.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_NvZhu'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/NvZhu/BT_Npc_NvZhu.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Npc_NvZhu:BTComposite_Sequence_1'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/NvZhu/BT_Npc_NvZhu.4"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_Wait",
+    "Name": "BTTask_Wait_2",
+    "Outer": "BT_Npc_NvZhu",
+    "Class": "UScriptClass'BTTask_Wait'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "WaitTime": 2.0,
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Npc_NvZhu'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/NvZhu/BT_Npc_NvZhu.0"
+      },
+      "ParentNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Npc_NvZhu:BTComposite_Sequence_17'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Npc/NvZhu/BT_Npc_NvZhu.5"
+      }
+    }
+  }
+]

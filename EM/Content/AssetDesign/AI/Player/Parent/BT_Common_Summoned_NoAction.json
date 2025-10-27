@@ -1,0 +1,87 @@
+[
+  {
+    "Type": "BehaviorTree",
+    "Name": "BT_Common_Summoned_NoAction",
+    "Class": "UScriptClass'BehaviorTree'",
+    "Flags": "RF_Public | RF_Standalone | RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "RootNode": {
+        "ObjectName": "BTComposite_Sequence'BT_Common_Summoned_NoAction:BTComposite_Sequence_3'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Parent/BT_Common_Summoned_NoAction.1"
+      },
+      "BlackboardAsset": {
+        "ObjectName": "BlackboardData'BB_Mon_Parent'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Monster/Parent/BB_Mon_Parent.0"
+      }
+    }
+  },
+  {
+    "Type": "BTComposite_Sequence",
+    "Name": "BTComposite_Sequence_3",
+    "Outer": "BT_Common_Summoned_NoAction",
+    "Class": "UScriptClass'BTComposite_Sequence'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "Children": [
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_GetTarget'BT_Common_Summoned_NoAction:BTTask_GetTarget_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Parent/BT_Common_Summoned_NoAction.2"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        },
+        {
+          "ChildComposite": null,
+          "ChildTask": {
+            "ObjectName": "BTTask_TeamMoveTo'BT_Common_Summoned_NoAction:BTTask_TeamMoveTo_0'",
+            "ObjectPath": "EM/Content/AssetDesign/AI/Player/Parent/BT_Common_Summoned_NoAction.3"
+          },
+          "Decorators": [],
+          "DecoratorOps": []
+        }
+      ],
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Common_Summoned_NoAction'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Parent/BT_Common_Summoned_NoAction.0"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_GetTarget",
+    "Name": "BTTask_GetTarget_0",
+    "Outer": "BT_Common_Summoned_NoAction",
+    "Class": "UScriptClass'BTTask_GetTarget'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Common_Summoned_NoAction'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Parent/BT_Common_Summoned_NoAction.0"
+      }
+    }
+  },
+  {
+    "Type": "BTTask_TeamMoveTo",
+    "Name": "BTTask_TeamMoveTo_0",
+    "Outer": "BT_Common_Summoned_NoAction",
+    "Class": "UScriptClass'BTTask_TeamMoveTo'",
+    "Flags": "RF_Transactional | RF_WasLoaded | RF_LoadCompleted",
+    "Properties": {
+      "LeaveTeamDistance": 800.0,
+      "LeaveTeamBackTime": 2.0,
+      "TeamMemberSpacingDistance": 250.0,
+      "TeamAcceptableRadius": 150.0,
+      "MaxSpeed": 400.0,
+      "MaxAcceleration": 3000.0,
+      "bStopOnOverlapNeedsUpdate": false,
+      "BlackboardKey": {
+        "SelectedKeyName": "Target"
+      },
+      "TreeAsset": {
+        "ObjectName": "BehaviorTree'BT_Common_Summoned_NoAction'",
+        "ObjectPath": "EM/Content/AssetDesign/AI/Player/Parent/BT_Common_Summoned_NoAction.0"
+      }
+    }
+  }
+]
