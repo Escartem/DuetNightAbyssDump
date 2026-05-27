@@ -1,5 +1,5 @@
 # DuetNightAbyssDump
-models, code, textures, and more of DNA
+models, code, textures, and more of DNA (also see https://git.escartem.moe/RandomGames/DNALua for more stuff)
 
 * [Audio](https://github.com/Escartem/DuetNightAbyssDump/tree/master/EM/Content/Asset/Audio/FMOD/Desktop)
 * [Characters models](https://github.com/Escartem/DuetNightAbyssDump/tree/master/EM/Content/Asset/Char/Player)
